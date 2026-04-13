@@ -325,6 +325,13 @@ def write_site_version_manifest(site_root: Path, catalog: list[tuple[str, list[s
         (static_dir / "versioning-data.js").write_text(manifest, encoding="utf-8")
 
 
+def ensure_nojekyll(site_root: Path) -> None:
+    if not site_root.exists():
+        return
+
+    (site_root / ".nojekyll").write_text("", encoding="utf-8")
+
+
 def remove_target_scope(output_root: Path, target_version: str | None, target_language: str | None) -> None:
     if not output_root.exists():
         return
@@ -1528,6 +1535,8 @@ def build_site(
         )
         with timed_step("write build version manifest", timings):
             write_site_version_manifest(build_root, catalog=source_catalog)
+        with timed_step("write build .nojekyll", timings):
+            ensure_nojekyll(build_root)
         with timed_step("create build landing page", timings):
             create_root_landing_page(build_root, source_root)
 
@@ -1575,6 +1584,8 @@ def build_site(
 
             with timed_step("write final build version manifest", timings):
                 write_site_version_manifest(output_root)
+            with timed_step("write final .nojekyll", timings):
+                ensure_nojekyll(output_root)
             with timed_step("create final landing page", timings):
                 create_root_landing_page(output_root, source_root)
             with timed_step("configure final release download flags", timings):
