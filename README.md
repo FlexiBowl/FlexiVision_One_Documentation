@@ -31,7 +31,8 @@ Workflow consigliato:
 
 - `build_manual.bat`
   Converte i sorgenti in `sources` nel sito HTML finale in `build`
-  Se lanciato senza argomenti apre una finestra iniziale per scegliere tra build rapido o build completo con ZIP offline, e tra build totale o mirato su una singola versione/lingua
+  Se lanciato senza argomenti apre una finestra iniziale per scegliere tra build rapido o build completo con ZIP offline, e tra build totale o mirato su una singola versione/lingua.
+  Se trova Python ma non trova ancora l'ambiente o le dipendenze richieste, prova automaticamente a eseguire `installer/install_dependencies.bat` e poi continua con la build.
 
 Esempi:
 
@@ -54,7 +55,7 @@ py -3 tools/manual_publisher/optimize_media.py --compress-videos
 ## Setup dipendenze
 
 Per preparare l'ambiente locale usa `installer/install_dependencies.bat`.
-Lo script installa solo le dipendenze necessarie alla build nel Python locale gia' presente sulla macchina.
+Lo script rileva un Python disponibile sulla macchina, crea se necessario una `.venv` locale nella repo e installa li' le dipendenze necessarie alla build.
 
 ## Note operative
 
