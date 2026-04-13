@@ -56,6 +56,10 @@ html_js_files = [
 
 html_logo = "../../_shared/media/images/logo.png"
 
+html_context = {
+    "default_mode": "light",
+}
+
 html_theme_options = {
     "logo": {
         "image_light": "../../_shared/media/images/logo.png",
