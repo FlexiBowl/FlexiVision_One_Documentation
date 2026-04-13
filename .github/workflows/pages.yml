@@ -1,9 +1,11 @@
-name: Deploy GitHub Pages
+name: Deploy build to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
+    paths:
+      - "build/**"
+      - ".github/workflows/pages.yml"
   workflow_dispatch:
 
 permissions:
@@ -40,4 +42,4 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
