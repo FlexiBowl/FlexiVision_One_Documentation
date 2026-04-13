@@ -1,7 +1,7 @@
 # **Manuale FlexiVision One**
 
 ## **Benvenuto nel manuale di FlexiVision One!**  
-Siamo entusiasti di darvi il benvenuto alla vostra nuova guida di FlexiVision One!
+test Siamo entusiasti di darvi il benvenuto alla vostra nuova guida di FlexiVision One!
 Questo manuale è stato creato appositamente per essere il vostro punto di riferimento chiaro e affidabile. Ci auguriamo che, consultandolo, possiate godere appieno di tutti i benefici del nostro sistema.
 Il vostro parere è fondamentale per noi: non esitate a fornirci il vostro feedback [contattandoci](https://www.flexibowl.it/contatti)! 
 
