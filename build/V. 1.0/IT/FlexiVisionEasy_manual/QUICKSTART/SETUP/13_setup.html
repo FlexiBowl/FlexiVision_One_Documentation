@@ -1,0 +1,1422 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Configurazione Iniziale del Sistema &#8212; FlexiVision One Manual</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_shared/static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../../_shared/static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_shared/static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_shared/static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_shared/static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_shared/static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_shared/static/custom.css?v=9739da55" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../../../_shared/static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_shared/static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../../_shared/static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../../../_shared/static/documentation_options.js?v=a681ed88"></script>
+    <script src="../../../../../_shared/static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../../../_shared/static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../../../_shared/static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../_shared/static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../../_shared/static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../../../../../_shared/static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'FlexiVisionEasy_manual/QUICKSTART/SETUP/13_setup';</script>
+    <script src="../../../../../_shared/static/versioning-data.js?v=37039824"></script>
+    <script src="../../../../../_shared/static/fix_print.js?v=d332f839"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Passo 3: Camera Setup" href="13d_Camera_Setup.html" />
+    <link rel="prev" title="Panoramica dell’interfaccia" href="../12_Panoramica_Interfaccia.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../_shared/static/logo.png" class="logo__image only-light" alt="FlexiVision One Manual - Home"/>
+    <img src="../../../../../_shared/static/logo_dark.png" class="logo__image only-dark pst-js-only" alt="FlexiVision One Manual - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">PRIMA DI INIZIARE</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../01_informazioni_preliminari.html"><strong>Informazioni Preliminari</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../02_informazioni_sicurezza.html"><strong>Informazioni di Sicurezza</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../03_Unboxing_Contenuto.html"><strong>Unboxing e Contenuto della Scatola</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../27_Support.html"><strong>Contatti</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../27b_Glossario.html"><strong>Glossario</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">RIFERIMENTO TECNICO E SPECIFICHE</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../rif_tecnico_specifiche/04_Specifiche_FlexiVision.html"><strong>Specifiche Dettagliate FlexiVision One</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../rif_tecnico_specifiche/04b_Protocolli_Comunicazione.html"><strong>Protocollo Comunicazione Robot-Visione</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../rif_tecnico_specifiche/05_Calcolo_distanza_ottimale.html"><strong>Calcolo Distanza di Lavoro Ottimale</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../rif_tecnico_specifiche/integrazione_software/06_PlugIn.html"><strong>PlugIn</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../rif_tecnico_specifiche/integrazione_software/07_Backup_management.html"><strong>BackUp Management</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../rif_tecnico_specifiche/08_Opzioni.html"><strong>Opzioni</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">INSTALLAZIONE DEL SISTEMA</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.html"><strong>Installazione Meccanica del Sistema</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.html"><strong>Cablaggio e Connessioni</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">QUICKSTART</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../12_Panoramica_Interfaccia.html"><strong>Panoramica dell’interfaccia</strong></a></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#"><strong>Configurazione Iniziale del Sistema</strong></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="13d_Camera_Setup.html"><strong>Passo 3: Camera Setup</strong></a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="14_calibrazione_camera.html"><strong>Calibrazione della Camera</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="13a_FB_Setup.html"><strong>Passo 4: FlexiBowl Setup</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="13b_Hopper_Setup.html"><strong>Passo 5: Hopper Setup</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="13c_Robot_Setup.html"><strong>Passo 6 : Robot Setup</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="15_Protocol_Setup.html"><strong>Passo 7: Protocol Setup</strong></a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Nuovo_Modello/16_Nuovo_modello.html"><strong>Creazione Ricette e Modelli - Panoramica</strong></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Nuovo_Modello/17_NuovaRicetta.html"><strong>Creare una Nuova Ricetta</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Nuovo_Modello/18_NuovoModello.html"><strong>Creare un Nuovo Modello</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Nuovo_Modello/19_ROI_TEST.html"><strong>Definizione ROI e Tolleranze</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Nuovo_Modello/20_Istogrammi.html"><strong>Le Clearances</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Nuovo_Modello/21_RobotPick.html"><strong>Calibrazione Robot Pick</strong></a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../24_Verifica_Risultati.html"><strong>Monitoraggio Applicazione: Dashboard</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">APPLICAZIONI MIX</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../APPLICAZIONI_MIX/28_Panoramica_Mix.html"><strong>Panoramica Applicazione Mix</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../APPLICAZIONI_MIX/29_Comandi_Mix.html"><strong>Comandi Applicazione Mix</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CONFIGURAZIONI MULTI-DISPOSITIVO</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../CONFIGURAZIONI_MULTI-DISPOSITIVO/30_2FB2CAM.html"><strong>2 FlexiBowl® e 2 Camere</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../CONFIGURAZIONI_MULTI-DISPOSITIVO/31_3FB3CAM.html"><strong>3 FlexiBowl® e 3 Camere</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">GARANZIA</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../25_Garanzia.html"><strong>Garanzia</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TROUBLESHOOTING</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../TROUBLESHOOTING/26_trb_shooting_guide.html"><strong>Risoluzione Problemi</strong></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../TROUBLESHOOTING/26b_Installazione_Mecc.html"><strong>Installazione Meccanica</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../TROUBLESHOOTING/26c_Cablaggio_Connessioni.html"><strong>Cablaggio e Connessioni</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../TROUBLESHOOTING/26d_Conf_Iniziale.html"><strong>Setup Iniziale</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../TROUBLESHOOTING/26e_Calib_Cam.html"><strong>Calibrazione Camera</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../TROUBLESHOOTING/26g_Creazione_Ricette_Modelli.html"><strong>Creazione Ricette e modelli</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../TROUBLESHOOTING/26h_FlexiBowl_Wizard.html"><strong>FlexiBowl Wizard</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../TROUBLESHOOTING/26i_Conf_Tramoggia.html"><strong>Configurazione Tramoggia</strong></a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/FlexiVisionEasy_manual/QUICKSTART/SETUP/13_setup.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Configurazione Iniziale del Sistema</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#panoramica-del-processo-di-setup">Panoramica del processo di setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operazioni-preliminari">Operazioni preliminari</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#passo-1-login-al-sistema">Passo 1: Login al sistema</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#passo-2-accendere-il-backlight-se-presente">Passo 2: Accendere il Backlight se presente</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequenza-setup-consigliata">Sequenza setup consigliata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#passo-8-salva-e-rinomina-la-ricetta-base">Passo 8: Salva e Rinomina la ricetta base</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configurazione-componenti-hardware">Configurazione componenti hardware</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="configurazione-iniziale-del-sistema">
+<span id="setupcomponenti"></span><h1><strong>Configurazione Iniziale del Sistema</strong><a class="headerlink" href="#configurazione-iniziale-del-sistema" title="Link to this heading">#</a></h1>
+<p>Questa sezione guida l’utente attraverso la configurazione completa dei componenti hardware e software del sistema FlexiVision One. È fondamentale seguire i passaggi nell’ordine indicato per garantire il corretto funzionamento del sistema.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Prerequisiti</strong></p>
+<p>Prima di iniziare la configurazione software, assicurarsi che:</p>
+<ul class="simple">
+<li><p>L’installazione meccanica di tutti i componenti sia completata (<a class="reference internal" href="../../INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.html#installazione-meccanica"><span class="std std-ref">Installazione Meccanica</span></a>)</p></li>
+<li><p>Tutti i cavi siano collegati correttamente (<a class="reference internal" href="../../INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.html#cablaggio"><span class="std std-ref">Cablaggio e Connessioni</span></a>)</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<section id="panoramica-del-processo-di-setup">
+<h2>Panoramica del processo di setup<a class="headerlink" href="#panoramica-del-processo-di-setup" title="Link to this heading">#</a></h2>
+<p>Il processo di configurazione iniziale è composto da sette passaggi principali:</p>
+<ol class="arabic simple" start="0">
+<li><p><strong>Inserimento Chiave di Licenza</strong> fornita nel kit</p></li>
+<li><p><strong>Login</strong> - Accesso al software con credenziali utente</p></li>
+<li><p>se presente illuminatore Backlight: <strong>Configurazione Indirizzo IP FlexiBowl</strong> e <strong>Accensione Backlight</strong></p></li>
+<li><p><strong>Camera Setup</strong> - Configurazione della camera</p></li>
+<li><p><strong>FlexiBowl Setup</strong> - Connessione e configurazione del FlexiBowl</p></li>
+<li><p><strong>Hopper Setup</strong>  - Configurazione della tramoggia</p></li>
+<li><p><strong>Robot Setup</strong> - Configurazione comunicazione con il robot</p></li>
+<li><p><strong>Protocol Setup</strong> - Configurazione di parametri di protocollo</p></li>
+<li><p><strong>Rinominare e Salvare la Ricetta Base</strong> - Configurazione del profilo applicativo</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Lo schema completo del flusso di setup non e ancora disponibile come immagine esportata in questo repository. Fare riferimento alla sequenza guidata riportata qui sotto.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Ordine dei passaggi</strong></p>
+<p>L’ordine dei setup è importante! Non saltare passaggi o modificare la sequenza, poiché alcune configurazioni dipendono da quelle precedenti.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="operazioni-preliminari">
+<h2>Operazioni preliminari<a class="headerlink" href="#operazioni-preliminari" title="Link to this heading">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Il primo passo prima dell’avvio del software FlexiVision One è inserire la chiave di licenza fornita con il kit.</p>
+</div>
+<section id="passo-1-login-al-sistema">
+<h3>Passo 1: Login al sistema<a class="headerlink" href="#passo-1-login-al-sistema" title="Link to this heading">#</a></h3>
+<p>All’avvio del software FlexiVision One, viene presentata la pagina Home.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 90.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>0</strong></p></td>
+<td><p>Cliccare su Setup</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>1</strong></p></td>
+<td><p><strong>Selezionare l’utente ARS</strong> dal menu a tendina in alto a destra.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>2</strong></p></td>
+<td><p><strong>Inserire la password</strong> ArS2025.
+<em>(Nota: il campo è case-sensitive)</em>.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>3</strong></p></td>
+<td><p>Cliccare sul pulsante <strong>LOGIN</strong> per accedere all’interfaccia.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Gestione utenti</strong></p>
+<p>FlexiVision One supporta profili utente multipli con diversi livelli di permessi:</p>
+<ul class="simple">
+<li><p><strong>ARS</strong></p></li>
+<li><p><strong>Engineer</strong></p></li>
+<li><p><strong>Technician</strong></p></li>
+<li><p><strong>Operator</strong></p></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="passo-2-accendere-il-backlight-se-presente">
+<h3>Passo 2: Accendere il Backlight se presente<a class="headerlink" href="#passo-2-accendere-il-backlight-se-presente" title="Link to this heading">#</a></h3>
+<p>Dopo il primo login, se è necessario attivare la licenza FlexiVision One, seguire questi passi:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>1</strong></p></td>
+<td><p>Dalla pagina principale del software, cliccare su <img alt="../../../_images/tasto_setup1.png" class="inline-icon" src="../../../../../_shared/media/images/tasto_setup1.png" /></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>2</strong></p></td>
+<td><p>Nella pagina SETUP, identificare e cliccare sull’icona <strong>FlexiBowl Setup</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Pagina Setup</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><img alt="Pagina Setup" src="../../../../../_shared/media/images/pagina_setup1.png" /></p>
+</div>
+</details></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3</strong></p></td>
+<td><p>Si apre la schermata di configurazione dei FlexiBowl</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>4</strong></p></td>
+<td><p>Inserire l’indirizzo IP del FlexiBowl (default: <code class="docutils literal notranslate"><span class="pre">192.168.1.10</span></code> )</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>5</strong></p></td>
+<td><p>Dopo aver inserito l’IP, cliccare sul pulsante <strong>Connection Test</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>6</strong></p></td>
+<td><p>Il sistema esegue un test di comunicazione (ping) verso il FlexiBowl</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>7</strong></p></td>
+<td><p>Osservare l’indicatore di <strong>Status</strong>:</p>
+<ul class="simple">
+<li><p>🟢 <strong>Verde</strong>: Connessione stabilita correttamente</p></li>
+<li><p>🔴 <strong>Rosso</strong>: Connessione fallita (verificare indirizzo IP e cablaggio)</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>8</strong></p></td>
+<td><p>Cliccare sul pulsante <img alt="../../../_images/FB_config1.png" class="inline-icon icon-xl" src="../../../../../_shared/media/images/FB_config1.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>9</strong></p></td>
+<td><p>Si apre una finestra con i parametri configurabili del FlexiBowl</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>10</strong></p></td>
+<td><p>Accendere il backlight spuntando la casella “Light ON”</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="sequenza-setup-consigliata">
+<h3>Sequenza setup consigliata<a class="headerlink" href="#sequenza-setup-consigliata" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 35.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Passo</p></th>
+<th class="head"><p>Componente</p></th>
+<th class="head"><p>Descrizione</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>3</strong></p></td>
+<td><p><a class="reference internal" href="13d_Camera_Setup.html#camerasetup"><span class="std std-ref">Camera Setup</span></a></p></td>
+<td><p>Configurazione acquisizione immagini e test camera</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>4</strong></p></td>
+<td><p><a class="reference internal" href="13a_FB_Setup.html#fbsetup"><span class="std std-ref">FlexiBowl Setup</span></a></p></td>
+<td><p>Connessione e test comunicazione con FlexiBowl</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>5</strong></p></td>
+<td><p><a class="reference internal" href="13b_Hopper_Setup.html#hoppersetup"><span class="std std-ref">Hopper Setup</span></a></p></td>
+<td><p>Configurazione tramoggia esterna se presente</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>6</strong></p></td>
+<td><p><a class="reference internal" href="13c_Robot_Setup.html#robotsetup"><span class="std std-ref">Robot Setup</span></a></p></td>
+<td><p>Configurazione porta TCP/IP e test comunicazione con il robot</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>7</strong></p></td>
+<td><p><a class="reference internal" href="15_Protocol_Setup.html#protocol-setup"><span class="std std-ref">Protocol Setup</span></a></p></td>
+<td><p>Configurazione dei parametri di scambio dati e delle statistiche operative</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Importanza della sequenza</strong></p>
+<p>Seguire l’ordine indicato è importante perché la camera ha bisogno che il FlexiBowl sia configurato per testare l’illuminazione e  alcuni parametri dipendono dalle configurazioni precedenti</p>
+</div>
+</section>
+<section id="passo-8-salva-e-rinomina-la-ricetta-base">
+<span id="ricettabase"></span><h3>Passo 8: Salva e Rinomina la ricetta base<a class="headerlink" href="#passo-8-salva-e-rinomina-la-ricetta-base" title="Link to this heading">#</a></h3>
+<p>Prima di configurare i componenti hardware, è necessario creare una ricetta di base che definisca i parametri del sistema.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 90.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>8</strong></p></td>
+<td><p>Accedere alla sezione |tasto_recipes| dal pulsante in alto</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>9</strong></p></td>
+<td><p>Inserire il nome della ricetta.</p>
+<p>Utilizzare un nome descrittivo (es: “Ricetta_Base”).</p>
+<p>Evitare caratteri speciali o spazi (usare underscore <code class="docutils literal notranslate"><span class="pre">_</span></code> al posto degli spazi).</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>12</strong></p></td>
+<td><p>Cliccare su <strong>Save Recipe</strong> per salvare la ricetta</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Organizzazione ricette</strong></p>
+<p>FlexiVision One permette di creare ricette multiple per diversi tipi di pezzi o configurazioni. Convenzioni consigliate:</p>
+<ul class="simple">
+<li><p>Utilizzare nomi che identificano chiaramente il pezzo (es: “Vite_M6_Zincata”)</p></li>
+</ul>
+<p>Per maggiori dettagli sulla gestione ricette, consultare la sezione <a class="reference internal" href="../Nuovo_Modello/17_NuovaRicetta.html#nuovaricetta"><span class="std std-ref">Creare una nuova ricetta</span></a>.</p>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="configurazione-componenti-hardware">
+<h2>Configurazione componenti hardware<a class="headerlink" href="#configurazione-componenti-hardware" title="Link to this heading">#</a></h2>
+<p>Una volta completate le operazioni preliminari, procedere con la configurazione dei componenti hardware nell’ordine seguente.</p>
+<p>Tutti i setup hardware sono accessibili dalla pagina centrale <strong>SETUP</strong> del software.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>14</strong></p></td>
+<td><p>Dal menu principale, cliccare su <img alt="../../../_images/tasto_setup1.png" class="inline-icon" src="../../../../../_shared/media/images/tasto_setup1.png" /></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>15</strong></p></td>
+<td><p>Vengono visualizzate le icone dei diversi componenti da configurare</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>16</strong></p></td>
+<td><p>Cliccare sull’icona del componente desiderato per accedere alla sua configurazione specifica</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+</div>
+<br>
+<!-- Versions and languages set-up -->
+<style>
+  .fixed-bar {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(240, 240, 240, 0.85);
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    border-radius: 6px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
+    color: #222;
+    display: flex;
+    gap: 12px;
+    padding: 6px 12px;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: saturate(180%) blur(10px);
+  }
+
+  @media print {
+    .fixed-bar {
+      display: none !important;
+    }
+  }
+
+  .fixed-bar .dropdown {
+    position: relative;
+    user-select: none;
+  }
+
+  .fixed-bar .dropdown-toggle {
+    background-color: rgba(200, 200, 200, 0.4);
+    color: #222;
+    padding: 6px 10px;
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+  }
+
+  .fixed-bar .dropdown-toggle::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .fixed-bar .dropdown-toggle:hover {
+    background-color: rgba(100, 150, 220, 0.2);
+    color: #1a3e72;
+    border-color: rgba(26, 62, 114, 0.6);
+  }
+
+  .fixed-bar .dropdown-toggle .fa {
+    font-size: 0.9rem;
+  }
+
+  .fixed-bar .dropdown-menu {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background-color: rgba(250, 250, 250, 0.95);
+    border: 1px solid rgba(150, 150, 150, 0.3);
+    border-radius: 4px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    min-width: 140px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    flex-direction: column;
+    z-index: 10000;
+    backdrop-filter: saturate(180%) blur(8px);
+  }
+
+  .fixed-bar .dropdown-menu.show {
+    display: flex;
+  }
+
+  .fixed-bar .dropdown-menu a {
+    padding: 8px 12px;
+    color: #1a3e72;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+    white-space: nowrap;
+    transition: background-color 0.25s ease;
+  }
+
+  .fixed-bar .dropdown-menu a:last-child {
+    border-bottom: none;
+  }
+
+  .fixed-bar .dropdown-menu a:hover {
+    background-color: rgba(100, 150, 220, 0.15);
+  }
+
+  .dropdown-download-buttons .btn__icon-container svg {
+    width: 1em;
+    height: 1em;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vertical-align: middle;
+  }
+
+  a.headerlink.manual-heading-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.2em;
+    text-decoration: none;
+    color: #7b8493;
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+
+  a.headerlink.manual-heading-action svg {
+    width: 0.8em;
+    height: 0.8em;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vertical-align: middle;
+  }
+
+  a.headerlink.manual-feedback-link:hover,
+  a.headerlink.manual-feedback-link:focus-visible {
+    color: #2563eb;
+  }
+
+  a.headerlink.manual-service-link:hover,
+  a.headerlink.manual-service-link:focus-visible {
+    color: #d97706;
+  }
+</style>
+<div class="fixed-bar" role="region" aria-label="Version and language selector">
+  <div class="dropdown" data-selector="version">
+    <div class="dropdown-toggle" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
+      Version: <span class="current-value">V. 1.0</span>
+      <span class="caret-icon" aria-hidden="true">&#9662;</span>
+    </div>
+    <div class="dropdown-menu" role="listbox">
+      	<a href="#" role="option">V. 0.0</a>
+				<a href="#" role="option">V. 1.0</a>
+				<a href="#" role="option">V. 3.0</a>
+    </div>
+  </div>
+  <div class="dropdown" data-selector="language">
+    <div class="dropdown-toggle" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
+      Language: <span class="current-value">IT</span>
+      <span class="caret-icon" aria-hidden="true">&#9662;</span>
+    </div>
+    <div class="dropdown-menu" role="listbox">
+      	<a href="#" role="option">DE</a>
+				<a href="#" role="option">EN</a>
+				<a href="#" role="option">ES</a>
+				<a href="#" role="option">FR</a>
+				<a href="#" role="option">IT</a>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    const bar = document.querySelector('.fixed-bar');
+    if (!bar) {
+      return;
+    }
+
+    const inlineVersions = ["V. 0.0", "V. 1.0", "V. 3.0"];
+    const inlineLanguages = ["DE", "EN", "ES", "FR", "IT"];
+    const manifest = window.FV_VERSIONING || null;
+    const versions = Array.isArray(manifest && manifest.versions) && manifest.versions.length
+      ? manifest.versions
+      : inlineVersions;
+    const offlineZipEnabled = true;
+    const offlineZipFileName = 'Offline manual.zip';
+    const americanRegions = new Set([
+      'AG', 'AR', 'AW', 'BB', 'BL', 'BM', 'BO', 'BQ', 'BR', 'BS', 'BZ', 'CA', 'CL', 'CO', 'CR',
+      'CU', 'CW', 'DM', 'DO', 'EC', 'FK', 'GD', 'GF', 'GL', 'GP', 'GT', 'GY', 'HN', 'HT', 'JM',
+      'KN', 'KY', 'LC', 'MF', 'MQ', 'MS', 'MX', 'NI', 'PA', 'PE', 'PM', 'PR', 'PY', 'SR', 'SV',
+      'SX', 'TC', 'TT', 'US', 'UY', 'VC', 'VE', 'VG', 'VI', '419'
+    ]);
+    const additionalAmericanTimeZones = new Set([
+      'Atlantic/Bermuda',
+      'Pacific/Easter',
+      'Pacific/Galapagos',
+      'Pacific/Honolulu',
+      'Pacific/Pitcairn'
+    ]);
+
+    function setCaret(toggle, isOpen) {
+      const caret = toggle.querySelector('.caret-icon');
+      if (caret) {
+        caret.innerHTML = isOpen ? '&#9652;' : '&#9662;';
+      }
+    }
+
+    function closeAllMenus() {
+      bar.querySelectorAll('.dropdown').forEach(dropdown => {
+        const menu = dropdown.querySelector('.dropdown-menu');
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        menu.classList.remove('show');
+        toggle.setAttribute('aria-expanded', 'false');
+        setCaret(toggle, false);
+      });
+    }
+
+    function getLanguagesForVersion(version) {
+      const manifestLanguages = manifest &&
+        manifest.languagesByVersion &&
+        Array.isArray(manifest.languagesByVersion[version]) &&
+        manifest.languagesByVersion[version].length
+          ? manifest.languagesByVersion[version]
+          : null;
+
+      if (manifestLanguages) {
+        return manifestLanguages;
+      }
+
+      return inlineLanguages;
+    }
+
+    function getDefaultLanguageForVersion(version) {
+      const manifestDefault = manifest &&
+        manifest.defaultLanguageByVersion &&
+        typeof manifest.defaultLanguageByVersion[version] === 'string'
+          ? manifest.defaultLanguageByVersion[version]
+          : '';
+
+      if (manifestDefault) {
+        return manifestDefault;
+      }
+
+      const availableLanguages = getLanguagesForVersion(version);
+      return availableLanguages.length ? availableLanguages[0] : (inlineLanguages[0] || '');
+    }
+
+    function populateSelectorMenu(selector, values) {
+      const menu = bar.querySelector(`[data-selector="${selector}"] .dropdown-menu`);
+      if (!menu) {
+        return;
+      }
+
+      menu.innerHTML = '';
+      values.forEach(value => {
+        const link = document.createElement('a');
+        link.href = '#';
+        link.setAttribute('role', 'option');
+        link.textContent = value;
+        menu.appendChild(link);
+      });
+    }
+
+    function getNavigationContext() {
+      const currentUrl = new URL(window.location.href);
+      const rawSegments = currentUrl.pathname.split('/').filter(Boolean);
+      const decodedSegments = rawSegments.map(segment => decodeURIComponent(segment));
+      const currentVersionLabel = bar.querySelector('[data-selector="version"] .current-value');
+      const currentLanguageLabel = bar.querySelector('[data-selector="language"] .current-value');
+      const fallbackVersion = currentVersionLabel ? currentVersionLabel.textContent.trim() : '';
+      const versionIndex = decodedSegments.findIndex(segment => versions.includes(segment));
+      const currentVersion = versionIndex !== -1 ? decodedSegments[versionIndex] : fallbackVersion;
+      const availableLanguages = getLanguagesForVersion(currentVersion);
+      const fallbackLanguage = currentLanguageLabel ? currentLanguageLabel.textContent.trim() : '';
+      const languageIndex = decodedSegments.findIndex(
+        (segment, index) => index > versionIndex && availableLanguages.includes(segment)
+      );
+
+      return {
+        currentUrl: currentUrl,
+        rawSegments: rawSegments,
+        versionIndex: versionIndex,
+        currentVersion: currentVersion,
+        currentLanguage: languageIndex !== -1 ? decodedSegments[languageIndex] : fallbackLanguage
+      };
+    }
+
+    function refreshNavigationMenus() {
+      const context = getNavigationContext();
+      const resolvedVersion = versions.includes(context.currentVersion) ? context.currentVersion : (versions[0] || context.currentVersion);
+      const availableLanguages = getLanguagesForVersion(resolvedVersion);
+      const resolvedLanguage = availableLanguages.includes(context.currentLanguage)
+        ? context.currentLanguage
+        : (getDefaultLanguageForVersion(resolvedVersion) || context.currentLanguage);
+
+      populateSelectorMenu('version', versions);
+      populateSelectorMenu('language', availableLanguages);
+
+      const versionLabel = bar.querySelector('[data-selector="version"] .current-value');
+      const languageLabel = bar.querySelector('[data-selector="language"] .current-value');
+      if (versionLabel) {
+        versionLabel.textContent = resolvedVersion;
+      }
+      if (languageLabel) {
+        languageLabel.textContent = resolvedLanguage;
+      }
+    }
+
+    function buildScopedUrl(targetVersion, targetLanguage, pageName) {
+      const context = getNavigationContext();
+      const rootSegments = context.versionIndex !== -1 ? context.rawSegments.slice(0, context.versionIndex) : [];
+      const targetPath = '/' + rootSegments.concat([
+        encodeURIComponent(targetVersion),
+        encodeURIComponent(targetLanguage),
+        encodeURIComponent(pageName)
+      ]).join('/');
+
+      if (context.currentUrl.protocol === 'file:') {
+        return 'file://' + targetPath;
+      }
+
+      return context.currentUrl.origin + targetPath;
+    }
+
+    function buildTargetUrl(targetVersion, targetLanguage) {
+      return buildScopedUrl(targetVersion, targetLanguage, 'index.html');
+    }
+
+    function buildSiteRootAssetUrl(fileName) {
+      const context = getNavigationContext();
+      const rootSegments = context.versionIndex !== -1 ? context.rawSegments.slice(0, context.versionIndex) : [];
+      const targetPath = '/' + rootSegments.concat([encodeURIComponent(fileName)]).join('/');
+
+      if (context.currentUrl.protocol === 'file:') {
+        return 'file://' + targetPath;
+      }
+
+      return context.currentUrl.origin + targetPath;
+    }
+
+    function buildClientSiteZipUrl() {
+      return buildSiteRootAssetUrl(offlineZipFileName);
+    }
+
+    function getHeadingText(heading) {
+      const clone = heading.cloneNode(true);
+      clone.querySelectorAll('a.headerlink').forEach(link => link.remove());
+      return clone.textContent.replace(/\s+/g, ' ').trim();
+    }
+
+    function normalizeMailText(text) {
+      return String(text || '').replace(/\u00AE/g, '');
+    }
+
+    function getTimeZoneAmericaDecision() {
+      try {
+        const timeZone = String(Intl.DateTimeFormat().resolvedOptions().timeZone || '').trim();
+        if (!timeZone) {
+          return null;
+        }
+        return timeZone.startsWith('America/') || additionalAmericanTimeZones.has(timeZone);
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function isCoordinateInAmericas(latitude, longitude) {
+      if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) {
+        return null;
+      }
+
+      return latitude >= -60 && latitude <= 85 && longitude >= -170 && longitude <= -25;
+    }
+
+    function getCurrentPosition(options) {
+      return new Promise((resolve, reject) => {
+        if (!navigator.geolocation || typeof navigator.geolocation.getCurrentPosition !== 'function') {
+          reject(new Error('Geolocation unavailable'));
+          return;
+        }
+
+        navigator.geolocation.getCurrentPosition(resolve, reject, options);
+      });
+    }
+
+    async function resolveServiceAddress() {
+      const timeZoneDecision = getTimeZoneAmericaDecision();
+      if (timeZoneDecision === false) {
+        return 'service@arsautomation.com';
+      }
+
+      const canTryGeolocation = Boolean(
+        navigator.onLine &&
+        window.isSecureContext &&
+        navigator.geolocation &&
+        typeof navigator.geolocation.getCurrentPosition === 'function'
+      );
+
+      if (canTryGeolocation) {
+        try {
+          const position = await getCurrentPosition({
+            enableHighAccuracy: false,
+            timeout: 4000,
+            maximumAge: 300000
+          });
+          const inAmericas = isCoordinateInAmericas(position.coords.latitude, position.coords.longitude);
+          if (inAmericas !== null) {
+            return inAmericas ? 'us.service@arsautomation.com' : 'service@arsautomation.com';
+          }
+        } catch (error) {
+        }
+      }
+
+      if (timeZoneDecision === true) {
+        return 'us.service@arsautomation.com';
+      }
+
+      return 'service@arsautomation.com';
+    }
+
+    function buildMailtoUrl(address, subject, body) {
+      return 'mailto:' + address +
+        '?subject=' + encodeURIComponent(normalizeMailText(subject)) +
+        '&body=' + encodeURIComponent(normalizeMailText(body));
+    }
+
+    function createHeadingActionLink(className, title, mailtoUrl, svgMarkup) {
+      const link = document.createElement('a');
+      link.className = 'headerlink manual-heading-action ' + className;
+      link.href = mailtoUrl;
+      link.title = title;
+      link.setAttribute('aria-label', title);
+      link.innerHTML = svgMarkup;
+      return link;
+    }
+
+    function addHeadingActions() {
+      const feedbackIcon = [
+        '<svg viewBox="0 0 16 16" aria-hidden="true">',
+        '<path d="M3 3.5h10v6.5H7.5L4.5 13v-3H3z"></path>',
+        '<path d="M6 6.2h4"></path>',
+        '<path d="M6 8.2h3"></path>',
+        '</svg>'
+      ].join('');
+
+        const serviceIcon = [
+          '<svg viewBox="0 0 16 16" aria-hidden="true">',
+          '<circle cx="8" cy="8" r="5.2"></circle>',
+          '<path d="M6.4 6.1A1.9 1.9 0 0 1 8 5.2c1.1 0 1.9.7 1.9 1.7 0 .8-.4 1.3-1.2 1.8-.6.4-.9.8-.9 1.5"></path>',
+          '<circle cx="8" cy="11.7" r="0.45" style="fill:currentColor;stroke:none"></circle>',
+          '</svg>'
+        ].join('');
+
+      document.querySelectorAll('h1 > a.headerlink, h2 > a.headerlink, h3 > a.headerlink, h4 > a.headerlink, h5 > a.headerlink, h6 > a.headerlink').forEach(link => {
+        const heading = link.parentElement;
+        if (!heading || heading.querySelector('.manual-feedback-link') || heading.querySelector('.manual-service-link')) {
+          return;
+        }
+
+        const sectionTitle = getHeadingText(heading);
+        const sectionUrl = new URL(link.getAttribute('href'), window.location.href).href;
+        const pageUrl = window.location.href.split('#')[0];
+        const feedbackBody = [
+          'Hello Documentation Team,',
+          '',
+          'I would like to suggest an improvement for this section of the manual.',
+          '',
+          'Section: ' + sectionTitle,
+          'Page: ' + pageUrl,
+          'Section link: ' + sectionUrl,
+          '',
+          'Suggestion:',
+          ''
+        ].join('\n');
+          const serviceBody = [
+            'Hello Service Team,',
+            '',
+            'I need support related to this section of the manual.',
+            '',
+            'Section: ' + sectionTitle,
+            'Page: ' + pageUrl,
+            'Section link: ' + sectionUrl,
+            '',
+            'FlexiBowl serial number:',
+            '',
+            'Photos or videos of the issue attached:',
+            '',
+            'Issue description:',
+            ''
+          ].join('\n');
+
+        const feedbackLink = createHeadingActionLink(
+          'manual-feedback-link',
+          'Suggest an improvement for this section',
+          buildMailtoUrl('documentation@arsautomation.com', 'Documentation suggestion: ' + sectionTitle, feedbackBody),
+          feedbackIcon
+        );
+          const serviceLink = createHeadingActionLink(
+            'manual-service-link',
+            'Contact service about this section',
+            '#',
+            serviceIcon
+          );
+          serviceLink.addEventListener('click', async event => {
+            event.preventDefault();
+            const serviceAddress = await resolveServiceAddress();
+            window.location.href = buildMailtoUrl(serviceAddress, 'Service request: ' + sectionTitle, serviceBody);
+          });
+
+          heading.appendChild(feedbackLink);
+          heading.appendChild(serviceLink);
+        });
+    }
+
+    function enhancePrintMenu() {
+      const dropdown = document.querySelector('.dropdown-download-buttons');
+      if (!dropdown || dropdown.dataset.printMenuEnhanced === 'true') {
+        return;
+      }
+
+      dropdown.dataset.printMenuEnhanced = 'true';
+
+      const toggleButton = dropdown.querySelector('.dropdown-toggle');
+      const hasReleaseDownloads = offlineZipEnabled;
+
+      if (toggleButton) {
+        const toggleLabel = hasReleaseDownloads ? 'Export options' : 'Print options';
+        toggleButton.setAttribute('aria-label', toggleLabel);
+        toggleButton.setAttribute('title', toggleLabel);
+        toggleButton.setAttribute('data-bs-original-title', toggleLabel);
+        const toggleIcon = toggleButton.querySelector('i');
+        if (toggleIcon) {
+          toggleIcon.className = hasReleaseDownloads ? 'fas fa-download' : 'fas fa-print';
+        }
+      }
+
+      dropdown.querySelectorAll('.btn-download-source-button').forEach(sourceButton => {
+        const sourceItem = sourceButton.closest('li');
+        if (sourceItem) {
+          sourceItem.remove();
+        }
+      });
+
+      const pagePrintButton = dropdown.querySelector('.btn-download-pdf-button');
+      if (pagePrintButton) {
+        pagePrintButton.setAttribute('title', 'Print this page');
+        pagePrintButton.setAttribute('aria-label', 'Print this page');
+        pagePrintButton.setAttribute('data-bs-original-title', 'Print this page');
+        const textContainer = pagePrintButton.querySelector('.btn__text-container');
+        if (textContainer) {
+          textContainer.textContent = 'Print this page';
+        }
+      }
+
+      const menu = dropdown.querySelector('.dropdown-menu');
+      if (!menu) {
+        return;
+      }
+
+      menu.querySelectorAll('.btn-download-client-site-zip-button').forEach(button => {
+        const item = button.closest('li');
+        if (item) {
+          item.remove();
+        }
+      });
+
+      if (offlineZipEnabled) {
+        const siteZipItem = document.createElement('li');
+        const siteZipLink = document.createElement('a');
+        siteZipLink.className = 'btn btn-sm dropdown-item btn-download-client-site-zip-button';
+        siteZipLink.title = 'Download offline manual';
+        siteZipLink.setAttribute('aria-label', 'Download offline manual');
+        siteZipLink.setAttribute('download', offlineZipFileName);
+        siteZipLink.href = buildClientSiteZipUrl();
+        siteZipLink.innerHTML = [
+          '<span class="btn__icon-container">',
+          '<svg viewBox="0 0 16 16" aria-hidden="true">',
+          '<path d="M4 3.5h8v2.5H4z"></path>',
+          '<path d="M4 6h8v6.5H4z"></path>',
+          '<path d="M8 3.5v9"></path>',
+          '<path d="M6.3 9.2L8 10.9l1.7-1.7"></path>',
+          '</svg>',
+          '</span>',
+          '<span class="btn__text-container">Download offline manual</span>'
+        ].join('');
+        siteZipItem.appendChild(siteZipLink);
+        menu.appendChild(siteZipItem);
+      }
+    }
+
+    refreshNavigationMenus();
+
+    bar.querySelectorAll('.dropdown').forEach(dropdown => {
+      const toggle = dropdown.querySelector('.dropdown-toggle');
+      const menu = dropdown.querySelector('.dropdown-menu');
+      const selector = dropdown.getAttribute('data-selector');
+
+      toggle.addEventListener('click', event => {
+        event.stopPropagation();
+        const willOpen = toggle.getAttribute('aria-expanded') !== 'true';
+        closeAllMenus();
+
+        if (willOpen) {
+          menu.classList.add('show');
+          toggle.setAttribute('aria-expanded', 'true');
+          setCaret(toggle, true);
+        }
+      });
+
+      menu.addEventListener('click', event => {
+        const link = event.target.closest('a');
+        if (!link) {
+          return;
+        }
+
+        event.preventDefault();
+        const selectedValue = link.textContent.trim();
+        const context = getNavigationContext();
+        if (!selectedValue) {
+          return;
+        }
+
+        if (selector === 'version') {
+          const targetVersion = selectedValue;
+          const availableLanguages = getLanguagesForVersion(targetVersion);
+          const targetLanguage = availableLanguages.includes(context.currentLanguage)
+            ? context.currentLanguage
+            : getDefaultLanguageForVersion(targetVersion);
+          if (targetLanguage) {
+            window.location.href = buildTargetUrl(targetVersion, targetLanguage);
+          }
+          return;
+        }
+
+        window.location.href = buildTargetUrl(context.currentVersion, selectedValue);
+      });
+    });
+
+    window.addEventListener('click', closeAllMenus);
+    window.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        closeAllMenus();
+      }
+    });
+
+    addHeadingActions();
+    enhancePrintMenu();
+  })();
+</script>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../12_Panoramica_Interfaccia.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>Panoramica dell’interfaccia</strong></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="13d_Camera_Setup.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Passo 3: Camera Setup</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#panoramica-del-processo-di-setup">Panoramica del processo di setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operazioni-preliminari">Operazioni preliminari</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#passo-1-login-al-sistema">Passo 1: Login al sistema</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#passo-2-accendere-il-backlight-se-presente">Passo 2: Accendere il Backlight se presente</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequenza-setup-consigliata">Sequenza setup consigliata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#passo-8-salva-e-rinomina-la-ricetta-base">Passo 8: Salva e Rinomina la ricetta base</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configurazione-componenti-hardware">Configurazione componenti hardware</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By ARS Automation
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Ars Automation.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../../_shared/static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../../_shared/static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

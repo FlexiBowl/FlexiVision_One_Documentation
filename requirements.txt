@@ -1,0 +1,6 @@
+sphinx
+myst-parser
+sphinx-book-theme
+sphinx-copybutton
+sphinx-design
+sphinxcontrib-video
