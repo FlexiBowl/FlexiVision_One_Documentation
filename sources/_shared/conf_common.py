@@ -66,5 +66,6 @@ html_theme_options = {
         "image_dark": "../../_shared/media/images/logo_dark.png",
     },
     "show_navbar_depth": 1,
+    "show_toc_level": 4,
     "show_prev_next": True,
 }
