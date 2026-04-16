@@ -231,6 +231,18 @@ html[data-theme="dark"] .only-light { display: none !important; }
    ============================================ */
 
 @media (min-width: 1200px) {
+    .bd-toc .nav .nav,
+    .bd-toc .toc-entry > .nav,
+    .bd-toc .toc-entry > ul.section-nav {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .bd-toc .toc-entry {
+        display: block !important;
+    }
+
     .bd-sidebar-secondary .page-toc .section-nav,
     .bd-sidebar-secondary .page-toc .toc-entry > ul,
     .bd-sidebar-secondary #pst-page-toc-nav ul {

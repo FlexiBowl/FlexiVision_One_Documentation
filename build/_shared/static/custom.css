@@ -224,3 +224,39 @@ html[data-theme="dark"] .only-light { display: none !important; }
         display: none !important;
     }
 }
+
+/* ============================================
+   PAGE TOC VISIBILITY
+   Keep nested headings visible in the right-side Contents panel.
+   ============================================ */
+
+@media (min-width: 1200px) {
+    .bd-toc .nav .nav,
+    .bd-toc .toc-entry > .nav,
+    .bd-toc .toc-entry > ul.section-nav {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .bd-toc .toc-entry {
+        display: block !important;
+    }
+
+    .bd-sidebar-secondary .page-toc .section-nav,
+    .bd-sidebar-secondary .page-toc .toc-entry > ul,
+    .bd-sidebar-secondary #pst-page-toc-nav ul {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .bd-sidebar-secondary.hide:not(:hover) {
+        max-height: none !important;
+        overflow-y: auto !important;
+    }
+
+    .bd-sidebar-secondary.hide:not(:hover) nav.page-toc {
+        opacity: 1 !important;
+    }
+}
