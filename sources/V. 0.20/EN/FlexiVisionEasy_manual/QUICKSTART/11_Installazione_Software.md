@@ -1,0 +1,7 @@
+---
+orphan: true
+---
+
+# 11. Software Installation
+
+ALSO APPLIES TO A PC SUPPLIED BY ARS? WHICH STEPS MUST BE CARRIED OUT IN ANY CASE?

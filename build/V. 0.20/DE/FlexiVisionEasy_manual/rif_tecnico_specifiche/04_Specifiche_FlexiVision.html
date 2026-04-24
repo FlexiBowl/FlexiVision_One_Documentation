@@ -1,0 +1,2324 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Specifiche Dettagliate FlexiVision One &#8212; FlexiVision One Manual</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_shared/static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../_shared/static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/custom.css?v=dbb29426" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../../_shared/static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_shared/static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../_shared/static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../../_shared/static/documentation_options.js?v=a681ed88"></script>
+    <script src="../../../../_shared/static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../../_shared/static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../../_shared/static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_shared/static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_shared/static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../../../../_shared/static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'FlexiVisionEasy_manual/rif_tecnico_specifiche/04_Specifiche_FlexiVision';</script>
+    <script src="../../../../_shared/static/versioning-data.js?v=37039824"></script>
+    <script src="../../../../_shared/static/fix_print.js?v=d332f839"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Kommunikationsprotokoll Roboter-Bildverarbeitung" href="04b_Protocolli_Comunicazione.html" />
+    <link rel="prev" title="Glossar" href="../27b_Glossario.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../../../_shared/static/logo.png" class="logo__image only-light" alt="FlexiVision One Manual - Home"/>
+    <img src="../../../../_shared/static/logo_dark.png" class="logo__image only-dark pst-js-only" alt="FlexiVision One Manual - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">VOR DEM START</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01_informazioni_preliminari.html"><strong>Einleitende Informationen</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02_informazioni_sicurezza.html"><strong>Sicherheitsinformationen</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03_Unboxing_Contenuto.html"><strong>Unboxing und Verpackungsinhalt</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../27_Support.html"><strong>Kontakte</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../27b_Glossario.html"><strong>Glossar</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TECHNISCHE REFERENZ UND SPEZIFIKATIONEN</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Specifiche Dettagliate FlexiVision One</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="04b_Protocolli_Comunicazione.html"><strong>Kommunikationsprotokoll Roboter-Bildverarbeitung</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05_Calcolo_distanza_ottimale.html"><strong>Berechnung des optimalen Arbeitsabstands</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="integrazione_software/06_PlugIn.html"><strong>PlugIn</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="integrazione_software/07_Backup_management.html"><strong>BackUp Management</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="08_Opzioni.html"><strong>Opzioni</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SYSTEMINSTALLATION</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.html"><strong>Installazione Meccanica del Sistema</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.html"><strong>Verkabelung und Anschlüsse</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">QUICKSTART</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../QUICKSTART/12_Panoramica_Interfaccia.html"><strong>Panoramica dell’interfaccia</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QUICKSTART/SETUP/13_setup.html"><strong>Configurazione Iniziale del Sistema</strong></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/SETUP/13d_Camera_Setup.html"><strong>Passo 3: Camera Setup</strong></a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/SETUP/14_calibrazione_camera.html"><strong>Calibrazione della Camera</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/SETUP/13a_FB_Setup.html"><strong>Passo 4: FlexiBowl Setup</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/SETUP/13b_Hopper_Setup.html"><strong>Passo 5: Hopper Setup</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/SETUP/13c_Robot_Setup.html"><strong>Passo 6 : Robot Setup</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/SETUP/15_Protocol_Setup.html"><strong>Passo 7: Protocol Setup</strong></a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QUICKSTART/Nuovo_Modello/16_Nuovo_modello.html"><strong>Creazione Ricette e Modelli - Panoramica</strong></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/Nuovo_Modello/17_NuovaRicetta.html"><strong>Creare una Nuova Ricetta</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/Nuovo_Modello/18_NuovoModello.html"><strong>Creare un Nuovo Modello</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/Nuovo_Modello/19_ROI_TEST.html"><strong>Definizione ROI e Tolleranze</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/Nuovo_Modello/20_Istogrammi.html"><strong>Le Clearances</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/Nuovo_Modello/21_RobotPick.html"><strong>Calibrazione Robot Pick</strong></a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../QUICKSTART/24_Verifica_Risultati.html"><strong>Monitoraggio Applicazione: Dashboard</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">MIX-ANWENDUNGEN</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../APPLICAZIONI_MIX/28_Panoramica_Mix.html"><strong>Übersicht Mix-Anwendung</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../APPLICAZIONI_MIX/29_Comandi_Mix.html"><strong>Befehle der Mix-Anwendung</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">MEHRGERÄTE-KONFIGURATIONEN</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../CONFIGURAZIONI_MULTI-DISPOSITIVO/30_2FB2CAM.html"><strong>2 FlexiBowl® und 2 Kameras</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../CONFIGURAZIONI_MULTI-DISPOSITIVO/31_3FB3CAM.html"><strong>3 FlexiBowl® e 3 Camere</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">GARANTIE</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../25_Garanzia.html"><strong>Garantie</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FEHLERSUCHE</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../TROUBLESHOOTING/26_trb_shooting_guide.html"><strong>Fehlersuche</strong></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26b_Installazione_Mecc.html"><strong>Installazione Meccanica</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26c_Cablaggio_Connessioni.html"><strong>Cablaggio e Connessioni</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26d_Conf_Iniziale.html"><strong>Setup Iniziale</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26e_Calib_Cam.html"><strong>Kamerakalibrierung</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26g_Creazione_Ricette_Modelli.html"><strong>Creazione Ricette e modelli</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26h_FlexiBowl_Wizard.html"><strong>FlexiBowl Wizard</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26i_Conf_Tramoggia.html"><strong>Hopper-Konfiguration</strong></a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/FlexiVisionEasy_manual/rif_tecnico_specifiche/04_Specifiche_FlexiVision.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Specifiche Dettagliate FlexiVision One</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#camera">Camera</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifiche-elettriche">Specifiche elettriche</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connettore-gpio-hirose-6-pin">Connettore GPIO (Hirose 6-pin)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodi-di-alimentazione">Metodi di alimentazione</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cavo-di-alimentazione">Cavo di Alimentazione</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifiche-fisiche-e-dimensioni">Specifiche fisiche e dimensioni</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#obiettivo">Obiettivo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visioncontroller">VisionController</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Specifiche elettriche</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#porte-pc">Porte PC</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifiche-fisiche">Specifiche fisiche</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strumento-laser-per-calibrazione">Strumento Laser per Calibrazione</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#griglia-di-calibrazione">Griglia di calibrazione</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifiche-tecniche-griglia">Specifiche tecniche griglia</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#panoramica-collegamenti">Panoramica collegamenti</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#componenti-opzionali">Componenti opzionali</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="specifiche-dettagliate-flexivision-one">
+<span id="specifiche-tecniche"></span><h1><strong>Specifiche Dettagliate FlexiVision One</strong><a class="headerlink" href="#specifiche-dettagliate-flexivision-one" title="Link to this heading">#</a></h1>
+<p>Questa sezione fornisce le specifiche tecniche complete del sistema FlexiVision One, inclusi dettagli su camera industriale, VisionController, griglia di calibrazione, protocolli di comunicazione e configurazioni hardware.</p>
+<hr class="docutils" />
+<section id="camera">
+<span id="specifiche-camera"></span><h2>Camera<a class="headerlink" href="#camera" title="Link to this heading">#</a></h2>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_shared/media/images/Camera2.png"><img alt="Camera FlexiVision One CAM-CIC-5000-20G-1" src="../../../../_shared/media/images/Camera2.png" style="width: 50%;" />
+</a>
+</figure>
+<p>Il sistema FlexiVision One utilizza telecamere ad alta risoluzione con interfaccia Gigabit Ethernet per garantire rapidità nell’acquisizione delle immagini e precisione nel riconoscimento dei componenti.</p>
+<section id="specifiche-elettriche">
+<h3>Specifiche elettriche<a class="headerlink" href="#specifiche-elettriche" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Caratteristica</strong></p></th>
+<th class="head"><p><strong>Specifiche</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Modello</p></td>
+<td><p>CAM-CIC-5000-20G-1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pixel Effettivi</p></td>
+<td><p>5 MP 12448 × 2048)</p></td>
+</tr>
+<tr class="row-even"><td><p>SNR</p></td>
+<td><p>&gt;38 dB</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic Range</p></td>
+<td><p>70 dB</p></td>
+</tr>
+<tr class="row-even"><td><p>GPIO</p></td>
+<td><p>Connettore Hirose 6-pin: 1 ingresso opto-isolato, 1 uscita opto-isolata, 1 I/O configurabile senza isolamento ottico</p></td>
+</tr>
+<tr class="row-odd"><td><p>Formato Immagine</p></td>
+<td><p>Mono8 / 10 / 10Packed</p></td>
+</tr>
+<tr class="row-even"><td><p>Binning</p></td>
+<td><p>Support</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gain</p></td>
+<td><p>X1 ~ X32</p></td>
+</tr>
+<tr class="row-even"><td><p>Gamma</p></td>
+<td><p>Da 0 a 4, supporto LUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tempo di Esposizione</p></td>
+<td><p>34.23 μS ~ 1S</p></td>
+</tr>
+<tr class="row-even"><td><p>Modalità Trigger</p></td>
+<td><p>Software / Hardware / Free run</p></td>
+</tr>
+<tr class="row-odd"><td><p>Buffer Immagine</p></td>
+<td><p>256 MB</p></td>
+</tr>
+<tr class="row-even"><td><p>impostazioni utente</p></td>
+<td><p>Support two sets of user-defined configuration</p></td>
+</tr>
+<tr class="row-odd"><td><p>Alimentazione</p></td>
+<td><p>PoE / DC tramite connettore Hirose, con tensione a 12 V o 24 V</p></td>
+</tr>
+<tr class="row-even"><td><p>Consumo Energetico</p></td>
+<td><p>12V ≈ 3.2 W</p></td>
+</tr>
+<tr class="row-odd"><td><p>Attacco Obiettivo</p></td>
+<td><p>C-mount</p></td>
+</tr>
+<tr class="row-even"><td><p>Temperatura Operativa</p></td>
+<td><p>-30°C ~ +50°C</p></td>
+</tr>
+<tr class="row-odd"><td><p>Temperatura di Stoccaggio</p></td>
+<td><p>-30°C ~ +80°C</p></td>
+</tr>
+<tr class="row-even"><td><p>Certificazioni</p></td>
+<td><p>CE, UL, FCC, RoHS</p></td>
+</tr>
+<tr class="row-odd"><td><p>Risoluzione</p></td>
+<td><p>2448 x 2048</p></td>
+</tr>
+<tr class="row-even"><td><p>Pixel Size</p></td>
+<td><p>3.45 × 3.45 μm</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sensore</p></td>
+<td><p>IMX264 CMOS Global Shutter</p></td>
+</tr>
+<tr class="row-even"><td><p>Dimensione Sensore</p></td>
+<td><p>2/3”</p></td>
+</tr>
+<tr class="row-odd"><td><p>Frame Rate</p></td>
+<td><p>24 fps</p></td>
+</tr>
+<tr class="row-even"><td><p>Bit Depth</p></td>
+<td><p>12 bit</p></td>
+</tr>
+<tr class="row-odd"><td><p>Interfaccia</p></td>
+<td><p>GigE, POE</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="connettore-gpio-hirose-6-pin">
+<h3>Connettore GPIO (Hirose 6-pin)<a class="headerlink" href="#connettore-gpio-hirose-6-pin" title="Link to this heading">#</a></h3>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../../../_shared/media/images/Pin_Cam.png"><img alt="Connettore GPIO Hirose 6-pin" src="../../../../_shared/media/images/Pin_Cam.png" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Vista posteriore della camera con connettori</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 20.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Pin</strong></p></th>
+<th class="head"><p><strong>Segnale</strong></p></th>
+<th class="head"><p><strong>Descrizione</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Power</p></td>
+<td><p>Ingresso alimentazione DC 12V o 24V</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Line1</p></td>
+<td><p>Ingresso opto-isolato</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Line2</p></td>
+<td><p>GPIO 1I/O configurabile senza opto-isolamento via software)</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>Line0</p></td>
+<td><p>Uscita opto-isolata</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>IO GND</p></td>
+<td><p>Massa opto-isolata</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>GND</p></td>
+<td><p>Massa</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Requisiti di rete obbligatori</strong></p>
+<p>L’interfaccia Gigabit Ethernet è obbligatoria e richiede un’infrastruttura di rete compatibile 1switch Gigabit Ethernet e cavi Ethernet almeno di categoria Cat6 o Cat7 con S/STP shielding).</p>
+<p>La mancata osservanza di questo requisito compromette completamente l’operatività della telecamera. Verificare che tutti i componenti di rete (cavi, switch, porte) supportino lo standard GigE.</p>
+</div>
+</section>
+<section id="metodi-di-alimentazione">
+<h3>Metodi di alimentazione<a class="headerlink" href="#metodi-di-alimentazione" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 40.0%" />
+<col style="width: 35.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Metodo</strong></p></th>
+<th class="head"><p><strong>Descrizione</strong></p></th>
+<th class="head"><p><strong>Requisiti</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>PoE</strong></p></td>
+<td><p>Alimentazione e dati su un unico cavo Ethernet. Consumo 3.2 W &#64; 12 Vdc.</p></td>
+<td><p>Richiede PoE Injector o Switch PoE compatibile 1IEEE 802.3af/at)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Cavo Camera Esterno Fornito nel Kit</strong></p></td>
+<td><p>Alimentazione DC esterna tramite connettore Hirose 6-pin 112V o 24V). Incluso nel kit.</p></td>
+<td><p>Cavo Ethernet separato necessario solo per i dati</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Quale metodo scegliere?</strong></p>
+<ul class="simple">
+<li><p><strong>PoE</strong>: ideale per installazioni pulite con un solo cavo, ma richiede hardware di rete specifico</p></li>
+<li><p><strong>Alimentazione esterna</strong>: soluzione standard più flessibile, consigliata per la maggior parte delle applicazioni</p></li>
+</ul>
+</div>
+</section>
+<section id="cavo-di-alimentazione">
+<span id="cavo"></span><h3>Cavo di Alimentazione<a class="headerlink" href="#cavo-di-alimentazione" title="Link to this heading">#</a></h3>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../../../_shared/media/images/Cavo_Specfiche.png"><img alt="Specifiche Cavo Alimentazione Camera" src="../../../../_shared/media/images/Cavo_Specfiche.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Specifiche Cavo Alimentazione Camera</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parametro</p></th>
+<th class="head"><p>Valore</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Descrizione</strong></p></td>
+<td><p>Cavo I/O 10 metri, connettore HRS6P</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Compatibilità</strong></p></td>
+<td><p>Telecamere CIC-series</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Lunghezza</strong></p></td>
+<td><p>10 metri 133’)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Connettore 1P1)</strong></p></td>
+<td><p>Push/Pull 6P RECP Shell SZ 7 Female</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Sezione conduttori</strong></p></td>
+<td><p>22 AWG</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Tipo cavo</strong></p></td>
+<td><p>Schermato, 3 coppie twistare, flessibile</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Colori cavi</strong></p></td>
+<td><p>Pin 1: Marrone, Pin 2: Verde , Pin 3: Rosa, Pin 4: Giallo, Pin 5: Grigio, Pin 6: Bianco</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Schermatura</strong></p></td>
+<td><p>Shield su tutti i conduttori</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Conformità</strong></p></td>
+<td><p>UL/CSA e RoHS</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="specifiche-fisiche-e-dimensioni">
+<h3>Specifiche fisiche e dimensioni<a class="headerlink" href="#specifiche-fisiche-e-dimensioni" title="Link to this heading">#</a></h3>
+<p><img alt="Dimensioni Camera" src="../../../../_shared/media/images/Dimensioni_Cam__ab884007b7.png" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Caratteristica</strong></p></th>
+<th class="head"><p><strong>Valore</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Larghezza × Altezza 1corpo)</p></td>
+<td><p>29 × 29 mm</p></td>
+</tr>
+<tr class="row-odd"><td><p>Profondità 1corpo)</p></td>
+<td><p>42.0 mm</p></td>
+</tr>
+<tr class="row-even"><td><p>Profondità totale 1incluso connettore posteriore)</p></td>
+<td><p>48.9 mm</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sporgenza frontale 1attacco obiettivo)</p></td>
+<td><p>12.60 mm</p></td>
+</tr>
+<tr class="row-even"><td><p>Interasse fori di fissaggio laterali 1M2)</p></td>
+<td><p>20.0 × 23.7 mm</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fori di fissaggio frontali</p></td>
+<td><p>2× M2 profondità 3 mm</p></td>
+</tr>
+<tr class="row-even"><td><p>Fori di fissaggio laterali</p></td>
+<td><p>4× M2 profondità 3.5 mm + 3× M3 profondità 3.5 mm</p></td>
+</tr>
+<tr class="row-odd"><td><p>Peso</p></td>
+<td><p>88 g</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+</section>
+</section>
+<section id="obiettivo">
+<span id="specifiche-obiettivo"></span><h2>Obiettivo<a class="headerlink" href="#obiettivo" title="Link to this heading">#</a></h2>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_shared/media/images/Ottica_000046.png"><img alt="Camera FlexiVision One CAM-CIC-5000-20G-1" src="../../../../_shared/media/images/Ottica_000046.png" style="width: 50%;" />
+</a>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Obiettivo 35mm</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Parametro</p></th>
+<th class="head"><p class="sd-card-text">Ingrandimento di Riferimento</p></th>
+<th class="head"><p class="sd-card-text">M.O.D.</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Tipo di lente</strong></p></td>
+<td><p class="sd-card-text">CCTV Lens</p></td>
+<td><p class="sd-card-text">CCTV Lens</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Posizione di fuoco</strong></p></td>
+<td><p class="sd-card-text">Reference Magnification</p></td>
+<td><p class="sd-card-text">M.O.D.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Ingrandimento</strong></p></td>
+<td><p class="sd-card-text">0.069</p></td>
+<td><p class="sd-card-text">0.167</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Lunghezza focale 1mm)</strong></p></td>
+<td><p class="sd-card-text">34.97</p></td>
+<td><p class="sd-card-text">34.97</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Numero F 1Fno)</strong></p></td>
+<td><p class="sd-card-text">2.00 ~ 16.00</p></td>
+<td><p class="sd-card-text">2.00 ~ 16.00</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Apertura Numerica 1NA)</strong></p></td>
+<td><p class="sd-card-text">-</p></td>
+<td><p class="sd-card-text">-</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Distanza di lavoro / oggetto 1mm)</strong></p></td>
+<td><p class="sd-card-text">500.0 / 507.0</p></td>
+<td><p class="sd-card-text">200.0 / 207.0</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Distanza oggetto-immagine 1mm)</strong></p></td>
+<td><p class="sd-card-text">555.75</p></td>
+<td><p class="sd-card-text">259.16</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Lunghezza meccanica tubo 1mm)</strong></p></td>
+<td><p class="sd-card-text">36.30 ~ 38.20</p></td>
+<td><p class="sd-card-text">36.30 ~ 38.20</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Back focus lente 1mm)</strong></p></td>
+<td><p class="sd-card-text">14.75</p></td>
+<td><p class="sd-card-text">18.16</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Profondità di campo 1mm)</strong></p></td>
+<td><p class="sd-card-text">35.476</p></td>
+<td><p class="sd-card-text">6.336</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Risoluzione &#64;550nm (µm)</strong></p></td>
+<td><p class="sd-card-text">-</p></td>
+<td><p class="sd-card-text">-</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Posizione piano principale Ant./Post. 1mm)</strong></p></td>
+<td><p class="sd-card-text">37.60 / -22.61</p></td>
+<td><p class="sd-card-text">37.60 / -22.61</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Posizione pupilla Entr./Usc. 1mm)</strong></p></td>
+<td><p class="sd-card-text">25.22 / -41.78</p></td>
+<td><p class="sd-card-text">25.22 / -41.78</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Diametro pupilla Entr./Usc. 1mm)</strong></p></td>
+<td><p class="sd-card-text">17.03 / 26.36</p></td>
+<td><p class="sd-card-text">17.03 / 26.36</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Angolo di campo 1°) H × V</strong></p></td>
+<td><p class="sd-card-text">13.69 × 10.34</p></td>
+<td><p class="sd-card-text">12.62 × 9.76</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Distorsione TV 1%)</strong></p></td>
+<td><p class="sd-card-text">-0.088</p></td>
+<td><p class="sd-card-text">-0.142</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Illuminazione relativa 1%)</strong></p></td>
+<td><p class="sd-card-text">44.95</p></td>
+<td><p class="sd-card-text">50.20</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Peso 1g)</strong></p></td>
+<td><p class="sd-card-text">50</p></td>
+<td><p class="sd-card-text">50</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Attacco 1Mount)</strong></p></td>
+<td><p class="sd-card-text">C-mount</p></td>
+<td><p class="sd-card-text">C-mount</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Cerchio immagine 1mm)</strong></p></td>
+<td><p class="sd-card-text">φ11</p></td>
+<td><p class="sd-card-text">φ11</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Camera massima compatibile</strong></p></td>
+<td><p class="sd-card-text">2/3”</p></td>
+<td><p class="sd-card-text">2/3”</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Obiettivo 25mm</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Parametro</p></th>
+<th class="head text-center"><p class="sd-card-text">Ingrandimento di Riferimento</p></th>
+<th class="head text-center"><p class="sd-card-text">M.O.D.</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Tipo di lente</strong></p></td>
+<td class="text-center"><p class="sd-card-text">CCTV Lens</p></td>
+<td class="text-center"><p class="sd-card-text">CCTV Lens</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Posizione di fuoco</strong></p></td>
+<td class="text-center"><p class="sd-card-text">Reference Magnification</p></td>
+<td class="text-center"><p class="sd-card-text">M.O.D.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Ingrandimento</strong></p></td>
+<td class="text-center"><p class="sd-card-text">0.049</p></td>
+<td class="text-center"><p class="sd-card-text">0.152</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Lunghezza focale 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">25.00</p></td>
+<td class="text-center"><p class="sd-card-text">25.00</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Numero F 1Fno)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">1.60 ~ 16.00</p></td>
+<td class="text-center"><p class="sd-card-text">1.60 ~ 16.00</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Apertura numerica 1NA)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">-</p></td>
+<td class="text-center"><p class="sd-card-text">-</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Distanza di lavoro / oggetto 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">500.0 / 510.0</p></td>
+<td class="text-center"><p class="sd-card-text">150.0 / 160.0</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Distanza oggetto-immagine 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">553.34</p></td>
+<td class="text-center"><p class="sd-card-text">205.92</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Lunghezza meccanica tubo 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">34.60 ~ 38.50</p></td>
+<td class="text-center"><p class="sd-card-text">34.60 ~ 38.50</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Back focus lente 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">13.75</p></td>
+<td class="text-center"><p class="sd-card-text">16.33</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Profondità di campo &#64;PCoC 0.04mm 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">54.223</p></td>
+<td class="text-center"><p class="sd-card-text">5.835</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Risoluzione &#64;550nm (µm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">-</p></td>
+<td class="text-center"><p class="sd-card-text">-</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Posizione piano principale Ant./Post. 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">29.42 / -12.46</p></td>
+<td class="text-center"><p class="sd-card-text">29.42 / -12.46</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Posizione pupilla Entr./Usc. 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">18.48 / -31.94</p></td>
+<td class="text-center"><p class="sd-card-text">18.48 / -31.94</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Diametro pupilla Entr./Usc. 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">15.92 / 28.32</p></td>
+<td class="text-center"><p class="sd-card-text">15.92 / 28.32</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Angolo di campo 1°) H × V</strong></p></td>
+<td class="text-center"><p class="sd-card-text">19.39 × 14.64</p></td>
+<td class="text-center"><p class="sd-card-text">18.05 × 13.89</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Distorsione TV 1%)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">-0.041</p></td>
+<td class="text-center"><p class="sd-card-text">-0.271</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Illuminazione relativa 1%)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">49.78</p></td>
+<td class="text-center"><p class="sd-card-text">53.52</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Peso 1g)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">50</p></td>
+<td class="text-center"><p class="sd-card-text">50</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Attacco 1Mount)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">C-mount</p></td>
+<td class="text-center"><p class="sd-card-text">C-mount</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Cerchio immagine 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">φ11</p></td>
+<td class="text-center"><p class="sd-card-text">φ11</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Camera massima compatibile</strong></p></td>
+<td class="text-center"><p class="sd-card-text">2/3”</p></td>
+<td class="text-center"><p class="sd-card-text">2/3”</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Obiettivo 16mm</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Parametro</p></th>
+<th class="head text-center"><p class="sd-card-text">Ingrandimento di Riferimento</p></th>
+<th class="head text-center"><p class="sd-card-text">M.O.D.</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Tipo di lente</strong></p></td>
+<td class="text-center"><p class="sd-card-text">CCTV Lens</p></td>
+<td class="text-center"><p class="sd-card-text">CCTV Lens</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Posizione di fuoco</strong></p></td>
+<td class="text-center"><p class="sd-card-text">Reference Magnification</p></td>
+<td class="text-center"><p class="sd-card-text">M.O.D.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Ingrandimento</strong></p></td>
+<td class="text-center"><p class="sd-card-text">0.031</p></td>
+<td class="text-center"><p class="sd-card-text">0.095</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Lunghezza focale 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">16.16</p></td>
+<td class="text-center"><p class="sd-card-text">16.16</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Numero F 1Fno)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">1.60 ~ 16.00</p></td>
+<td class="text-center"><p class="sd-card-text">1.60 ~ 16.00</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Apertura numerica 1NA)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">-</p></td>
+<td class="text-center"><p class="sd-card-text">-</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Distanza di lavoro / oggetto 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">500.0 / 507.0</p></td>
+<td class="text-center"><p class="sd-card-text">150.0 / 157.0</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Distanza oggetto-immagine 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">554.26</p></td>
+<td class="text-center"><p class="sd-card-text">205.30</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Lunghezza meccanica tubo 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">35.50 ~ 37.00</p></td>
+<td class="text-center"><p class="sd-card-text">35.50 ~ 37.00</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Back focus lente 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">12.16</p></td>
+<td class="text-center"><p class="sd-card-text">13.20</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Profondità di campo &#64;PCoC 0.04mm 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">131.893</p></td>
+<td class="text-center"><p class="sd-card-text">14.387</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Risoluzione &#64;550nm (µm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">-</p></td>
+<td class="text-center"><p class="sd-card-text">-</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Posizione piano principale Ant./Post. 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">28.44 / -4.50</p></td>
+<td class="text-center"><p class="sd-card-text">28.44 / -4.50</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Posizione pupilla Entr./Usc. 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">18.85 / -28.07</p></td>
+<td class="text-center"><p class="sd-card-text">18.85 / -28.07</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Diametro pupilla Entr./Usc. 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">10.18 / 25.02</p></td>
+<td class="text-center"><p class="sd-card-text">10.18 / 25.02</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Angolo di campo 1°) H × V</strong></p></td>
+<td class="text-center"><p class="sd-card-text">30.37 × 22.92</p></td>
+<td class="text-center"><p class="sd-card-text">29.62 × 22.39</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Distorsione TV 1%)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">-0.472</p></td>
+<td class="text-center"><p class="sd-card-text">-0.674</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Illuminazione relativa 1%)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">32.75</p></td>
+<td class="text-center"><p class="sd-card-text">36.61</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Peso 1g)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">50</p></td>
+<td class="text-center"><p class="sd-card-text">50</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Attacco 1Mount)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">C-mount</p></td>
+<td class="text-center"><p class="sd-card-text">C-mount</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Cerchio immagine 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">φ11</p></td>
+<td class="text-center"><p class="sd-card-text">φ11</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Camera massima compatibile</strong></p></td>
+<td class="text-center"><p class="sd-card-text">2/3”</p></td>
+<td class="text-center"><p class="sd-card-text">2/3”</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Obiettivo 12mm</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Parametro</p></th>
+<th class="head text-center"><p class="sd-card-text">Ingrandimento di Riferimento</p></th>
+<th class="head text-center"><p class="sd-card-text">M.O.D.</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Tipo di lente</strong></p></td>
+<td class="text-center"><p class="sd-card-text">CCTV Lens</p></td>
+<td class="text-center"><p class="sd-card-text">CCTV Lens</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Posizione di fuoco</strong></p></td>
+<td class="text-center"><p class="sd-card-text">Reference Magnification</p></td>
+<td class="text-center"><p class="sd-card-text">M.O.D.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Ingrandimento</strong></p></td>
+<td class="text-center"><p class="sd-card-text">0.023</p></td>
+<td class="text-center"><p class="sd-card-text">0.075</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Lunghezza focale 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">12.00</p></td>
+<td class="text-center"><p class="sd-card-text">12.00</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Numero F 1Fno)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">1.80 ~ 16.00</p></td>
+<td class="text-center"><p class="sd-card-text">1.80 ~ 16.00</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Apertura numerica 1NA)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">-</p></td>
+<td class="text-center"><p class="sd-card-text">-</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Distanza di lavoro / oggetto 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">500.0 / 505.6</p></td>
+<td class="text-center"><p class="sd-card-text">150.0 / 155.0</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Distanza oggetto-immagine 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">559.55</p></td>
+<td class="text-center"><p class="sd-card-text">209.55</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Lunghezza meccanica tubo 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">39.20 ~ 40.10</p></td>
+<td class="text-center"><p class="sd-card-text">39.20 ~ 40.10</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Back focus lente 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">12.23</p></td>
+<td class="text-center"><p class="sd-card-text">12.84</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Profondità di campo &#64;PCoC 0.04mm 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">277.576</p></td>
+<td class="text-center"><p class="sd-card-text">28.121</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Risoluzione &#64;550nm (µm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">-</p></td>
+<td class="text-center"><p class="sd-card-text">-</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Posizione piano principale Ant./Post. 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">17.71 / -0.05</p></td>
+<td class="text-center"><p class="sd-card-text">17.71 / -0.05</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Posizione pupilla Entr./Usc. 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">11.68 / -12.18</p></td>
+<td class="text-center"><p class="sd-card-text">11.68 / -12.18</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Diametro pupilla Entr./Usc. 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">6.67 / 13.41</p></td>
+<td class="text-center"><p class="sd-card-text">6.67 / 13.41</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Angolo di campo 1°) H × V</strong></p></td>
+<td class="text-center"><p class="sd-card-text">40.54 × 30.77</p></td>
+<td class="text-center"><p class="sd-card-text">39.40 × 30.05</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Distorsione TV 1%)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">-0.983</p></td>
+<td class="text-center"><p class="sd-card-text">-0.905</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Illuminazione relativa 1%)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">40.64</p></td>
+<td class="text-center"><p class="sd-card-text">42.64</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Peso 1g)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">60</p></td>
+<td class="text-center"><p class="sd-card-text">60</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Attacco 1Mount)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">C-mount</p></td>
+<td class="text-center"><p class="sd-card-text">C-mount</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>Cerchio immagine 1mm)</strong></p></td>
+<td class="text-center"><p class="sd-card-text">φ11</p></td>
+<td class="text-center"><p class="sd-card-text">φ11</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>Camera massima compatibile</strong></p></td>
+<td class="text-center"><p class="sd-card-text">2/3”</p></td>
+<td class="text-center"><p class="sd-card-text">2/3”</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</details><hr class="docutils" />
+</section>
+<section id="visioncontroller">
+<span id="specifiche-vc"></span><h2>VisionController<a class="headerlink" href="#visioncontroller" title="Link to this heading">#</a></h2>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_shared/media/images/PC.png"><img alt="VisionController FlexiVision One" src="../../../../_shared/media/images/PC.png" style="width: 50%;" />
+</a>
+</figure>
+<p>Il sistema FlexiVision One opera su un PC Industriale 1VisionController) che funge da controller principale per il software di visione. ARS fornisce il VisionController già pre-configurato e testato con il software FlexiVision One installato.</p>
+<section id="id1">
+<h3>Specifiche elettriche<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Caratteristica</strong></p></th>
+<th class="head"><p><strong>Specifiche</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CPU</p></td>
+<td><p>Intel Core i3-1115G4 1.7 14.1) GHz</p></td>
+</tr>
+<tr class="row-odd"><td><p>Memoria 1RAM)</p></td>
+<td><p>8G DDR4 3200 MHz</p></td>
+</tr>
+<tr class="row-even"><td><p>Archiviazione</p></td>
+<td><p>256G</p></td>
+</tr>
+<tr class="row-odd"><td><p>TPM</p></td>
+<td><p>TPM 2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Sistema Operativo</p></td>
+<td><p>Win11 LTSC 2024</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pulsante di accensione</p></td>
+<td><p>Sì 1pannello frontale con spia luminosa)</p></td>
+</tr>
+<tr class="row-even"><td><p>Porte Ethernet</p></td>
+<td><p><strong>i3/i7:</strong> 3× Gb LAN</p></td>
+</tr>
+<tr class="row-odd"><td><p>Porte USB</p></td>
+<td><p>6× USB 3.0 TypeA</p></td>
+</tr>
+<tr class="row-even"><td><p>Uscita Video</p></td>
+<td><p>2× HDMI</p></td>
+</tr>
+<tr class="row-odd"><td><p>Audio</p></td>
+<td><p>Line Out + MIC 1Jack 2-in-1)</p></td>
+</tr>
+<tr class="row-even"><td><p>Alimentazione 1V DC)</p></td>
+<td><p>12 ~ 32 V DC</p></td>
+</tr>
+<tr class="row-odd"><td><p>Temperatura Operativa</p></td>
+<td><p>1°C ~ +50°C</p></td>
+</tr>
+<tr class="row-even"><td><p>Temperatura di Stoccaggio</p></td>
+<td><p>-20°C ~ +65°C</p></td>
+</tr>
+<tr class="row-odd"><td><p>Umidità</p></td>
+<td><p>&lt;90% 1senza condensa)</p></td>
+</tr>
+<tr class="row-even"><td><p>Materiale Scocca</p></td>
+<td><p>Lega di alluminio + acciaio</p></td>
+</tr>
+<tr class="row-odd"><td><p>Grado di Protezione</p></td>
+<td><p>IP20</p></td>
+</tr>
+<tr class="row-even"><td><p>Metodo di Installazione</p></td>
+<td><p>Montaggio a parete 1DIN Rail opzionale)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Consumo Energetico</p></td>
+<td><p>25 W</p></td>
+</tr>
+<tr class="row-even"><td><p>Dimensioni 1L × A × P)</p></td>
+<td><p>59.8 × 200 × 119.5 mm</p></td>
+</tr>
+<tr class="row-odd"><td><p>Peso</p></td>
+<td><p>2 kg</p></td>
+</tr>
+<tr class="row-even"><td><p>Certificazioni</p></td>
+<td><p>CE, UL</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="porte-pc">
+<h3>Porte PC<a class="headerlink" href="#porte-pc" title="Link to this heading">#</a></h3>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_shared/media/images/Spec_Elettriche_PC.png"><img alt="Schema elettrico VisionController" src="../../../../_shared/media/images/Spec_Elettriche_PC.png" style="width: 50%;" />
+</a>
+</figure>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 25.0%" />
+<col style="width: 65.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Ref.</strong></p></th>
+<th class="head"><p><strong>Connettore</strong></p></th>
+<th class="head"><p><strong>Descrizione</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>A</p></td>
+<td><p>Pulsante di accensione</p></td>
+<td><p>Accensione e spegnimento del dispositivo</p></td>
+</tr>
+<tr class="row-odd"><td><p>B</p></td>
+<td><p>ETH 10/100/1000 Mbit – RJ45 1LAN 1)</p></td>
+<td><p>Porta Ethernet Gigabit 1</p></td>
+</tr>
+<tr class="row-even"><td><p>C</p></td>
+<td><p>ETH 10/100/1000 Mbit – RJ45 1LAN 2)</p></td>
+<td><p>Porta Ethernet Gigabit 2</p></td>
+</tr>
+<tr class="row-odd"><td><p>D</p></td>
+<td><p>Porta Seriale 1RS232) COM1</p></td>
+<td><p>Interfaccia seriale RS232 COM1</p></td>
+</tr>
+<tr class="row-even"><td><p>E</p></td>
+<td><p>Porta Seriale 1RS232) COM2</p></td>
+<td><p>Interfaccia seriale RS232 COM2</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>Connettore di ingresso alimentazione</p></td>
+<td><p>Ingresso alimentazione 12–32V DC 1terminal block 3-pin)</p></td>
+</tr>
+<tr class="row-even"><td><p>G</p></td>
+<td><p>Uscita Audio + MIC 1Jack 3.5 mm)</p></td>
+<td><p>1× uscita audio di linea + ingresso microfono 1jack 3.5 mm)</p></td>
+</tr>
+<tr class="row-odd"><td><p>H</p></td>
+<td><p>6× USB-A</p></td>
+<td><p>Porte USB 1USB 3.0 TypeA per versioni i3/i7)</p></td>
+</tr>
+<tr class="row-even"><td><p>I</p></td>
+<td><p>Porta video 2</p></td>
+<td><p><strong>B2B12/B2B14:</strong> HDMI 2 — <strong>B2B15/B2B16:</strong> DisplayPort</p></td>
+</tr>
+<tr class="row-odd"><td><p>L</p></td>
+<td><p>Porta HDMI 1</p></td>
+<td><p>Uscita video HDMI 1</p></td>
+</tr>
+<tr class="row-even"><td><p>M</p></td>
+<td><p>ETH 10/100/1000 Mbit – RJ45 1LAN 3)</p></td>
+<td><p>Porta Ethernet Gigabit 3</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="specifiche-fisiche">
+<h3>Specifiche fisiche<a class="headerlink" href="#specifiche-fisiche" title="Link to this heading">#</a></h3>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_shared/media/images/dimensioni_VC.png"><img alt="Dimensioni VisionController" src="../../../../_shared/media/images/dimensioni_VC.png" style="width: 80%;" />
+</a>
+</figure>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Fori Viti</strong></p></th>
+<th class="head"><p>M5</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Caratteristica</strong></p></td>
+<td><p><strong>Valore</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>Larghezza 1totale con staffe)</p></td>
+<td><p>245.00 mm</p></td>
+</tr>
+<tr class="row-even"><td><p>Larghezza 1corpo)</p></td>
+<td><p>227.00 mm</p></td>
+</tr>
+<tr class="row-odd"><td><p>Larghezza pannello connettori</p></td>
+<td><p>200.00 mm</p></td>
+</tr>
+<tr class="row-even"><td><p>Altezza 1totale con staffe)</p></td>
+<td><p>123.00 mm</p></td>
+</tr>
+<tr class="row-odd"><td><p>Altezza 1corpo)</p></td>
+<td><p>120.00 mm</p></td>
+</tr>
+<tr class="row-even"><td><p>Profondità</p></td>
+<td><p>61.10 mm</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+</section>
+</section>
+<section id="strumento-laser-per-calibrazione">
+<span id="laser"></span><h2>Strumento Laser per Calibrazione<a class="headerlink" href="#strumento-laser-per-calibrazione" title="Link to this heading">#</a></h2>
+<p>Lo Strumento Laser è una soluzione avanzata per la calibrazione che migliora la precisione con cui viene salvato il punto di riferimento del robot.
+Il beneficio principale del laser è che non richiede un contatto fisico con la griglia di calibrazione. Funzionando come un puntatore ad alta precisione, il laser consente all’operatore di allineare il punto target in modo visivo e ripetibile sulla griglia, offrendo un grado di accuratezza molto superiore rispetto all’uso di una punta fisica.
+Questa precisione è essenziale per il successo della calibrazione e si integra perfettamente con la ripetibilità garantita dalla Griglia di Calibrazione Dedicata ARS.</p>
+<p><img alt="Laser Cal" src="../../../../_shared/media/images/laser.png" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Caratteristica</p></th>
+<th class="head"><p>Strumento Laser 1Laser Tool)</p></th>
+<th class="head"><p>Strumento a Punta 1Tip Tool) Standard</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Metodo di Riferimento</p></td>
+<td><p>Non a contatto 1puntatore visivo)</p></td>
+<td><p>A contatto 1punta meccanica/fisica)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Precisione del Riferimento</p></td>
+<td><p>Massima precisione; l’operatore allinea visivamente il punto con accuratezza.</p></td>
+<td><p>Media, subordinata alla vista dell’operatore</p></td>
+</tr>
+<tr class="row-even"><td><p>Facilità d’Uso</p></td>
+<td><p>Semplifica la procedura di allineamento visivo.</p></td>
+<td><p>Richiede maggiore attenzione nel posizionamento e nell’evitare l’inclinazione.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Vantaggio Chiave</p></td>
+<td><p>Consente di salvare il punto di riferimento robot con la massima fedeltà possibile, essenziale per l’accuratezza finale del picking.</p></td>
+<td><p>Metodo base, ma meno preciso del laser.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<a class="hidden reference internal image-reference" href="../../../../_shared/media/images/laserscomp.png"><img alt="../../_images/laserscomp.png" class="hidden" src="../../../../_shared/media/images/laserscomp.png" style="width: 1px;" />
+</a>
+<div style="display: flex; align-items: flex-start; gap: 2rem;">
+  <img src="../../../../_shared/media/images/laserscomp.png" style="width: 280px; flex-shrink: 0;" />
+  <table style="border-collapse: collapse; font-size: 0.95em; align-self: center;">
+    <thead>
+      <tr style="background: #d0d0d0;">
+        <th style="padding: 6px 16px; text-align: left;">POS.</th>
+        <th style="padding: 6px 16px; text-align: left;">DESCRIZIONE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding: 5px 16px;">1</td><td style="padding: 5px 16px;">TAPPO DI CHIUSURA SUPERIORE</td></tr>
+      <tr><td style="padding: 5px 16px;">2</td><td style="padding: 5px 16px;">CONTENITORE BATTERIE CR2032 3V A BOTTONE</td></tr>
+      <tr><td style="padding: 5px 16px;">3</td><td style="padding: 5px 16px;">FLANGIA DI ACCOPPIAMENTO</td></tr>
+      <tr><td style="padding: 5px 16px;">4</td><td style="padding: 5px 16px;">MORSETTO</td></tr>
+      <tr><td style="padding: 5px 16px;">5</td><td style="padding: 5px 16px;">CORPO UTENSILE</td></tr>
+      <tr><td style="padding: 5px 16px;">6</td><td style="padding: 5px 16px;">PUNTATORE LASER</td></tr>
+      <tr><td style="padding: 5px 16px;">7</td><td style="padding: 5px 16px;">AMMORTIZZATORE A MOLLA</td></tr>
+      <tr><td style="padding: 5px 16px;">8</td><td style="padding: 5px 16px;">SUPPORTO DISTANZIALE</td></tr>
+    </tbody>
+  </table>
+</div><div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Per cambiarle le DUE batterie dello strumento laser, seguire questi passaggi:</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Suggerimento</p>
+<p>L’utilizzo dello Strumento Laser in combinazione con la Griglia di Calibrazione Dedicata ARS costituisce la metodologia più robusta e precisa per l’installazione del sistema FlexiVision One</p>
+</div>
+<hr class="docutils" />
+</section>
+<section id="griglia-di-calibrazione">
+<span id="specifiche-griglia"></span><h2>Griglia di calibrazione<a class="headerlink" href="#griglia-di-calibrazione" title="Link to this heading">#</a></h2>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_shared/media/images/Calib_Grid.png"><img alt="Griglia di Calibrazione" src="../../../../_shared/media/images/Calib_Grid.png" style="width: 50%;" />
+</a>
+</figure>
+<p>Una calibrazione eccellente è il requisito fondamentale per l’accuratezza del sistema FlexiVision One. Solo una calibrazione ad alta precisione garantisce che le coordinate rilevate dalla telecamera 1pixel) vengano convertite in modo accurato nelle coordinate reali del robot 1millimetri), assicurando così il successo dell’applicazione di picking.</p>
+<section id="specifiche-tecniche-griglia">
+<h3>Specifiche tecniche griglia<a class="headerlink" href="#specifiche-tecniche-griglia" title="Link to this heading">#</a></h3>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Griglia per FlexiBowl 200</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><img alt="Griglia 200" src="../../../../_shared/media/images/griglia200.JPG" /></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Griglia per FlexiBowl 350</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><img alt="Griglia 350" src="../../../../_shared/media/images/griglia350.JPG" /></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Griglia per FlexiBowl 500</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><img alt="Griglia 500" src="../../../../_shared/media/images/griglia500.JPG" /></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Griglia per FlexiBowl 650</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><img alt="Griglia 650" src="../../../../_shared/media/images/griglia650.JPG" /></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Griglia per FlexiBowl 800</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><img alt="Griglia 800" src="../../../../_shared/media/images/griglia800.JPG" /></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Griglia per FlexiBowl 1200</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><img alt="Griglia 1200" src="../../../../_shared/media/images/griglia1200.JPG" /></p>
+</div>
+</details><p>Per informazioni dettagliate sulle procedure di calibrazione, consultare la sezione <a class="reference internal" href="../QUICKSTART/SETUP/14_calibrazione_camera.html"><span class="std std-doc">Calibrazione della Camera</span></a>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="panoramica-collegamenti">
+<h2>Panoramica collegamenti<a class="headerlink" href="#panoramica-collegamenti" title="Link to this heading">#</a></h2>
+<p><img alt="Panoramica Collegamenti" src="../../../../_shared/media/images/panoramicacollegamenti.png" /></p>
+<p><em>Schema di collegamento completo del sistema FlexiVision One con robot e FlexiBowl</em></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Da</strong></p></th>
+<th class="head"><p><strong>A</strong></p></th>
+<th class="head"><p><strong>Collegamento</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Rete elettrica</p></td>
+<td><p>FlexiBowl</p></td>
+<td><p>Alimentazione 110/230 Vac</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rete elettrica</p></td>
+<td><p>Robot</p></td>
+<td><p>Alimentazione secondo le specifiche del robot in vostro possesso</p></td>
+</tr>
+<tr class="row-even"><td><p>Rete elettrica</p></td>
+<td><p>Camera</p></td>
+<td><p>Alimentazione 24 Vdc</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rete elettrica</p></td>
+<td><p>Illuminatore 1luce)</p></td>
+<td><p>Alimentazione 24 Vdc</p></td>
+</tr>
+<tr class="row-even"><td><p>Rete elettrica</p></td>
+<td><p>Controller Tramoggia</p></td>
+<td><p>Alimentazione 110/230 Vac</p></td>
+</tr>
+<tr class="row-odd"><td><p>Controller Tramoggia</p></td>
+<td><p>Tramoggia</p></td>
+<td><p>Alimentazione e segnale</p></td>
+</tr>
+<tr class="row-even"><td><p>Robot</p></td>
+<td><p>Controller Tramoggia</p></td>
+<td><p>I/O Digitali</p></td>
+</tr>
+<tr class="row-odd"><td><p>VisionController</p></td>
+<td><p>Camera</p></td>
+<td><p>Ethernet TCP</p></td>
+</tr>
+<tr class="row-even"><td><p>VisionController</p></td>
+<td><p>FlexiBowl</p></td>
+<td><p>Ethernet TCP</p></td>
+</tr>
+<tr class="row-odd"><td><p>VisionController</p></td>
+<td><p>Robot</p></td>
+<td><p>Ethernet TCP</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Per schemi elettrici dettagliati, consultare la sezione <a class="reference internal" href="../INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.html#cablaggio"><span class="std std-ref">Cablaggio e Connessioni</span></a>.</p>
+</section>
+<hr class="docutils" />
+<section id="componenti-opzionali">
+<h2>Componenti opzionali<a class="headerlink" href="#componenti-opzionali" title="Link to this heading">#</a></h2>
+<p>Componenti aggiuntivi disponibili separatamente:</p>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm sd-card-hover shadow docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Toplight</div>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="08_Opzioni.html#toplight"><span class="std std-ref">Toplight</span></a></div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm sd-card-hover shadow docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Cavo Alimentazione Toplight</div>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="08_Opzioni.html#cavoalimtoplight"><span class="std std-ref">Cavo Alimentazione Toplight</span></a></div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm sd-card-hover shadow docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Backlight</div>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="08_Opzioni.html#backlight"><span class="std std-ref">Backlight</span></a></div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm sd-card-hover shadow docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Switch</div>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="08_Opzioni.html#switch"><span class="std std-ref">Switch</span></a></div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm sd-card-hover shadow docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Display</div>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="08_Opzioni.html#display"><span class="std std-ref">Display Touch Screen</span></a></div>
+<br>
+<!-- Versions and languages set-up -->
+<style>
+  .fixed-bar {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(240, 240, 240, 0.85);
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    border-radius: 6px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
+    color: #222;
+    display: flex;
+    gap: 12px;
+    padding: 6px 12px;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: saturate(180%) blur(10px);
+  }
+
+  @media print {
+    .fixed-bar {
+      display: none !important;
+    }
+  }
+
+  .fixed-bar .dropdown {
+    position: relative;
+    user-select: none;
+  }
+
+  .fixed-bar .dropdown-toggle {
+    background-color: rgba(200, 200, 200, 0.4);
+    color: #222;
+    padding: 6px 10px;
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+  }
+
+  .fixed-bar .dropdown-toggle::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .fixed-bar .dropdown-toggle:hover {
+    background-color: rgba(100, 150, 220, 0.2);
+    color: #1a3e72;
+    border-color: rgba(26, 62, 114, 0.6);
+  }
+
+  .fixed-bar .dropdown-toggle .fa {
+    font-size: 0.9rem;
+  }
+
+  .fixed-bar .dropdown-menu {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background-color: rgba(250, 250, 250, 0.95);
+    border: 1px solid rgba(150, 150, 150, 0.3);
+    border-radius: 4px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    min-width: 140px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    flex-direction: column;
+    z-index: 10000;
+    backdrop-filter: saturate(180%) blur(8px);
+  }
+
+  .fixed-bar .dropdown-menu.show {
+    display: flex;
+  }
+
+  .fixed-bar .dropdown-menu a {
+    padding: 8px 12px;
+    color: #1a3e72;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+    white-space: nowrap;
+    transition: background-color 0.25s ease;
+  }
+
+  .fixed-bar .dropdown-menu a:last-child {
+    border-bottom: none;
+  }
+
+  .fixed-bar .dropdown-menu a:hover {
+    background-color: rgba(100, 150, 220, 0.15);
+  }
+
+  .dropdown-download-buttons .btn__icon-container svg {
+    width: 1em;
+    height: 1em;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vertical-align: middle;
+  }
+
+  a.headerlink.manual-heading-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.2em;
+    text-decoration: none;
+    color: #7b8493;
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+
+  a.headerlink.manual-heading-action svg {
+    width: 0.8em;
+    height: 0.8em;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vertical-align: middle;
+  }
+
+  a.headerlink.manual-feedback-link:hover,
+  a.headerlink.manual-feedback-link:focus-visible {
+    color: #2563eb;
+  }
+
+  a.headerlink.manual-service-link:hover,
+  a.headerlink.manual-service-link:focus-visible {
+    color: #d97706;
+  }
+</style>
+<div class="fixed-bar" role="region" aria-label="Version and language selector">
+  <div class="dropdown" data-selector="version">
+    <div class="dropdown-toggle" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
+      Version: <span class="current-value">V. 0.20</span>
+      <span class="caret-icon" aria-hidden="true">&#9662;</span>
+    </div>
+    <div class="dropdown-menu" role="listbox">
+      	<a href="#" role="option">V. 0.20</a>
+    </div>
+  </div>
+  <div class="dropdown" data-selector="language">
+    <div class="dropdown-toggle" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
+      Language: <span class="current-value">DE</span>
+      <span class="caret-icon" aria-hidden="true">&#9662;</span>
+    </div>
+    <div class="dropdown-menu" role="listbox">
+      	<a href="#" role="option">DE</a>
+				<a href="#" role="option">EN</a>
+				<a href="#" role="option">ES</a>
+				<a href="#" role="option">FR</a>
+				<a href="#" role="option">IT</a>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    const bar = document.querySelector('.fixed-bar');
+    if (!bar) {
+      return;
+    }
+
+    const inlineVersions = ["V. 0.20"];
+    const inlineLanguages = ["DE", "EN", "ES", "FR", "IT"];
+    const manifest = window.FV_VERSIONING || null;
+    const versions = Array.isArray(manifest && manifest.versions) && manifest.versions.length
+      ? manifest.versions
+      : inlineVersions;
+    const offlineZipEnabled = true;
+    const offlineZipFileName = 'Offline manual.zip';
+    const americanRegions = new Set([
+      'AG', 'AR', 'AW', 'BB', 'BL', 'BM', 'BO', 'BQ', 'BR', 'BS', 'BZ', 'CA', 'CL', 'CO', 'CR',
+      'CU', 'CW', 'DM', 'DO', 'EC', 'FK', 'GD', 'GF', 'GL', 'GP', 'GT', 'GY', 'HN', 'HT', 'JM',
+      'KN', 'KY', 'LC', 'MF', 'MQ', 'MS', 'MX', 'NI', 'PA', 'PE', 'PM', 'PR', 'PY', 'SR', 'SV',
+      'SX', 'TC', 'TT', 'US', 'UY', 'VC', 'VE', 'VG', 'VI', '419'
+    ]);
+    const additionalAmericanTimeZones = new Set([
+      'Atlantic/Bermuda',
+      'Pacific/Easter',
+      'Pacific/Galapagos',
+      'Pacific/Honolulu',
+      'Pacific/Pitcairn'
+    ]);
+
+    function setCaret(toggle, isOpen) {
+      const caret = toggle.querySelector('.caret-icon');
+      if (caret) {
+        caret.innerHTML = isOpen ? '&#9652;' : '&#9662;';
+      }
+    }
+
+    function closeAllMenus() {
+      bar.querySelectorAll('.dropdown').forEach(dropdown => {
+        const menu = dropdown.querySelector('.dropdown-menu');
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        menu.classList.remove('show');
+        toggle.setAttribute('aria-expanded', 'false');
+        setCaret(toggle, false);
+      });
+    }
+
+    function getLanguagesForVersion(version) {
+      const manifestLanguages = manifest &&
+        manifest.languagesByVersion &&
+        Array.isArray(manifest.languagesByVersion[version]) &&
+        manifest.languagesByVersion[version].length
+          ? manifest.languagesByVersion[version]
+          : null;
+
+      if (manifestLanguages) {
+        return manifestLanguages;
+      }
+
+      return inlineLanguages;
+    }
+
+    function getDefaultLanguageForVersion(version) {
+      const manifestDefault = manifest &&
+        manifest.defaultLanguageByVersion &&
+        typeof manifest.defaultLanguageByVersion[version] === 'string'
+          ? manifest.defaultLanguageByVersion[version]
+          : '';
+
+      if (manifestDefault) {
+        return manifestDefault;
+      }
+
+      const availableLanguages = getLanguagesForVersion(version);
+      return availableLanguages.length ? availableLanguages[0] : (inlineLanguages[0] || '');
+    }
+
+    function populateSelectorMenu(selector, values) {
+      const menu = bar.querySelector(`[data-selector="${selector}"] .dropdown-menu`);
+      if (!menu) {
+        return;
+      }
+
+      menu.innerHTML = '';
+      values.forEach(value => {
+        const link = document.createElement('a');
+        link.href = '#';
+        link.setAttribute('role', 'option');
+        link.textContent = value;
+        menu.appendChild(link);
+      });
+    }
+
+    function getNavigationContext() {
+      const currentUrl = new URL(window.location.href);
+      const rawSegments = currentUrl.pathname.split('/').filter(Boolean);
+      const decodedSegments = rawSegments.map(segment => decodeURIComponent(segment));
+      const currentVersionLabel = bar.querySelector('[data-selector="version"] .current-value');
+      const currentLanguageLabel = bar.querySelector('[data-selector="language"] .current-value');
+      const fallbackVersion = currentVersionLabel ? currentVersionLabel.textContent.trim() : '';
+      const versionIndex = decodedSegments.findIndex(segment => versions.includes(segment));
+      const currentVersion = versionIndex !== -1 ? decodedSegments[versionIndex] : fallbackVersion;
+      const availableLanguages = getLanguagesForVersion(currentVersion);
+      const fallbackLanguage = currentLanguageLabel ? currentLanguageLabel.textContent.trim() : '';
+      const languageIndex = decodedSegments.findIndex(
+        (segment, index) => index > versionIndex && availableLanguages.includes(segment)
+      );
+
+      return {
+        currentUrl: currentUrl,
+        rawSegments: rawSegments,
+        versionIndex: versionIndex,
+        currentVersion: currentVersion,
+        currentLanguage: languageIndex !== -1 ? decodedSegments[languageIndex] : fallbackLanguage
+      };
+    }
+
+    function refreshNavigationMenus() {
+      const context = getNavigationContext();
+      const resolvedVersion = versions.includes(context.currentVersion) ? context.currentVersion : (versions[0] || context.currentVersion);
+      const availableLanguages = getLanguagesForVersion(resolvedVersion);
+      const resolvedLanguage = availableLanguages.includes(context.currentLanguage)
+        ? context.currentLanguage
+        : (getDefaultLanguageForVersion(resolvedVersion) || context.currentLanguage);
+
+      populateSelectorMenu('version', versions);
+      populateSelectorMenu('language', availableLanguages);
+
+      const versionLabel = bar.querySelector('[data-selector="version"] .current-value');
+      const languageLabel = bar.querySelector('[data-selector="language"] .current-value');
+      if (versionLabel) {
+        versionLabel.textContent = resolvedVersion;
+      }
+      if (languageLabel) {
+        languageLabel.textContent = resolvedLanguage;
+      }
+    }
+
+    function buildScopedUrl(targetVersion, targetLanguage, pageName) {
+      const context = getNavigationContext();
+      const rootSegments = context.versionIndex !== -1 ? context.rawSegments.slice(0, context.versionIndex) : [];
+      const targetPath = '/' + rootSegments.concat([
+        encodeURIComponent(targetVersion),
+        encodeURIComponent(targetLanguage),
+        encodeURIComponent(pageName)
+      ]).join('/');
+
+      if (context.currentUrl.protocol === 'file:') {
+        return 'file://' + targetPath;
+      }
+
+      return context.currentUrl.origin + targetPath;
+    }
+
+    function buildTargetUrl(targetVersion, targetLanguage) {
+      return buildScopedUrl(targetVersion, targetLanguage, 'index.html');
+    }
+
+    function buildSiteRootAssetUrl(fileName) {
+      const context = getNavigationContext();
+      const rootSegments = context.versionIndex !== -1 ? context.rawSegments.slice(0, context.versionIndex) : [];
+      const targetPath = '/' + rootSegments.concat([encodeURIComponent(fileName)]).join('/');
+
+      if (context.currentUrl.protocol === 'file:') {
+        return 'file://' + targetPath;
+      }
+
+      return context.currentUrl.origin + targetPath;
+    }
+
+    function buildClientSiteZipUrl() {
+      return buildSiteRootAssetUrl(offlineZipFileName);
+    }
+
+    function getHeadingText(heading) {
+      const clone = heading.cloneNode(true);
+      clone.querySelectorAll('a.headerlink').forEach(link => link.remove());
+      return clone.textContent.replace(/\s+/g, ' ').trim();
+    }
+
+    function normalizeMailText(text) {
+      return String(text || '').replace(/\u00AE/g, '');
+    }
+
+    function getTimeZoneAmericaDecision() {
+      try {
+        const timeZone = String(Intl.DateTimeFormat().resolvedOptions().timeZone || '').trim();
+        if (!timeZone) {
+          return null;
+        }
+        return timeZone.startsWith('America/') || additionalAmericanTimeZones.has(timeZone);
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function isCoordinateInAmericas(latitude, longitude) {
+      if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) {
+        return null;
+      }
+
+      return latitude >= -60 && latitude <= 85 && longitude >= -170 && longitude <= -25;
+    }
+
+    function getCurrentPosition(options) {
+      return new Promise((resolve, reject) => {
+        if (!navigator.geolocation || typeof navigator.geolocation.getCurrentPosition !== 'function') {
+          reject(new Error('Geolocation unavailable'));
+          return;
+        }
+
+        navigator.geolocation.getCurrentPosition(resolve, reject, options);
+      });
+    }
+
+    async function resolveServiceAddress() {
+      const timeZoneDecision = getTimeZoneAmericaDecision();
+      if (timeZoneDecision === false) {
+        return 'service@arsautomation.com';
+      }
+
+      const canTryGeolocation = Boolean(
+        navigator.onLine &&
+        window.isSecureContext &&
+        navigator.geolocation &&
+        typeof navigator.geolocation.getCurrentPosition === 'function'
+      );
+
+      if (canTryGeolocation) {
+        try {
+          const position = await getCurrentPosition({
+            enableHighAccuracy: false,
+            timeout: 4000,
+            maximumAge: 300000
+          });
+          const inAmericas = isCoordinateInAmericas(position.coords.latitude, position.coords.longitude);
+          if (inAmericas !== null) {
+            return inAmericas ? 'us.service@arsautomation.com' : 'service@arsautomation.com';
+          }
+        } catch (error) {
+        }
+      }
+
+      if (timeZoneDecision === true) {
+        return 'us.service@arsautomation.com';
+      }
+
+      return 'service@arsautomation.com';
+    }
+
+    function buildMailtoUrl(address, subject, body) {
+      return 'mailto:' + address +
+        '?subject=' + encodeURIComponent(normalizeMailText(subject)) +
+        '&body=' + encodeURIComponent(normalizeMailText(body));
+    }
+
+    function createHeadingActionLink(className, title, mailtoUrl, svgMarkup) {
+      const link = document.createElement('a');
+      link.className = 'headerlink manual-heading-action ' + className;
+      link.href = mailtoUrl;
+      link.title = title;
+      link.setAttribute('aria-label', title);
+      link.innerHTML = svgMarkup;
+      return link;
+    }
+
+    function addHeadingActions() {
+      const feedbackIcon = [
+        '<svg viewBox="0 0 16 16" aria-hidden="true">',
+        '<path d="M3 3.5h10v6.5H7.5L4.5 13v-3H3z"></path>',
+        '<path d="M6 6.2h4"></path>',
+        '<path d="M6 8.2h3"></path>',
+        '</svg>'
+      ].join('');
+
+        const serviceIcon = [
+          '<svg viewBox="0 0 16 16" aria-hidden="true">',
+          '<circle cx="8" cy="8" r="5.2"></circle>',
+          '<path d="M6.4 6.1A1.9 1.9 0 0 1 8 5.2c1.1 0 1.9.7 1.9 1.7 0 .8-.4 1.3-1.2 1.8-.6.4-.9.8-.9 1.5"></path>',
+          '<circle cx="8" cy="11.7" r="0.45" style="fill:currentColor;stroke:none"></circle>',
+          '</svg>'
+        ].join('');
+
+      document.querySelectorAll('h1 > a.headerlink, h2 > a.headerlink, h3 > a.headerlink, h4 > a.headerlink, h5 > a.headerlink, h6 > a.headerlink').forEach(link => {
+        const heading = link.parentElement;
+        if (!heading || heading.querySelector('.manual-feedback-link') || heading.querySelector('.manual-service-link')) {
+          return;
+        }
+
+        const sectionTitle = getHeadingText(heading);
+        const sectionUrl = new URL(link.getAttribute('href'), window.location.href).href;
+        const pageUrl = window.location.href.split('#')[0];
+        const feedbackBody = [
+          'Hello Documentation Team,',
+          '',
+          'I would like to suggest an improvement for this section of the manual.',
+          '',
+          'Section: ' + sectionTitle,
+          'Page: ' + pageUrl,
+          'Section link: ' + sectionUrl,
+          '',
+          'Suggestion:',
+          ''
+        ].join('\n');
+          const serviceBody = [
+            'Hello Service Team,',
+            '',
+            'I need support related to this section of the manual.',
+            '',
+            'Section: ' + sectionTitle,
+            'Page: ' + pageUrl,
+            'Section link: ' + sectionUrl,
+            '',
+            'FlexiBowl serial number:',
+            '',
+            'Photos or videos of the issue attached:',
+            '',
+            'Issue description:',
+            ''
+          ].join('\n');
+
+        const feedbackLink = createHeadingActionLink(
+          'manual-feedback-link',
+          'Suggest an improvement for this section',
+          buildMailtoUrl('documentation@arsautomation.com', 'Documentation suggestion: ' + sectionTitle, feedbackBody),
+          feedbackIcon
+        );
+          const serviceLink = createHeadingActionLink(
+            'manual-service-link',
+            'Contact service about this section',
+            '#',
+            serviceIcon
+          );
+          serviceLink.addEventListener('click', async event => {
+            event.preventDefault();
+            const serviceAddress = await resolveServiceAddress();
+            window.location.href = buildMailtoUrl(serviceAddress, 'Service request: ' + sectionTitle, serviceBody);
+          });
+
+          heading.appendChild(feedbackLink);
+          heading.appendChild(serviceLink);
+        });
+    }
+
+    function enhancePrintMenu() {
+      const dropdown = document.querySelector('.dropdown-download-buttons');
+      if (!dropdown || dropdown.dataset.printMenuEnhanced === 'true') {
+        return;
+      }
+
+      dropdown.dataset.printMenuEnhanced = 'true';
+
+      const toggleButton = dropdown.querySelector('.dropdown-toggle');
+      const hasReleaseDownloads = offlineZipEnabled;
+
+      if (toggleButton) {
+        const toggleLabel = hasReleaseDownloads ? 'Export options' : 'Print options';
+        toggleButton.setAttribute('aria-label', toggleLabel);
+        toggleButton.setAttribute('title', toggleLabel);
+        toggleButton.setAttribute('data-bs-original-title', toggleLabel);
+        const toggleIcon = toggleButton.querySelector('i');
+        if (toggleIcon) {
+          toggleIcon.className = hasReleaseDownloads ? 'fas fa-download' : 'fas fa-print';
+        }
+      }
+
+      dropdown.querySelectorAll('.btn-download-source-button').forEach(sourceButton => {
+        const sourceItem = sourceButton.closest('li');
+        if (sourceItem) {
+          sourceItem.remove();
+        }
+      });
+
+      const pagePrintButton = dropdown.querySelector('.btn-download-pdf-button');
+      if (pagePrintButton) {
+        pagePrintButton.setAttribute('title', 'Print this page');
+        pagePrintButton.setAttribute('aria-label', 'Print this page');
+        pagePrintButton.setAttribute('data-bs-original-title', 'Print this page');
+        const textContainer = pagePrintButton.querySelector('.btn__text-container');
+        if (textContainer) {
+          textContainer.textContent = 'Print this page';
+        }
+      }
+
+      const menu = dropdown.querySelector('.dropdown-menu');
+      if (!menu) {
+        return;
+      }
+
+      menu.querySelectorAll('.btn-download-client-site-zip-button').forEach(button => {
+        const item = button.closest('li');
+        if (item) {
+          item.remove();
+        }
+      });
+
+      if (offlineZipEnabled) {
+        const siteZipItem = document.createElement('li');
+        const siteZipLink = document.createElement('a');
+        siteZipLink.className = 'btn btn-sm dropdown-item btn-download-client-site-zip-button';
+        siteZipLink.title = 'Download offline manual';
+        siteZipLink.setAttribute('aria-label', 'Download offline manual');
+        siteZipLink.setAttribute('download', offlineZipFileName);
+        siteZipLink.href = buildClientSiteZipUrl();
+        siteZipLink.innerHTML = [
+          '<span class="btn__icon-container">',
+          '<svg viewBox="0 0 16 16" aria-hidden="true">',
+          '<path d="M4 3.5h8v2.5H4z"></path>',
+          '<path d="M4 6h8v6.5H4z"></path>',
+          '<path d="M8 3.5v9"></path>',
+          '<path d="M6.3 9.2L8 10.9l1.7-1.7"></path>',
+          '</svg>',
+          '</span>',
+          '<span class="btn__text-container">Download offline manual</span>'
+        ].join('');
+        siteZipItem.appendChild(siteZipLink);
+        menu.appendChild(siteZipItem);
+      }
+    }
+
+    refreshNavigationMenus();
+
+    bar.querySelectorAll('.dropdown').forEach(dropdown => {
+      const toggle = dropdown.querySelector('.dropdown-toggle');
+      const menu = dropdown.querySelector('.dropdown-menu');
+      const selector = dropdown.getAttribute('data-selector');
+
+      toggle.addEventListener('click', event => {
+        event.stopPropagation();
+        const willOpen = toggle.getAttribute('aria-expanded') !== 'true';
+        closeAllMenus();
+
+        if (willOpen) {
+          menu.classList.add('show');
+          toggle.setAttribute('aria-expanded', 'true');
+          setCaret(toggle, true);
+        }
+      });
+
+      menu.addEventListener('click', event => {
+        const link = event.target.closest('a');
+        if (!link) {
+          return;
+        }
+
+        event.preventDefault();
+        const selectedValue = link.textContent.trim();
+        const context = getNavigationContext();
+        if (!selectedValue) {
+          return;
+        }
+
+        if (selector === 'version') {
+          const targetVersion = selectedValue;
+          const availableLanguages = getLanguagesForVersion(targetVersion);
+          const targetLanguage = availableLanguages.includes(context.currentLanguage)
+            ? context.currentLanguage
+            : getDefaultLanguageForVersion(targetVersion);
+          if (targetLanguage) {
+            window.location.href = buildTargetUrl(targetVersion, targetLanguage);
+          }
+          return;
+        }
+
+        window.location.href = buildTargetUrl(context.currentVersion, selectedValue);
+      });
+    });
+
+    window.addEventListener('click', closeAllMenus);
+    window.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        closeAllMenus();
+      }
+    });
+
+    addHeadingActions();
+    enhancePrintMenu();
+  })();
+</script>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../27b_Glossario.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>Glossar</strong></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="04b_Protocolli_Comunicazione.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Kommunikationsprotokoll Roboter-Bildverarbeitung</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#camera">Camera</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifiche-elettriche">Specifiche elettriche</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connettore-gpio-hirose-6-pin">Connettore GPIO (Hirose 6-pin)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodi-di-alimentazione">Metodi di alimentazione</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cavo-di-alimentazione">Cavo di Alimentazione</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifiche-fisiche-e-dimensioni">Specifiche fisiche e dimensioni</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#obiettivo">Obiettivo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visioncontroller">VisionController</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Specifiche elettriche</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#porte-pc">Porte PC</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifiche-fisiche">Specifiche fisiche</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strumento-laser-per-calibrazione">Strumento Laser per Calibrazione</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#griglia-di-calibrazione">Griglia di calibrazione</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifiche-tecniche-griglia">Specifiche tecniche griglia</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#panoramica-collegamenti">Panoramica collegamenti</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#componenti-opzionali">Componenti opzionali</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By ARS Automation
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Ars Automation.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../_shared/static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../_shared/static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

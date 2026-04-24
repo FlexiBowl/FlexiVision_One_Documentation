@@ -1,0 +1,7 @@
+﻿---
+orphan: true
+---
+
+# 11. Instalación del software
+
+¿SIRVE TAMBIÉN PARA UN PC SUMINISTRADO POR ARS? ¿QUÉ PASOS DEBEN REALIZARSE EN CUALQUIER CASO?

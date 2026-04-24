@@ -1,0 +1,7 @@
+﻿---
+orphan: true
+---
+
+# 11. Installation du logiciel
+
+EST-CE AUSSI VALABLE POUR UN PC FOURNI PAR ARS ? QUELLES ÉTAPES DOIVENT ÊTRE EFFECTUÉES DANS TOUS LES CAS ?
