@@ -16,38 +16,35 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_shared/static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../../../../_shared/static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../../../../_shared/static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_shared/static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_shared/static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../_shared/static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_shared/static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_shared/static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_shared/static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../../_shared/static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../../../_shared/static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_shared/static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../../_shared/static/custom.css?v=dbb29426" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../../../../_shared/static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_shared/static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../../../../_shared/static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../../../../_shared/static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_shared/static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_shared/static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../../../_shared/static/documentation_options.js?v=a681ed88"></script>
-    <script src="../../../../_shared/static/doctools.js?v=fd6eb6e6"></script>
-    <script src="../../../../_shared/static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../../_shared/static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../../_shared/static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_shared/static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../../_shared/static/copybutton.js?v=f281be69"></script>
-    <script src="../../../../_shared/static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../../../../_shared/static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../../../_shared/static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'FlexiVisionEasy_manual/rif_tecnico_specifiche/08_Opzioni';</script>
     <script src="../../../../_shared/static/versioning-data.js?v=37039824"></script>
@@ -58,7 +55,6 @@
     <link rel="prev" title="BackUp Management" href="integrazione_software/07_Backup_management.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -74,8 +70,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -83,6 +90,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -90,8 +98,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -107,8 +115,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -136,17 +143,21 @@
     
     
     <img src="../../../../_shared/static/logo.png" class="logo__image only-light" alt="FlexiVision One Manual - Home"/>
-    <img src="../../../../_shared/static/logo_dark.png" class="logo__image only-dark pst-js-only" alt="FlexiVision One Manual - Home"/>
+    <script>document.write(`<img src="../../../../_shared/static/logo_dark.png" class="logo__image only-dark" alt="FlexiVision One Manual - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">PRIMA DI INIZIARE</span></p>
@@ -266,14 +277,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -356,7 +362,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  class="btn btn-sm btn-fullscreen-button"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -370,17 +376,25 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -409,7 +423,17 @@
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backlight">Backlight</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backlight-o-toplight">Backlight o Toplight?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backlight-o-toplight">Backlight o Toplight?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quando-usare-luno-o-laltro">Quando usare l’uno o l’altro</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#casi-duso-tipici">Casi d’uso tipici</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colore-dellilluminazione">Colore dell’Illuminazione</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quando-usare-ciascun-colore">Quando usare ciascun colore</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtro-ir">Filtro IR</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#switch">Switch</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifiche-elettriche">Specifiche Elettriche</a></li>
@@ -417,7 +441,6 @@
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#display-touch-screen">Display Touch Screen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ring-light">Ring Light</a></li>
 </ul>
             </nav>
         </div>
@@ -2414,7 +2437,102 @@ Nessuno shock termico (variazione massima: 10°C in 24h)</p></td>
 </ul>
 <p>La calibrazione, quando si utilizza una griglia di calibrazione ARS, dev’essere eseguita utilizzando l’illuminatore backlight e spegnere il toplight se presente.</p>
 </div>
+<section id="quando-usare-luno-o-laltro">
+<h3>Quando usare l’uno o l’altro<a class="headerlink" href="#quando-usare-luno-o-laltro" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 50.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Illuminatore</p></th>
+<th class="head"><p>Quando usarlo</p></th>
+<th class="head"><p>Esempio</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Toplight</strong></p></td>
+<td><p>Utilizzato quando il riconoscimento del componente non può essere effettuato dalla sola forma, ma dai dettagli presenti sull’oggetto. È indicato principalmente per superfici lisce e non riflettenti, o superfici che presentano qualche tipo di marcatura distinguibile.</p></td>
+<td><a class="reference internal image-reference" href="../../_images/TOPLIGHT.png"><img alt="../../_images/TOPLIGHT.png" src="../../_images/TOPLIGHT.png" style="width: 150px;" />
+</a>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Backlight</strong></p></td>
+<td><p>Il caso d’uso principale del backlight è quando l’oggetto può essere riconosciuto dalla sua silhouette/forma oppure con parti trasparenti.</p></td>
+<td><a class="reference internal image-reference" href="../../_images/BACKLIGHT.png"><img alt="../../_images/BACKLIGHT.png" src="../../_images/BACKLIGHT.png" style="width: 150px;" />
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="casi-duso-tipici">
+<h4>Casi d’uso tipici<a class="headerlink" href="#casi-duso-tipici" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Viti, bulloni, rondelle → <strong>Backlight</strong></p></li>
+<li><p>Pezzi con stampe sulla faccia superiore, parti opache su superfici scure → <strong>Toplight</strong></p></li>
+<li><p>Parti trasparenti o traslucide → <strong>Backlight</strong></p></li>
+<li><p>Pezzi lucidi con riflessi → <strong>Backlight</strong></p></li>
+</ul>
 <hr class="docutils" />
+</section>
+</section>
+</section>
+<section id="colore-dellilluminazione">
+<span id="colore-illuminazione"></span><h2>Colore dell’Illuminazione<a class="headerlink" href="#colore-dellilluminazione" title="Link to this heading">#</a></h2>
+<section id="quando-usare-ciascun-colore">
+<h3>Quando usare ciascun colore<a class="headerlink" href="#quando-usare-ciascun-colore" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 50.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Colore / Lunghezza d’onda</p></th>
+<th class="head"><p>Utilizzo consigliato</p></th>
+<th class="head"><p>Esempi</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Bianco</strong></p></td>
+<td><p>Utilizzato con componenti trasparenti. È necessario schermare la cella da qualsiasi fonte di luce esterna e dalla luce solare.</p></td>
+<td><a class="reference internal image-reference" href="../../_images/WHITELIGHT1.png"><img alt="../../_images/WHITELIGHT1.png" src="../../_images/WHITELIGHT1.png" style="width: 120px;" />
+</a>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/WHITELIGHT2.png"><img alt="../../_images/WHITELIGHT2.png" src="../../_images/WHITELIGHT2.png" style="width: 120px;" />
+</a>
+</figure>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Rosso (630 nm)</strong></p></td>
+<td><p>Utilizzato per componenti metallici speciali. Lunghezza d’onda: 630 nm. È necessario schermare la cella da qualsiasi fonte di luce esterna e dalla luce solare.</p></td>
+<td><a class="reference internal image-reference" href="../../_images/REDLIGHT1.png"><img alt="../../_images/REDLIGHT1.png" src="../../_images/REDLIGHT1.png" style="width: 120px;" />
+</a>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/REDLIGHT2.png"><img alt="../../_images/REDLIGHT2.png" src="../../_images/REDLIGHT2.png" style="width: 120px;" />
+</a>
+</figure>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Infrarosso (850 nm)</strong></p></td>
+<td><p>Preferito per la maggior parte dei tipi di applicazioni. Non è visibile all’occhio umano. Lunghezza d’onda: 850 nm. Si consiglia di schermare la cella per evitare interferenze con la luce solare.</p></td>
+<td><a class="reference internal image-reference" href="../../_images/INFRARED1.png"><img alt="../../_images/INFRARED1.png" src="../../_images/INFRARED1.png" style="width: 120px;" />
+</a>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/INFRARED2.png"><img alt="../../_images/INFRARED2.png" src="../../_images/INFRARED2.png" style="width: 120px;" />
+</a>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Per maggiori Informazioni sulla Schermatura della Luce Ambientale visitare la sezione <a class="reference internal" href="../INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.html#luce-ambientale"><span class="std std-ref">Schermatura Luce Ambientale</span></a>.
+A seconda dell’applicazione, potrebbe essere necessario un diverso colore di illuminazione. Nella maggior parte dei casi, l’illuminazione IR è sufficiente. Tuttavia, in alcuni casi, ad esempio con parti trasparenti, l’illuminazione IR potrebbe avere difficoltà; in tal caso la luce bianca è una buona alternativa. La luce rossa viene utilizzata tipicamente con componenti metallici che normalmente rifletterebbero un’opzione IR o luce bianca. Dato che la luce rossa ha un’intensità inferiore, riduce la quantità di riflessione percepita dalla telecamera, aiutando il sistema di visione a riconoscere meglio i componenti.</p>
+<hr class="docutils" />
+</section>
 </section>
 <section id="filtro-ir">
 <span id="filtroir"></span><h2>Filtro IR<a class="headerlink" href="#filtro-ir" title="Link to this heading">#</a></h2>
@@ -2578,40 +2696,6 @@ Nessuno shock termico (variazione massima: 10°C in 24h)</p></td>
 </tr>
 <tr class="row-even"><td><p>Certificazioni</p></td>
 <td><p>CE</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="ring-light">
-<h2>Ring Light<a class="headerlink" href="#ring-light" title="Link to this heading">#</a></h2>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Parametro</p></th>
-<th class="head"><p>Valore</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Colore LED</strong></p></td>
-<td><p>Bianco</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Tensione</strong></p></td>
-<td><p>24 VDC</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Consumo di potenza</strong></p></td>
-<td><p>16 W max</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Materiale del corpo</strong></p></td>
-<td><p>Lega di alluminio, Resina</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Temperatura di esercizio</strong></p></td>
-<td><p>da 0 a +40 °C</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Lunghezza cavo</strong></p></td>
-<td><p>0,3 m</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Metodo di raffreddamento</strong></p></td>
-<td><p>Aria naturale</p></td>
 </tr>
 </tbody>
 </table>
@@ -2796,7 +2880,7 @@ Nessuno shock termico (variazione massima: 10°C in 24h)</p></td>
     const versions = Array.isArray(manifest && manifest.versions) && manifest.versions.length
       ? manifest.versions
       : inlineVersions;
-    const offlineZipEnabled = true;
+    const offlineZipEnabled = false;
     const offlineZipFileName = 'Offline manual.zip';
     const americanRegions = new Set([
       'AG', 'AR', 'AW', 'BB', 'BL', 'BM', 'BO', 'BQ', 'BR', 'BS', 'BZ', 'CA', 'CL', 'CO', 'CR',
@@ -3300,16 +3384,14 @@ Nessuno shock termico (variazione massima: 10°C in 24h)</p></td>
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item"><div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+  <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toplight">Toplight</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cavo-alimentazione-toplight">Cavo Alimentazione Toplight</a></li>
@@ -3317,7 +3399,17 @@ Nessuno shock termico (variazione massima: 10°C in 24h)</p></td>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backlight">Backlight</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backlight-o-toplight">Backlight o Toplight?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backlight-o-toplight">Backlight o Toplight?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quando-usare-luno-o-laltro">Quando usare l’uno o l’altro</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#casi-duso-tipici">Casi d’uso tipici</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colore-dellilluminazione">Colore dell’Illuminazione</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quando-usare-ciascun-colore">Quando usare ciascun colore</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtro-ir">Filtro IR</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#switch">Switch</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifiche-elettriche">Specifiche Elettriche</a></li>
@@ -3325,7 +3417,6 @@ Nessuno shock termico (variazione massima: 10°C in 24h)</p></td>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#display-touch-screen">Display Touch Screen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ring-light">Ring Light</a></li>
 </ul>
   </nav></div>
 
@@ -3374,8 +3465,8 @@ By ARS Automation
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../../_shared/static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../../../../_shared/static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../../../../_shared/static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_shared/static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

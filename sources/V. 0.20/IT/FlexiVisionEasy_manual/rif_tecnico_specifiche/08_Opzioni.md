@@ -1296,6 +1296,76 @@ La scelta tra backlight e toplight influenza significativamente il riconosciment
 
 La calibrazione, quando si utilizza una griglia di calibrazione ARS, dev'essere eseguita utilizzando l'illuminatore backlight e spegnere il toplight se presente.
 ```
+
+
+### Quando usare l'uno o l'altro
+
+```{eval-rst}
+.. list-table::
+   :widths: 20 50 30
+   :header-rows: 1
+
+   * - Illuminatore
+     - Quando usarlo
+     - Esempio
+   * - **Toplight**
+     - Utilizzato quando il riconoscimento del componente non può essere effettuato dalla sola forma, ma dai dettagli presenti sull'oggetto. È indicato principalmente per superfici lisce e non riflettenti, o superfici che presentano qualche tipo di marcatura distinguibile.
+     - .. image:: ../../../../_shared/media/images/TOPLIGHT.png
+          :width: 150px
+   * - **Backlight**
+     - Il caso d'uso principale del backlight è quando l'oggetto può essere riconosciuto dalla sua silhouette/forma oppure con parti trasparenti.
+     - .. image:: ../../../../_shared/media/images/BACKLIGHT.png
+          :width: 150px
+```
+#### Casi d'uso tipici
+
+- Viti, bulloni, rondelle → **Backlight**
+- Pezzi con stampe sulla faccia superiore, parti opache su superfici scure → **Toplight**
+- Parti trasparenti o traslucide → **Backlight**
+- Pezzi lucidi con riflessi → **Backlight**
+
+---
+
+(colore_illuminazione)=
+## Colore dell'Illuminazione
+
+### Quando usare ciascun colore
+
+````{list-table}
+   :widths: 20 50 30
+   :header-rows: 1
+
+* - Colore / Lunghezza d'onda
+  - Utilizzo consigliato
+  - Esempi
+* - **Bianco**
+  - Utilizzato con componenti trasparenti. È necessario schermare la cella da qualsiasi fonte di luce esterna e dalla luce solare.
+  - ```{image} ../../../../_shared/media/images/WHITELIGHT1.png
+      :width: 120px
+    ```
+    ```{figure} ../../../../_shared/media/images/WHITELIGHT2.png
+      :width: 120px
+    ```
+* - **Rosso (630 nm)**
+  - Utilizzato per componenti metallici speciali. Lunghezza d'onda: 630 nm. È necessario schermare la cella da qualsiasi fonte di luce esterna e dalla luce solare.
+  - ```{image} ../../../../_shared/media/images/REDLIGHT1.png
+      :width: 120px
+    ```
+    ```{figure} ../../../../_shared/media/images/REDLIGHT2.png
+      :width: 120px
+    ```
+* - **Infrarosso (850 nm)**
+  - Preferito per la maggior parte dei tipi di applicazioni. Non è visibile all'occhio umano. Lunghezza d'onda: 850 nm. Si consiglia di schermare la cella per evitare interferenze con la luce solare.
+  - ```{image} ../../../../_shared/media/images/INFRARED1.png
+      :width: 120px
+    ```
+    ```{figure} ../../../../_shared/media/images/INFRARED2.png
+      :width: 120px
+    ```
+````
+Per maggiori Informazioni sulla Schermatura della Luce Ambientale visitare la sezione [Schermatura Luce Ambientale](luce_ambientale).
+A seconda dell'applicazione, potrebbe essere necessario un diverso colore di illuminazione. Nella maggior parte dei casi, l'illuminazione IR è sufficiente. Tuttavia, in alcuni casi, ad esempio con parti trasparenti, l'illuminazione IR potrebbe avere difficoltà; in tal caso la luce bianca è una buona alternativa. La luce rossa viene utilizzata tipicamente con componenti metallici che normalmente rifletterebbero un'opzione IR o luce bianca. Dato che la luce rossa ha un'intensità inferiore, riduce la quantità di riflessione percepita dalla telecamera, aiutando il sistema di visione a riconoscere meglio i componenti.
+
 ---
 
 (filtroIR)=
@@ -1380,14 +1450,4 @@ Il filtro IR è un accessorio ottico da applicare all’obiettivo della camera c
 | Umidità               | < 90% senza condensa                           |
 | Certificazioni        | CE                                             |
 
-## Ring Light
 
-| Parametro | Valore |
-|------------|---------|
-| **Colore LED** | Bianco |
-| **Tensione** | 24 VDC |
-| **Consumo di potenza** | 16 W max |
-| **Materiale del corpo** | Lega di alluminio, Resina |
-| **Temperatura di esercizio** | da 0 a +40 °C |
-| **Lunghezza cavo** | 0,3 m |
-| **Metodo di raffreddamento** | Aria naturale |

@@ -54,10 +54,9 @@ All'avvio del software FlexiVision One, viene presentata la pagina Home.
    * - **0**
      - Cliccare su Setup 
    * - **1**
-     - **Selezionare l'utente ARS** dal menu a tendina in alto a destra.
+     - **Selezionare l'utente ENGINEER** dal menu a tendina in alto a destra.
    * - **2**
-     - **Inserire la password** ArS2025.
-       *(Nota: il campo è case-sensitive)*.
+     - **Inserire la password** '3'.
    * - **3**
      - Cliccare sul pulsante **LOGIN** per accedere all'interfaccia.
 ```

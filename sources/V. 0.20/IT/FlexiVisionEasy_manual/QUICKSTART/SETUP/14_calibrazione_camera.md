@@ -51,18 +51,44 @@ Assicurarsi di avere:
 
 La griglia di calibrazione dedicata ARS deve essere posizionata sul FlexiBowl:
 
-```{list-table}
-* - **0** 
+````{list-table}
+:widths: 10 50 40
+:header-rows: 1
+
+* - Step
+  - Operazione
+  - Immagine
+* - **0**
   - Se presenti, rimuovere i deviatori montati sul FlexiBowl.
-* - **1** 
-  - **Allentare le quattro viti** della flangia centrale del FlexiBowl
-* - **2** 
-  - **Ruotare leggermente la flangia** centrale in senso antiorario e **Rimuoverla**
+  - ```{image} ../../../../../_shared/media/images/rimuoveredeviatori.jpg
+      
+    ```
+* - **1**
+  - **Allentare le quattro viti** della flangia centrale del FlexiBowl.
+  - ```{image} ../../../../../_shared/media/images/rimuovereflangia.jpg
+      
+    ```
+* - **2**
+  - **Ruotare leggermente la flangia** centrale in senso antiorario e **rimuoverla**.
+  - ```{image} ../../../../../_shared/media/images/rimuovereflangia.jpg
+      
+    ```
 * - **3**
-  - **Sollevare** con cura e **Rimuovere la superficie**  
+  - **Sollevare** con cura e **rimuovere la superficie**.
+  - ```{image} ../../../../../_shared/media/images/rimuoveredisco.jpg
+      
+    ```
 * - **4**
-  - **Posizionare la griglia ARS** sul FlexiBowl allineando i perni di posizionamento con i fori predefiniti 
-```
+  - Se necessario, applicare i distanziali magnetici ai quattro lati della griglia.
+  - ```{image} ../../../../../_shared/media/images/aggiungerespacer.jpg
+      
+    ```
+* - **5**
+  - **Posizionare la griglia ARS** sul FlexiBowl allineando i perni di posizionamento con i fori predefiniti sul bordo del backlight.
+  - ```{image} ../../../../../_shared/media/images/posizionaregriglia.jpg
+      
+    ```
+````
 
 ```{figure} ../../../../../_shared/media/images/griglia_su_flexibowl.png
 :alt: Posizionamento griglia calibrazione
@@ -102,7 +128,10 @@ Corretto posizionamento della griglia di calibrazione ARS sul FlexiBowl
 * - **8**
   - **Mettere la camera in modalità "live display"**
       Prima di regolare l'apertura, attivare la modalità di visualizzazione continua:
-      - immagine
+      :::{figure} ../../../../../_shared/media/images/livedisplay.jpg
+    :width: 100%
+    :align: center
+    :::
 * - **9**
   - **Impostare l'apertura del diaframma**
     - Svitare leggermente la vite dell'anello superiore della camera 
@@ -204,7 +233,7 @@ Esempio di esposizione corretta: contrasto elevato, pattern ben definito, nessun
     - Non ci siano ombre o riflessi
 
 * - **16**
-  - Impostare i valori "Tile Size X" e "Tile Size Y" entrambi a 10
+  - Impostare i valori "Tile Size X" e "Tile Size Y" entrambi a 10 per tutti i modelli da FlexiBowl 500 a 1200. **Per i modelli FlexiBowl 200 e FlexiBowl 350 invece, impostare i tile sizes a 2,5.**
 
 * - **17**
   - Cliccare su "Calibrate" per effettuare la calibrazione
@@ -287,8 +316,16 @@ In quali casi si apre Expert? Expert si apre per la configurazione della luminos
     Apparirà una finestra che richiede la calibrazione del robot prima di proseguire, **NON** cliccare su "Sì" e seguire i prossimi passaggi
 * - **20** 
   - Montare il Laser Tool con il suo supporto personalizzato 
+    :::{figure} ../../../../../_shared/media/images/step1calrobot.jpg
+    :width: 30%
+    :align: center
+    :::
 * - **21**
   - Posizionare lo Spacer Bracket  (**A**) sotto il laser 
+    :::{figure} ../../../../../_shared/media/images/step2calrobot.jpg
+    :width: 30%
+    :align: center
+    :::
 * - **22**
   - Abbassare il laser fino al livello dello spacer (**A**), così il laser avrà un'altezza di esattamente 3cm dalla griglia di calibrazione
     :::{image} ../../../../../_shared/media/images/spacerbracket.png
@@ -297,8 +334,16 @@ In quali casi si apre Expert? Expert si apre per la configurazione della luminos
     :::
 * - **23**
   - Rimuovere lo Spacer Bracket 
+    :::{figure} ../../../../../_shared/media/images/step3calrobot.jpg
+    :width: 30%
+    :align: center
+    :::
 * - **24**
   - Accendere il laser 
+    :::{figure} ../../../../../_shared/media/images/step4calrobot.jpg
+    :width: 30%
+    :align: center
+    :::
 ```
 
 ## **Step 5: Disegnare un piano a 3 punti**
@@ -311,10 +356,22 @@ In quali casi si apre Expert? Expert si apre per la configurazione della luminos
 ```{list-table}
 * - **25**
   - Portare il laser sul punto di origine 
+  - :::{figure} ../../../../../_shared/media/images/origine.jpg
+    :width: 100%
+    :align: center
+    :::
 * - **26**
   - Portare il laser nel punto finale dell'asse X
+  - :::{figure} ../../../../../_shared/media/images/assex.jpg
+    :width: 100%
+    :align: center
+    :::
 * - **27**
   - Portare il laser nel punto finale dell'asse Y 
+  - :::{figure} ../../../../../_shared/media/images/assey.jpg
+    :width: 100%
+    :align: center
+    :::
 ```
 
 ## **Step 6: Verifica della traiettoria del robot**
@@ -333,7 +390,12 @@ In quali casi si apre Expert? Expert si apre per la configurazione della luminos
   - Verificare che la corretta traiettoria sia seguita: il robot, muovendosi esclusivamente lungo gli assi X e Y, deve seguire correttamente le linee della griglia 
 * - **31**
   - Cliccare "YES"
-  ```
+    :::{figure} ../../../../../_shared/media/images/clickyes.jpg
+    :width: 50%
+    :align: center
+    :::
+```
+
 ## **Step 7: Salvataggio Ricetta Base** 
 ```{list-table}
 :header-rows: 0

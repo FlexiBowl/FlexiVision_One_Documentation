@@ -473,20 +473,36 @@ Per dettagli sui collegamenti elettrici, consultare la sezione [Cablaggio e Conn
 ```
 
 ---
-
+(luce_ambientale)=
 ## Schermatura da luce ambientale
 
 La stabilità del sistema di visione dipende fortemente dalla consistenza delle condizioni di illuminazione. La luce ambientale variabile può causare rilevazioni incoerenti.
 
+Il sistema di visione funziona confrontando ogni immagine acquisita con un modello di riferimento. Se le condizioni di illuminazione variano tra una scansione e l'altra, il sistema potrebbe avere difficoltà a riconoscere i pezzi correttamente. La luce ambientale — solare, artificiale o riflessa — che entra nella cella è la principale causa di instabilità delle prestazioni nelle applicazioni reali.
+
+![Schermatura luce ambientale](../../../../_shared/media/images/LIGHTSHIELDING.png)
+
+### Sintomi tipici di luce ambientale non controllata
+
+- **Riconoscimento instabile**: il sistema funziona bene in certi momenti e peggiora in altri, ad esempio quando la luce solare entra nella cella.
+- **Punteggio di riconoscimento variabile**: i pezzi vengono rilevati con punteggi molto diversi da un ciclo all'altro, anche se fisicamente identici.
+- **Falsi positivi**: pezzi con scarsa affidabilità vengono riconosciuti con punteggi alti e viceversa.
+
+### Best Practice di installazione
+
+- Schermare i lati della cella esposti a illuminazione irregolare con pannelli opachi.
+- Evitare illuminazione artificiale variabile (lampade con dimmer, fluorescenti tremolanti) sopra o vicino alla cella.
+- Preferire illuminazione a flusso costante nell'area circostante la cella.
+- Verificare la schermatura prima di eseguire la calibrazione e creare il modello.
+
 ```{warning}
 **Protezione da fonti luminose esterne**
 
-Si raccomanda fortemente di schermare la cella robotica da:
+Le condizioni durante la calibrazione devono essere le stesse della normale operazione. Si raccomanda fortemente di schermare la cella robotica da:
 - Luce solare diretta o indiretta
 - Illuminazione artificiale variabile (es. lampade con dimmer)
 - Riflessi da superfici lucide circostanti
 - Flash o luci intermittenti nell'area
-
 ```
 ---
 
