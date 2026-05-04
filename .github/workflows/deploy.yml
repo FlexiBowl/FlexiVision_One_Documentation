@@ -45,6 +45,10 @@ jobs:
             echo "::error::CDN_BASE_URL secret is empty" >&2
             exit 1
           fi
+          if [[ ! "$CDN_BASE_URL" =~ ^https?:// ]]; then
+            echo "::error::CDN_BASE_URL must start with http:// or https:// (got: $CDN_BASE_URL)" >&2
+            exit 1
+          fi
           # Strip any trailing slash and escape sed metacharacters in the URL.
           base="${CDN_BASE_URL%/}"
           escaped=$(printf '%s' "$base" | sed -e 's/[\/&]/\\&/g')
@@ -88,6 +92,10 @@ jobs:
           set -euo pipefail
           if [ -z "${CDN_BASE_URL:-}" ]; then
             echo "::error::CDN_BASE_URL secret is empty" >&2
+            exit 1
+          fi
+          if [[ ! "$CDN_BASE_URL" =~ ^https?:// ]]; then
+            echo "::error::CDN_BASE_URL must start with http:// or https:// (got: $CDN_BASE_URL)" >&2
             exit 1
           fi
           base="${CDN_BASE_URL%/}"
