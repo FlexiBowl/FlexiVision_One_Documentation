@@ -1,0 +1,19 @@
+sources/
+tools/
+installer/
+.github/
+.git/
+.gitattributes
+.gitignore
+*.bat
+*.ps1
+requirements.txt
+LICENSE
+README.md
+DEPLOY_SETUP.md
+DEPLOYMENT.md
+.DS_Store
+**/.DS_Store
+build/_shared/
+build/_assets/
+build/Offline manual.zip

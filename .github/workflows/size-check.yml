@@ -1,0 +1,38 @@
+name: Block large non-LFS files
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    name: Reject tracked files >10 MB without Git LFS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: false
+
+      - name: Find oversize tracked files committed without LFS
+        run: |
+          set -euo pipefail
+          MAX_BYTES=$((10 * 1024 * 1024))
+          fail=0
+          while IFS= read -r f; do
+            [ -z "$f" ] && continue
+            size=$(git cat-file -s "HEAD:$f" 2>/dev/null) || continue
+            if [ "$size" -gt "$MAX_BYTES" ]; then
+              attr=$(git check-attr filter -- "$f" 2>/dev/null || true)
+              case "$attr" in
+                *": filter: lfs"*)
+                  : # tracked by LFS, fine
+                  ;;
+                *)
+                  printf '::error file=%s::%s bytes (>10 MB) committed without Git LFS. Add the file extension to .gitattributes (filter=lfs).\n' "$f" "$size"
+                  fail=1
+                  ;;
+              esac
+            fi
+          done < <(git ls-files)
+          exit "$fail"

@@ -8,3 +8,7 @@ __pycache__/
 venv/
 .venv/
 .mypy_cache/
+
+# Local-only deployment notes — never commit
+DEPLOY_SETUP.md
+DEPLOYMENT.md
