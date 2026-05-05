@@ -11,6 +11,7 @@ __pycache__/
 venv/
 .venv/
 .mypy_cache/
+.build_cache/
 
 # Local-only setup guide — never commit (contains internal infra details)
 DEPLOY_SETUP.md

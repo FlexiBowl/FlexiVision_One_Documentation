@@ -107,7 +107,7 @@ echo Installa Python 3 e poi rilancia build_manual.bat.
 exit /b 1
 
 :ensure_dependencies
-call !PYTHON_CMD! -c "import sphinx, myst_parser, sphinx_book_theme, sphinx_copybutton, sphinx_design, sphinxcontrib.video" >nul 2>&1
+call !PYTHON_CMD! -c "import sphinx, myst_parser, sphinx_book_theme, sphinx_copybutton, sphinx_design, sphinxcontrib.video, imageio_ffmpeg" >nul 2>&1
 if not errorlevel 1 exit /b 0
 
 if "!AUTO_SETUP_RAN!"=="1" (
@@ -128,7 +128,7 @@ set "AUTO_SETUP_RAN=1"
 call :resolve_python
 if errorlevel 1 exit /b 1
 
-call !PYTHON_CMD! -c "import sphinx, myst_parser, sphinx_book_theme, sphinx_copybutton, sphinx_design, sphinxcontrib.video" >nul 2>&1
+call !PYTHON_CMD! -c "import sphinx, myst_parser, sphinx_book_theme, sphinx_copybutton, sphinx_design, sphinxcontrib.video, imageio_ffmpeg" >nul 2>&1
 if not errorlevel 1 exit /b 0
 
 echo Le dipendenze Python richieste dal publisher non risultano installate per !PYTHON_LABEL! anche dopo il setup automatico.

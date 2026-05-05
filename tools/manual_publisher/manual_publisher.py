@@ -18,12 +18,17 @@ from html import escape
 from pathlib import Path, PurePosixPath
 from urllib.parse import quote, unquote
 
+from optimize_media import find_ffmpeg, recompress_shared_videos
+
 FULL_MANUAL_PDF_NAME = "manual_full.pdf"
 PRINT_FULL_MANUAL_HTML_NAME = "print_full_manual.html"
 OFFLINE_MANUAL_ZIP_NAME = "Offline manual.zip"
 LEGACY_OFFLINE_MANUAL_ZIP_NAME = "client_site_bundle.zip"
 SHARED_BUILD_MEDIA_ROOT = Path("_shared") / "media"
 VIDEO_FILE_EXTENSIONS = {".mp4", ".mov", ".webm", ".m4v", ".ogv"}
+VIDEO_RECOMPRESSION_CRF = 30
+VIDEO_RECOMPRESSION_PRESET = "slow"
+VIDEO_RECOMPRESSION_CACHE_ROOT = Path(__file__).resolve().parents[2] / ".build_cache" / "video_recompression"
 HTML_BUILD_WORKERS_ENV = "FV_HTML_WORKERS"
 COPY_WORKERS_ENV = "FV_COPY_WORKERS"
 HTML_BUILD_WORKER_CAP = 4
@@ -475,8 +480,22 @@ def rewrite_shared_static_references(html_file: Path, shared_targets_by_source: 
     return True
 
 
+def remove_empty_local_media_roots(build_root: Path) -> None:
+    for version_path in list_version_paths(build_root):
+        for language_path in list_language_paths(version_path):
+            images_root = language_path / "_images"
+            if not images_root.exists():
+                continue
+            if any(path.is_file() for path in images_root.rglob("*")):
+                continue
+            try:
+                remove_directory(images_root)
+            except PermissionError:
+                print(f"Skipping locked empty media directory during optimization: {images_root}")
+
+
 def optimize_shared_media(build_root: Path) -> None:
-    duplicate_groups: dict[str, list[Path]] = defaultdict(list)
+    asset_groups: dict[str, list[Path]] = defaultdict(list)
 
     for version_path in list_version_paths(build_root):
         for language_path in list_language_paths(version_path):
@@ -485,30 +504,32 @@ def optimize_shared_media(build_root: Path) -> None:
                 continue
             for asset_path in images_root.rglob("*"):
                 if asset_path.is_file():
-                    duplicate_groups[hash_file(asset_path)].append(asset_path)
+                    asset_groups[hash_file(asset_path)].append(asset_path)
 
     shared_targets_by_source: dict[Path, Path] = {}
     duplicate_group_count = 0
+    centralized_file_count = 0
     removable_bytes = 0
     shared_root = build_root / SHARED_BUILD_MEDIA_ROOT
 
-    for digest, file_paths in duplicate_groups.items():
-        if len(file_paths) < 2:
-            continue
-
+    for digest, file_paths in asset_groups.items():
         target_path = pick_shared_media_target(shared_root, file_paths[0], digest)
         if not target_path.exists():
             shutil.copy2(file_paths[0], target_path)
 
-        duplicate_group_count += 1
-        file_size = file_paths[0].stat().st_size
-        removable_bytes += file_size * (len(file_paths) - 1)
+        if len(file_paths) > 1:
+            duplicate_group_count += 1
+            file_size = file_paths[0].stat().st_size
+            removable_bytes += file_size * (len(file_paths) - 1)
+
+        centralized_file_count += len(file_paths)
 
         resolved_target_path = target_path.resolve()
         for file_path in file_paths:
             shared_targets_by_source[file_path.resolve()] = resolved_target_path
 
     if not shared_targets_by_source:
+        remove_empty_local_media_roots(build_root)
         return
 
     updated_html_files = 0
@@ -524,19 +545,40 @@ def optimize_shared_media(build_root: Path) -> None:
             Path(source_path).unlink()
             removed_files += 1
         except PermissionError:
-            print(f"Skipping locked duplicate media during optimization: {source_path}")
+            print(f"Skipping locked media during optimization: {source_path}")
 
-    for version_path in list_version_paths(build_root):
-        for language_path in list_language_paths(version_path):
-            images_root = language_path / "_images"
-            if images_root.exists() and not any(images_root.iterdir()):
-                images_root.rmdir()
+    remove_empty_local_media_roots(build_root)
 
     print(
-        "Optimized shared media: consolidated "
-        f"{duplicate_group_count} duplicate asset groups into '{SHARED_BUILD_MEDIA_ROOT.as_posix()}', "
-        f"updated {updated_html_files} HTML files, and removed {removed_files} duplicate files "
-        f"(about {removable_bytes / (1024 * 1024):.1f} MiB saved)."
+        "Optimized shared media: centralized "
+        f"{centralized_file_count} media file(s) into '{SHARED_BUILD_MEDIA_ROOT.as_posix()}', "
+        f"consolidated {duplicate_group_count} duplicate asset group(s), "
+        f"updated {updated_html_files} HTML files, and removed {removed_files} local media file(s) "
+        f"(about {removable_bytes / (1024 * 1024):.1f} MiB saved by deduplication)."
+    )
+
+
+def recompress_build_videos(build_root: Path) -> None:
+    shared_root = build_root / SHARED_BUILD_MEDIA_ROOT
+    videos_root = shared_root / "videos"
+    if not videos_root.exists():
+        return
+
+    ffmpeg_path = find_ffmpeg(None)
+    if ffmpeg_path is None:
+        print("Video recompression skipped: ffmpeg not found.")
+        return
+
+    recompressed_count, saved_bytes = recompress_shared_videos(
+        shared_root,
+        ffmpeg_path,
+        VIDEO_RECOMPRESSION_CRF,
+        VIDEO_RECOMPRESSION_PRESET,
+        cache_root=VIDEO_RECOMPRESSION_CACHE_ROOT,
+    )
+    print(
+        f"Optimized shared videos: {recompressed_count} file(s), "
+        f"about {saved_bytes / (1024 * 1024):.1f} MiB saved."
     )
 
 
@@ -1490,6 +1532,8 @@ def build_release_assets(
         remove_named_files(build_root, {PRINT_FULL_MANUAL_HTML_NAME, LEGACY_OFFLINE_MANUAL_ZIP_NAME})
     with timed_step("optimize shared media", timings):
         optimize_shared_media(build_root)
+    with timed_step("recompress shared videos", timings):
+        recompress_build_videos(build_root)
     with timed_step("optimize shared static assets", timings):
         optimize_shared_static_directories(build_root)
     with timed_step("create offline zip", timings):
@@ -1564,6 +1608,8 @@ def build_site(
             with timed_step("re-optimize shared static assets in final build", timings):
                 optimize_shared_static_directories(output_root)
             if mode == "full":
+                with timed_step("recompress shared videos in final build", timings):
+                    recompress_build_videos(output_root)
                 with timed_step("refresh offline zip after targeted merge", timings):
                     create_site_zip(output_root, output_root / OFFLINE_MANUAL_ZIP_NAME)
         else:
