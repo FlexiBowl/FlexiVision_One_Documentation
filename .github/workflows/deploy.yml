@@ -105,6 +105,17 @@ jobs:
             -e 's#(src|href)="(\.{1,2}/)*(_assets/[^"]*)"#\1="'"${escaped}"'/\3"#g' \
             -e 's#(src|href)="(\.{1,2}/)*Offline(%20| )manual\.zip"#\1="'"${escaped}"'/Offline%20manual.zip"#g'
 
+      - name: Bake CDN URL into nginx.conf
+        run: |
+          set -euo pipefail
+          base="${CDN_BASE_URL%/}"
+          escaped=$(printf '%s' "$base" | sed -e 's/[\/&]/\\&/g')
+          sed -i "s#__CDN_BASE_URL__#${escaped}#g" nginx.conf
+          if grep -q '__CDN_BASE_URL__' nginx.conf; then
+            echo "::error::nginx.conf still contains __CDN_BASE_URL__ after substitution" >&2
+            exit 1
+          fi
+
       - name: Set up QEMU (for cross-arch builds)
         uses: docker/setup-qemu-action@v3
 
