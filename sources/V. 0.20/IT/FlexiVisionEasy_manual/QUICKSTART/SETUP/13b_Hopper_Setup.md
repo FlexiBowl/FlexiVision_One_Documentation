@@ -1,5 +1,5 @@
 (hoppersetup)=
-# **Passo 5: Hopper Setup**
+# **Passo 6: Hopper Setup**
 
 Questa sezione descrive la procedura per configurare la tramoggia (Hopper). L'Hopper è il componente che alimenta automaticamente pezzi sul FlexiBowl quando il livello scende sotto una soglia minima.
 

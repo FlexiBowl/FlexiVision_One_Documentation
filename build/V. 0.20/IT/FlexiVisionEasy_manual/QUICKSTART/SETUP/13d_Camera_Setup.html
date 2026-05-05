@@ -51,7 +51,7 @@
     <script src="../../../../../_shared/static/fix_print.js?v=d332f839"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Calibrazione della Camera" href="14_calibrazione_camera.html" />
+    <link rel="next" title="Passo 4: Calibrazione della Camera" href="14_calibrazione_camera.html" />
     <link rel="prev" title="Configurazione Iniziale del Sistema" href="13_setup.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -209,18 +209,15 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="13_setup.html"><strong>Configurazione Iniziale del Sistema</strong></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Passo 3: Camera Setup</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="14_calibrazione_camera.html"><strong>Passo 4: Calibrazione della Camera</strong></a></li>
 
 
+<li class="toctree-l2"><a class="reference internal" href="13a_FB_Setup.html"><strong>Passo 5: FlexiBowl Setup</strong></a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="14_calibrazione_camera.html"><strong>Calibrazione della Camera</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="13b_Hopper_Setup.html"><strong>Passo 6: Hopper Setup</strong></a></li>
 
-
-<li class="toctree-l2"><a class="reference internal" href="13a_FB_Setup.html"><strong>Passo 4: FlexiBowl Setup</strong></a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="13b_Hopper_Setup.html"><strong>Passo 5: Hopper Setup</strong></a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="13c_Robot_Setup.html"><strong>Passo 6 : Robot Setup</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="15_Protocol_Setup.html"><strong>Passo 7: Protocol Setup</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="13c_Robot_Setup.html"><strong>Passo 7: Robot Setup</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="15_Protocol_Setup.html"><strong>Passo 8: Protocol Setup</strong></a></li>
 </ul>
 </details></li>
 </ul>
@@ -417,7 +414,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Passo 3: Camera Setup</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accesso-alla-configurazione-camera">Accesso alla configurazione Camera</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#panoramica-interfaccia-camera-setup">Panoramica interfaccia Camera Setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#procedura-di-configurazione">Procedura di configurazione</a><ul class="visible nav section-nav flex-column">
@@ -426,34 +422,6 @@ document.write(`
 </ul>
 </li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#calibrazione-della-camera"><strong>Calibrazione della Camera</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perche-la-calibrazione-e-necessaria"><strong>Perché la calibrazione è necessaria?</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tipi-di-distorsioni-ottiche">Tipi di distorsioni ottiche</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-la-griglia-di-calibrazione"><strong>Step 1: La griglia di calibrazione</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-regolazioni-fondamentali"><strong>Step 2: Regolazioni fondamentali</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-calibrazione-camera"><strong>Step 3: Calibrazione Camera</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quando-e-necessario-ripetere-la-calibrazione">Quando è necessario ripetere la calibrazione</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#calibrazione-robot"><strong>Calibrazione Robot</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-montaggio-laser"><strong>Step 4: Montaggio Laser</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-disegnare-un-piano-a-3-punti"><strong>Step 5: Disegnare un piano a 3 punti</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-verifica-della-traiettoria-del-robot"><strong>Step 6: Verifica della traiettoria del robot</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-salvataggio-ricetta-base"><strong>Step 7: Salvataggio Ricetta Base</strong></a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#problemi-comuni-durante-la-calibrazione"><strong>Problemi comuni durante la calibrazione</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pattern-non-rilevato"><strong>Pattern non rilevato</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calibrazione-sempre-bad-o-acceptable"><strong>Calibrazione sempre “Bad” o “Acceptable”</strong></a></li>
-</ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -724,415 +692,6 @@ document.write(`
 </table>
 </div>
 <hr class="docutils" />
-</section>
-</section>
-</section>
-<section id="calibrazione-della-camera">
-<span id="calibrazione-camera-setup"></span><h1><strong>Calibrazione della Camera</strong><a class="headerlink" href="#calibrazione-della-camera" title="Link to this heading">#</a></h1>
-<p>La calibrazione è il passaggio cruciale che stabilisce la relazione geometrica esatta tra il mondo reale (coordinate in millimetri) e l’immagine acquisita dalla telecamera (pixel). Senza una calibrazione accurata, la precisione del sistema di picking risulta compromessa, rendendo inaffidabile l’intera applicazione.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>La calibrazione deve essere ripetuta ogni volta che viene alterata la posizione della camera e/o del robot.</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Non è necessario eseguire nuovamente la calibrazione nel caso in cui viene alterata la posizione del FlexiBowl.</p>
-</div>
-<hr class="docutils" />
-<section id="perche-la-calibrazione-e-necessaria">
-<h2><strong>Perché la calibrazione è necessaria?</strong><a class="headerlink" href="#perche-la-calibrazione-e-necessaria" title="Link to this heading">#</a></h2>
-<p>La calibrazione è necessaria perché ogni combinazione di sensore e lente introduce alterazioni specifiche nell’immagine. Il suo obiettivo principale è correggere queste distorsioni.</p>
-<section id="tipi-di-distorsioni-ottiche">
-<h3>Tipi di distorsioni ottiche<a class="headerlink" href="#tipi-di-distorsioni-ottiche" title="Link to this heading">#</a></h3>
-<figure class="align-center" id="id1">
-<a class="reference internal image-reference" href="../../../../../_shared/media/images/distorsioni_new.png"><img alt="Tipi di distorsioni ottiche" src="../../../../../_shared/media/images/distorsioni_new.png" style="width: 80%;" />
-</a>
-<figcaption>
-<p><span class="caption-text">Esempi di distorsioni ottiche: nessuna distorsione (sinistra), distorsione a barile (centro), distorsione a cuscinetto (destra)</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-</section>
-<hr class="docutils" />
-<section id="step-1-la-griglia-di-calibrazione">
-<h2><strong>Step 1: La griglia di calibrazione</strong><a class="headerlink" href="#step-1-la-griglia-di-calibrazione" title="Link to this heading">#</a></h2>
-<div class="admonition error">
-<p class="admonition-title">Error</p>
-<p>Assicurarsi di avere:</p>
-<ul class="simple">
-<li><p>Backlight acceso (SETUP &gt; FlexiBowl Setup &gt; Config FlexiBowl &gt; Light ON attivo)</p></li>
-<li><p>Toplight spento</p></li>
-</ul>
-</div>
-<div  class="sphinx-contrib-video-container align-center"><video controls="True" preload="auto" width="100%"><source src="../../../../../_shared/media/videos/Step1_calib.mp4" type="video/mp4"></video></div><p>La griglia di calibrazione dedicata ARS deve essere posizionata sul FlexiBowl:</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<tbody>
-<tr class="row-odd"><td><p><strong>0</strong></p></td>
-<td><p>Se presenti, rimuovere i deviatori montati sul FlexiBowl.</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>1</strong></p></td>
-<td><p><strong>Allentare le quattro viti</strong> della flangia centrale del FlexiBowl</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>2</strong></p></td>
-<td><p><strong>Ruotare leggermente la flangia</strong> centrale in senso antiorario e <strong>Rimuoverla</strong></p></td>
-</tr>
-<tr class="row-even"><td><p><strong>3</strong></p></td>
-<td><p><strong>Sollevare</strong> con cura e <strong>Rimuovere la superficie</strong></p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>4</strong></p></td>
-<td><p><strong>Posizionare la griglia ARS</strong> sul FlexiBowl allineando i perni di posizionamento con i fori predefiniti</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<figure class="align-center" id="id2">
-<a class="reference internal image-reference" href="../../../../../_shared/media/images/griglia_su_flexibowl.png"><img alt="Posizionamento griglia calibrazione" src="../../../../../_shared/media/images/griglia_su_flexibowl.png" style="width: 60%;" />
-</a>
-<figcaption>
-<p><span class="caption-text">Corretto posizionamento della griglia di calibrazione ARS sul FlexiBowl</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>La griglia di calibrazione deve essere posizionata <strong>alla stessa altezza dell’oggetto</strong> utilizzato nell’applicazione.</p>
-<p>Per questo motivo, viene fornita con dei <strong>distanziali</strong> da inserire nei pioli della griglia prima di installarla sul FlexiBowl.
-I distanziali hanno la funzione di <strong>sollevare la griglia</strong> fino al livello dell’altezza del pezzo, garantendo una calibrazione accurata.
-<img alt="Distanziali" src="../../../../../_shared/media/images/distanziali_griglia.JPG" /></p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../../../../_shared/media/images/altezzacalibrazione.png"><img alt="../../../_images/altezzacalibrazione.png" src="../../../../../_shared/media/images/altezzacalibrazione.png" style="width: 100%;" />
-</a>
-</figure>
-</div>
-</section>
-<section id="step-2-regolazioni-fondamentali">
-<h2><strong>Step 2: Regolazioni fondamentali</strong><a class="headerlink" href="#step-2-regolazioni-fondamentali" title="Link to this heading">#</a></h2>
-<div  class="sphinx-contrib-video-container align-center"><video controls="True" preload="auto" width="100%"><source src="../../../../../_shared/media/videos/Step2_calib.mp4" type="video/mp4"></video></div><div class="pst-scrollable-table-container"><table class="table">
-<tbody>
-<tr class="row-odd"><td><p><strong>5</strong></p></td>
-<td><p>Accedere alla sezione Camera SETUP dalla sezione SETUP</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>6</strong></p></td>
-<td><p>Cliccare il pulsante Config Camera della camera corrispondente</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>7</strong></p></td>
-<td><p>Cliccare EXPERT dalla pagina Camera FLB</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>8</strong></p></td>
-<td><p><strong>Mettere la camera in modalità “live display”</strong>
-Prima di regolare l’apertura, attivare la modalità di visualizzazione continua:</p>
-<ul class="simple">
-<li><p>immagine</p></li>
-</ul>
-</td>
-</tr>
-<tr class="row-odd"><td><p><strong>9</strong></p></td>
-<td><p><strong>Impostare l’apertura del diaframma</strong></p>
-<ul class="simple">
-<li><p>Svitare leggermente la vite dell’anello superiore della camera</p></li>
-<li><p>Ruotare l’anello osservando l’immagine live, fino a che la giusta quantità di luce non entra nella camera</p></li>
-<li><p>Stringere la vite dell’anello superiore della camera</p></li>
-</ul>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../../../../_shared/media/images/Esp_Corretta.png"><img alt="../../../_images/Esp_Corretta.png" src="../../../../../_shared/media/images/Esp_Corretta.png" style="width: 100%;" />
-</a>
-</figure>
-</td>
-</tr>
-<tr class="row-even"><td><p><strong>10</strong></p></td>
-<td><p><strong>Regolare manualmente il fuoco della camera</strong></p>
-<ul class="simple">
-<li><p>Svitare leggermente la vite dell’anello inferiore della camera</p></li>
-<li><p>Ruotare l’anello lentamente osservando l’immagine live</p></li>
-<li><p>Quando il pattern appare nitido, il fuoco è corretto</p></li>
-<li><p>Stringere la vite dell’anello inferiore della camera</p></li>
-<li><p>Chiudere la schermata</p></li>
-</ul>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../../../../_shared/media/images/Fuoco_Corretto.png"><img alt="../../../_images/Fuoco_Corretto.png" src="../../../../../_shared/media/images/Fuoco_Corretto.png" style="width: 100%;" />
-</a>
-</figure>
-</td>
-</tr>
-<tr class="row-odd"><td><p><strong>11</strong></p></td>
-<td><p>Cliccare Back</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>Attenzione alla profondità di campo</strong></p>
-<p>La messa a fuoco deve garantire nitidezza su <strong>tutta la superficie</strong> del FlexiBowl, non solo al centro.</p>
-<p>Se il centro è nitido ma i bordi sono sfocati:</p>
-<ul class="simple">
-<li><p>Verificare che l’ottica sia pulita</p></li>
-<li><p>Verificare che la distanza di lavoro sia corretta</p></li>
-<li><p>Verificare che la camera sia perfettamente parallela al piatto</p></li>
-<li><p>Chiudere leggermente il diaframma per aumentare la profondità di campo</p></li>
-</ul>
-<p>Se il problema persiste, potrebbe essere necessario rivedere il montaggio meccanico della camera.</p>
-</div>
-<div  class="sphinx-contrib-video-container align-center"><video controls="True" preload="auto" width="100%"><source src="../../../../../_shared/media/videos/Step2b_calib.mp4" type="video/mp4"></video></div><div class="admonition error">
-<p class="admonition-title">Error</p>
-<p>Se cliccando più volte il tasto RUN appare anche solo una volta una schermata completamente blu, fare riferimento alla sezione di troubleshooting della calibrazione camera</p>
-</div>
-<div class="pst-scrollable-table-container"><table class="table">
-<tbody>
-<tr class="row-odd"><td><p><strong>12</strong></p></td>
-<td><p><strong>Regolare l’esposizione della camera</strong></p>
-<ul class="simple">
-<li><p>Dalla pagina <strong>Camera FLB x</strong>, individuare il parametro <strong>Cam Exposure</strong> (Esposizione della Camera):</p></li>
-<li><p>Regolare il parametro “Cam Exposure” e cliccare su “TEST”, ripetere questo passaggio fino a che non viene trovata la giusta esposizione per l’immagine:</p>
-<ul>
-<li><p>Pattern della griglia chiaramente visibile (nero su bianco o viceversa)</p></li>
-<li><p>Contrasto elevato tra quadrati bianchi e neri</p></li>
-<li><p>Nessuna sovraesposizione (aree completamente bianche “bruciate”)</p></li>
-<li><p>Nessuna sottoesposizione (immagine troppo scura)</p></li>
-</ul>
-</li>
-</ul>
-</td>
-</tr>
-<tr class="row-even"><td><p><strong>13</strong></p></td>
-<td><p>Cliccare NEXT</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<figure class="align-center" id="id3">
-<a class="reference internal image-reference" href="../../../../../_shared/media/images/Esposizioni.png"><img alt="Esempio esposizione corretta" src="../../../../../_shared/media/images/Esposizioni.png" style="width: 60%;" />
-</a>
-<figcaption>
-<p><span class="caption-text">Esempio di esposizione corretta: contrasto elevato, pattern ben definito, nessuna area bruciata</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p><strong>Ottimizzazione esposizione</strong></p>
-<p><strong>Più alto sarà il tempo, più luce entrerà nell’ottica</strong></p>
-<ul class="simple">
-<li><p><strong>Tempo troppo breve</strong>: Immagine scura, pattern poco visibile</p></li>
-<li><p><strong>Tempo troppo lungo</strong>: Immagine sovraesposta, perdita di dettagli</p></li>
-<li><p><strong>Tempo ottimale</strong>: Massimo contrasto senza saturazione</p></li>
-</ul>
-</div>
-</section>
-<section id="step-3-calibrazione-camera">
-<h2><strong>Step 3: Calibrazione Camera</strong><a class="headerlink" href="#step-3-calibrazione-camera" title="Link to this heading">#</a></h2>
-<div  class="sphinx-contrib-video-container align-center"><video controls="True" preload="auto" width="100%"><source src="../../../../../_shared/media/videos/Step3_calib.mp4" type="video/mp4"></video></div><div class="pst-scrollable-table-container"><table class="table">
-<colgroup>
-<col style="width: 5.0%" />
-<col style="width: 95.0%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><strong>14</strong></p></td>
-<td><p>Verificare che la griglia sia centrata, nitida e completamente visibile prima di acquisire l’immagine di calibrazione.</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>15</strong></p></td>
-<td><p>Cliccare su “Grab Image Calib” per scattare una foto della griglia di calibrazione.</p>
-<p>Verificare visivamente che:</p>
-<ul class="simple">
-<li><p>L’intera griglia sia visibile</p></li>
-<li><p>Il pattern sia nitido</p></li>
-<li><p>Non ci siano ombre o riflessi</p></li>
-</ul>
-</td>
-</tr>
-<tr class="row-odd"><td><p><strong>16</strong></p></td>
-<td><p>Impostare i valori “Tile Size X” e “Tile Size Y” entrambi a 10</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>17</strong></p></td>
-<td><p>Cliccare su “Calibrate” per effettuare la calibrazione</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>18</strong></p></td>
-<td><p><strong>Valutare la qualità della calibrazione</strong></p>
-<p>Il parametro “Result Calibration” restituirà un valore:</p>
-<p>🟢 <strong>Excellent (Verde)</strong>: Calibrazione eccellente, precisione ottimale.</p>
-<p>🟠 <strong>Acceptable (Arancione)</strong>: Calibrazione accettabile, precisione buona ma non ottimale.</p>
-<p>🔴 <strong>Bad (Rosso)</strong>: Calibrazione scadente, precisione insufficiente. Da ripetere obbligatoriamente.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Accettare solo calibrazioni Eccellenti 🟢, altri risultati comprometteranno il funzionamento dell’intera applicazione.</p>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>Criterio di accettabilità</strong></p>
-<p>Un risultato soddisfacente comprende il settaggio dell’apertura, la messa a fuoco, e il settaggio dell’esposizione migliore per l’applicazione.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>Errori durante il calcolo</strong></p>
-<p>Se il calcolo della calibrazione fallisce:</p>
-<p><strong>Possibili cause</strong>:</p>
-<ul class="simple">
-<li><p>Pattern non rilevato (immagine troppo scura o sovraesposta)</p></li>
-<li><p>Quadrati della griglia parzialmente oscurati</p></li>
-<li><p>Distorsione eccessiva (camera troppo vicina o lontana)</p></li>
-<li><p>Tile Size inserito errato</p></li>
-</ul>
-<p><strong>Soluzione</strong>:</p>
-<ul class="simple">
-<li><p>Verificare e migliorare la qualità dell’immagine acquisita</p></li>
-<li><p>Assicurarsi che l’intera griglia sia visibile e ben illuminata</p></li>
-<li><p>Verificare il valore Tile Size</p></li>
-<li><p>Ripetere l’acquisizione immagine (Grab Image) e tentare nuovamente</p></li>
-</ul>
-</div>
-<p><strong>Nota: spiegare che per i dubbi si può aprire info</strong></p>
-<p>In quali casi si apre Expert? Expert si apre per la configurazione della luminosità o per altri parametri.</p>
-<hr class="docutils" />
-<section id="quando-e-necessario-ripetere-la-calibrazione">
-<h3>Quando è necessario ripetere la calibrazione<a class="headerlink" href="#quando-e-necessario-ripetere-la-calibrazione" title="Link to this heading">#</a></h3>
-<div class="pst-scrollable-table-container"><table class="table">
-<colgroup>
-<col style="width: 50.0%" />
-<col style="width: 50.0%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><strong>Ricalibrare quando:</strong></p></td>
-<td><p>Primo setup del sistema (obbligatorio). Dopo aver modificato la posizione della camera. Dopo aver spostato il robot. Se si riscontrano errori sistematici di picking.</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Non è necessario ricalibrare quando:</strong></p></td>
-<td><p>Se si cambia tipo di pezzo a parita di FlexiBowl e camera. Se si modificano fuoco o apertura dell’obiettivo. Se si modifica la ricetta software. Se si regolano parametri di riconoscimento. Se si aggiornano i programmi robot.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-</section>
-</section>
-<hr class="docutils" />
-<section id="calibrazione-robot">
-<h1><strong>Calibrazione Robot</strong><a class="headerlink" href="#calibrazione-robot" title="Link to this heading">#</a></h1>
-<section id="step-4-montaggio-laser">
-<h2><strong>Step 4: Montaggio Laser</strong><a class="headerlink" href="#step-4-montaggio-laser" title="Link to this heading">#</a></h2>
-<div  class="sphinx-contrib-video-container align-center"><video controls="True" preload="auto" width="100%"><source src="../../../../../_shared/media/videos/Step4_calib.mp4" type="video/mp4"></video></div><div class="pst-scrollable-table-container"><table class="table">
-<tbody>
-<tr class="row-odd"><td><p><strong>19</strong></p></td>
-<td><p>Una volta ottenuta una calibrazione di ottima qualità, Cliccare “NEXT”.
-Apparirà una finestra che richiede la calibrazione del robot prima di proseguire, <strong>NON</strong> cliccare su “Sì” e seguire i prossimi passaggi</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>20</strong></p></td>
-<td><p>Montare il Laser Tool con il suo supporto personalizzato</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>21</strong></p></td>
-<td><p>Posizionare lo Spacer Bracket (<strong>A</strong>) sotto il laser</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>22</strong></p></td>
-<td><p>Abbassare il laser fino al livello dello spacer (<strong>A</strong>), cosi il laser avra un’altezza di esattamente 3 cm dalla griglia di calibrazione</p>
-<a class="reference internal image-reference" href="../../../../../_shared/media/images/spacerbracket.png"><img alt="../../../_images/spacerbracket.png" class="align-center" src="../../../../../_shared/media/images/spacerbracket.png" style="width: 75%;" />
-</a>
-</td>
-</tr>
-<tr class="row-odd"><td><p><strong>23</strong></p></td>
-<td><p>Rimuovere lo Spacer Bracket</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>24</strong></p></td>
-<td><p>Accendere il laser</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="step-5-disegnare-un-piano-a-3-punti">
-<h2><strong>Step 5: Disegnare un piano a 3 punti</strong><a class="headerlink" href="#step-5-disegnare-un-piano-a-3-punti" title="Link to this heading">#</a></h2>
-<div  class="sphinx-contrib-video-container align-center"><video controls="True" preload="auto" width="100%"><source src="../../../../../_shared/media/videos/Step5_calib.mp4" type="video/mp4"></video></div><div class="pst-scrollable-table-container"><table class="table">
-<tbody>
-<tr class="row-odd"><td><p><strong>25</strong></p></td>
-<td><p>Portare il laser sul punto di origine</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>26</strong></p></td>
-<td><p>Portare il laser nel punto finale dell’asse X</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>27</strong></p></td>
-<td><p>Portare il laser nel punto finale dell’asse Y</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="step-6-verifica-della-traiettoria-del-robot">
-<h2><strong>Step 6: Verifica della traiettoria del robot</strong><a class="headerlink" href="#step-6-verifica-della-traiettoria-del-robot" title="Link to this heading">#</a></h2>
-<div  class="sphinx-contrib-video-container align-center"><video controls="True" preload="auto" width="100%"><source src="../../../../../_shared/media/videos/Step6_calib.mp4" type="video/mp4"></video></div><div class="pst-scrollable-table-container"><table class="table">
-<tbody>
-<tr class="row-odd"><td><p><strong>28</strong></p></td>
-<td><p>Riportare il laser sul punto di origine</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>29</strong></p></td>
-<td><p>Muovere il robot dalla sua teach pendant lungo gli assi X e Y.</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>30</strong></p></td>
-<td><p>Verificare che la corretta traiettoria sia seguita: il robot, muovendosi esclusivamente lungo gli assi X e Y, deve seguire correttamente le linee della griglia</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>31</strong></p></td>
-<td><p>Cliccare “YES”</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="step-7-salvataggio-ricetta-base">
-<h2><strong>Step 7: Salvataggio Ricetta Base</strong><a class="headerlink" href="#step-7-salvataggio-ricetta-base" title="Link to this heading">#</a></h2>
-<div class="pst-scrollable-table-container"><table class="table">
-<colgroup>
-<col style="width: 10.0%" />
-<col style="width: 90.0%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><strong>32</strong></p></td>
-<td><p>Cliccare su <strong>Recipes</strong></p></td>
-</tr>
-<tr class="row-even"><td><p><strong>33</strong></p></td>
-<td><p>Controllare di avere la ricetta contenente tutti i setup e la calibrazione selezionata nel menu a sinistra e cliccare su <strong>Save Recipe</strong></p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>34</strong></p></td>
-<td><p>Questa ci permetterà di avere salvati a parte tutti i passaggi fatti fin’ora, in modo da avere una base per tutte le future ricette che conterranno i vari modelli per il sistema calibrato</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>35</strong></p></td>
-<td><p>Per continuare con la creazione dei modelli, duplicare la ricetta base, rinominarla come si preferisce e cliccare su <strong>Edit Recipe</strong>: si aprirà una pagina con l’elenco di tutti i modelli disponibili</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-</section>
-<hr class="docutils" />
-<section id="problemi-comuni-durante-la-calibrazione">
-<h1><strong>Problemi comuni durante la calibrazione</strong><a class="headerlink" href="#problemi-comuni-durante-la-calibrazione" title="Link to this heading">#</a></h1>
-<section id="pattern-non-rilevato">
-<h2><strong>Pattern non rilevato</strong><a class="headerlink" href="#pattern-non-rilevato" title="Link to this heading">#</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>Errore: “Unable to detect calibration pattern”</strong></p>
-<p>Causa: Il software non riesce a identificare il pattern della griglia.</p>
-<p><strong>Soluzioni</strong>:</p>
-<ul class="simple">
-<li><p>Aumentare il contrasto (regolare esposizione o illuminazione)</p></li>
-<li><p>Verificare che l’intera griglia sia visibile nell’immagine</p></li>
-<li><p>Migliorare la messa a fuoco</p></li>
-<li><p>Pulire la superficie della griglia (polvere o impronte possono interferire)</p></li>
-</ul>
-</div>
-</section>
-<section id="calibrazione-sempre-bad-o-acceptable">
-<h2><strong>Calibrazione sempre “Bad” o “Acceptable”</strong><a class="headerlink" href="#calibrazione-sempre-bad-o-acceptable" title="Link to this heading">#</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>Qualità calibrazione insufficiente</strong></p>
-<p>Se nonostante le regolazioni la calibrazione rimane sotto “Excellent”:</p>
-<ol class="arabic simple">
-<li><p>Verificare la distanza di lavoro camera-FlexiBowl (deve essere quella calcolata)</p></li>
-<li><p>Controllare cje la camera sia parallela rispetto al piano del FlexiBowl (deve essere perfettamente orizzontale)</p></li>
-<li><p>Assicurarsi che la camera sia stabile (no vibrazioni durante acquisizione)</p></li>
-<li><p>Verificare che l’obiettivo sia avvitato completamente</p></li>
-</ol>
-<p>Se il problema persiste, potrebbe esserci un problema meccanico nel montaggio. Consultare [Installazione Meccanica]009_Installazione_Meccanica.md) per revisione.</p>
-</div>
 <br>
 <!-- Versions and languages set-up -->
 <style>
@@ -1780,6 +1339,7 @@ Apparirà una finestra che richiede la calibrazione del robot prima di proseguir
 </script>
 </section>
 </section>
+</section>
 
 
                 </article>
@@ -1806,7 +1366,7 @@ Apparirà una finestra che richiede la calibrazione del robot prima di proseguir
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Calibrazione della Camera</strong></p>
+        <p class="prev-next-title"><strong>Passo 4: Calibrazione della Camera</strong></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1826,7 +1386,6 @@ Apparirà una finestra che richiede la calibrazione del robot prima di proseguir
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Passo 3: Camera Setup</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accesso-alla-configurazione-camera">Accesso alla configurazione Camera</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#panoramica-interfaccia-camera-setup">Panoramica interfaccia Camera Setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#procedura-di-configurazione">Procedura di configurazione</a><ul class="visible nav section-nav flex-column">
@@ -1835,34 +1394,6 @@ Apparirà una finestra che richiede la calibrazione del robot prima di proseguir
 </ul>
 </li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#calibrazione-della-camera"><strong>Calibrazione della Camera</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perche-la-calibrazione-e-necessaria"><strong>Perché la calibrazione è necessaria?</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tipi-di-distorsioni-ottiche">Tipi di distorsioni ottiche</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-la-griglia-di-calibrazione"><strong>Step 1: La griglia di calibrazione</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-regolazioni-fondamentali"><strong>Step 2: Regolazioni fondamentali</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-calibrazione-camera"><strong>Step 3: Calibrazione Camera</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quando-e-necessario-ripetere-la-calibrazione">Quando è necessario ripetere la calibrazione</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#calibrazione-robot"><strong>Calibrazione Robot</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-montaggio-laser"><strong>Step 4: Montaggio Laser</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-disegnare-un-piano-a-3-punti"><strong>Step 5: Disegnare un piano a 3 punti</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-verifica-della-traiettoria-del-robot"><strong>Step 6: Verifica della traiettoria del robot</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-salvataggio-ricetta-base"><strong>Step 7: Salvataggio Ricetta Base</strong></a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#problemi-comuni-durante-la-calibrazione"><strong>Problemi comuni durante la calibrazione</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pattern-non-rilevato"><strong>Pattern non rilevato</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calibrazione-sempre-bad-o-acceptable"><strong>Calibrazione sempre “Bad” o “Acceptable”</strong></a></li>
-</ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>

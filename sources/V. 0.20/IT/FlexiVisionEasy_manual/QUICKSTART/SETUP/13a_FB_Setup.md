@@ -1,5 +1,5 @@
 (fbsetup)=
-# **Passo 4: FlexiBowl Setup**
+# **Passo 5: FlexiBowl Setup**
 
 Questa sezione descrive la procedura per connettere e configurare il FlexiBowl con il sistema FlexiVision One. 
 

@@ -1,5 +1,5 @@
 ﻿(calibrazione)=
-# **Calibrazione della Camera**
+# **Passo 4: Calibrazione della Camera**
 
 La calibrazione è il passaggio cruciale che stabilisce la relazione geometrica esatta tra il mondo reale (coordinate in millimetri) e l'immagine acquisita dalla telecamera (pixel). Senza una calibrazione accurata, la precisione del sistema di picking risulta compromessa, rendendo inaffidabile l'intera applicazione.
 

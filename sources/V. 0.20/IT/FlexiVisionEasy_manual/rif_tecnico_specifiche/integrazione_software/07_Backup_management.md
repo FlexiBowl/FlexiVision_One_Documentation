@@ -3,89 +3,88 @@
 
 ## **Panoramica**
 
-Il backup di FlexiVision One consiste nella copia della cartella `Recipes` presente sul VisionController. Questa cartella contiene tutte le ricette configurate nel sistema — inclusi modelli, parametri di riconoscimento e impostazioni associate — e rappresenta l'unico dato utente da preservare.
+L'intera configurazione di FlexiVision One — setup hardware, calibrazioni, modelli dei pezzi e parametri di protocollo — è contenuta nei file ricetta. Per questo motivo, i backup sono fondamentali per mantenere al sicuro tutti i dati.
 
-Poiché non è richiesto alcuno strumento dedicato, il processo di backup si riduce a una semplice operazione di copia e incolla tramite Esplora File.
 ```{important}
-Si raccomanda di eseguire un backup ogni volta che viene creata o modificata una ricetta, e comunque prima di qualsiasi aggiornamento software o intervento di manutenzione sul VisionController.
-```
+Si raccomanda di eseguire un backup dopo ogni creazione o modifica significativa di una ricetta, prima di aggiornare il software FlexiVision e prima di qualsiasi intervento hardware sul sistema.
 
----
-
-## **Contenuto del Backup**
-
-All'interno della cartella di installazione di FlexiVision One è presente la seguente struttura:
-```
-C:\FlexiVision One\
-├── Data\
-├── Languages\
-├── Recipes\          ← unica cartella da includere nel backup
-├── Flexivision_Smart_018
-└── Package.dat
-```
-
-L'unica cartella che contiene dati utente è `Recipes\`. Le altre cartelle e i file presenti appartengono all'installazione del software e non devono essere inclusi nel backup.
-```{note}
-Il percorso esatto della cartella di installazione può variare in base alla configurazione del sistema. In caso di dubbio, verificare il percorso nelle impostazioni del software.
+**Regola minima:** almeno una volta a settimana durante la normale operatività.
 ```
 
 ---
 
 ## **Procedura di Backup**
+
 ```{list-table}
 :header-rows: 1
-:widths: 10 90
+:widths: 30 70
 
 * - **Step**
   - **Azione**
-* - 1
-  - Assicurarsi che il software FlexiVision One sia **chiuso**.
-* - 2
-  - Aprire Esplora File sul VisionController e navigare fino a `C:\FlexiVision One\`.
-* - 3
-  - Fare clic con il tasto destro sulla cartella `Recipes` e selezionare **Copia**.
-* - 4
-  - Navigare nella destinazione di backup desiderata (chiavetta USB, cartella di rete, NAS, ecc.).
-* - 5
-  - Incollare la cartella nella destinazione. Si consiglia di rinominarla includendo la data, ad esempio: `Recipes_backup_2025-06-01`.
-```
-```{warning}
-Non eseguire il backup mentre il software FlexiVision One è in esecuzione. La copia di file aperti potrebbe risultare incompleta o corrotta.
+* - Click Backup
+  - Nel menu Ricette, cliccare il pulsante Backup.
+* - Scegliere la cartella FlexiVision
+  - Individuare la cartella runtime di FlexiVision One sul VisionController.
+* - Scegliere la cartella di destinazione
+  - Selezionare la cartella di destinazione del backup.
+* - Nominazione con data
+  - Assegnare sempre un nome che includa la data, la versione software e l'identificativo del sistema o altre informazioni utili come il nome del cliente. Esempi:
+    
+    - `FV_Recipes_LineA_20260402_SW1.2.xml`
+    - `Backup_FlexiVision_ClientABC_Plant3_20260402.xml`
+    - `Recipes_FB500_Commissioning_20260315_v1.zip`
+    
+    Includere la versione software (visibile nella Home page) nel nome o in un file di testo allegato.
 ```
 
 ---
 
-## **Procedura di Ripristino (Restore)**
+## **Procedura di Import Backup**
 
-In caso di perdita dei dati o sostituzione del VisionController, è possibile ripristinare le ricette precedenti seguendo questi passi:
 ```{list-table}
 :header-rows: 1
-:widths: 10 90
+:widths: 30 70
 
 * - **Step**
   - **Azione**
-* - 1
-  - Assicurarsi che FlexiVision One sia installato sul VisionController e **chiuso**.
-* - 2
-  - Aprire Esplora File e navigare fino a `C:\FlexiVision One\`.
-* - 3
-  - Rinominare la cartella `Recipes` esistente (es. `Recipes_old`) come misura precauzionale.
-* - 4
-  - Copiare la cartella di backup nella posizione `C:\FlexiVision One\` e rinominarla `Recipes`.
-* - 5
-  - Avviare FlexiVision One: tutte le ricette precedentemente salvate saranno nuovamente disponibili.
-```
-```{important}
-La versione del software installata sul VisionController deve essere compatibile con quella utilizzata al momento del backup. In caso di aggiornamento software, contattare il supporto tecnico prima di procedere con il ripristino.
+* - Click Import Backup
+  - Dalla sezione Ricette, cliccare su Import Backup.
+* - Selezionare la cartella runtime di FlexiVision
+  - **Selezionare la cartella che contiene l'installazione di FlexiVision.**
+* - Selezionare il path del backup
+  - Impostare il percorso del file di backup. FlexiVision si riavvierà durante questo processo.
+* - Verifiche post-ripristino
+  - Dopo il ripristino, eseguire le seguenti verifiche prima di riavviare la produzione:
+
+    1. Verificare che tutte le ricette attese siano presenti nell'elenco della pagina Ricette.
+    2. Confermare che la ricetta principale possa essere caricata senza errori.
+    3. Verificare che FlexiBowl® e i test di connessione della camera siano positivi (verdi) in Camera Setup.
+    4. Confermare che il Dashboard mostri i dispositivi correttamente connessi.
+
+    **Eseguire un ciclo di test con la ricetta operativa principale per verificare il corretto funzionamento.**
 ```
 
 ---
 
-## **Raccomandazioni**
+## **Gestione corretta delle ricette**
 
-- Conservare almeno **due copie del backup** in posizioni fisiche distinte (es. una chiavetta USB locale e una cartella di rete remota).
-- Etichettare sempre i backup con **data e versione software** per facilitarne l'identificazione nel tempo.
-- Non modificare il contenuto della cartella `Recipes` manualmente: le ricette devono essere gestite esclusivamente tramite l'interfaccia di FlexiVision One.
-```{tip}
-Per ambienti con più VisionController, si consiglia di centralizzare i backup in una cartella di rete condivisa, organizzata per nome macchina e data.
+```{list-table}
+:header-rows: 1
+:widths: 25 37 38
+
+* - **Azione**
+  - **Metodo corretto**
+  - **Metodo da evitare**
+* - Rinominare una ricetta
+  - Pagina Ricette → funzione Rinomina nel software.
+  - Rinominare il file XML tramite Esplora File.
+* - Eliminare una ricetta
+  - Pagina Ricette → pulsante **Elimina Ricetta**.
+  - Eliminare il file XML manualmente.
+* - Copiare una ricetta su un altro sistema
+  - Pagina Ricette → Backup → Import Backup sull'altro sistema.
+  - Copiare e incollare i file XML tra due cartelle Recipes.
+* - Modificare un parametro di ricetta
+  - Aprire la ricetta in modalità **Modifica** nel software.
+  - Modificare il file XML con un editor di testo.
 ```
