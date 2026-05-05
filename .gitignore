@@ -1,6 +1,9 @@
-.DS_Store # macOS
-Thumbs.db # Windows
-desktop.ini # Windows
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
 
 # Python
 __pycache__/
@@ -9,6 +12,5 @@ venv/
 .venv/
 .mypy_cache/
 
-# Local-only deployment notes — never commit
+# Local-only setup guide — never commit (contains internal infra details)
 DEPLOY_SETUP.md
-DEPLOYMENT.md
