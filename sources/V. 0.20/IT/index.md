@@ -17,7 +17,6 @@ Mantenendo tutte le potenti funzionalità della versione precedente, permettendo
 Grazie a una guida passo passo completa e a strumenti intuitivi, abbiamo estremamente semplificato il processo, rendendo la programmazione e l'utilizzo accessibili e utilizzabili da chiunque, indipendentemente dal livello di esperienza.
 
 ## **Panoramica del sistema** 
-Schema esemplificativo del sistema con collegamenti fino a tre FlexiBowl, tre camere e tre tramogge.
 
 ```{figure} ../../_shared/media/images/Icon_FlexiVision.png
 :align: center
