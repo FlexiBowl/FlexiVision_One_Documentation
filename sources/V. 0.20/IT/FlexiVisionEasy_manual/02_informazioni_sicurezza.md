@@ -28,7 +28,7 @@ Durante il funzionamento del sistema, tenere sempre conto di:
 - Ingombri fisici del robot e del FlexiBowl®
 - Traiettorie e velocità dei movimenti robotici
 - Possibili situazioni impreviste (caduta pezzi, errori di prelievo)
-- Zone di pericolo durante le fasi di vibrazione del FlexiBowl®
+- Zone di pericolo durante le fasi di movimentazione del FlexiBowl®
 ```
 
 ### Precauzioni generali prima degli interventi

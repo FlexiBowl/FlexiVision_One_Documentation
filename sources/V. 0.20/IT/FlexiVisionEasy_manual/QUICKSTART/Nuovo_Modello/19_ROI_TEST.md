@@ -10,7 +10,6 @@ La **Region Search** è l'area all'interno della quale FlexiVision One cercherà
 
 Dopo aver cliccato "Next" nella pagina di training, si apre automaticamente la pagina **Define Robot Picking Limit Area Model**.
 
-![Pagina Define Robot Pick Area](../../../../../_shared/media/images/pagina_definerobotpickarea.png)
 
 
 ## **Step 1: Definizione Area**

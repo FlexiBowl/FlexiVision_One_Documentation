@@ -60,9 +60,7 @@ La griglia di calibrazione dedicata ARS deve essere posizionata sul FlexiBowl®:
     ```
 * - **2**
   - **Ruotare leggermente la flangia** centrale in senso antiorario e **rimuoverla**.
-  - ```{image} ../../../../../_shared/media/images/rimuovereflangia.jpg
-      
-    ```
+  - 
 * - **3**
   - **Sollevare** con cura e **rimuovere la superficie**.
   - ```{image} ../../../../../_shared/media/images/rimuoveredisco.jpg

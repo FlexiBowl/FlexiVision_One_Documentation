@@ -84,7 +84,7 @@ L'utilizzo delle Clearances varia al variare del pezzo di cui si deve fare il mo
 
       | Parametro | Funzione |
       |-----------|----------|
-      | **Enable Histogram** | Attiva questa clearance rendendola operativa |
+      | **Enable Clearance** | Attiva questa clearance rendendola operativa |
       | **Expression Builder** | Strumento per configurare automaticamente le soglie di rilevamento |
       | **Mean and Standard Deviation** | Valori statistici calcolati sull'area selezionata (media e deviazione standard dei livelli di grigio) |
       | **Test** | Verifica immediata del funzionamento della clearance |
@@ -162,28 +162,33 @@ Crea più clearance quando:
 Selezionare una nuova clearance dalla pagina elenco delle Clearances, tipo "Clearance 2" e ripetere gli Step 2-3.
 Ripetere la procedura per ogni clearance necessaria (fino a 8 per modello). 
 
-### **Step 4: Test Complessivo**
-Nella pagina di elenco di tutte le clearance, cliccare su **TEST**
-Visualizzare tutte le clearance contemporaneamente
+### **Step 4: Test Complessivo**  
 
+Nella pagina di elenco di tutte le clearance, cliccare su **TEST** per visualizzare tutte le clearance contemporaneamente  
+
+![Pagina Clearances](../../../../../_shared/media/images/activatedclearances.png)
 ---
 
 ## Interpretazione Stati
 
 ### Stati delle Clearance 
+
 ````{list-table}
 :header-rows: 1
-:widths: 15 35 50
+:widths: 10 15 30 45
 
 * - Colore
   - Stato
   - Significato
+  - Immagine
 * - 🟢 Verde
   - OK
   - Area libera, prelievo possibile
+  - ![](../../../../../_shared/media/images/greenclearances.png)
 * - 🔴 Rosso
   - Triggered
   - Area occupata, prelievo non possibile
+  - ![](../../../../../_shared/media/images/redclearances.png)
 ````
 
 ### Cosa Significa "Triggered"?
