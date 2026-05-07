@@ -23,7 +23,7 @@ Completata la preparazione fisica, si procede con l'acquisizione dell'immagine e
 * - **3**
   - Dalla pagina "Recipes", con la giusta ricetta selezionata, cliccare su "Edit Recipe"
 * - **4**
-  - Selezionare il FlexiBowl con cui si sta lavorando
+  - Selezionare il FlexiBowl® con cui si sta lavorando
     :::{dropdown}
 
     :::
@@ -77,7 +77,7 @@ Per ora, concentrarsi sul completamento del primo modello.
   - Cliccare su **Enable Model** per abilitare questo modello. Il modello è ora attivo e pronto per essere configurato.
 
 * - **8**
-  - Cliccare su **Grab Train Image** per scattare una foto del componente di riferimento che abbiamo posizionato sul FlexiBowl
+  - Cliccare su **Grab Train Image** per scattare una foto del componente di riferimento che abbiamo posizionato sul FlexiBowl®
     
     :::{warning}
     Il componente di riferimento dovrà rimanere fermo in quel punto per tutto il processo di creazione dell'applicazione

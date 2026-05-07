@@ -1,5 +1,5 @@
 (protocol_setup)=
-# **Passo 8: Protocol Setup**
+# **Protocol Setup**
 
 La pagina **Protocol Setup** permette di configurare i parametri che regolano il flusso di comunicazione e lo scambio dati tra il sistema di visione FlexiVision One e il robot. Questi parametri determinano quanti oggetti vengono inviati, come vengono ordinati, e come il sistema gestisce le statistiche e gli stati operativi.
 
@@ -79,11 +79,11 @@ Una volta configurato correttamente, raramente richiede modifiche (solo se cambi
     :::{tip}
     **Come scegliere il valore:**
     1. Considerare la velocità del robot (tempo pick&place per pezzo)
-    (. Considerare il tempo ciclo visione + FlexiBowl
+    (. Considerare il tempo ciclo visione + FlexiBowl®
     3. Formula approssimativa: `Max Count = (Tempo ciclo visione+FB) / (Tempo pick robot)`
 
     **Esempio pratico:**
-    - Ciclo visione+FlexiBowl: 3 secondi
+    - Ciclo visione+FlexiBowl®: 3 secondi
     - Tempo pick robot: 2 secondi/pezzo
     - Max Count ottimale: 3/2 = 1.5 → Arrotondare a 2 oggetti
     :::
@@ -104,7 +104,7 @@ Una volta configurato correttamente, raramente richiede modifiche (solo se cambi
 * - **Comportamento sistema:**
   - 
     - **Oggetti rilevati ≥ Min Count**: coordinata/e inviate a robot
-    - **Oggetti rilevati < Min Count**: coordinate non inviate e esecuzione della sequenza del FlexiBowl
+    - **Oggetti rilevati < Min Count**: coordinate non inviate e esecuzione della sequenza del FlexiBowl®
 
 
 * - **Impatto sulla produttività**

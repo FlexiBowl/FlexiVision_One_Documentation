@@ -112,7 +112,7 @@ L'utilizzo delle Clearances varia al variare del pezzo di cui si deve fare il mo
     - La ROI della Clearance, quando viene configurata, deve essere completamente libera (quindi priva di oggetti, ombre, artefatti)
     - Creare sempre una clearance leggermente più grande dello stretto necessario per evitare falsi errori.
 
-    La mancata osservanza di questi due punti potrebbe comportare collisioni del robot con conseguenti danni a FlexiBowl, componenti o robot stesso. 
+    La mancata osservanza di questi due punti potrebbe comportare collisioni del robot con conseguenti danni a FlexiBowl®, componenti o robot stesso. 
     :::
 ````
 ---
@@ -141,7 +141,7 @@ Se dopo AUTO il riquadro diventa rosso:
 **Possibili cause:**
 - C'è effettivamente qualcosa nell'area (pezzo, ombra, sporcizia)
 - L'illuminazione è variata tra configurazione AUTO e TEST
-- L'area selezionata include bordi del FlexiBowl o artefatti
+- L'area selezionata include bordi del FlexiBowl® o artefatti
 
 **Soluzioni:**
 1. Verificare visivamente che l'area sia completamente libera

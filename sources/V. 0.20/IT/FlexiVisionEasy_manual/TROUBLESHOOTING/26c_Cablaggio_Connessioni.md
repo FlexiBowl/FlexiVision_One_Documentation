@@ -1,6 +1,6 @@
 ﻿# **Cablaggio e Connessioni**
 (troubleshooting_alimentazione)=
-## Problemi di Alimentazione FlexiBowl 
+## Problemi di Alimentazione FlexiBowl® 
 
 ```{list-table}
 :header-rows: 1
@@ -17,14 +17,14 @@
     • Cavo alimentazione danneggiato
     
     • Fusibili all'interno del pannello frontale bruciati 
-  - • Verificare connessione alimentazione secondo manuale FlexiBowl
+  - • Verificare connessione alimentazione secondo manuale FlexiBowl®
     
     • Portare switch in posizione "I" (ON)
     
     • Ispezionare cavo per danni e sostituire se necessario
     
     • Contattare supporto tecnico per sostituzione fusibile
-* - **FlexiBowl si spegne casualmente**
+* - **FlexiBowl® si spegne casualmente**
   - • Connessione alimentazione allentata
     
     • Interferenze elettriche
@@ -44,19 +44,19 @@
 * - Problema
   - Possibili Cause
   - Soluzioni
-* - **FlexiBowl non comunica con VisionController**
-  - • FlexiBowl non acceso (LED READY spento)  
-    • Cavo Ethernet non collegato correttamente al FlexiBowl e/o al VisionController  
+* - **FlexiBowl® non comunica con VisionController**
+  - • FlexiBowl® non acceso (LED READY spento)  
+    • Cavo Ethernet non collegato correttamente al FlexiBowl® e/o al VisionController  
     • Cavo Ethernet danneggiato    
     • Indirizzo IP errato  
-    • FlexiBowl e VisionController su subnet diverse  
+    • FlexiBowl® e VisionController su subnet diverse  
     • Firewall blocca comunicazione  
     • Porta Ethernet VisionController guasta  
-  - • Verificare LED READY acceso sul FlexiBowl  
+  - • Verificare LED READY acceso sul FlexiBowl®  
     • Verificare connessione fisica cavo Ethernet su entrambi i lati  
     • Testare cavo con cable tester o sostituire  
-    • Verificare configurazione IP in [FlexiBowl Setup](../QUICKSTART/SETUP/13a_FB_Setup.md)  
-    • Configurare FlexiBowl e VisionController nella stessa rete (es: 192.168.1.x)  
+    • Verificare configurazione IP in [FlexiBowl® Setup](../QUICKSTART/SETUP/13a_FB_Setup.md)  
+    • Configurare FlexiBowl® e VisionController nella stessa rete (es: 192.168.1.x)  
     • Disabilitare temporaneamente firewall per test  
     • Provare altra porta Ethernet del VisionController  
 * - **Connessione intermittente**  
@@ -89,7 +89,7 @@
     • Perdite nel circuito pneumatico
     
     
-  - • Collegare aria compressa alla connessione FlexiBowl (vedere manuale)  
+  - • Collegare aria compressa alla connessione FlexiBowl® (vedere manuale)  
 
     • Verificare tubo per pieghe/ostruzioni, sostituire se necessario  
     • Aprire regolatore di pressione sul pannello di controllo  
@@ -102,7 +102,7 @@
     
     
 * - **Air-blow non funziona**
-  - • FlexiBowl non predisposto con opzione Air-Blow  
+  - • FlexiBowl® non predisposto con opzione Air-Blow  
 
     • Deviatori ad aria non alimentati esternamente   
 
@@ -112,11 +112,11 @@
   
     
     • Elettrovalvola guasta
-  - • Verificare che il FlexiBowl ordinato abbia la voce Option Blow Test sia True  nel foglio produzione   
+  - • Verificare che il FlexiBowl® ordinato abbia la voce Option Blow Test sia True  nel foglio produzione   
 
     • Verificare che alimentazione Pneumatica esterna sia presente (tubo fornito)     
 
-    • In presenza di più deviatori ad aria, controllare che il regolatore di flusso sul lato del FlexiBowl sia impostato sopra lo zero     
+    • In presenza di più deviatori ad aria, controllare che il regolatore di flusso sul lato del FlexiBowl® sia impostato sopra lo zero     
 
     • Controllare pressione aria (5-6 bar)    
 
@@ -241,12 +241,12 @@
 * - Problema
   - Possibili Cause
   - Soluzioni
-* - **Sistema con 2-3 FlexiBowl: solo uno comunica**
-  - • FlexiBowl spenti  
+* - **Sistema con 2-3 FlexiBowl®: solo uno comunica**
+  - • FlexiBowl® spenti  
     • Indirizzi IP duplicati  
     • Cavi incrociati  
-  - • Controllare che il FlexiBowl sia acceso  
-    • Assegnare IP univoci a ogni FlexiBowl (es: 192.168.1.10, .11, .12)  
+  - • Controllare che il FlexiBowl® sia acceso  
+    • Assegnare IP univoci a ogni FlexiBowl® (es: 192.168.1.10, .11, .12)  
     • Verificare corretto cablaggio stella (no daisy-chain)  
 * - **Sistema con 2-3 camere: solo una acquisisce**  
   - • Alimentazione non sufficiente   

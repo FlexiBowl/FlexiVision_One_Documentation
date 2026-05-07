@@ -25,10 +25,10 @@ FlexiVision One opera in stretta connessione con sistemi robotizzati di terze pa
 
 Durante il funzionamento del sistema, tenere sempre conto di:
 
-- Ingombri fisici del robot e del FlexiBowl
+- Ingombri fisici del robot e del FlexiBowl®
 - Traiettorie e velocità dei movimenti robotici
 - Possibili situazioni impreviste (caduta pezzi, errori di prelievo)
-- Zone di pericolo durante le fasi di vibrazione del FlexiBowl
+- Zone di pericolo durante le fasi di vibrazione del FlexiBowl®
 ```
 
 ### Precauzioni generali prima degli interventi
@@ -38,7 +38,7 @@ Durante il funzionamento del sistema, tenere sempre conto di:
 ```{warning}
 Prima di eseguire qualsiasi intervento di manutenzione, modifica o ispezione sul sistema, assicurarsi sempre che:
 
-- Tutte le fonti di alimentazione elettrica siano disconnesse (VisionController, FlexiBowl, Camera, Illuminatore)
+- Tutte le fonti di alimentazione elettrica siano disconnesse (VisionController, FlexiBowl®, Camera, Illuminatore)
 - L'alimentazione pneumatica sia scaricata e disconnessa (se presente)
 - I cavi di collegamento siano fisicamente scollegati
 - Il robot sia in modalità di sicurezza o completamente spento

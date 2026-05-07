@@ -12,7 +12,7 @@ tipo:
   - **Collegamento**
 
 * - Rete elettrica
-  - FlexiBowl
+  - FlexiBowl®
   - Alimentazione 110/220 Vdc
 
 * - Rete elettrica
@@ -44,7 +44,7 @@ tipo:
   - Ethernet TCP
 
 * - VisionController
-  - FlexiBowl
+  - FlexiBowl®
   - Ethernet TCP
 
 * - VisionController

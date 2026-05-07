@@ -7,7 +7,7 @@
 
 project = "FlexiVision One"
 author = "ARS Automation"
-copyright = "2026, Ars Automation"
+copyright = "2026, ARS Automation"
 release = "1.0"
 
 # -- General configuration ---------------------------------------------------

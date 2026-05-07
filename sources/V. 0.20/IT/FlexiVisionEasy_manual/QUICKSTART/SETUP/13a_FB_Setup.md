@@ -1,7 +1,7 @@
 (fbsetup)=
-# **Passo 5: FlexiBowl Setup**
+# **FlexiBowl® Setup**
 
-Questa sezione descrive la procedura per connettere e configurare il FlexiBowl con il sistema FlexiVision One. 
+Questa sezione descrive la procedura per connettere e configurare il FlexiBowl® con il sistema FlexiVision One. 
 
 ```{note}
 **Prerequisiti**
@@ -13,19 +13,19 @@ Assicurarsi che:
 
 ---
 
-## Accesso alla configurazione FlexiBowl
+## Accesso alla configurazione FlexiBowl®
 ```{list-table}
 * - **1** 
   - Dalla pagina principale del software, cliccare su <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
 * - **2**
-  - Nella pagina SETUP, identificare e cliccare sull'icona **FlexiBowl Setup**
+  - Nella pagina SETUP, identificare e cliccare sull'icona **FlexiBowl® Setup**
     ```{dropdown} Pagina Setup 
        ![Pagina Setup](../../../../../_shared/media/images/pagina_setup1.png)
     ```
 * - **3**
-  - Si apre la schermata di configurazione dei FlexiBowl
+  - Si apre la schermata di configurazione dei FlexiBowl®
 ```
-![Pagina FlexiBowl Setup](../../../../../_shared/media/images/pagina_FBsetup.png)
+![Pagina FlexiBowl® Setup](../../../../../_shared/media/images/pagina_FBsetup.png)
 ---
 
 ## Procedura di connessione
@@ -37,14 +37,14 @@ Assicurarsi che:
   - Verificare che l'indirizzo sia sulla stessa subnet del VisionController
   
 * - **5**
-  - Nel campo **FlexiBowl IP**, inserire l'indirizzo IP del FlexiBowl
+  - Nel campo **FlexiBowl® IP**, inserire l'indirizzo IP del FlexiBowl®
       - Formato: `192.168.1.XXX` (o secondo la configurazione della vostra rete)
 ```
 :::{tip}
-Per comodità e coerenza, partire dal primo FlexiBowl disponibile 
+Per comodità e coerenza, partire dal primo FlexiBowl® disponibile 
 :::
 :::{note}
-Il FlexiBowl viene spedito con indirizzo IP di default `192.168.1.10`
+Il FlexiBowl® viene spedito con indirizzo IP di default `192.168.1.10`
 :::
 
 ### **Step 2: Test di connessione**
@@ -56,7 +56,7 @@ Il FlexiBowl viene spedito con indirizzo IP di default `192.168.1.10`
   - Dopo aver inserito l'IP, cliccare sul pulsante **Connection Test**
 
 * - **7**
-  - Il sistema esegue un test di comunicazione (ping) verso il FlexiBowl
+  - Il sistema esegue un test di comunicazione (ping) verso il FlexiBowl®
 
 * - **8**
   - Osservare l'indicatore di **Status**:
@@ -69,12 +69,12 @@ Il FlexiBowl viene spedito con indirizzo IP di default `192.168.1.10`
 
 Se l'indicatore rimane rosso o appare un messaggio di errore:
 
-0. Verificare di aver acceso il FlexiBowl
+0. Verificare di aver acceso il FlexiBowl®
 1. Verificare che l'indirizzo IP inserito sia corretto
 2. Controllare fisicamente il cavo Ethernet (deve essere inserito completamente)
 3. Se presente,verificare che lo switch/router di rete sia acceso
-4. Assicurarsi che FlexiBowl e VisionController siano sulla stessa subnet
-5. Provare a pingare il FlexiBowl da terminale Windows:
+4. Assicurarsi che FlexiBowl® e VisionController siano sulla stessa subnet
+5. Provare a pingare il FlexiBowl® da terminale Windows:
    - Aprire Prompt dei comandi
    - Digitare: `ping 192.168.1.XXX` (sostituire con IP effettivo)
    - Se il ping fallisce, si tratta di un problema di rete
@@ -84,7 +84,7 @@ Se il problema persiste, consultare [Troubleshooting](troubleshooting).
 
 ---
 
-## Configurazione parametri FlexiBowl
+## Configurazione parametri FlexiBowl®
 
 Una volta stabilita la connessione, procedere con la configurazione dei parametri operativi.
 
@@ -94,11 +94,11 @@ Una volta stabilita la connessione, procedere con la configurazione dei parametr
 * - **9** 
   - Cliccare sul pulsante <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl" >
 * - **10**
-  - Si apre una finestra con i parametri configurabili del FlexiBowl
+  - Si apre una finestra con i parametri configurabili del FlexiBowl®
 ```
 
 
-### **Step 5: Sincronizzazione parametri**
+### **Step 4: Sincronizzazione parametri**
 
 ```{list-table}
 
@@ -112,7 +112,7 @@ Una volta stabilita la connessione, procedere con la configurazione dei parametr
 **Non saltare la sincronizzazione**
 
 È fondamentale cliccare su **Synchronize Parameters** dopo ogni modifica. Senza questo passaggio:
-- Le modifiche non vengono applicate al FlexiBowl 
+- Le modifiche non vengono applicate al FlexiBowl® 
 - Il sistema potrebbe comportarsi in modo incoerente
 - Le impostazioni non vengono salvate 
 ```
@@ -133,21 +133,21 @@ Per avviare la procedura:
   - Recarsi nella sezione <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon"> del software FlexiVision One
 
 * - **2**
-  - Cliccare sul pulsante **FlexiBowl Setup**, si aprirà una pagina con tutti i FlexiBowl gestibili con FlexiVision One
+  - Cliccare sul pulsante **FlexiBowl® Setup**, si aprirà una pagina con tutti i FlexiBowl® gestibili con FlexiVision One
 
-    :::{dropdown} Pagina FlexiBowl Setup  
-    ![Pagina FlexiBowl Setup](../../../../../_shared/media/images/pagina_FBsetup.png)
+    :::{dropdown} Pagina FlexiBowl® Setup  
+    ![Pagina FlexiBowl® Setup](../../../../../_shared/media/images/pagina_FBsetup.png)
     :::
 
 * - **3**
   - Cliccare sul pulsante <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl">, si aprirà una pagina con tutte le movimentazioni disponibili per il FlexiBowl selezionato
 
-    :::{dropdown} Pagina Configurazione FlexiBowl  
-    ![Pagina FlexiBowl Config](../../../../../_shared/media/images/pagina_FBsetup.png)
+    :::{dropdown} Pagina Configurazione FlexiBowl®  
+    ![Pagina FlexiBowl® Config](../../../../../_shared/media/images/pagina_FBsetup.png)
     :::
 
 * - **4**
-  - Cliccare sul pulsante **FlexiBowl X Wizard**, si aprirà una pagina di benvenuto al Wizard
+  - Cliccare sul pulsante **FlexiBFlexiBowl® owl X Wizard**, si aprirà una pagina di benvenuto al Wizard
 
 * - **5**
   - Cliccare su <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon icon-small">
@@ -264,7 +264,7 @@ Utilizzare la funzione **Test Sequence** per verificare che il ciclo rispetti i 
 Cliccare sempre su **Synchronize Parameters** dopo ogni modifica manuale per rendere attive le variazioni nel controller.
 :::
 
-## Panoramica Parametri Flexibowl
+## Panoramica Parametri FlexiBowl®
 ```{list-table}
 :header-rows: 1
 :widths: 5 25 70
@@ -314,7 +314,7 @@ Cliccare sempre su **Synchronize Parameters** dopo ogni modifica manuale per ren
 ```
 ## Prossimi Passi
 
-Una volta completata la configurazione del FlexiBowl, procedere con:
+Una volta completata la configurazione del FlexiBowl®, procedere con:
 
 **→ [Configurazione Hopper](../23_Config_Hopper.md)** - Se presente tramoggia esterna
 
@@ -333,7 +333,7 @@ La configurazione ottimale può richiedere 2-3 sessioni di fine-tuning con il pe
 
 ## Passi successivi
 
-Una volta completato il FlexiBowl Setup, procedere con:
+Una volta completato il FlexiBowl® Setup, procedere con:
 
 - [Passo 5: Hopper Setup](13b_Hopper_Setup.md)
 - [Passo 6: Robot Setup](13c_Robot_Setup.md)

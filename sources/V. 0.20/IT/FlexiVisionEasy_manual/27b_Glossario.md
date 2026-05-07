@@ -21,7 +21,7 @@
 * - **CAPTURE**
   - Comando software per acquisire le immagini di riferimento del disco vuoto e pieno, necessarie al calcolo automatico delle soglie della tramoggia.
 * - **COMPLEX / FLAT / CYLINDRICAL**
-  - Categorie geometriche dei componenti nel FlexiBowl Wizard. *FLAT*: forme piatte (rondelle, guarnizioni). *CYLINDRICAL*: forme cilindriche (perni, viti). *COMPLEX*: geometrie irregolari o asimmetriche.
+  - Categorie geometriche dei componenti nel FlexiBowl® Wizard. *FLAT*: forme piatte (rondelle, guarnizioni). *CYLINDRICAL*: forme cilindriche (perni, viti). *COMPLEX*: geometrie irregolari o asimmetriche.
 * - **Distanza di Lavoro**
   - Distanza ottimale tra lente e superficie del disco. Tipicamente 950–1000mm nelle configurazioni standard.
 * - **Distorsione Ottica**
@@ -30,10 +30,10 @@
   - Tempo di raccolta luce del sensore camera. Misurato in μs o ms; influenza direttamente la qualità dell'immagine in produzione.
 * - **Feature Threshold**
   - Soglia di estrazione delle caratteristiche (bordi, linee) durante il training del modello. Valori tipici: 0.3–0.8.
-* - **FlexiBowl**
+* - **FlexiBowl®**
   - Sistema di alimentazione a disco rotante vibrante per il posizionamento e orientamento casuale dei componenti ai fini del prelievo robotico.
-* - **FlexiBowl Wizard**
-  - Procedura guidata per il calcolo automatico dei parametri ottimali del FlexiBowl in base alla geometria e al comportamento dei componenti.
+* - **FlexiBowl® Wizard**
+  - Procedura guidata per il calcolo automatico dei parametri ottimali del FlexiBowl® in base alla geometria e al comportamento dei componenti.
 * - **Flip**
   - Impulso pneumatico sotto il disco per riposizionare i componenti. Configurabile tramite *Flip Count* (numero di impulsi) e *Flip Delay* (intervallo in ms tra impulsi).
 * - **Grab Train Image**
@@ -55,7 +55,7 @@
 * - **Protocol (Protocollo)**
   - Formato di comunicazione tra VisionController e robot. Definisce struttura dei messaggi, ordine delle coordinate e unità di misura.
 * - **Recipe (Ricetta)**
-  - File XML contenente tutti i parametri di configurazione del sistema: modelli, soglie, calibrazioni, setup FlexiBowl e robot.
+  - File XML contenente tutti i parametri di configurazione del sistema: modelli, soglie, calibrazioni, setup FlexiBowl® e robot.
 * - **Region Search**
   - Area rettangolare nell'immagine entro cui il pattern matching esegue la ricerca. Riduce i tempi di elaborazione e aumenta la precisione.
 * - **ROI (Region of Interest)**
@@ -69,9 +69,9 @@
 * - **Steps**
   - Numero di cicli di vibrazione della tramoggia necessari affinché i componenti raggiungano l'area di prelievo. Parametro critico per la sincronizzazione con il ciclo robot.
 * - **Subnet**
-  - FlexiBowl e VisionController devono condividere la stessa subnet (es. 192.168.1.x) per la comunicazione TCP/IP.
+  - FlexiBowl® e VisionController devono condividere la stessa subnet (es. 192.168.1.x) per la comunicazione TCP/IP.
 * - **Synchronize Parameters**
-  - Comando software che trasferisce i parametri dal VisionController al FlexiBowl. Obbligatorio dopo ogni modifica per rendere effettive le impostazioni.
+  - Comando software che trasferisce i parametri dal VisionController al FlexiBowl®. Obbligatorio dopo ogni modifica per rendere effettive le impostazioni.
 * - **Target di Calibrazione**
   - Pattern geometrico stampato (cerchi o scacchiera) con dimensioni note e superficie piana, usato per la calibrazione camera.
 * - **Timeout**
@@ -87,6 +87,6 @@
 * - **Vision Result**
   - Output del sistema di visione: coordinate (X, Y, RZ) e score del componente rilevato, trasmesso al robot per il prelievo.
 * - **VisionController**
-  - Computer industriale che esegue FlexiVision One, gestisce le camere, elabora le immagini e comunica con FlexiBowl e robot.
+  - Computer industriale che esegue FlexiVision One, gestisce le camere, elabora le immagini e comunica con FlexiBowl® e robot.
 ```
 

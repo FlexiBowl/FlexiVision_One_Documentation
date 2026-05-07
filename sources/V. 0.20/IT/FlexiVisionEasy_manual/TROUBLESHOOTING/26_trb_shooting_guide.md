@@ -59,7 +59,7 @@ Seleziona il componente per cui hai bisogno di supporto.
 
 ## **Configurazione Iniziale**
 
-:::{card} FlexiBowl Setup
+:::{card} FlexiBowl® Setup
 :link: troubleshooting_fb_setup
 :link-type: ref
 :::
@@ -113,7 +113,7 @@ Seleziona il componente per cui hai bisogno di supporto.
 
 ## **Avanzate e Monitoraggio**
 
-:::{card} FlexiBowl Wizard
+:::{card} FlexiBowl® Wizard
 :link: troubleshooting_fb_wizard
 :link-type: ref
 :::
@@ -130,7 +130,6 @@ Seleziona il componente per cui hai bisogno di supporto.
 26b_Installazione_Mecc.md
 26c_Cablaggio_Connessioni.md
 26d_Conf_Iniziale.md
-26e_Calib_Cam.md
 26g_Creazione_Ricette_Modelli.md
 26h_FlexiBowl_Wizard.md
 26i_Conf_Tramoggia.md

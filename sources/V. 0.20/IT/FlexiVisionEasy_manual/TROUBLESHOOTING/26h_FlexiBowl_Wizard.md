@@ -11,12 +11,12 @@
 * - **Wizard non si avvia**
   - • Ricetta non caricata
     
-    • FlexiBowl non connesso
+    • FlexiBowl® non connesso
     
     • Setup iniziale non completato
   - • Caricare o creare ricetta prima
     
-    • Verificare connessione FlexiBowl
+    • Verificare connessione FlexiBowl®
     
     • Completare configurazione base sistema
 
@@ -37,7 +37,7 @@
     
     • Aumentare pressione a 5-6 bar
     
-    • Selezionare "FlexiBowl NOT equipped" se modulo assente
+    • Selezionare "FlexiBowl® NOT equipped" se modulo assente
 * - **Test Flip non avvertibile**
   - • Aria compressa non collegata/insufficiente
     
@@ -88,14 +88,14 @@
     
     • Salvare ricetta per rendere permanenti le modifiche
 * - **Turn FLB non funziona durante setup**
-  - • FlexiBowl non connesso
+  - • FlexiBowl® non connesso
     
     • Comando non configurato
     
-    • FlexiBowl in errore
-  - • Verificare connessione FlexiBowl
+    • FlexiBowl® in errore
+  - • Verificare connessione FlexiBowl®
     
-    • Controllare configurazione FlexiBowl Setup
+    • Controllare configurazione FlexiBowl® Setup
     
-    • Verificare LED READY FlexiBowl
+    • Verificare LED READY FlexiBowl®
 ```

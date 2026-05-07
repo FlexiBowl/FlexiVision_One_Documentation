@@ -63,7 +63,7 @@
   - Possibili Cause
   - Soluzioni
 * - **Immagine non a fuoco**
-  - • Distanza di lavoro non corretta per il modello di FlexiBowl
+  - • Distanza di lavoro non corretta per il modello di FlexiBowl®
     
     • Lente non avvitata completamente
     
@@ -72,7 +72,7 @@
     • Avvitare completamente la lente rcontatto metal-metal)
     
 * - **Immagine distorta o con prospettiva errata**
-  - • Camera non centrata sull'area di visione del FlexiBowl rerrore > ±5mm)
+  - • Camera non centrata sull'area di visione del FlexiBowl® rerrore > ±5mm)
     
     • Camera inclinata rispetto alla superficie rtilt > ±1°)
     
@@ -96,7 +96,7 @@
 * - **Illuminazione non uniforme con ombre evidenti**
   - • Distanza toplight dalla superficie non corretta
     
-    • Toplight non parallelo al disco FlexiBowl
+    • Toplight non parallelo al disco FlexiBowl®
     
     • Angolo di illuminazione non perpendicolare rtilt ≠ 0°)
   - • Posizionare toplight a distanza simile a quella della camera

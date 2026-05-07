@@ -31,8 +31,8 @@ L'interfaccia della Dashboard si divide in quattro sezioni principali:
     **Rosso** 🔴: Sistema arrestato o in pausa.
 * - **In Run Time**
   - Visualizza il tempo totale di attività del sistema dall'avvio dell'applicazione. 
-* - **Selezione FlexiBowl**
-  - Menu a tendina per selezionare il FlexiBowl specifico da monitorare. 
+* - **Selezione FlexiBowl®**
+  - Menu a tendina per selezionare il FlexiBowl® specifico da monitorare. 
 * - **Test Locator**
   - Scatta una foto dell'area di visione e avvia il riconoscimento dei componenti presenti. 
 ```
@@ -125,8 +125,8 @@ Indicatori di stato delle comunicazioni con i dispositivi esterni:
 
 * - Indicatore
   - Descrizione
-* - **FlexiBowl**
-  - Stato della connessione hardware tra il VisionController (PC) e FlexiBowl.  
+* - **FlexiBowl®**
+  - Stato della connessione hardware tra il VisionController (PC) e FlexiBowl®.  
     **Verde**: Connesso e comunicante.  
     **Rosso**: Disconnesso o errore comunicazione.
 * - **Robot**
@@ -138,10 +138,10 @@ Indicatori di stato delle comunicazioni con i dispositivi esterni:
 ```{warning}
 **Azioni in caso di disconnessione**
 
-**FlexiBowl rosso**:
-- Verificare cavo Ethernet FlexiBowl → VisionController
-- Controllare alimentazione FlexiBowl
-- Verificare IP FlexiBowl in FlexiBowl Setup
+**FlexiBowl® rosso**:
+- Verificare cavo Ethernet FlexiBowl® → VisionController
+- Controllare alimentazione FlexiBowl®
+- Verificare IP FlexiBowl® in FlexiBowl® Setup
 - Tentare reconnect o riavvio software
 
 **Robot rosso**:
@@ -169,12 +169,12 @@ Il sistema fornisce un breakdown dettagliato dei tempi di ciclo per individuare 
   - Tempo necessario all'algoritmo di visione per localizzare e riconoscere i componenti nell'immagine acquisita. Dipende da: numero modelli attivi, complessità modelli, numero clearances. 
 * - **Total Vision Processing**
   - Somma dei tempi di Camera e Locator. Rappresenta il tempo totale che il sistema di visione impiega per elaborare un'immagine e inviare la/le coordinate.       
-* - **Total FlexiBowl Time**
-  - Tempo impiegato dal FlexiBowl per eseguire una sequenza di movimentazione completa. 
+* - **Total FlexiBowl® Time**
+  - Tempo impiegato dal FlexiBowl® per eseguire una sequenza di movimentazione completa. 
 * - **Total Robot Time**
   - Tempo stimato o rilevato per l'operazione di Pick & Place completa del robot. Include: avvicinamento → presa → sollevamento → deposito → ritorno. 
 * - **Total Processing Time**
-  - Tempo totale del ciclo completo (Visione + FlexiBowl + Robot). Rappresenta il tempo dall'inizio di un ciclo all'inizio del successivo. Determina la produttività massima teorica (PPM).
+  - Tempo totale del ciclo completo (Visione + FlexiBowl® + Robot). Rappresenta il tempo dall'inizio di un ciclo all'inizio del successivo. Determina la produttività massima teorica (PPM).
 ```
 
 ```{tip}
@@ -188,9 +188,9 @@ Il grafico dei tempi permette di identificare il **collo di bottiglia** del sist
 - Troppi Clearances → Ridurre numero o dimensione clearances
 - Camera Processing alto → Ridurre tempo esposizione
 
-**Se Total FlexiBowl Time è il maggiore**:
+**Se Total FlexiBowl® Time è il maggiore**:
 - Troppe pause → Ottimizzare sincronizzazione Flip/Move e ridurre la pausa di stabilizzazione (Pause X ms)
-- Sequenza movimentazione troppo lenta → Aumentare velocità in Config FlexiBowl
+- Sequenza movimentazione troppo lenta → Aumentare velocità in Config FlexiBowl®
 - Angolo rotazione eccessivo → Ridurre Move Angle
 - Shake troppo lungo → Aumentare velocità SHAKE e ridurre cicli SHAKE  
 
@@ -240,7 +240,7 @@ I grafici nella parte inferiore della dashboard permettono un'analisi predittiva
 
     * - **PPM in diminuzione progressiva**:
       - 
-        - ⚠️ Possibile usura componenti (superficie grip FlexiBowl)
+        - ⚠️ Possibile usura componenti (superficie grip FlexiBowl®)
         - ⚠️ Hopper che si svuota (se presente, meno pressione = scarico più lento)
         - ⚠️ Accumulo sporcizia su camera/illuminazione
 
@@ -253,7 +253,7 @@ I grafici nella parte inferiore della dashboard permettono un'analisi predittiva
     * - **Azioni correttive**:
       - 
         - Analizzare correlazione con grafici tempi
-        - Identificare quale componente (Vision/FlexiBowl/Robot) causa variazioni
+        - Identificare quale componente (Vision/FlexiBowl®/Robot) causa variazioni
         - Intervenire su parametri specifici
   :::
 ```
@@ -307,7 +307,7 @@ I grafici nella parte inferiore della dashboard permettono un'analisi predittiva
   :::
 ```
 
-### 3. Vision - FlexiBowl - Robot (Grafico Comparativo)
+### 3. Vision - FlexiBowl® - Robot (Grafico Comparativo)
 
 ```{list-table} 
 * - **Grafico tempi sovrapposti**
@@ -335,11 +335,11 @@ I grafici nella parte inferiore della dashboard permettono un'analisi predittiva
     - ⚠️ Pezzi reali diversi da quello di training (variazioni produzione)
     - ⚠️ Illuminazione cambiata (backlight più debole, sporcizia)
     - ⚠️ Camera non più a fuoco (vibrazioni, urti)
-    - ⚠️ Superficie FlexiBowl sporca (pattern interferente)
+    - ⚠️ Superficie FlexiBowl® sporca (pattern interferente)
 
 * - **Azioni correttive**:
   - 
-    - Pulire camera, illuminazione, superficie FlexiBowl
+    - Pulire camera, illuminazione, superficie FlexiBowl®
     - Verificare messa a fuoco camera
     - Considerare re-training modello se pezzi sono cambiati
     - Ridurre Accept Threshold se score sono comunque affidabili ma più bassi
@@ -353,7 +353,7 @@ I grafici nella parte inferiore della dashboard permettono un'analisi predittiva
 ```{list-table}
 * - **All'avvio produzione** (5 minuti):
   - 
-    - Verificare indicatori connettività FlexiBowl e Robot (verdi)
+    - Verificare indicatori connettività FlexiBowl® e Robot (verdi)
     - Controllare che primi cicli mostrino score normali (>0.85)
     - Osservare che PPM si stabilizzi su valore atteso
 
@@ -412,10 +412,10 @@ Questi dati permettono ottimizzazione continua e giustificano investimenti in mi
 Congratulazioni! Il sistema FlexiVision One è ora completamente configurato, ottimizzato e validato per la produzione.
 
 **Riepilogo percorso completato:**
-- ✓ Setup hardware (FlexiBowl, Robot, Camera)
+- ✓ Setup hardware (FlexiBowl®, Robot, Camera)
 - ✓ Calibrazione completa (Camera, Robot)
 - ✓ Modelli pezzo creati e ottimizzati
-- ✓ FlexiBowl configurato per movimentazione ottimale
+- ✓ FlexiBowl® configurato per movimentazione ottimale
 - ✓ Hopper configurato per alimentazione automatica (se presente)
 - ✓ Sistema validato con monitoraggio Dashboard
 - ✓ Performance verificate e stabili

@@ -1,7 +1,7 @@
 (hoppersetup)=
-# **Passo 6: Hopper Setup**
+# **Hopper Setup**
 
-Questa sezione descrive la procedura per configurare la tramoggia (Hopper). L'Hopper è il componente che alimenta automaticamente pezzi sul FlexiBowl quando il livello scende sotto una soglia minima.
+Questa sezione descrive la procedura per configurare la tramoggia (Hopper). L'Hopper è il componente che alimenta automaticamente pezzi sul FlexiBowl® quando il livello scende sotto una soglia minima.
 
 ```{note}
 **Prerequisiti**
@@ -9,7 +9,7 @@ Questa sezione descrive la procedura per configurare la tramoggia (Hopper). L'Ho
 Prima di procedere, assicurarsi che:
 - L'Hopper sia stata installata meccanicamente 
 - I collegamenti elettrici siano stati completati (segnali di controllo e alimentazione)
-- Il FlexiBowl sia già connesso
+- Il FlexiBowl® sia già connesso
 ```
 ---
 
@@ -184,7 +184,7 @@ Tornare alla schermata principale di Hopper Setup per definire il comportamento 
 * - **Parametro**
   - **Descrizione e Procedura**
 * - **Steps**
-  - Numero di avanzamenti del FlexiBowl (sequenze) necessari per portare i pezzi dall'area di visione all'area di scarico della tramoggia.
+  - Numero di avanzamenti del FlexiBowl® (sequenze) necessari per portare i pezzi dall'area di visione all'area di scarico della tramoggia.
 
     :::{note}
     **Come calcolarlo:**
@@ -192,11 +192,11 @@ Tornare alla schermata principale di Hopper Setup per definire il comportamento 
     :::::{list-table}
 
     * - 1.
-      - Svuotare completamente il disco FlexiBowl
+      - Svuotare completamente il disco FlexiBowl®
     * - 2.
       - Lasciare un componente al centro dell'area di visione
     * - 3.
-      - Eseguire sequenze FlexiBowl fino a che il componente non arriva all'area di scarico della tramoggia e contare quanti avanzamenti sono stati necessari 
+      - Eseguire sequenze FlexiBowl® fino a che il componente non arriva all'area di scarico della tramoggia e contare quanti avanzamenti sono stati necessari 
     * - 4.
       - Il risultato del conteggio è il valore da inserire in **Steps**
     :::::
@@ -320,12 +320,12 @@ Senza salvataggio, tutte le configurazioni Hopper verranno perse alla chiusura d
 
 **Cause possibili:**
 - Steps troppo pochi (pezzi non hanno tempo di arrivare)
-- Sequenze FlexiBowl non efficaci
+- Sequenze FlexiBowl® non efficaci
 - Ostruzione percorso scarico
 
 **Soluzioni:**
 1. Aumentare Steps di 1-2 unità
-2. Verificare parametri Config FlexiBowl (velocità, angolo)
+2. Verificare parametri Config FlexiBowl® (velocità, angolo)
 3. Ispezionare fisicamente percorso scarico Hopper → Disco
 ```
 

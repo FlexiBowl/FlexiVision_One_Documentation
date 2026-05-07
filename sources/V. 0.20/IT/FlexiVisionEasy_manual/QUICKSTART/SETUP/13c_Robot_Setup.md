@@ -1,5 +1,5 @@
 (robotsetup)=
-# **Passo 7: Robot Setup** 
+# **Robot Setup** 
 
 Questa sezione descrive la procedura per configurare la comunicazione TCP/IP tra il sistema FlexiVision One e il robot industriale. Una comunicazione corretta è essenziale per permettere lo scambio di coordinate e comandi tra i due sistemi.
 

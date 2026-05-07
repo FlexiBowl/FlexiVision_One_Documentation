@@ -84,7 +84,7 @@ Se il salvataggio della ricetta fallisce:
     
     • Accendere toplight e verificare alimentazione
 
-    • Controllare che light on in Configurazione FlexiBowl sia spuntato
+    • Controllare che light on in Configurazione FlexiBowl® sia spuntato
     
     • Aumentare esposizione camera
     
@@ -259,7 +259,7 @@ Se il salvataggio della ricetta fallisce:
     
     • Ombra o riflesso nell'area
     
-    • Bordo FlexiBowl incluso nell'area
+    • Bordo FlexiBowl® incluso nell'area
     
     • Sporcizia sulla superficie
   - • Ripetere AUTO con area completamente libera
@@ -268,7 +268,7 @@ Se il salvataggio della ricetta fallisce:
     
     • Ridurre area escludendo bordi
     
-    • Pulire superficie FlexiBowl
+    • Pulire superficie FlexiBowl®
 * - **Test sempre VERDE anche con area occupata**
   - • Calibrazione AUTO eseguita con componenti già presenti
     

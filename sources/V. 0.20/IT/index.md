@@ -5,7 +5,7 @@ Siamo entusiasti di darvi il benvenuto alla vostra nuova guida di FlexiVision On
 Questo manuale è stato creato appositamente per essere il vostro punto di riferimento chiaro e affidabile. Ci auguriamo che, consultandolo, possiate godere appieno di tutti i benefici del nostro sistema.
 Il vostro parere è fondamentale per noi: non esitate a fornirci il vostro feedback [contattandoci](https://www.flexibowl.it/contatti)! 
 
-*- Il Team di Ars Automation*    
+*- Il Team di ARS Automation*    
 <a href="https://www.arsautomation.com" target="_blank">
   <img src="../../_shared/static/logo_fv.png" alt="Ars logo" class="only-light img-logo">
   <img src="../../_shared/static/logo_fv_black.png" alt="Ars logo" class="only-dark img-logo">
@@ -73,12 +73,12 @@ La corretta implementazione di FlexiVision One richiede la collaborazione di div
   - Quickstart, Protocol Setup, Calibrazione
 
 * - **Operatore di linea**
-  - Creazione nuovi modelli pezzo, configurazione parametri FlexiBowl, monitoraggio prestazioni
+  - Creazione nuovi modelli pezzo, configurazione parametri FlexiBowl®, monitoraggio prestazioni
   - Verifica risultati Run Time
 
 * - **Manutentore**
   - Diagnosi problemi, sostituzione componenti, aggiornamenti software
-  - Nuovo modello, Configurazione FlexiBowl, Troubleshooting, Support
+  - Nuovo modello, Configurazione FlexiBowl®, Troubleshooting, Support
 ```
 
 ## **Convenzioni e simboli utilizzati**
@@ -191,12 +191,35 @@ FlexiVisionEasy_manual/INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.md
   
 ```{toctree}
 :hidden:
-:caption: QUICKSTART
+:caption: PANORAMICA DELL'INTERFACCIA
 
-FlexiVisionEasy_manual/QUICKSTART/12_Panoramica_Interfaccia.md
-```     
+FlexiVisionEasy_manual/PANORAMICA_INTERFACCIA/12a_Home.md
+```  
 ```{toctree}
 :hidden:
+
+FlexiVisionEasy_manual/PANORAMICA_INTERFACCIA/12c_Dashboard.md
+```    
+```{toctree}
+:hidden:
+
+FlexiVisionEasy_manual/PANORAMICA_INTERFACCIA/12b_Recipes.md
+```    
+```{toctree}
+:hidden:
+
+FlexiVisionEasy_manual/PANORAMICA_INTERFACCIA/12d_Setup.md
+```    
+
+```{toctree}
+:hidden:
+
+FlexiVisionEasy_manual/PANORAMICA_INTERFACCIA/12e_TastiInfo.md
+```    
+
+```{toctree}
+:hidden:
+:caption: QUICKSTART
 FlexiVisionEasy_manual/QUICKSTART/SETUP/13_setup.md
 ``` 
 
@@ -210,6 +233,13 @@ FlexiVisionEasy_manual/QUICKSTART/Nuovo_Modello/16_Nuovo_modello.md
 :hidden:
 FlexiVisionEasy_manual/QUICKSTART/24_Verifica_Risultati.md
 ```
+
+```{toctree}
+:hidden:
+:caption: EXPERT
+
+FlexiVisionEasy_manual/EXPERT/32_Expert.md
+```  
 
 ```{toctree}
 :hidden:

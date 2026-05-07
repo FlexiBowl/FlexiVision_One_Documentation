@@ -24,7 +24,7 @@ Questa configurazione supporta tre varianti operative, in base al numero di robo
 | **Robot** | 1 | 2 | 3 |
 | **FlexiBowl®** | 3 | 3 | 3 |
 | **Camere** | 3 | 3 | 3 |
-| **Logica operativa** | Il robot raggiunge tutte e tre le stazioni | Primo robot su un FlexiBowl, secondo robot su due FlexiBowl | Ogni robot è dedicato a una stazione |
+| **Logica operativa** | Il robot raggiunge tutte e tre le stazioni | Primo robot su un FlexiBowl®, secondo robot su due FlexiBowl® | Ogni robot è dedicato a una stazione |
 | **Switch richiesto** | Sì | Sì | Sì |
 ---
 
@@ -63,7 +63,7 @@ Un'associazione errata in fase di setup si ripercuoterebbe su tutte le ricette d
 
 ![Panoramica Sistema 3FB3CAM2Robot](../../../../_shared/media/images/3FB3CAM2R.png)
 
-In questa variante **due robot** si suddividono le tre stazioni. Il primo robot farà il picking su un solo FlexiBowl, il secondo sugli altri due FlexiBowl. La distribuzione del carico tra i robot è definita dalla logica del programma robot e dalla disposizione fisica dell'impianto. 
+In questa variante **due robot** si suddividono le tre stazioni. Il primo robot farà il picking su un solo FlexiBowl®, il secondo sugli altri due FlexiBowl®. La distribuzione del carico tra i robot è definita dalla logica del programma robot e dalla disposizione fisica dell'impianto. 
 
 Ogni stazione supporta applicazioni di tipo **Standard** o **Mix**.
 

@@ -26,7 +26,7 @@ Prima di iniziare, è importante comprendere la differenza tra **Ricetta** e **M
      - Cos'è un Modello?
    * - Il contenitore globale dell'intera applicazione di picking.
      - La definizione specifica di un singolo componente da riconoscere.
-   * - Include fino a 8 modelli, parametri FlexiBowl, Hopper e logiche di comunicazione.
+   * - Include fino a 8 modelli, parametri FlexiBowl®, Hopper e logiche di comunicazione.
      - Include immagini di training, ROI, feature visive, filtri e offset robot.
    * - Gestisce parametri hardware (vibrazioni, velocità) e rete (porta TCP/IP, timeout).
      - Gestisce parametri di visione (threshold, score minimo) e coordinate di prelievo (gripper).
@@ -65,7 +65,7 @@ Schema completo del processo di creazione ricetta e modelli
   - Descrizione
 * - **1**
   - Creazione Ricetta
-  - Definizione della ricetta applicativa con nome, tipo e FlexiBowl utilizzato
+  - Definizione della ricetta applicativa con nome, tipo e FlexiBowl® utilizzato
 * - **2**
   - Preparazione Fisica
   - Posizionamento del pezzo di riferimento nell'area di visione
@@ -122,7 +122,7 @@ Prima di iniziare la creazione di modelli, preparare:
 -  Pezzi puliti e in buone condizioni (rappresentativi della produzione)
 -  Simulatori ingombro pinza (NON devono essere pezzi dello stesso tipo, poichè è importante non confonderli con il pezzo di riferimento.)
 -  Foglio per annotare coordinate robot (X, Y, RZ)
--  FlexiBowl vuoto e pulito
+-  FlexiBowl® vuoto e pulito
 -  Backlight/Toplight acceso
 ```
 
@@ -132,7 +132,7 @@ Prima di iniziare la creazione di modelli, preparare:
 **Condizioni ideali per training**
 
 - Illuminazione stabile (evitare luce solare diretta variabile)
-- FlexiBowl fermo 
+- FlexiBowl® fermo 
 - Robot in posizione sicura (non deve interferire durante le acquisizioni)
 - Software FlexiVision One aperto e ricetta base caricata
 ```

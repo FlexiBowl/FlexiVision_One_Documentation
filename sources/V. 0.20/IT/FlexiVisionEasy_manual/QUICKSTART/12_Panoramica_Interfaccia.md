@@ -1,39 +1,4 @@
-(quickstart)=
-# **Panoramica dell'interfaccia**
-L’interfaccia di FlexiVision One è strutturata in sezioni funzionali che guidano l’utente dalla configurazione iniziale alla gestione operativa del sistema.
-Ogni pagina fornisce informazioni in tempo reale su stato macchina, connessioni, prestazioni e parametri di processo, con accesso diretto alle funzioni principali.
-La navigazione è progettata per garantire semplicità d’uso, controllo immediato delle operazioni e monitoraggio continuo delle performance di visione, alimentazione e robot.
-## Pagina Home  
-<img src="../../../../_shared/media/images/pagina_homeW.png" class="only-light" style="width: 95%; display: block; margin: 0 auto;">
-<img src="../../../../_shared/media/images/pagina_homeB.png" class="only-dark" style="width: 95%; display: block; margin: 0 auto;">
 
-```{list-table} Descrizione Pagina Home
-:header-rows: 1
-:widths: 10 90
-
-* - **#**
-  - **Descrizione**
-
-* - 1
-  - **Informazioni di Stato e Utente**:
-    * **Current selected recipe**: visualizza il nome della ricetta attualmente caricata e pronta all'uso.
-    * **Current user name**: mostra il nome dell'utente loggato e il suo livello di accesso al sistema.
-    * **In run**: indica lo stato operativo; segnala se il sistema è attualmente in funzione o in stato di stop.
-
-* - 2
-  - **Informazioni Software e Assistenza**:
-    * **Version software**: indica la versione del software FlexiVision One attualmente installata.
-    * **Contact us**: pulsante che permette di accedere rapidamente alle informazioni di contatto per il supporto tecnico e l'assistenza.
-
-* - 3
-  - **Risorse e Guide Rapide**:
-    * **Documentation**: pulsante che rimanda alla libreria completa della documentazione tecnica e dei manuali.
-    * **QuickStart**: sezione dedicata alla procedura guidata per una configurazione veloce e intuitiva del sistema.
-
-* - 4
-  - **Sezione Informativa Generale**:
-    * **What is FlexiVision One?**: area descrittiva che fornisce una panoramica sulle funzionalità principali del sistema e sulla sua integrazione con il dispositivo FlexiBowl®.
-```
 
 ## Pagina DashBoard 
 <img src="../../../../_shared/media/images/pagina_dashboardW.png" class="only-light" style="width: 20%; height: auto;">
@@ -58,22 +23,22 @@ La navigazione è progettata per garantire semplicità d’uso, controllo immedi
 
 * - 3
   - **Controlli e Selezione**
-    * **Menù tendina FlexiBowl**: permette di selezionare il dispositivo FlexiBowl® su cui si intende operare.
-    * **Test Locator**: avvia movimentazioni cicliche di FlexiBowl e tramoggia finché ci sono componenti nell'area di visione.
+    * **Menù tendina FlexiBowl®**: permette di selezionare il dispositivo FlexiBowl® su cui si intende operare.
+    * **Test Locator**: avvia movimentazioni cicliche di FlexiBowl® e tramoggia finché ci sono componenti nell'area di visione.
 
 * - 4
   - **Stato Connessioni**
-    * **FlexiBowl**: indica lo stato della connessione in tempo reale con il FlexiBowl.
+    * **FlexiBowl®**: indica lo stato della connessione in tempo reale con il FlexiBowl®.
     * **Robot**: indica lo stato della connessione in tempo reale con il robot.
 
 * - 5
   - **Analisi Tempi di Ciclo (Timings)**
     * **Camera/Locator processing time**: tempi singoli di scatto immagine e riconoscimento componenti.
     * **Total vision processing Time**: somma dei tempi di camera e locator.
-    * **Total FlexiBowl / Robot time**: tempo per una sequenza di movimento FB e per un singolo pick & place del robot.
+    * **Total FlexiBowl® / Robot time**: tempo per una sequenza di movimento FB e per un singolo pick & place del robot.
     * **Total processing time**: tempo totale del processo (Visione + FB + Robot).
-    * **Fill hopper**: storico degli scarichi effettuati dalla tramoggia sul disco del FlexiBowl.
-    * **Vision - FlexiBowl - Robot**: grafico comparativo delle tre funzioni per capire l'impatto di ogni singolo processo sul tempo totale.
+    * **Fill hopper**: storico degli scarichi effettuati dalla tramoggia sul disco del FlexiBowl®.
+    * **Vision - FlexiBowl® - Robot**: grafico comparativo delle tre funzioni per capire l'impatto di ogni singolo processo sul tempo totale.
 * - 6
   - **Grafici di Performance e Storico**
     * **Elenco modelli rilevati**: tabella con coordinate (**X**, **Y**), rotazione (**Rot**) del componente e lo **Score** (grado di similarità dell'oggetto riconosciuto rispetto al modello di riferimento).
@@ -100,7 +65,7 @@ La navigazione è progettata per garantire semplicità d’uso, controllo immedi
 
 * - 2
   - **Creazione e Salvataggio**
-    * **New recipe**: avvia la creazione di una nuova ricetta. Dopo aver scelto il nome e il FlexiBowl con cui stiamo lavorando, si apre direttamente il menù di creazione modello. 
+    * **New recipe**: avvia la creazione di una nuova ricetta. Dopo aver scelto il nome e il FlexiBowl® con cui stiamo lavorando, si apre direttamente il menù di creazione modello. 
       :::{note}
         La ricetta deve poi essere salvata cliccando su Save. 
       :::
@@ -137,7 +102,7 @@ La navigazione è progettata per garantire semplicità d’uso, controllo immedi
 * - 3
   - **Camera setup**: sezione dedicata alla configurazione dei parametri delle telecamere.
 * - 4
-  - **Flexibowl setup**: area per impostare i parametri di movimento e controllo del FlexiBowl.
+  - **FlexiBowl® setup**: area per impostare i parametri di movimento e controllo del FlexiBowl®.
      
 * - 5
   - **Hopper setup**: configurazione dei parametri della tramoggia (vibrazione e scarico).

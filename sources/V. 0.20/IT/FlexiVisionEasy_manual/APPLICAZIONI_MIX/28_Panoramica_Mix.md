@@ -8,6 +8,10 @@ Questa sezione introduce il concetto di **Applicazione Mix** in FlexiVision One,
 Un'**Applicazione Mix** è una configurazione applicativa in cui all'interno della stessa ricetta coesistono modelli relativi a **componenti completamente diversi tra loro**.
 
 In un'applicazione Mix, il robot è in grado di riconoscere e prelevare **più tipologie di pezzi differenti** presenti contemporaneamente nell'area di lavoro, senza dover cambiare ricetta o interrompere il ciclo. La visione identifica ogni pezzo presente sul FlexiBowl® e restituisce al robot le coordinate del pezzo prelevabile più idoneo, indipendentemente dalla sua tipologia.
+
+![Applicazione Mix](../../../../_shared/media/videos/video_applicazionemix.gif)  
+*Esempio di Applicazione Mix*
+
 ```{tip}
 **Esempio tipico:** sul FlexiBowl® possono trovarsi contemporaneamente viti, dadi e rondelle. Il robot preleva qualsiasi pezzo riconosciuto, ottimizzando il throughput senza interruzioni.
 ```

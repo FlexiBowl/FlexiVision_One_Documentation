@@ -1,18 +1,18 @@
 (Installazione_Meccanica)=
 # **Installazione Meccanica del Sistema**
 
-Questa sezione descrive i requisiti di montaggio e posizionamento dei componenti chiave del sistema di visione FlexiVision One.     L'installazione deve essere eseguita solo dopo aver completato l'installazione meccanica di base del FlexiBowl e dell'eventuale tramoggia.
+Questa sezione descrive i requisiti di montaggio e posizionamento dei componenti chiave del sistema di visione FlexiVision One.     L'installazione deve essere eseguita solo dopo aver completato l'installazione meccanica di base del FlexiBowl® e dell'eventuale tramoggia.
 
 ```{warning}
 **Prerequisiti obbligatori**
 
 Prima di procedere con l'installazione dei componenti di visione, assicurarsi che:
 
-- Il FlexiBowl sia stato montato e fissato alla struttura portante (cellula robotica)
+- Il FlexiBowl® sia stato montato e fissato alla struttura portante (cellula robotica)
 - La tramoggia (Hopper) sia stata installata correttamente
 - La struttura di supporto per camera e illuminatore sia stata preparata
 
-Per l'installazione del FlexiBowl, consultare il Manuale Dedicato fornito.
+Per l'installazione del FlexiBowl®, consultare il Manuale Dedicato fornito.
 ```
 
 ```{note}
@@ -132,7 +132,7 @@ Il posizionamento preciso e l'allineamento della telecamera sono passaggi critic
 
 ### Distanza di lavoro ottimale
 
-La telecamera deve essere montata in modo che la faccia frontale della lente sia posizionata a una distanza specifica (Working Distance) dalla superficie di lavoro del FlexiBowl.  
+La telecamera deve essere montata in modo che la faccia frontale della lente sia posizionata a una distanza specifica (Working Distance) dalla superficie di lavoro del FlexiBowl®.  
 Per il calcolo dettagliato della distanza ottimale per la vostra applicazione, consultare la sezione dedicata: [Calcolo Distanza Ottimale](distanza_lavoro)
 
 ```{image} ../../../../_shared/media/images/working_distance.JPG
@@ -145,7 +145,7 @@ Per il calcolo dettagliato della distanza ottimale per la vostra applicazione, c
 :header-rows: 1
 :widths: 25 40 35
 
-* - Modello FlexiBowl
+* - Modello FlexiBowl®
   - Distanza di Lavoro Raccomandata (Working Distance)
   - Lente Inclusa nel Kit (Lunghezza Focale)
 * - **FB 200**
@@ -184,7 +184,7 @@ Il corretto allineamento della camera è fondamentale per ottenere immagini di q
 :width: 60%
 :align: center
 ```
-**Configurazione corretta.** La camera deve essere posizionata centralmente rispetto all'area di visione del FlexiBowl (zona backlight). In questo modo il campo visivo (indicato in verde) copre simmetricamente l'intera area di lavoro, garantendo il corretto funzionamento del sistema di visione.  
+**Configurazione corretta.** La camera deve essere posizionata centralmente rispetto all'area di visione del FlexiBowl® (zona backlight). In questo modo il campo visivo (indicato in verde) copre simmetricamente l'intera area di lavoro, garantendo il corretto funzionamento del sistema di visione.  
 
 ```{image} ../../../../_shared/media/images/config_giusta.JPG
 :alt: Distanza Di Lavoro
@@ -195,11 +195,11 @@ Il corretto allineamento della camera è fondamentale per ottenere immagini di q
 ```{list-table}
 * - **Centratura:**
   - 
-    - La camera deve essere posizionata esattamente al di sopra dell'area di visione del FlexiBowl
+    - La camera deve essere posizionata esattamente al di sopra dell'area di visione del FlexiBowl®
     - Tolleranza massima di centratura: ±5 mm
 * - **Ortogonalità:**
   - 
-    - La camera deve essere montata perfettamente parallela alla superficie di lavoro del FlexiBowl
+    - La camera deve essere montata perfettamente parallela alla superficie di lavoro del FlexiBowl®
     - Non sono ammesse inclinazioni laterali (tilt) o rotazioni rispetto alla verticale
     - Tolleranza massima di inclinazione: ±1°
 ```
@@ -265,13 +265,13 @@ Un supporto con viti serrate definitivamente senza possibilità di regolazione r
 ```{warning}
 Prima di procedere con il fissaggio definitivo:
 1. Verificare visivamente che la lente sia installata
-2. Controllare che la lunghezza focale sia corretta per il vostro modello di FlexiBowl (etichetta sulla lente o documentazione dell'ordine)
+2. Controllare che la lunghezza focale sia corretta per il vostro modello di FlexiBowl® (etichetta sulla lente o documentazione dell'ordine)
 3. Assicurarsi che la lente sia avvitata completamente (contatto metal-metal tra lente e corpo camera)
 4. NON rimuovere o allentare la lente se già montata correttamente
 ```
 ### Installazione Camera
 Per garantire il corretto funzionamento del sistema di visione è necessario che la telecamera sia installata su un supporto rigido e stabile.
-Il sistema Flexibowl non genera vibrazioni; tuttavia, nelle linee automatizzate sono presenti altre sorgenti di vibrazione,(robot industriali,sistemi di movimentazione,altre macchine della linea)
+Il sistema FlexiBowl® non genera vibrazioni; tuttavia, nelle linee automatizzate sono presenti altre sorgenti di vibrazione,(robot industriali,sistemi di movimentazione,altre macchine della linea)
 
 Se tali vibrazioni vengono trasmesse alla telecamera, l'immagine acquisita può risultare instabile e le coordinate calcolate dal sistema di visione potrebbero non essere affidabili, compromettendo la precisione del prelievo robotizzato.
 
@@ -299,7 +299,7 @@ Le viti di fissaggio della camera possono allentarsi nel tempo per le seguenti c
 
 ### Regolazione della posizione della telecamera:
 
-Il supporto della telecamera deve consentire la regolazione della posizione per permettere il corretto allineamento con l’area di prelievo del Flexibowl.
+Il supporto della telecamera deve consentire la regolazione della posizione per permettere il corretto allineamento con l’area di prelievo del FlexiBowl®.
 
 ![Regolazioni Cmera](../../../../_shared/media/images/regolazionicamera.png)
 
@@ -347,12 +347,12 @@ Le frecce rosse indicano le viti di fissaggio delle ghiere dell'obiettivo, una p
 
 ![Posizione Toplight e Cam](../../../../_shared/media/images/posizione_cam_TPL_B.png)
 
-Il campo visivo della telecamera e il fascio luminoso del toplight (in verde) devono essere allineati concentricamente e perpendicolarmente rispetto all'area di visione sul FlexiBowl.    
+Il campo visivo della telecamera e il fascio luminoso del toplight (in verde) devono essere allineati concentricamente e perpendicolarmente rispetto all'area di visione sul FlexiBowl®.    
 Come mostrato nelle tre viste (frontale, dall'alto e assonometrica), il toplight deve illuminare esattamente l'area inquadrata dalla telecamera, con entrambi i componenti centrati sull'asse ottico verticale del sistema.  
 
 ![Posizione Toplight Cam + FB](../../../../_shared/media/images/posizioneTPL_giusta.png)
 
-Un posizionamento errato si verifica quando il toplight e la telecamera non sono centrati sull'area di visione del FlexiBowl.   
+Un posizionamento errato si verifica quando il toplight e la telecamera non sono centrati sull'area di visione del FlexiBowl®.   
 Come illustrato (in rosso), due errori tipici sono:  
 - spostarsi in avanti o indietro rispetto all'area di visione.  
 - ruotare il toplight rispetto ad essa.   
@@ -371,13 +371,13 @@ In entrambi i casi, l'illuminazione risulta disassata e non perpendicolare, comp
 * - **1. Posizionamento**
   - Fissare il Toplight sulla struttura di supporto in posizione concentrica rispetto alla camera.
 * - **2. Distanza dalla superficie**
-  - Posizionare l'illuminatore a una distanza dalla superficie del FlexiBowl simile a quella della camera per:
+  - Posizionare l'illuminatore a una distanza dalla superficie del FlexiBowl® simile a quella della camera per:
     
     * Minimizzare le ombre proiettate dai pezzi
     * Massimizzare l'uniformità luminosa
     * Evitare riflessioni dirette verso la camera
 * - **3. Orientamento**
-  - Assicurarsi che la superficie emittente del Toplight sia parallela alla superficie di lavoro del FlexiBowl.
+  - Assicurarsi che la superficie emittente del Toplight sia parallela alla superficie di lavoro del FlexiBowl®.
 * - **4. Angolo di illuminazione**
   - Perpendicolare alla superficie (0° tilt).
 * - **5. Fissaggio**

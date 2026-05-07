@@ -78,7 +78,7 @@ Dopo aver cliccato "Next" nella pagina Clearances, si apre la pagina **Robot Mod
       - Verificare di non aver scambiato X e Y
       - Controllare il segno (+ o -) di ciascuna coordinata
 
-      **Errori in questa fase causano offset robot completamente errati**, risultando in tentativi di prelievo in posizioni sbagliate (anche decine di centimetri di errore). La mancata osservanza di questi due punti potrebbe comportare collisioni del robot con conseguenti danni a FlexiBowl, componenti o robot stesso.  
+      **Errori in questa fase causano offset robot completamente errati**, risultando in tentativi di prelievo in posizioni sbagliate (anche decine di centimetri di errore). La mancata osservanza di questi due punti potrebbe comportare collisioni del robot con conseguenti danni a FlexiBowl®, componenti o robot stesso.  
       :::
 * - **4**
   - Cliccare su <img src="../../../../../_shared/media/images/tasto_GRIPPER_OFFSET.png" class="inline-icon">
@@ -138,7 +138,7 @@ Calcola la differenza e la memorizza come **offset**. Questo offset verrà appli
 
 Prima di considerare la ricetta completata, continua con:
 
-- [Configurazione del FlexiBowl](configfb)
+- [Configurazione del FlexiBowl®](configfb)
 - [Configurazione della Tramoggia](confighopper)
 - [Monitoraggio Applicazione](dashboard)
 ```{seealso}

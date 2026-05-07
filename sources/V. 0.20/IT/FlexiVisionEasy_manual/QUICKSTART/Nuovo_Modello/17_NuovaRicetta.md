@@ -1,7 +1,7 @@
 (nuovaricetta)=
 # **Creare una Nuova Ricetta**
 
-Questa sezione descrive come creare una nuova ricetta applicativa in FlexiVision One. Una ricetta è il contenitore principale che include tutti i modelli pezzo, le configurazioni FlexiBowl/Hopper e i parametri robot necessari per un'applicazione completa di picking.
+Questa sezione descrive come creare una nuova ricetta applicativa in FlexiVision One. Una ricetta è il contenitore principale che include tutti i modelli pezzo, le configurazioni FlexiBowl®/Hopper e i parametri robot necessari per un'applicazione completa di picking.
 ```{note}
 **Creare una nuova ricetta quando:**
 
@@ -19,7 +19,7 @@ Questa sezione descrive come creare una nuova ricetta applicativa in FlexiVision
 ## Panoramica interfaccia
 
 Prima di procedere con il training del modello, familiarizzare con l'interfaccia [Recipes](recipes).
-
+![Pagina Recipes](/sources/_shared/media/images/pagina_recipesNEW.png) 
 
 ## Salvataggio ricetta base
 
@@ -41,7 +41,7 @@ Prima di procedere, assicurarsi di aver salvato la ricetta base creata durante i
 **Perché salvare la ricetta base?**
 
 La ricetta base contiene tutte le configurazioni hardware completate durante il setup:
-- Connessione FlexiBowl (IP, parametri)
+- Connessione FlexiBowl® (IP, parametri)
 - Connessione Hopper 
 - Connessione Robot (porta TCP/IP)
 - Calibrazione camera
@@ -122,7 +122,7 @@ Una ricetta ben configurata rappresenta ore di lavoro. Proteggerla adeguatamente
 **Cosa serve per il prossimo step**
 
 - Pezzi fisici da riconoscere (almeno 10-15 pezzi)
-- FlexiBowl vuoto e pulito
+- FlexiBowl® vuoto e pulito
 - Se il tool del robot che stiamo utilizzando è una pinza, ci occorreranno anche due oggetti diversi dai pezzi di cui si vuole fare il modello da utilizzare come simulatori per l'ingombro del tool. 
 - Foglio per annotare coordinate robot (X, Y, RZ)
 ```

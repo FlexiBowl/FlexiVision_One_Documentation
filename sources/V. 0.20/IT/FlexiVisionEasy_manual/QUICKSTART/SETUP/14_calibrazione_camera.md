@@ -1,21 +1,11 @@
 ﻿(calibrazione)=
-# **Passo 4: Calibrazione della Camera**
+# **Calibrazione Camera e Robot**
 
 La calibrazione è il passaggio cruciale che stabilisce la relazione geometrica esatta tra il mondo reale (coordinate in millimetri) e l'immagine acquisita dalla telecamera (pixel). Senza una calibrazione accurata, la precisione del sistema di picking risulta compromessa, rendendo inaffidabile l'intera applicazione.
 
-```{warning}
-**Prerequisito fondamentale**
 
-Prima di procedere con la calibrazione, assicurarsi che tutti i setup hardware siano stati completati correttamente:
-- [FlexiBowl Setup](13a_FB_Setup.md) ✓
-- [Hopper Setup](13b_Hopper_Setup.md) ✓
-- [Robot Setup](13c_Robot_Setup.md) ✓
-- [Camera Setup](13d_Camera_Setup.md) ✓
-
-La calibrazione deve essere ripetuta ogni volta che viene alterata la posizione della camera e/o del robot.
-```
 :::{tip}
-Non è necessario eseguire nuovamente la calibrazione nel caso in cui viene alterata la posizione del FlexiBowl.
+Non è necessario eseguire nuovamente la calibrazione nel caso in cui viene alterata la posizione del FlexiBowl®.
 :::
 ---
 
@@ -40,7 +30,7 @@ Esempi di distorsioni ottiche: nessuna distorsione (sinistra), distorsione a bar
 
 :::{error}
 Assicurarsi di avere: 
-- Backlight acceso (SETUP > FlexiBowl Setup > Config FlexiBowl > Light ON attivo)
+- Backlight acceso (SETUP > FlexiBowl® Setup > Config FlexiBowl® > Light ON attivo)
 - Toplight spento
 :::
 
@@ -49,7 +39,7 @@ Assicurarsi di avere:
     :align: center
 :::
 
-La griglia di calibrazione dedicata ARS deve essere posizionata sul FlexiBowl:
+La griglia di calibrazione dedicata ARS deve essere posizionata sul FlexiBowl®:
 
 ````{list-table}
 :widths: 10 50 40
@@ -59,12 +49,12 @@ La griglia di calibrazione dedicata ARS deve essere posizionata sul FlexiBowl:
   - Operazione
   - Immagine
 * - **0**
-  - Se presenti, rimuovere i deviatori montati sul FlexiBowl.
+  - Se presenti, rimuovere i deviatori montati sul FlexiBowl®.
   - ```{image} ../../../../../_shared/media/images/rimuoveredeviatori.jpg
       
     ```
 * - **1**
-  - **Allentare le quattro viti** della flangia centrale del FlexiBowl.
+  - **Allentare le quattro viti** della flangia centrale del FlexiBowl®.
   - ```{image} ../../../../../_shared/media/images/rimuovereflangia.jpg
       
     ```
@@ -84,7 +74,7 @@ La griglia di calibrazione dedicata ARS deve essere posizionata sul FlexiBowl:
       
     ```
 * - **5**
-  - **Posizionare la griglia ARS** sul FlexiBowl allineando i perni di posizionamento con i fori predefiniti sul bordo del backlight.
+  - **Posizionare la griglia ARS** sul FlexiBowl® allineando i perni di posizionamento con i fori predefiniti sul bordo del backlight.
   - ```{image} ../../../../../_shared/media/images/posizionaregriglia.jpg
       
     ```
@@ -95,12 +85,12 @@ La griglia di calibrazione dedicata ARS deve essere posizionata sul FlexiBowl:
 :width: 60%
 :align: center
 
-Corretto posizionamento della griglia di calibrazione ARS sul FlexiBowl
+Corretto posizionamento della griglia di calibrazione ARS sul FlexiBowl®
 ```
 :::{attention} 
  La griglia di calibrazione deve essere posizionata **alla stessa altezza dell'oggetto** utilizzato nell'applicazione.
  
-   Per questo motivo, viene fornita con dei **distanziali** da inserire nei pioli della griglia prima di installarla sul FlexiBowl.
+   Per questo motivo, viene fornita con dei **distanziali** da inserire nei pioli della griglia prima di installarla sul FlexiBowl®.
    I distanziali hanno la funzione di **sollevare la griglia** fino al livello dell'altezza del pezzo, garantendo una calibrazione accurata.
   ![Distanziali](../../../../../_shared/media/images/distanziali_griglia.JPG)
   
@@ -111,11 +101,6 @@ Corretto posizionamento della griglia di calibrazione ARS sul FlexiBowl
 :::
 
 ## **Step 2: Regolazioni fondamentali**
-
-:::{video} ../../../../../_shared/media/videos/Step2_calib.mp4
-    :width: 100%
-    :align: center
-:::
 
 ```{list-table}
 
@@ -160,12 +145,12 @@ Corretto posizionamento della griglia di calibrazione ARS sul FlexiBowl
 ```{warning}
 **Attenzione alla profondità di campo**
 
-La messa a fuoco deve garantire nitidezza su **tutta la superficie** del FlexiBowl, non solo al centro.
+La messa a fuoco deve garantire nitidezza su **tutta la superficie** del FlexiBowl®, non solo al centro.
 
 Se il centro è nitido ma i bordi sono sfocati:
 - Verificare che l'ottica sia pulita
 - Verificare che la distanza di lavoro sia corretta
-- Verificare che la camera sia perfettamente parallela alla superficie di lavoro del FlexiBowl
+- Verificare che la camera sia perfettamente parallela alla superficie di lavoro del FlexiBowl®
 - Chiudere leggermente il diaframma per aumentare la profondità di campo
 
 Se il problema persiste, potrebbe essere necessario rivedere il montaggio meccanico della camera.
@@ -176,7 +161,7 @@ Se il problema persiste, potrebbe essere necessario rivedere il montaggio meccan
 :::
 
 :::{error}
-Se cliccando piu volte il tasto RUN appare anche solo una volta una schermata completamente blu, fare riferimento a [Troubleshooting calibrazione camera](../../TROUBLESHOOTING/26e_Calib_Cam.md)
+Se cliccando piu volte il tasto RUN appare anche solo una volta una schermata completamente blu, fare riferimento a [Troubleshooting Camera Setup](schermo_blu)
 :::
 
 ```{list-table}
@@ -233,7 +218,7 @@ Esempio di esposizione corretta: contrasto elevato, pattern ben definito, nessun
     - Non ci siano ombre o riflessi
 
 * - **16**
-  - Impostare i valori "Tile Size X" e "Tile Size Y" entrambi a 10 per tutti i modelli da FlexiBowl 500 a 1200. **Per i modelli FlexiBowl 200 e FlexiBowl 350 invece, impostare i tile sizes a 2,5.**
+  - Impostare i valori "Tile Size X" e "Tile Size Y" entrambi a 10 per tutti i modelli da FlexiBowl® 500 a 1200. **Per i modelli FlexiBowl® 200 e FlexiBowl® 350 invece, impostare i tile sizes a 2,5.**
 
 * - **17**
   - Cliccare su "Calibrate" per effettuare la calibrazione
@@ -297,7 +282,7 @@ In quali casi si apre Expert? Expert si apre per la configurazione della luminos
   - Primo setup del sistema (obbligatorio). Dopo aver modificato la posizione della camera. Dopo aver spostato il robot. Se si riscontrano errori sistematici di picking.
 
 * - **Non è necessario ricalibrare quando:**
-  - Se si cambia tipo di pezzo a parita di FlexiBowl e camera. Se si modificano fuoco o apertura dell'obiettivo. Se si modifica la ricetta software. Se si regolano parametri di riconoscimento. Se si aggiornano i programmi robot.
+  - Se si cambia tipo di pezzo a parita di FlexiBowl® e camera. Se si modificano fuoco o apertura dell'obiettivo. Se si modifica la ricetta software. Se si regolano parametri di riconoscimento. Se si aggiornano i programmi robot.
 ```
 
 ---
@@ -438,8 +423,8 @@ Causa: Il software non riesce a identificare il pattern della griglia.
 
 Se nonostante le regolazioni la calibrazione rimane sotto "Excellent":
 
-1. Verificare la distanza di lavoro camera-FlexiBowl (deve essere quella calcolata)
-2. Controllare cje la camera sia parallela rispetto al piano del FlexiBowl (deve essere perfettamente orizzontale)
+1. Verificare la distanza di lavoro camera-FlexiBowl® (deve essere quella calcolata)
+2. Controllare cje la camera sia parallela rispetto al piano del FlexiBowl® (deve essere perfettamente orizzontale)
 3. Assicurarsi che la camera sia stabile (no vibrazioni durante acquisizione)
 4. Verificare che l'obiettivo sia avvitato completamente 
 

@@ -29,13 +29,13 @@ Prima di utilizzare FlexiVision One, è obbligatorio:
 - Leggere integralmente questo manuale per garantire un uso corretto del sistema
 - Rispettare le istruzioni operative e le raccomandazioni
 - Formare adeguatamente il personale incaricato dell'utilizzo
-- Consultare i manuali di istruzioni di tutti i componenti hardware collegati (FlexiBowl, Tramoggia, VisionController, Camera, Robot ecc.)
+- Consultare i manuali di istruzioni di tutti i componenti hardware collegati (FlexiBowl®, Tramoggia, VisionController, Camera, Robot ecc.)
 
 Il mancato rispetto di queste indicazioni può causare malfunzionamenti, danni alle apparecchiature o situazioni pericolose.
 ```
 ### **Contesto operativo e limitazioni di responsabilità**
 
-FlexiVision One è un sistema di visione sviluppato per la guida di robot industriali e fornito come componente aggiuntivo opzionale per i sistemi FlexiBowl (modelli 200, 350, 500, 650, 800, 1200).
+FlexiVision One è un sistema di visione sviluppato per la guida di robot industriali e fornito come componente aggiuntivo opzionale per i sistemi FlexiBowl® (modelli 200, 350, 500, 650, 800, 1200).
 
 ```{warning}
 Durante l'utilizzo, l'operatore deve:

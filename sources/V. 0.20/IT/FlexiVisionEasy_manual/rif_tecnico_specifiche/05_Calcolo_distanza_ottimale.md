@@ -13,18 +13,18 @@ La scelta corretta della distanza di lavoro e della lente è fondamentale per:
 
 ## Distanze di lavoro raccomandate e selezione lenti
 
-La scelta della lente è strettamente dipendente dalla distanza di montaggio raccomandata tra la telecamera e la superficie di lavoro del FlexiBowl. Mantenere la distanza di lavoro standard garantisce il corretto FOV e minimizza i problemi di distorsione ottica.
+La scelta della lente è strettamente dipendente dalla distanza di montaggio raccomandata tra la telecamera e la superficie di lavoro del FlexiBowl®. Mantenere la distanza di lavoro standard garantisce il corretto FOV e minimizza i problemi di distorsione ottica.
 
 
 ```{note}
 **Lente già inclusa**
 
-La lente appropriata per il modello FlexiBowl specificato nell'ordine è sempre inclusa nel pacchetto FlexiVision One e viene fornita in un imballo separato rispetto alla camera. Non è necessario acquistarla separatamente.
+La lente appropriata per il modello FlexiBowl® specificato nell'ordine è sempre inclusa nel pacchetto FlexiVision One e viene fornita in un imballo separato rispetto alla camera. Non è necessario acquistarla separatamente.
 ```
 
 ### Schema distanze e campo visivo
 
-Il seguente diagramma illustra la relazione tra distanza di lavoro, lunghezza focale della lente e area di visione risultante per i diversi modelli di FlexiBowl.
+Il seguente diagramma illustra la relazione tra distanza di lavoro, lunghezza focale della lente e area di visione risultante per i diversi modelli di FlexiBowl®.
 
 ```{image} ../../../../_shared/media/images/working_distance.JPG
 :alt: Distanza Di Lavoro
@@ -33,8 +33,8 @@ Il seguente diagramma illustra la relazione tra distanza di lavoro, lunghezza fo
 ```
 
 **Legenda schema:**
-- **Distanza di Lavoro**: Distanza verticale tra la lente della camera e la superficie di lavoro del FlexiBowl
-- **Area di visione**: Zona della superficie del FlexiBowl coperta dal campo visivo della camera
+- **Distanza di Lavoro**: Distanza verticale tra la lente della camera e la superficie di lavoro del FlexiBowl®
+- **Area di visione**: Zona della superficie del FlexiBowl® coperta dal campo visivo della camera
 
 ### Tabella riepilogativa per modello
 
@@ -42,7 +42,7 @@ Il seguente diagramma illustra la relazione tra distanza di lavoro, lunghezza fo
 :header-rows: 1
 :widths: 25 40 35
 
-* - Modello FlexiBowl
+* - Modello FlexiBowl®
   - Distanza di Lavoro Raccomandata (Working Distance)
   - Lente Inclusa nel Kit (Lunghezza Focale)
 * - **FB 200**
@@ -70,14 +70,14 @@ Il seguente diagramma illustra la relazione tra distanza di lavoro, lunghezza fo
 
 Deviazioni significative dalla distanza di lavoro raccomandata possono causare:
 
-- **Distanza troppo breve**: FOV insufficiente (parte del FlexiBowl non visibile).
+- **Distanza troppo breve**: FOV insufficiente (parte del FlexiBowl® non visibile).
 - **Distanza troppo lunga**: Risoluzione insufficiente per rilevare pezzi piccoli, sfocatura
 
 Rispettare sempre le distanze indicate in tabella durante il montaggio meccanico della camera.
 ```
 ### Posizionamento Camera 
 
-**Configurazione corretta.** La camera deve essere posizionata centralmente e con il medesimo orientamento angolare all’area di visione del FlexiBowl (zona backlight). In questo modo il campo visivo (indicato in verde) copre simmetricamente l’intera area di lavoro, garantendo il corretto funzionamento del sistema di visione.  
+**Configurazione corretta.** La camera deve essere posizionata centralmente e con il medesimo orientamento angolare all’area di visione del FlexiBowl® (zona backlight). In questo modo il campo visivo (indicato in verde) copre simmetricamente l’intera area di lavoro, garantendo il corretto funzionamento del sistema di visione.  
 
 ```{image} ../../../../_shared/media/images/config_giusta.JPG
 :alt: Distanza Di Lavoro
@@ -109,12 +109,12 @@ Se il sistema include un TopLight (illuminatore dall’alto), il suo posizioname
 
 * - Parametro
   - Valore Consigliato
-* - **Distanza dalla superficie FlexiBowl**
+* - **Distanza dalla superficie FlexiBowl®**
   - Simile alla Working Distance della camera (±100 mm)
 * - **Posizione rispetto alla camera**
   - Concentrica (stesso asse ottico della camera)
 * - **Orientamento**
-  - Parallelo alla superficie del FlexiBowl e medesimo orientamento angolare  della telecamera (Lato lungo area di visione - Lato lungo di illuminazione)
+  - Parallelo alla superficie del FlexiBowl® e medesimo orientamento angolare  della telecamera (Lato lungo area di visione - Lato lungo di illuminazione)
 * - **Altezza relativa camera-TopLight**
   - Ottica di visione a filo della superficie supperiore Top Light  (Lasciare libero accesso alle ghiere di regolazione dell'ottica di visione)
     :::{figure} ../../../../_shared/media/images/posizione_cam_TPL_B.png
@@ -133,7 +133,7 @@ Per ottenere la migliore uniformità di illuminazioneseguire le indicazioni appe
 
 Quando si posiziona il TopLight, assicurarsi che:
 
-- La luce non si rifletta direttamente dalla superficie del FlexiBowl verso la camera (causando abbagliamento)
+- La luce non si rifletta direttamente dalla superficie del FlexiBowl® verso la camera (causando abbagliamento)
 - Non ci siano ombre causate da componenti meccanici
 - L'illuminazione sia il più uniforme possibile su tutta la superficie utile
 

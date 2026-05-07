@@ -6,7 +6,7 @@ Il Toplight è un sistema di illuminazione dall'alto che illumina la superficie 
 I Toplight disponibli sono: 
 
 ```{dropdown} TopLight 500x300 - White 
-Questa dimensione di Toplight è indicata per i modelli: FlexiBowl 200, FlexiBowl 350, FlexiBowl 500
+Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 200, FlexiBowl® 350, FlexiBowl® 500
 ![Toplight](../../../../_shared/media/images/toplight_CM002316.JPG)
 
 | Lunghezza | Larghezza | Altezza | Altezza con piastra di fissaggio | Diametro foro centrale | Superficie utile max [AxB] | Perimetro utile max |
@@ -102,7 +102,7 @@ Questa dimensione di Toplight è indicata per i modelli: FlexiBowl 200, FlexiBow
 
 ```
 ```{dropdown} TopLight 500x300 - Red  
-Questa dimensione di Toplight è indicata per i modelli: FlexiBowl 200, FlexiBowl 350, FlexiBowl 500
+Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 200, FlexiBowl® 350, FlexiBowl® 500
 ![Toplight](../../../../_shared/media/images/toplight_CM002316.JPG)
 
 | Lunghezza | Larghezza | Altezza | Altezza con piastra di fissaggio | Diametro foro centrale | Superficie utile max [AxB] | Perimetro utile max |
@@ -200,7 +200,7 @@ Questa dimensione di Toplight è indicata per i modelli: FlexiBowl 200, FlexiBow
 ```
 
 ```{dropdown} TopLight 500x300 - Infrared
-Questa dimensione di Toplight è indicata per i modelli: FlexiBowl 200, FlexiBowl 350, FlexiBowl 500
+Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 200, FlexiBowl® 350, FlexiBowl® 500
 ![Toplight](../../../../_shared/media/images/toplight_CM002316.JPG)
 
 | Lunghezza | Larghezza | Altezza | Altezza con piastra di fissaggio | Diametro foro centrale | Superficie utile max [AxB] | Perimetro utile max |
@@ -297,7 +297,7 @@ Questa dimensione di Toplight è indicata per i modelli: FlexiBowl 200, FlexiBow
 ```
 
 ```{dropdown} TopLight 700x300 - White
-Questa dimensione di Toplight è indicata per i modelli: FlexiBowl 650, FlexiBowl 800
+Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002317.JPG)
 
 | Lunghezza | Larghezza | Altezza | Altezza con piastra di fissaggio | Diametro foro centrale | Superficie utile max [AxB] | Perimetro utile max |
@@ -393,7 +393,7 @@ Questa dimensione di Toplight è indicata per i modelli: FlexiBowl 650, FlexiBow
 ```
 
 ```{dropdown} TopLight 700x300 - Red
-Questa dimensione di Toplight è indicata per i modelli: FlexiBowl 650, FlexiBowl 800
+Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002317.JPG)
 
 | Lunghezza | Larghezza | Altezza | Altezza con piastra di fissaggio | Diametro foro centrale | Superficie utile max [AxB] | Perimetro utile max |
@@ -489,7 +489,7 @@ Questa dimensione di Toplight è indicata per i modelli: FlexiBowl 650, FlexiBow
 ```
 
 ```{dropdown} TopLight 700x300 - Infrared
-Questa dimensione di Toplight è indicata per i modelli: FlexiBowl 650, FlexiBowl 800
+Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002317.JPG)
 
 | Lunghezza | Larghezza | Altezza | Altezza con piastra di fissaggio | Diametro foro centrale | Superficie utile max [AxB] | Perimetro utile max |
@@ -585,7 +585,7 @@ Questa dimensione di Toplight è indicata per i modelli: FlexiBowl 650, FlexiBow
 ```
 
 ```{dropdown} TopLight 700x500 - White
-Questa dimensione di Toplight è indicata per i modelli: FlexiBowl 650, FlexiBowl 800
+Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002318.JPG)
 
 | Lunghezza | Larghezza | Altezza | Altezza con piastra di fissaggio | Diametro foro centrale | Superficie utile max [AxB] | Perimetro utile max |
@@ -681,7 +681,7 @@ Questa dimensione di Toplight è indicata per i modelli: FlexiBowl 650, FlexiBow
 ```
 
 ```{dropdown} TopLight 700x500 - Red
-Questa dimensione di Toplight è indicata per i modelli: FlexiBowl 650, FlexiBowl 800
+Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002318.JPG)
 
 | Lunghezza | Larghezza | Altezza | Altezza con piastra di fissaggio | Diametro foro centrale | Superficie utile max [AxB] | Perimetro utile max |
@@ -777,7 +777,7 @@ Questa dimensione di Toplight è indicata per i modelli: FlexiBowl 650, FlexiBow
 ```
 
 ```{dropdown} TopLight 700x500 - Infrared
-Questa dimensione di Toplight è indicata per i modelli: FlexiBowl 650, FlexiBowl 800
+Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002318.JPG)
 
 | Lunghezza | Larghezza | Altezza | Altezza con piastra di fissaggio | Diametro foro centrale | Superficie utile max [AxB] | Perimetro utile max |
@@ -873,7 +873,7 @@ Questa dimensione di Toplight è indicata per i modelli: FlexiBowl 650, FlexiBow
 ```
 
 ```{dropdown} TopLight 900x600 - White
-Questa dimensione di Toplight è indicata per il modelli FlexiBowl 1200
+Questa dimensione di Toplight è indicata per il modelli FlexiBowl® 1200
 ![Toplight](../../../../_shared/media/images/toplight_dim.JPG)
 
 | Lunghezza | Larghezza | Altezza | Altezza con piastra di fissaggio | Diametro foro centrale | Superficie utile max [AxB] | Perimetro utile max |
@@ -968,7 +968,7 @@ Questa dimensione di Toplight è indicata per il modelli FlexiBowl 1200
 :::
 ```
 ```{dropdown} TopLight 900x600 - Red
-Questa dimensione di Toplight è indicata per il modelli FlexiBowl 1200
+Questa dimensione di Toplight è indicata per il modelli FlexiBowl® 1200
 ![Toplight](../../../../_shared/media/images/toplight_dim.JPG)
 
 | Lunghezza | Larghezza | Altezza | Altezza con piastra di fissaggio | Diametro foro centrale | Superficie utile max [AxB] | Perimetro utile max |
@@ -1064,7 +1064,7 @@ Questa dimensione di Toplight è indicata per il modelli FlexiBowl 1200
 ```
 
 ```{dropdown} TopLight 900x600 - Infrared
-Questa dimensione di Toplight è indicata per il modelli FlexiBowl 1200
+Questa dimensione di Toplight è indicata per il modelli FlexiBowl® 1200
 ![Toplight](../../../../_shared/media/images/toplight_dim.JPG)
 
 | Lunghezza | Larghezza | Altezza | Altezza con piastra di fissaggio | Diametro foro centrale | Superficie utile max [AxB] | Perimetro utile max |
@@ -1178,7 +1178,7 @@ Questa dimensione di Toplight è indicata per il modelli FlexiBowl 1200
 
 (backlight)=
 ## Backlight
-Il Backlight è un sistema di retroilluminazione posizionato all'interno del piano del FlexiBowl che illumina il pezzo dal basso, creando un contrasto netto tra il profilo del pezzo e lo sfondo luminoso. È particolarmente efficace per il riconoscimento di sagome, contorni e fori, indipendentemente dal colore o dalla finitura superficiale del pezzo.
+Il Backlight è un sistema di retroilluminazione posizionato all'interno del piano del FlexiBowl® che illumina il pezzo dal basso, creando un contrasto netto tra il profilo del pezzo e lo sfondo luminoso. È particolarmente efficace per il riconoscimento di sagome, contorni e fori, indipendentemente dal colore o dalla finitura superficiale del pezzo.
 
 ```{dropdown} Backlight per FB200
 

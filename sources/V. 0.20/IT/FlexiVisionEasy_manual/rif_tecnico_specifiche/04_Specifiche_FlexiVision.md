@@ -540,28 +540,28 @@ Una calibrazione eccellente è il requisito fondamentale per l'accuratezza del s
 
 ### Specifiche tecniche griglia
 
-```{dropdown} Griglia per FlexiBowl 200 
+```{dropdown} Griglia per FlexiBowl® 200 
 ![Griglia 200](../../../../_shared/media/images/griglia200.JPG)
 
 ```
 
-```{dropdown} Griglia per FlexiBowl 350 
+```{dropdown} Griglia per FlexiBowl® 350 
 ![Griglia 350](../../../../_shared/media/images/griglia350.JPG)
 ```
 
-```{dropdown} Griglia per FlexiBowl 500 
+```{dropdown} Griglia per FlexiBowl® 500 
 ![Griglia 500](../../../../_shared/media/images/griglia500.JPG)
 ```
 
-```{dropdown} Griglia per FlexiBowl 650 
+```{dropdown} Griglia per FlexiBowl® 650 
 ![Griglia 650](../../../../_shared/media/images/griglia650.JPG)
 ```
 
-```{dropdown} Griglia per FlexiBowl 800 
+```{dropdown} Griglia per FlexiBowl® 800 
 ![Griglia 800](../../../../_shared/media/images/griglia800.JPG)
 ```
 
-```{dropdown} Griglia per FlexiBowl 1200 
+```{dropdown} Griglia per FlexiBowl® 1200 
 ![Griglia 1200](../../../../_shared/media/images/griglia1200.JPG)
 ```
 
@@ -573,7 +573,7 @@ Per informazioni dettagliate sulle procedure di calibrazione, consultare la sezi
 
 ![Panoramica Collegamenti](../../../../_shared/media/images/panoramicacollegamenti.png)
 
-*Schema di collegamento completo del sistema FlexiVision One con robot e FlexiBowl*
+*Schema di collegamento completo del sistema FlexiVision One con robot e FlexiBowl®*
 
 ```{list-table}
 :widths: 25 25 50
@@ -584,7 +584,7 @@ Per informazioni dettagliate sulle procedure di calibrazione, consultare la sezi
   - **Collegamento**
 
 * - Rete elettrica
-  - FlexiBowl
+  - FlexiBowl®
   - Alimentazione 110/230 Vac
 
 * - Rete elettrica
@@ -616,7 +616,7 @@ Per informazioni dettagliate sulle procedure di calibrazione, consultare la sezi
   - Ethernet TCP
 
 * - VisionController
-  - FlexiBowl
+  - FlexiBowl®
   - Ethernet TCP
 
 * - VisionController
