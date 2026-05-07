@@ -262,7 +262,7 @@ Se l'immagine appare sfocata:
 1. Verificare che la camera sia alla distanza di lavoro corretta ([Calcolo Distanza Ottimale](../rif_tecnico_specifiche/05_Calcolo_distanza_ottimale.md))
 2. Controllare che la lente sia avvitata completamente 
 3. Verificare che non ci siano sporcizia o impronte sulla lente
-4. Assicurarsi che la camera sia montata perfettamente parallela al piatto FlexiBowl
+4. Assicurarsi che la camera sia montata perfettamente parallela alla superficie di lavoro del FlexiBowl
 
 ```
 ```{tip}

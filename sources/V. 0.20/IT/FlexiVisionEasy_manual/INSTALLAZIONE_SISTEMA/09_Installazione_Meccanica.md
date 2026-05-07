@@ -132,7 +132,7 @@ Il posizionamento preciso e l'allineamento della telecamera sono passaggi critic
 
 ### Distanza di lavoro ottimale
 
-La telecamera deve essere montata in modo che la faccia frontale della lente sia posizionata a una distanza specifica (Working Distance) dalla superficie del piatto FlexiBowl.  
+La telecamera deve essere montata in modo che la faccia frontale della lente sia posizionata a una distanza specifica (Working Distance) dalla superficie di lavoro del FlexiBowl.  
 Per il calcolo dettagliato della distanza ottimale per la vostra applicazione, consultare la sezione dedicata: [Calcolo Distanza Ottimale](distanza_lavoro)
 
 ```{image} ../../../../_shared/media/images/working_distance.JPG
@@ -199,7 +199,7 @@ Il corretto allineamento della camera è fondamentale per ottenere immagini di q
     - Tolleranza massima di centratura: ±5 mm
 * - **Ortogonalità:**
   - 
-    - La camera deve essere montata perfettamente parallela alla superficie del piatto
+    - La camera deve essere montata perfettamente parallela alla superficie di lavoro del FlexiBowl
     - Non sono ammesse inclinazioni laterali (tilt) o rotazioni rispetto alla verticale
     - Tolleranza massima di inclinazione: ±1°
 ```
@@ -377,7 +377,7 @@ In entrambi i casi, l'illuminazione risulta disassata e non perpendicolare, comp
     * Massimizzare l'uniformità luminosa
     * Evitare riflessioni dirette verso la camera
 * - **3. Orientamento**
-  - Assicurarsi che la superficie emittente del Toplight sia parallela al piatto del FlexiBowl.
+  - Assicurarsi che la superficie emittente del Toplight sia parallela alla superficie di lavoro del FlexiBowl.
 * - **4. Angolo di illuminazione**
   - Perpendicolare alla superficie (0° tilt).
 * - **5. Fissaggio**

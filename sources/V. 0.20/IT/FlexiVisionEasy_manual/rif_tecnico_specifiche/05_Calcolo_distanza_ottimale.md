@@ -1,7 +1,7 @@
 (distanza_lavoro)=
 # **Calcolo Distanza di Lavoro Ottimale**
 
-Questa sezione definisce la distanza di lavoro (Working Distance) raccomandata tra la telecamera e il piatto FlexiBowl, insieme alla conseguente selezione delle lenti necessarie per garantire il corretto Campo Visivo (Field of View, FOV).
+Questa sezione definisce la distanza di lavoro (Working Distance) raccomandata tra la telecamera e la superficie di lavoro del FlexiBowl, insieme alla conseguente selezione delle lenti necessarie per garantire il corretto Campo Visivo (Field of View, FOV).
 
 La scelta corretta della distanza di lavoro e della lente è fondamentale per:
 - Garantire che l'intera superficie utile del FlexiBowl sia visibile
@@ -13,7 +13,7 @@ La scelta corretta della distanza di lavoro e della lente è fondamentale per:
 
 ## Distanze di lavoro raccomandate e selezione lenti
 
-La scelta della lente è strettamente dipendente dalla distanza di montaggio raccomandata tra la telecamera e la superficie del piatto FlexiBowl. Mantenere la distanza di lavoro standard garantisce il corretto FOV e minimizza i problemi di distorsione ottica.
+La scelta della lente è strettamente dipendente dalla distanza di montaggio raccomandata tra la telecamera e la superficie di lavoro del FlexiBowl. Mantenere la distanza di lavoro standard garantisce il corretto FOV e minimizza i problemi di distorsione ottica.
 
 
 ```{note}
@@ -33,7 +33,7 @@ Il seguente diagramma illustra la relazione tra distanza di lavoro, lunghezza fo
 ```
 
 **Legenda schema:**
-- **Distanza di Lavoro**: Distanza verticale tra la faccia frontale della lente e la superficie del piatto FlexiBowl
+- **Distanza di Lavoro**: Distanza verticale tra la lente della camera e la superficie di lavoro del FlexiBowl
 - **Area di visione**: Zona della superficie del FlexiBowl coperta dal campo visivo della camera
 
 ### Tabella riepilogativa per modello

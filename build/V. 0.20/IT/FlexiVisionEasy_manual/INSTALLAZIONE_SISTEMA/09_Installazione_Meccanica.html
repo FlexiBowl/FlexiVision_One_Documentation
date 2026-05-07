@@ -160,7 +160,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../03_Unboxing_Contenuto.html"><strong>Unboxing e Contenuto della Scatola</strong></a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../27_Support.html"><strong>Contatti</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../27_Support.html"><strong>Contatti e Supporto</strong></a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../27b_Glossario.html"><strong>Glossario</strong></a></li>
@@ -627,7 +627,7 @@ Altrimenti si può avere:</p>
 <p>Il posizionamento preciso e l’allineamento della telecamera sono passaggi critici che influenzano direttamente l’accuratezza della calibrazione e le prestazioni del sistema di picking.</p>
 <section id="distanza-di-lavoro-ottimale">
 <h3>Distanza di lavoro ottimale<a class="headerlink" href="#distanza-di-lavoro-ottimale" title="Link to this heading">#</a></h3>
-<p>La telecamera deve essere montata in modo che la faccia frontale della lente sia posizionata a una distanza specifica (Working Distance) dalla superficie del piatto FlexiBowl.<br />
+<p>La telecamera deve essere montata in modo che la faccia frontale della lente sia posizionata a una distanza specifica (Working Distance) dalla superficie di lavoro del FlexiBowl.<br />
 Per il calcolo dettagliato della distanza ottimale per la vostra applicazione, consultare la sezione dedicata: <a class="reference internal" href="../rif_tecnico_specifiche/05_Calcolo_distanza_ottimale.html#distanza-lavoro"><span class="std std-ref">Calcolo Distanza Ottimale</span></a></p>
 <a class="reference internal image-reference" href="../../../../_shared/media/images/working_distance.JPG"><img alt="Distanza Di Lavoro" class="align-center" src="../../../../_shared/media/images/working_distance.JPG" style="width: 40%;" />
 </a>
@@ -694,7 +694,7 @@ Per il calcolo dettagliato della distanza ottimale per la vostra applicazione, c
 </tr>
 <tr class="row-even"><td><p><strong>Ortogonalità:</strong></p></td>
 <td><ul class="simple">
-<li><p>La camera deve essere montata perfettamente parallela alla superficie del piatto</p></li>
+<li><p>La camera deve essere montata perfettamente parallela alla superficie di lavoro del FlexiBowl</p></li>
 <li><p>Non sono ammesse inclinazioni laterali (tilt) o rotazioni rispetto alla verticale</p></li>
 <li><p>Tolleranza massima di inclinazione: ±1°</p></li>
 </ul>
@@ -949,7 +949,7 @@ Come illustrato (in rosso), due errori tipici sono:</p>
 </td>
 </tr>
 <tr class="row-even"><td><p><strong>3. Orientamento</strong></p></td>
-<td><p>Assicurarsi che la superficie emittente del Toplight sia parallela al piatto del FlexiBowl.</p></td>
+<td><p>Assicurarsi che la superficie emittente del Toplight sia parallela alla superficie di lavoro del FlexiBowl.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>4. Angolo di illuminazione</strong></p></td>
 <td><p>Perpendicolare alla superficie (0° tilt).</p></td>
@@ -1287,7 +1287,7 @@ Come illustrato (in rosso), due errori tipici sono:</p>
     const versions = Array.isArray(manifest && manifest.versions) && manifest.versions.length
       ? manifest.versions
       : inlineVersions;
-    const offlineZipEnabled = true;
+    const offlineZipEnabled = false;
     const offlineZipFileName = 'Offline manual.zip';
     const americanRegions = new Set([
       'AG', 'AR', 'AW', 'BB', 'BL', 'BM', 'BO', 'BQ', 'BR', 'BS', 'BZ', 'CA', 'CL', 'CO', 'CR',

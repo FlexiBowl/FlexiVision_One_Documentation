@@ -160,7 +160,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../03_Unboxing_Contenuto.html"><strong>Unboxing e Contenuto della Scatola</strong></a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../27_Support.html"><strong>Contatti</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../27_Support.html"><strong>Contatti e Supporto</strong></a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../27b_Glossario.html"><strong>Glossario</strong></a></li>
@@ -670,8 +670,10 @@
 <ul class="simple">
 <li><p><strong>FLAT</strong>: Componenti piatti.</p></li>
 <li><p><strong>CYLINDRICAL</strong>: Componenti cilindrici.</p></li>
-<li><p><strong>COMPLEX</strong>: Geometrie articolate o irregolari.</p></li>
+<li><p><strong>COMPLEX</strong>: Geometrie articolate o irregolari</p></li>
 </ul>
+<p><img alt="Flat Cylindrical or Complex" src="../../../_images/flatorcomplex.png" /></p>
+<p><em>Esempi di geometrie: Flat, Cylindrical e Complex.</em></p>
 </td>
 </tr>
 <tr class="row-even"><td><p><strong>9</strong></p></td>
@@ -680,8 +682,22 @@
 <li><p><strong>Overlapping</strong>: I pezzi tendono a sovrapporsi.</p></li>
 <li><p><strong>Not Overlapping</strong>: I pezzi non si sovrappongono.</p></li>
 <li><p><strong>Tangling / Stacking</strong>: I pezzi tendono ad agganciarsi o impilarsi.</p></li>
-<li><p><strong>Not Tangling / Not Stacking</strong> : I pezzi rimangono separati e non si incastrano</p></li>
+<li><p><strong>Not Tangling / Not Stacking</strong>: I pezzi rimangono separati e non si incastrano.</p></li>
 </ul>
+<p><img alt="Overlapping" src="../../../_images/overlapping.gif" /></p>
+<p><em>Not Overlapping: i pezzi non si sovrappongono sulla superficie.</em></p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="Stacking" src="../../../_images/stacking.gif" /></p>
+<p><em>Stacking: i pezzi si impilano.</em></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="Tangling" src="../../../_images/tangling.gif" /></p>
+<p><em>Tangling: i pezzi si agganciano tra loro.</em></p>
+</div>
+</div>
+</div>
 </td>
 </tr>
 </tbody>
@@ -1058,7 +1074,7 @@ Il “Flip” è l’unità che genera l’impulso meccanico per ribaltare i pez
     const versions = Array.isArray(manifest && manifest.versions) && manifest.versions.length
       ? manifest.versions
       : inlineVersions;
-    const offlineZipEnabled = true;
+    const offlineZipEnabled = false;
     const offlineZipFileName = 'Offline manual.zip';
     const americanRegions = new Set([
       'AG', 'AR', 'AW', 'BB', 'BL', 'BM', 'BO', 'BQ', 'BR', 'BS', 'BZ', 'CA', 'CL', 'CO', 'CR',

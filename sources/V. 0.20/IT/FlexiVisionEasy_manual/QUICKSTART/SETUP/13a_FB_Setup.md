@@ -169,19 +169,41 @@ In questa fase si definiscono le caratteristiche hardware del sistema:
 ## **Step 3: Caratterizzazione del Componente**
 
 Il sistema richiede informazioni sulla morfologia dei pezzi per ottimizzare la separazione.
-```{list-table}
+````{list-table}
 * - **8**
   - Selezionare la geometria che meglio descrive il componente:
       * **FLAT**: Componenti piatti.
       * **CYLINDRICAL**: Componenti cilindrici.
-      * **COMPLEX**: Geometrie articolate o irregolari.
+      * **COMPLEX**: Geometrie articolate o irregolari
+
+      ![Flat Cylindrical or Complex](../../../../../_shared/media/images/flatorcomplex.png)
+
+      *Esempi di geometrie: Flat, Cylindrical e Complex.*
+
 * - **9**
   - Definire come i componenti interagiscono tra loro sulla superficie:
       * **Overlapping**: I pezzi tendono a sovrapporsi.
       * **Not Overlapping**: I pezzi non si sovrappongono.
       * **Tangling / Stacking**: I pezzi tendono ad agganciarsi o impilarsi.
-      * **Not Tangling / Not Stacking** : I pezzi rimangono separati e non si incastrano
-```
+      * **Not Tangling / Not Stacking**: I pezzi rimangono separati e non si incastrano.
+
+      ![Overlapping](../../../../../_shared/media/videos/overlapping.gif)
+
+      *Not Overlapping: i pezzi non si sovrappongono sulla superficie.*
+
+      ::::{grid} 2
+      :::{grid-item}
+      ![Stacking](../../../../../_shared/media/videos/stacking.gif)
+
+      *Stacking: i pezzi si impilano.*
+      :::
+      :::{grid-item}
+      ![Tangling](../../../../../_shared/media/videos/tangling.gif)
+
+      *Tangling: i pezzi si agganciano tra loro.*
+      :::
+      ::::
+````
 ## **Step 4: Test degli Accessori**
 ```{list-table}
 * - **10**

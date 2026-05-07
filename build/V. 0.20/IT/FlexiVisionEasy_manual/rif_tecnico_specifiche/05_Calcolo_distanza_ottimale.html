@@ -160,7 +160,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../03_Unboxing_Contenuto.html"><strong>Unboxing e Contenuto della Scatola</strong></a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../27_Support.html"><strong>Contatti</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../27_Support.html"><strong>Contatti e Supporto</strong></a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../27b_Glossario.html"><strong>Glossario</strong></a></li>
@@ -421,7 +421,7 @@
                   
   <section id="calcolo-distanza-di-lavoro-ottimale">
 <span id="distanza-lavoro"></span><h1><strong>Calcolo Distanza di Lavoro Ottimale</strong><a class="headerlink" href="#calcolo-distanza-di-lavoro-ottimale" title="Link to this heading">#</a></h1>
-<p>Questa sezione definisce la distanza di lavoro (Working Distance) raccomandata tra la telecamera e il piatto FlexiBowl, insieme alla conseguente selezione delle lenti necessarie per garantire il corretto Campo Visivo (Field of View, FOV).</p>
+<p>Questa sezione definisce la distanza di lavoro (Working Distance) raccomandata tra la telecamera e la superficie di lavoro del FlexiBowl, insieme alla conseguente selezione delle lenti necessarie per garantire il corretto Campo Visivo (Field of View, FOV).</p>
 <p>La scelta corretta della distanza di lavoro e della lente è fondamentale per:</p>
 <ul class="simple">
 <li><p>Garantire che l’intera superficie utile del FlexiBowl sia visibile</p></li>
@@ -432,7 +432,7 @@
 <hr class="docutils" />
 <section id="distanze-di-lavoro-raccomandate-e-selezione-lenti">
 <h2>Distanze di lavoro raccomandate e selezione lenti<a class="headerlink" href="#distanze-di-lavoro-raccomandate-e-selezione-lenti" title="Link to this heading">#</a></h2>
-<p>La scelta della lente è strettamente dipendente dalla distanza di montaggio raccomandata tra la telecamera e la superficie del piatto FlexiBowl. Mantenere la distanza di lavoro standard garantisce il corretto FOV e minimizza i problemi di distorsione ottica.</p>
+<p>La scelta della lente è strettamente dipendente dalla distanza di montaggio raccomandata tra la telecamera e la superficie di lavoro del FlexiBowl. Mantenere la distanza di lavoro standard garantisce il corretto FOV e minimizza i problemi di distorsione ottica.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Lente già inclusa</strong></p>
@@ -445,7 +445,7 @@
 </a>
 <p><strong>Legenda schema:</strong></p>
 <ul class="simple">
-<li><p><strong>Distanza di Lavoro</strong>: Distanza verticale tra la faccia frontale della lente e la superficie del piatto FlexiBowl</p></li>
+<li><p><strong>Distanza di Lavoro</strong>: Distanza verticale tra la lente della camera e la superficie di lavoro del FlexiBowl</p></li>
 <li><p><strong>Area di visione</strong>: Zona della superficie del FlexiBowl coperta dal campo visivo della camera</p></li>
 </ul>
 </section>
@@ -754,7 +754,7 @@
     const versions = Array.isArray(manifest && manifest.versions) && manifest.versions.length
       ? manifest.versions
       : inlineVersions;
-    const offlineZipEnabled = true;
+    const offlineZipEnabled = false;
     const offlineZipFileName = 'Offline manual.zip';
     const americanRegions = new Set([
       'AG', 'AR', 'AW', 'BB', 'BL', 'BM', 'BO', 'BQ', 'BR', 'BS', 'BZ', 'CA', 'CL', 'CO', 'CR',

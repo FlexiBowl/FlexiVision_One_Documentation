@@ -165,7 +165,7 @@ La messa a fuoco deve garantire nitidezza su **tutta la superficie** del FlexiBo
 Se il centro è nitido ma i bordi sono sfocati:
 - Verificare che l'ottica sia pulita
 - Verificare che la distanza di lavoro sia corretta
-- Verificare che la camera sia perfettamente parallela al piatto
+- Verificare che la camera sia perfettamente parallela alla superficie di lavoro del FlexiBowl
 - Chiudere leggermente il diaframma per aumentare la profondità di campo
 
 Se il problema persiste, potrebbe essere necessario rivedere il montaggio meccanico della camera.
