@@ -86,7 +86,6 @@ La corretta implementazione di FlexiVision One richiede la collaborazione di div
 In tutto il manuale vengono utilizzati banner informativi per evidenziare contenuti importanti:
 
 ```{list-table}
-:widths: 20 80
 :header-rows: 1
 
 * - Tipo

@@ -147,7 +147,7 @@ Per avviare la procedura:
     :::
 
 * - **4**
-  - Cliccare sul pulsante **FlexiBFlexiBowl® owl X Wizard**, si aprirà una pagina di benvenuto al Wizard
+  - Cliccare sul pulsante **FlexiBowl® X Wizard**, si aprirà una pagina di benvenuto al Wizard
 
 * - **5**
   - Cliccare su <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon icon-small">

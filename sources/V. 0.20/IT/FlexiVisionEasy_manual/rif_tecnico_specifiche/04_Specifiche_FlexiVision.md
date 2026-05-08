@@ -529,7 +529,7 @@ L'utilizzo dello Strumento Laser in combinazione con la Griglia di Calibrazione 
 (specifiche_griglia)=
 ## Griglia di calibrazione
 
-```{figure} ../../../../_shared/media/images/Calib_Grid.png
+```{figure} ../../../../_shared/media/images/griglia800.JPG
 :alt: Griglia di Calibrazione
 :align: center
 :width: 50%

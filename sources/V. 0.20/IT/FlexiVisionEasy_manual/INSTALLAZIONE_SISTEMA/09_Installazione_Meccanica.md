@@ -473,11 +473,38 @@ Per dettagli sui collegamenti elettrici, consultare la sezione [Cablaggio e Conn
 ```
 ---
 
-## Layout Completo 
+## Layout Completo
 
-Per facilitare l'integrazione meccanica del sistema, è disponibile il file CAD con il layout completo della disposizione tra FlexiBowl®, Toplight e Camera: [Flexibowl General Layout.STEP](https://arsautomationsrl-my.sharepoint.com/:f:/g/personal/documentation_arsautomation_com/IgBMPLcyTzL8TbeSdjCwp6miAZlpuvrhEkqWnkK4AxLJEHU?e=gXEc2x)
-
-
+```{raw} html
+<div style="
+    border: 2px solid #0d6efd;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    margin: 1rem 0;
+    background-color: #f0f6ff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+">
+    <div>
+        <div style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem;">📐 Flexibowl General Layout.STEP</div>
+        <div style="font-size: 0.95rem; color: #444;">File CAD con il layout completo della disposizione tra FlexiBowl®, Toplight e Camera. Da utilizzare per l'integrazione meccanica del sistema.</div>
+    </div>
+    <a href="https://arsautomationsrl-my.sharepoint.com/:f:/g/personal/documentation_arsautomation_com/IgBMPLcyTzL8TbeSdjCwp6miAZlpuvrhEkqWnkK4AxLJEHU?e=gXEc2x" target="_blank" style="
+        display: inline-block;
+        padding: 0.7rem 1.4rem;
+        background-color: #0d6efd;
+        color: white !important;
+        font-weight: 600;
+        font-size: 1rem;
+        border-radius: 6px;
+        text-decoration: none !important;
+        white-space: nowrap;
+        flex-shrink: 0;
+    ">⬇ Scarica</a>
+</div>
+```
 ---
 (luce_ambientale)=
 ## Schermatura da luce ambientale
