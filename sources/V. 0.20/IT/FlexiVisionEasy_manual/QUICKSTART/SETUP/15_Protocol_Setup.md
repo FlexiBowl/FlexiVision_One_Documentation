@@ -3,20 +3,6 @@
 
 La pagina **Protocol Setup** permette di configurare i parametri che regolano il flusso di comunicazione e lo scambio dati tra il sistema di visione FlexiVision One e il robot. Questi parametri determinano quanti oggetti vengono inviati, come vengono ordinati, e come il sistema gestisce le statistiche e gli stati operativi.
 
-```{note}
-**Posizionamento Protocol Setup nel workflow**
-
-Protocol Setup si configura tipicamente:
-- **Dopo**: Calibrazione robot, creazione modelli
-- **Prima**: Monitoraggio produzione continua
-
-Questo perché:
-- Richiede comprensione del comportamento robot (velocità, tipo gripper)
-- Influenza le statistiche mostrate in Dashboard
-- È l'ultimo step di configurazione prima della produzione vera
-
-Una volta configurato correttamente, raramente richiede modifiche (solo se cambia robot o modalità operativa).
-```
 ---
 
 ## Accesso Protocol Setup
@@ -143,9 +129,9 @@ Una volta configurato correttamente, raramente richiede modifiche (solo se cambi
 * - **By Y Coordinate (Descending)**
   - Ordina per coordinata Y decrescente.
 * - **X Alternating**
-  - Se attivo, il sistema alterna la selezione del componente tra il primo e l'ultimo rilevato sull'asse X. Poiché i due componenti selezionati sono distanti tra loro, si riduce il rischio che un prelievo precedente abbia spostato i pezzi nelle vicinanze, garantendo un pick più sicuro e affidabile.
+  - Il sistema alterna la selezione del componente tra il primo e l'ultimo rilevato sull'asse X. Poiché i due componenti selezionati sono distanti tra loro, si riduce il rischio che un prelievo precedente abbia spostato i pezzi nelle vicinanze, garantendo un pick più sicuro e affidabile.
 * - **Y Alternating**
-  - Se attivo, il sistema alterna la selezione del componente tra il primo e l'ultimo rilevato sull'asse Y. Stesso principio dell'X Alternating: la distanza tra i due punti di prelievo minimizza l'interferenza causata da spostamenti accidentali dei pezzi adiacenti.
+  - Il sistema alterna la selezione del componente tra il primo e l'ultimo rilevato sull'asse Y. Stesso principio dell'X Alternating: la distanza tra i due punti di prelievo minimizza l'interferenza causata da spostamenti accidentali dei pezzi adiacenti.
 ```
 
 ```{tip}
@@ -222,8 +208,8 @@ Questo parametro e cruciale per il calcolo accurato dei **Parts Per Minute (PPM)
 
 Dopo aver configurato i parametri di Protocol Setup:
 
-1. Verificare che tutti i valori siano impostati correttamente
-(. Cliccare su Recipes > Save Recipe
+1. Verificare che tutti i valori siano impostati correttamente  
+2. Cliccare su Recipes > Save Recipe
 3. I parametri vengono salvati nella configurazione sistema
 ```
 

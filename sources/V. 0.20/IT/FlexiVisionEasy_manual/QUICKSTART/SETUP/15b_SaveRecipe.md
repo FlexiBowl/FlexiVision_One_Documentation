@@ -18,12 +18,6 @@ Una volta completati tutti i setup dei componenti, l'ultimo passo prima di proce
     Evitare caratteri speciali o spazi (usare underscore ``_`` al posto degli spazi).
 
 * - **3**
-  - Cliccare su **Save Recipe** per salvare la ricetta
-````
-
-Prima di cliccare su "Save Recipe", scegliere un nome descrittivo.
-```{list-table}
-* - **12**
   - Rinominare la Ricetta duplicata   
     **Convenzioni consigliate:**
     - Nomi che identificano chiaramente il pezzo o l'applicazione
@@ -45,7 +39,11 @@ Prima di cliccare su "Save Recipe", scegliere un nome descrittivo.
 
     Un nome chiaro facilita la gestione quando si hanno molte ricette diverse.
     :::
-```
+
+* - **4**
+  - Cliccare su **Save Recipe** per salvare la ricetta
+````
+
 ```{warning}
 **Backup ricette**
 

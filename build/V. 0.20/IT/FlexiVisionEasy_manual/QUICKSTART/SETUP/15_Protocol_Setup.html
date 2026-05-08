@@ -443,22 +443,6 @@
   <section id="protocol-setup">
 <span id="id1"></span><h1><strong>Protocol Setup</strong><a class="headerlink" href="#protocol-setup" title="Link to this heading">#</a></h1>
 <p>La pagina <strong>Protocol Setup</strong> permette di configurare i parametri che regolano il flusso di comunicazione e lo scambio dati tra il sistema di visione FlexiVision One e il robot. Questi parametri determinano quanti oggetti vengono inviati, come vengono ordinati, e come il sistema gestisce le statistiche e gli stati operativi.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>Posizionamento Protocol Setup nel workflow</strong></p>
-<p>Protocol Setup si configura tipicamente:</p>
-<ul class="simple">
-<li><p><strong>Dopo</strong>: Calibrazione robot, creazione modelli</p></li>
-<li><p><strong>Prima</strong>: Monitoraggio produzione continua</p></li>
-</ul>
-<p>Questo perché:</p>
-<ul class="simple">
-<li><p>Richiede comprensione del comportamento robot (velocità, tipo gripper)</p></li>
-<li><p>Influenza le statistiche mostrate in Dashboard</p></li>
-<li><p>È l’ultimo step di configurazione prima della produzione vera</p></li>
-</ul>
-<p>Una volta configurato correttamente, raramente richiede modifiche (solo se cambia robot o modalità operativa).</p>
-</div>
 <hr class="docutils" />
 <section id="accesso-protocol-setup">
 <h2>Accesso Protocol Setup<a class="headerlink" href="#accesso-protocol-setup" title="Link to this heading">#</a></h2>
@@ -618,10 +602,10 @@
 <td><p>Ordina per coordinata Y decrescente.</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>X Alternating</strong></p></td>
-<td><p>Se attivo, il sistema alterna la selezione del componente tra il primo e l’ultimo rilevato sull’asse X. Poiché i due componenti selezionati sono distanti tra loro, si riduce il rischio che un prelievo precedente abbia spostato i pezzi nelle vicinanze, garantendo un pick più sicuro e affidabile.</p></td>
+<td><p>Il sistema alterna la selezione del componente tra il primo e l’ultimo rilevato sull’asse X. Poiché i due componenti selezionati sono distanti tra loro, si riduce il rischio che un prelievo precedente abbia spostato i pezzi nelle vicinanze, garantendo un pick più sicuro e affidabile.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Y Alternating</strong></p></td>
-<td><p>Se attivo, il sistema alterna la selezione del componente tra il primo e l’ultimo rilevato sull’asse Y. Stesso principio dell’X Alternating: la distanza tra i due punti di prelievo minimizza l’interferenza causata da spostamenti accidentali dei pezzi adiacenti.</p></td>
+<td><p>Il sistema alterna la selezione del componente tra il primo e l’ultimo rilevato sull’asse Y. Stesso principio dell’X Alternating: la distanza tra i due punti di prelievo minimizza l’interferenza causata da spostamenti accidentali dei pezzi adiacenti.</p></td>
 </tr>
 </tbody>
 </table>
@@ -700,8 +684,8 @@
 <p><strong>Salvataggio obbligatorio</strong></p>
 <p>Dopo aver configurato i parametri di Protocol Setup:</p>
 <ol class="arabic simple">
-<li><p>Verificare che tutti i valori siano impostati correttamente
-(. Cliccare su Recipes &gt; Save Recipe</p></li>
+<li><p>Verificare che tutti i valori siano impostati correttamente</p></li>
+<li><p>Cliccare su Recipes &gt; Save Recipe</p></li>
 <li><p>I parametri vengono salvati nella configurazione sistema</p></li>
 </ol>
 </div>
