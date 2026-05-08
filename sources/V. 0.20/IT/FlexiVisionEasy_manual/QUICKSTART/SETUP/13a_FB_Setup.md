@@ -171,6 +171,10 @@ In questa fase si definiscono le caratteristiche hardware del sistema:
 Il sistema richiede informazioni sulla morfologia dei pezzi per ottimizzare la separazione.
 ````{list-table}
 * - **8**
+  - Selezionare la dimensione del componente: 
+      * **<= 250mm**
+      * **> 250mm**
+* - **9**
   - Selezionare la geometria che meglio descrive il componente:
       * **FLAT**: Componenti piatti.
       * **CYLINDRICAL**: Componenti cilindrici.
@@ -180,7 +184,7 @@ Il sistema richiede informazioni sulla morfologia dei pezzi per ottimizzare la s
 
       *Esempi di geometrie: Flat, Cylindrical e Complex.*
 
-* - **9**
+* - **10**
   - Definire come i componenti interagiscono tra loro sulla superficie:
       * **Overlapping**: I pezzi tendono a sovrapporsi.
       * **Not Overlapping**: I pezzi non si sovrappongono.
@@ -206,25 +210,25 @@ Il sistema richiede informazioni sulla morfologia dei pezzi per ottimizzare la s
 ````
 ## **Step 4: Test degli Accessori**
 ```{list-table}
-* - **10**
-  - Selezionare dal menu a tendina se il FlexiBowl® è equipaggiato con il modulo **Air-blow**.
 * - **11**
-  - Cliccare su **TEST Air-blow** per verificare il funzionamento.
+  - Selezionare dal menu a tendina se il FlexiBowl® è equipaggiato con il modulo **Air-blow**.
 * - **12**
-  - Selezionare **USE** per abilitarlo nell'applicazione corrente, altrimenti cliccare su **DON'T USE**.
+  - Cliccare su **TEST Air-blow** per verificare il funzionamento.
 * - **13**
+  - Selezionare **USE** per abilitarlo nell'applicazione corrente, altrimenti cliccare su **DON'T USE**.
+* - **14**
   - Cliccare su **TEST FLIP** per verificare l'effettiva attivazione del percussore.
       Il "Flip" è l'unità che genera l'impulso meccanico per ribaltare i pezzi, è fondamentale per separare, districare o capovolgere i componenti durante il ciclo di alimentazione.
  
       :::{important}
       Se l'impulso non è avvertibile, verificare che l'aria compressa sia collegata e agire sul regolatore di pressione meccanico posto sul pannello di controllo.
       :::
-* - **14**
+* - **15**
   - Al termine del Wizard, cliccando su **FINISH**, il sistema calcolerà automaticamente i parametri: 
     - Parametri di movimento (velocità, accelerazione, angolo)
     - Parametri di scuotimento (shake)
     - Temporizzazioni accessori (flip, blow)
-* - **15**
+* - **16**
   - Sarà quindi possibile affinarli nella dashboard riassuntiva.
 ```
 ```{list-table} Panoramica Parametri

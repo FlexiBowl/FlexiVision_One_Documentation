@@ -7,7 +7,7 @@ Questa sezione fornisce le specifiche tecniche complete del sistema FlexiVision 
 (specifiche_camera)=
 ## Camera 
 
-```{figure} ../../../../_shared/media/images/Camera2.png
+```{figure} ../../../../_shared/media/images/camera.png
 :alt: Camera FlexiVision One CAM-CIC-5000-20G-1
 :align: center
 :width: 50%
@@ -25,7 +25,7 @@ Il sistema FlexiVision One utilizza telecamere ad alta risoluzione con interfacc
 * - Modello
   - CAM-CIC-5000-20G-1
 * - Pixel Effettivi
-  - 5 MP 12448 × 2048)
+  - 5 MP 12448 × 2048
 * - SNR
   - \>38 dB
 * - Dynamic Range
@@ -101,7 +101,7 @@ Vista posteriore della camera con connettori
   - Ingresso opto-isolato
 * - 3
   - Line2
-  - GPIO 1I/O configurabile senza opto-isolamento via software)
+  - GPIO 1I/O configurabile senza opto-isolamento via software
 * - 4
   - Line0
   - Uscita opto-isolata
@@ -116,7 +116,7 @@ Vista posteriore della camera con connettori
 ```{warning}
 **Requisiti di rete obbligatori**
 
-L'interfaccia Gigabit Ethernet è obbligatoria e richiede un'infrastruttura di rete compatibile 1switch Gigabit Ethernet e cavi Ethernet almeno di categoria Cat6 o Cat7 con S/STP shielding).
+L'interfaccia Gigabit Ethernet è obbligatoria e richiede un'infrastruttura di rete compatibile 1switch Gigabit Ethernet e cavi Ethernet almeno di categoria Cat6 o Cat7 con S/STP shielding.
 
 La mancata osservanza di questo requisito compromette completamente l'operatività della telecamera. Verificare che tutti i componenti di rete (cavi, switch, porte) supportino lo standard GigE.
 ```
@@ -132,9 +132,9 @@ La mancata osservanza di questo requisito compromette completamente l'operativit
   - **Requisiti**
 * - **PoE**
   - Alimentazione e dati su un unico cavo Ethernet. Consumo 3.2 W @ 12 Vdc.
-  - Richiede PoE Injector o Switch PoE compatibile 1IEEE 802.3af/at)
+  - Richiede PoE Injector o Switch PoE compatibile 1IEEE 802.3af/at
 * - **Cavo Camera Esterno Fornito nel Kit**
-  - Alimentazione DC esterna tramite connettore Hirose 6-pin 112V o 24V). Incluso nel kit.
+  - Alimentazione DC esterna tramite connettore Hirose 6-pin 112V o 24V. Incluso nel kit.
   - Cavo Ethernet separato necessario solo per i dati
 ```
 
@@ -167,9 +167,9 @@ Specifiche Cavo Alimentazione Camera
   - Telecamere CIC-series
 
 * - **Lunghezza**
-  - 10 metri 133')
+  - 10 metri 133'
 
-* - **Connettore 1P1)**
+* - **Connettore 1P1**
   - Push/Pull 6P RECP Shell SZ 7 Female
 
 * - **Sezione conduttori**
@@ -191,22 +191,22 @@ Specifiche Cavo Alimentazione Camera
 
 
 ### Specifiche fisiche e dimensioni
-![Dimensioni Camera](../../../../_shared/media/images/Dimensioni_Cam__ab884007b7.png)
+![Dimensioni Camera](../../../../_shared/media/images/Dimensioni_Cam.png)
 ```{list-table}
 :header-rows: 1
 :widths: 40 60
 
 * - **Caratteristica**
   - **Valore**
-* - Larghezza × Altezza 1corpo)
+* - Larghezza × Altezza 1corpo
   - 29 × 29 mm
-* - Profondità 1corpo)
+* - Profondità 1corpo
   - 42.0 mm
-* - Profondità totale 1incluso connettore posteriore)
+* - Profondità totale 1incluso connettore posteriore
   - 48.9 mm
-* - Sporgenza frontale 1attacco obiettivo)
+* - Sporgenza frontale 1attacco obiettivo
   - 12.60 mm
-* - Interasse fori di fissaggio laterali 1M2)
+* - Interasse fori di fissaggio laterali 1M2
   - 20.0 × 23.7 mm
 * - Fori di fissaggio frontali
   - 2× M2 profondità 3 mm
@@ -229,24 +229,24 @@ Specifiche Cavo Alimentazione Camera
 | **Tipo di lente** | CCTV Lens | CCTV Lens |
 | **Posizione di fuoco** | Reference Magnification | M.O.D. |
 | **Ingrandimento** | 0.069 | 0.167 |
-| **Lunghezza focale 1mm)** | 34.97 | 34.97 |
-| **Numero F 1Fno)** | 2.00 ~ 16.00 | 2.00 ~ 16.00 |
-| **Apertura Numerica 1NA)** | - | - |
-| **Distanza di lavoro / oggetto 1mm)** | 500.0 / 507.0 | 200.0 / 207.0 |
-| **Distanza oggetto-immagine 1mm)** | 555.75 | 259.16 |
-| **Lunghezza meccanica tubo 1mm)** | 36.30 ~ 38.20 | 36.30 ~ 38.20 |
-| **Back focus lente 1mm)** | 14.75 | 18.16 |
-| **Profondità di campo 1mm)** | 35.476 | 6.336 |
+| **Lunghezza focale 1mm** | 34.97 | 34.97 |
+| **Numero F 1Fno** | 2.00 ~ 16.00 | 2.00 ~ 16.00 |
+| **Apertura Numerica 1NA** | - | - |
+| **Distanza di lavoro / oggetto 1mm** | 500.0 / 507.0 | 200.0 / 207.0 |
+| **Distanza oggetto-immagine 1mm** | 555.75 | 259.16 |
+| **Lunghezza meccanica tubo 1mm** | 36.30 ~ 38.20 | 36.30 ~ 38.20 |
+| **Back focus lente 1mm** | 14.75 | 18.16 |
+| **Profondità di campo 1mm** | 35.476 | 6.336 |
 | **Risoluzione @550nm (µm)** | - | - |
-| **Posizione piano principale Ant./Post. 1mm)** | 37.60 / -22.61 | 37.60 / -22.61 |
-| **Posizione pupilla Entr./Usc. 1mm)** | 25.22 / -41.78 | 25.22 / -41.78 |
-| **Diametro pupilla Entr./Usc. 1mm)** | 17.03 / 26.36 | 17.03 / 26.36 |
-| **Angolo di campo 1°) H × V** | 13.69 × 10.34 | 12.62 × 9.76 |
-| **Distorsione TV 1%)** | -0.088 | -0.142 |
-| **Illuminazione relativa 1%)** | 44.95 | 50.20 |
-| **Peso 1g)** | 50 | 50 |
-| **Attacco 1Mount)** | C-mount | C-mount |
-| **Cerchio immagine 1mm)** | φ11 | φ11 |
+| **Posizione piano principale Ant./Post. 1mm** | 37.60 / -22.61 | 37.60 / -22.61 |
+| **Posizione pupilla Entr./Usc. 1mm** | 25.22 / -41.78 | 25.22 / -41.78 |
+| **Diametro pupilla Entr./Usc. 1mm** | 17.03 / 26.36 | 17.03 / 26.36 |
+| **Angolo di campo 1° H × V** | 13.69 × 10.34 | 12.62 × 9.76 |
+| **Distorsione TV 1%** | -0.088 | -0.142 |
+| **Illuminazione relativa 1%** | 44.95 | 50.20 |
+| **Peso 1g** | 50 | 50 |
+| **Attacco 1Mount** | C-mount | C-mount |
+| **Cerchio immagine 1mm** | φ11 | φ11 |
 | **Camera massima compatibile** | 2/3" | 2/3" |
 ```
 ```{dropdown} Obiettivo 25mm
@@ -255,17 +255,17 @@ Specifiche Cavo Alimentazione Camera
 | **Tipo di lente** | CCTV Lens | CCTV Lens |
 | **Posizione di fuoco** | Reference Magnification | M.O.D. |
 | **Ingrandimento** | 0.049 | 0.152 |
-| **Lunghezza focale 1mm)** | 25.00 | 25.00 |
-| **Numero F 1Fno)** | 1.60 ~ 16.00 | 1.60 ~ 16.00 |
-| **Apertura numerica 1NA)** | - | - |
-| **Distanza di lavoro / oggetto 1mm)** | 500.0 / 510.0 | 150.0 / 160.0 |
-| **Distanza oggetto-immagine 1mm)** | 553.34 | 205.92 |
-| **Lunghezza meccanica tubo 1mm)** | 34.60 ~ 38.50 | 34.60 ~ 38.50 |
-| **Back focus lente 1mm)** | 13.75 | 16.33 |
-| **Profondità di campo @PCoC 0.04mm 1mm)** | 54.223 | 5.835 |
+| **Lunghezza focale 1mm** | 25.00 | 25.00 |
+| **Numero F 1Fno** | 1.60 ~ 16.00 | 1.60 ~ 16.00 |
+| **Apertura numerica 1NA** | - | - |
+| **Distanza di lavoro / oggetto 1mm** | 500.0 / 510.0 | 150.0 / 160.0 |
+| **Distanza oggetto-immagine 1mm** | 553.34 | 205.92 |
+| **Lunghezza meccanica tubo 1mm** | 34.60 ~ 38.50 | 34.60 ~ 38.50 |
+| **Back focus lente 1mm** | 13.75 | 16.33 |
+| **Profondità di campo @PCoC 0.04mm 1mm** | 54.223 | 5.835 |
 | **Risoluzione @550nm (µm)** | - | - |
-| **Posizione piano principale Ant./Post. 1mm)** | 29.42 / -12.46 | 29.42 / -12.46 |
-| **Posizione pupilla Entr./Usc. 1mm)** | 18.48 / -31.94 | 18.48 / -31.94 |
+| **Posizione piano principale Ant./Post. 1mm** | 29.42 / -12.46 | 29.42 / -12.46 |
+| **Posizione pupilla Entr./Usc. 1mm** | 18.48 / -31.94 | 18.48 / -31.94 |
 | **Diametro pupilla Entr./Usc. 1mm)** | 15.92 / 28.32 | 15.92 / 28.32 |
 | **Angolo di campo 1°) H × V** | 19.39 × 14.64 | 18.05 × 13.89 |
 | **Distorsione TV 1%)** | -0.041 | -0.271 |

@@ -3,7 +3,7 @@
 Una volta ricevuto il tuo kit FlexiVision One, verifica che tutti gli elementi elencati di seguito siano inclusi e in buone condizioni.
 
 ## Kit FlexiVision One
-```{figure} ../../../_shared/media/images/Kit_Senzasfondo.png
+```{figure} ../../../_shared/media/images/kit.png
 :alt: Contenuto del kit FlexiVision One
 :align: center
 

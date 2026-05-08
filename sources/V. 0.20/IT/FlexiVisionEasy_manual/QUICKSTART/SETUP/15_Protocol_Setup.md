@@ -58,8 +58,10 @@ La pagina **Protocol Setup** permette di configurare i parametri che regolano il
 
 * - **Valori tipici:**
   - 
-    - **1-3 oggetti**: Configurazione più comune per robot con picking singolo, doppio o triplo
-    - **4-8 oggetti**: Per sistemi con buffer o robot veloci che possono gestire code
+    - **1** : Configurazione più comune per robot con picking singolo
+    - **2** : Configurazione per robot con picking doppio
+    - **3** : Configurazione per robot con picking triplo
+    - **4-8 oggetti**: Per sistemi con tracking circolare
     - **>8 oggetti**: Raramente necessario, può saturare la comunicazione
 
     :::{tip}
