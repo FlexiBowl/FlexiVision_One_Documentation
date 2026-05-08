@@ -45,7 +45,7 @@
 * - **Lente**
   - Componente ottico della camera. Deve essere avvitata a contatto metal-metal; la focale (es. 16mm, 25mm) determina il campo visivo alla distanza di lavoro.
 * - **Model (Modello)**
-  - Template geometrico del componente creato in fase di training. Ogni ricetta supporta fino a 8 modelli.
+  - Template geometrico del componente creato in fase di training. Ogni ricetta supporta fino a 8 modelli per ogni FlexiBowl®.
 * - **Origine Modello**
   - Punto di riferimento sul componente usato come centro del sistema di coordinate per il calcolo delle posizioni. Corrisponde tipicamente al TCP di presa.
 * - **Ortogonalità**
@@ -67,13 +67,11 @@
 * - **Simulatori Ingombro Pinza**
   - Oggetti fisici posizionati attorno al componente durante il training per escludere dal modello le aree occupate dalla pinza in fase di prelievo.
 * - **Steps**
-  - Numero di cicli di vibrazione della tramoggia necessari affinché i componenti raggiungano l'area di prelievo. Parametro critico per la sincronizzazione con il ciclo robot.
+  - Numero di movimentazioni del FlexiBowl® necessari affinché i componenti, dall'area di visione, raggiungano l'area di scarico della tramoggia. 
 * - **Subnet**
-  - FlexiBowl® e VisionController devono condividere la stessa subnet (es. 192.168.1.x) per la comunicazione TCP/IP.
+  - Sottorete che FlexiBowl® e VisionController devono condividere (es. 192.168.1.x) per la comunicazione TCP/IP.
 * - **Synchronize Parameters**
-  - Comando software che trasferisce i parametri dal VisionController al FlexiBowl®. Obbligatorio dopo ogni modifica per rendere effettive le impostazioni.
-* - **Target di Calibrazione**
-  - Pattern geometrico stampato (cerchi o scacchiera) con dimensioni note e superficie piana, usato per la calibrazione camera.
+  - Comando software che trasferisce i parametri al FlexiBowl®. Obbligatorio dopo ogni modifica per rendere effettive le impostazioni.
 * - **Timeout**
   - Tempo massimo di attesa per una risposta in comunicazione. Al superamento viene generato un errore.
 * - **Tilt**

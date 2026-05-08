@@ -471,6 +471,12 @@ Nel caso in cui il Toplight venisse fissato con delle staffe:
 ```{note}
 Per dettagli sui collegamenti elettrici, consultare la sezione [Cablaggio e Connessioni](10_Cablaggio_Connessioni.md).
 ```
+---
+
+## Layout Completo 
+
+Per facilitare l'integrazione meccanica del sistema, è disponibile il file CAD con il layout completo della disposizione tra FlexiBowl®, Toplight e Camera: [Flexibowl General Layout.STEP](https://arsautomationsrl-my.sharepoint.com/:u:/g/personal/lorenzop_arsautomation_com/IQBytqPaY-52TbXEW4e6KTL4Afl4N2UvpJ4aQdxE1AmUFtM?e=pDCgVW)
+
 
 ---
 (luce_ambientale)=

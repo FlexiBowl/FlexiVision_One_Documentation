@@ -142,10 +142,9 @@ Prima di considerare la ricetta completata, continua con:
 - [Configurazione della Tramoggia](confighopper)
 - [Monitoraggio Applicazione](dashboard)
 ```{seealso}
-- [Troubleshooting](troubleshooting)
+Per qualsiasi problema nei passaggi appena completati consultare [Risoluzione Problemi](troubleshooting)
 ```
 
 ---
 
 
-[Back To Top]()

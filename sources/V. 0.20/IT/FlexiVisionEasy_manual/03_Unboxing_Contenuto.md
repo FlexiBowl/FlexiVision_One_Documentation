@@ -96,7 +96,6 @@ A seconda della tua applicazione, i seguenti accessori opzionali potrebbero esse
 | Backlight | [Link alla Sezione](backlight) |
 | Filtro IR | [Link alla Sezione](filtroIR) |
 | Cavo Ethernet |  5 m / 10 m |
-| Camera bracket stand | [Link alla Sezione](supporto) |
 | Switch Ethernet | [Link alla sezione](switch) |
 | Display | [Link alla Sezione](display) |
 

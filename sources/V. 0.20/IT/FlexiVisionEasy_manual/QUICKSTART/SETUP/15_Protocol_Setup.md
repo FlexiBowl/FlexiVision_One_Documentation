@@ -143,9 +143,9 @@ Una volta configurato correttamente, raramente richiede modifiche (solo se cambi
 * - **By Y Coordinate (Descending)**
   - Ordina per coordinata Y decrescente.
 * - **X Alternating**
-  - 
+  - Se attivo, il sistema alterna la selezione del componente tra il primo e l'ultimo rilevato sull'asse X. Poiché i due componenti selezionati sono distanti tra loro, si riduce il rischio che un prelievo precedente abbia spostato i pezzi nelle vicinanze, garantendo un pick più sicuro e affidabile.
 * - **Y Alternating**
-  - 
+  - Se attivo, il sistema alterna la selezione del componente tra il primo e l'ultimo rilevato sull'asse Y. Stesso principio dell'X Alternating: la distanza tra i due punti di prelievo minimizza l'interferenza causata da spostamenti accidentali dei pezzi adiacenti.
 ```
 
 ```{tip}

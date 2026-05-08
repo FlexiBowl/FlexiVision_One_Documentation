@@ -40,10 +40,10 @@ Per questo motivo, è diviso in delle macro-sezioni con destinatari e finalità 
   - [**RIFERIMENTO TECNICO E SPECIFICHE**](specifiche_tecniche)
 
 * - Installare i componenti, cablare il sistema, configurare la rete o calibrare camera/robot
-  - [**INSTALLAZIONE DEL SISTEMA**](Installazione_Meccanica) e [**QUICKSTART**](quickstart)
+  - [**INSTALLAZIONE DEL SISTEMA**](Installazione_Meccanica) e [**QUICKSTART**](setupcomponenti)
 
 * - Programmare un nuovo modello pezzo o configurare il sistema di alimentazione
-  - [**QUICKSTART**](quickstart)
+  - [**QUICKSTART**](setupcomponenti)
 
 * - Risolvere problemi o richiedere assistenza
   - [**TROUBLESHOOTING**](troubleshooting) e [**SUPPORT**](support)

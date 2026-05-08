@@ -14,14 +14,14 @@ Il rispetto di tutte le norme di sicurezza riportate in questa sezione è obblig
 
 ### Integrazione con sistemi robotizzati
 
-#### **Requisiti di sicurezza della cella**
 
-```{warning}
-FlexiVision One opera in stretta connessione con sistemi robotizzati di terze parti. L'utente deve garantire che l'area di lavoro sia dotata di tutte le misure di sicurezza necessarie imposte dalle normative pertinenti
+```{warning} **Requisiti di sicurezza della cella**  
+
+FlexiVision One opera in stretta connessione con sistemi robotizzati di terze parti. L'utente deve garantire che l'area di lavoro sia dotata di tutte le misure di sicurezza necessarie imposte dalle normative pertinenti.
 ```
-#### **Attenzione durante l'operatività**
 
-```{warning}
+
+```{warning} **Attenzione durante l'operatività**    
 
 Durante il funzionamento del sistema, tenere sempre conto di:
 
@@ -33,9 +33,9 @@ Durante il funzionamento del sistema, tenere sempre conto di:
 
 ### Precauzioni generali prima degli interventi
 
-#### **Disconnessione alimentazioni**
 
-```{warning}
+```{warning} **Disconnessione alimentazioni**  
+
 Prima di eseguire qualsiasi intervento di manutenzione, modifica o ispezione sul sistema, assicurarsi sempre che:
 
 - Tutte le fonti di alimentazione elettrica siano disconnesse (VisionController, FlexiBowl®, Camera, Illuminatore)
@@ -43,23 +43,23 @@ Prima di eseguire qualsiasi intervento di manutenzione, modifica o ispezione sul
 - I cavi di collegamento siano fisicamente scollegati
 - Il robot sia in modalità di sicurezza o completamente spento
 ```
-#### **Procedure di sicurezza**
 
-```{warning}
+
+```{warning} **Procedure di sicurezza**    
 
 Non affidarsi esclusivamente agli interruttori: utilizzare procedure di lockout/tagout (LOTO) quando disponibili.
 ```
 
 ### Modifiche e manomissioni
 
-#### **Divieto di modifiche non autorizzate**
 
-```{warning}
+```{warning} **Divieto di modifiche non autorizzate**    
+
 Non modificare mai il prodotto o i suoi componenti senza espressa autorizzazione scritta di ARS S.r.l.
 ```
-#### **Conseguenze delle modifiche**
 
-```{warning}
+```{warning} **Conseguenze delle modifiche**    
+
 Modifiche non autorizzate possono:
 
 - Causare malfunzionamenti del sistema
@@ -70,13 +70,96 @@ Modifiche non autorizzate possono:
 
 ---
 
+## Predisposizioni a carico del cliente
+
+Fatti salvi eventuali accordi contrattuali diversi, le seguenti predisposizioni sono **normalmente a carico del Cliente**:
+
+````{list-table}
+:header-rows: 1
+:widths: 25 75
+
+* - Categoria
+  - Descrizione
+* - **Locali**
+  - Opere murarie, fondazioni, canalizzazioni e illuminazione eventualmente richieste.
+* - **Impianti elettrici**
+  - Fino ai punti di alimentazione della macchina, in conformità alle norme vigenti nel paese di installazione. Le specifiche tecniche sono contenute nel contratto di vendita. Il Costruttore declina ogni responsabilità se il cliente non riesce a garantirle.
+* - **Alimentazione elettrica**
+  - Compreso il conduttore di messa a terra, secondo le caratteristiche e tolleranze specificate nel presente manuale.
+* - **Servizi ausiliari**
+  - Adeguati alle esigenze della macchina.
+* - **Utensili e materiali di consumo**
+  - Occorrenti per il montaggio e l'installazione.
+* - **Lubrificanti**
+  - Necessari per la messa in moto della macchina.
+* - **Alimentazione pneumatica**
+  - Adeguata come da specifica nel paragrafo "Dati tecnici".
+* - **Movimentazione**
+  - Mezzi di sollevamento e movimentazione adeguati.
+````
+
+---
+
+## Condizioni ambientali ammesse
+
+Il sistema è progettato per uso **esclusivamente interno**, al riparo da agenti atmosferici e aggressivi. L'ambiente non deve essere classificato ATEX.
+
+````{list-table}
+:header-rows: 1
+:widths: 30 70
+
+* - Parametro
+  - Limite ammesso
+* - **Temperatura ambiente**
+  - 5 ÷ 40 °C
+* - **Umidità relativa**
+  - 5 – 90% (senza condensa), variazione max 0,005 p.u./h
+* - **Illuminazione ambiente**
+  - Luce a neon
+* - **Polveri**
+  - Assenza di polveri eccessive, abrasive o combustibili
+* - **Vapori e gas**
+  - Assenza di fumi corrosivi, vapori oleosi, miscele esplosive
+* - **Vibrazioni e urti**
+  - Assenza di vibrazioni, urti o scosse anomale
+* - **Variazioni termiche**
+  - Massimo 5K/h
+* - **Altre esclusioni**
+  - Aria salmastra, intemperie, radiazioni nucleari, condizioni non usuali di stoccaggio
+````
+
+````{warning}
+Condizioni ambientali diverse da quelle specificate possono causare gravi danni alla macchina e far decadere la garanzia.
+````
+
+````{important}
+La superficie di lavoro deve essere sufficientemente illuminata. In presenza di zone d'ombra o dislivelli, è cura dell'utente predisporre dispositivi di illuminazione adeguati.
+````
+
+La macchina è progettata e costruita per funzionare, in sicurezza, nelle seguenti condizioni ambientali:
+
+| Condizioni ambientali ammesse | |
+|---|---|
+| **Temperatura** ambiente | 5 ÷ 40 °C |
+| **Range di umidità** | 5 – 90% (senza condensa) |
+| **Illuminazione ambiente** | Luce a neon |
+
+```{warning}
+Condizioni ambientali diverse da quelle specificate possono causare gravi danni alla macchina. Il posizionamento della macchina in ambienti non corrispondenti a quanto indicato fa decadere la garanzia per gli organi da sostituire.
+```
+
+```{important}
+La superficie di lavoro deve essere sufficientemente illuminata. Nel caso in cui sul posto di lavoro si riscontrino zone d'ombra o dislivelli, sarà cura dell'utente predisporre dispositivi di illuminazione adeguati.
+```
+
+---
+
 ## Condizioni ambientali e protezione
 
 ### Protezione da liquidi
 
-#### **Rischio contatto con liquidi**
 
-```{warning}
+```{warning} **Rischio contatto con liquidi**    
 
 Non utilizzare il prodotto in ambienti dove il VisionController, la camera o altri componenti elettronici possano entrare in contatto con:
 
@@ -85,27 +168,27 @@ Non utilizzare il prodotto in ambienti dove il VisionController, la camera o alt
 - Condensa o umidità eccessiva
 - Polveri conduttive
 ```
-#### **Soluzioni per ambienti critici**
 
-```{note}
+```{note} **Soluzioni per ambienti critici**    
 
 Se il sistema deve operare in ambienti con presenza di liquidi, prevedere adeguate protezioni (custodie IP65 o superiori) e consultare il servizio tecnico ARS per soluzioni personalizzate.
 ```
 
 ### Temperature operative
 
-#### **Superfici calde - Temperature massime**
 
-```{warning}
+```{warning} **Superfici calde - Temperature massime**    
+
 In condizioni di utilizzo intenso o ambienti caldi, alcuni componenti del sistema possono raggiungere temperature elevate:
 
 - VisionController: fino a 50°C sulle superfici esterne
 - Illuminatore LED: fino a 40°C sulla superficie frontale
 - Camera industriale: fino a 50°C sul corpo metallico
 ```
-#### **Responsabilità del cliente**
 
-```{warning}
+
+```{warning} **Responsabilità del cliente**    
+
 È responsabilità del cliente:
 
 - Documentare i rischi termici nella propria valutazione dei rischi
@@ -116,22 +199,18 @@ In condizioni di utilizzo intenso o ambienti caldi, alcuni componenti del sistem
 
 ### Condizioni ambientali per installazione e stoccaggio
 
-#### **Requisiti ambientali - Tabella di riferimento**
-
-```{note}
+```{note} **Requisiti ambientali - Tabella di riferimento**    
 
 Per garantire durata e affidabilità, il VisionController e la camera devono essere utilizzati e conservati nelle seguenti condizioni:
 
 | Parametro | Condizioni operative | Condizioni di stoccaggio |
 |-----------|---------------------|--------------------------|
-| **Temperatura** | +1°C ÷ +50°C | -20°C ÷ +65°C |
+| **Temperatura** | +5°C ÷ +40°C | +5°C ÷ +40°C |
 | **Umidità relativa** | <90% (senza condensa) | <90% (senza condensa) |
-
-
 ```
-#### **Precauzioni aggiuntive per l'ambiente**
 
-```{note}
+```{note} **Precauzioni aggiuntive per l'ambiente**    
+
 Per preservare l'integrità dei componenti:
 
 - Evitare l'esposizione diretta alla luce solare
@@ -146,33 +225,29 @@ Per preservare l'integrità dei componenti:
 
 ### Ricezione e ispezione
 
-#### **Ispezione all'arrivo**
+```{note} **Ispezione all'arrivo**    
 
-```{note}
 Alla ricezione del prodotto, prima di firmare la bolla di consegna:
 
 1. **Ispezione esterna dell'imballaggio**: Verificare l'integrità della scatola e dell'imballo esterno. Controllare la presenza di eventuali segni di urti, schiacciamenti o bagnature.
-
 2. **Verifica contenuto**: Confrontare il contenuto con la nota di consegna. Verificare la presenza di tutti i componenti ordinati.
 ```
 
-#### **In caso di danni o discrepanze**
+```{note} **In caso di danni o discrepanze**    
 
-```{note}
 Se si riscontrano problemi:
 
 - NON firmare la ricevuta come "conforme"
 - Annotare i danni sul documento di trasporto
 - Fotografare eventuali danni evidenti
-- Contattare immediatamente il servizio assistenza ARS: 
-    [service@arsautomation.com](mailto:service@arsautomation.com) 
-    [us.service@arsautomation.com](mailto:us.service@arsautomation.com) se si contatta dall'America
+- Contattare immediatamente il servizio assistenza ARS:
+  [service@arsautomation.com](mailto:service@arsautomation.com)
+  [us.service@arsautomation.com](mailto:us.service@arsautomation.com) se si contatta dall'America
 ```
 
 ### Movimentazione e stoccaggio
-Per prevenire danni durante trasporto e stoccaggio:
 
-#### **Trasporto**
+Per prevenire danni durante trasporto e stoccaggio:
 
 ```{tip}
 **Durante il trasporto:**
@@ -181,7 +256,6 @@ Per prevenire danni durante trasporto e stoccaggio:
 - Utilizzare carrelli o transpallet adeguati al peso
 - Evitare sbalzi termici improvvisi
 ```
-#### **Stoccaggio**
 
 ```{tip}
 **Durante lo stoccaggio:**
@@ -190,7 +264,6 @@ Per prevenire danni durante trasporto e stoccaggio:
 - Non salire o appoggiarsi sull'imballaggio
 - Rispettare le condizioni ambientali indicate nella tabella precedente
 ```
-#### **Disimballaggio**
 
 ```{tip}
 **Durante il disimballaggio:**
@@ -203,21 +276,7 @@ Per prevenire danni durante trasporto e stoccaggio:
 
 ## Smaltimento e fine vita
 
-### **Smaltimento responsabile**
-
 ```{warning}
-
 Quando il prodotto raggiunge la fine del suo ciclo di vita, deve essere smaltito in conformità con le normative vigenti relative ai rifiuti di apparecchiature elettriche ed elettroniche (RAEE/WEEE).
 ```
-### **Componenti soggetti a smaltimento speciale**
-
-```{note}
-**Componenti soggetti a smaltimento speciale:**
-- Schede elettroniche (VisionController): RAEE categoria 6
-- Camera industriale: RAEE categoria 6
-- Illuminatori a LED: RAEE categoria 5
-- Cavi e connettori: smaltimento con materiali elettrici
-```
----
-
 

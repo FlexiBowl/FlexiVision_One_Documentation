@@ -267,7 +267,6 @@
 <li class="toctree-l2"><a class="reference internal" href="TROUBLESHOOTING/26b_Installazione_Mecc.html"><strong>Installazione Meccanica</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="TROUBLESHOOTING/26c_Cablaggio_Connessioni.html"><strong>Cablaggio e Connessioni</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="TROUBLESHOOTING/26d_Conf_Iniziale.html"><strong>Setup Iniziale</strong></a></li>
-
 <li class="toctree-l2"><a class="reference internal" href="TROUBLESHOOTING/26g_Creazione_Ricette_Modelli.html"><strong>Creazione Ricette e modelli</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="TROUBLESHOOTING/26h_FlexiBowl_Wizard.html"><strong>FlexiBowl Wizard</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="TROUBLESHOOTING/26i_Conf_Tramoggia.html"><strong>Configurazione Tramoggia</strong></a></li>
@@ -491,7 +490,7 @@
 <td><p>Componente ottico della camera. Deve essere avvitata a contatto metal-metal; la focale (es. 16mm, 25mm) determina il campo visivo alla distanza di lavoro.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Model (Modello)</strong></p></td>
-<td><p>Template geometrico del componente creato in fase di training. Ogni ricetta supporta fino a 8 modelli.</p></td>
+<td><p>Template geometrico del componente creato in fase di training. Ogni ricetta supporta fino a 8 modelli per ogni FlexiBowl®.</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Origine Modello</strong></p></td>
 <td><p>Punto di riferimento sul componente usato come centro del sistema di coordinate per il calcolo delle posizioni. Corrisponde tipicamente al TCP di presa.</p></td>
@@ -524,36 +523,33 @@
 <td><p>Oggetti fisici posizionati attorno al componente durante il training per escludere dal modello le aree occupate dalla pinza in fase di prelievo.</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Steps</strong></p></td>
-<td><p>Numero di cicli di vibrazione della tramoggia necessari affinché i componenti raggiungano l’area di prelievo. Parametro critico per la sincronizzazione con il ciclo robot.</p></td>
+<td><p>Numero di movimentazioni del FlexiBowl® necessari affinché i componenti, dall’area di visione, raggiungano l’area di scarico della tramoggia.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Subnet</strong></p></td>
-<td><p>FlexiBowl® e VisionController devono condividere la stessa subnet (es. 192.168.1.x) per la comunicazione TCP/IP.</p></td>
+<td><p>Sottorete che FlexiBowl® e VisionController devono condividere (es. 192.168.1.x) per la comunicazione TCP/IP.</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Synchronize Parameters</strong></p></td>
-<td><p>Comando software che trasferisce i parametri dal VisionController al FlexiBowl®. Obbligatorio dopo ogni modifica per rendere effettive le impostazioni.</p></td>
+<td><p>Comando software che trasferisce i parametri al FlexiBowl®. Obbligatorio dopo ogni modifica per rendere effettive le impostazioni.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Target di Calibrazione</strong></p></td>
-<td><p>Pattern geometrico stampato (cerchi o scacchiera) con dimensioni note e superficie piana, usato per la calibrazione camera.</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Timeout</strong></p></td>
+<tr class="row-odd"><td><p><strong>Timeout</strong></p></td>
 <td><p>Tempo massimo di attesa per una risposta in comunicazione. Al superamento viene generato un errore.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Tilt</strong></p></td>
+<tr class="row-even"><td><p><strong>Tilt</strong></p></td>
 <td><p>Inclinazione della camera rispetto al piano orizzontale. Valore ammesso: 0° ± 1°.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Toplight</strong></p></td>
+<tr class="row-odd"><td><p><strong>Toplight</strong></p></td>
 <td><p>Illuminatore LED posizionato sopra il disco che garantisce illuminazione uniforme dall’alto. Alimentazione: 24V DC.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Training</strong></p></td>
+<tr class="row-even"><td><p><strong>Training</strong></p></td>
 <td><p>Processo di creazione del modello di riconoscimento tramite selezione delle caratteristiche distintive del componente da un’immagine di riferimento.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Trigger</strong></p></td>
+<tr class="row-odd"><td><p><strong>Trigger</strong></p></td>
 <td><p>Segnale di avvio dell’acquisizione immagine. Può essere software (temporizzato) o hardware (segnale elettrico esterno).</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Vision Result</strong></p></td>
+<tr class="row-even"><td><p><strong>Vision Result</strong></p></td>
 <td><p>Output del sistema di visione: coordinate (X, Y, RZ) e score del componente rilevato, trasmesso al robot per il prelievo.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>VisionController</strong></p></td>
+<tr class="row-odd"><td><p><strong>VisionController</strong></p></td>
 <td><p>Computer industriale che esegue FlexiVision One, gestisce le camere, elabora le immagini e comunica con FlexiBowl® e robot.</p></td>
 </tr>
 </tbody>

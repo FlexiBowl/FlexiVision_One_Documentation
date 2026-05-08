@@ -15,7 +15,7 @@ Se FlexiBowl®, robot o camera non sono raggiungibili:
 Per dettagli sulla configurazione di rete, vedere [Cablaggio e Connessioni](cablaggio).
 ```
 (troubleshooting_cam_setup)=
-## Troubleshooting per la sezione Camera Setup 
+## **Troubleshooting per la sezione Camera Setup**
 
 ```{warning}
 **Problemi di messa a fuoco**
@@ -262,9 +262,9 @@ Il parametro **Packet Size** definisce la dimensione dei pacchetti dati trasmess
 ```
 
 (troubleshooting_calib_cam)=
-# **Calibrazione Camera**
+## **Calibrazione Camera**
 
-## **Pattern non rilevato**
+### Pattern non rilevato
 
 ```{warning}
 **Errore: "Unable to detect calibration pattern"**
@@ -279,7 +279,7 @@ Causa: Il software non riesce a identificare il pattern della griglia.
 - Verificare che la griglia sia quella corretta (quadrati, non cerchi o altri pattern)
 ```
 
-## **Calibrazione sempre "Bad" o "Acceptable"**
+### Calibrazione sempre "Bad" o "Acceptable"
 
 ```{warning}
 **Qualità calibrazione insufficiente**
@@ -294,7 +294,7 @@ Se nonostante le regolazioni la calibrazione rimane sotto "Excellent":
 Se il problema persiste, potrebbe esserci un problema meccanico nel montaggio. Consultare [Installazione Meccanica]009_Installazione_Meccanica.md) per revisione.
 ```
 
-## **Errori dopo cambio illuminazione**
+### Errori dopo cambio illuminazione
 
 ```{tip}
 **Ri-calibrazione dopo cambio backlight/toplight**
@@ -362,7 +362,7 @@ In generale, è consigliabile decidere fin dall'inizio il tipo di illuminazione 
 
 
 (troubleshooting_fb_setup)=
-## Troubleshooting per la sezione FlexiBowl® Setup 
+## **Troubleshooting per la sezione FlexiBowl® Setup**
 
 ```{list-table}
 :header-rows: 1
@@ -416,7 +416,7 @@ In generale, è consigliabile decidere fin dall'inizio il tipo di illuminazione 
 ```
 
 (troubleshooting_hopper_setup)=
-## Troubleshooting per la sezione Hopper Setup 
+## **Troubleshooting per la sezione Hopper Setup** 
 
 ```{list-table}
 :header-rows: 1
@@ -483,7 +483,7 @@ In generale, è consigliabile decidere fin dall'inizio il tipo di illuminazione 
 ```
 
 (troubleshooting_robot_setup)=
-## Troubleshooting per la sezione Robot Setup
+## **Troubleshooting per la sezione Robot Setup**
 
 ```{warning}
 **Diagnosi connessione fallita**

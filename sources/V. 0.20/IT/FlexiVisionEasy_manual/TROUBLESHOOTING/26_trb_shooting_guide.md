@@ -59,6 +59,16 @@ Seleziona il componente per cui hai bisogno di supporto.
 
 ## **Configurazione Iniziale**
 
+:::{card} Camera Setup
+:link: troubleshooting_cam_setup
+:link-type: ref
+:::
+
+:::{card} Calibrazione Camera 
+:link: troubleshooting_calib_cam
+:link-type: ref
+:::
+
 :::{card} FlexiBowl® Setup
 :link: troubleshooting_fb_setup
 :link-type: ref
@@ -74,10 +84,7 @@ Seleziona il componente per cui hai bisogno di supporto.
 :link-type: ref
 :::
 
-:::{card} Camera Setup
-:link: troubleshooting_cam_setup
-:link-type: ref
-:::
+
 
 ## **Calibrazione e Ricette**
 
