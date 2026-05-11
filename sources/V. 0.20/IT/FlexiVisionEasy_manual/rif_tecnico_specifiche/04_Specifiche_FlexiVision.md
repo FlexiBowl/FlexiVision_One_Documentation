@@ -229,24 +229,24 @@ Specifiche Cavo Alimentazione Camera
 | **Tipo di lente** | CCTV Lens | CCTV Lens |
 | **Posizione di fuoco** | Reference Magnification | M.O.D. |
 | **Ingrandimento** | 0.069 | 0.167 |
-| **Lunghezza focale 1mm** | 34.97 | 34.97 |
-| **Numero F 1Fno** | 2.00 ~ 16.00 | 2.00 ~ 16.00 |
-| **Apertura Numerica 1NA** | - | - |
-| **Distanza di lavoro / oggetto 1mm** | 500.0 / 507.0 | 200.0 / 207.0 |
-| **Distanza oggetto-immagine 1mm** | 555.75 | 259.16 |
-| **Lunghezza meccanica tubo 1mm** | 36.30 ~ 38.20 | 36.30 ~ 38.20 |
-| **Back focus lente 1mm** | 14.75 | 18.16 |
-| **Profondità di campo 1mm** | 35.476 | 6.336 |
+| **Lunghezza focale (mm)** | 34.97 | 34.97 |
+| **Numero F (Fno)** | 2.00 ~ 16.00 | 2.00 ~ 16.00 |
+| **Apertura Numerica (NA)** | - | - |
+| **Distanza di lavoro / oggetto (mm)** | 500.0 / 507.0 | 200.0 / 207.0 |
+| **Distanza oggetto-immagine (mm)** | 555.75 | 259.16 |
+| **Lunghezza meccanica tubo (mm)** | 36.30 ~ 38.20 | 36.30 ~ 38.20 |
+| **Back focus lente (mm)** | 14.75 | 18.16 |
+| **Profondità di campo (mm)** | 35.476 | 6.336 |
 | **Risoluzione @550nm (µm)** | - | - |
-| **Posizione piano principale Ant./Post. 1mm** | 37.60 / -22.61 | 37.60 / -22.61 |
-| **Posizione pupilla Entr./Usc. 1mm** | 25.22 / -41.78 | 25.22 / -41.78 |
-| **Diametro pupilla Entr./Usc. 1mm** | 17.03 / 26.36 | 17.03 / 26.36 |
+| **Posizione piano principale Ant./Post. (mm)** | 37.60 / -22.61 | 37.60 / -22.61 |
+| **Posizione pupilla Entr./Usc. (mm)** | 25.22 / -41.78 | 25.22 / -41.78 |
+| **Diametro pupilla Entr./Usc. (mm)** | 17.03 / 26.36 | 17.03 / 26.36 |
 | **Angolo di campo 1° H × V** | 13.69 × 10.34 | 12.62 × 9.76 |
 | **Distorsione TV 1%** | -0.088 | -0.142 |
 | **Illuminazione relativa 1%** | 44.95 | 50.20 |
-| **Peso 1g** | 50 | 50 |
-| **Attacco 1Mount** | C-mount | C-mount |
-| **Cerchio immagine 1mm** | φ11 | φ11 |
+| **Peso (g)** | 50 | 50 |
+| **Attacco Mount** | C-mount | C-mount |
+| **Cerchio immagine (mm)** | φ11 | φ11 |
 | **Camera massima compatibile** | 2/3" | 2/3" |
 ```
 ```{dropdown} Obiettivo 25mm
@@ -255,24 +255,24 @@ Specifiche Cavo Alimentazione Camera
 | **Tipo di lente** | CCTV Lens | CCTV Lens |
 | **Posizione di fuoco** | Reference Magnification | M.O.D. |
 | **Ingrandimento** | 0.049 | 0.152 |
-| **Lunghezza focale 1mm** | 25.00 | 25.00 |
-| **Numero F 1Fno** | 1.60 ~ 16.00 | 1.60 ~ 16.00 |
-| **Apertura numerica 1NA** | - | - |
-| **Distanza di lavoro / oggetto 1mm** | 500.0 / 510.0 | 150.0 / 160.0 |
-| **Distanza oggetto-immagine 1mm** | 553.34 | 205.92 |
-| **Lunghezza meccanica tubo 1mm** | 34.60 ~ 38.50 | 34.60 ~ 38.50 |
-| **Back focus lente 1mm** | 13.75 | 16.33 |
-| **Profondità di campo @PCoC 0.04mm 1mm** | 54.223 | 5.835 |
+| **Lunghezza focale (mm)** | 25.00 | 25.00 |
+| **Numero F (Fno)** | 1.60 ~ 16.00 | 1.60 ~ 16.00 |
+| **Apertura numerica (NA)** | - | - |
+| **Distanza di lavoro / oggetto (mm)** | 500.0 / 510.0 | 150.0 / 160.0 |
+| **Distanza oggetto-immagine (mm)** | 553.34 | 205.92 |
+| **Lunghezza meccanica tubo (mm)** | 34.60 ~ 38.50 | 34.60 ~ 38.50 |
+| **Back focus lente (mm)** | 13.75 | 16.33 |
+| **Profondità di campo @PCoC 0.04mm (mm)** | 54.223 | 5.835 |
 | **Risoluzione @550nm (µm)** | - | - |
-| **Posizione piano principale Ant./Post. 1mm** | 29.42 / -12.46 | 29.42 / -12.46 |
-| **Posizione pupilla Entr./Usc. 1mm** | 18.48 / -31.94 | 18.48 / -31.94 |
-| **Diametro pupilla Entr./Usc. 1mm)** | 15.92 / 28.32 | 15.92 / 28.32 |
-| **Angolo di campo 1°) H × V** | 19.39 × 14.64 | 18.05 × 13.89 |
-| **Distorsione TV 1%)** | -0.041 | -0.271 |
-| **Illuminazione relativa 1%)** | 49.78 | 53.52 |
-| **Peso 1g)** | 50 | 50 |
-| **Attacco 1Mount)** | C-mount | C-mount |
-| **Cerchio immagine 1mm)** | φ11 | φ11 |
+| **Posizione piano principale Ant./Post. (mm)** | 29.42 / -12.46 | 29.42 / -12.46 |
+| **Posizione pupilla Entr./Usc. (mm)** | 18.48 / -31.94 | 18.48 / -31.94 |
+| **Diametro pupilla Entr./Usc. (mm)** | 15.92 / 28.32 | 15.92 / 28.32 |
+| **Angolo di campo 1° H × V** | 19.39 × 14.64 | 18.05 × 13.89 |
+| **Distorsione TV 1%** | -0.041 | -0.271 |
+| **Illuminazione relativa 1%** | 49.78 | 53.52 |
+| **Peso (g)** | 50 | 50 |
+| **Attacco Mount** | C-mount | C-mount |
+| **Cerchio immagine (mm)** | φ11 | φ11 |
 | **Camera massima compatibile** | 2/3" | 2/3" |
 ```
 ```{dropdown} Obiettivo 16mm
@@ -281,24 +281,24 @@ Specifiche Cavo Alimentazione Camera
 | **Tipo di lente** | CCTV Lens | CCTV Lens |
 | **Posizione di fuoco** | Reference Magnification | M.O.D. |
 | **Ingrandimento** | 0.031 | 0.095 |
-| **Lunghezza focale 1mm)** | 16.16 | 16.16 |
-| **Numero F 1Fno)** | 1.60 ~ 16.00 | 1.60 ~ 16.00 |
-| **Apertura numerica 1NA)** | - | - |
-| **Distanza di lavoro / oggetto 1mm)** | 500.0 / 507.0 | 150.0 / 157.0 |
-| **Distanza oggetto-immagine 1mm)** | 554.26 | 205.30 |
-| **Lunghezza meccanica tubo 1mm)** | 35.50 ~ 37.00 | 35.50 ~ 37.00 |
-| **Back focus lente 1mm)** | 12.16 | 13.20 |
-| **Profondità di campo @PCoC 0.04mm 1mm)** | 131.893 | 14.387 |
+| **Lunghezza focale (mm)** | 16.16 | 16.16 |
+| **Numero F (Fno)** | 1.60 ~ 16.00 | 1.60 ~ 16.00 |
+| **Apertura numerica (NA)** | - | - |
+| **Distanza di lavoro / oggetto (mm)** | 500.0 / 507.0 | 150.0 / 157.0 |
+| **Distanza oggetto-immagine (mm)** | 554.26 | 205.30 |
+| **Lunghezza meccanica tubo (mm)** | 35.50 ~ 37.00 | 35.50 ~ 37.00 |
+| **Back focus lente (mm)** | 12.16 | 13.20 |
+| **Profondità di campo @PCoC 0.04mm (mm)** | 131.893 | 14.387 |
 | **Risoluzione @550nm (µm)** | - | - |
-| **Posizione piano principale Ant./Post. 1mm)** | 28.44 / -4.50 | 28.44 / -4.50 |
-| **Posizione pupilla Entr./Usc. 1mm)** | 18.85 / -28.07 | 18.85 / -28.07 |
-| **Diametro pupilla Entr./Usc. 1mm)** | 10.18 / 25.02 | 10.18 / 25.02 |
-| **Angolo di campo 1°) H × V** | 30.37 × 22.92 | 29.62 × 22.39 |
-| **Distorsione TV 1%)** | -0.472 | -0.674 |
-| **Illuminazione relativa 1%)** | 32.75 | 36.61 |
-| **Peso 1g)** | 50 | 50 |
-| **Attacco 1Mount)** | C-mount | C-mount |
-| **Cerchio immagine 1mm)** | φ11 | φ11 |
+| **Posizione piano principale Ant./Post. (mm)** | 28.44 / -4.50 | 28.44 / -4.50 |
+| **Posizione pupilla Entr./Usc. (mm)** | 18.85 / -28.07 | 18.85 / -28.07 |
+| **Diametro pupilla Entr./Usc. (mm)** | 10.18 / 25.02 | 10.18 / 25.02 |
+| **Angolo di campo 1° H × V** | 30.37 × 22.92 | 29.62 × 22.39 |
+| **Distorsione TV 1%** | -0.472 | -0.674 |
+| **Illuminazione relativa 1%** | 32.75 | 36.61 |
+| **Peso (g)** | 50 | 50 |
+| **Attacco (Mount)** | C-mount | C-mount |
+| **Cerchio immagine (mm)** | φ11 | φ11 |
 | **Camera massima compatibile** | 2/3" | 2/3" |
 ```
 ```{dropdown} Obiettivo 12mm
@@ -307,36 +307,36 @@ Specifiche Cavo Alimentazione Camera
 | **Tipo di lente** | CCTV Lens | CCTV Lens |
 | **Posizione di fuoco** | Reference Magnification | M.O.D. |
 | **Ingrandimento** | 0.023 | 0.075 |
-| **Lunghezza focale 1mm)** | 12.00 | 12.00 |
-| **Numero F 1Fno)** | 1.80 ~ 16.00 | 1.80 ~ 16.00 |
-| **Apertura numerica 1NA)** | - | - |
-| **Distanza di lavoro / oggetto 1mm)** | 500.0 / 505.6 | 150.0 / 155.0 |
-| **Distanza oggetto-immagine 1mm)** | 559.55 | 209.55 |
-| **Lunghezza meccanica tubo 1mm)** | 39.20 ~ 40.10 | 39.20 ~ 40.10 |
-| **Back focus lente 1mm)** | 12.23 | 12.84 |
-| **Profondità di campo @PCoC 0.04mm 1mm)** | 277.576 | 28.121 |
+| **Lunghezza focale (mm)** | 12.00 | 12.00 |
+| **Numero F (Fno)** | 1.80 ~ 16.00 | 1.80 ~ 16.00 |
+| **Apertura numerica (NA)** | - | - |
+| **Distanza di lavoro / oggetto (mm)** | 500.0 / 505.6 | 150.0 / 155.0 |
+| **Distanza oggetto-immagine (mm)** | 559.55 | 209.55 |
+| **Lunghezza meccanica tubo (mm)** | 39.20 ~ 40.10 | 39.20 ~ 40.10 |
+| **Back focus lente (mm)** | 12.23 | 12.84 |
+| **Profondità di campo @PCoC 0.04mm (mm)** | 277.576 | 28.121 |
 | **Risoluzione @550nm (µm)** | - | - |
-| **Posizione piano principale Ant./Post. 1mm)** | 17.71 / -0.05 | 17.71 / -0.05 |
-| **Posizione pupilla Entr./Usc. 1mm)** | 11.68 / -12.18 | 11.68 / -12.18 |
-| **Diametro pupilla Entr./Usc. 1mm)** | 6.67 / 13.41 | 6.67 / 13.41 |
-| **Angolo di campo 1°) H × V** | 40.54 × 30.77 | 39.40 × 30.05 |
-| **Distorsione TV 1%)** | -0.983 | -0.905 |
-| **Illuminazione relativa 1%)** | 40.64 | 42.64 |
-| **Peso 1g)** | 60 | 60 |
-| **Attacco 1Mount)** | C-mount | C-mount |
-| **Cerchio immagine 1mm)** | φ11 | φ11 |
+| **Posizione piano principale Ant./Post. (mm)** | 17.71 / -0.05 | 17.71 / -0.05 |
+| **Posizione pupilla Entr./Usc. (mm)** | 11.68 / -12.18 | 11.68 / -12.18 |
+| **Diametro pupilla Entr./Usc. (mm)** | 6.67 / 13.41 | 6.67 / 13.41 |
+| **Angolo di campo 1° H × V** | 40.54 × 30.77 | 39.40 × 30.05 |
+| **Distorsione TV 1%** | -0.983 | -0.905 |
+| **Illuminazione relativa 1%** | 40.64 | 42.64 |
+| **Peso (g)** | 60 | 60 |
+| **Attacco Mount** | C-mount | C-mount |
+| **Cerchio immagine (mm)** | φ11 | φ11 |
 | **Camera massima compatibile** | 2/3" | 2/3" |
 ```
 ---
 (specifiche_VC)=
 ## VisionController
-```{figure} ../../../../_shared/media/images/PC.png
+```{figure} ../../../../_shared/media/images/VisionController.png
 :alt: VisionController FlexiVision One
 :align: center
-:width: 50%
+:width: 80%
 ```
 
-Il sistema FlexiVision One opera su un PC Industriale 1VisionController) che funge da controller principale per il software di visione. ARS fornisce il VisionController già pre-configurato e testato con il software FlexiVision One installato.
+Il sistema FlexiVision One opera su un PC Industriale (VisionController) che funge da controller principale per il software di visione. ARS fornisce il VisionController già pre-configurato e testato con il software FlexiVision One installato.
 
 ### Specifiche elettriche
 
@@ -347,8 +347,8 @@ Il sistema FlexiVision One opera su un PC Industriale 1VisionController) che fun
 * - **Caratteristica**
   - **Specifiche**
 * - CPU
-  - Intel Core i3-1115G4 1.7 14.1) GHz
-* - Memoria 1RAM)
+  - Intel Core i3-1115G4 1.7 14.1 GHz
+* - Memoria (RAM)
   - 8G DDR4 3200 MHz
 * - Archiviazione
   - 256G 
@@ -357,7 +357,7 @@ Il sistema FlexiVision One opera su un PC Industriale 1VisionController) che fun
 * - Sistema Operativo
   - Win11 LTSC 2024
 * - Pulsante di accensione
-  - Sì 1pannello frontale con spia luminosa)
+  - Sì (pannello frontale con spia luminosa)
 * - Porte Ethernet
   - **i3/i7:** 3× Gb LAN
 * - Porte USB
@@ -365,24 +365,24 @@ Il sistema FlexiVision One opera su un PC Industriale 1VisionController) che fun
 * - Uscita Video
   - 2× HDMI 
 * - Audio
-  - Line Out + MIC 1Jack 2-in-1)
-* - Alimentazione 1V DC)
+  - Line Out + MIC (Jack 2-in-1)
+* - Alimentazione (V DC)
   - 12 ~ 32 V DC
 * - Temperatura Operativa
   - 1°C ~ +50°C
 * - Temperatura di Stoccaggio
   - -20°C ~ +65°C
 * - Umidità
-  - &lt;90% 1senza condensa)
+  - &lt;90% (senza condensa)
 * - Materiale Scocca
   - Lega di alluminio + acciaio
 * - Grado di Protezione
   - IP20
 * - Metodo di Installazione
-  - Montaggio a parete 1DIN Rail opzionale)
+  - Montaggio a parete (DIN Rail opzionale)
 * - Consumo Energetico
   - 25 W
-* - Dimensioni 1L × A × P)
+* - Dimensioni (L × A × P)
   - 59.8 × 200 × 119.5 mm
 * - Peso
   - 2 kg
@@ -409,26 +409,26 @@ Il sistema FlexiVision One opera su un PC Industriale 1VisionController) che fun
   - Pulsante di accensione
   - Accensione e spegnimento del dispositivo
 * - B
-  - ETH 10/100/1000 Mbit – RJ45 1LAN 1)
+  - ETH 10/100/1000 Mbit – RJ45 (LAN 1)
   - Porta Ethernet Gigabit 1
 * - C
-  - ETH 10/100/1000 Mbit – RJ45 1LAN 2)
+  - ETH 10/100/1000 Mbit – RJ45 (LAN 2)
   - Porta Ethernet Gigabit 2
 * - D
-  - Porta Seriale 1RS232) COM1
+  - Porta Seriale (RS232) COM1
   - Interfaccia seriale RS232 COM1
 * - E
-  - Porta Seriale 1RS232) COM2
+  - Porta Seriale (RS232) COM2
   - Interfaccia seriale RS232 COM2
 * - F
   - Connettore di ingresso alimentazione
-  - Ingresso alimentazione 12–32V DC 1terminal block 3-pin)
+  - Ingresso alimentazione 12–32V DC (terminal block 3-pin)
 * - G
-  - Uscita Audio + MIC 1Jack 3.5 mm)
-  - 1× uscita audio di linea + ingresso microfono 1jack 3.5 mm)
+  - Uscita Audio + MIC (Jack 3.5 mm)
+  - 1× uscita audio di linea + ingresso microfono (jack 3.5 mm)
 * - H
   - 6× USB-A
-  - Porte USB 1USB 3.0 TypeA per versioni i3/i7)
+  - Porte USB (USB 3.0 TypeA per versioni i3/i7)
 * - I
   - Porta video 2
   - **B2B12/B2B14:** HDMI 2 — **B2B15/B2B16:** DisplayPort
@@ -436,7 +436,7 @@ Il sistema FlexiVision One opera su un PC Industriale 1VisionController) che fun
   - Porta HDMI 1
   - Uscita video HDMI 1
 * - M
-  - ETH 10/100/1000 Mbit – RJ45 1LAN 3)
+  - ETH 10/100/1000 Mbit – RJ45 1LAN 3
   - Porta Ethernet Gigabit 3
 ```
 ### Specifiche fisiche 
@@ -455,15 +455,15 @@ Il sistema FlexiVision One opera su un PC Industriale 1VisionController) che fun
   - M5
 * - **Caratteristica**
   - **Valore**
-* - Larghezza 1totale con staffe)
+* - Larghezza (totale con staffe)
   - 245.00 mm
-* - Larghezza 1corpo)
+* - Larghezza (corpo)
   - 227.00 mm
 * - Larghezza pannello connettori
   - 200.00 mm
-* - Altezza 1totale con staffe)
+* - Altezza (totale con staffe)
   - 123.00 mm
-* - Altezza 1corpo)
+* - Altezza corpo
   - 120.00 mm
 * - Profondità
   - 61.10 mm
@@ -479,9 +479,9 @@ Questa precisione è essenziale per il successo della calibrazione e si integra 
 
 ![Laser Cal](../../../../_shared/media/images/laser.png) 
 
-|Caratteristica	|Strumento Laser 1Laser Tool)|	Strumento a Punta 1Tip Tool) Standard |
+|Caratteristica	|Strumento Laser 1Laser Tool|	Strumento a Punta (Tip Tool) Standard |
 |--|--|--|
-|Metodo di Riferimento	|Non a contatto 1puntatore visivo)	|A contatto 1punta meccanica/fisica)|
+|Metodo di Riferimento	|Non a contatto 1puntatore visivo	|A contatto 1punta meccanica/fisica|
 |Precisione del Riferimento	|Massima precisione; l'operatore allinea visivamente il punto con accuratezza.	|Media, subordinata alla vista dell’operatore|
 |Facilità d'Uso	|Semplifica la procedura di allineamento visivo.	|Richiede maggiore attenzione nel posizionamento e nell'evitare l'inclinazione.|
 |Vantaggio Chiave	|Consente di salvare il punto di riferimento robot con la massima fedeltà possibile, essenziale per l'accuratezza finale del picking.|	Metodo base, ma meno preciso del laser.|
@@ -515,10 +515,7 @@ Questa precisione è essenziale per il successo della calibrazione e si integra 
 </div>
 ```
 :::{important}
-Per cambiarle le DUE batterie dello strumento laser, seguire questi passaggi:
-
-
-
+Il supporto con cui montare lo Strumento Laser al posto del tool del robot **NON** è fornito, in quanto per ogni robot varia e deve essere personalizzato.
 :::
 
 :::{admonition} Suggerimento 
@@ -536,7 +533,7 @@ L'utilizzo dello Strumento Laser in combinazione con la Griglia di Calibrazione 
 ```
 
 
-Una calibrazione eccellente è il requisito fondamentale per l'accuratezza del sistema FlexiVision One. Solo una calibrazione ad alta precisione garantisce che le coordinate rilevate dalla telecamera 1pixel) vengano convertite in modo accurato nelle coordinate reali del robot 1millimetri), assicurando così il successo dell'applicazione di picking.
+Una calibrazione eccellente è il requisito fondamentale per l'accuratezza del sistema FlexiVision One. Solo una calibrazione ad alta precisione garantisce che le coordinate rilevate dalla telecamera (pixel) vengano convertite in modo accurato nelle coordinate reali del robot (millimetri), assicurando così il successo dell'applicazione di picking.
 
 ### Specifiche tecniche griglia
 
@@ -596,7 +593,7 @@ Per informazioni dettagliate sulle procedure di calibrazione, consultare la sezi
   - Alimentazione 24 Vdc
 
 * - Rete elettrica
-  - Illuminatore 1luce)
+  - Illuminatore 1luce
   - Alimentazione 24 Vdc
 
 * - Rete elettrica

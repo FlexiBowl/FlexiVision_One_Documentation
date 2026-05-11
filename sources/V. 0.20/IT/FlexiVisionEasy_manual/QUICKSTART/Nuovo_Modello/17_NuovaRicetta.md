@@ -18,7 +18,8 @@ Questa sezione descrive come creare una nuova ricetta applicativa in FlexiVision
 
 ## Panoramica interfaccia
 
-Prima di procedere con il training del modello, familiarizzare con l'interfaccia [Recipes](recipes).
+Prima di procedere con il training del modello, familiarizzare con l'interfaccia [Recipes](recipes).  
+
 ![Pagina Recipes](/sources/_shared/media/images/pagina_recipesNEW.png) 
 
 ## Salvataggio ricetta base
@@ -97,7 +98,7 @@ Prima di cliccare su "Save Recipe", scegliere un nome descrittivo.
     - `Assembly_Connettori_2024`
     - `QC_Ingranaggi_Serie_X`
 
-    **Formato suggerito**: `[LINEA]_[PRODOTTO]_[VARIANTE]_[ANNO]`
+    **Formato suggerito**: `[LINEA]_[PRODOTTO]_[VARIANTE]_[GG_MM_AAAA]`
 
     Un nome chiaro facilita la gestione quando si hanno molte ricette diverse.
     :::

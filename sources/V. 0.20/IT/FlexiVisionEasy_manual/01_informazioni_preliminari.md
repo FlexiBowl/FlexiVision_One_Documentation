@@ -81,13 +81,13 @@ Per un'esperienza ottimale:
 ## Diritti di riproduzione e note legali
 
 ```{important}
-**Copyright © ARS S.r.l. - Tutti i diritti riservati**
+**Copyright © ARS Automation - Tutti i diritti riservati**
 
-Nessuna parte di questa pubblicazione può essere riprodotta, distribuita, tradotta o trasmessa con qualsiasi mezzo (elettronico, meccanico, fotocopia, registrazione o altro sistema di archiviazione) per scopi diversi dall'uso personale, senza previa autorizzazione scritta di ARS S.r.l.
+Nessuna parte di questa pubblicazione può essere riprodotta, distribuita, tradotta o trasmessa con qualsiasi mezzo (elettronico, meccanico, fotocopia, registrazione o altro sistema di archiviazione) per scopi diversi dall'uso personale, senza previa autorizzazione scritta di ARS Automation.
 
-ARS S.r.l. declina ogni responsabilità per conseguenze derivanti da operazioni errate eseguite dall'utente o dall'uso improprio del prodotto.
+ARS Automation declina ogni responsabilità per conseguenze derivanti da operazioni errate eseguite dall'utente o dall'uso improprio del prodotto.
 
-**Marchi registrati**: FlexiBowl® è un marchio registrati di ARS S.r.l. Tutti gli altri marchi, nomi commerciali e loghi menzionati in questo documento appartengono ai rispettivi proprietari e sono utilizzati esclusivamente a scopo identificativo.
+**Marchi registrati**: FlexiBowl® è un marchio registrati di ARS Automation Tutti gli altri marchi, nomi commerciali e loghi menzionati in questo documento appartengono ai rispettivi proprietari e sono utilizzati esclusivamente a scopo identificativo.
 ```
 ---
 

@@ -46,6 +46,9 @@ Per comodità e coerenza, partire dal primo FlexiBowl® disponibile
 :::{note}
 Il FlexiBowl® viene spedito con indirizzo IP di default `192.168.1.10`
 :::
+:::{important}
+Per istruzioni su come modificare l'indirizzo IP del FlexiBowl, fare riferimento al manuale disponibile nella sezione [Download](https://www.flexibowl.it/downloads).
+:::
 
 ### **Step 2: Test di connessione**
 
@@ -171,7 +174,11 @@ In questa fase si definiscono le caratteristiche hardware del sistema:
 Il sistema richiede informazioni sulla morfologia dei pezzi per ottimizzare la separazione.
 ````{list-table}
 * - **8**
-  - Selezionare la dimensione del componente: 
+  - Selezionare la dimensione del componente:   
+    Per Modelli FlexiBowl 200, 350, 500, 650: 
+      * **<= 150mm**
+      * **> 150mm**  
+    Per Modelli FlexiBowl 800 e 1200: 
       * **<= 250mm**
       * **> 250mm**
 * - **9**
@@ -262,6 +269,9 @@ Utilizzare la funzione **Test Sequence** per verificare che il ciclo rispetti i 
 * - **Stabilità Immagine**
   - I componenti devono essere immobili al momento dello scatto della camera.
     - Se i pezzi si muovono, diminuire velocità/accelerazione o inserire una pausa (es. `pause 200ms`).
+
+* - **Posizionamento dei pezzi durante la sequenza**
+  - Durante il movimento, i pezzi devono essere convogliati verso il centro del raggio del FlexiBowl® per massimizzare l'efficacia del Flip. Al termine della sequenza, i pezzi devono disporsi approssimativamente al centro dell'area di visione.
 ```
 
 :::{warning}

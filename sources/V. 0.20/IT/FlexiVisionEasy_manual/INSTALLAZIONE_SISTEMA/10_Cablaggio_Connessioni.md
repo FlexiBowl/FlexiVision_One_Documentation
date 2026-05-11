@@ -61,7 +61,7 @@ tipo:
   - **Azione**
 * - 1
   - Collegare l'alimentazione del FlexiBowl®.  
-    [🔗 Fare riferimento al manuale per le specifiche di alimentazione](http://link-al-manuale.com)
+    [🔗 Fare riferimento al manuale per le specifiche di alimentazione](https://www.flexibowl.com/wp-content/uploads/2026/04/Manuale-Utente-Flexibowl_IT_Rev2.9.pdf)
 * - 2
   - Collegare il [cavo di alimentazione Hirose 24V](cavo) alla Camera.
 * - 3
@@ -72,7 +72,7 @@ tipo:
   - Collegare il Robot al VisionController con cavo Ethernet.
 * - 6
   - Collegare l'aria compressa al FlexiBowl®.  
-    [🔗 Fare riferimento al manuale per le specifiche pneumatiche](http://link-al-manuale.com)
+    [🔗 Fare riferimento al manuale per le specifiche pneumatiche](https://www.flexibowl.com/wp-content/uploads/2026/04/Manuale-Utente-Flexibowl_IT_Rev2.9.pdf)
 * - 7
   - Se presente, collegare la tramoggia al suo controller
 * - 8

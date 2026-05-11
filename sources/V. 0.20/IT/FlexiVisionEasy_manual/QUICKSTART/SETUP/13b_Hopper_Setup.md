@@ -319,7 +319,7 @@ Senza salvataggio, tutte le configurazioni Hopper verranno perse alla chiusura d
 **Sintomi**: Robot trova disco vuoto subito dopo attivazione Hopper
 
 **Cause possibili:**
-- Steps troppo pochi (pezzi non hanno tempo di arrivare)
+- Numero di Steps troppo basso (pezzi non hanno tempo di arrivare)
 - Sequenze FlexiBowl® non efficaci
 - Ostruzione percorso scarico
 

@@ -423,7 +423,6 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min-object-count-return">Min Object Count Return</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting-mode-results">Sorting Mode Results</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pickable-parts-by-the-robot-prese-robot-per-ciclo-visione">Pickable parts by the robot - <strong>Prese robot per ciclo visione</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maximum-processing-time-per-part">Maximum processing time per part</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#salvataggio-configurazione">Salvataggio Configurazione</a></li>
@@ -480,7 +479,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#pickableparts"><span class="std std-ref"><strong>Pickable parts by the robot detected by vision in each cycle</strong></span></a></p></td>
 <td><p>Indica il numero di prese che il robot effettua per ogni run della visione. Ad esempio, una presa doppia corrisponde a valore (. Non rappresenta il numero di oggetti rilevati dalla visione, ma il numero di prese robot per ciclo. Parametro utilizzato per il calcolo delle statistiche.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#maxprocessingtime"><span class="std std-ref"><strong>Maximum processing time per part with the robot (in seconds)</strong></span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#maxprocessingtime"><span class="xref myst"><strong>Maximum processing time per part with the robot (in seconds)</strong></span></a></p></td>
 <td><p>Definisce il tempo massimo dopo il quale il sistema considera conclusa la gestione/invio delle coordinate relative a una run e passa tipicamente dallo stato RUN allo stato IDLE. Parametro utilizzato per <strong>statistiche e gestione del flusso di lavoro</strong>.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
@@ -655,26 +654,6 @@
 <li><p>Formula: <code class="docutils literal notranslate"><span class="pre">PPM</span> <span class="pre">=</span> <span class="pre">(Pickable</span> <span class="pre">parts</span> <span class="pre">x</span> <span class="pre">60)</span> <span class="pre">/</span> <span class="pre">Tempo</span> <span class="pre">ciclo</span> <span class="pre">totale</span> <span class="pre">in</span> <span class="pre">secondi</span></code></p></li>
 <li><p>Se impostato in modo errato, il PPM visualizzato non corrisponde alla realta</p></li>
 </ul>
-</section>
-<section id="maximum-processing-time-per-part">
-<span id="maxprocessingtime"></span><h3>Maximum processing time per part<a class="headerlink" href="#maximum-processing-time-per-part" title="Link to this heading">#</a></h3>
-<div class="pst-scrollable-table-container"><table class="table">
-<tbody>
-<tr class="row-odd"><td><p><strong>Funzione</strong>:</p></td>
-<td><p>Tempo di riferimento (in secondi) che il sistema usa per determinare quando un ciclo è considerato “completato” e passare da stato RUN a IDLE.</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Valori tipici:</strong></p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Come calcolarlo</strong>:</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p><strong>Impatto tempo processing su Dashboard</strong></p></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
 </section>
 </section>
 <hr class="docutils" />
@@ -1398,7 +1377,6 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min-object-count-return">Min Object Count Return</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting-mode-results">Sorting Mode Results</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pickable-parts-by-the-robot-prese-robot-per-ciclo-visione">Pickable parts by the robot - <strong>Prese robot per ciclo visione</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maximum-processing-time-per-part">Maximum processing time per part</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#salvataggio-configurazione">Salvataggio Configurazione</a></li>

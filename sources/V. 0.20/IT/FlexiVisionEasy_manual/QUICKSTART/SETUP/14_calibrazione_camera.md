@@ -299,6 +299,9 @@ In quali casi si apre Expert? Expert si apre per la configurazione della luminos
     Apparirà una finestra che richiede la calibrazione del robot prima di proseguire, **NON** cliccare su "Sì" e seguire i prossimi passaggi
 * - **20** 
   - Montare il Laser Tool con il suo supporto personalizzato 
+    :::{important}
+    Il supporto con cui montare lo Strumento Laser al posto del tool del robot **NON** è fornito, in quanto per ogni robot varia e deve essere personalizzato.
+    :::
     :::{figure} ../../../../../_shared/media/images/step1calrobot.jpg
     :width: 30%
     :align: center
@@ -422,7 +425,7 @@ Causa: Il software non riesce a identificare il pattern della griglia.
 Se nonostante le regolazioni la calibrazione rimane sotto "Excellent":
 
 1. Verificare la distanza di lavoro camera-FlexiBowl® (deve essere quella calcolata)
-2. Controllare cje la camera sia parallela rispetto al piano del FlexiBowl® (deve essere perfettamente orizzontale)
+2. Controllare che la camera sia parallela rispetto al piano del FlexiBowl® (deve essere perfettamente orizzontale)
 3. Assicurarsi che la camera sia stabile (no vibrazioni durante acquisizione)
 4. Verificare che l'obiettivo sia avvitato completamente 
 

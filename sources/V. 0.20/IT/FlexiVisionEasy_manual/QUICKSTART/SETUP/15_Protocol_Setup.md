@@ -183,23 +183,7 @@ Questo parametro e cruciale per il calcolo accurato dei **Parts Per Minute (PPM)
 - Formula: `PPM = (Pickable parts x 60) / Tempo ciclo totale in secondi`
 - Se impostato in modo errato, il PPM visualizzato non corrisponde alla realta
 
-(maxprocessingtime)=
-### Maximum processing time per part
 
-```{list-table}
-* - **Funzione**: 
-  - Tempo di riferimento (in secondi) che il sistema usa per determinare quando un ciclo è considerato "completato" e passare da stato RUN a IDLE.
-
-* - **Valori tipici:**
-  - 
-
-
-* - **Come calcolarlo**:
-  - 
-
-* - **Impatto tempo processing su Dashboard**
-  -  
-```
 
 ---
 
