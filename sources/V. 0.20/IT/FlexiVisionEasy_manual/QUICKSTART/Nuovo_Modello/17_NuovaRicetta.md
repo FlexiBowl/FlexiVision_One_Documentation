@@ -20,7 +20,7 @@ Questa sezione descrive come creare una nuova ricetta applicativa in FlexiVision
 
 Prima di procedere con il training del modello, familiarizzare con l'interfaccia [Recipes](recipes).  
 
-![Pagina Recipes](/sources/_shared/media/images/pagina_recipesNEW.png) 
+![Pagina Recipes](../../../../../_shared/media/images/pagina_recipesNEW.png)
 
 ## Salvataggio ricetta base
 

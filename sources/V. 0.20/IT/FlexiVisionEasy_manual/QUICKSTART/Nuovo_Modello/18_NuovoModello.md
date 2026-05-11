@@ -24,8 +24,8 @@ Completata la preparazione fisica, si procede con l'acquisizione dell'immagine e
   - Dalla pagina "Recipes", con la giusta ricetta selezionata, cliccare su "Edit Recipe"
 * - **4**
   - Selezionare il FlexiBowl® con cui si sta lavorando
-    :::{dropdown}
-
+    :::{dropdown} **Scelta FlexiBowl®**
+    ![Scelta FB](../../../../../_shared/media/images/scelta_FB.png)
     :::
 * - **5**
   - Verranno mostrati gli slot disponibili per i modelli (fino a 8 modelli per ricetta)

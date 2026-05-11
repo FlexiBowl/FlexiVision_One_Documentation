@@ -174,13 +174,28 @@ In questa fase si definiscono le caratteristiche hardware del sistema:
 Il sistema richiede informazioni sulla morfologia dei pezzi per ottimizzare la separazione.
 ````{list-table}
 * - **8**
-  - Selezionare la dimensione del componente:   
-    Per Modelli FlexiBowl 200, 350, 500, 650: 
-      * **<= 150mm**
-      * **> 150mm**  
-    Per Modelli FlexiBowl 800 e 1200: 
-      * **<= 250mm**
-      * **> 250mm**
+  - Selezionare la dimensione del componente:**
+
+    **Per Modelli FlexiBowl 200, 350, 500, 650:**
+
+    :::{card}
+    <= 150mm
+    :::
+
+    :::{card}
+    &gt; 150mm
+    :::
+
+    **Per Modelli FlexiBowl 800 e 1200:**
+
+    :::{card}
+    <= 250mm
+    :::
+
+    :::{card}
+    &gt; 250mm
+    :::
+
 * - **9**
   - Selezionare la geometria che meglio descrive il componente:
       * **FLAT**: Componenti piatti.

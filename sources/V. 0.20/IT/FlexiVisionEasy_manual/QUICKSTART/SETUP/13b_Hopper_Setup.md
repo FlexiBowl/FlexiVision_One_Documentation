@@ -213,41 +213,6 @@ Il valore Time è strettamente connesso al volume di carico della tramoggia:
 - Con tramoggia piena si avrà un maggior numero di pezzi nell'area di scarico 
 - Con tramoggia semipiena si avrà un minor numero di pezzi nell'area di scarico 
 
-Un tempo di attivazione efficace dipende da:
-  :::{list-table}
-  :header-rows: 1
-
-  * - **Peso del pezzo** (*)
-    - **Comportamento del pezzo**
-    - **Volume di carico della Tramoggia**
-    - **Time consigliato**
-
-  * - **Pezzi pesanti**
-    - 
-      - Si incastrano 
-      - Non si incastrano
-    - 
-      - Meno del 30% (<30%)
-      - Compreso tra 50% e 80% (>50% e <80%)
-    - 
-      - Time maggiore di 600 ms
-      - Time maggiore di 600 ms
-
-  * - **Pezzi leggeri**
-    - 
-      - Si incastrano 
-      - Non si incastrano
-    - 
-      - Meno del 30% (<30%)
-      - Compreso tra 50% e 80% (>50% e <80%)
-    - 
-      - Time compreso tra 100-500 ms
-      - Time compreso tra 100-500 ms
-  :::
-
- **Best practice generale**: Mantenere la tramoggia costantemente piena per >50% e <80% per ottenere un flusso uniforme
-
- (*) Per **peso del pezzo** si intende relativo alla dimensione della tramoggia utilizzata.
 ```
 :::{important}
 In generale, è importante non superare mai il carico massimo della tramoggia utilizzata. 
