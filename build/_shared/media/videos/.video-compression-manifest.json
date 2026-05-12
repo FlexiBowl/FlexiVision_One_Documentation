@@ -1,0 +1,335 @@
+{
+  "version": 1,
+  "videos": {
+    "videos/Step1.mp4": {
+      "output_sha256": "a65f96c1dce46ceb8ecb7de6300804100b0438431371c5bc7c77cbafd550ad91",
+      "output_size": 1311216,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "a65f96c1dce46ceb8ecb7de6300804100b0438431371c5bc7c77cbafd550ad91",
+      "source_size": 1311216,
+      "status": "kept"
+    },
+    "videos/Step1_calib.mp4": {
+      "output_sha256": "9fb4a201fe36a1fd739538ee44d2e9c53c23858adde1daf1a41f6a8c6608951f",
+      "output_size": 2828509,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "c6ce7644ff7c7787e2129a111b5252207006000084a7009234efaf3d8a062ddf",
+      "source_size": 2971754,
+      "status": "compressed"
+    },
+    "videos/Step1_robot.mp4": {
+      "output_sha256": "f5224d2a3cb1aae7c452a47b08b5cf2853d3ee5bbecca72a4949aa2b0fdeb981",
+      "output_size": 476214,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "b49ca48e2f6cb90f662bfd147b41ed0c8add96f995a317889c5f3f11478de6ef",
+      "source_size": 3023130,
+      "status": "compressed"
+    },
+    "videos/Step2_calib.mp4": {
+      "output_sha256": "0e8c865ba909875d45c780a9725005684f042568cfe044ac76c76ddc7869acdb",
+      "output_size": 1749650,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "41d1a047c6def7f35fe0a9f7a6a1d2a28f94a32c6d057381a934b0eaf2c19997",
+      "source_size": 20050170,
+      "status": "compressed"
+    },
+    "videos/Step2_robot.mp4": {
+      "output_sha256": "b22edcdfe72d1fd6a03b013c1728751d04f7b211f9e707ce179b5073594330bf",
+      "output_size": 874782,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "2f72f4ea04704b7efd8de824102eb79fccc07cd19a6257f025458ea86204e97c",
+      "source_size": 5527786,
+      "status": "compressed"
+    },
+    "videos/Step2b_calib.mp4": {
+      "output_sha256": "af1c59b8970b823d1f59b0fbaeb48502874d825891aecf84b4bda5235495d18e",
+      "output_size": 388536,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "09417c69ee4c8555479e9753fd5db8f5f430eb068b77cac221337b59c9233b01",
+      "source_size": 4982255,
+      "status": "compressed"
+    },
+    "videos/Step3.mp4": {
+      "output_sha256": "8353d8655ab52954c31574fe9748a8a9082a7b47e4f96792cb47a46cb62cd093",
+      "output_size": 1033096,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "85a90938e4ec6a3ed933d31251c17430d699fcd8b57f536e53157cf621828f84",
+      "source_size": 7464159,
+      "status": "compressed"
+    },
+    "videos/Step3_calib.mp4": {
+      "output_sha256": "c2bbee07aad2a30ed272c01758ca4a1639574b1127ef7300c0cdd8ac82407b91",
+      "output_size": 768767,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "0cd97f66064668968401f0846c19d1c2f43fdd1752ea7548dfbb934351149b86",
+      "source_size": 7084887,
+      "status": "compressed"
+    },
+    "videos/Step4.mp4": {
+      "output_sha256": "e38a2cd5cdbac86231e085c120a1603418779954439c99258d7f90be7cdf2be1",
+      "output_size": 358953,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "c7323147466f6c79779c88ed5363271d31e808f3868092ec39fa71aab6029629",
+      "source_size": 2096820,
+      "status": "compressed"
+    },
+    "videos/Step4_calib.mp4": {
+      "output_sha256": "68ab5e11f18d709556dfcc28bce2a1a2938ec607e8d1901809aac9f5a64093ae",
+      "output_size": 3477902,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "d2d5371a4972f86d03a5364d564474da6f0fb86dfbabd69f29c6082a1aa898b8",
+      "source_size": 39681941,
+      "status": "compressed"
+    },
+    "videos/Step5_calib.mp4": {
+      "output_sha256": "aa12b7ffb7dbd92168de76d4ecac73cd916a1051c41502aa790f5a774a57000e",
+      "output_size": 1595674,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "2cba6c3e6ae6dbee89192c2a97fc4ff8c369e964a44ef59401c92e5bbdfd68b5",
+      "source_size": 19681433,
+      "status": "compressed"
+    },
+    "videos/Step6_calib.mp4": {
+      "output_sha256": "dcdefa556cb429b8fd2adf6a4774684e34a1f5081d12877ef79488a175129440",
+      "output_size": 908939,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "583b5bfd8a2f2b222ca2a263c0261a5eeb493a2f8ce623a2b435348405d149d1",
+      "source_size": 5731418,
+      "status": "compressed"
+    },
+    "videos/TastiInfo_LocatorModel_1280x720.mp4": {
+      "output_sha256": "17ef6ab85a0b8cd08d56a9cfe79080381ed77c1458d17b7407274508146c8a9d",
+      "output_size": 2205266,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "6751f6c204424134b43b6d064777d0bdf30d2cecd88486373520ee3dcb5d5d7e",
+      "source_size": 27331912,
+      "status": "compressed"
+    },
+    "videos/TastoInfo_AreaHopper_1280x720.mp4": {
+      "output_sha256": "96e86693af2f744fb138376bd7f593c9b2efb10920febbb0bc23c768675693c8",
+      "output_size": 362044,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "a7f620f4404fe48842b9dedc141c23c36ecd94bb748bf1ff3c730ff5bf6fd1a7",
+      "source_size": 4034461,
+      "status": "compressed"
+    },
+    "videos/TastoInfo_Calibration_1280x720.mp4": {
+      "output_sha256": "1ceaaf5b6a7421e3a0bbd2a1b8e66b6c0e871acaa467e41335db04329948572f",
+      "output_size": 4937502,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "27b63242b813ccc9be9bfd3dd6458d5f371eadc9e385e07f4e2ab4ad2f4e1977",
+      "source_size": 83998379,
+      "status": "compressed"
+    },
+    "videos/TastoInfo_CameraFLB_1280x720.mp4": {
+      "output_sha256": "9fd1012ce854c1c0253ebf4f2c528ac54abed7d5e0c6e0ee3b12f46011dbdcc9",
+      "output_size": 5038417,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "988c64b07ecfb75adfd2e3e8a36af12e43e2e8896f7389d05c0b338c00eaff37",
+      "source_size": 50238284,
+      "status": "compressed"
+    },
+    "videos/TastoInfo_Clearance1_1280x720.mp4": {
+      "output_sha256": "9617cdea37aad39ae0ca769d9c3e83677643bcbbd2656c5a74a42e05d025b6eb",
+      "output_size": 741732,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "7ff29a03d5e1dad0d88832a68d10489c6173136b4b1eda97b83123a85684ccb3",
+      "source_size": 9491988,
+      "status": "compressed"
+    },
+    "videos/TastoInfo_Clearances_1280x720.mp4": {
+      "output_sha256": "0903b1a8f0e1abce5e40ed10a6e5cc5b2194c289d7fb338b28d729f7ad553bfe",
+      "output_size": 3202141,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "20378d2f5345868ae51f7336eef4633eb7976d3ef65149b7bba7817e9791a8ae",
+      "source_size": 54212577,
+      "status": "compressed"
+    },
+    "videos/TastoInfo_DefineRobotArea_1280x720.mp4": {
+      "output_sha256": "274b933a32c788ce87e03c10f597a502155f055e106a373d65189d45a0deeded",
+      "output_size": 409865,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "b037d9fb0ff19670a566f4d100b4ad9700320f18597a40cc2b5fa1952ae13b3d",
+      "source_size": 4640450,
+      "status": "compressed"
+    },
+    "videos/TastoInfo_Hopper_1280x720.mp4": {
+      "output_sha256": "0129e724572a8993364748f86bd29c92383cf19905e30c4ae55e380aae4cc80f",
+      "output_size": 866026,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "ce1f519ea22d754d4beae1dc2f4d62966e819b3a81215bbf1774eb8e1191c72e",
+      "source_size": 11956909,
+      "status": "compressed"
+    },
+    "videos/TastoInfo_PickingOffset_1280x720.mp4": {
+      "output_sha256": "c6ffebdc553a7f841726f4400ad39803957144cd57d0fa160baa224373c22adf",
+      "output_size": 666166,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "d1b18b1d3a29f271dcbfd7b7cf7f7a78c9c47efc4e696af00dbcd182b1160f61",
+      "source_size": 8443226,
+      "status": "compressed"
+    },
+    "videos/TastoInfo_TrainModel_1280x720.mp4": {
+      "output_sha256": "0c4a42cc6a0cadda9de53828d3cfc6da90c4362380da452857c5acda168a3b7f",
+      "output_size": 2864894,
+      "settings": {
+        "audio_bitrate": "96k",
+        "audio_codec": "aac",
+        "crf": 30,
+        "pixel_format": "yuv420p",
+        "preset": "slow",
+        "video_codec": "libx264"
+      },
+      "source_sha256": "a3e7597fd1adb6935800b351f060eb10a3bea5e8240a14fc2ed2c45b0e1762f9",
+      "source_size": 35355954,
+      "status": "compressed"
+    }
+  }
+}
