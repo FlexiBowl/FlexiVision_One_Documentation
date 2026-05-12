@@ -45,7 +45,7 @@ La griglia di calibrazione e l'ottica possono differire dalle immagini a seconda
   - **Immagine**
 * - Camera
   - [Vai alle specifiche della Camera](specifiche_camera)
-  - :::{figure} ../../../_shared/media/images/Camera.png
+  - :::{figure} ../../../_shared/media/images/camera.png
     :width: 150px
     :::
 * - Obiettivo
