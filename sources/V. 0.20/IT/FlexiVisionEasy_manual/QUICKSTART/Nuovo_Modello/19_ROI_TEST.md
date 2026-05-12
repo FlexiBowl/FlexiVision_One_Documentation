@@ -29,6 +29,9 @@ Dopo aver cliccato "Next" nella pagina di training, si apre automaticamente la p
 ```{tip}
 Dimensiona l'area in base allo spazio effettivo di lavoro del robot, evitando zone non raggiungibili.
 ```
+:::{tip}
+Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** presente nella pagina corrente.
+:::
 
 ### Panoramica interfaccia Locator Model
 
@@ -104,6 +107,9 @@ Video tutorial esplicativo dei successivi Step 2 e Step 3:
 
 **Obiettivo**: Trovare il valore più alto possibile che rileva tutti i pezzi buoni ma scarta i peggiori.
 ```
+:::{tip}
+Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** presente nella pagina corrente.
+:::
 
 ---
 

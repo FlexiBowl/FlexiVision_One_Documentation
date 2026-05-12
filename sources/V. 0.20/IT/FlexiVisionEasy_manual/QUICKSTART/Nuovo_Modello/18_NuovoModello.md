@@ -5,6 +5,7 @@ In questa pagina vedremo come creare un modello di riferimento per il riconoscim
 
 
 ## **Step 1: Preparazione del Setup Fisico**
+Se non è già stato fatto prima, seguire questi passi:
 ````{list-table}
 * - **1**
   - Smontare la griglia di calibrazione e ripristinare il layout iniziale:
@@ -133,6 +134,9 @@ Per ora, concentrarsi sul completamento del primo modello.
 * - **12**
   - Cliccare su **Train**
 ````
+:::{tip}
+Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** presente nella pagina corrente.
+:::
 ---
 
 ## **Step 4: Controllo Visivo**

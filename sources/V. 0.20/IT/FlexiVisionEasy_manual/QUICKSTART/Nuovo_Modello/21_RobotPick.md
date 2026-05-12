@@ -56,6 +56,9 @@ Dopo aver cliccato "Next" nella pagina Clearances, si apre la pagina **Robot Mod
       Queste sono le coordinate che FlexiVision One "vede" nell'immagine. Non sono ancora collegate al sistema di coordinate del robot.
       :::
 ```
+:::{tip}
+Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** presente nella pagina corrente.
+:::
 
 ## **Step 2: Inserimento Coordinate Robot e calcolo Offset**
 
@@ -94,7 +97,9 @@ Il sistema confronta:
 
 Calcola la differenza e la memorizza come **offset**. Questo offset verrà applicato a tutti i componenti rilevati in futuro, garantendo che il robot prelevi sempre nella posizione corretta.
 ```
-
+:::{tip}
+Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** presente nella pagina corrente.
+:::
 ---
 
 ## **Step 3: Finalizzazione e Salvataggio**
@@ -132,15 +137,6 @@ Calcola la differenza e la memorizza come **offset**. Questo offset verrà appli
       :::
 ```
 
----
-
-## Verifica Finale
-
-Prima di considerare la ricetta completata, continua con:
-
-- [Configurazione del FlexiBowl®](configfb)
-- [Configurazione della Tramoggia](confighopper)
-- [Monitoraggio Applicazione](dashboard)
 ```{seealso}
 Per qualsiasi problema nei passaggi appena completati consultare [Risoluzione Problemi](troubleshooting)
 ```

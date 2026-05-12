@@ -69,3 +69,14 @@ Nel caso in cui la camera non dovesse essere visibile alla prima apertura di Fle
 
 
 ---
+## Passi successivi
+
+Una volta completato il Setup della camera, procedere con:
+
+- [Calibrazione Camera](calibrazione)
+- [FlexiBowl® Setup](fbsetup)
+- [Hopper Setup](13b_Hopper_Setup.md)
+- [Robot Setup](13c_Robot_Setup.md)
+- [Protocol Setup](protocol_setup)
+- [Salvare La Ricetta](ricettabase)
+

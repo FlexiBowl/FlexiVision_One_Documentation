@@ -158,6 +158,7 @@ Se uno degli indicatori è rosso, verificare:
 
 Una volta completato il Robot Setup, procedere con:
 
-**[Passo 7: Camera Setup](13d_Camera_Setup.md)** - Configurazione e test acquisizione camera
+- [Protocol Setup](protocol_setup)
+- [Salvare La Ricetta](ricettabase)
 
 

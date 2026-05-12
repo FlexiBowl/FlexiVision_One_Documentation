@@ -118,7 +118,11 @@ Una ricetta ben configurata rappresenta ore di lavoro. Proteggerla adeguatamente
 
 ## Prossimi passi
 
-**→ [Creare un Modello](18_NuovoModello.md)**
+- **[Creare un Modello](18_NuovoModello.md)**
+- **[Definizione ROI](roitest)**
+- **[Configurazione Clearances](istogrammi)**
+- **[Calibrazione Robot](robotpick)**
+
 ```{tip}
 **Cosa serve per il prossimo step**
 

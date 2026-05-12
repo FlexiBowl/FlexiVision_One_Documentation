@@ -162,6 +162,7 @@ Se il problema persiste, potrebbe essere necessario rivedere il montaggio meccan
 Se cliccando piu volte il tasto RUN appare anche solo una volta una schermata completamente blu, fare riferimento a [Troubleshooting Camera Setup](schermo_blu)
 :::
 
+
 ```{list-table}
 * - **12** 
   - **Regolare l'esposizione della camera**
@@ -192,7 +193,9 @@ Esempio di esposizione corretta: contrasto elevato, pattern ben definito, nessun
 - **Tempo troppo lungo**: Immagine sovraesposta, perdita di dettagli
 - **Tempo ottimale**: Massimo contrasto senza saturazione
 ```
-
+:::{tip}
+Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** presente nella pagina corrente.
+:::
 
 
 ## **Step 3: Calibrazione Camera**
@@ -208,7 +211,7 @@ Esempio di esposizione corretta: contrasto elevato, pattern ben definito, nessun
 * - **14**
   - Verificare che la griglia sia centrata, nitida e completamente visibile prima di acquisire l'immagine di calibrazione.
 * - **15**
-  - Cliccare su "Grab Image Calib" per scattare una foto della griglia di calibrazione.
+  - Cliccare su "Grab Image" per scattare una foto della griglia di calibrazione.
     
     Verificare visivamente che:
     - L'intera griglia sia visibile
@@ -216,7 +219,8 @@ Esempio di esposizione corretta: contrasto elevato, pattern ben definito, nessun
     - Non ci siano ombre o riflessi
 
 * - **16**
-  - Impostare i valori "Tile Size X" e "Tile Size Y" entrambi a 10 per tutti i modelli da FlexiBowl® 500 a 1200. **Per i modelli FlexiBowl® 200 e FlexiBowl® 350 invece, impostare i tile sizes a 2,5.**
+  - Impostare i valori "Tile Size X" e "Tile Size Y" entrambi a 10 per tutti i modelli da FlexiBowl® 500 a 1200.  
+     **Per i modelli FlexiBowl® 200 e FlexiBowl® 350 invece, impostare i tile sizes a 2,5.**
 
 * - **17**
   - Cliccare su "Calibrate" per effettuare la calibrazione
@@ -263,10 +267,10 @@ Se il calcolo della calibrazione fallisce:
 - Ripetere l'acquisizione immagine (Grab Image) e tentare nuovamente
 ```
 
+:::{tip}
+Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** presente nella pagina corrente.
+:::
 
-**Nota: spiegare che per i dubbi si può aprire info**
-
-In quali casi si apre Expert? Expert si apre per la configurazione della luminosità o per altri parametri.
 
 
 ---
@@ -332,6 +336,11 @@ In quali casi si apre Expert? Expert si apre per la configurazione della luminos
     :::
 ```
 
+:::{tip}
+Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** presente nella pagina corrente.
+:::
+
+
 ## **Step 5: Disegnare un piano a 3 punti**
 
 :::{video} ../../../../../_shared/media/videos/Step5_calib.mp4
@@ -360,6 +369,11 @@ In quali casi si apre Expert? Expert si apre per la configurazione della luminos
     :::
 ```
 
+:::{tip}
+Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** presente nella pagina corrente.
+:::
+
+
 ## **Step 6: Verifica della traiettoria del robot**
 
 :::{video} ../../../../../_shared/media/videos/Step6_calib.mp4
@@ -381,6 +395,10 @@ In quali casi si apre Expert? Expert si apre per la configurazione della luminos
     :align: center
     :::
 ```
+:::{tip}
+Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** presente nella pagina corrente.
+:::
+
 
 ## **Step 7: Salvataggio Ricetta Base** 
 ```{list-table}
@@ -431,7 +449,17 @@ Se nonostante le regolazioni la calibrazione rimane sotto "Excellent":
 
 Se il problema persiste, potrebbe esserci un problema meccanico nel montaggio. Consultare [Installazione Meccanica](../../INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.md) per revisione.
 ```
+---
 
+## Passi successivi
+
+Una volta completate le calibrazioni di Camera e Robot, procedere con:
+
+- [FlexiBowl® Setup](fbsetup)
+- [Hopper Setup](13b_Hopper_Setup.md)
+- [Robot Setup](13c_Robot_Setup.md)
+- [Protocol Setup](protocol_setup)
+- [Salvare La Ricetta](ricettabase)
 
 
 

@@ -3,6 +3,10 @@
 
 Questa sezione descrive la procedura per configurare la tramoggia (Hopper). L'Hopper è il componente che alimenta automaticamente pezzi sul FlexiBowl® quando il livello scende sotto una soglia minima.
 
+:::{important}  **Logica di funzionamento**  
+
+FlexiVision gestisce la logica di attivazione della tramoggia. Invierà infatti la stringa `Hopper;signalnumber;time` quando ritiene necessaria l'attivazione. 
+:::
 ```{note}
 **Prerequisiti**
 
@@ -12,7 +16,16 @@ Prima di procedere, assicurarsi che:
 - Il FlexiBowl® sia già connesso
 ```
 ---
+## Preparazione del Setup Fisico
 
+````{list-table}
+* - **0**
+  - Smontare la griglia di calibrazione e ripristinare il layout iniziale:
+    - Riposizionare la superficie
+    - riposizionare la flangia centrale 
+    - fissare la flangia centrale con le sue quattro viti
+````
+---
 ## Accesso alla configurazione Hopper
 
 ```{list-table}
@@ -52,42 +65,7 @@ La pagina Hopper Setup presenta diverse sezioni per la configurazione dei parame
 * - **Config Hopper**
   - Pulsante per configurare la tramoggia (da utilizzare in seguito)
 ```
----
 
-## Procedura di configurazione
-
-```{list-table}
-:widths: 10 30 70 
-* - Step 1
-  - Abilitazione Hopper 
-  - Spuntare la checkbox **Enable Hopper**
-* - Step 2
-  - Configurazione Signal 
-  - Nel campo **Signal**, inserire il numero del segnale digitale (DO - Digital Output) utilizzato per controllare l'Hopper
-* - Step 3
-  - Salvataggio e Completamento 
-  - Tornare alla pagina <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon"> principale per procedere con il setup successivo
-```
-
-```{important}
-
-Abilitare l'Hopper solo se il dispositivo è correttamente installato
-
-```
-
-```{warning}
-
-È fondamentale inserire il numero di segnale corretto:
-- Un numero errato attiverà il segnale sbagliato (potenzialmente pericoloso)
-- Consultare lo schema elettrico realizzato durante l'installazione
-- In caso di dubbio, contattare chi ha effettuato il cablaggio
-```
-
-```{tip}
-
-I parametri impostati in questa fase sono sufficienti per la configurazione iniziale del sistema.
-Durante la procedura andremo poi a definire gli altri aspetti della configurazione della tramoggia.
-```
 
 ---
 (confighopper)=
@@ -98,15 +76,25 @@ La configurazione della tramoggia permette di gestire il rifornimento automatico
 ## **Step 1: Accesso alla Configurazione**
 ```{list-table}
 * - **1**
-  - Cliccare sulla sezione <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
-* - **2**
-  - Dalla sezione **Hopper Setup**, è possibile visualizzare e gestire le unità di carico collegate.
+  - Cliccare su <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">.   
+    Dalla sezione **Hopper Setup**, è possibile visualizzare e gestire le unità di carico collegate.
     
     :::{dropdown} Pagina Hopper Setup 
     ![Pagina Hooper Setup](../../../../../_shared/media/images/pagina_hoppersetup.png)
     :::
+* - **2**
+  - Nel campo **Signal**, inserire il numero del segnale digitale (DO - Digital Output) utilizzato per controllare l'Hopper
+    :::{warning}
+      È fondamentale inserire il numero di segnale corretto:
+      - Un numero errato attiverà il segnale sbagliato (potenzialmente pericoloso)
+      - Consultare lo schema elettrico realizzato durante l'installazione
+      - In caso di dubbio, contattare chi ha effettuato il cablaggio
+    :::
 * - **3**
   - Selezionare la casella **Enable Hopper X** per attivare la tramoggia corrispondente.
+      :::{important}
+      Abilitare l'Hopper solo se il dispositivo è correttamente installato
+      :::
 * - **4**
   - Cliccare sul pulsante **Config Hopper X** per accedere alla configurazione specifica 
 ```
@@ -121,9 +109,10 @@ In questa fase si definisce la porzione di disco che la telecamera deve monitora
 ```{list-table}
 * - **5**
   - Modificare il riquadro blu a schermo per inquadrare l'area in cui verranno rilevati i componenti.
-   **Strumenti di supporto**:
-      * **Info**: Cliccare per visualizzare dettagli sulle funzionalità della pagina.
 ```
+:::{tip}
+Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** presente nella pagina corrente.
+:::
 
 ## **Step 3: Definizione dei Valori di Soglia**
 
@@ -170,9 +159,28 @@ In questa fase si definisce la porzione di disco che la telecamera deve monitora
       → Soluzione: Verificare backlight stabile, ingrandire area monitoraggio, ripetere calibrazione  
       :::
 ```
-```{note}  
-**Fill Hopper Threshold** = ... 
+```{note}
+**Hopper Fill Threshold**
+
+Il parametro **Hopper Fill Threshold** definisce la soglia percentuale di riempimento dell'area di visione al di sotto della quale la tramoggia si attiva automaticamente.
+
+Il valore del 100% corrisponde alla quantità di pezzi acquisita durante il secondo CAPTURE (area piena). Di conseguenza, una soglia al 50% corrisponde alla metà di quella quantità.
+
+Il sistema imposta automaticamente il valore iniziale al **70%**, che rappresenta un buon equilibrio per la maggior parte delle applicazioni.
+
+**Modifica in corso d'opera**
+
+È possibile aggiustare la soglia senza ripetere la procedura di acquisizione:
+
+- Per scaricare **meno pezzi** → ridurre la percentuale (es. 50%) e cliccare **AUTO**
+- Per scaricare **più pezzi** → aumentare la percentuale (es. 85%) e cliccare **AUTO**
+
 ```
+
+:::{tip}
+Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** presente nella pagina corrente.
+:::
+
 ## **Step 4: Parametri Operativi**
 
 Tornare alla schermata principale di Hopper Setup per definire il comportamento meccanico.
@@ -299,7 +307,9 @@ Senza salvataggio, tutte le configurazioni Hopper verranno perse alla chiusura d
 
 Una volta completato l'Hopper Setup (o saltato se non presente), procedere con:
 
-**[Passo 6: Robot Setup](13c_Robot_Setup.md)** - Configurazione comunicazione con il robot
+- [Robot Setup](13c_Robot_Setup.md)
+- [Protocol Setup](protocol_setup)
+- [Salvare La Ricetta](ricettabase)
 
 
 

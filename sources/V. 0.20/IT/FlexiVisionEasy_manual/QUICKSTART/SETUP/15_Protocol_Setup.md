@@ -205,7 +205,7 @@ Dopo aver configurato i parametri di Protocol Setup:
 
 Una volta completato Protocol Setup, il sistema è configurato completamente per l'operatività:
 
-**→ [Verifica Risultati (Dashboard)](../24_Verifica_Risultati.md)** - Monitoraggio produzione e validazione configurazione
+- [Salvare La Ricetta](ricettabase)
 
 
 

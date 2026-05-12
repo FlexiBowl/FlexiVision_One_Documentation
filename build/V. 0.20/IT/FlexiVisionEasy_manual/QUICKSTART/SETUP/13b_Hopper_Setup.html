@@ -417,9 +417,9 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Hopper Setup</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparazione-del-setup-fisico">Preparazione del Setup Fisico</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accesso-alla-configurazione-hopper">Accesso alla configurazione Hopper</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#panoramica-interfaccia-hopper-setup">Panoramica interfaccia Hopper Setup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#procedura-di-configurazione">Procedura di configurazione</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#configurazione-della-tramoggia-hopper"><strong>Configurazione della Tramoggia (Hopper)</strong></a><ul class="visible nav section-nav flex-column">
@@ -450,6 +450,11 @@
   <section id="hopper-setup">
 <span id="hoppersetup"></span><h1><strong>Hopper Setup</strong><a class="headerlink" href="#hopper-setup" title="Link to this heading">#</a></h1>
 <p>Questa sezione descrive la procedura per configurare la tramoggia (Hopper). L’Hopper è il componente che alimenta automaticamente pezzi sul FlexiBowl® quando il livello scende sotto una soglia minima.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Logica di funzionamento</strong></p>
+<p>FlexiVision gestisce la logica di attivazione della tramoggia. Invierà infatti la stringa <code class="docutils literal notranslate"><span class="pre">Hopper;signalnumber;time</span></code> quando ritiene necessaria l’attivazione.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Prerequisiti</strong></p>
@@ -460,6 +465,24 @@
 <li><p>Il FlexiBowl® sia già connesso</p></li>
 </ul>
 </div>
+<hr class="docutils" />
+<section id="preparazione-del-setup-fisico">
+<h2>Preparazione del Setup Fisico<a class="headerlink" href="#preparazione-del-setup-fisico" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>0</strong></p></td>
+<td><p>Smontare la griglia di calibrazione e ripristinare il layout iniziale:</p>
+<ul class="simple">
+<li><p>Riposizionare la superficie</p></li>
+<li><p>riposizionare la flangia centrale</p></li>
+<li><p>fissare la flangia centrale con le sue quattro viti</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
 <hr class="docutils" />
 <section id="accesso-alla-configurazione-hopper">
 <h2>Accesso alla configurazione Hopper<a class="headerlink" href="#accesso-alla-configurazione-hopper" title="Link to this heading">#</a></h2>
@@ -518,50 +541,6 @@
 </tbody>
 </table>
 </div>
-</section>
-<hr class="docutils" />
-<section id="procedura-di-configurazione">
-<h2>Procedura di configurazione<a class="headerlink" href="#procedura-di-configurazione" title="Link to this heading">#</a></h2>
-<div class="pst-scrollable-table-container"><table class="table">
-<colgroup>
-<col style="width: 9.1%" />
-<col style="width: 27.3%" />
-<col style="width: 63.6%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p>Step 1</p></td>
-<td><p>Abilitazione Hopper</p></td>
-<td><p>Spuntare la checkbox <strong>Enable Hopper</strong></p></td>
-</tr>
-<tr class="row-even"><td><p>Step 2</p></td>
-<td><p>Configurazione Signal</p></td>
-<td><p>Nel campo <strong>Signal</strong>, inserire il numero del segnale digitale (DO - Digital Output) utilizzato per controllare l’Hopper</p></td>
-</tr>
-<tr class="row-odd"><td><p>Step 3</p></td>
-<td><p>Salvataggio e Completamento</p></td>
-<td><p>Tornare alla pagina <img alt="../../../_images/tasto_setup1.png" class="inline-icon" src="../../../../../_shared/media/images/tasto_setup1.png" /> principale per procedere con il setup successivo</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Abilitare l’Hopper solo se il dispositivo è correttamente installato</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>È fondamentale inserire il numero di segnale corretto:</p>
-<ul class="simple">
-<li><p>Un numero errato attiverà il segnale sbagliato (potenzialmente pericoloso)</p></li>
-<li><p>Consultare lo schema elettrico realizzato durante l’installazione</p></li>
-<li><p>In caso di dubbio, contattare chi ha effettuato il cablaggio</p></li>
-</ul>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>I parametri impostati in questa fase sono sufficienti per la configurazione iniziale del sistema.
-Durante la procedura andremo poi a definire gli altri aspetti della configurazione della tramoggia.</p>
-</div>
 <hr class="docutils" />
 </section>
 </section>
@@ -573,10 +552,8 @@ Durante la procedura andremo poi a definire gli altri aspetti della configurazio
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><strong>1</strong></p></td>
-<td><p>Cliccare sulla sezione <img alt="../../../_images/tasto_setup1.png" class="inline-icon" src="../../../../../_shared/media/images/tasto_setup1.png" /></p></td>
-</tr>
-<tr class="row-even"><td><p><strong>2</strong></p></td>
-<td><p>Dalla sezione <strong>Hopper Setup</strong>, è possibile visualizzare e gestire le unità di carico collegate.</p>
+<td><p>Cliccare su <img alt="../../../_images/tasto_setup1.png" class="inline-icon" src="../../../../../_shared/media/images/tasto_setup1.png" />.<br />
+Dalla sezione <strong>Hopper Setup</strong>, è possibile visualizzare e gestire le unità di carico collegate.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Pagina Hopper Setup</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -584,8 +561,26 @@ Durante la procedura andremo poi a definire gli altri aspetti della configurazio
 </div>
 </details></td>
 </tr>
+<tr class="row-even"><td><p><strong>2</strong></p></td>
+<td><p>Nel campo <strong>Signal</strong>, inserire il numero del segnale digitale (DO - Digital Output) utilizzato per controllare l’Hopper</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>È fondamentale inserire il numero di segnale corretto:</p>
+<ul class="simple">
+<li><p>Un numero errato attiverà il segnale sbagliato (potenzialmente pericoloso)</p></li>
+<li><p>Consultare lo schema elettrico realizzato durante l’installazione</p></li>
+<li><p>In caso di dubbio, contattare chi ha effettuato il cablaggio</p></li>
+</ul>
+</div>
+</td>
+</tr>
 <tr class="row-odd"><td><p><strong>3</strong></p></td>
-<td><p>Selezionare la casella <strong>Enable Hopper X</strong> per attivare la tramoggia corrispondente.</p></td>
+<td><p>Selezionare la casella <strong>Enable Hopper X</strong> per attivare la tramoggia corrispondente.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Abilitare l’Hopper solo se il dispositivo è correttamente installato</p>
+</div>
+</td>
 </tr>
 <tr class="row-even"><td><p><strong>4</strong></p></td>
 <td><p>Cliccare sul pulsante <strong>Config Hopper X</strong> per accedere alla configurazione specifica</p></td>
@@ -600,15 +595,14 @@ Durante la procedura andremo poi a definire gli altri aspetti della configurazio
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><strong>5</strong></p></td>
-<td><p>Modificare il riquadro blu a schermo per inquadrare l’area in cui verranno rilevati i componenti.
-<strong>Strumenti di supporto</strong>:</p>
-<ul class="simple">
-<li><p><strong>Info</strong>: Cliccare per visualizzare dettagli sulle funzionalità della pagina.</p></li>
-</ul>
-</td>
+<td><p>Modificare il riquadro blu a schermo per inquadrare l’area in cui verranno rilevati i componenti.</p></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Per qualsiasi dubbio durante la configurazione, consultare il tasto <strong>INFO</strong> presente nella pagina corrente.</p>
 </div>
 </section>
 <section id="step-3-definizione-dei-valori-di-soglia">
@@ -667,7 +661,20 @@ Durante la procedura andremo poi a definire gli altri aspetti della configurazio
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Fill Hopper Threshold</strong> = …</p>
+<p><strong>Hopper Fill Threshold</strong></p>
+<p>Il parametro <strong>Hopper Fill Threshold</strong> definisce la soglia percentuale di riempimento dell’area di visione al di sotto della quale la tramoggia si attiva automaticamente.</p>
+<p>Il valore del 100% corrisponde alla quantità di pezzi acquisita durante il secondo CAPTURE (area piena). Di conseguenza, una soglia al 50% corrisponde alla metà di quella quantità.</p>
+<p>Il sistema imposta automaticamente il valore iniziale al <strong>70%</strong>, che rappresenta un buon equilibrio per la maggior parte delle applicazioni.</p>
+<p><strong>Modifica in corso d’opera</strong></p>
+<p>È possibile aggiustare la soglia senza ripetere la procedura di acquisizione:</p>
+<ul class="simple">
+<li><p>Per scaricare <strong>meno pezzi</strong> → ridurre la percentuale (es. 50%) e cliccare <strong>AUTO</strong></p></li>
+<li><p>Per scaricare <strong>più pezzi</strong> → aumentare la percentuale (es. 85%) e cliccare <strong>AUTO</strong></p></li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Per qualsiasi dubbio durante la configurazione, consultare il tasto <strong>INFO</strong> presente nella pagina corrente.</p>
 </div>
 </section>
 <section id="step-4-parametri-operativi">
@@ -856,7 +863,11 @@ Durante la procedura andremo poi a definire gli altri aspetti della configurazio
 <section id="passi-successivi">
 <h2>Passi successivi<a class="headerlink" href="#passi-successivi" title="Link to this heading">#</a></h2>
 <p>Una volta completato l’Hopper Setup (o saltato se non presente), procedere con:</p>
-<p><strong><a class="reference internal" href="13c_Robot_Setup.html"><span class="std std-doc">Passo 6: Robot Setup</span></a></strong> - Configurazione comunicazione con il robot</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="13c_Robot_Setup.html"><span class="std std-doc">Robot Setup</span></a></p></li>
+<li><p><a class="reference internal" href="15_Protocol_Setup.html#protocol-setup"><span class="std std-ref">Protocol Setup</span></a></p></li>
+<li><p><a class="reference internal" href="15b_SaveRecipe.html#ricettabase"><span class="std std-ref">Salvare La Ricetta</span></a></p></li>
+</ul>
 <br>
 <!-- Versions and languages set-up -->
 <style>
@@ -1553,9 +1564,9 @@ Durante la procedura andremo poi a definire gli altri aspetti della configurazio
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Hopper Setup</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparazione-del-setup-fisico">Preparazione del Setup Fisico</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accesso-alla-configurazione-hopper">Accesso alla configurazione Hopper</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#panoramica-interfaccia-hopper-setup">Panoramica interfaccia Hopper Setup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#procedura-di-configurazione">Procedura di configurazione</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#configurazione-della-tramoggia-hopper"><strong>Configurazione della Tramoggia (Hopper)</strong></a><ul class="visible nav section-nav flex-column">

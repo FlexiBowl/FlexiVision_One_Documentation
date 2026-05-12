@@ -56,6 +56,9 @@ L'utilizzo delle Clearances varia al variare del pezzo di cui si deve fare il mo
 * - **5**
   - Allontanare il robot con il pendant **senza spostare nulla** sulla superficie
 ````
+:::{tip}
+Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** presente nella pagina corrente.
+:::
 ---
 
 ## **Step 2: Accesso alla pagina Clearance**
@@ -115,6 +118,9 @@ L'utilizzo delle Clearances varia al variare del pezzo di cui si deve fare il mo
     La mancata osservanza di questi due punti potrebbe comportare collisioni del robot con conseguenti danni a FlexiBowl®, componenti o robot stesso. 
     :::
 ````
+:::{tip}
+Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** presente nella pagina corrente.
+:::
 ---
 
 ## **Step 4: Configurazione Automatica**
@@ -148,7 +154,9 @@ Se dopo AUTO il riquadro diventa rosso:
 2. Ripetere AUTO con condizioni di illuminazione stabili
 3. Ripetere TEST per verificare
 ````
-
+:::{tip}
+Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** presente nella pagina corrente.
+:::
 ---
 
 ## Clearance Multipli - Quando Usarli

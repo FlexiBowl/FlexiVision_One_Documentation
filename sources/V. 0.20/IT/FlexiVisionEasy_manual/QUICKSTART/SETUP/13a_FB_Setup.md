@@ -341,13 +341,7 @@ Cliccare sempre su **Synchronize Parameters** dopo ogni modifica manuale per ren
   - OPTION – Luce accesa
   - Premere per abilitare/disabilitare la retroilluminazione
 ```
-## Prossimi Passi
 
-Una volta completata la configurazione del FlexiBowl®, procedere con:
-
-**→ [Configurazione Hopper](../23_Config_Hopper.md)** - Se presente tramoggia esterna
-
-**→ [Verifica Risultati](../24_Verifica_Risultati.md)** - Monitoraggio applicazione completa
 ```{tip}
 **Test produzione**
 
@@ -364,8 +358,10 @@ La configurazione ottimale può richiedere 2-3 sessioni di fine-tuning con il pe
 
 Una volta completato il FlexiBowl® Setup, procedere con:
 
-- [Passo 5: Hopper Setup](13b_Hopper_Setup.md)
-- [Passo 6: Robot Setup](13c_Robot_Setup.md)
+- [Hopper Setup](13b_Hopper_Setup.md)
+- [Robot Setup](13c_Robot_Setup.md)
+- [Protocol Setup](protocol_setup)
+- [Salvare La Ricetta](ricettabase)
 
 
 
