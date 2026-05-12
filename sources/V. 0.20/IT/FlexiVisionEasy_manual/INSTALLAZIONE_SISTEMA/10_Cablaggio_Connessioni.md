@@ -1,7 +1,6 @@
 ﻿(cablaggio)=
 # **Cablaggio e Connessioni**
-immagine panoramica connessione elettriche 
-tipo:  
+  
 ![Pan Coll](../../../../_shared/media/images/panoramicacollegamenti.png)
 ```{list-table}
 :widths: 25 25 50

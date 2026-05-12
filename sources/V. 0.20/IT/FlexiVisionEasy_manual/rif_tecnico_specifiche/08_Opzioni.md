@@ -1364,7 +1364,7 @@ La calibrazione, quando si utilizza una griglia di calibrazione ARS, dev'essere 
     ```
 ````
 Per maggiori Informazioni sulla Schermatura della Luce Ambientale visitare la sezione [Schermatura Luce Ambientale](luce_ambientale).
-A seconda dell'applicazione, potrebbe essere necessario un diverso colore di illuminazione. Nella maggior parte dei casi, l'illuminazione IR è sufficiente. Tuttavia, in alcuni casi, ad esempio con parti trasparenti, l'illuminazione IR potrebbe avere difficoltà; in tal caso la luce bianca è una buona alternativa. La luce rossa viene utilizzata tipicamente con componenti metallici che normalmente rifletterebbero un'opzione IR o luce bianca. Dato che la luce rossa ha un'intensità inferiore, riduce la quantità di riflessione percepita dalla telecamera, aiutando il sistema di visione a riconoscere meglio i componenti.
+
 
 ---
 

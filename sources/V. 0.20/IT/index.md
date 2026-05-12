@@ -20,7 +20,7 @@ Grazie a una guida passo passo completa e a strumenti intuitivi, abbiamo estrema
 
 ```{figure} ../../_shared/media/images/Icon_FlexiVision.png
 :align: center
-:width: 50%
+:width: 80%
 
 Schema esemplificativo del sistema FlexiVision One
 ```

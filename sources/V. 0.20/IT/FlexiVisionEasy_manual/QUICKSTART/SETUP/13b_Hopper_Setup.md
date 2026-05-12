@@ -242,57 +242,7 @@ Senza salvataggio, tutte le configurazioni Hopper verranno perse alla chiusura d
 
 ---
 
-## Troubleshooting Hopper
 
-### Problemi comuni e soluzioni
-```{warning}
-**Hopper non si attiva mai**
-
-**Sintomi**: Disco si svuota ma Hopper non scarica
-
-**Cause possibili:**
-- Soglia configurata troppo bassa (sistema pensa sia sempre pieno)
-- Area monitoraggio mal posizionata (non rappresentativa)
-- Enable Hopper disabilitato
-
-**Soluzioni:**
-1. Verificare Enable Hopper attivo
-2. Ripetere calibrazione soglie con più pezzi nella seconda acquisizione
-3. Spostare area monitoraggio in zona più rappresentativa
-4. Eseguire TEST manualmente per verificare trigger
-```
-```{warning}
-**Hopper si attiva troppo frequentemente**
-
-**Sintomi**: Hopper scarica continuamente, disco si riempie eccessivamente
-
-**Cause possibili:**
-- Soglia configurata troppo alta
-- Time di scarico troppo lungo
-- Area monitoraggio in zona sempre vuota
-
-**Soluzioni:**
-1. Ridurre soglia (meno pezzi nella seconda acquisizione CAPTURE)
-2. Ridurre Time (durata vibrazione) di 100-200 ms
-3. Verificare posizionamento area monitoraggio
-```
-```{warning}
-**Pezzi scaricati non arrivano in tempo**
-
-**Sintomi**: Robot trova disco vuoto subito dopo attivazione Hopper
-
-**Cause possibili:**
-- Numero di Steps troppo basso (pezzi non hanno tempo di arrivare)
-- Sequenze FlexiBowl® non efficaci
-- Ostruzione percorso scarico
-
-**Soluzioni:**
-1. Aumentare Steps di 1-2 unità
-2. Verificare parametri Config FlexiBowl® (velocità, angolo)
-3. Ispezionare fisicamente percorso scarico Hopper → Disco
-```
-
----
 ## Passi successivi
 
 Una volta completato l'Hopper Setup (o saltato se non presente), procedere con:

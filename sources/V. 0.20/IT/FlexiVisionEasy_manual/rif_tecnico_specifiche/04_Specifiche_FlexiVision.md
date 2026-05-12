@@ -10,7 +10,7 @@ Questa sezione fornisce le specifiche tecniche complete del sistema FlexiVision 
 ```{figure} ../../../../_shared/media/images/camera.png
 :alt: Camera FlexiVision One CAM-CIC-5000-20G-1
 :align: center
-:width: 50%
+:width: 80%
 ```
 
 Il sistema FlexiVision One utilizza telecamere ad alta risoluzione con interfaccia Gigabit Ethernet per garantire rapidità nell'acquisizione delle immagini e precisione nel riconoscimento dei componenti.

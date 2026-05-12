@@ -234,21 +234,21 @@ I grafici nella parte inferiore della dashboard permettono un'analisi predittiva
 
     * - **PPM costante e stabile**:
       - 
-        - ✓ Sistema ben configurato
-        - ✓ Parametri ottimizzati
-        - ✓ Nessun collo di bottiglia critico
+        ✓ Sistema ben configurato  
+        ✓ Parametri ottimizzati  
+        ✓ Nessun collo di bottiglia critico  
 
     * - **PPM in diminuzione progressiva**:
       - 
-        - ⚠️ Possibile usura componenti (superficie grip FlexiBowl®)
-        - ⚠️ Hopper che si svuota (se presente, meno pressione = scarico più lento)
-        - ⚠️ Accumulo sporcizia su camera/illuminazione
+        ⚠️ Possibile usura componenti (superficie grip FlexiBowl®)  
+        ⚠️ Hopper che si svuota (se presente, meno pressione = scarico più lento)  
+        ⚠️ Accumulo sporcizia su camera/illuminazione  
 
     * - **PPM con fluttuazioni ampie**:
       - 
-        - ⚠️ Instabilità nel processo
-        - ⚠️ Problemi intermittenti di riconoscimento
-        - ⚠️ Interferenze esterne (vibrazioni, luce variabile)
+        ⚠️ Instabilità nel processo  
+        ⚠️ Problemi intermittenti di riconoscimento  
+        ⚠️ Interferenze esterne (vibrazioni, luce variabile)  
 
     * - **Azioni correttive**:
       - 
@@ -283,27 +283,27 @@ I grafici nella parte inferiore della dashboard permettono un'analisi predittiva
 
     * - **Attivazioni regolari e costanti**:
       - 
-        - ✓ Configurazione Hopper ottimale
-        - ✓ Flusso pezzi stabile e prevedibile
-        - ✓ Autonomia calcolabile (es: attivazione ogni 10 min)
+        ✓ Configurazione Hopper ottimale  
+        ✓ Flusso pezzi stabile e prevedibile  
+        ✓ Autonomia calcolabile (es: attivazione ogni 10 min)  
 
     * - **Attivazioni sempre più frequenti**:
       - 
-        - ⚠️ Hopper si sta svuotando (meno pezzi = più attivazioni per mantenere livello)
-        - ⚠️ Time scarico insufficiente per volume ridotto
-        - **Azione**: Pianificare ricarica Hopper a breve
+        ⚠️ Hopper si sta svuotando (meno pezzi = più attivazioni per mantenere livello)  
+        ⚠️ Time scarico insufficiente per volume ridotto    
+        **Azione**: Pianificare ricarica Hopper a breve
 
     * - **Nessuna attivazione per lungo periodo**:
       - 
-        - ⚠️ Robot fermo o rallentato (pezzi non vengono consumati)
-        - ⚠️ Possibile problema sistema che non richiede pezzi
-        - **Azione**: Verificare stato produzione
+        ⚠️ Robot fermo o rallentato (pezzi non vengono consumati)  
+        ⚠️ Possibile problema sistema che non richiede pezzi    
+        **Azione**: Verificare stato produzione
 
     * - **Attivazioni molto ravvicinate (burst)**:
       - 
-        - ⚠️ Soglia Hopper mal configurata (troppo alta)
-        - ⚠️ Steps insufficienti (pezzi non arrivano in tempo)
-        - **Azione**: Rivedere Config Hopper
+        ⚠️ Soglia Hopper mal configurata (troppo alta)  
+        ⚠️ Steps insufficienti (pezzi non arrivano in tempo)  
+        **Azione**: Rivedere Config Hopper
   :::
 ```
 
@@ -332,10 +332,10 @@ I grafici nella parte inferiore della dashboard permettono un'analisi predittiva
 
 * - **Score in diminuzione progressiva**:
   - 
-    - ⚠️ Pezzi reali diversi da quello di training (variazioni produzione)
-    - ⚠️ Illuminazione cambiata (backlight più debole, sporcizia)
-    - ⚠️ Camera non più a fuoco (vibrazioni, urti)
-    - ⚠️ Superficie FlexiBowl® sporca (pattern interferente)
+    ⚠️ Pezzi reali diversi da quello di training (variazioni produzione)  
+    ⚠️ Illuminazione cambiata (backlight più debole, sporcizia)  
+    ⚠️ Camera non più a fuoco (vibrazioni, urti)  
+    ⚠️ Superficie FlexiBowl® sporca (pattern interferente)  
 
 * - **Azioni correttive**:
   - 
@@ -406,31 +406,29 @@ Questi dati permettono ottimizzazione continua e giustificano investimenti in mi
 
 ---
 
-```{tip}
-**Sistema operativo completato!**
-
-Congratulazioni! Il sistema FlexiVision One è ora completamente configurato, ottimizzato e validato per la produzione.
-
-**Riepilogo percorso completato:**
-- ✓ Setup hardware (FlexiBowl®, Robot, Camera)
-- ✓ Calibrazione completa (Camera, Robot)
-- ✓ Modelli pezzo creati e ottimizzati
-- ✓ FlexiBowl® configurato per movimentazione ottimale
-- ✓ Hopper configurato per alimentazione automatica (se presente)
-- ✓ Sistema validato con monitoraggio Dashboard
-- ✓ Performance verificate e stabili
-
-Il sistema è pronto per operare in produzione con supervisione minima. Utilizzare la Dashboard per monitoraggio continuo e ottimizzazione nel tempo.
-
-**Tempo totale investito**: 4-8 ore (primo sistema completo)
-
-**Risultato**: Sistema di picking robotizzato completamente autonomo e ottimizzato!
+```{raw} html
+<div style="border: 2px solid #0d6efd; border-radius: 12px; padding: 2rem; margin: 1.5rem 0; background-color: #f0f6ff; display: flex; align-items: flex-start; gap: 2rem;">
+  <div style="flex: 1; min-width: 0;">
+    <div style="font-size: 1.2rem; font-weight: 700; color: #0d6efd; margin-bottom: 0.5rem;"> Sistema operativo completato!</div>
+    <div style="font-size: 0.95rem; color: #444; line-height: 1.6;">Congratulazioni! Il sistema FlexiVision One è ora completamente configurato, ottimizzato e validato per la produzione.</div>
+  </div>
+  <div style="flex: 1.4; background: white; border-radius: 8px; padding: 1.2rem 1.5rem; border: 1px solid #d0e4ff; font-size: 0.88rem; color: #333; line-height: 1.8;">
+    <div style="font-weight: 600; margin-bottom: 0.5rem;">Riepilogo percorso completato:</div>
+    <div>✓ Setup hardware (FlexiBowl®, Robot, Camera)</div>
+    <div>✓ Calibrazione completa (Camera, Robot)</div>
+    <div>✓ FlexiBowl® configurato per movimentazione ottimale</div>
+    <div>✓ Hopper configurato per alimentazione automatica (se presente)</div>
+    <div>✓ Modelli pezzo creati e ottimizzati</div>
+    <div>✓ Sistema validato con monitoraggio Dashboard</div>
+    <div>✓ Performance verificate e stabili</div>
+    <div style="margin-top: 0.8rem; font-style: italic; color: #555;">Il sistema è pronto per operare in produzione con supervisione minima.</div>
+  </div>
+  <div style="flex: 0.7; display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.9rem;">
+    <div style="color: #555; font-weight: 600;">Ultimi strumenti utili:</div>
+    <a href="../TROUBLESHOOTING/26_trb_shooting_guide.html" style="display: block; padding: 0.6rem 1rem; background: #0d6efd; color: white; border-radius: 6px; text-decoration: none; font-weight: 500;"> Troubleshooting</a>
+    <div style="font-size: 0.82rem; color: #555; margin-top: -0.4rem; padding-left: 0.3rem;">Guida risoluzione problemi comuni</div>
+    <a href="../27_Support.html" style="display: block; padding: 0.6rem 1rem; background: #0d6efd; color: white; border-radius: 6px; text-decoration: none; font-weight: 500;"> Support</a>
+    <div style="font-size: 0.82rem; color: #555; margin-top: -0.4rem; padding-left: 0.3rem;">Contatti assistenza tecnica</div>
+  </div>
+</div>
 ```
----
-
-Una volta validato il sistema tramite Dashboard:
-
-**→ [Troubleshooting](../TROUBLESHOOTING/26_trb_shooting_guide.md)** - Guida risoluzione problemi comuni
-
-**→ [Support](../27_Support.md)** - Contatti assistenza tecnica
-

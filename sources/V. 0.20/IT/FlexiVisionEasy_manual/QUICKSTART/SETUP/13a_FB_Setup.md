@@ -47,7 +47,7 @@ Per comodità e coerenza, partire dal primo FlexiBowl® disponibile
 Il FlexiBowl® viene spedito con indirizzo IP di default `192.168.1.10`
 :::
 :::{important}
-Per istruzioni su come modificare l'indirizzo IP del FlexiBowl, fare riferimento al manuale disponibile nella sezione [Download](https://www.flexibowl.it/downloads).
+Per istruzioni su come modificare l'indirizzo IP del FlexiBowl®, fare riferimento al manuale disponibile nella sezione [Download](https://www.flexibowl.it/downloads).
 :::
 
 ### **Step 2: Test di connessione**

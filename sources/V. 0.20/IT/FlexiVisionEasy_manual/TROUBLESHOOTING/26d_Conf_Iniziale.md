@@ -426,11 +426,11 @@ In generale, è consigliabile decidere fin dall'inizio il tipo di illuminazione 
   - Possibili Cause
   - Soluzioni
 * - **Tramoggia non si attiva mai automaticamente**
-  - • Hopper non abilitato in software  
-    • Campo Signal errato
-    • Area di controllo non definita
+  - • Hopper non abilitato in software    
+    • Campo Signal errato  
+    • Area di controllo non definita  
     
-    • Soglie non calibrate
+    • Soglie non calibrate  
     
     • Tramoggia non collegata elettricamente
   - • Abilitare checkbox "Enable Hopper X"  
