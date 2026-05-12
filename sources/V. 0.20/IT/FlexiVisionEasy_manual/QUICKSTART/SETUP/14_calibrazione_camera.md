@@ -167,7 +167,7 @@ Se cliccando piu volte il tasto RUN appare anche solo una volta una schermata co
 * - **12** 
   - **Regolare l'esposizione della camera**
     - Dalla pagina **Camera FLB x**, individuare il parametro **Cam Exposure** (Esposizione della Camera):
-    - Regolare il parametro "Cam Exposure" e cliccare su "TEST", ripetere questo passaggio fino a che non viene trovata la giusta esposizione per l'immagine: 
+    - Regolare il parametro "Cam Exposure" e cliccare su <img src="../../../../../_shared/media/images/tasto_TEST.png" class="inline-icon">, ripetere questo passaggio fino a che non viene trovata la giusta esposizione per l'immagine: 
    		- Pattern della griglia chiaramente visibile (nero su bianco o viceversa)
    		- Contrasto elevato tra quadrati bianchi e neri
    		- Nessuna sovraesposizione (aree completamente bianche "bruciate")
@@ -299,7 +299,8 @@ Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** pre
 
 ```{list-table}
 * - **19** 
-  - Una volta ottenuta una calibrazione di ottima qualità, Cliccare "NEXT". 
+  - Una volta ottenuta una calibrazione di ottima qualità, Cliccare <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon">.  
+  
     Apparirà una finestra che richiede la calibrazione del robot prima di proseguire, **NON** cliccare su "Sì" e seguire i prossimi passaggi
 * - **20** 
   - Montare il Laser Tool con il suo supporto personalizzato 
@@ -406,16 +407,16 @@ Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** pre
 :widths: 10 90
 
 * - **32**
-  - Cliccare su **Recipes**
+  - Cliccare su <img src="../../../../../_shared/media/images/tasto_recipes.png" class="inline-icon">
 
 * - **33**
-  - Controllare di avere la ricetta contenente tutti i setup e la calibrazione selezionata nel menu a sinistra e cliccare su **Save Recipe**
+  - Controllare di avere la ricetta contenente tutti i setup e la calibrazione selezionata nel menu a sinistra e cliccare su <img src="../../../../../_shared/media/images/tasto_save_recipes.png" class="inline-icon">
 
 * - **34**
   - Questa ci permetterà di avere salvati a parte tutti i passaggi fatti fin'ora, in modo da avere una base per tutte le future ricette che conterranno i vari modelli per il sistema calibrato
 
 * - **35**
-  - Per continuare con la creazione dei modelli, duplicare la ricetta base, rinominarla come si preferisce e cliccare su **Edit Recipe**: si aprirà una pagina con l'elenco di tutti i modelli disponibili
+  - Per continuare con la creazione dei modelli, duplicare la ricetta base, rinominarla come si preferisce e cliccare su <img src="../../../../../_shared/media/images/tasto_edit_recipes.png" class="inline-icon">: si aprirà una pagina con l'elenco di tutti i modelli disponibili
 ```
 ---
 

@@ -19,9 +19,9 @@ Il processo di configurazione iniziale è composto da sette passaggi principali:
 
 0. **Inserimento Chiave di Licenza** fornita nel kit
 1. **Login** - Accesso al software con credenziali utente
-2. se presente illuminatore Backlight: **Configurazione Indirizzo IP FlexiBowl** e **Accensione Backlight** 
+2. se presente illuminatore Backlight: **Configurazione Indirizzo IP FlexiBowl®** e **Accensione Backlight** 
 3. **Camera Setup** - Configurazione della camera
-4. **FlexiBowl Setup** - Connessione e configurazione del FlexiBowl
+4. **FlexiBowl Setup** - Connessione e configurazione del FlexiBowl®
 5. **Hopper Setup**  - Configurazione della tramoggia 
 6. **Robot Setup** - Configurazione comunicazione con il robot
 7. **Protocol Setup** - Configurazione di parametri di protocollo

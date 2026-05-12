@@ -27,11 +27,11 @@ Prima di procedere con il training del modello, familiarizzare con l'interfaccia
 Prima di procedere, assicurarsi di aver salvato la ricetta base creata durante il setup iniziale:
 :::{list-table}
   * - **1**
-    - Dalla pagina principale, cliccare su **Recipes**
+    - Dalla pagina principale, cliccare su <img src="../../../../../_shared/media/images/tasto_recipes.png" class="inline-icon">
   * - **2**
     - Verificare che la ricetta corrente sia quella base (es: "Ricetta_Base" creata durante il setup)
   * - **3**
-    - Cliccare su **Save Recipe**
+    - Cliccare su <img src="../../../../../_shared/media/images/tasto_save_recipes.png" class="inline-icon">
   * - **4**
     - Mantenere lo stesso nome nel campo di salvataggio (si sta sovrascrivendo la ricetta con le configurazioni aggiornate)
   * - **5**
@@ -59,7 +59,7 @@ Questo è utile perché permette di mantenere salvati a parte tutti i setup appe
 - Se cambia un solo elemento nella configurazione, si possono tenere validi i setup di tutti gli altri componenti 
 ```{list-table}
 * - **6**
-  - Dalla pagina principale del software FlexiVision One, cliccare su **Recipes**
+  - Dalla pagina principale del software FlexiVision One, cliccare su <img src="../../../../../_shared/media/images/tasto_recipes.png" class="inline-icon">
 * - **7**
   - Si apre la pagina di gestione ricette con l'elenco di tutte le ricette esistenti
 * - **8**

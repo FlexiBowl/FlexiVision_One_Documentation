@@ -211,7 +211,7 @@ Una clearance diventa rossa (triggered) quando rileva al suo interno:
 ## **Step 5: Finalizzazione**
 ````{list-table}
 * - **14**
-  - Dopo aver configurato tutte le clearance necessarie, cliccare su **Next**
+  - Dopo aver configurato tutte le clearance necessarie, cliccare su <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon">
 * - **15**
   - Si aprirà la pagina **Robot Model Pick Cam**
 ````

@@ -193,23 +193,6 @@ Tornare alla schermata principale di Hopper Setup per definire il comportamento 
   - **Descrizione e Procedura**
 * - **Steps**
   - Numero di avanzamenti del FlexiBowl® (sequenze) necessari per portare i pezzi dall'area di visione all'area di scarico della tramoggia.
-
-    :::{note}
-    **Come calcolarlo:**
-
-    :::::{list-table}
-
-    * - 1.
-      - Svuotare completamente il disco FlexiBowl®
-    * - 2.
-      - Lasciare un componente al centro dell'area di visione
-    * - 3.
-      - Eseguire sequenze FlexiBowl® fino a che il componente non arriva all'area di scarico della tramoggia e contare quanti avanzamenti sono stati necessari 
-    * - 4.
-      - Il risultato del conteggio è il valore da inserire in **Steps**
-    :::::
-    :::
-
 * - **Time**
   - Millisecondi di attivazione della tramoggia.   Valore consigliato: **100 – 1000 ms** (Media: **500 ms**). Regolare di ±50 ms in base al flusso desiderato.
 ```
@@ -225,6 +208,13 @@ Il valore Time è strettamente connesso al volume di carico della tramoggia:
 :::{important}
 In generale, è importante non superare mai il carico massimo della tramoggia utilizzata. 
 :::
+
+### Calcolare il Parametro Steps
+
+![Prima Pagina Steps](../../../../../_shared/media/images/Steps1.png)
+![Seconda Pagina Steps](../../../../../_shared/media/images/Steps2.png)
+![Terza Pagina Steps](../../../../../_shared/media/images/Steps3.png)
+![Quarta Pagina Steps](../../../../../_shared/media/images/Steps4.png)
 
 ## Salvataggio Configurazione
 ```{warning}

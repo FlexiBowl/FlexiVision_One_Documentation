@@ -22,7 +22,7 @@ Se non è già stato fatto prima, seguire questi passi:
 Completata la preparazione fisica, si procede con l'acquisizione dell'immagine e la creazione del modello
 ````{list-table}
 * - **3**
-  - Dalla pagina "Recipes", con la giusta ricetta selezionata, cliccare su "Edit Recipe"
+  - Dalla pagina "Recipes", con la giusta ricetta selezionata, cliccare su <img src="../../../../../_shared/media/images/tasto_edit_recipes.png" class="inline-icon">
 * - **4**
   - Selezionare il FlexiBowl® con cui si sta lavorando
     :::{dropdown} **Scelta FlexiBowl®**
@@ -196,7 +196,7 @@ Effettuare modifiche graduali (step di 0.1-0.2) e testare ogni volta.
     Un nome chiaro facilita la gestione quando si hanno molti modelli diverse.
     :::
 * - **15**
-  - Cliccare su **Next** → si aprirà la pagina **Define Robot Pick Area**  
+  - Cliccare su <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon"> → si aprirà la pagina **Define Robot Pick Area**  
 ````
 ````{seealso}
 Procedi alla [Definizione ROI](roitest) per continuare la configurazione.

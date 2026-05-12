@@ -4,7 +4,7 @@
 Questa sezione definisce la distanza di lavoro (Working Distance) raccomandata tra la telecamera e la superficie di lavoro del FlexiBowl, insieme alla conseguente selezione delle lenti necessarie per garantire il corretto Campo Visivo (Field of View, FOV).
 
 La scelta corretta della distanza di lavoro e della lente è fondamentale per:
-- Garantire che l'intera superficie utile del FlexiBowl sia visibile
+- Garantire che l'intera superficie utile del FlexiBowl® sia visibile
 - Ottenere la risoluzione necessaria per rilevare i pezzi
 - Minimizzare le distorsioni ottiche
 - Facilitare la calibrazione del sistema
