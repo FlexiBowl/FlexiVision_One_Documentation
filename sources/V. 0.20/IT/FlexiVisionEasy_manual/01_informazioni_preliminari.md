@@ -22,7 +22,7 @@ Si presuppone che il lettore possieda le conoscenze tecniche di base necessarie 
 
 ## Avvertenze importanti
 
-### **Leggere prima dell'uso**
+### *Leggere prima dell'uso*
 ```{warning}
 
 Prima di utilizzare FlexiVision One, è obbligatorio:
@@ -33,7 +33,7 @@ Prima di utilizzare FlexiVision One, è obbligatorio:
 
 Il mancato rispetto di queste indicazioni può causare malfunzionamenti, danni alle apparecchiature o situazioni pericolose.
 ```
-### **Contesto operativo e limitazioni di responsabilità**
+### *Contesto operativo e limitazioni di responsabilità*
 
 FlexiVision One è un sistema di visione sviluppato per la guida di robot industriali e fornito come componente aggiuntivo opzionale per i sistemi FlexiBowl® (modelli 200, 350, 500, 650, 800, 1200).
 
@@ -54,7 +54,7 @@ L'integrazione del sistema nell'ambiente di lavoro e la valutazione dei rischi s
 
 ## Note sulla documentazione
 
-### **Versione e aggiornamenti**
+### *Versione e aggiornamenti*
 
 ```{note}
 
@@ -63,7 +63,7 @@ L'integrazione del sistema nell'ambiente di lavoro e la valutazione dei rischi s
 - **Unità di misura**: salvo diversa indicazione, tutte le dimensioni sono espresse in millimetri (mm)
 - **Versione documento**: controllare sempre di disporre della versione più recente consultando il sito [www.flexibowl.it](https://www.flexibowl.it)
 ```
-### **Come usare al meglio questo manuale**
+### *Come usare al meglio questo manuale*  
 
 ```{tip}
 

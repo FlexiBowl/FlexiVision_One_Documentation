@@ -9,11 +9,11 @@ Non è necessario eseguire nuovamente la calibrazione nel caso in cui viene alte
 :::
 ---
 
-## **Perché la calibrazione è necessaria?**
+## Perché la calibrazione è necessaria?
 
 La calibrazione è necessaria perché ogni combinazione di sensore e lente introduce alterazioni specifiche nell'immagine. Il suo obiettivo principale è correggere queste distorsioni.
 
-### Tipi di distorsioni ottiche
+### *Tipi di distorsioni ottiche*
 
 ```{figure} ../../../../../_shared/media/images/distorsioni_new.png
 :alt: Tipi di distorsioni ottiche
@@ -26,7 +26,7 @@ Esempi di distorsioni ottiche: nessuna distorsione (sinistra), distorsione a bar
 ---
 
 
-## **Step 1: La griglia di calibrazione**
+## Step 1: La griglia di calibrazione
 
 :::{error}
 Assicurarsi di avere: 
@@ -98,7 +98,7 @@ Corretto posizionamento della griglia di calibrazione ARS sul FlexiBowl®
   ```
 :::
 
-## **Step 2: Regolazioni fondamentali**
+## Step 2: Regolazioni fondamentali
 
 ```{list-table}
 
@@ -198,7 +198,7 @@ Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** pre
 :::
 
 
-## **Step 3: Calibrazione Camera**
+## Step 3: Calibrazione Camera
 
 :::{video} ../../../../../_shared/media/videos/Step3_calib.mp4
     :width: 100%
@@ -275,7 +275,7 @@ Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** pre
 
 ---
 
-### Quando è necessario ripetere la calibrazione
+### *Quando è necessario ripetere la calibrazione*
 ```{list-table}
 :widths: 50 50
 :header-rows: 0
@@ -290,7 +290,7 @@ Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** pre
 ---
 # **Calibrazione Robot**
 
-## **Step 4: Montaggio Laser**
+## Step 4: Montaggio Laser
 
 :::{video} ../../../../../_shared/media/videos/Step4_calib.mp4
     :width: 100%
@@ -342,7 +342,7 @@ Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** pre
 :::
 
 
-## **Step 5: Disegnare un piano a 3 punti**
+## Step 5: Disegnare un piano a 3 punti
 
 :::{video} ../../../../../_shared/media/videos/Step5_calib.mp4
     :width: 100%
@@ -375,7 +375,7 @@ Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** pre
 :::
 
 
-## **Step 6: Verifica della traiettoria del robot**
+## Step 6: Verifica della traiettoria del robot
 
 :::{video} ../../../../../_shared/media/videos/Step6_calib.mp4
     :width: 100%
@@ -401,7 +401,7 @@ Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** pre
 :::
 
 
-## **Step 7: Salvataggio Ricetta Base** 
+## Step 7: Salvataggio Ricetta Base
 ```{list-table}
 :header-rows: 0
 :widths: 10 90
@@ -422,7 +422,7 @@ Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** pre
 
 # **Problemi comuni durante la calibrazione**
 
-## **Pattern non rilevato**
+## Pattern non rilevato
 
 ```{warning}
 **Errore: "Unable to detect calibration pattern"**
@@ -436,7 +436,7 @@ Causa: Il software non riesce a identificare il pattern della griglia.
 - Pulire la superficie della griglia (polvere o impronte possono interferire)
 ```
 
-## **Calibrazione sempre "Bad" o "Acceptable"**
+## Calibrazione sempre "Bad" o "Acceptable"
 
 ```{warning}
 **Qualità calibrazione insufficiente**

@@ -12,7 +12,7 @@ Il rispetto di tutte le norme di sicurezza riportate in questa sezione è obblig
 
 ## Sicurezza operativa
 
-### Integrazione con sistemi robotizzati
+### *Integrazione con sistemi robotizzati*
 
 
 ```{warning} **Requisiti di sicurezza della cella**  
@@ -31,7 +31,7 @@ Durante il funzionamento del sistema, tenere sempre conto di:
 - Zone di pericolo durante le fasi di movimentazione del FlexiBowl®
 ```
 
-### Precauzioni generali prima degli interventi
+### *Precauzioni generali prima degli interventi*
 
 
 ```{warning} **Disconnessione alimentazioni**  
@@ -50,7 +50,7 @@ Prima di eseguire qualsiasi intervento di manutenzione, modifica o ispezione sul
 Non affidarsi esclusivamente agli interruttori: utilizzare procedure di lockout/tagout (LOTO) quando disponibili.
 ```
 
-### Modifiche e manomissioni
+### *Modifiche e manomissioni*
 
 
 ```{warning} **Divieto di modifiche non autorizzate**    
@@ -156,7 +156,7 @@ La superficie di lavoro deve essere sufficientemente illuminata. Nel caso in cui
 
 ## Condizioni ambientali e protezione
 
-### Protezione da liquidi
+### *Protezione da liquidi*
 
 
 ```{warning} **Rischio contatto con liquidi**    
@@ -174,7 +174,7 @@ Non utilizzare il prodotto in ambienti dove il VisionController, la camera o alt
 Se il sistema deve operare in ambienti con presenza di liquidi, prevedere adeguate protezioni (custodie IP65 o superiori) e consultare il servizio tecnico ARS per soluzioni personalizzate.
 ```
 
-### Temperature operative
+### *Temperature operative*
 
 
 ```{warning} **Superfici calde - Temperature massime**    
@@ -197,7 +197,7 @@ In condizioni di utilizzo intenso o ambienti caldi, alcuni componenti del sistem
 - Garantire adeguata ventilazione dei componenti
 ```
 
-### Condizioni ambientali per installazione e stoccaggio
+### *Condizioni ambientali per installazione e stoccaggio*
 
 ```{note} **Requisiti ambientali - Tabella di riferimento**    
 
@@ -223,7 +223,7 @@ Per preservare l'integrità dei componenti:
 
 ## Trasporto e movimentazione
 
-### Ricezione e ispezione
+### *Ricezione e ispezione*
 
 ```{note} **Ispezione all'arrivo**    
 
@@ -245,7 +245,7 @@ Se si riscontrano problemi:
   [us.service@arsautomation.com](mailto:us.service@arsautomation.com) se si contatta dall'America
 ```
 
-### Movimentazione e stoccaggio
+### *Movimentazione e stoccaggio*
 
 Per prevenire danni durante trasporto e stoccaggio:
 

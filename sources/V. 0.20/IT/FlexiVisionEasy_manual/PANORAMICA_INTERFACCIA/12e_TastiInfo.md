@@ -1,3 +1,4 @@
+(vidtutcompleti)=
 # **I tasti INFO**
 In ognuna delle sezioni operative, è disponibile un tasto INFO in alto a destra.
 All'interno di questo pulsante è disponibile la spiegazione della procedura Step By Step, la stessa procedura è visibile nel video tutorial.

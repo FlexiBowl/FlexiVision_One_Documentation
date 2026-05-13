@@ -15,7 +15,7 @@ L'utilizzo delle Clearances varia al variare del pezzo di cui si deve fare il mo
 :::
 --- 
 (setupclearances)=
-## **Step 1: Setup Fisico**
+## Step 1: Setup Fisico
 
 :::{danger} **Attenzione!**
   Vi mostreremo la procedura con il Tool Pinza, in quanto necessita obbligatoriamente della configurazione di Clearances per i modelli. Altri Tool per il robot potrebbero non aver bisogno delle Clearances per simularne l'ingombro. 
@@ -61,7 +61,7 @@ Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** pre
 :::
 ---
 
-## **Step 2: Accesso alla pagina Clearance**
+## Step 2: Accesso alla pagina Clearance
 ````{list-table}
 :widths: 5 95
 
@@ -96,7 +96,7 @@ Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** pre
 ````
 ---
 
-## **Step 3: Attivazione e Posizionamento Area**
+## Step 3: Attivazione e Posizionamento Area
 
 :::{video} ../../../../../_shared/media/videos/Step3.mp4
     :width: 100%
@@ -123,7 +123,7 @@ Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** pre
 :::
 ---
 
-## **Step 4: Configurazione Automatica**
+## Step 4: Configurazione Automatica
 
 :::{video} ../../../../../_shared/media/videos/Step4.mp4
     :width: 100%
@@ -166,11 +166,11 @@ Crea più clearance quando:
 - Ci sono più punti critici da monitorare
 - L'area di presa ha geometrie particolari
 
-### **Step 2-3: Ripetizione**
+### *Step 2-3: Ripetizione*
 Selezionare una nuova clearance dalla pagina elenco delle Clearances, tipo "Clearance 2" e ripetere gli Step 2-3.
 Ripetere la procedura per ogni clearance necessaria (fino a 8 per modello). 
 
-### **Step 4: Test Complessivo**  
+### *Step 4: Test Complessivo* 
 
 Nella pagina di elenco di tutte le clearance, cliccare su **TEST** per visualizzare tutte le clearance contemporaneamente  
 
@@ -179,7 +179,7 @@ Nella pagina di elenco di tutte le clearance, cliccare su **TEST** per visualizz
 
 ## Interpretazione Stati
 
-### Stati delle Clearance 
+### *Stati delle Clearance*
 
 ````{list-table}
 :header-rows: 1
@@ -199,7 +199,7 @@ Nella pagina di elenco di tutte le clearance, cliccare su **TEST** per visualizz
   - ![](../../../../../_shared/media/images/redclearances.png)
 ````
 
-### Cosa Significa "Triggered"?
+### *Cosa Significa "Triggered"?*
 
 Una clearance diventa rossa (triggered) quando rileva al suo interno:
 - Presenza di altri componenti
@@ -208,7 +208,7 @@ Una clearance diventa rossa (triggered) quando rileva al suo interno:
 
 ---
 
-## **Step 5: Finalizzazione**
+## Step 5: Finalizzazione
 ````{list-table}
 * - **14**
   - Dopo aver configurato tutte le clearance necessarie, cliccare su <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon">

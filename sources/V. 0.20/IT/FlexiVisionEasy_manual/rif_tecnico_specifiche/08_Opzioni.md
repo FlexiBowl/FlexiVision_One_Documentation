@@ -1159,7 +1159,7 @@ Questa dimensione di Toplight è indicata per il modelli FlexiBowl® 1200
 :::
 ```
 (cavoalimtoplight)=
-### Cavo Alimentazione Toplight 
+### *Cavo Alimentazione Toplight* 
 
 ```{image} ../../../../_shared/media/images/cavoalimtoplight1.png
 :align: center
@@ -1172,9 +1172,14 @@ Questa dimensione di Toplight è indicata per il modelli FlexiBowl® 1200
 | CE001338 | Cavo Alimentazione Toplight power 5M | M12 4 Pin Female |
 | CE001339 | Cavo Alimentazione Toplight power 10M | M12 4 Pin Female |
 
-### Staffa per Montaggio Toplight 
+(staffa)=
+### *Staffa per Montaggio Toplight* 
+Per il [montaggio del toplight sul lato](montaggio_staffa) è possibile acquistare **a parte** un'apposita staffa. 
 
-
+```{image} ../../../../_shared/media/images/staffa_montaggio.png
+:align: center
+:width: 80%
+```
 
 (backlight)=
 ## Backlight
@@ -1298,7 +1303,7 @@ La calibrazione, quando si utilizza una griglia di calibrazione ARS, dev'essere 
 ```
 
 
-### Quando usare l'uno o l'altro
+### *Quando usare l'uno o l'altro*
 
 ```{eval-rst}
 .. list-table::
@@ -1317,7 +1322,7 @@ La calibrazione, quando si utilizza una griglia di calibrazione ARS, dev'essere 
      - .. image:: ../../../../_shared/media/images/BACKLIGHT.png
           :width: 150px
 ```
-#### Casi d'uso tipici
+#### *Casi d'uso tipici*
 
 - Viti, bulloni, rondelle → **Backlight**
 - Pezzi con stampe sulla faccia superiore, parti opache su superfici scure → **Toplight**
@@ -1329,7 +1334,7 @@ La calibrazione, quando si utilizza una griglia di calibrazione ARS, dev'essere 
 (colore_illuminazione)=
 ## Colore dell'Illuminazione
 
-### Quando usare ciascun colore
+### *Quando usare ciascun colore*
 
 ````{list-table}
    :widths: 20 50 30
@@ -1391,7 +1396,7 @@ Il filtro IR è un accessorio ottico da applicare all’obiettivo della camera c
 :width: 30%
 :::
 
-### Specifiche Elettriche
+### *Specifiche Elettriche*
 
 | Parametro | Valore |
 |-----------|--------|
@@ -1415,7 +1420,7 @@ Il filtro IR è un accessorio ottico da applicare all’obiettivo della camera c
 
 ![Dimensioni Switch](../../../../_shared/media/images/dimswitch.png)
 
-### Specifiche Fisiche
+### *Specifiche Fisiche*
 
 | Parametro | Valore |
 |-----------|--------|

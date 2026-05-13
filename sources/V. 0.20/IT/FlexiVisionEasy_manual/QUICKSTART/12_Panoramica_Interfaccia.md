@@ -1,6 +1,6 @@
 
 
-## Pagina DashBoard 
+# **Pagina DashBoard** 
 <img src="../../../../_shared/media/images/pagina_dashboardW.png" class="only-light" style="width: 20%; height: auto;">
 <img src="../../../../_shared/media/images/pagina_dashboardB.png" class="only-dark" style="width: 20%; height: auto;">
 
@@ -45,7 +45,7 @@
     * **Parts per minute**: grafico della media dei componenti prelevati al minuto.
 ```
 (recipes)=
-## Pagina Recipes 
+# **Pagina Recipes** 
 <img src="../../../../_shared/media/images/pagina_recipesW.png" class="only-light" style="width: 20%; height: auto;">
 <img src="../../../../_shared/media/images/pagina_recipesB.png" class="only-dark" style="width: 20%; height: auto;">
 
@@ -76,7 +76,7 @@
     * **Edit recipe**: pulsante diretto che porta al menù di configurazione e creazione del modello per la ricetta attualmente selezionata.
 ```
 
-## Pagina Setup 
+# **Pagina Setup** 
 <img src="../../../../_shared/media/images/pagina_setupW.png" class="only-light" style="width: 20%; height: auto;">
 <img src="../../../../_shared/media/images/pagina_setupB.png" class="only-dark" style="width: 20%; height: auto;">
 
@@ -124,7 +124,7 @@
 * - 11
   - **Licence software**: pagina per l'attivazione della licenza software.
 ```
-## i tasti INFO
+# **i tasti INFO**
 In ognuna delle sezioni operative, è disponibile un tasto INFO in alto a destra.
 All'interno di questo pulsante è disponibile la spiegazione della procedura Step By Step, la stessa procedura è visibile nel video tutorial.
 ```{dropdown} Tasto Info della pagina [Camera FLB](cameraFLB)

@@ -50,14 +50,14 @@ Utile per:
 
 Al centro della dashboard vengono riportati i dati relativi ai componenti identificati dal sistema di visione.
 
-### Detected Vision Parts
+### *Detected Vision Parts*
 
 **Detected Vision Parts** mostra:
 - Immagine acquisita in tempo reale dalla camera
 - Un **grafico storico** dei rilevamenti negli ultimi 30 secondi che mostra l'andamento del numero di pezzi riconosciuti per acquisizione.
 
 
-### Tabella Modelli Rilevati
+### *Tabella Modelli Rilevati*
 
 **Dettaglio componenti riconosciuti**
 
@@ -115,7 +115,7 @@ La tabella sotto l'immagine elenca tutti i componenti presenti nell'area di pick
 (indicatoriperformance)=
 ## Indicatori di Stato e Performance
 
-### Connettività
+### *Connettività*
 
 Indicatori di stato delle comunicazioni con i dispositivi esterni:
 
@@ -153,7 +153,7 @@ Indicatori di stato delle comunicazioni con i dispositivi esterni:
 In produzione, entrambi gli indicatori devono essere sempre verdi.
 ```
 
-### Analisi dei Tempi
+### *Analisi dei Tempi*
 
 Il sistema fornisce un breakdown dettagliato dei tempi di ciclo per individuare eventuali colli di bottiglia e ottimizzare il processo.
 
@@ -209,7 +209,7 @@ Il grafico dei tempi permette di identificare il **collo di bottiglia** del sist
 
 I grafici nella parte inferiore della dashboard permettono un'analisi predittiva e diagnostica delle performance del sistema nel tempo.
 
-### 1. Parts Per Minute (PPM)
+### *1. Parts Per Minute (PPM)*
 
 ```{list-table}
 * - **Grafico produttività**
@@ -258,7 +258,7 @@ I grafici nella parte inferiore della dashboard permettono un'analisi predittiva
   :::
 ```
 
-### 2. Fill Hopper
+### *2. Fill Hopper*
 
 ```{list-table}
 * - **Grafico attivazioni tramoggia**
@@ -307,7 +307,7 @@ I grafici nella parte inferiore della dashboard permettono un'analisi predittiva
   :::
 ```
 
-### 3. Vision - FlexiBowl® - Robot (Grafico Comparativo)
+### *3. Vision - FlexiBowl® - Robot (Grafico Comparativo)*
 
 ```{list-table} 
 * - **Grafico tempi sovrapposti**
@@ -348,7 +348,7 @@ I grafici nella parte inferiore della dashboard permettono un'analisi predittiva
 
 ## Best Practices Monitoraggio Produttivo
 
-### Check giornalieri
+### *Check giornalieri*
 
 ```{list-table}
 * - **All'avvio produzione** (5 minuti):
@@ -372,7 +372,7 @@ I grafici nella parte inferiore della dashboard permettono un'analisi predittiva
 ```
 Questa routine minima garantisce identificazione rapida di problemi e mantiene tracciabilità performance.
 
-### Report performance  
+### *Report performance*  
 
 ```{tip} **Metriche chiave da tracciare**
 Per valutazione performance nel tempo, tracciare:

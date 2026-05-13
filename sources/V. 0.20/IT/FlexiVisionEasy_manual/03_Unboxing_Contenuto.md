@@ -35,7 +35,7 @@ Componenti inclusi nel kit FlexiVision One standard.
 ```{note}
 La griglia di calibrazione e l'ottica possono differire dalle immagini a seconda del kit scelto.
 ```
-### Panoramica del Kit
+### *Panoramica del Kit*
 ```{list-table}
 :header-rows: 1
 :widths: 30 40 35
@@ -45,7 +45,7 @@ La griglia di calibrazione e l'ottica possono differire dalle immagini a seconda
   - **Immagine**
 * - Camera
   - [Vai alle specifiche della Camera](specifiche_camera)
-  - :::{figure} ../../../_shared/media/images/camera.png
+  - :::{figure} ../../../_shared/media/images/camera_nuova.png
     :width: 150px
     :::
 * - Obiettivo

@@ -418,10 +418,10 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differenze-lato-robot">Differenze lato robot</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-disponibili-in-modalita-mix">Comandi disponibili in modalità Mix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gestione-ricette">Gestione ricette</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-di-localizzazione-mix">Comandi di localizzazione Mix</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-flexibowl">Comandi FlexiBowl®</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#segnali-hopper-opzionale">Segnali hopper opzionale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gestione-ricette"><em>Gestione ricette</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-di-localizzazione-mix"><em>Comandi di localizzazione Mix</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-flexibowl"><em>Comandi FlexiBowl®</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#segnali-hopper-opzionale"><em>Segnali hopper opzionale</em></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formato-del-valore-di-ritorno">Formato del valore di ritorno</a></li>
@@ -458,7 +458,7 @@
 <section id="comandi-disponibili-in-modalita-mix">
 <h2>Comandi disponibili in modalità Mix<a class="headerlink" href="#comandi-disponibili-in-modalita-mix" title="Link to this heading">#</a></h2>
 <section id="gestione-ricette">
-<h3>Gestione ricette<a class="headerlink" href="#gestione-ricette" title="Link to this heading">#</a></h3>
+<h3><em>Gestione ricette</em><a class="headerlink" href="#gestione-ricette" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Comando</p></th>
@@ -484,7 +484,7 @@
 </div>
 </section>
 <section id="comandi-di-localizzazione-mix">
-<h3>Comandi di localizzazione Mix<a class="headerlink" href="#comandi-di-localizzazione-mix" title="Link to this heading">#</a></h3>
+<h3><em>Comandi di localizzazione Mix</em><a class="headerlink" href="#comandi-di-localizzazione-mix" title="Link to this heading">#</a></h3>
 <p>I comandi di localizzazione Mix consentono al robot di richiedere le coordinate di uno specifico modello all’interno della ricetta. Ogni comando è dedicato a un singolo modello e gestisce autonomamente il ciclo di ricerca, inclusa la movimentazione del FlexiBowl® e l’attivazione della tramoggia se necessario.</p>
 <p>Il comportamento di <code class="docutils literal notranslate"><span class="pre">mix_Locator_n</span></code> è il seguente:</p>
 <ol class="arabic simple">
@@ -551,7 +551,7 @@ Questo significa che per richiedere le coordinate di un modello diverso è neces
 </div>
 </section>
 <section id="comandi-flexibowl">
-<h3>Comandi FlexiBowl®<a class="headerlink" href="#comandi-flexibowl" title="Link to this heading">#</a></h3>
+<h3><em>Comandi FlexiBowl®</em><a class="headerlink" href="#comandi-flexibowl" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Comando</p></th>
@@ -569,7 +569,7 @@ Questo significa che per richiedere le coordinate di un modello diverso è neces
 </div>
 </section>
 <section id="segnali-hopper-opzionale">
-<h3>Segnali hopper opzionale<a class="headerlink" href="#segnali-hopper-opzionale" title="Link to this heading">#</a></h3>
+<h3><em>Segnali hopper opzionale</em><a class="headerlink" href="#segnali-hopper-opzionale" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Se la tramoggia deve essere attivata, riceveremo la stringa: <code class="docutils literal notranslate"><span class="pre">&quot;Hopper;signalnumber;time&quot;</span></code></p>
@@ -792,7 +792,7 @@ Questo significa che per richiedere le coordinate di un modello diverso è neces
     const versions = Array.isArray(manifest && manifest.versions) && manifest.versions.length
       ? manifest.versions
       : inlineVersions;
-    const offlineZipEnabled = true;
+    const offlineZipEnabled = false;
     const offlineZipFileName = 'Offline manual.zip';
     const americanRegions = new Set([
       'AG', 'AR', 'AW', 'BB', 'BL', 'BM', 'BO', 'BQ', 'BR', 'BS', 'BZ', 'CA', 'CL', 'CO', 'CR',
@@ -1309,10 +1309,10 @@ Questo significa che per richiedere le coordinate di un modello diverso è neces
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differenze-lato-robot">Differenze lato robot</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-disponibili-in-modalita-mix">Comandi disponibili in modalità Mix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gestione-ricette">Gestione ricette</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-di-localizzazione-mix">Comandi di localizzazione Mix</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-flexibowl">Comandi FlexiBowl®</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#segnali-hopper-opzionale">Segnali hopper opzionale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gestione-ricette"><em>Gestione ricette</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-di-localizzazione-mix"><em>Comandi di localizzazione Mix</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-flexibowl"><em>Comandi FlexiBowl®</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#segnali-hopper-opzionale"><em>Segnali hopper opzionale</em></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formato-del-valore-di-ritorno">Formato del valore di ritorno</a></li>

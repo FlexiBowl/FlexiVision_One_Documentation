@@ -73,7 +73,7 @@ La pagina Hopper Setup presenta diverse sezioni per la configurazione dei parame
 
 La configurazione della tramoggia permette di gestire il rifornimento automatico dei componenti sul disco del FlexiBowl®. Il sistema utilizza la visione per determinare quando il livello di riempimento è insufficiente e attivare la tramoggia.
 
-## **Step 1: Accesso alla Configurazione**
+## Step 1: Accesso alla Configurazione
 ```{list-table}
 * - **1**
   - Cliccare su <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">.   
@@ -98,7 +98,7 @@ La configurazione della tramoggia permette di gestire il rifornimento automatico
 * - **4**
   - Cliccare sul pulsante **Config Hopper X** per accedere alla configurazione specifica 
 ```
-## **Step 2: Definizione dell'Area di Controllo**
+## Step 2: Definizione dell'Area di Controllo
 
 :::{video} ../../../../../_shared/media/videos/TastoInfo_AreaHopper_1280x720.mp4
     :width: 100%
@@ -114,7 +114,7 @@ In questa fase si definisce la porzione di disco che la telecamera deve monitora
 Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** presente nella pagina corrente.
 :::
 
-## **Step 3: Definizione dei Valori di Soglia**
+## Step 3: Definizione dei Valori di Soglia
 
 :::{video} ../../../../../_shared/media/videos/TastoInfo_Hopper_1280x720.mp4
 :width: 100%
@@ -181,7 +181,7 @@ Il sistema imposta automaticamente il valore iniziale al **70%**, che rappresent
 Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** presente nella pagina corrente.
 :::
 
-## **Step 4: Parametri Operativi**
+## Step 4: Parametri Operativi
 
 Tornare alla schermata principale di Hopper Setup per definire il comportamento meccanico.
 ![Pagina Hopper Setup](../../../../../_shared/media/images/pagina_hoppersetup.png)
@@ -209,7 +209,7 @@ Il valore Time è strettamente connesso al volume di carico della tramoggia:
 In generale, è importante non superare mai il carico massimo della tramoggia utilizzata. 
 :::
 
-### Calcolare il Parametro Steps
+### *Calcolare il Parametro Steps*
 
 ![Prima Pagina Steps](../../../../../_shared/media/images/Steps1.png)
 ![Seconda Pagina Steps](../../../../../_shared/media/images/Steps2.png)

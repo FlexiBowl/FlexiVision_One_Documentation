@@ -95,11 +95,11 @@ Un'associazione errata in fase di setup si ripercuoterebbe su tutte le ricette d
 
 ## Componenti necessari
 
-### Kit base FlexiVision One
+### *Kit base FlexiVision One*
 
 Il **kit base FlexiVision One** (fornito con il sistema) include già tutto il necessario per la **prima stazione** (camera, ottica, cavi, griglia di calibrazione). Non è necessario acquistare un secondo kit completo per la seconda stazione.
 
-### Kit Camera Aggiuntiva
+### *Kit Camera Aggiuntiva*
 
 Per la seconda stazione è sufficiente acquistare il **Kit Camera Aggiuntiva**, disponibile in una versione specifica per ogni taglia di FlexiBowl®. Il kit include:
 
@@ -123,7 +123,7 @@ Selezionare il kit in base alla taglia del **secondo** FlexiBowl®:
 Se le due stazioni utilizzano FlexiBowl® di **taglie diverse**, il Kit Camera Aggiuntiva deve essere selezionato in base alla taglia del FlexiBowl® della seconda stazione. La prima stazione è già coperta dal kit base.
 ```
 
-### Switch
+### *Switch*
 
 Lo Switch è sempre necessario nelle configurazioni multi-dispositivo. Per codice, specifiche elettriche e fisiche consultare la sezione dedicata:
 
@@ -138,7 +138,7 @@ Lo schema di cablaggio è identico per entrambe le varianti: tutti i dispositivi
 Lo Switch dispone di **8 porte Ethernet**. Verificare che il numero totale di dispositivi da collegare non superi la capacità disponibile, tenendo conto di tutti i FlexiBowl®, camere e robot presenti.
 ```
 
-### Schema di connessione
+### *Schema di connessione*
 
 | Dispositivo | Collegamento |
 |---|---|
@@ -153,7 +153,7 @@ Lo Switch dispone di **8 porte Ethernet**. Verificare che il numero totale di di
 Verificare che a ciascun dispositivo sia assegnato un indirizzo IP univoco nella stessa subnet. Le porte TCP/IP utilizzate dal VisionController per le due stazioni sono configurabili: per default **FB1 → 4001**, **FB2 → 4002**. Consultare la sezione [Protocollo Comunicazione Robot-Visione](../rif_tecnico_specifiche/04b_Protocolli_Comunicazione.md) per i dettagli.
 ```
 
-### Porte Switch occupate per variante
+### *Porte Switch occupate per variante*
 
 | Porta Switch | Variante A (1 Robot) | Variante B (2 Robot) |
 |---|---|---|

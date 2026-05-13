@@ -43,7 +43,7 @@ L'ordine dei setup è importante! Non saltare passaggi o modificare la sequenza,
 Il primo passo prima dell'avvio del software FlexiVision One è inserire la chiave di licenza fornita con il kit. 
 :::
 
-### Login al sistema
+### *Login al sistema*
 
 All'avvio del software FlexiVision One, viene presentata la pagina Home. 
 ```{list-table} 
@@ -71,7 +71,7 @@ FlexiVision One supporta profili utente multipli con diversi livelli di permessi
 
 ---
 
-### Accendere il Backlight se presente
+### *Accendere il Backlight se presente*
 
 Dopo il primo login, se è necessario attivare la licenza FlexiVision One, seguire questi passi: 
 

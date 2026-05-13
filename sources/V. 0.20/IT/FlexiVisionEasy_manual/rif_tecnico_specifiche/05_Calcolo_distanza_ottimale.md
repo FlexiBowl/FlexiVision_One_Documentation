@@ -22,7 +22,7 @@ La scelta della lente è strettamente dipendente dalla distanza di montaggio rac
 La lente appropriata per il modello FlexiBowl® specificato nell'ordine è sempre inclusa nel pacchetto FlexiVision One e viene fornita in un imballo separato rispetto alla camera. Non è necessario acquistarla separatamente.
 ```
 
-### Schema distanze e campo visivo
+### *Schema distanze e campo visivo*
 
 Il seguente diagramma illustra la relazione tra distanza di lavoro, lunghezza focale della lente e area di visione risultante per i diversi modelli di FlexiBowl®.
 
@@ -36,7 +36,7 @@ Il seguente diagramma illustra la relazione tra distanza di lavoro, lunghezza fo
 - **Distanza di Lavoro**: Distanza verticale tra la lente della camera e la superficie di lavoro del FlexiBowl®
 - **Area di visione**: Zona della superficie del FlexiBowl® coperta dal campo visivo della camera
 
-### Tabella riepilogativa per modello
+### *Tabella riepilogativa per modello*
 
 ```{list-table}
 :header-rows: 1
@@ -75,7 +75,7 @@ Deviazioni significative dalla distanza di lavoro raccomandata possono causare:
 
 Rispettare sempre le distanze indicate in tabella durante il montaggio meccanico della camera.
 ```
-### Posizionamento Camera 
+### *Posizionamento Camera*
 
 **Configurazione corretta.** La camera deve essere posizionata centralmente e con il medesimo orientamento angolare all’area di visione del FlexiBowl® (zona backlight). In questo modo il campo visivo (indicato in verde) copre simmetricamente l’intera area di lavoro, garantendo il corretto funzionamento del sistema di visione.  
 

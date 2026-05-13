@@ -31,7 +31,7 @@ L'installazione meccanica richiede:
 Il VisionController (PC Industriale) gestisce l'elaborazione delle immagini e la comunicazione con il robot.   
 Essendo un componente elettronico sensibile, richiede un posizionamento attento per garantire ventilazione adeguata e protezione da contaminanti.
 
-### Specifiche tecniche 
+### *Specifiche tecniche* 
 ```{figure} ../../../../_shared/media/images/Dim_PC.png
 :alt: Dimensioni VisionController
 :align: center
@@ -59,7 +59,7 @@ Essendo un componente elettronico sensibile, richiede un posizionamento attento 
   - 61.10 mm
 ```
 
-### Requisiti di montaggio
+### *Requisiti di montaggio*
 
 ```{list-table}
 :header-rows: 1
@@ -79,9 +79,9 @@ Essendo un componente elettronico sensibile, richiede un posizionamento attento 
   - IP40 minimo (consigliato montaggio in quadro elettrico IP54)
 ```
 
-### Procedura di installazione
+### *Procedura di installazione*
 
-#### Montaggio con Fori 
+#### *Montaggio con Fori*
 
 ```{list-table} 
    :header-rows: 1
@@ -97,7 +97,7 @@ Essendo un componente elettronico sensibile, richiede un posizionamento attento 
      - Fissare il VisionController con viti M5  
 ```
 
-#### Montaggio con guida DIN
+#### *Montaggio con guida DIN*
 
 ```{list-table} 
    :header-rows: 1
@@ -130,7 +130,7 @@ Altrimenti si può avere:
 Il posizionamento preciso e l'allineamento della telecamera sono passaggi critici che influenzano direttamente l'accuratezza della calibrazione e le prestazioni del sistema di picking.
 
 
-### Distanza di lavoro ottimale
+### *Distanza di lavoro ottimale*
 
 La telecamera deve essere montata in modo che la faccia frontale della lente sia posizionata a una distanza specifica (Working Distance) dalla superficie di lavoro del FlexiBowl®.  
 Per il calcolo dettagliato della distanza ottimale per la vostra applicazione, consultare la sezione dedicata: [Calcolo Distanza Ottimale](distanza_lavoro)
@@ -168,7 +168,7 @@ Per il calcolo dettagliato della distanza ottimale per la vostra applicazione, c
   - 12 mm
 ```
 
-### Posizionamento e allineamento
+### *Posizionamento e allineamento*
 
 Il corretto allineamento della camera è fondamentale per ottenere immagini di qualità e garantire precisione nel picking.
 
@@ -212,7 +212,7 @@ Per facilitare la messa a punto e permettere aggiustamenti futuri, si raccomanda
 Questa flessibilità è particolarmente utile durante la calibrazione iniziale e per eventuali ricalibrazione future.
 ```
 
-### Dimensioni Camera 
+### *Dimensioni Camera* 
 ```{figure} ../../../../_shared/media/images/Dimensioni_Cam.png
 :alt: Dimensioni camera CAM-CIC-5000-20G-1
 :align: center
@@ -260,7 +260,7 @@ Per permettere aggiustamenti futuri ed evitare problemi di allineamento, progett
 
 Un supporto con viti serrate definitivamente senza possibilità di regolazione rende impossibile correggere la posizione della camera dopo il montaggio iniziale.
 ```
-### Verifica montaggio lente
+### *Verifica montaggio lente*
 
 ```{warning}
 Prima di procedere con il fissaggio definitivo:
@@ -269,7 +269,7 @@ Prima di procedere con il fissaggio definitivo:
 3. Assicurarsi che la lente sia avvitata completamente (contatto metal-metal tra lente e corpo camera)
 4. NON rimuovere o allentare la lente se già montata correttamente
 ```
-### Installazione Camera
+### *Installazione Camera*
 Per garantire il corretto funzionamento del sistema di visione è necessario che la telecamera sia installata su un supporto rigido e stabile.
 Il sistema FlexiBowl® non genera vibrazioni; tuttavia, nelle linee automatizzate sono presenti altre sorgenti di vibrazione,(robot industriali,sistemi di movimentazione,altre macchine della linea)
 
@@ -297,7 +297,7 @@ Le viti di fissaggio della camera possono allentarsi nel tempo per le seguenti c
 - **Viti non idonee**: verificare l'utilizzo di viti **M3 × 8 mm inox** come consigliato.
 ```
 
-### Regolazione della posizione della telecamera:
+### *Regolazione della posizione della telecamera:*
 
 Il supporto della telecamera deve consentire la regolazione della posizione per permettere il corretto allineamento con l’area di prelievo del FlexiBowl®.
 
@@ -329,7 +329,7 @@ Se l'ordine include un Toplight (illuminatore dall'alto), questo deve essere mon
 :::{attention}
 Durante il montaggio, l'apparecchio deve essere spento e staccato dalla corrente.
 :::
-### Dimensioni Toplight 
+### *Dimensioni Toplight* 
 ![Dimensioni Toplight](../../../../_shared/media/images/toplight_dim.JPG)
 
 | Lunghezza x Larghezza (mm) | Altezza (mm) | Altezza con piastra di fissaggio (mm) | Diametro foro centrale | Superficie utile massima [A x B] | Perimetro utile massimo |
@@ -340,7 +340,7 @@ Durante il montaggio, l'apparecchio deve essere spento e staccato dalla corrente
 | 700x500 | 45 | 55 | 65 | 0,35 m² | 2,4 m |
 | 900x600 | 45 | 55 | 65 | 0,54 m² | 3 m |
 
-### Posizionamento Toplight 
+### *Posizionamento Toplight* 
 Il toplight deve essere posizionato centralmente rispetto alla superficie utile del pannello luminoso,
 con l'ottica della telecamera montata all'interno del foro centrale, a filo con la superficie superiore del toplight.   
 Le frecce rosse indicano le viti di fissaggio delle ghiere dell'obiettivo, una per la regolazione del fuoco e una per la regolazione del diaframma. Come mostrato nella figura, il toplight deve essere montato in modo che le due viti restino accessibili dall'alto. 
@@ -361,7 +361,7 @@ In entrambi i casi, l'illuminazione risulta disassata e non perpendicolare, comp
 
 ![Posizione Toplight Cam + FB Sbagliata](../../../../_shared/media/images/posizioneTPL_sbagliata.png)
 
-### Procedura di installazione
+### *Procedura di installazione*
 ```{list-table}
 :header-rows: 1
 :widths: 35 65
@@ -384,7 +384,7 @@ In entrambi i casi, l'illuminazione risulta disassata e non perpendicolare, comp
   - Secondo specifiche della modalità scelta (vedi sezione seguente).
 ```
 
-### Modalità di fissaggio
+### *Modalità di fissaggio*
 
 Il Toplight può essere fissato in due modalità: sull'[angolo](angolo) o sul [lato](lato).
 
@@ -398,7 +398,7 @@ In entrambi i casi si raccomanda l'uso di un **frenafiletti** (non fornito) per 
 :::
 
 (angolo)=
-#### 1. Fissaggio sull'angolo
+#### *1. Fissaggio sull'angolo*
 
 Il fissaggio sull'angolo utilizza viti CHC M4x20 (non fornite) applicate nei fori posizionati ai quattro angoli del Toplight.
 ```{figure} ../../../../_shared/media/images/fissaggio_angolo.png
@@ -410,18 +410,20 @@ Fissaggio sull'angolo tramite vite CHC M4x20 (non fornita).
 ```
 
 (lato)=
-#### 2. Fissaggio sul lato (scanalatura)
+#### *2. Fissaggio sul lato (scanalatura)*
 
-Il fissaggio sul lato utilizza 4 dadi M4 (forniti) da inserire nella scanalatura laterale del profilo del Toplight. La profondità massima di inserimento del dado nella scanalatura è di **5 mm**.
+Il fissaggio sul lato utilizza 4 dadi M4 (forniti) da inserire nella scanalatura laterale del profilo del Toplight.  
+   La profondità massima di inserimento del dado nella scanalatura è di **5 mm**.  
+     Le Viti consigliate sono M4x8.
 
 ```{figure} ../../../../_shared/media/images/fissaggio_lato.JPG
-:alt: Fissaggio del Toplight sul lato tramite dadi M4 nella scanalatura
+:alt: Fissaggio del Toplight sul lato 
 :align: center
 :width: 100%
 
 Fissaggio sul lato tramite 4 dadi M4 (forniti) inseriti nella scanalatura del profilo. Profondità massima: 5 mm.
 ```
-
+(montaggio_staffa)=
 ##### Fissaggio laterale con staffe 
 Nel caso in cui il Toplight venisse fissato con delle staffe: 
 
@@ -433,8 +435,28 @@ Nel caso in cui il Toplight venisse fissato con delle staffe:
 ![montaggio Laterale](../../../../_shared/media/images/montaggiolaterale.png)
 :::
 
+```{raw} html
+<div style="
+    border: 2px solid #0d6efd;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    margin: 1rem 0;
+    background-color: #f0f6ff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+"> 
+    <span>
+        Per il Montaggio laterale è possibile acquistare <strong>a parte</strong> 
+        l'apposita <a href="[https://docs.flexibowl.com/V.%200.20/IT/FlexiVisionEasy_manual/rif_tecnico_specifiche/08_Opzioni.html#staffa-per-montaggio-toplight](https://docs.flexibowl.com/V.%200.20/IT/FlexiVisionEasy_manual/rif_tecnico_specifiche/08_Opzioni.html#staffa-per-montaggio-toplight)">staffa</a>.
+    </span>
+</div>
+```
 
-### Cablaggio illuminatore
+
+
+### *Cablaggio illuminatore*
 
 
 ![Pin Toplight](../../../../_shared/media/images/pin_toplight.png)
@@ -515,13 +537,13 @@ Il sistema di visione funziona confrontando ogni immagine acquisita con un model
 
 ![Schermatura luce ambientale](../../../../_shared/media/images/LIGHTSHIELDING.png)
 
-### Sintomi tipici di luce ambientale non controllata
+### *Sintomi tipici di luce ambientale non controllata*
 
 - **Riconoscimento instabile**: il sistema funziona bene in certi momenti e peggiora in altri, ad esempio quando la luce solare entra nella cella.
 - **Punteggio di riconoscimento variabile**: i pezzi vengono rilevati con punteggi molto diversi da un ciclo all'altro, anche se fisicamente identici.
 - **Falsi positivi**: pezzi con scarsa affidabilità vengono riconosciuti con punteggi alti e viceversa.
 
-### Best Practice di installazione
+### *Best Practice di installazione*
 
 - Schermare i lati della cella esposti a illuminazione irregolare con pannelli opachi.
 - Evitare illuminazione artificiale variabile (lampade con dimmer, fluorescenti tremolanti) sopra o vicino alla cella.

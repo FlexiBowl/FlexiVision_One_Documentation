@@ -30,7 +30,7 @@ Assicurarsi che:
 
 ## Procedura di connessione
 
-### **Step 1: Configurazione indirizzo di rete**
+### *Step 1: Configurazione indirizzo di rete*
 
 ```{list-table}
 * - **4**
@@ -50,7 +50,7 @@ Il FlexiBowl® viene spedito con indirizzo IP di default `192.168.1.10`
 Per istruzioni su come modificare l'indirizzo IP del FlexiBowl®, fare riferimento al manuale disponibile nella sezione [Download](https://www.flexibowl.it/downloads).
 :::
 
-### **Step 2: Test di connessione**
+### *Step 2: Test di connessione*
 
 ```{list-table}
 :widths: 5 95
@@ -91,7 +91,7 @@ Se il problema persiste, consultare [Troubleshooting](troubleshooting).
 
 Una volta stabilita la connessione, procedere con la configurazione dei parametri operativi.
 
-### **Step 3: Accesso configurazione**
+### *Step 3: Accesso configurazione*
 
 ```{list-table}
 * - **9** 
@@ -101,7 +101,7 @@ Una volta stabilita la connessione, procedere con la configurazione dei parametr
 ```
 
 
-### **Step 4: Sincronizzazione parametri**
+### *Step 4: Sincronizzazione parametri*
 
 ```{list-table}
 
@@ -126,7 +126,7 @@ Una volta stabilita la connessione, procedere con la configurazione dei parametr
 
 L'interfaccia **FlexiBowl® Wizard** è uno strumento interattivo progettato per guidare l'utente nella configurazione dei parametri di alimentazione in base alla specifica famiglia di prodotti da gestire.
 
-## **Step 1: Accesso al Wizard**
+## Step 1: Accesso al Wizard
 
 Per avviare la procedura:
 ```{list-table}
@@ -160,7 +160,7 @@ Per avviare la procedura:
     :::
 ```
 
-## **Step 2: Selezione Modello e Rotazione**
+## Step 2: Selezione Modello e Rotazione
 
 In questa fase si definiscono le caratteristiche hardware del sistema:
 ```{list-table}
@@ -169,7 +169,7 @@ In questa fase si definiscono le caratteristiche hardware del sistema:
 * - **7**
   - Definire il senso di rotazione del disco (**Clockwise** o **CounterClockwise**).
 ```
-## **Step 3: Caratterizzazione del Componente**
+## Step 3: Caratterizzazione del Componente
 
 Il sistema richiede informazioni sulla morfologia dei pezzi per ottimizzare la separazione.
 ````{list-table}
@@ -230,7 +230,7 @@ Il sistema richiede informazioni sulla morfologia dei pezzi per ottimizzare la s
       :::
       ::::
 ````
-## **Step 4: Test degli Accessori**
+## Step 4: Test degli Accessori
 ```{list-table}
 * - **11**
   - Selezionare dal menu a tendina se il FlexiBowl® è equipaggiato con il modulo **Air-blow**.
@@ -271,7 +271,7 @@ Il sistema richiede informazioni sulla morfologia dei pezzi per ottimizzare la s
      - Parametri della vibrazione di scuotimento (separazione).
 ```
 
-## **Step 5: Validazione della Sequenza**
+## Step 5: Validazione della Sequenza
 
 Utilizzare la funzione **Test Sequence** per verificare che il ciclo rispetti i seguenti criteri di efficienza:
 ```{list-table}

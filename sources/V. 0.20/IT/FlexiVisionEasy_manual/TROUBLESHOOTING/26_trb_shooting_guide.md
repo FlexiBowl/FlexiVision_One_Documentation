@@ -3,7 +3,7 @@
 
 Seleziona il componente per cui hai bisogno di supporto.
 
-## **Installazione Meccanica**
+## Installazione Meccanica
 
 :::{card} VisionController
 :link: troubleshooting_vision_controller
@@ -25,7 +25,7 @@ Seleziona il componente per cui hai bisogno di supporto.
 :link-type: ref
 :::
 
-## **Cablaggio e Connessioni**
+## Cablaggio e Connessioni
 
 :::{card} Alimentazione
 :link: troubleshooting_alimentazione
@@ -57,7 +57,7 @@ Seleziona il componente per cui hai bisogno di supporto.
 :link-type: ref
 :::
 
-## **Configurazione Iniziale**
+## Configurazione Iniziale
 
 :::{card} Camera Setup
 :link: troubleshooting_cam_setup
@@ -86,7 +86,7 @@ Seleziona il componente per cui hai bisogno di supporto.
 
 
 
-## **Calibrazione e Ricette**
+## Calibrazione e Ricette
 
 :::{card} Calibrazione Camera
 :link: troubleshooting_calib_cam
@@ -118,7 +118,7 @@ Seleziona il componente per cui hai bisogno di supporto.
 :link-type: ref
 :::
 
-## **Avanzate e Monitoraggio**
+## Avanzate e Monitoraggio
 
 :::{card} FlexiBowl® Wizard
 :link: troubleshooting_fb_wizard
@@ -142,7 +142,7 @@ Seleziona il componente per cui hai bisogno di supporto.
 26i_Conf_Tramoggia.md
 ```
 
-### Licenza non attivabile
+### *Licenza non attivabile*
 
 ```{note}
 **Problemi con la licenza**

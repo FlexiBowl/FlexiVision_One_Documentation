@@ -15,7 +15,7 @@ Questa sezione fornisce le specifiche tecniche complete del sistema FlexiVision 
 
 Il sistema FlexiVision One utilizza telecamere ad alta risoluzione con interfaccia Gigabit Ethernet per garantire rapidità nell'acquisizione delle immagini e precisione nel riconoscimento dei componenti.
 
-### Specifiche elettriche
+### *Specifiche elettriche*
 ```{list-table}
 :header-rows: 1
 :widths: 40 60
@@ -76,7 +76,7 @@ Il sistema FlexiVision One utilizza telecamere ad alta risoluzione con interfacc
   - GigE, POE
 ```
 
-### Connettore GPIO (Hirose 6-pin)
+### *Connettore GPIO (Hirose 6-pin)*
 
 ```{figure} ../../../../_shared/media/images/Pin_Cam.png
 :alt: Connettore GPIO Hirose 6-pin
@@ -121,7 +121,7 @@ L'interfaccia Gigabit Ethernet è obbligatoria e richiede un'infrastruttura di r
 La mancata osservanza di questo requisito compromette completamente l'operatività della telecamera. Verificare che tutti i componenti di rete (cavi, switch, porte) supportino lo standard GigE.
 ```
 
-### Metodi di alimentazione
+### *Metodi di alimentazione*
 
 ```{list-table}
 :header-rows: 1
@@ -145,7 +145,7 @@ La mancata osservanza di questo requisito compromette completamente l'operativit
 - **Alimentazione esterna**: soluzione standard più flessibile, consigliata per la maggior parte delle applicazioni
 ```
 (cavo)=
-### Cavo di Alimentazione 
+### *Cavo di Alimentazione* 
 ```{figure} ../../../../_shared/media/images/Cavo_Specfiche.png
 :alt: Specifiche Cavo Alimentazione Camera
 :align: center
@@ -190,7 +190,7 @@ Specifiche Cavo Alimentazione Camera
 
 
 
-### Specifiche fisiche e dimensioni
+### *Specifiche fisiche e dimensioni*
 ![Dimensioni Camera](../../../../_shared/media/images/Dimensioni_Cam.png)
 ```{list-table}
 :header-rows: 1
@@ -338,7 +338,7 @@ Specifiche Cavo Alimentazione Camera
 
 Il sistema FlexiVision One opera su un PC Industriale (VisionController) che funge da controller principale per il software di visione. ARS fornisce il VisionController già pre-configurato e testato con il software FlexiVision One installato.
 
-### Specifiche elettriche
+### *Specifiche elettriche*
 
 ```{list-table}
 :header-rows: 1
@@ -390,7 +390,7 @@ Il sistema FlexiVision One opera su un PC Industriale (VisionController) che fun
   - CE, UL
 ```
 
-### Porte PC
+### *Porte PC*
 ```{figure} ../../../../_shared/media/images/Spec_Elettriche_PC.png
 :alt: Schema elettrico VisionController
 :align: center
@@ -439,7 +439,7 @@ Il sistema FlexiVision One opera su un PC Industriale (VisionController) che fun
   - ETH 10/100/1000 Mbit – RJ45 1LAN 3
   - Porta Ethernet Gigabit 3
 ```
-### Specifiche fisiche 
+### *Specifiche fisiche*
 
 ```{figure} ../../../../_shared/media/images/dimensioni_VC.png
 :alt: Dimensioni VisionController
@@ -535,7 +535,7 @@ L'utilizzo dello Strumento Laser in combinazione con la Griglia di Calibrazione 
 
 Una calibrazione eccellente è il requisito fondamentale per l'accuratezza del sistema FlexiVision One. Solo una calibrazione ad alta precisione garantisce che le coordinate rilevate dalla telecamera (pixel) vengano convertite in modo accurato nelle coordinate reali del robot (millimetri), assicurando così il successo dell'applicazione di picking.
 
-### Specifiche tecniche griglia
+### *Specifiche tecniche griglia*
 
 ```{dropdown} Griglia per FlexiBowl® 200 
 ![Griglia 200](../../../../_shared/media/images/griglia200.JPG)

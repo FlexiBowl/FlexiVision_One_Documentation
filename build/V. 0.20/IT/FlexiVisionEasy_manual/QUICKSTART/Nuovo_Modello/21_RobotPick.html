@@ -417,11 +417,11 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#panoramica-interfaccia-robot-pick">Panoramica Interfaccia Robot Pick</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-attivazione-e-rilevamento-componente"><strong>Step 1: Attivazione e Rilevamento Componente</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-inserimento-coordinate-robot-e-calcolo-offset"><strong>Step 2: Inserimento Coordinate Robot e calcolo Offset</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-finalizzazione-e-salvataggio"><strong>Step 3: Finalizzazione e Salvataggio</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-attivazione-e-rilevamento-componente">Step 1: Attivazione e Rilevamento Componente</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-inserimento-coordinate-robot-e-calcolo-offset">Step 2: Inserimento Coordinate Robot e calcolo Offset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-finalizzazione-e-salvataggio">Step 3: Finalizzazione e Salvataggio</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelli-multipli-aggiungere-altri-modelli">Modelli Multipli - Aggiungere Altri Modelli</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-modelli-aggiuntivi-opzionale"><strong>Step 4: Modelli Aggiuntivi (opzionale)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-modelli-aggiuntivi-opzionale"><em>Step 4: Modelli Aggiuntivi (opzionale)</em></a></li>
 </ul>
 </li>
 </ul>
@@ -509,7 +509,7 @@ La funzione <strong>Robot Pick</strong> calcola l’offset tra le coordinate ril
 </section>
 <hr class="docutils" />
 <section id="step-1-attivazione-e-rilevamento-componente">
-<h2><strong>Step 1: Attivazione e Rilevamento Componente</strong><a class="headerlink" href="#step-1-attivazione-e-rilevamento-componente" title="Link to this heading">#</a></h2>
+<h2>Step 1: Attivazione e Rilevamento Componente<a class="headerlink" href="#step-1-attivazione-e-rilevamento-componente" title="Link to this heading">#</a></h2>
 <div  class="sphinx-contrib-video-container align-center"><video controls="True" preload="auto" width="100%"><source src="../../../../../_shared/media/videos/Step1_robot.mp4" type="video/mp4"></video></div><div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><strong>1</strong></p></td>
@@ -537,7 +537,7 @@ Queste sono le coordinate che FlexiVision One “vede” nell’immagine. Non so
 </div>
 </section>
 <section id="step-2-inserimento-coordinate-robot-e-calcolo-offset">
-<h2><strong>Step 2: Inserimento Coordinate Robot e calcolo Offset</strong><a class="headerlink" href="#step-2-inserimento-coordinate-robot-e-calcolo-offset" title="Link to this heading">#</a></h2>
+<h2>Step 2: Inserimento Coordinate Robot e calcolo Offset<a class="headerlink" href="#step-2-inserimento-coordinate-robot-e-calcolo-offset" title="Link to this heading">#</a></h2>
 <div  class="sphinx-contrib-video-container align-center"><video controls="True" preload="auto" width="100%"><source src="../../../../../_shared/media/videos/Step2_robot.mp4" type="video/mp4"></video></div><div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><strong>3</strong></p></td>
@@ -589,7 +589,7 @@ Le coordinate devono essere inserite con <strong>massima precisione</strong>:</p
 </section>
 <hr class="docutils" />
 <section id="step-3-finalizzazione-e-salvataggio">
-<h2><strong>Step 3: Finalizzazione e Salvataggio</strong><a class="headerlink" href="#step-3-finalizzazione-e-salvataggio" title="Link to this heading">#</a></h2>
+<h2>Step 3: Finalizzazione e Salvataggio<a class="headerlink" href="#step-3-finalizzazione-e-salvataggio" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><strong>5</strong></p></td>
@@ -618,7 +618,7 @@ Le coordinate devono essere inserite con <strong>massima precisione</strong>:</p
 <section id="modelli-multipli-aggiungere-altri-modelli">
 <h2>Modelli Multipli - Aggiungere Altri Modelli<a class="headerlink" href="#modelli-multipli-aggiungere-altri-modelli" title="Link to this heading">#</a></h2>
 <section id="step-4-modelli-aggiuntivi-opzionale">
-<h3><strong>Step 4: Modelli Aggiuntivi (opzionale)</strong><a class="headerlink" href="#step-4-modelli-aggiuntivi-opzionale" title="Link to this heading">#</a></h3>
+<h3><em>Step 4: Modelli Aggiuntivi (opzionale)</em><a class="headerlink" href="#step-4-modelli-aggiuntivi-opzionale" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><strong>7</strong></p></td>
@@ -822,7 +822,7 @@ Le coordinate devono essere inserite con <strong>massima precisione</strong>:</p
     const versions = Array.isArray(manifest && manifest.versions) && manifest.versions.length
       ? manifest.versions
       : inlineVersions;
-    const offlineZipEnabled = true;
+    const offlineZipEnabled = false;
     const offlineZipFileName = 'Offline manual.zip';
     const americanRegions = new Set([
       'AG', 'AR', 'AW', 'BB', 'BL', 'BM', 'BO', 'BQ', 'BR', 'BS', 'BZ', 'CA', 'CL', 'CO', 'CR',
@@ -1339,11 +1339,11 @@ Le coordinate devono essere inserite con <strong>massima precisione</strong>:</p
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#panoramica-interfaccia-robot-pick">Panoramica Interfaccia Robot Pick</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-attivazione-e-rilevamento-componente"><strong>Step 1: Attivazione e Rilevamento Componente</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-inserimento-coordinate-robot-e-calcolo-offset"><strong>Step 2: Inserimento Coordinate Robot e calcolo Offset</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-finalizzazione-e-salvataggio"><strong>Step 3: Finalizzazione e Salvataggio</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-attivazione-e-rilevamento-componente">Step 1: Attivazione e Rilevamento Componente</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-inserimento-coordinate-robot-e-calcolo-offset">Step 2: Inserimento Coordinate Robot e calcolo Offset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-finalizzazione-e-salvataggio">Step 3: Finalizzazione e Salvataggio</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelli-multipli-aggiungere-altri-modelli">Modelli Multipli - Aggiungere Altri Modelli</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-modelli-aggiuntivi-opzionale"><strong>Step 4: Modelli Aggiuntivi (opzionale)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-modelli-aggiuntivi-opzionale"><em>Step 4: Modelli Aggiuntivi (opzionale)</em></a></li>
 </ul>
 </li>
 </ul>

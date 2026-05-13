@@ -419,10 +419,10 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accesso-protocol-setup">Accesso Protocol Setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parametri-configurabili">Parametri Configurabili</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configurazione-dettagliata-parametri">Configurazione Dettagliata Parametri</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#max-object-count-return">Max Object Count Return</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min-object-count-return">Min Object Count Return</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting-mode-results">Sorting Mode Results</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pickable-parts-by-the-robot-prese-robot-per-ciclo-visione">Pickable parts by the robot - <strong>Prese robot per ciclo visione</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#max-object-count-return"><em>Max Object Count Return</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min-object-count-return"><em>Min Object Count Return</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting-mode-results"><em>Sorting Mode Results</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pickable-parts-by-the-robot"><em>Pickable parts by the robot</em></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#salvataggio-configurazione">Salvataggio Configurazione</a></li>
@@ -479,7 +479,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#pickableparts"><span class="std std-ref"><strong>Pickable parts by the robot detected by vision in each cycle</strong></span></a></p></td>
 <td><p>Indica il numero di prese che il robot effettua per ogni run della visione. Ad esempio, una presa doppia corrisponde a valore (. Non rappresenta il numero di oggetti rilevati dalla visione, ma il numero di prese robot per ciclo. Parametro utilizzato per il calcolo delle statistiche.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#maxprocessingtime"><span class="xref myst"><strong>Maximum processing time per part with the robot (in seconds)</strong></span></a></p></td>
+<tr class="row-even"><td><p><strong>Maximum processing time per part with the robot (in seconds)</strong></p></td>
 <td><p>Definisce il tempo massimo dopo il quale il sistema considera conclusa la gestione/invio delle coordinate relative a una run e passa tipicamente dallo stato RUN allo stato IDLE. Parametro utilizzato per <strong>statistiche e gestione del flusso di lavoro</strong>.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
@@ -495,7 +495,7 @@
 <section id="configurazione-dettagliata-parametri">
 <h2>Configurazione Dettagliata Parametri<a class="headerlink" href="#configurazione-dettagliata-parametri" title="Link to this heading">#</a></h2>
 <section id="max-object-count-return">
-<span id="maxobject"></span><h3>Max Object Count Return<a class="headerlink" href="#max-object-count-return" title="Link to this heading">#</a></h3>
+<span id="maxobject"></span><h3><em>Max Object Count Return</em><a class="headerlink" href="#max-object-count-return" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="align-top table">
 <tbody>
 <tr class="row-odd"><td><p><strong>Funzione</strong>:</p></td>
@@ -531,7 +531,7 @@
 </div>
 </section>
 <section id="min-object-count-return">
-<span id="minobject"></span><h3>Min Object Count Return<a class="headerlink" href="#min-object-count-return" title="Link to this heading">#</a></h3>
+<span id="minobject"></span><h3><em>Min Object Count Return</em><a class="headerlink" href="#min-object-count-return" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><strong>Funzione</strong>:</p></td>
@@ -569,7 +569,7 @@
 </div>
 </section>
 <section id="sorting-mode-results">
-<span id="sortingmode"></span><h3>Sorting Mode Results<a class="headerlink" href="#sorting-mode-results" title="Link to this heading">#</a></h3>
+<span id="sortingmode"></span><h3><em>Sorting Mode Results</em><a class="headerlink" href="#sorting-mode-results" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <colgroup>
 <col style="width: 30.0%" />
@@ -626,8 +626,8 @@
 <p>La modalità di sorting interagisce con Max Object Count. I primi 15 oggetti (secondo il criterio) vengono inviati.</p>
 </div>
 </section>
-<section id="pickable-parts-by-the-robot-prese-robot-per-ciclo-visione">
-<span id="pickableparts"></span><h3>Pickable parts by the robot - <strong>Prese robot per ciclo visione</strong><a class="headerlink" href="#pickable-parts-by-the-robot-prese-robot-per-ciclo-visione" title="Link to this heading">#</a></h3>
+<section id="pickable-parts-by-the-robot">
+<span id="pickableparts"></span><h3><em>Pickable parts by the robot</em><a class="headerlink" href="#pickable-parts-by-the-robot" title="Link to this heading">#</a></h3>
 <p><strong>Funzione</strong></p>
 <p>Parametro statistico che indica quanti pezzi vengono <strong>effettivamente prelevati</strong> dal robot per ogni ciclo di visione.</p>
 <p><strong>Valori tipici</strong></p>
@@ -857,7 +857,7 @@
     const versions = Array.isArray(manifest && manifest.versions) && manifest.versions.length
       ? manifest.versions
       : inlineVersions;
-    const offlineZipEnabled = true;
+    const offlineZipEnabled = false;
     const offlineZipFileName = 'Offline manual.zip';
     const americanRegions = new Set([
       'AG', 'AR', 'AW', 'BB', 'BL', 'BM', 'BO', 'BQ', 'BR', 'BS', 'BZ', 'CA', 'CL', 'CO', 'CR',
@@ -1375,10 +1375,10 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accesso-protocol-setup">Accesso Protocol Setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parametri-configurabili">Parametri Configurabili</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configurazione-dettagliata-parametri">Configurazione Dettagliata Parametri</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#max-object-count-return">Max Object Count Return</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min-object-count-return">Min Object Count Return</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting-mode-results">Sorting Mode Results</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pickable-parts-by-the-robot-prese-robot-per-ciclo-visione">Pickable parts by the robot - <strong>Prese robot per ciclo visione</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#max-object-count-return"><em>Max Object Count Return</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min-object-count-return"><em>Min Object Count Return</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting-mode-results"><em>Sorting Mode Results</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pickable-parts-by-the-robot"><em>Pickable parts by the robot</em></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#salvataggio-configurazione">Salvataggio Configurazione</a></li>

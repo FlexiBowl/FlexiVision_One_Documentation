@@ -38,7 +38,7 @@ Dopo aver cliccato "Next" nella pagina Clearances, si apre la pagina **Robot Mod
 
 ---
 
-## **Step 1: Attivazione e Rilevamento Componente**
+## Step 1: Attivazione e Rilevamento Componente
 
 :::{video} ../../../../../_shared/media/videos/Step1_robot.mp4
     :width: 100%
@@ -60,7 +60,7 @@ Dopo aver cliccato "Next" nella pagina Clearances, si apre la pagina **Robot Mod
 Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** presente nella pagina corrente.
 :::
 
-## **Step 2: Inserimento Coordinate Robot e calcolo Offset**
+## Step 2: Inserimento Coordinate Robot e calcolo Offset
 
 :::{video} ../../../../../_shared/media/videos/Step2_robot.mp4
     :width: 100%
@@ -102,7 +102,7 @@ Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** pre
 :::
 ---
 
-## **Step 3: Finalizzazione e Salvataggio**
+## Step 3: Finalizzazione e Salvataggio
 ```{list-table}
 * - **5**
   - Cliccando su <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon">, torneremo alla pagina delle ricette <img src="../../../../../_shared/media/images/tasto_recipes.png" class="inline-icon">
@@ -124,7 +124,7 @@ Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** pre
 
 ## Modelli Multipli - Aggiungere Altri Modelli
 
-### **Step 4: Modelli Aggiuntivi (opzionale)**
+### *Step 4: Modelli Aggiuntivi (opzionale)*
 ```{list-table}
 * - **7**
   - Per creare altri modelli nella stessa ricetta:

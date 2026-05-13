@@ -54,7 +54,7 @@ Il processo di creazione di una ricetta completa e funzionante si articola in di
 Schema completo del processo di creazione ricetta e modelli
 ```
 
-### Fasi principali
+### *Fasi principali*
 
 ```{list-table}
 :header-rows: 1
@@ -102,8 +102,8 @@ Schema completo del processo di creazione ricetta e modelli
 Per informazioni complete su ogni fase del processo, consultare le sezioni dedicate:
 
 - **[Creazione Nuova Ricetta](nuovaricetta)** - Come creare e configurare una nuova ricetta
-- **[Training Modello]((nuovomodello))** - Acquisizione immagine e creazione pattern
-- **[Definizione ROI e Filtri]((roitest))** - Configurazione area di ricerca e tolleranze
+- **[Training Modello](nuovomodello)** - Acquisizione immagine e creazione pattern
+- **[Definizione ROI e Filtri](roitest)** - Configurazione area di ricerca e tolleranze
 - **[Creazione Clearances](istogrammi)** - Definizione delle zone da lasciare libere 
 - **[Coordinate Robot Pick](robotpick)** - Calcolo gripper offset 
 
@@ -111,7 +111,7 @@ Per informazioni complete su ogni fase del processo, consultare le sezioni dedic
 
 ## Consigli pratici prima di iniziare
 
-### Preparazione materiale
+### *Preparazione materiale*
 
 ```{tip}
 **Checklist preparazione**
@@ -126,7 +126,7 @@ Prima di iniziare la creazione di modelli, preparare:
 -  Backlight/Toplight acceso
 ```
 
-### Ambiente ottimale
+### *Ambiente ottimale*
 
 ```{note}
 **Condizioni ideali per training**
@@ -137,7 +137,7 @@ Prima di iniziare la creazione di modelli, preparare:
 - Software FlexiVision One aperto e ricetta base caricata
 ```
 
-### Errori comuni da evitare
+### *Errori comuni da evitare*
 
 ```{error}
 **Evitare questi errori frequenti**
@@ -162,10 +162,11 @@ Seguire attentamente le procedure dettagliate nelle prossime sezioni per evitare
 ## Supporto e risorse aggiuntive
 
 ```{note}
-**i Tasti INFO**
+**I Tasti INFO**  
+In ognuna delle sezioni operative, è disponibile un tasto INFO in alto a destra.
+All'interno di questo pulsante è disponibile la spiegazione della procedura Step By Step, la stessa procedura è visibile nel video tutorial.
 
-- **Video tutorial**: 
-- **Spiegazione Passo-Passo**:
+- [**Video tutorial completi**](vidtutcompleti) 
 - **Supporto tecnico**: [support@arsautomation.com](mailto:support@arsautomation.com) per assistenza
 
 Per problemi specifici durante la creazione di modelli, consultare la sezione [Troubleshooting](troubleshooting).

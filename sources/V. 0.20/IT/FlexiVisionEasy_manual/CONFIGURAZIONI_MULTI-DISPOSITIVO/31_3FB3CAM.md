@@ -124,11 +124,11 @@ Un'associazione errata in fase di setup si ripercuoterebbe su tutte le ricette d
 
 ## Componenti necessari
 
-### Kit base FlexiVision One
+### *Kit base FlexiVision One*
 
 Il **kit base FlexiVision One** (fornito con il sistema) include già tutto il necessario per la **prima stazione** (camera, ottica, cavi, griglia di calibrazione), incluso il VisionController. Non è necessario acquistare un secondo kit completo per le stazioni aggiuntive.
 
-### Kit Camera Aggiuntiva (× 2)
+### *Kit Camera Aggiuntiva (× 2)*
 
 Per le stazioni 2 e 3 è necessario acquistare **due Kit Camera Aggiuntiva**, uno per ciascuna stazione, selezionando il codice corrispondente alla taglia del FlexiBowl® di ogni stazione. Il kit include:
 
@@ -154,7 +154,7 @@ Se le stazioni aggiuntive utilizzano FlexiBowl® di taglie diverse, acquistare u
  Ad esempio, per una configurazione con FB500 + FB650 + FB800, il kit base copre la prima stazione, mentre per la seconda e la terza stazione è necessario ordinare rispettivamente GM002004 e GM002006.
 ```
 
-### Switch
+### *Switch*
 
 Lo Switch è sempre necessario nelle configurazioni multi-dispositivo. Per codice, specifiche elettriche e fisiche consultare la sezione dedicata:
 
@@ -179,7 +179,7 @@ Lo Switch dispone di **8 porte Ethernet**. A partire dalla Variante B, non è po
 Si può arbitrariamente decidere quali dispositivi connettere al VisionController. L'mportante è lasciare sempre una porta libera per connettere il VisionController allo Switch
 :::
 
-### Schema di connessione
+### *Schema di connessione*
 
 | Dispositivo | Variante A (1 Robot) | Variante B (2 Robot) | Variante C (3 Robot) |
 |---|---|---|---|
@@ -203,7 +203,7 @@ Verificare che a ciascun dispositivo sia assegnato un indirizzo IP univoco nella
  Le porte TCP/IP utilizzate dal VisionController per le tre stazioni sono configurabili: per default **FB1 → 4001**, **FB2 → 4002**, **FB3 → 4003**.  
  lo  Consultare la sezione [Protocollo Comunicazione Robot-Visione](../rif_tecnico_specifiche/04b_Protocolli_Comunicazione.md) per i dettagli.
 ```
-### Porte Switch occupate per variante
+### *Porte Switch occupate per variante*
 
 | Porta Switch | Variante A (1 Robot) | Variante B (2 Robot) | Variante C (3 Robot) |
 |---|---|---|---|
@@ -216,7 +216,7 @@ Verificare che a ciascun dispositivo sia assegnato un indirizzo IP univoco nella
 | 7 | Robot 1 | Robot 2 | Robot 3 |
 | 8 | VisionController | VisionController | VisionController |
 
-### Porte VisionController occupate per variante
+### *Porte VisionController occupate per variante*
 
 | Porta VisionController | Variante A (1 Robot) | Variante B (2 Robot) | Variante C (3 Robot) |
 |---|---|---|---|

@@ -35,7 +35,7 @@ La pagina **Protocol Setup** permette di configurare i parametri che regolano il
 * - [**Pickable parts by the robot detected by vision in each cycle**](pickableparts)
   - Indica il numero di prese che il robot effettua per ogni run della visione. Ad esempio, una presa doppia corrisponde a valore (. Non rappresenta il numero di oggetti rilevati dalla visione, ma il numero di prese robot per ciclo. Parametro utilizzato per il calcolo delle statistiche.
 
-* - [**Maximum processing time per part with the robot (in seconds)**](maxprocessingtime)
+* - **Maximum processing time per part with the robot (in seconds)**
   - Definisce il tempo massimo dopo il quale il sistema considera conclusa la gestione/invio delle coordinate relative a una run e passa tipicamente dallo stato RUN allo stato IDLE. Parametro utilizzato per **statistiche e gestione del flusso di lavoro**.
 
     :::{attention}
@@ -48,7 +48,7 @@ La pagina **Protocol Setup** permette di configurare i parametri che regolano il
 ## Configurazione Dettagliata Parametri
 
 (maxobject)=
-### Max Object Count Return
+### *Max Object Count Return*
 
 ```{list-table}
  :class: align-top
@@ -78,7 +78,7 @@ La pagina **Protocol Setup** permette di configurare i parametri che regolano il
 ```
 
 (minobject)=
-### Min Object Count Return
+### *Min Object Count Return*
 
 ```{list-table}
 * - **Funzione**: 
@@ -107,7 +107,7 @@ La pagina **Protocol Setup** permette di configurare i parametri che regolano il
 ```
 
 (sortingmode)=
-### Sorting Mode Results
+### *Sorting Mode Results*
 
 
 ```{list-table}
@@ -151,7 +151,7 @@ La pagina **Protocol Setup** permette di configurare i parametri che regolano il
 La modalità di sorting interagisce con Max Object Count. I primi 15 oggetti (secondo il criterio) vengono inviati.
 ```
 (pickableparts)=
-### Pickable parts by the robot - **Prese robot per ciclo visione**
+### *Pickable parts by the robot*
 
 **Funzione**
 

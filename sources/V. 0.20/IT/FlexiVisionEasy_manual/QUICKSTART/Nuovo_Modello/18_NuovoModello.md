@@ -4,7 +4,7 @@
 In questa pagina vedremo come creare un modello di riferimento per il riconoscimento dei componenti.
 
 
-## **Step 1: Preparazione del Setup Fisico**
+## Step 1: Preparazione del Setup Fisico
 Se non è già stato fatto prima, seguire questi passi:
 ````{list-table}
 * - **1**
@@ -17,7 +17,7 @@ Se non è già stato fatto prima, seguire questi passi:
 ````
 ---
 
-## **Step 2: Accesso al Modello** 
+## Step 2: Accesso al Modello
 
 Completata la preparazione fisica, si procede con l'acquisizione dell'immagine e la creazione del modello
 ````{list-table}
@@ -34,7 +34,7 @@ Completata la preparazione fisica, si procede con l'acquisizione dell'immagine e
   - Cliccare sul **Modello 1** per accedere alla pagina "Train Model 1 Cam 1"
 ````
 
-#### Panoramica interfaccia Train Model
+### *Panoramica interfaccia Train Model*
 
 ![Pagina Train Model](../../../../../_shared/media/images/pagina_trainmodel.png)
 ````{list-table}
@@ -66,7 +66,7 @@ Per ora, concentrarsi sul completamento del primo modello.
 ````
 ---
 
-## **Step 3: Procedura di Training**
+## Step 3: Procedura di Training
 ````{video} ../../../../../_shared/media/videos/TastoInfo_TrainModel_1280x720.mp4
 :width: 100%
 :align: center 
@@ -139,7 +139,7 @@ Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** pre
 :::
 ---
 
-## **Step 4: Controllo Visivo**
+## Step 4: Controllo Visivo
 
 Dopo aver generato il modello, è fondamentale verificarne la qualità prima di procedere.
 ````{list-table}
@@ -178,7 +178,7 @@ Effettuare modifiche graduali (step di 0.1-0.2) e testare ogni volta.
 ````
 ---
 
-## **Step 5: Salvataggio**
+## Step 5: Salvataggio
 ````{list-table}
 * - **14**
   - Nominare il modello con un nome descrittivo  

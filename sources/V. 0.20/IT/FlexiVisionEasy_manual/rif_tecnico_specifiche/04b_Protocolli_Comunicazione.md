@@ -29,7 +29,7 @@ FlexiVision One comunica con il robot tramite protocollo **TCP/IP** su rete Ethe
 
 Il sistema supporta i seguenti comandi tramite stringhe di testo inviate sulla connessione TCP/IP:
 
-### Gestione ricette
+### *Gestione ricette*
 
 ```{list-table}
 :header-rows: 1
@@ -46,7 +46,7 @@ Il sistema supporta i seguenti comandi tramite stringhe di testo inviate sulla c
   - `nome_ricetta`
 ```
 
-### Comandi di localizzazione
+### *Comandi di localizzazione*
 
 ```{list-table}
 :header-rows: 1
@@ -72,7 +72,7 @@ Il sistema supporta i seguenti comandi tramite stringhe di testo inviate sulla c
   - `Locator is Running` / `Locator is in Error` / `Locator is not Running`
 ```
 
-### Comandi FlexiBowl®
+### *Comandi FlexiBowl®*
 
 ```{list-table}
 :header-rows: 1
@@ -87,7 +87,7 @@ Il sistema supporta i seguenti comandi tramite stringhe di testo inviate sulla c
 ```
 
 
-### Segnali hopper opzionale
+### *Segnali hopper opzionale*
 
 ```{note}
 Se la tramoggia deve essere attivata, riceveremo la stringa: `"Hopper;signalnumber;time"`

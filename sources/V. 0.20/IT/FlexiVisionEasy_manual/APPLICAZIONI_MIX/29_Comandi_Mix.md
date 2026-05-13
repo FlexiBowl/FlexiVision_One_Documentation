@@ -22,7 +22,7 @@ Il valore di ritorno dei comandi Mix include sempre l'identificativo del pattern
 
 ## Comandi disponibili in modalità Mix
 
-### Gestione ricette
+### *Gestione ricette*
 
 | Comando | Azione | Valore di Ritorno |
 |---|---|---|
@@ -32,7 +32,7 @@ Il valore di ritorno dei comandi Mix include sempre l'identificativo del pattern
 I comandi di gestione ricetta sono identici tra modalità Standard e Mix.
 ```
 
-### Comandi di localizzazione Mix
+### *Comandi di localizzazione Mix*
 
 I comandi di localizzazione Mix consentono al robot di richiedere le coordinate di uno specifico modello all'interno della ricetta. Ogni comando è dedicato a un singolo modello e gestisce autonomamente il ciclo di ricerca, inclusa la movimentazione del FlexiBowl® e l'attivazione della tramoggia se necessario.
 
@@ -63,13 +63,13 @@ Questo significa che per richiedere le coordinate di un modello diverso è neces
 Il numero massimo di modelli gestibili all'interno di una singola ricetta Mix è **8**, corrispondenti ai comandi `mix_Locator_1` … `mix_Locator_8`. Il programma robot può richiedere i modelli in qualsiasi ordine e combinazione, a seconda della logica applicativa.
 ```
 
-### Comandi FlexiBowl®
+### *Comandi FlexiBowl®*
 
 | Comando | Azione | Valore di Ritorno |
 |---|---|---|
 | `start_Empty` | Avvia la sequenza di svuotamento rapido del FlexiBowl® | `start_Empty ended` |
 
-### Segnali hopper opzionale
+### *Segnali hopper opzionale*
 ```{note}
 Se la tramoggia deve essere attivata, riceveremo la stringa: `"Hopper;signalnumber;time"`
 ```

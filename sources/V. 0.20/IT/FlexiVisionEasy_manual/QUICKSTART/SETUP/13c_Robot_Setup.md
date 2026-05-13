@@ -60,7 +60,7 @@ La pagina Robot Setup presenta diverse sezioni per configurare e testare la comu
 ---
 ## Procedura di configurazione
 
-### Step 1: Inserimento porta di comunicazione
+### *Step 1: Inserimento porta di comunicazione*
 
 La porta TCP/IP è il parametro critico che deve corrispondere tra robot e FlexiVision One:
 
@@ -89,7 +89,7 @@ Esempio:
 - ✅ CORRETTO: FlexiVision One porta 2000, Robot porta 2000 → Comunicazione funzionante
 ```
 
-### Step 2: Riconfigurazione server
+### *Step 2: Riconfigurazione server*
 
 Dopo aver impostato la porta corretta, è necessario riavviare il server di comunicazione:
 
@@ -111,7 +111,7 @@ Dopo aver impostato la porta corretta, è necessario riavviare il server di comu
 Il server si avvia automaticamente all'apertura del software FlexiVision One, ma richiede riconfigurazione manuale dopo modifiche.
 ```
 
-### Step 3: Verifica stato server
+### *Step 3: Verifica stato server*
 
 Dopo la riconfigurazione, verificare che il server sia attivo:
 
@@ -136,7 +136,7 @@ Se uno degli indicatori è rosso, verificare:
    - Che la porta non sia già in uso da un altro programma
    - I log di sistema per messaggi di errore
 ```
-### Step 4: Salvataggio e completamento
+### *Step 4: Salvataggio e completamento*
 
 ```{list-table}
 :header-rows: 0

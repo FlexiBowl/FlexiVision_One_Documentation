@@ -1,7 +1,7 @@
 (backup)=
 # **BackUp Management**
 
-## **Panoramica**
+## Panoramica
 
 L'intera configurazione di FlexiVision One — setup hardware, calibrazioni, modelli dei pezzi e parametri di protocollo — è contenuta nei file ricetta. Per questo motivo, i backup sono fondamentali per mantenere al sicuro tutti i dati.
 
@@ -13,7 +13,7 @@ Si raccomanda di eseguire un backup dopo ogni creazione o modifica significativa
 
 ---
 
-## **Procedura di Backup**
+## Procedura di Backup
 
 ```{list-table}
 :header-rows: 1
@@ -39,7 +39,7 @@ Si raccomanda di eseguire un backup dopo ogni creazione o modifica significativa
 
 ---
 
-## **Procedura di Import Backup**
+## Procedura di Import Backup
 
 ```{list-table}
 :header-rows: 1
@@ -66,7 +66,7 @@ Si raccomanda di eseguire un backup dopo ogni creazione o modifica significativa
 
 ---
 
-## **Gestione corretta delle ricette**
+## Gestione corretta delle ricette
 
 ```{list-table}
 :header-rows: 1

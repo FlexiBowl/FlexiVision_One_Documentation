@@ -15,7 +15,7 @@ La procedura guidata standard copre il 90% delle applicazioni con parametri auto
 ---
 ## Quando Serve?
 
-### Camera Setup — modalità Expert
+### *Camera Setup — modalità Expert*
 
 Durante il Camera Setup, l'accesso alla modalità Expert consente di:
 
@@ -26,7 +26,7 @@ Durante il Camera Setup, l'accesso alla modalità Expert consente di:
 
 ---
 
-### Configurazione Modello — modalità Expert
+### *Configurazione Modello — modalità Expert*
 
 Durante il training del modello, la modalità Expert consente di:
 

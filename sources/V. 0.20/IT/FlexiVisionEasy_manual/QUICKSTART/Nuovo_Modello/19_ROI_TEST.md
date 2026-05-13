@@ -12,7 +12,7 @@ Dopo aver cliccato "Next" nella pagina di training, si apre automaticamente la p
 
 
 
-## **Step 1: Definizione Area**
+## Step 1: Definizione Area
 
 :::{video} ../../../../../_shared/media/videos/TastoInfo_DefineRobotArea_1280x720.mp4
     :width: 100%
@@ -33,7 +33,7 @@ Dimensiona l'area in base allo spazio effettivo di lavoro del robot, evitando zo
 Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** presente nella pagina corrente.
 :::
 
-### Panoramica interfaccia Locator Model
+### *Panoramica interfaccia Locator Model*
 
 ![Pagina Locator Model](../../../../../_shared/media/images/pagina_locatormodel.png)
 ```{list-table}
@@ -49,7 +49,7 @@ Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** pre
 * - **Results Panel**
   - Pannello che mostra tutti i componenti rilevati con dettagli (Id, coordinate, score)
 ```
-### **Video Tutorial**
+### Video Tutorial
 Video tutorial esplicativo dei successivi Step 2 e Step 3: 
 :::{video} ../../../../../_shared/media/videos/TastiInfo_LocatorModel_1280x720.mp4
     :width: 100%
@@ -59,7 +59,7 @@ Video tutorial esplicativo dei successivi Step 2 e Step 3:
 
 
 
-## **Step 2: Preparazione Scena**
+## Step 2: Preparazione Scena
 ```{list-table}
 :widths: 5 95
 
@@ -71,7 +71,7 @@ Video tutorial esplicativo dei successivi Step 2 e Step 3:
     :::
 ```
 
-## **Step 3: Esecuzione Test e Accept Threshold**
+## Step 3: Esecuzione Test e Accept Threshold
 ```{list-table}
 :widths: 5 95
 
@@ -115,7 +115,7 @@ Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** pre
 
 ## Interpretazione Risultati
 
-### Visualizzazione componenti rilevati
+### *Visualizzazione componenti rilevati*
 
 Nel pannello Results vengono mostrati tutti i componenti rilevati che rispettano l'Accept Threshold:
 ```{list-table}
@@ -149,7 +149,7 @@ FlexiVision One di dafault ordina automaticamente tutti i componenti riconosciut
 - **Id 2** → Terzo miglior componente
 - E così via...
 ```
-### Esempio interpretazione
+### *Esempio interpretazione*
 
 Supponiamo che dopo il Test appaiano questi risultati:
 
@@ -174,7 +174,7 @@ Se Accept Threshold fosse 0.85:
 
 # Finalizzazione
 
-## **Step 4: Pulizia e Proseguimento**
+## Step 4: Pulizia e Proseguimento
 ```{list-table}
 * - **8**
   - Rimuovere **tutti i componenti** dall'area, **tranne il componente di riferimento** e i due oggetti ai suoi lati
