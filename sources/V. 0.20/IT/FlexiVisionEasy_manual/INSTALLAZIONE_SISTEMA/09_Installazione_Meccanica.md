@@ -421,7 +421,7 @@ Il fissaggio sul lato utilizza 4 dadi M4 (forniti) da inserire nella scanalatura
 :align: center
 :width: 100%
 
-Fissaggio sul lato tramite 4 dadi M4 (forniti) inseriti nella scanalatura del profilo. Profondità massima: 5 mm.
+Fissaggio sul lato
 ```
 (montaggio_staffa)=
 ##### Fissaggio laterale con staffe 
@@ -435,24 +435,9 @@ Nel caso in cui il Toplight venisse fissato con delle staffe:
 ![montaggio Laterale](../../../../_shared/media/images/montaggiolaterale.png)
 :::
 
-```{raw} html
-<div style="
-    border: 2px solid #0d6efd;
-    border-radius: 8px;
-    padding: 1.5rem 2rem;
-    margin: 1rem 0;
-    background-color: #f0f6ff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-"> 
-    <span>
-        Per il Montaggio laterale è possibile acquistare <strong>a parte</strong> 
-        l'apposita <a href="[https://docs.flexibowl.com/V.%200.20/IT/FlexiVisionEasy_manual/rif_tecnico_specifiche/08_Opzioni.html#staffa-per-montaggio-toplight](https://docs.flexibowl.com/V.%200.20/IT/FlexiVisionEasy_manual/rif_tecnico_specifiche/08_Opzioni.html#staffa-per-montaggio-toplight)">staffa</a>.
-    </span>
-</div>
-```
+:::{card}
+  Per il Montaggio laterale è possibile acquistare **a parte** l'apposita [staffa](staffa).
+:::
 
 
 
