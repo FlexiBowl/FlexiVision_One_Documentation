@@ -241,7 +241,7 @@ I grafici nella parte inferiore della dashboard permettono un'analisi predittiva
     * - **PPM in diminuzione progressiva**:
       - 
         ⚠️ Possibile usura componenti (superficie grip FlexiBowl®)  
-        ⚠️ Hopper che si svuota (se presente, meno pressione = scarico più lento)  
+        ⚠️ Hopper che si svuota 
         ⚠️ Accumulo sporcizia su camera/illuminazione  
 
     * - **PPM con fluttuazioni ampie**:
@@ -262,7 +262,7 @@ I grafici nella parte inferiore della dashboard permettono un'analisi predittiva
 
 ```{list-table}
 * - **Grafico attivazioni tramoggia**
-  - Rappresenta lo storico degli impulsi di scarico inviati alla tramoggia (Hopper), utile per monitorare l'autonomia del magazzino componenti.
+  - Rappresenta lo storico degli impulsi di scarico inviati alla tramoggia (Hopper).
 
 * - **Caratteristiche**:
   - 
@@ -272,7 +272,6 @@ I grafici nella parte inferiore della dashboard permettono un'analisi predittiva
 
 * - **Utilizzo**:
   - 
-    - Prevedere quando ricaricare Hopper fisicamente
     - Verificare efficacia configurazione Hopper
     - Identificare anomalie nel comportamento scarico
 ```
@@ -409,7 +408,7 @@ Questi dati permettono ottimizzazione continua e giustificano investimenti in mi
 ```{raw} html
 <div style="border: 2px solid #0d6efd; border-radius: 12px; padding: 2rem; margin: 1.5rem 0; background-color: #f0f6ff; display: flex; align-items: flex-start; gap: 2rem;">
   <div style="flex: 1; min-width: 0;">
-    <div style="font-size: 1.2rem; font-weight: 700; color: #0d6efd; margin-bottom: 0.5rem;"> Sistema operativo completato!</div>
+    <div style="font-size: 1.2rem; font-weight: 700; color: #0d6efd; margin-bottom: 0.5rem;"> Il Sistema è ora operativo!</div>
     <div style="font-size: 0.95rem; color: #444; line-height: 1.6;">Congratulazioni! Il sistema FlexiVision One è ora completamente configurato, ottimizzato e validato per la produzione.</div>
   </div>
   <div style="flex: 1.4; background: white; border-radius: 8px; padding: 1.2rem 1.5rem; border: 1px solid #d0e4ff; font-size: 0.88rem; color: #333; line-height: 1.8;">
