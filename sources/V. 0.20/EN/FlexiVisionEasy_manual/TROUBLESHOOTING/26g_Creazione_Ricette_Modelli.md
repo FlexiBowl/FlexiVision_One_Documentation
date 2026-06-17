@@ -1,16 +1,16 @@
-# **Recipe and Model Creation**
+# **Creating Recipes and models**
 
 (troubleshooting_nuova_ricetta)=
-## Troubleshooting for Create a New Recipe
+## Troubleshooting for the Create a New Recipe section
 
 ```{warning}
-**Error during save**
+**Error while saving**
 
-If recipe saving fails:
-- Verify that there is enough free disk space
-- Make sure the name does not contain forbidden characters, `/ \\ : * ? " < > |`
-- Verify that no recipe with the same name already exists
-- Verify that you have write permissions on the software folder
+If saving the recipe fails:
+- Check that there is sufficient space on the disk
+- Ensure that the name does not contain any inadmissible characters (`/ \ : * ? " < > |`)
+- Check that a recipe with the same name does not already exist
+- Check that you have permission to write on the software folder
 ```
 
 ```{list-table}
@@ -20,47 +20,47 @@ If recipe saving fails:
 * - Problem
   - Possible Causes
   - Solutions
-* - **Impossible to create a new recipe**
+* - **Unable to create new recipe**
   - • Disk full
+    
+    • Recipe name contains inadmissible characters
+  - • Free up disk space
+    
+    • Avoid special characters in the name (/ \ : * ? " < > |)
 
-    • Recipe name contains forbidden characters
-  - • Free disk space
-
-    • Avoid special characters in the name, `/ \\ : * ? " < > |`
-
-* - **Recipe saved but settings are lost**
-  - • Save not confirmed correctly
-
+* - **Recipe saved but configurations lost**
+  - • Saving not confirmed correctly
+    
     • Forced software shutdown
-
+    
     • Disk write error
-  - • Always click `"Save Recipe"` and wait for confirmation
-
-    • Close the software correctly
-
-    • Check Windows error logs
-* - **Impossible to load the created recipe**
-  - • Corrupted recipe file
-
+  - • Always click 'Save Recipe' and wait for confirmation
+    
+    • Close software correctly
+    
+    • Check Windows error log
+* - **Unable to upload created recipe**
+  - • Corrupt recipe file
+    
     • File path changed
   - • Restore from backup if available
-
-    • Verify the configured recipe folder path
-* - **Loaded recipe contains wrong settings**
+    
+    • Check recipe folder path in configuration
+* - **Loaded recipe has wrong configuration**
   - • Wrong recipe selected
-
-    • Previous changes not saved
-
+    
+    • Changes not saved previously
+    
     • Conflict between recipes with similar names
-  - • Verify the recipe name in the top bar
-
-    • Reload the correct recipe from the list
-
-    • Use unique naming conventions
+  - • Check recipe name in top bar
+    
+    • Reload correct recipe from list
+    
+    • Use unambiguous naming conventions
 ```
 
 (troubleshooting_nuovo_modello)=
-## Troubleshooting for Create a New Model
+## Troubleshooting for the Create a New Model section
 
 ```{list-table}
 :header-rows: 1
@@ -70,81 +70,82 @@ If recipe saving fails:
   - Possible Causes
   - Solutions
 
-* - **Grab Train Image acquires a black image**
+* - **Grab Train Image captures black image**
   - • Camera not connected
+    
+    • Toplight off
 
-    • TopLight off
-
-    • Backlight off
-
+    • Backlight off 
+    
     • Exposure too low
+    
+    • Lens with protective cap
+  - • Check camera connection in Camera Setup
+    
+    • Switch on toplight and check power supply
 
-    • Lens cap still installed
-  - • Verify camera connection in Camera Setup
-
-    • Turn on the TopLight and verify its power supply
-
-    • Check that Light On is enabled in FlexiBowl Configuration
-
+    • Check that light on in FlexiBowl® Configuration is ticked
+    
     • Increase camera exposure
+    
+    • Remove lens cap
+* - **ROI does not move or resize**
+  - • Image not captured
+    
+    • Software blocked
+  - • Run Grab Train Image first
+    
+    • Reboot software
 
-    • Remove the lens cap
-* - **ROI cannot be moved or resized**
-  - • Image not acquired
-
-    • Software frozen
-  - • Execute Grab Train Image first
-
-    • Restart the software
-
-* - **Apply Train does not generate a model**
+* - **Apply Train does not generate model**
   - • ROI too small
+    
+    • Image without sufficient contrast
+  
+  - • Enlarge ROI to include the whole component
+    
+    • Improve contrast/illumination
 
-    • Image without enough contrast
-
-  - • Enlarge ROI so it includes the full component
-
-    • Improve contrast or illumination
-
-* - **Created model includes surface texture**
+* - **Model created includes surface texture**
   - • Feature Threshold too low
-
-    • Insufficient contrast between component and surface
-  - • Increase Feature Threshold, for example from `0.3` to `0.6`
-
+    
+    • Insufficient component-surface contrast
+  - • Increase Feature Threshold (e.g.: from 0.3 to 0.6)
+    
     • Improve lighting to increase contrast
-* - **Created model has too few lines**
+* - **Model created has too few lines**
   - • Feature Threshold too high
-
+    
     • Blurred image
 
-    • Image without enough contrast
-  - • Decrease Feature Threshold, for example from `0.8` to `0.5`
+    • Image without sufficient contrast
+  - • Decrease Feature Threshold (e.g.: from 0.8 to 0.5)
+    
+    • Check camera focus and correct if necessary
 
-    • Verify camera focus and correct it if needed
-
-    • Improve contrast or illumination
+    • Improve contrast/illumination
 
 * - **Model includes light reflections**
   - • Feature Threshold too low
-
-    • Non-uniform illumination
-
+    
+    • Uneven lighting
+    
   - • Increase Feature Threshold
+    
+    • Adjust toplight position/angle
 
-    • Adjust TopLight position or angle
 
-* - **Impossible to assign a model name**
-  - • Name contains forbidden characters
-
+* - **Unable to name model**
+  - • Name contains inadmissible characters
+    
     • Name too long
-  - • Use only letters, numbers, underscores, and hyphens
-
-    • Limit the name to 50 characters maximum
+  - • Use only letters, numbers, underscores and hyphens
+    
+    • Limit name to max 50 characters
 ```
 
 (troubleshooting_modelli_roi)=
-## Troubleshooting for ROI Definition and Tolerances
+## Troubleshooting for the ROI and Tolerance Definition section
 
 ```{list-table}
 :header-rows: 1
@@ -154,74 +155,74 @@ If recipe saving fails:
   - Possible Causes
   - Solutions
 
-* - **Test does not detect any component**
+* - **Test does not detect any components**
   - • Accept Threshold too high
-
+    
     • Components outside the Region Search
-
+    
     • Incorrect model
-
-    • Lighting changed compared with training
-  - • Decrease Accept Threshold, for example from `0.90` to `0.75`
-
-    • Enlarge Region Search so it includes the components
-
+    
+    • Lighting changed compared to training
+  - • Decrease Accept Threshold (e.g.: from 0.90 to 0.75)
+    
+    • Enlarge Region Search to include components
+    
     • Repeat model training
-
-    • Stabilize the lighting
+    
+    • Stabilise lighting
 * - **Test detects too many false positives**
   - • Accept Threshold too low
-
-    • Model too simple or too generic
-
-    • Components present that are partly similar but also significantly different
-  - • Increase Accept Threshold, for example from `0.70` to `0.85`
-
-    • Recreate the model with a lower Feature Threshold, more detailed
-
-    • Split them into separate models if necessary
-* - **Test detects components but scores are too low**
-  - • Real component variability compared with the training model
-
-    • Different illumination
-
-    • Dirty or damaged components
-
+    
+    • Model too simple/generic
+    
+    • There are very similar components but at the same time with many differences
+  - • Increase Accept Threshold (e.g.: from 0.70 to 0.85)
+    
+    • Redo model with lower Feature Threshold (more detailed)
+    
+    • Separate into different models if necessary
+* - **Test detects components but scores too low**
+  - • Variability real components vs. training model
+    
+    • Different lighting
+    
+    • Components dirty/damaged
+    
     • Model too detailed
-  - • Verify component quality and clean them if necessary
-
-    • Standardize lighting
-
-    • Reject damaged components
-
-    • Recreate the model with a higher Feature Threshold, less detailed
+  - • Check component quality and clean if necessary
+    
+    • Standardise lighting
+    
+    • Discard damaged components
+    
+    • Redo model with higher Feature Threshold (less detailed)
 
 * - **Results Panel empty even with visible components**
-  - • No component exceeds the Accept Threshold
-
-    • Region Search does not include the components
-
-    • Test not executed
+  - • No component exceeds Accept Threshold
+    
+    • Region Search does not include components
+    
+    • Test not performed
   - • Decrease Accept Threshold
-
-    • Verify and enlarge the Region Search
-
-    • Click the Test button
-* - **X, Y, Rotation coordinates incorrect**
-  - • Camera calibration not performed or performed badly
-
-    • Wrong reference system
-
+    
+    • Check and expand Region Search
+    
+    • Click Test button
+* - **Incorrect X,Y,Rotation coordinates**
+  - • Camera calibration not performed or performed incorrectly
+    
+    • Incorrect reference system
+    
     • Camera moved after calibration
-  - • Perform complete camera calibration or review the current one
-
-    • Verify the coordinate system origin
-
+  - • Perform full camera calibration or review current one
+    
+    • Check coordinate system origin
+    
     • Repeat camera calibration
 ```
 
 (troubleshooting_istogrammi)=
-## Troubleshooting for Clearances
+## Troubleshooting for the Histograms section
 
 ```{list-table}
 :header-rows: 1
@@ -230,93 +231,93 @@ If recipe saving fails:
 * - Problem
   - Possible Causes
   - Solutions
-* - **Impossible to enable the histogram**
-  - • Model not recognized
-
-    • Maximum number of histograms reached, 8 per model
-
+* - **Cannot enable histogram**
+  - • Model not identified
+    
+    • Maximum histogram limit reached (8 per model)
+    
     • Slot already occupied
   - • Complete model configuration first
-
-    • Disable histograms that are not used
-
-    • Select a free slot
+    
+    • Disable unused histograms
+    
+    • Select free slot
 
 * - **AUTO does not calculate correctly**
   - • Histogram area too small
-
+    
     • Histogram outside the image
-
+    
     • Image not loaded
-  - • Enlarge the histogram area
-
-    • Move the histogram inside the visible area
-
-    • Acquire a new image
-* - **Test always RED even with a free area**
-  - • AUTO calibration performed with the area occupied
-
+  - • Enlarge histogram area
+    
+    • Move histogram within visible area
+    
+    • Capture new image
+* - **Test always RED even with area clear**
+  - • AUTO calibration performed with area occupied
+    
     • Shadow or reflection in the area
-
-    • FlexiBowl edge included in the area
-
-    • Dirt on the surface
-  - • Repeat AUTO with the area completely free
-
-    • Exclude zones with shadows or reflections
-
-    • Reduce the area excluding borders
-
-    • Clean the FlexiBowl surface
-* - **Test always GREEN even with an occupied area**
-  - • AUTO calibration performed while components were already present
-
-    • Thresholds calculated incorrectly
-
+    
+    • FlexiBowl® border included in the area
+    
+    • Dirt on surface
+  - • Repeat AUTO with area completely clear
+    
+    • Exclude areas with shadows/reflections
+    
+    • Reduce area excluding borders
+    
+    • Clean FlexiBowl® surface
+* - **Test always GREEN even with area occupied**
+  - • AUTO calibration performed with components already present
+    
+    • Badly calculated thresholds
+    
     • Insufficient contrast
-  - • Repeat AUTO making sure the area is completely empty
-
+  - • Repeat AUTO making sure area is completely empty
+    
     • Repeat calibration with stable lighting
-
+    
     • Improve lighting contrast
-* - **Histogram triggers randomly**
-  - • Area too large and includes variable zones
-
+* - **Histogram triggers accidentally**
+  - • Too large an area includes variable zones
+    
     • Unstable lighting
-
-    • Threshold too tight
-  - • Reduce the area to the minimum necessary
-
-    • Stabilize the lighting
-
+    
+    • Threshold too narrow
+  - • Reduce area to minimum necessary
+    
+    • Stabilise lighting
+    
     • Repeat AUTO calibration
 * - **Histogram does not trigger when it should**
-  - • Area too small and does not include the obstacle
-
+  - • Area too small does not include obstacle
+    
     • Threshold too permissive
-
-  - • Enlarge the histogram area
-
+    
+  - • Enlarge histogram area
+    
     • Repeat AUTO calibration with higher contrast
-
-* - **Impossible to create a second histogram for the gripper**
+    
+* - **Unable to create second histogram for gripper**
   - • Wrong histogram slot selected
-  - • Return to the list and select Histogram 2
+  - • Go back to list and select Histogram 2
 * - **Multiple histogram test does not work**
   - • Not all histograms enabled
-
+    
     • Incomplete configuration
-
+    
     • Conflict between histograms
-  - • Verify that all required histograms are enabled
-
+  - • Check that all required histograms are enabled
+    
     • Complete AUTO configuration for each histogram
-
-    • Verify that the areas do not overlap
+    
+    • Check that areas do not overlap
 ```
 
 (troubleshooting_robot_pick)=
-## Troubleshooting for Robot Pick Calibration
+## Troubleshooting for the Robot Pick Calibration section
 
 ```{list-table}
 :header-rows: 1
@@ -325,111 +326,114 @@ If recipe saving fails:
 * - Problem
   - Possible Causes
   - Solutions
-* - **Robot coordinates not available, lost or forgotten**
-  - • Not written down during physical preparation
-
-    • Note sheet lost
-
+* - **Robot coordinates not available (lost/forgotten)**
+  - • Not noted during physical preparation
+    
+    • Lost note sheet
+    
     • Coordinates overwritten
-  - • **MANDATORY**: repeat the entire physical preparation from point 1 to point 9 of [Model Creation](../QUICKSTART/Nuovo_Modello/18_NuovoModello.md)
-
-    • Save coordinates in a digital file as well as on paper
-
-    • Take a photo of the robot pendant display
-* - **Find Object does not detect the component**
+  - • **MANDATORY**: Repeat the entire physical preparation from point 1 to point 9 of [Creating Model](../QUICKSTART/Nuovo_Modello/18_NuovoModello.md)
+    
+    • Save coordinates in digital files as well as on paper
+    
+    • Take a picture of pendant robot display
+* - **Find Object does not detect component**
   - • Reference component moved
-
+    
     • Accept Threshold too high
-
-    • Component outside the Region Search
+    
+    • Component outside Region Search
   - • Verify reference component position
-
+    
     • Temporarily lower Accept Threshold
-
-    • Verify that Region Search includes the component
-* - **Vision Result shows incorrect coordinates**
+    
+    • Check Region Search includes component
+* - **Vision Result shows wrong coordinates**
   - • Camera calibration not performed
-
+    
     • Coordinate system not configured
-
+    
     • Camera moved after calibration
   - • Perform camera calibration before Robot Pick
-
-    • Verify the reference system origin
-
+    
+    • Check reference system origin
+    
     • Repeat camera calibration
-* - **Impossible to enter robot coordinates**
-  - • Fields locked
-
+* - **Unable to enter robot coordinates**
+  - • Blocked fields
+    
     • Enable Robot Pick not activated
-
-    • Number format incorrect
+    
+    • Wrong number format
   - • Click Enable Robot Pick first
-
-    • Activate the fields by clicking them
-
-    • Use a dot as decimal separator
+    
+    • Activate fields by clicking on them
+    
+    • Use point as decimal separator
 * - **Gripper Offset calculates absurd values**
   - • Robot coordinates entered incorrectly
-
+    
     • X and Y swapped
-
-    • Wrong plus or minus sign
-
-    • Wrong or rounded decimals
-  - • **CRITICAL**: verify every coordinate carefully
-
-    • Check X, Y, RZ order
-
-    • Verify the signs of the coordinates
-
-    • Copy the values exactly as written, without rounding
-* - **Robot picks in the wrong positions after calibration**
-  - • Noted robot coordinates were wrong
-
-    • Robot Frame or Tool changed after note-taking
-
-    • Reference component moved during note-taking
-
+    
+    • Wrong +/- sign
+    
+    • Incorrect or approximate decimals
+  - • **CRITICAL**: Check each coordinate carefully
+    
+    • Check order X, Y, RZ
+    
+    • Check coordinate signs
+    
+    • Copy values exactly as noted without approximations
+* - **Robot picks at wrong positions after calibration**
+  - • Robot coordinates noted were wrong
+    
+    • Robot Frame/Tool changed after annotation
+    
+    • Reference component was moved during annotation
+    
     • Gripper Offset not saved
-  - • Repeat physical preparation verifying correct Frame and Tool
-
-    • Make sure the same Frame and Tool are used for both note-taking and picking
-
-    • Repeat the setup with the component positioned correctly
-
-    • Save the recipe after calculating Gripper Offset
-* - **Robot offset valid only for the reference component**
+  - • Repeat physical preparation verifying correct Frame/Tool
+    
+    • Ensure same Frame/Tool for annotation and picking
+    
+    • Repeat setup with correctly positioned component
+    
+    • Save recipe after calculating Gripper Offset
+* - **Robot offset only valid for reference component**
   - • High optical distortion
-
-    • Inaccurate camera calibration
-
-    • Region Search too large compared with the calibration quality
+    
+    • Camera calibration inaccurate
+    
+    • Region Search too large compared to calibration
   - • Improve camera calibration
-
-    • Use a low-distortion lens
-
+    
+    • Use low-distortion lens
+    
     • Reduce Region Search if possible
-* - **Impossible to save Gripper Offset**
-  - • Recipe not loaded
-
+* - **Unable to save Gripper Offset**
+  - • Recipe not uploaded
+    
     • Insufficient permissions
-
+    
     • Disk full
-  - • Verify that the recipe is loaded correctly
-
+  - • Check correctly loaded recipe
+    
     • Verify write permissions
-
+    
     • Free disk space
-* - **Robot RZ rotation always wrong**
-  - • Robot RZ was not at `0°` during setup
-
-    • Wrong robot last axis
-
+* - **Robot RZ rotation always incorrect**
+  - • RZ robot was not at 0° during setup
+    
+    • Last robot axis incorrect
+    
     • Rotated coordinate system
-  - • Repeat setup bringing the robot last axis to `RZ = 0°`
-
-    • Verify that the selected tool is correct
-
-    • Verify coordinate system orientation
+  - • Repeat setup bringing last robot axis to RZ=0°
+    
+    • Check that the selected tool is correct
+    
+    • Check coordinate system orientation
 ```
+
+
+

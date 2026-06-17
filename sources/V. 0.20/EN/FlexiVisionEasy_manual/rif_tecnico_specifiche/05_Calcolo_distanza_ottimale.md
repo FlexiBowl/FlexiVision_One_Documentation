@@ -1,30 +1,30 @@
 (distanza_lavoro)=
 # **Optimal Working Distance Calculation**
 
-This section defines the recommended working distance between the camera and the FlexiBowl plate, together with the resulting selection of lenses required to ensure the correct Field of View (FOV).
+This section defines the recommended Working Distance between the camera and the FlexiBowl's working surface, together with the resulting selection of lenses required to ensure the correct Field of View (FOV).
 
-The correct choice of working distance and lens is essential to:
-- Ensure that the entire usable surface of the FlexiBowl is visible
+The correct choice of the working distance and lens is crucial to:
+- Ensure that the entire useful surface of the FlexiBowl® is visible
 - Obtain the resolution required to detect parts
-- Minimize optical distortion
+- Minimise optical distortions
 - Facilitate system calibration
 
 ---
 
 ## Recommended working distances and lens selection
 
-Lens selection strictly depends on the recommended mounting distance between the camera and the surface of the FlexiBowl plate. Maintaining the standard working distance ensures the correct FOV and minimizes optical distortion problems.
+The choice of lens is strictly dependent on the recommended mounting distance between the camera and the FlexiBowl® work surface. Maintaining the standard working distance ensures the correct FOV and minimises optical distortion issues.
 
 
 ```{note}
 **Lens already included**
 
-The lens appropriate for the FlexiBowl model specified in the order is always included in the FlexiVision One package and is supplied in separate packaging from the camera. It does not need to be purchased separately.
+The appropriate lens for the FlexiBowl® model specified in the order is always included in the FlexiVision One packet and is packed separately from the camera. It does not need to be purchased separately.
 ```
 
-### Distance and field-of-view diagram
+### *Distances and field of view diagram*
 
-The following diagram illustrates the relationship between working distance, lens focal length, and resulting viewing area for the different FlexiBowl models.
+The following diagram illustrates the relationship between working distance, lens focal length and resulting viewing area for the different FlexiBowl® models.
 
 ```{image} ../../../../_shared/media/images/working_distance.JPG
 :alt: Working Distance
@@ -32,19 +32,19 @@ The following diagram illustrates the relationship between working distance, len
 :align: center
 ```
 
-**Diagram legend:**
-- **Working Distance**: Vertical distance between the front face of the lens and the surface of the FlexiBowl plate
-- **Viewing area**: Area of the FlexiBowl surface covered by the camera field of view
+**Diagram key:**
+- **Working Distance**: Vertical distance between the camera lens and the working surface of the FlexiBowl®
+- **Viewing area**: Zone of the FlexiBowl® surface covered by the camera's field of view
 
-### Summary table by model
+### *Summary table by model*
 
 ```{list-table}
 :header-rows: 1
 :widths: 25 40 35
 
-* - FlexiBowl Model
+* - FlexiBowl® Model
   - Recommended Working Distance
-  - Lens Included in the Kit (Focal Length)
+  - Lens Included in Kit (Focal Length)
 * - **FB 200**
   - 800 mm 
   - 35 mm
@@ -68,16 +68,16 @@ The following diagram illustrates the relationship between working distance, len
 ```{warning}
 **Importance of the correct distance**
 
-Significant deviations from the recommended working distance may cause:
+Significant deviations from the recommended working distance can cause:
 
-- **Distance too short**: Insufficient FOV (part of the FlexiBowl not visible).
+- **Distance too short**: Insufficient FOV (part of the FlexiBowl® not visible).
 - **Distance too long**: Insufficient resolution to detect small parts, blurring
 
-Always respect the distances indicated in the table during mechanical camera mounting.
+Always comply with the distances indicated in the table when mechanically mounting the camera.
 ```
-### Camera Positioning 
+### *Camera Positioning*
 
-**Correct configuration.** The camera must be positioned centrally and with the same angular orientation as the FlexiBowl viewing area (backlight zone). In this way, the field of view (shown in green) symmetrically covers the entire work area, ensuring correct operation of the vision system.  
+**Correct configuration.** The camera must be positioned centrally and with the same angular orientation as the viewing area of the FlexiBowl® (backlight zone). This way, the field of view (indicated in green) symmetrically covers the entire working area, ensuring the proper operation of the vision system.  
 
 ```{image} ../../../../_shared/media/images/config_giusta.JPG
 :alt: Working Distance
@@ -85,7 +85,7 @@ Always respect the distances indicated in the table during mechanical camera mou
 :align: center
 ```
 
-**Incorrect configurations.** The images show examples of incorrect camera positioning: the field of view (shown in red) is offset with respect to the vision area, covering the work area only partially or including areas outside it. These configurations compromise part recognition and operation of the vision system.  
+**Incorrect configurations.** The pictures show examples of incorrect positioning of the camera: the field of view (indicated in red) is off-centre in relation to the viewing area, covering only part of the working area or including areas outside the working area. These configurations compromise part identification and the operation of the vision system.  
 
 ```{image} ../../../../_shared/media/images/config_sbagliata.png
 :alt: Working Distance
@@ -99,9 +99,9 @@ Always respect the distances indicated in the table during mechanical camera mou
 ```
 ---
 
-## TopLight Positioning 
+## TopLight positioning 
 
-If the system includes a TopLight (top illuminator), it must have the same angular orientation as the camera to ensure uniform illumination. It must be installed on a support that is mechanically independent from the camera support, so that removing or replacing the lighting system does not require loosening or disassembling the camera.
+If the system includes a TopLight, its positioning must have the same angular orientation as the camera to ensure uniform lighting. It must be installed on a support that is mechanically independent from that of the camera, so that the camera does not have to be loosened or disassembled to remove or replace the lighting system.
 
 ```{list-table}
 :header-rows: 1
@@ -109,14 +109,14 @@ If the system includes a TopLight (top illuminator), it must have the same angul
 
 * - Parameter
   - Recommended Value
-* - **Distance from the FlexiBowl surface**
-  - Similar to the camera Working Distance (±100 mm)
-* - **Position relative to the camera**
+* - **Distance from the FlexiBowl® surface**
+  - Similar to the Working Distance of the camera (±100 mm)
+* - **Position compared to the camera**
   - Concentric (same optical axis as the camera)
 * - **Orientation**
-  - Parallel to the FlexiBowl surface and with the same angular orientation as the camera (long side of viewing area - long side of illumination)
+  - Parallel to the surface of the FlexiBowl® and same angular orientation as the camera (Long side of viewing area - Long side of illumination)
 * - **Relative camera-TopLight height**
-  - Vision optics flush with the upper surface of the Top Light (leave free access to the adjustment rings of the vision optics)
+  - Vision optics flush with the Top Light upper surface (leave free access to the adjusting ring nuts of the vision optics)
     :::{figure} ../../../../_shared/media/images/posizione_cam_TPL_B.png
     :alt: Working Distance
     :width: 80%
@@ -125,7 +125,7 @@ If the system includes a TopLight (top illuminator), it must have the same angul
 ```
 
 ```{tip}
-To obtain the best lighting uniformity, follow the instructions just provided 
+To achieve the best lighting uniformity, follow the indications given above.
 ```
 
 ```{warning}
@@ -133,9 +133,9 @@ To obtain the best lighting uniformity, follow the instructions just provided
 
 When positioning the TopLight, make sure that:
 
-- Light does not reflect directly from the FlexiBowl surface toward the camera (causing glare)
+- Light is not reflected directly from the surface of the FlexiBowl® towards the camera (causing glare)
 - There are no shadows caused by mechanical components
-- Illumination is as uniform as possible over the entire usable surface
+- Lighting is as uniform as possible over the entire useful surface
 
 ```
 
@@ -143,10 +143,10 @@ When positioning the TopLight, make sure that:
 
 ## Related references
 
-To complete system installation and configuration:
+To complete the installation and configuration of the system:
 
-- **Mechanical camera installation**: [Mechanical Installation](../INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.md)
-- **Camera technical specifications**: [FlexiVision One Specifications](04_Specifiche_FlexiVision.md)
+- **Camera mechanical installation**: [Mechanical Installation](../INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.md)
+- **Camera technical specifications**: [FlexiVision One specifications](04_Specifiche_FlexiVision.md)
 - **System calibration**: [Camera Calibration](../QUICKSTART/SETUP/14_calibrazione_camera.md)
 - **Electrical wiring**: [Wiring and Connections](../INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.md)
 

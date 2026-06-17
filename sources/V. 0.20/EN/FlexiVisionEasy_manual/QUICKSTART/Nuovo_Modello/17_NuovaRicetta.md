@@ -1,138 +1,133 @@
 (nuovaricetta)=
-# **Create a New Recipe**
+# **Creating a New Recipe**
 
-This section describes how to create a new application recipe in FlexiVision One. A recipe is the main container that includes all part models, FlexiBowl or Hopper configurations, and robot parameters required for a complete picking application.
-
+This section describes how to create a new application recipe in FlexiVision One. A recipe is the main container that includes all the part models, FlexiBowl®/Hopper configurations and robot parameters required for a complete picking application.
 ```{note}
 **Create a new recipe when:**
 
-- You are working with a **completely different part type**
-- The **application** changes
+- Working with a **completely different type of part**
+- Changing **application**
 
-**It is NOT necessary to create a new recipe when:**
-- You add another face of the same part, in which case create a new model in the same recipe for the same part in different positions
-- You make minor adjustments to existing parameters, such as camera exposure
-- You modify only the accept threshold, score threshold, and similar values
+**There is NO need to create a new recipe when:**
+- You add a face of the same part (create new model in the same recipe for the same part in different positions)
+- You make small adjustments to existing parameters (cam exposure)
+- You only change the accept threshold, score threshold, etc.
 ```
 
 ---
 
 ## Interface overview
 
-Before proceeding with model training, become familiar with the [Recipes](recipes) interface.
+Before proceeding with model training, get to know the [Recipes](recipes) interface.
 
-## Saving the base recipe
+![Recipes Page](../../../../../_shared/media/images/pagina_recipesNEW.png)
 
-Before proceeding, make sure you have saved the base recipe created during initial setup:
+## Saving basic recipe
 
+Before proceeding, make sure you have saved the basic recipe created during the initial setup:
 :::{list-table}
   * - **1**
-    - From the main page, click **Recipes**
+    - From the home page, click <img src="../../../../../_shared/media/images/tasto_recipes.png" class="inline-icon">
   * - **2**
-    - Verify that the current recipe is the base one, for example `"Base_Recipe"` created during setup
+    - Check that the current recipe is the basic recipe (e.g: "Basic_Recipe" created during the setup)
   * - **3**
-    - Click **Save Recipe**
+    - Click <img src="../../../../../_shared/media/images/tasto_save_recipes.png" class="inline-icon">
   * - **4**
-    - Keep the same name in the save field, because you are overwriting the recipe with the updated configuration
+    - Keep the same name in the save field (you are overwriting the recipe with the updated configurations)
   * - **5**
-    - Confirm the save operation
+    - Confirm saving
 :::
-
 ```{important}
-**Why save the base recipe?**
 
-The base recipe contains all hardware configurations completed during setup:
-- FlexiBowl connection, including IP and parameters
+**Why save the basic recipe?**
+
+The basic recipe contains all hardware configurations completed during setup:
+- FlexiBowl® connection (IP, parameters)
 - Hopper connection
-- Robot connection, including TCP/IP port
+- Robot connection (TCP/IP port)
 - Camera calibration
 
-Having a ready-made base recipe allows all these configurations to be reused without repeating them.
+Having a ready-made basic recipe makes it possible to reuse all these configurations without having to repeat them.
 ```
 
 ---
+## Step 1: Duplicate the basic recipe
 
-## Step 1: Duplicate the base recipe
-
-To start creating the first model and therefore a new application, it is always recommended to duplicate the base recipe just saved.  
-This is useful because it keeps all the setup values already configured stored separately. This is advantageous for two reasons:
-- To start a new application on the same system, you do not need to repeat all the previous steps
-- If only one element changes in the configuration, the setup of all the other components can remain valid
-
+To start with the creation of the first model, and thus with the configuration of a new application, it is always advisable to duplicate the basic recipe you have just saved.
+This is useful because it allows you to keep all newly configured setups saved separately. And this is advantageous for two reasons:
+- To start a new application with the same system, you do not have to repeat all the steps you have done so far
+- If you change only one element in the configuration, you can keep the setups of all other components valid
 ```{list-table}
 * - **6**
-  - From the main FlexiVision One page, click **Recipes**
+  - From the home page of the FlexiVision One software, click <img src="../../../../../_shared/media/images/tasto_recipes.png" class="inline-icon">
 * - **7**
-  - The recipe management page opens with the list of all existing recipes
+  - The recipe management page opens with a list of all existing recipes
 * - **8**
-  - Select the Base Recipe
+  - Select the Basic Recipe
 * - **9**
-  - Duplicate the Base Recipe
+  - Duplicate the Basic Recipe
 * - **10**
-  - Click **Load Recipe**
+  - Click Load Recipe
 * - **11**
-  - Verify in the top bar that the displayed name is the one of the new recipe
+  - Check in the top bar that the name displayed is that of the new recipe
     :::{warning}
     **Always work on the correct recipe**
 
-    When multiple recipes are present, always verify that the correct one is selected before making changes. Modifications applied to the wrong recipe require rework.
+    With several recipes present, always check that the correct one is selected before starting modifications. Modifications applied to the wrong recipe require the work to be redone.
     :::
 ```
+## Step 2: Naming the Recipe
 
-## Step 2: Name the recipe
-
-Before clicking **Save Recipe**, choose a descriptive name.
-
+Before clicking 'Save Recipe', choose a descriptive name.
 ```{list-table}
 * - **12**
-  - Rename the duplicated recipe  
-    **Recommended naming conventions:**
+  - Rename the Duplicate Recipe
+    **Recommended conventions:**
     - Names that clearly identify the part or application
-    - No spaces, use `_` or `-`
-    - Include relevant information such as part type, size, or application
-
+    - No spaces (use `_` or `-`)
+    - Include relevant information (part type, size, application)
+    
     :::{tip}
     **Avoid generic names**
 
     ❌ Names to avoid:
-    - `Test`
-    - `Trial`
-    - `Recipe1`
-    - `New_Recipe`
+    - `Test`, `Prova`, `Ricetta1`, `Nuova_Ricetta`
 
     ✓ Recommended names:
-    - `Prod_M8_Steel_Screws`
-    - `Assembly_Connectors_2024`
-    - `QC_Gears_Series_X`
+    - `Prod_Viti_M8_Acciaio`
+    - `Assembly_Connettori_2024`
+    - `QC_Ingranaggi_Serie_X`
 
-    **Suggested format**: `[LINE]_[PRODUCT]_[VARIANT]_[YEAR]`
+    **Suggested format**: `[LINEA]_[PRODOTTO]_[VARIANTE]_[GG_MM_AAAA]`
 
-    A clear name makes management easier when many different recipes are available.
+    A clear name makes it easier to manage when there are many different recipes.
     :::
 ```
-
 ```{warning}
-**Recipe backup**
+**Backup recipes**
 
 After creating and configuring a recipe:
-- Use the software backup function ([Backup Management](backup))
-- Export recipes periodically to external media
-- Document critical parameters on paper or in digital form
+- Use the software's backup function ([Backup Management](backup))
+- Periodically export recipes to external media
+- Record critical parameters on paper/digital media
 
-A well-configured recipe represents many hours of work. Protecting it properly prevents data loss.
+A well-configured recipe represents hours of work. Protecting it properly prevents data loss.
 ```
 
 ---
 
 ## Next steps
 
-**-> [Create a Model](18_NuovoModello.md)**
+- **[Creating a Model](18_NuovoModello.md)**
+- **[ROI definition](roitest)**
+- **[Configuring Clearances](istogrammi)**
+- **[Robot Calibration](robotpick)**
 
 ```{tip}
-**What is needed for the next step**
+**What you need for the next step**
 
-- Physical parts to recognize, at least 10 to 15 pieces
-- Empty and clean FlexiBowl
-- If the robot tool is a gripper, two objects different from the target part are also required to simulate the tool clearance
-- A sheet to note robot coordinates, X, Y, RZ
+- Physical parts to be identified (at least 10-15 parts)
+- FlexiBowl® empty and clean
+- If the robot tool we are using is a gripper, we will also need two objects other than the parts having the model made to be used as simulators for the tool's footprint.
+- Sheet for writing down robot coordinates (X, Y, RZ)
 ```

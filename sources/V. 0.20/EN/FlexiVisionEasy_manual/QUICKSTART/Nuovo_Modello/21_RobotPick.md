@@ -1,158 +1,146 @@
 (robotpick)=
 # **Robot Pick Calibration**
+In this page we will see how to link vision coordinates with robot coordinates to enable precise picking of components.
 
-This page explains how to connect vision coordinates with robot coordinates to allow accurate component picking.
 
-**What is Robot Pick?**  
-The **Robot Pick** function calculates the offset between the coordinates detected by FlexiVision One and the real robot coordinates, allowing the robot to pick components in the correct position.
-
+**What is Robot Pick?**
+The **Robot Pick** function calculates the offset between the coordinates detected by FlexiVision One and the robot's actual coordinates, allowing the robot to pick the components in the correct position.
 ```{danger}
-**Robot coordinates are mandatory**
+**Fundamental robot coordinates!**
 
-This phase **REQUIRES** the X, Y, and Rz coordinates saved during the physical setup preparation, Step 1 of the [Clearances](setupclearances) section.
+This phase **MANDATORILY** requires the X, Y, Rz coordinates saved during the physical preparation of the setup (Step 1 of the Clearances section).
 
-Without these coordinates, calibration cannot be completed. If they were lost or forgotten, the entire physical robot preparation must be repeated.
+Without these coordinates, the calibration cannot be completed. If they are lost or forgotten, it will be necessary to repeat the entire physical preparation with the robot.
 ```
-
 ---
 
-## Robot Pick interface overview
+## Robot Pick Interface Overview
 
-After clicking **Next** on the Clearances page, the **Robot Model Pick** page opens.
+After clicking 'Next' on the Clearances page, the **Robot Model Pick** page opens.
 
-![Robot Pick page](../../../../../_shared/media/images/pagina_robotpick.png)
+![Robot Pick Page](../../../../../_shared/media/images/pagina_robotpick.png)
 
-| Section | Parameter | Function |
+|Section | Parameter | Function |
 |-----------|-----------|----------|
 | Enable | **Enable Robot Pick** | Activates robot calibration |
-| Vision Result | **X cord** | X coordinate detected by vision |
-| Vision Result | **Y cord** | Y coordinate detected by vision |
-| Vision Result | **RZ cord** | Z rotation detected by vision |
-| Insert Robot Coordinate | **X cord** | Robot X coordinate to be entered manually |
-| Insert Robot Coordinate | **Y cord** | Robot Y coordinate to be entered manually |
-| Insert Robot Coordinate | **RZ cord** | Robot Z rotation to be entered manually |
+|Vision Result| **X cord** | X coordinate detected by vision |
+|Vision Result| **Y cord** | Y coordinate detected by vision |
+|Vision Result| **RZ cord** | Z rotation detected by vision |
+|Insert Robot Coordinate| **X cord** | Robot X coordinate (to be inserted) |
+|Insert Robot Coordinate| **Y cord** | Robot Y coordinate (to be inserted) |
+|Insert Robot Coordinate| **RZ cord** | Robot Z rotation (to be inserted) |
+
 
 | Function | Description |
 |----------|-------------|
-| **Find Object** | Detects the component and displays vision coordinates |
-| **Picking Offset** | Calculates the offset required for correct picking |
+| **Find Object** | Detects the component and shows vision coordinates |
+| **Picking Offset** | Calculates the offset for the correct picking |
 
 ---
 
-## **Step 1: Activate and detect the component**
+## Step 1: Component Activation and Detection
 
 :::{video} ../../../../../_shared/media/videos/Step1_robot.mp4
     :width: 100%
     :align: center
 :::
-
 ```{list-table}
 * - **1**
   - Click **Enable Robot Pick**
 * - **2**
   - Click <img src="../../../../../_shared/media/images/tasto_FIND_OBJECT1.png" class="inline-icon">:
-      - The system detects the reference component
-      - The coordinates appear in the **Vision Result** section
+      - The system will detect the reference component
+      - The coordinates will appear in the **Vision Result** section
 
-      :::{note} Vision Result
-      These are the coordinates FlexiVision One "sees" in the image. They are not yet linked to the robot coordinate system.
+      :::{note} Vision Result:
+      These are the coordinates that FlexiVision One 'sees' in the image. They are not yet linked to the robot's coordinate system.
       :::
 ```
+:::{tip}
+If you have any doubts during configuration, please consult the **INFO** key on the current page.
+:::
 
-## **Step 2: Enter robot coordinates and calculate the offset**
+## Step 2: Robot Coordinate Insertion and Offset calculation
 
 :::{video} ../../../../../_shared/media/videos/Step2_robot.mp4
     :width: 100%
     :align: center
 :::
-
 ```{list-table}
 * - **3**
-  - In the **Insert Robot Coordinates** box, enter the coordinates saved during model creation:
-      - **X cord** -> X coordinate noted in Step 1 of [Clearance Creation](setupclearances)
-      - **Y cord** -> Y coordinate noted in Step 1 of [Clearance Creation](setupclearances)
-      - **RZ cord** -> Z rotation noted in Step 1 of [Clearance Creation](setupclearances)
+  - In the **Insert Robot Coordinates** box, enter the coordinates saved when creating the model:
+      - **X cord** → X coordinate noted in step 1 of [Clearances Creation](setupclearances)
+      - **Y cord** → Y coordinate noted in step 1 of [Clearances Creation](setupclearances)
+      - **RZ cord** → Z rotation noted in step 1 of [Clearances Creation](setupclearances)
 
       :::{danger}
-      Use the coordinates saved during model setup. Without these coordinates, calibration will be wrong.  
-      Coordinates must be entered with **maximum precision**:
-      - Copy the values exactly as written, including decimals
-      - **DO NOT round** them, for example `450.23` is not the same as `450.2` or `450`
-      - Verify that X and Y have not been swapped
-      - Check the sign of each coordinate, positive or negative
+      Use the coordinates saved during model setup. Without these coordinates, the calibration will be incorrect!
+      The coordinates must be entered with **the utmost precision**:
+      - Copy the values exactly as written down (including decimals)
+      - **DO NOT approximate** (e.g.: 450.23 ≠ 450.2 ≠ 450)
+      - Make sure you haven't swapped X and Y
+      - Check the sign (+ or -) of each coordinate
 
-      Errors at this stage cause completely incorrect robot offsets, resulting in pick attempts in the wrong positions, even with errors of several centimeters. Failing to respect these points may also cause robot collisions and damage to the FlexiBowl, components, or the robot itself.
+      **Errors at this phase cause completely incorrect robot offsets**, resulting in picking attempts in wrong positions (even tens of centimetres of error). Failure to comply with these two points could lead to robot collisions resulting in damage to the FlexiBowl®, components or the robot itself.
       :::
 * - **4**
   - Click <img src="../../../../../_shared/media/images/tasto_GRIPPER_OFFSET.png" class="inline-icon">
-      - The system automatically calculates the transformation between vision coordinates and robot coordinates
-      - This offset will be applied to all future detections
+      - The system will automatically calculate the transformation between vision coordinates and robot coordinates
+      - This offset will be applied to all future readings
 ```
-
 ---
-
-```{admonition} **How the Gripper Offset works**
+```{admonition} **How Does the Gripper Offset Work?**
 :class: info
 The system compares:
-- **Vision Coordinates**: where FlexiVision One sees the component origin
+- **Vision Coordinates**: where FlexiVision One 'sees' the origin of the component
 - **Robot Coordinates**: where the robot actually grasped the component
 
-It calculates the difference and stores it as an **offset**. This offset is then applied to all components detected in the future, ensuring that the robot always picks in the correct position.
+It calculates the difference and stores it as an **offset**. This offset will be applied to all detected components in the future, ensuring that the robot always picks in the correct position.
 ```
-
+:::{tip}
+If you have any doubts during configuration, please consult the **INFO** key on the current page.
+:::
 ---
 
-## **Step 3: Finalization and saving**
-
+## Step 3: Finalising and Saving
 ```{list-table}
 * - **5**
-  - By clicking <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon">, the workflow returns to the recipes page <img src="../../../../../_shared/media/images/tasto_recipes.png" class="inline-icon">
+  - Click <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon"> to go back to the recipe page <img src="../../../../../_shared/media/images/tasto_recipes.png" class="inline-icon">
 * - **6**
-  - Click <img src="../../../../../_shared/media/images/tasto_save_recipes.png" class="inline-icon"> to save the full configuration
+  - Click <img src="../../../../../_shared/media/images/tasto_save_recipes.png" class="inline-icon"> to save the entire configuration
 
-      :::{admonition} Complete save
+      :::{admonition} Complete Saving
       :class: success
-      The save includes:
-      - ✓ created model
-      - ✓ working area, ROI
-      - ✓ tolerances, Accept Threshold
-      - ✓ configured Clearances
-      - ✓ robot calibration, Gripper Offset
+      Saving includes:
+      - ✓ Model created
+      - ✓ Work area (ROI)
+      - ✓ Tolerances (Accept Threshold)
+      - ✓ Configured clearances
+      - ✓ Robot calibration (Gripper Offset)
       :::
 ```
 
 ---
 
-## Multiple models - add additional models
+## Multiple Models - Adding More Models
 
-### **Step 4: Additional models, optional**
-
+### *Step 4: Additional Models (optional)*
 ```{list-table}
 * - **7**
-  - To create additional models in the same recipe:
-      - Return to <img src="../../../../../_shared/media/images/tasto_edit_recipes.png" class="inline-icon">
-      - Select a new model slot that has not yet been configured
-      - Repeat the entire procedure starting from [Model Creation](nuovomodello)
+  - To create other models in the same recipe:
+      - Go back to <img src="../../../../../_shared/media/images/tasto_edit_recipes.png" class="inline-icon">
+      - Select a new, not yet configured model
+      - Repeat the entire procedure from [Model Creation](nuovomodello)
 
       :::{tip}
-      Each model inside the recipe can have different settings, such as ROI, Clearance, and offset, allowing management of components with different characteristics within the same application.
+      Each model in the recipe can have different configurations (ROI, clearance, offset), allowing you to manage components with different features in the same application.
       :::
 ```
 
----
-
-## Final verification
-
-Before considering the recipe complete, continue with:
-
-- [FlexiBowl Configuration](configfb)
-- [Hopper Configuration](confighopper)
-- [Application Monitoring](dashboard)
-
 ```{seealso}
-- [Troubleshooting](troubleshooting)
+For any issues with the steps just completed, refer to [Troubleshooting](troubleshooting)
 ```
 
 ---
 
-[Back To Top]()
+

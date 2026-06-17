@@ -1,40 +1,38 @@
 (setupcomponenti)=
 # **Initial System Configuration**
 
-This section guides the user through the complete setup of the FlexiVision One hardware and software components. It is essential to follow the steps in the indicated order to ensure correct system operation.
+This section guides the user through the complete configuration of the hardware and software components of the FlexiVision One system. It is essential to follow the steps in the order indicated to ensure proper operation of the system.
 
 ```{note}
 **Prerequisites**
 
-Before starting software configuration, make sure that:
-- Mechanical installation of all components has been completed ([Mechanical Installation](Installazione_Meccanica))
-- All cables are connected correctly ([Wiring and Connections](cablaggio))
+Before starting the software configuration, make sure that:
+- Mechanical installation of all components is completed ([Mechanical Installation](Installazione_Meccanica))
+- All cables are correctly connected ([Wiring and Connections](cablaggio)) 
 ```
-
+![WorkFlow](../../../../../_shared/media/images/workflow.png)
 ---
 
-## Setup process overview
+## Overview of the setup process
 
-The initial configuration process consists of eight main steps:
+The initial setup process consists of seven main steps:
 
-0. **Enter the license key** supplied with the kit
-1. **Login** - access the software using user credentials
-2. If a backlight illuminator is present: **Configure the FlexiBowl IP address** and **turn on the backlight**
-3. **Camera Setup** - configure the camera
-4. **FlexiBowl Setup** - connection and configuration of the FlexiBowl
-5. **Hopper Setup** - configuration of the hopper
-6. **Robot Setup** - configuration of communication with the robot
-7. **Protocol Setup** - configuration of protocol parameters
-8. **Rename and save the base recipe** - configuration of the application profile
+0. **Enter the Licence Key** supplied in the kit
+1. **Login** - Access the software with user credentials
+2. if Backlight included: **Configure** **FlexiBowl® IP Address** and **Switch on** **Backlight**
+3. **Camera Setup**
+4. **FlexiBowl** **Setup** - Connect and configure the FlexiBowl®
+5. **Hopper Setup**
+6. **Robot** **Setup** - Configure communication with the robot
+7. **Protocol** Setup - Configure protocol parameters
+8. **Rename and Save the Basic Recipe** - Application profile configuration
 
-:::{note}
-The complete setup flow diagram is not yet available as an exported image in this repository. Refer to the guided sequence described below.
-:::
+
 
 ```{warning}
-**Step order**
+**Order of steps**
 
-The setup sequence is important. Do not skip steps or change the order, because some configurations depend on previous ones.
+The order of the setups is important! Do not skip steps or change the sequence, as some setups depend on previous ones.
 ```
 
 ---
@@ -42,25 +40,23 @@ The setup sequence is important. Do not skip steps or change the order, because 
 ## Preliminary operations
 
 :::{important}
-Before starting FlexiVision One, the first operation is entering the license key supplied with the kit.
+The first step before starting the FlexiVision One software is to enter the license key supplied with the kit. 
 :::
 
-### Step 1: Login to the system
+### *Login to the system*
 
-When FlexiVision One starts, the Home page is displayed.
-
-```{list-table}
+When the FlexiVision One software is started, the Home page is displayed. 
+```{list-table} 
    :widths: 10 90
    :header-rows: 0
    * - **0**
-     - Click **Setup**
+     - Click Setup 
    * - **1**
-     - **Select user ARS** from the dropdown menu at the top right.
+     - **Select the user ENGINEER** from the drop-down menu at the top right.
    * - **2**
-     - **Enter password** `ArS2025`.
-       *(Note: the field is case-sensitive).*
+     - **Enter the password** '3'.
    * - **3**
-     - Click **LOGIN** to access the interface.
+     - Click the **LOGIN** button to access the interface.
 ```
 
 ```{tip}
@@ -75,118 +71,52 @@ FlexiVision One supports multiple user profiles with different permission levels
 
 ---
 
-### Step 2: Turn on the backlight if present
+### *Switch on  the Backlight if included*
 
-After the first login, if it is necessary to activate the FlexiVision One license, follow these steps:
+After the first login, if you need to activate your FlexiVision One licence, follow these steps: 
 
 ```{list-table}
-* - **1**
-  - From the main software page, click <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
-* - **2**
-  - In the SETUP page, identify and click the **FlexiBowl Setup** icon
-    ```{dropdown} Setup page
-       ![Setup page](../../../../../_shared/media/images/pagina_setup1.png)
+* - **4** 
+  - From the software home page, click <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
+* - **5**
+  - On the SETUP page, identify and click the **FlexiBowl® Setup** icon
+    ```{dropdown} Setup Page 
+       ![Setup Page](../../../../../_shared/media/images/pagina_setup1.png)
     ```
-* - **3**
-  - The FlexiBowl configuration screen opens
-* - **4**
-  - Enter the FlexiBowl IP address, default `192.168.1.10`
-* - **5**
-  - After entering the IP address, click **Connection Test**
 * - **6**
-  - The system performs a communication test, or ping, to the FlexiBowl
+  - The FlexiBowl® Setup screen opens
 * - **7**
-  - Check the **Status** indicator:
-    - 🟢 **Green**: connection established correctly
-    - 🔴 **Red**: connection failed, verify IP address and wiring
+  - Enter the FlexiBowl® IP address (default: `192.168.1.10` )
 * - **8**
-  - Click <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl" >
+  - After entering the IP, click the button **Connection Test**
 * - **9**
-  - A window opens with the configurable FlexiBowl parameters
+  - The system performs a communication test (ping) to the FlexiBowl®
 * - **10**
-  - Turn on the backlight by enabling the `"Light ON"` checkbox
-```
-
----
-
-### Recommended setup sequence
-
-```{list-table}
-:header-rows: 1
-:widths: 15 35 50
-
-* - Step
-  - Component
-  - Description
-* - **3**
-  - [Camera Setup](camerasetup)
-  - Configure image acquisition and test the camera
-* - **4**
-  - [FlexiBowl Setup](fbsetup)
-  - Connect and test communication with the FlexiBowl
-* - **5**
-  - [Hopper Setup](hoppersetup)
-  - Configure the external hopper if present
-* - **6**
-  - [Robot Setup](robotsetup)
-  - Configure the TCP/IP port and test communication with the robot
-* - **7**
-  - [Protocol Setup](protocol_setup)
-  - Configure data exchange parameters and operating statistics
-```
-
-```{warning}
-**Sequence importance**
-
-Following the indicated order is important because the camera requires the FlexiBowl to be configured in order to test illumination, and some parameters depend on previous configurations.
-```
-
-(ricettabase)=
-### Step 8: Save and rename the base recipe
-
-Before configuring the hardware components, it is necessary to create a base recipe defining the system parameters.
-
-````{list-table}
-:header-rows: 0
-:widths: 10 90
-
-* - **8**
-  - Open the |tasto_recipes| section from the top button
-
-* - **9**
-  - Enter the recipe name.
-
-    Use a descriptive name, for example `"Base_Recipe"`.
-
-    Avoid special characters or spaces, and use underscores ``_`` instead of spaces.
-
+  - Observe the **Status** indicator:
+    - 🟢 **Green:** Connection successful
+    - 🔴 **Red:** Connection failed (check IP address and wiring)
+* - **11** 
+  - Click the button <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl" >
 * - **12**
-  - Click **Save Recipe** to save the recipe
-````
-
-```{tip}
-**Recipe organization**
-
-FlexiVision One allows multiple recipes to be created for different part types or configurations. Recommended naming convention:
-
-- Use names that clearly identify the part, for example `"Zincated_M6_Screw"`
-
-For more details about recipe management, refer to [Create a new recipe](nuovaricetta).
+  - A window opens with the configurable parameters of the FlexiBowl®
+* - **13**
+  - Turn on the backlight by ticking the "Light ON" box
 ```
 
 ---
 
-## Hardware component configuration
+## Hardware components configuration
 
-Once the preliminary operations are completed, proceed with hardware configuration in the following order.
+Once the preliminary steps have been completed, proceed to configure the hardware components in the following order.
 
-All hardware setup sections are accessible from the central **SETUP** page of the software.
+All hardware setups are accessible from the software’s central **SETUP** page.
 
-```{list-table}
-* - **14**
+
+```{list-table} 
+* - **14** 
   - From the main menu, click <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
-* - **15**
-  - The icons of the various components to configure are displayed
+* - **15** 
+  - Icons for the different components to be configured are displayed
 * - **16**
   - Click the icon of the desired component to access its specific configuration
 ```
@@ -201,4 +131,6 @@ All hardware setup sections are accessible from the central **SETUP** page of th
 13b_Hopper_Setup.md
 13c_Robot_Setup.md
 15_Protocol_Setup.md
+15b_SaveRecipe.md
 ```
+

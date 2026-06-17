@@ -1,7 +1,6 @@
 # **Mechanical Installation**
-
 (troubleshooting_vision_controller)=
-## VisionController issues
+## Problems with the VisionController
 
 ```{list-table}
 :header-rows: 1
@@ -10,52 +9,51 @@
 * - Problem
   - Possible Causes
   - Solutions
-* - **VisionController overheats and shuts down automatically**
-  - • Insufficient ventilation or clearance below 50 mm
-
-    • Ambient temperature above 50°C
-
-  - • Verify at least 50 mm of free space on all sides
-
-    • Move the unit to a cooler environment or add cabinet cooling
-
-* - **VisionController does not lock correctly onto the DIN rail**
-  - • DIN rail not compliant, not 35 mm
-
-    • Locking mechanism damaged
-
-    • Rail not firmly secured
-  - • Verify that the rail is standard 35 mm DIN
-
-    • Inspect the locking mechanism for damage
-
-    • Secure the DIN rail more firmly to the panel
-* - **VisionController becomes loose on the panel during screw mounting**
-  - • Tightening torque too low
-
-    • Incorrect screws, not M4
-
-    • Incorrect panel drilling pattern
-  - • Tighten the 4 M4 screws to 1.2 Nm
-
+* - **VisionController overheats and automatically switches off**
+  - • Insufficient ventilation (space < 50mm)
+    
+    • Ambient temperature > 50°C
+    
+  - • Check clearance of at least 50mm on all sides
+    
+    • Move to cooler room or add air conditioning
+    
+* - **VisionController does not attach correctly to DIN rail**
+  - • Non-compliant DIN rail (not 35mm)
+    
+    • Damaged coupling mechanism
+    
+    • Rail not securely fastened
+  - • Check that the rail is DIN 35mm standard
+    
+    • Inspect coupling mechanism for damage
+    
+    • Improve fastening of DIN rail to the panel
+* - **VisionController comes loose from the panel (mounting with screws)**
+  - • Insufficient tightening torque
+    
+    • Unsuitable screws (not M4)
+    
+    • Incorrect panel drilling
+  - • Tighten the 4 M4 screws to a torque of 1.2 Nm
+    
     • Use M4 screws as specified
-
-    • Verify the drilling pattern against the technical drawings
+    
+    • Check drilling pattern according to technical drawings
 * - **Insufficient IP protection**
-  - • Installed outside the electrical cabinet
-
-    • Cabinet with IP rating lower than 40
-
-    • Presence of dust or humidity
-  - • Install inside an IP54 electrical cabinet
-
-    • Verify a minimum protection rating of IP40
-
-    • Improve the cabinet sealing
+  - • Mounting outside the electric panel
+    
+    • Panel with IP < 40
+    
+    • Presence of dust/humidity
+  - • Mount inside IP54 electric panel
+    
+    • Verify minimum protection IP40
+    
+    • Improve electric panel sealing
 ```
-
 (troubleshooting_camera)=
-## Camera issues
+## Problems with the Camera
 
 ```{list-table}
 :header-rows: 1
@@ -64,27 +62,29 @@
 * - Problem
   - Possible Causes
   - Solutions
-* - **Image out of focus**
-  - • Incorrect working distance for the FlexiBowl model
-
+* - **Image not focused**
+  - • Incorrect working distance for FlexiBowl® model
+    
     • Lens not fully screwed in
+    
+  - • Measure and correct distance according to [Optimal Distance Calculation](../rif_tecnico_specifiche/05_Calcolo_distanza_ottimale.md)
+    
+    • Tighten the lens completely (metal-to-metal contact)
+    
+* - **Image distorted or with incorrect perspective**
+  - • Camera not centred on FlexiBowl® vision area (error > ±5mm)
+    
+    • Camera inclined compared to the surface (tilt > ±1°)
+    
 
-  - • Measure and correct the distance according to [Optimal Working Distance Calculation](../rif_tecnico_specifiche/05_Calcolo_distanza_ottimale.md)
+  - • Measure centring with tape measure/gauge and correct
+    
+    • Check squareness with precision level
+    
 
-    • Fully screw in the lens until metal-to-metal contact
-
-* - **Distorted image or incorrect perspective**
-  - • Camera not centered on the FlexiBowl viewing area, error greater than ±5 mm
-
-    • Camera tilted relative to the surface, tilt greater than ±1°
-
-  - • Measure the centering with a ruler or caliper and correct it
-
-    • Verify orthogonality with a precision level
 ```
-
 (troubleshooting_toplight)=
-## TopLight issues
+## Problems with the Toplight 
 
 ```{list-table}
 :header-rows: 1
@@ -93,25 +93,25 @@
 * - Problem
   - Possible Causes
   - Solutions
-* - **Non-uniform lighting with visible shadows**
-  - • TopLight distance from the surface is incorrect
+* - **Uneven lighting with obvious shadows**
+  - • Incorrect toplight distance from the surface
+    
+    • Toplight not parallel to FlexiBowl® disc
+    
+    • Illumination angle not perpendicular (tilt ≠ 0°)
+  - • Position toplight at a distance similar to that of the camera
+    
+    • Check parallelism with spirit level
+    
+    • Correct orientation at 0° tilt
+* - **Indirect reflections towards the camera**
+  - • Surface not compatible with illuminator 
 
-    • TopLight not parallel to the FlexiBowl plate
+  - • Check compatibility with the surface 
 
-    • Lighting angle not perpendicular, tilt not equal to 0°
-  - • Position the TopLight at a distance similar to the camera distance
-
-    • Verify parallelism with a level
-
-    • Correct the orientation to 0° tilt
-* - **Indirect reflections toward the camera**
-  - • Surface not compatible with the illuminator
-
-  - • Check compatibility with the inspected surface
 ```
-
 (troubleshooting_luce_ambientale)=
-## Ambient light shielding issues
+## Ambient Light Shielding Problems
 
 ```{list-table}
 :header-rows: 1
@@ -120,23 +120,26 @@
 * - Problem
   - Possible Causes
   - Solutions
-* - **Inconsistent detections at different times of day**
+* - **Inconsistent readings at different times of day**
   - • Variable direct or indirect sunlight
-
-    • Windows not shielded
-
+    
+    • Windows not shaded
+    
     • Artificial lighting with dimmers
   - • Install blackout curtains or opaque panels
-
-    • Fully shield windows inside the cell
-
+    
+    • Completely shade windows in the cell
+    
     • Use fixed, non-adjustable lighting
 * - **Reflections from surrounding surfaces**
-  - • Reflective surfaces nearby, such as machines or panels
-
+  - • Reflective surfaces in the vicinity (machines, panels)
+    
   - • Cover reflective surfaces with opaque material
-
+    
     • Reposition reflective elements
-
-    • Paint surfaces with matte paint
+    
+    • Paint surfaces with matt varnish
 ```
+
+
+

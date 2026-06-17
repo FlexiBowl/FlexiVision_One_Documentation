@@ -6,5 +6,5 @@ orphan: true
 # Protocol Setup
 
 ```{note}
-This page is maintained as a quick reference. For the complete procedure, refer to [Step 7: Protocol Setup](../QUICKSTART/SETUP/15_Protocol_Setup.md).
+This page is kept as a quick reference. For the full procedure refer to [Step 7: Protocol Setup](../QUICKSTART/SETUP/15_Protocol_Setup.md).
 ```

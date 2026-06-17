@@ -1,44 +1,42 @@
-(nuovomodello)=
-# **Create a New Model**
+﻿(nuovomodello)=
+# **Creating a New Model**
 
-This page explains how to create a reference model for component recognition.
+On this page we will see how to create a reference model for component identification.
 
-## **Step 1: Physical setup preparation**
 
+## Step 1: Preparing the Physical Setup
+If not already done, follow these steps:
 ````{list-table}
 * - **1**
   - Remove the calibration grid and restore the initial layout:
-    - reposition the surface
+    - Reposition the surface
     - reposition the central flange
     - secure the central flange with its four screws
 * - **2**
-  - Position one object at the center of the viewing area
+  - Place an object in the centre of the vision area
 ````
-
 ---
 
-## **Step 2: Access the model**
+## Step 2: Access to the Model
 
-Once physical preparation is complete, proceed with image acquisition and model creation.
-
+Once the physical preparation is complete, proceed with image capture and model creation
 ````{list-table}
 * - **3**
-  - From the **Recipes** page, with the correct recipe selected, click **Edit Recipe**
+  - From the "Recipes" page, with the right recipe selected click <img src="../../../../../_shared/media/images/tasto_edit_recipes.png" class="inline-icon">
 * - **4**
-  - Select the FlexiBowl currently in use
-    :::{dropdown}
-
+  - Select the FlexiBowl® you are working with
+    :::{dropdown} **FlexiBowl® Choice**
+    ![FB Choice](../../../../../_shared/media/images/scelta_FB.png)
     :::
 * - **5**
-  - The available model slots will be shown, up to 8 models per recipe
+  - The available model slots will be shown (up to 8 models per recipe)
 * - **6**
-  - Click **Model 1** to open the **Train Model 1 Cam 1** page
+  - Click **Model 1** to access the "Train Model 1 Cam 1" page
 ````
 
-#### Train Model interface overview
+### *Train Model interface overview*
 
 ![Train Model page](../../../../../_shared/media/images/pagina_trainmodel.png)
-
 ````{list-table}
 :header-rows: 1
 :widths: 30 70
@@ -46,147 +44,141 @@ Once physical preparation is complete, proceed with image acquisition and model 
 * - Parameter
   - Function
 * - **Enable Model**
-  - Activates this model slot and makes it usable
+  - Activates this model slot making it usable
 * - **Grab Train Image**
-  - Captures a photo of the reference component for training
+  - Takes a picture of the reference component for training
 * - **Score Threshold**
-  - Adjusts the model detail level, from 0 for maximum detail to 1 for minimum detail
+  - Adjusts the level of detail of the model (from 0 = maximum detail to 1 = minimum detail)
 * - **Train**
-  - Generates the model by processing the acquired image
+  - Actually generates the model by processing the captured image
 * - **Model Name**
-  - Text field used to assign a descriptive name to the model
+  - Text field to assign a descriptive name to the model
 ````
-
 ````{tip}
-**Managing multiple models**
+**Multiple model management**
 
-At this stage only the first model is activated. After completing it, it will be possible to:
-- Enable additional slots, Model 2, Model 3, and so on, for different parts inside the same recipe
+In this phase only the first model is activated. After completion, you may:
+- Enable additional slots (Model 2, Model 3, etc.) for different parts in the same recipe
 - Modify existing models
-- Disable models that are no longer required
+- Disable models no longer required
 
-For now, focus on completing the first model.
+For the time being, focus on completing the first model.
 ````
-
 ---
 
-## **Step 3: Training procedure**
-
+## Step 3: Training Procedure
 ````{video} ../../../../../_shared/media/videos/TastoInfo_TrainModel_1280x720.mp4
 :width: 100%
-:align: center
+:align: center 
 ````
-
 ````{list-table}
 :widths: 5 95
 
 * - **7**
-  - Click **Enable Model** to activate this model. The model is now active and ready to be configured.
+  - Click **Enable Model** to enable this model. The model is now active and ready to be configured.
 
 * - **8**
-  - Click **Grab Train Image** to capture a photo of the reference component positioned on the FlexiBowl
-
+  - Click **Grab Train Image** to take a picture of the reference component we have placed on the FlexiBowl®
+    
     :::{warning}
-    The reference component must remain fixed in that position throughout the entire application creation process.
+    The reference component must remain stationary at that point throughout the application creation process
     :::
 
 * - **9**
-  - Move the **ROI box** so that it fully frames the component
+  - Move the **ROI box** to fully frame the component
 
 * - **10**
-  - Move the **origin** reference point to the center of the ROI area
-
+  - Move the **origin** (reference point) to the centre of the frame area
+    
     :::{tip}
-    **Where should the origin be placed?**
-
-    The origin is automatically placed at the center of the component.  
-    If the pick point does not match the geometric center, move the origin to the:
-    - **Pick point**: for asymmetric parts, place it where the gripper actually grasps the part
-
-    *The origin defines point (0,0) of the model coordinate system.*
+    **Where to position the origin?**
+    
+    The origin is automatically placed at the centre of the component.
+    If the pick point does not coincide with the geometric centre, move the origin to the:
+    - **Pick point**: For asymmetric parts, position where the gripper grasps
+    
+    *The origin defines the (0,0) point of the model coordinate system.*
     :::
 
 * - **11**
-  - Use **Score Threshold** to adjust the desired detail level
-
+  - Use the **Score Threshold** to adjust the desired level of detail
+    
     ::::{note}
     **Score Threshold**
-
+     
       ![Score threshold comparison](../../../../../_shared/media/images/confrontomodello.png)
-
-    **Value close to 0** -> detects MORE details, resulting in a more precise model
-
-    **Value close to 1** -> detects FEWER details, resulting in a simpler model
+    
+    **Value close to 0** → Detects MORE detail (more precise model)
+    
+    **Value close to 1** → Detects LESS detail (simpler model)
     ::::
-
+    
     :::{tip}
-    **How to choose the optimal Score Threshold**
-
-    **Use a LOW value, 0.1-0.3, when:**
-    - The part has many distinctive details such as engravings, logos, or texture
-    - Parts are always very similar to each other, with tight tolerances
+    **How to choose the optimal Score Threshold?**
+    
+    **Use a LOW value (0.1-0.3) when:**
+    - The part has many distinctive details (engravings, logos, texture)
+    - The parts are always very similar to one another (tight tolerances)
     - Maximum precision is required even with difficult orientations
-
-    **Use a MEDIUM value, 0.4-0.6, when:**
+    
+    **Use a HIGH value (0.4-0.6) when:**
     - The part has a distinctive but simple shape
     - A balance between precision and tolerance is desired
-    - It is the first configuration of a model and a good starting point is needed
-
-    **Use a VERY HIGH value, 0.7-0.9, when:**
-    - Significant part-to-part variations are present, with wide tolerances
+    - First configuration of a model (starting point)
+    
+    **Use a VERY HIGH value (0.7-0.9) when:**
+    - There are significant variations between parts (wide tolerances)
     - The part surface is highly reflective or variable
     :::
 
 * - **12**
   - Click **Train**
 ````
-
+:::{tip}
+If you have any doubts during configuration, please consult the **INFO** key on the current page.
+:::
 ---
 
-## **Step 4: Visual check**
+## Step 4: Visual inspection
 
-After generating the model, it is essential to verify its quality before proceeding.
-
+After generating the model, it is essential to check its quality before proceeding.
 ````{list-table}
-* - **13**
-  - Zoom into the image to inspect the created model in detail and verify that it is correct
 
+* - **13**
+  - **Zoom** in on the image to inspect the details of the model created and verify that the model is correct
+    
     :::{tip}
-      **Characteristics of a valid model**
-      ✓ It contains enough lines to recognize the component
-      ✓ It does not include the texture of the background surface
-      ✓ It avoids light reflections
+      **Valid Model Characteristics**
+      ✓ Have enough lines to recognise the component
+      ✓ Do not include the texture of the background surface
+      ✓ Avoid light reflections
     :::
 
-    ![Model comparison](../../../../../_shared/media/images/confrontomodello2.png)
+    ![Model Comparison](../../../../../_shared/media/images/confrontomodello2.png)
 ````
-
 ````{attention}
 If the model is not satisfactory:
-- Modify the **Score Threshold**
-- Click **Train** again
-- Repeat until the model is optimal
+- Edit the **Score Threshold**
+- Click again on **Train**
+- Repeat until an ideal model is achieved
 ````
-
 ````{tip}
-**Optimization strategy**
+**Optimisation strategy**
 
-**Problem: model includes background surface texture**  
--> Solution: increase Score Threshold or increase the Cam Exposure value in `SETUP > Camera Setup > Cam Exposure`
+**Problem: Model includes surface texture**
+→ Solution: Increase Score Threshold or Cam Exposure value (SETUP > Camera Setup > Cam Exposure)
 
-**Problem: model has too few lines and is not distinctive enough**  
--> Solution: decrease Score Threshold
+**Problem: Model has too few lines, not distinguishable**
+→ Solution: Decrease Score Threshold
 
-**Problem: model includes reflections**  
--> Solution: increase Score Threshold or adjust camera exposure
+**Problem: Model includes reflections**
+→ Solution: Increase Score Threshold or adjust camera exposure
 
-Apply gradual changes, typically 0.1 to 0.2 steps, and test every time.
+Make gradual changes (steps of 0.1-0.2) and test each time.
 ````
-
 ---
 
-## **Step 5: Saving**
-
+## Step 5: Save
 ````{list-table}
 * - **14**
   - Name the model with a descriptive name
@@ -194,22 +186,19 @@ Apply gradual changes, typically 0.1 to 0.2 steps, and test every time.
     **Avoid generic names**
 
     ❌ Names to avoid:
-    - `Test`
-    - `Trial`
-    - `Model1`
-    - `New_Model`
+    - `Test`, `Prova`, `Modello1`, `Nuovo_Modello`
 
     ✓ Recommended names:
-    - `Prod_M8_Steel_Screws`
-    - `Assembly_Connectors_2024`
-    - `QC_Gears_Series_X`
+    - `Prod_Viti_M8_Acciaio`
+    - `Assembly_Connettori_2024`
+    - `QC_Ingranaggi_Serie_X`
 
-    A clear name makes management easier when many different models are available.
+    A clear name makes it easier to manage when there are many different models.
     :::
 * - **15**
-  - Click **Next** -> the **Define Robot Pick Area** page opens
+  - Click <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon"> → the **Define Robot Pick Area** page will open
+````
+````{seealso}
+Proceed to [Define ROI](roitest) to continue configuration.
 ````
 
-````{seealso}
-Proceed to [ROI Definition](roitest) to continue configuration.
-````

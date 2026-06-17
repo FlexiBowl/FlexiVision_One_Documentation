@@ -1,84 +1,82 @@
 (specifiche_tecniche)=
-# **Detailed FlexiVision One Specifications**
+# **FlexiVision One Detailed Specifications**
 
-This section provides the complete technical specifications of the FlexiVision One system, including details about the industrial camera, VisionController, calibration grid, communication interfaces, and hardware configurations.
+This section provides full technical specifications of the FlexiVision One system, including details of the industrial camera, VisionController, calibration grid, communication protocols and hardware configurations.
 
 ---
-
 (specifiche_camera)=
-## Camera
+## Camera 
 
-```{figure} ../../../../_shared/media/images/Camera2.png
-:alt: FlexiVision One camera CAM-CIC-5000-20G-1
+```{figure} ../../../../_shared/media/images/camera_nuova.png
+:alt: Camera FlexiVision One CAM-CIC-5000-20G-1
 :align: center
-:width: 50%
+:width: 70%
 ```
 
-The FlexiVision One system uses high-resolution cameras with Gigabit Ethernet interface to guarantee fast image acquisition and accurate component recognition.
+The FlexiVision One system uses high-resolution cameras with a Gigabit Ethernet interface for fast image acquisition and accurate component identification.
 
-### Electrical specifications
-
+### *Electrical specifications*
 ```{list-table}
 :header-rows: 1
 :widths: 40 60
 
 * - **Feature**
-  - **Specification**
+  - **Specifications**
 * - Model
   - CAM-CIC-5000-20G-1
 * - Effective Pixels
-  - 5 MP, `2448 × 2048`
+  - 5 MP 12448 × 2048
 * - SNR
-  - `>38 dB`
+  - \>38 dB
 * - Dynamic Range
-  - `70 dB`
+  - 70 dB
 * - GPIO
-  - 6-pin Hirose connector: 1 opto-isolated input, 1 opto-isolated output, 1 configurable I/O without optical isolation
+  - Hirose 6-pin connector: 1 opto-isolated input, 1 opto-isolated output, 1 configurable I/O without optical isolation
 * - Image Format
   - Mono8 / 10 / 10Packed
-* - Binning
-  - Supported
+* - Binning 
+  - Support
 * - Gain
   - X1 ~ X32
 * - Gamma
-  - From 0 to 4, LUT supported
+  - 0 to 4, LUT support
 * - Exposure Time
-  - `34.23 μs ~ 1 s`
+  - 34.23 μS ~ 1S
 * - Trigger Mode
   - Software / Hardware / Free run
 * - Image Buffer
   - 256 MB
-* - User Settings
-  - Supports two sets of user-defined configuration
+* - user settings 
+  - Support two sets of user-defined configuration
 * - Power Supply
-  - PoE or DC through Hirose connector, `12 V` or `24 V`
+  - PoE / DC via Hirose connector, with 12 V or 24 V voltage
 * - Power Consumption
-  - `12V ≈ 3.2 W`
+  - 12V ≈ 3.2 W
 * - Lens Mount
   - C-mount
 * - Operating Temperature
-  - `-30°C ~ +50°C`
+  - -30°C ~ +50°C
 * - Storage Temperature
-  - `-30°C ~ +80°C`
+  - -30°C ~ +80°C
 * - Certifications
   - CE, UL, FCC, RoHS
 * - Resolution
-  - `2448 x 2048`
+  - 2448 x 2048
 * - Pixel Size
-  - `3.45 × 3.45 μm`
+  - 3.45 × 3.45 μm
 * - Sensor
   - IMX264 CMOS Global Shutter
 * - Sensor Size
-  - `2/3"`
+  - 2/3"
 * - Frame Rate
-  - `24 fps`
+  - 24 fps
 * - Bit Depth
-  - `12 bit`
+  - 12 bit
 * - Interface
-  - GigE, PoE
+  - GigE, POE
 ```
 
-### GPIO connector, Hirose 6-pin
+### *GPIO connector (Hirose 6-pin)*
 
 ```{figure} ../../../../_shared/media/images/Pin_Cam.png
 :alt: Hirose 6-pin GPIO connector
@@ -90,6 +88,7 @@ Rear view of the camera with connectors
 
 ```{list-table}
 :header-rows: 1
+
 :widths: 10 20 70
 
 * - **Pin**
@@ -97,13 +96,13 @@ Rear view of the camera with connectors
   - **Description**
 * - 1
   - Power
-  - `12V` or `24V` DC power input
+  - DC 12V or 24V power input
 * - 2
   - Line1
   - Opto-isolated input
 * - 3
   - Line2
-  - Configurable GPIO, software-controlled, without opto-isolation
+  - GPIO 1I/O configurable without opto-isolation via software
 * - 4
   - Line0
   - Opto-isolated output
@@ -118,96 +117,101 @@ Rear view of the camera with connectors
 ```{warning}
 **Mandatory network requirements**
 
-The Gigabit Ethernet interface is mandatory and requires compatible network infrastructure, Gigabit Ethernet switch and Ethernet cables of at least Cat6 or Cat7 with S/STP shielding.
+The Gigabit Ethernet interface is mandatory and requires a compatible Gigabit Ethernet network infrastructure and Ethernet cables of at least Cat6 or Cat7 category with S/STP shielding.
 
-Failure to comply with this requirement completely compromises camera operation. Verify that all network components, cables, switches, and ports, support the GigE standard.
+Failure to comply with this requirement completely jeopardises the camera's operation. Check that all network components (cables, switches, ports) support the GigE standard.
 ```
 
-### Power supply methods
+### *Power supply methods*
 
 ```{list-table}
 :header-rows: 1
+
 :widths: 25 40 35
 
 * - **Method**
   - **Description**
   - **Requirements**
 * - **PoE**
-  - Power and data over a single Ethernet cable. Consumption `3.2 W @ 12 Vdc`.
-  - Requires a compatible PoE injector or PoE switch, `IEEE 802.3af/at`
-* - **External Camera Cable Supplied in the Kit**
-  - External DC power through 6-pin Hirose connector, `12V or 24V`. Included in the kit.
-  - A separate Ethernet cable is still required for data
+  - Power and data over a single Ethernet cable. Power consumption 3.2 W @ 12 Vdc.
+  - Requires PoE Injector or PoE compatible IEEE 802.3af/at switch
+* - **External Camera Cable Supplied in Kit**
+  - External DC power supply via Hirose 6-pin 12V or 24V connector. Included in the kit.
+  - Separate Ethernet cable required for data only
 ```
 
 ```{tip}
-**Which method to choose**
+**Which method should be chosen?**
 
-- **PoE**: ideal for clean installations with a single cable, but requires dedicated network hardware
-- **External power supply**: the most flexible standard solution, recommended for most applications
+- **PoE**: ideal for clean installations with only one cable, but requires specific network hardware
+- **External power supply**: more flexible standard solution, recommended for most applications
 ```
-
 (cavo)=
-### Power Cable
-
+### *Power cable*
 ```{figure} ../../../../_shared/media/images/Cavo_Specfiche.png
 :alt: Camera power cable specifications
 :align: center
 :width: 100%
 
-Camera power cable specifications
+Camera Power Cable Specifications
 ```
-
 ```{list-table}
 :widths: 30 70
 :header-rows: 1
 
 * - Parameter
   - Value
+
 * - **Description**
-  - 10 m I/O cable, HRS6P connector
+  - I/O 10-metre cable, HRS6P connector
+
 * - **Compatibility**
   - CIC-series cameras
+
 * - **Length**
-  - 10 m, 33 ft
-* - **Connector 1**
+  - 10 metres 133'
+
+* - **Connector 1P1**
   - Push/Pull 6P RECP Shell SZ 7 Female
-* - **Conductor section**
+
+* - **Conductor cross-section**
   - 22 AWG
+
 * - **Cable type**
   - Shielded, 3 twisted pairs, flexible
-* - **Cable colors**
-  - Pin 1: Brown, Pin 2: Green, Pin 3: Pink, Pin 4: Yellow, Pin 5: Gray, Pin 6: White
+
+* - **Cable colours**
+  - Pin 1: Brown, Pin 2: Green , Pin 3: Pink, Pin 4: Yellow, Pin 5: Grey, Pin 6: White
+
 * - **Shielding**
   - Shield on all conductors
+
 * - **Compliance**
   - UL/CSA and RoHS
 ```
 
-### Physical specifications and dimensions
-
-![Camera dimensions](../../../../_shared/media/images/Dimensioni_Cam__ab884007b7.png)
-
+### *Physical specifications and dimensions*
+![Camera Dimensions](../../../../_shared/media/images/Dimensioni_Cam.png)
 ```{list-table}
 :header-rows: 1
 :widths: 40 60
 
 * - **Feature**
   - **Value**
-* - Width × Height, body
+* - Width × Height (body)
   - 29 × 29 mm
-* - Depth, body
+* - Depth (body)
   - 42.0 mm
-* - Total depth, including rear connector
+* - Total depth (including rear connector)
   - 48.9 mm
-* - Front protrusion, lens mount
+* - Front projection (lens mount)
   - 12.60 mm
-* - Side mounting hole center distance, M2
+* - Side fixing holes centre distance (M2)
   - 20.0 × 23.7 mm
-* - Front mounting holes
-  - 2× M2, depth 3 mm
-* - Side mounting holes
-  - 4× M2, depth 3.5 mm + 3× M3, depth 3.5 mm
+* - Front fixing holes
+  - 2× M2 depth 3 mm
+* - Side fixing holes
+  - 4× M2 depth 3.5 mm + 3× M3 depth 3.5 mm
 * - Weight
   - 88 g
 ```
@@ -216,179 +220,173 @@ Camera power cable specifications
 
 (specifiche_obiettivo)=
 ## Lens
-
 ```{figure} ../../../../_shared/media/images/Ottica_000046.png
-:alt: FlexiVision One lens
+:alt: Camera FlexiVision One CAM-CIC-5000-20G-1
 :align: center
 :width: 50%
 ```
-
-```{dropdown} 35 mm Lens
+```{dropdown} 35mm Lens
 | Parameter | Reference Magnification | M.O.D. |
 |------------|-----------------------------|--------|
-| **Lens Type** | CCTV Lens | CCTV Lens |
-| **Focus Position** | Reference Magnification | M.O.D. |
+| **Lens type** | CCTV Lens | CCTV Lens |
+| **Focus position** | Reference Magnification | M.O.D. |
 | **Magnification** | 0.069 | 0.167 |
-| **Focal Length (mm)** | 34.97 | 34.97 |
-| **F Number (Fno)** | 2.00 ~ 16.00 | 2.00 ~ 16.00 |
+| **Focal length (mm)** | 34.97 | 34.97 |
+| **F-Number (Fno)** | 2.00 ~ 16.00 | 2.00 ~ 16.00 |
 | **Numerical Aperture (NA)** | - | - |
-| **Working Distance / Object (mm)** | 500.0 / 507.0 | 200.0 / 207.0 |
-| **Object-Image Distance (mm)** | 555.75 | 259.16 |
-| **Mechanical Tube Length (mm)** | 36.30 ~ 38.20 | 36.30 ~ 38.20 |
-| **Lens Back Focus (mm)** | 14.75 | 18.16 |
-| **Depth of Field (mm)** | 35.476 | 6.336 |
+| **Working distance / object (mm)** | 500.0 / 507.0 | 200.0 / 207.0 |
+| **Object-image distance (mm)** | 555.75 | 259.16 |
+| **Mechanical length of tube (mm)** | 36.30 ~ 38.20 | 36.30 ~ 38.20 |
+| **Lens back focus (mm)** | 14.75 | 18.16 |
+| **Depth of field (mm)** | 35.476 | 6.336 |
 | **Resolution @550nm (µm)** | - | - |
-| **Main Plane Position Front/Rear (mm)** | 37.60 / -22.61 | 37.60 / -22.61 |
-| **Entrance/Exit Pupil Position (mm)** | 25.22 / -41.78 | 25.22 / -41.78 |
-| **Entrance/Exit Pupil Diameter (mm)** | 17.03 / 26.36 | 17.03 / 26.36 |
-| **Field Angle (°) H × V** | 13.69 × 10.34 | 12.62 × 9.76 |
-| **TV Distortion (%)** | -0.088 | -0.142 |
-| **Relative Illumination (%)** | 44.95 | 50.20 |
+| **Main plane position front/rear (mm)** | 37.60 / -22.61 | 37.60 / -22.61 |
+| **Entr./Exit pupil position (mm)** | 25.22 / -41.78 | 25.22 / -41.78 |
+| **Entr./Exit pupil diameter (mm)** | 17.03 / 26.36 | 17.03 / 26.36 |
+| **Angle of view ° H × V** | 13.69 × 10.34 | 12.62 × 9.76 |
+| **TV distortion %** | -0.088 | -0.142 |
+| **Relative illumination %** | 44.95 | 50.20 |
 | **Weight (g)** | 50 | 50 |
 | **Mount** | C-mount | C-mount |
-| **Image Circle (mm)** | φ11 | φ11 |
-| **Maximum Compatible Camera** | 2/3" | 2/3" |
+| **Image circle (mm)** | φ11 | φ11 |
+| **Maximum compatible camera** | 2/3" | 2/3" |
 ```
-
-```{dropdown} 25 mm Lens
+```{dropdown} Lens 25mm
 | Parameter | Reference Magnification | M.O.D. |
 |-----------|:----------------------------:|:------:|
-| **Lens Type** | CCTV Lens | CCTV Lens |
-| **Focus Position** | Reference Magnification | M.O.D. |
+| **Lens type** | CCTV Lens | CCTV Lens |
+| **Focus position** | Reference Magnification | M.O.D. |
 | **Magnification** | 0.049 | 0.152 |
-| **Focal Length (mm)** | 25.00 | 25.00 |
-| **F Number (Fno)** | 1.60 ~ 16.00 | 1.60 ~ 16.00 |
-| **Numerical Aperture (NA)** | - | - |
-| **Working Distance / Object (mm)** | 500.0 / 510.0 | 150.0 / 160.0 |
-| **Object-Image Distance (mm)** | 553.34 | 205.92 |
-| **Mechanical Tube Length (mm)** | 34.60 ~ 38.50 | 34.60 ~ 38.50 |
-| **Lens Back Focus (mm)** | 13.75 | 16.33 |
-| **Depth of Field @PCoC 0.04 mm (mm)** | 54.223 | 5.835 |
+| **Focal length (mm)** | 25.00 | 25.00 |
+| **F-number (Fno)** | 1.60 ~ 16.00 | 1.60 ~ 16.00 |
+| **Numerical aperture (NA)** | - | - |
+| **Working distance / object (mm)** | 500.0 / 510.0 | 150.0 / 160.0 |
+| **Object-image distance (mm)** | 553.34 | 205.92 |
+| **Mechanical length of tube (mm)** | 34.60 ~ 38.50 | 34.60 ~ 38.50 |
+| **Lens back focus (mm)** | 13.75 | 16.33 |
+| **Depth of field @PCoC 0.04mm (mm)** | 54.223 | 5.835 |
 | **Resolution @550nm (µm)** | - | - |
-| **Main Plane Position Front/Rear (mm)** | 29.42 / -12.46 | 29.42 / -12.46 |
-| **Entrance/Exit Pupil Position (mm)** | 18.48 / -31.94 | 18.48 / -31.94 |
-| **Entrance/Exit Pupil Diameter (mm)** | 15.92 / 28.32 | 15.92 / 28.32 |
-| **Field Angle (°) H × V** | 19.39 × 14.64 | 18.05 × 13.89 |
-| **TV Distortion (%)** | -0.041 | -0.271 |
-| **Relative Illumination (%)** | 49.78 | 53.52 |
+| **Main plane position front/rear (mm)** | 29.42 / -12.46 | 29.42 / -12.46 |
+| **Entr./Exit pupil position (mm)** | 18.48 / -31.94 | 18.48 / -31.94 |
+| **Entr./Exit pupil diameter (mm)** | 15.92 / 28.32 | 15.92 / 28.32 |
+| **Angle of view ° H × V** | 19.39 × 14.64 | 18.05 × 13.89 |
+| **TV distortion %** | -0.041 | -0.271 |
+| **Relative illumination %** | 49.78 | 53.52 |
 | **Weight (g)** | 50 | 50 |
 | **Mount** | C-mount | C-mount |
-| **Image Circle (mm)** | φ11 | φ11 |
-| **Maximum Compatible Camera** | 2/3" | 2/3" |
+| **Image circle (mm)** | φ11 | φ11 |
+| **Maximum compatible camera** | 2/3" | 2/3" |
 ```
-
-```{dropdown} 16 mm Lens
+```{dropdown} Lens 16mm
 | Parameter | Reference Magnification | M.O.D. |
 |-----------|:----------------------------:|:------:|
-| **Lens Type** | CCTV Lens | CCTV Lens |
-| **Focus Position** | Reference Magnification | M.O.D. |
+| **Lens type** | CCTV Lens | CCTV Lens |
+| **Focus position** | Reference Magnification | M.O.D. |
 | **Magnification** | 0.031 | 0.095 |
-| **Focal Length (mm)** | 16.16 | 16.16 |
-| **F Number (Fno)** | 1.60 ~ 16.00 | 1.60 ~ 16.00 |
-| **Numerical Aperture (NA)** | - | - |
-| **Working Distance / Object (mm)** | 500.0 / 507.0 | 150.0 / 157.0 |
-| **Object-Image Distance (mm)** | 554.26 | 205.30 |
-| **Mechanical Tube Length (mm)** | 35.50 ~ 37.00 | 35.50 ~ 37.00 |
-| **Lens Back Focus (mm)** | 12.16 | 13.20 |
-| **Depth of Field @PCoC 0.04 mm (mm)** | 131.893 | 14.387 |
+| **Focal length (mm)** | 16.16 | 16.16 |
+| **F-number (Fno)** | 1.60 ~ 16.00 | 1.60 ~ 16.00 |
+| **Numerical aperture (NA)** | - | - |
+| **Working distance / object (mm)** | 500.0 / 507.0 | 150.0 / 157.0 |
+| **Object-image distance (mm)** | 554.26 | 205.30 |
+| **Mechanical length of tube (mm)** | 35.50 ~ 37.00 | 35.50 ~ 37.00 |
+| **Lens back focus (mm)** | 12.16 | 13.20 |
+| **Depth of field @PCoC 0.04mm (mm)** | 131.893 | 14.387 |
 | **Resolution @550nm (µm)** | - | - |
-| **Main Plane Position Front/Rear (mm)** | 28.44 / -4.50 | 28.44 / -4.50 |
-| **Entrance/Exit Pupil Position (mm)** | 18.85 / -28.07 | 18.85 / -28.07 |
-| **Entrance/Exit Pupil Diameter (mm)** | 10.18 / 25.02 | 10.18 / 25.02 |
-| **Field Angle (°) H × V** | 30.37 × 22.92 | 29.62 × 22.39 |
-| **TV Distortion (%)** | -0.472 | -0.674 |
-| **Relative Illumination (%)** | 32.75 | 36.61 |
+| **Main plane position front/rear (mm)** | 28.44 / -4.50 | 28.44 / -4.50 |
+| **Entr./Exit pupil position (mm)** | 18.85 / -28.07 | 18.85 / -28.07 |
+| **Entr./Exit pupil diameter (mm)** | 10.18 / 25.02 | 10.18 / 25.02 |
+| **Angle of view ° H × V** | 30.37 × 22.92 | 29.62 × 22.39 |
+| **TV distortion %** | -0.472 | -0.674 |
+| **Relative illumination %** | 32.75 | 36.61 |
 | **Weight (g)** | 50 | 50 |
 | **Mount** | C-mount | C-mount |
-| **Image Circle (mm)** | φ11 | φ11 |
-| **Maximum Compatible Camera** | 2/3" | 2/3" |
+| **Image circle (mm)** | φ11 | φ11 |
+| **Maximum compatible camera** | 2/3" | 2/3" |
 ```
-
-```{dropdown} 12 mm Lens
+```{dropdown} Lens 12mm
 | Parameter | Reference Magnification | M.O.D. |
 |-----------|:----------------------------:|:------:|
-| **Lens Type** | CCTV Lens | CCTV Lens |
-| **Focus Position** | Reference Magnification | M.O.D. |
+| **Lens type** | CCTV Lens | CCTV Lens |
+| **Focus position** | Reference Magnification | M.O.D. |
 | **Magnification** | 0.023 | 0.075 |
-| **Focal Length (mm)** | 12.00 | 12.00 |
-| **F Number (Fno)** | 1.80 ~ 16.00 | 1.80 ~ 16.00 |
-| **Numerical Aperture (NA)** | - | - |
-| **Working Distance / Object (mm)** | 500.0 / 505.6 | 150.0 / 155.0 |
-| **Object-Image Distance (mm)** | 559.55 | 209.55 |
-| **Mechanical Tube Length (mm)** | 39.20 ~ 40.10 | 39.20 ~ 40.10 |
-| **Lens Back Focus (mm)** | 12.23 | 12.84 |
-| **Depth of Field @PCoC 0.04 mm (mm)** | 277.576 | 28.121 |
+| **Focal length (mm)** | 12.00 | 12.00 |
+| **F-number (Fno)** | 1.80 ~ 16.00 | 1.80 ~ 16.00 |
+| **Numerical aperture (NA)** | - | - |
+| **Working distance / object (mm)** | 500.0 / 505.6 | 150.0 / 155.0 |
+| **Object-image distance (mm)** | 559.55 | 209.55 |
+| **Mechanical length of tube (mm)** | 39.20 ~ 40.10 | 39.20 ~ 40.10 |
+| **Lens back focus (mm)** | 12.23 | 12.84 |
+| **Depth of field @PCoC 0.04mm (mm)** | 277.576 | 28.121 |
 | **Resolution @550nm (µm)** | - | - |
-| **Main Plane Position Front/Rear (mm)** | 17.71 / -0.05 | 17.71 / -0.05 |
-| **Entrance/Exit Pupil Position (mm)** | 11.68 / -12.18 | 11.68 / -12.18 |
-| **Entrance/Exit Pupil Diameter (mm)** | 6.67 / 13.41 | 6.67 / 13.41 |
-| **Field Angle (°) H × V** | 40.54 × 30.77 | 39.40 × 30.05 |
-| **TV Distortion (%)** | -0.983 | -0.905 |
-| **Relative Illumination (%)** | 40.64 | 42.64 |
+| **Main plane position front/rear (mm)** | 17.71 / -0.05 | 17.71 / -0.05 |
+| **Entr./Exit pupil position (mm)** | 11.68 / -12.18 | 11.68 / -12.18 |
+| **Entr./Exit pupil diameter (mm)** | 6.67 / 13.41 | 6.67 / 13.41 |
+| **Angle of view ° H × V** | 40.54 × 30.77 | 39.40 × 30.05 |
+| **TV distortion %** | -0.983 | -0.905 |
+| **Relative illumination %** | 40.64 | 42.64 |
 | **Weight (g)** | 60 | 60 |
 | **Mount** | C-mount | C-mount |
-| **Image Circle (mm)** | φ11 | φ11 |
-| **Maximum Compatible Camera** | 2/3" | 2/3" |
+| **Image circle (mm)** | φ11 | φ11 |
+| **Maximum compatible camera** | 2/3" | 2/3" |
 ```
 
 ---
 
 (specifiche_VC)=
 ## VisionController
-
-```{figure} ../../../../_shared/media/images/PC.png
-:alt: FlexiVision One VisionController
+```{figure} ../../../../_shared/media/images/VisionController.png
+:alt: VisionController FlexiVision One
 :align: center
-:width: 50%
+:width: 80%
 ```
 
-The FlexiVision One system operates on an industrial PC, the VisionController, which acts as the main controller for the vision software. ARS supplies the VisionController already preconfigured and tested with FlexiVision One installed.
+The FlexiVision One system operates on an Industrial PC (VisionController) that serves as the main controller for the vision software. ARS supplies the VisionController already pre-configured and tested with the FlexiVision One software installed.
 
-### Electrical specifications
+### *Electrical specifications*
 
 ```{list-table}
 :header-rows: 1
 :widths: 40 60
 
 * - **Feature**
-  - **Specification**
+  - **Specifications**
 * - CPU
-  - Intel Core i3-1115G4 `1.7 (4.1) GHz`
-* - Memory, RAM
+  - Intel Core i3-1115G4 1.7 14.1 GHz
+* - Memory (RAM)
   - 8G DDR4 3200 MHz
 * - Storage
-  - 256G
+  - 256G 
 * - TPM
   - TPM 2.0
-* - Operating System
+* - Operating system
   - Win11 LTSC 2024
-* - Power Button
-  - Yes, front panel with indicator light
-* - Ethernet Ports
+* - Power button
+  - Yes (front panel with indicator light)
+* - Ethernet ports
   - **i3/i7:** 3× Gb LAN
 * - USB Ports
-  - 6× USB 3.0 Type A
+  - 6× USB 3.0 TypeA
 * - Video Output
-  - 2× HDMI
+  - 2× HDMI 
 * - Audio
-  - Line Out + MIC, 2-in-1 jack
-* - Power Supply, V DC
+  - Line Out + MIC (2-in-1 jack)
+* - Power Supply (V DC)
   - 12 ~ 32 V DC
 * - Operating Temperature
-  - `1°C ~ +50°C`
+  - 1°C ~ +50°C
 * - Storage Temperature
-  - `-20°C ~ +65°C`
+  - -20°C ~ +65°C
 * - Humidity
-  - `<90%`, non-condensing
-* - Enclosure Material
-  - Aluminum alloy + steel
-* - Protection Rating
+  - &lt;90% (non-condensing)
+* - Body Material
+  - Aluminium alloy + steel
+* - Degree of Protection
   - IP20
 * - Installation Method
-  - Wall mounting, optional DIN rail
+  - Wall Mounting (DIN Rail optional)
 * - Power Consumption
   - 25 W
-* - Dimensions, W × H × D
+* - Dimensions (W × H × D)
   - 59.8 × 200 × 119.5 mm
 * - Weight
   - 2 kg
@@ -396,16 +394,16 @@ The FlexiVision One system operates on an industrial PC, the VisionController, w
   - CE, UL
 ```
 
-### PC ports
-
+### *PC ports*
 ```{figure} ../../../../_shared/media/images/Spec_Elettriche_PC.png
-:alt: VisionController electrical layout
+:alt: VisionController electrical diagram
 :align: center
 :width: 50%
 ```
 
 ```{list-table}
 :header-rows: 1
+
 :widths: 10 25 65
 
 * - **Ref.**
@@ -413,40 +411,40 @@ The FlexiVision One system operates on an industrial PC, the VisionController, w
   - **Description**
 * - A
   - Power button
-  - Device power on and off
+  - Switching the device on and off
 * - B
-  - ETH 10/100/1000 Mbit - RJ45, LAN 1
+  - ETH 10/100/1000 Mbit - RJ45 (LAN 1)
   - Gigabit Ethernet Port 1
 * - C
-  - ETH 10/100/1000 Mbit - RJ45, LAN 2
+  - ETH 10/100/1000 Mbit - RJ45 (LAN 2)
   - Gigabit Ethernet Port 2
 * - D
-  - Serial Port, RS232, COM1
-  - RS232 serial interface COM1
+  - Serial Port (RS232) COM1
+  - RS232 Serial Interface COM1
 * - E
-  - Serial Port, RS232, COM2
-  - RS232 serial interface COM2
+  - Serial Port (RS232) COM2
+  - Serial Interface RS232 COM2
 * - F
-  - Power input connector
-  - `12-32V DC` power input, 3-pin terminal block
+  - Power Input Connector
+  - 12-32V DC Power Input (3-pin terminal block)
 * - G
-  - Audio Out + MIC, 3.5 mm jack
-  - 1× line audio output + microphone input, 3.5 mm jack
+  - Audio Output + MIC (3.5 mm jack)
+  - 1× line audio output + microphone input (3.5 mm jack)
 * - H
   - 6× USB-A
-  - USB ports, USB 3.0 Type A for i3/i7 versions
+  - USB ports (USB 3.0 TypeA for i3/i7 versions)
 * - I
-  - Video Port 2
+  - Video port 2
   - **B2B12/B2B14:** HDMI 2 - **B2B15/B2B16:** DisplayPort
 * - L
-  - HDMI Port 1
+  - HDMI port 1
   - HDMI video output 1
 * - M
-  - ETH 10/100/1000 Mbit - RJ45, LAN 3
-  - Gigabit Ethernet Port 3
+  - ETH 10/100/1000 Mbit - RJ45 1LAN 3
+  - Gigabit Ethernet port 3
 ```
 
-### Physical specifications
+### *Physical specifications*
 
 ```{figure} ../../../../_shared/media/images/dimensioni_VC.png
 :alt: VisionController dimensions
@@ -462,15 +460,15 @@ The FlexiVision One system operates on an industrial PC, the VisionController, w
   - M5
 * - **Feature**
   - **Value**
-* - Width, overall with brackets
+* - Width (total with brackets)
   - 245.00 mm
-* - Width, body
+* - Width (body)
   - 227.00 mm
 * - Connector panel width
   - 200.00 mm
-* - Height, overall with brackets
+* - Height (total with brackets)
   - 123.00 mm
-* - Height, body
+* - Body height
   - 120.00 mm
 * - Depth
   - 61.10 mm
@@ -479,20 +477,21 @@ The FlexiVision One system operates on an industrial PC, the VisionController, w
 ---
 
 (laser)=
-## Laser Tool for Calibration
-
+## Laser Tool for Calibration 
 The Laser Tool is an advanced calibration solution that improves the precision with which the robot reference point is saved.
-Its main advantage is that it does not require physical contact with the calibration grid. By working as a high-precision pointer, the laser allows the operator to align the target point visually and repeatably on the grid, offering much greater accuracy than a physical tip tool.
-This precision is essential for successful calibration and fits perfectly with the repeatability guaranteed by the ARS dedicated calibration grid.
+The main benefit of the laser is that it does not require physical contact with the calibration grid. Acting as a high-precision pointer, the laser allows the operator to align the target point visually and repeatably on the grid, offering a degree of accuracy far superior to using a physical tip. 
+This precision is essential for calibration success and integrates perfectly with the repeatability guaranteed by the ARS Dedicated Calibration Grid.
 
-![Laser Calibration Tool](../../../../_shared/media/images/laser.png)
 
-| Feature | Laser Tool | Standard Tip Tool |
+![Laser Cal](../../../../_shared/media/images/laser.png) 
+
+|Feature|Laser Tool|Standard Tip Tool|
 |--|--|--|
-| Reference Method | Non-contact, visual pointer | Contact, physical mechanical tip |
-| Reference Precision | Maximum precision, the operator aligns the point visually with high accuracy | Medium, dependent on operator visibility |
-| Ease of Use | Simplifies the visual alignment procedure | Requires more attention in positioning and avoiding tilt |
-| Key Advantage | Makes it possible to save the robot reference point with the highest possible fidelity, essential for final picking accuracy | Basic method, but less precise than the laser |
+|Reference Method|Non-contact visual pointer|Contact mechanical/physical tip|
+|Accuracy of Reference|Maximum precision; the operator visually aligns the point with accuracy.|Medium, subordinate to the operator's view|
+|Easy to Use|It simplifies the visual alignment procedure.|It requires greater attention in positioning and avoiding tilting.|
+|Key advantage|It allows the robot reference point to be saved with the highest possible fidelity, which is essential for final picking accuracy.|Basic method, but less precise than laser.|
+
 
 ```{image} ../../../../_shared/media/images/laserscomp.png
 :width: 1px
@@ -509,76 +508,75 @@ This precision is essential for successful calibration and fits perfectly with t
       </tr>
     </thead>
     <tbody>
-      <tr><td style="padding: 5px 16px;">1</td><td style="padding: 5px 16px;">UPPER CLOSING CAP</td></tr>
-      <tr><td style="padding: 5px 16px;">2</td><td style="padding: 5px 16px;">CR2032 3V COIN BATTERY HOLDER</td></tr>
+      <tr><td style="padding: 5px 16px;">1</td><td style="padding: 5px 16px;">TOP CLOSURE CAP</td></tr>
+      <tr><td style="padding: 5px 16px;">2</td><td style="padding: 5px 16px;">CR2032 3V COIN CELL BATTERY HOLDER</td></tr>
       <tr><td style="padding: 5px 16px;">3</td><td style="padding: 5px 16px;">COUPLING FLANGE</td></tr>
       <tr><td style="padding: 5px 16px;">4</td><td style="padding: 5px 16px;">CLAMP</td></tr>
       <tr><td style="padding: 5px 16px;">5</td><td style="padding: 5px 16px;">TOOL BODY</td></tr>
       <tr><td style="padding: 5px 16px;">6</td><td style="padding: 5px 16px;">LASER POINTER</td></tr>
       <tr><td style="padding: 5px 16px;">7</td><td style="padding: 5px 16px;">SPRING DAMPER</td></tr>
-      <tr><td style="padding: 5px 16px;">8</td><td style="padding: 5px 16px;">SPACER SUPPORT</td></tr>
+      <tr><td style="padding: 5px 16px;">8</td><td style="padding: 5px 16px;">SPACER BRACKET</td></tr>
     </tbody>
   </table>
 </div>
 ```
-
 :::{important}
-To replace the two batteries of the laser tool, follow the dedicated maintenance procedure.
+The bracket for mounting the Laser Tool in place of the robot tool is **NOT** supplied, as it varies for each robot and must be customised.
 :::
 
-:::{admonition} Recommendation
-:class: tip
-Using the Laser Tool together with the ARS dedicated calibration grid is the most robust and precise method for FlexiVision One system installation.
+:::{admonition} Tip 
+:class: tip 
+The use of the Laser Tool in combination with the ARS Dedicated Calibration Grid is the strongest and most accurate method for installing the FlexiVision One system
 :::
-
 ---
-
 (specifiche_griglia)=
-## Calibration Grid
+## Calibration grid
 
-```{figure} ../../../../_shared/media/images/Calib_Grid.png
+```{figure} ../../../../_shared/media/images/griglia800.JPG
 :alt: Calibration Grid
 :align: center
 :width: 50%
 ```
 
-Excellent calibration is the fundamental requirement for FlexiVision One system accuracy. Only high-precision calibration guarantees that the coordinates detected by the camera, in pixels, are converted accurately into real robot coordinates, in millimeters, ensuring success of the picking application.
 
-### Calibration grid technical specifications
+Excellent calibration is the basic requirement for the accuracy of the FlexiVision One system. Only high-precision calibration ensures that the coordinates detected by the camera (pixels) are accurately converted into the actual robot coordinates (millimetres), thus ensuring the success of the picking application.
 
-```{dropdown} Grid for FlexiBowl 200
+### *Grid technical specifications*
+
+```{dropdown} Grid for FlexiBowl® 200 
 ![Grid 200](../../../../_shared/media/images/griglia200.JPG)
+
 ```
 
-```{dropdown} Grid for FlexiBowl 350
+```{dropdown} Grid for FlexiBowl® 350 
 ![Grid 350](../../../../_shared/media/images/griglia350.JPG)
 ```
 
-```{dropdown} Grid for FlexiBowl 500
+```{dropdown} Grid for FlexiBowl® 500 
 ![Grid 500](../../../../_shared/media/images/griglia500.JPG)
 ```
 
-```{dropdown} Grid for FlexiBowl 650
+```{dropdown} Grid for FlexiBowl® 650 
 ![Grid 650](../../../../_shared/media/images/griglia650.JPG)
 ```
 
-```{dropdown} Grid for FlexiBowl 800
+```{dropdown} Grid for FlexiBowl® 800 
 ![Grid 800](../../../../_shared/media/images/griglia800.JPG)
 ```
 
-```{dropdown} Grid for FlexiBowl 1200
+```{dropdown} Grid for FlexiBowl® 1200 
 ![Grid 1200](../../../../_shared/media/images/griglia1200.JPG)
 ```
 
-For detailed calibration procedures, refer to [Camera Calibration](../QUICKSTART/SETUP/14_calibrazione_camera.md).
+
+For detailed information on calibration procedures, see section [Camera Calibration](../QUICKSTART/SETUP/14_calibrazione_camera.md).
 
 ---
+## Connections overview
 
-## Connection overview
+![Connections Overview](../../../../_shared/media/images/panoramicacollegamenti.png)
 
-![Connection overview](../../../../_shared/media/images/panoramicacollegamenti.png)
-
-*Complete connection diagram of the FlexiVision One system with robot and FlexiBowl*
+*Complete connection diagram of FlexiVision One system with robot and FlexiBowl®*
 
 ```{list-table}
 :widths: 25 25 50
@@ -587,53 +585,66 @@ For detailed calibration procedures, refer to [Camera Calibration](../QUICKSTART
 * - **From**
   - **To**
   - **Connection**
-* - Power mains
-  - FlexiBowl
-  - `110/230 Vac` power supply
-* - Power mains
+
+* - Power grid
+  - FlexiBowl®
+  - 110/230 Vac power supply
+
+* - Power grid
   - Robot
-  - Power supply according to the specifications of your robot
-* - Power mains
+  - Power supply according to the specifications of the robot in your possession
+
+* - Power grid
   - Camera
-  - `24 Vdc` power supply
-* - Power mains
-  - Illuminator, light
-  - `24 Vdc` power supply
-* - Power mains
+  - 24 Vdc power supply
+
+* - Power grid
+  - Illuminator (light)
+  - 24 Vdc power supply
+
+* - Power grid
   - Hopper Controller
-  - `110/230 Vac` power supply
+  - 110/230 Vac power supply
+
 * - Hopper Controller
   - Hopper
-  - Power and signal
+  - Power supply and signal
+
 * - Robot
   - Hopper Controller
-  - Digital I/O
+  - Digital I/Os
+
 * - VisionController
   - Camera
   - Ethernet TCP
+
 * - VisionController
-  - FlexiBowl
+  - FlexiBowl®
   - Ethernet TCP
+
 * - VisionController
   - Robot
   - Ethernet TCP
 ```
 
-For detailed electrical diagrams, refer to [Wiring and Connections](cablaggio).
+For detailed wiring diagrams, see section [Wiring and Connections](cablaggio).
+
 
 ---
 
-## Optional components
+
+## Optional components 
 
 Additional components available separately:
 
-:::{card} TopLight
+
+:::{card} Toplight
 :link: toplight
 :link-type: ref
 :class-card: shadow
 :::
 
-:::{card} TopLight Power Cable
+:::{card} Toplight Power Cable
 :link: cavoalimtoplight
 :link-type: ref
 :class-card: shadow
@@ -656,3 +667,6 @@ Additional components available separately:
 :link-type: ref
 :class-card: shadow
 :::
+
+
+

@@ -1,78 +1,78 @@
 
 # **Preliminary Information**
 
-This section contains legal information and important warnings regarding the use of FlexiVision One and this documentation.   Please read it carefully before proceeding with system installation and operation.
+This section contains important legal information and warnings concerning the use of FlexiVision One and of this documentation.   Please read carefully before proceeding with the installation and use of the system.
 
 ---
 
-## Intended audience and target users
+## Recipients and target audience
 
 ```{note}
-**Who this manual is intended for**
+**TEST EN TRANSLATION**
 
-This documentation is intended for qualified technicians with expertise in:
+This documentation is addressed to qualified technicians with expertise in:
 - Integration of robotic systems
 - Configuration of industrial vision systems
 - Installation and maintenance of electromechanical equipment
 
-It is assumed that the reader has the basic technical knowledge required to understand the information provided.   Information that can be readily inferred from technical drawings or diagrams may not be described in further detail.
+It is assumed that the reader has the basic technical knowledge necessary to understand the information provided.   Information easily deducible from technical drawings or diagrams may not be further detailed.
 ```
 
 ---
 
 ## Important warnings
 
-### **Read before use**
+### *Read before use*
 ```{warning}
 
 Before using FlexiVision One, it is mandatory to:
-- Read this manual in full to ensure correct use of the system
-- Follow the operating instructions and recommendations
-- Properly train the personnel assigned to operation
-- Consult the instruction manuals of all connected hardware components (FlexiBowl, Hopper, VisionController, Camera, Robot, etc.)
+- Read this manual in its entirety to ensure correct use of the system
+- Comply with the operating instructions and recommendations
+- Properly train personnel in charge of operation
+- Consult the instruction manuals of all connected hardware components (FlexiBowl®, Hopper, VisionController, Camera, Robot etc.)
 
-Failure to comply with these instructions may cause malfunctions, equipment damage, or hazardous situations.
+Failure to do so may result in malfunctions, damage to equipment or hazardous situations.
 ```
-### **Operating context and limitation of liability**
+### *Operating context and disclaimer*
 
-FlexiVision One is a vision system developed to guide industrial robots and supplied as an optional add-on component for FlexiBowl systems (models 200, 350, 500, 650, 800, 1200).
+FlexiVision One is a vision system developed for guiding industrial robots and supplied as an optional add-on for FlexiBowl® systems (models 200, 350, 500, 650, 800, 1200).
 
 ```{warning}
-During operation, the operator must:
-- Take the physical footprint of the system into account
-- Monitor the movements of the robot and feeder
-- Anticipate and manage unexpected operating situations
-- Comply with the safety standards applicable to robots and industrial machinery
+During use, the operator must:
+- Take into account the physical dimensions of the system
+- Monitor the movements of the robot and the feeder
+- Predict and manage unexpected operational situations
+- Comply with safety regulations applicable to robots and industrial machinery
 ```
 ```{warning}
-**ARS S.r.l. declines all liability for damage to persons or property resulting from the movement of machines and systems connected to the FlexiVision One software.**
+**ARS S.r.l. shall not be held liable for personal harm or property damage resulting from the movement of machines and systems connected to the FlexiVision One software.**
 
-Integration of the system into the working environment and risk assessment are the responsibility of the system integrator and the end user.
+Integration of the system into the work environment and the risk assessment are the responsibility of the system integrator and the end user.
 ```
 
 ---
 
-## Documentation notes
+## Notes on documentation
 
-### **Version and updates**
+### *Version and updates*
 
 ```{note}
 
 - **Reference language**: the Italian version of this document is the official version and prevails in the event of discrepancies with other translations
-- **Updates**: the information contained herein is subject to change without notice due to product improvements
-- **Units of measurement**: unless otherwise specified, all dimensions are expressed in millimeters (mm)
-- **Document version**: always check that you have the most recent version by consulting [www.flexibowl.it](https://www.flexibowl.it)
+- **Updates**: the information contained herein is subject to change without prior notice for product improvements
+- **Unit of measurement**: unless otherwise indicated, all dimensions are expressed in millimetres (mm)
+- **Document version**: always check that you have the latest version by consulting [www.flexibowl.it](https://www.flexibowl.it)
 ```
-### **How to make the best use of this manual**
+### *How to best use this manual*  
 
 ```{tip}
 
-For the best experience:
-- Use the side navigation menu to move quickly between sections
-- Consult the initial index to immediately identify the section of interest
-- Pay special attention to warning, note, and tip banners 
-- Follow the procedures in the indicated order, especially during initial installation
-- Keep this manual in digital format to make quick keyword searches easier
+For an ideal experience:
+- Use the side navigation menu to move quickly from one section to another
+- Consult the initial table of contents to immediately identify the section of interest
+- Pay particular attention to the warning, note and tip banners
+- Follow the procedures in the order given, especially during the initial installation
+- Keep this manual in digital format to facilitate quick searches using keywords
 ```
 
 ---
@@ -81,13 +81,13 @@ For the best experience:
 ## Reproduction rights and legal notes
 
 ```{important}
-**Copyright © ARS S.r.l. - All rights reserved**
+**Copyright © ARS Automation - All rights reserved**
 
-No part of this publication may be reproduced, distributed, translated, or transmitted by any means (electronic, mechanical, photocopying, recording, or any other storage system) for purposes other than personal use without prior written authorization from ARS S.r.l.
+No part of this publication may be reproduced, distributed, translated or transmitted by any media (electronic, mechanical, photocopying, recording or other storage system) for purposes other than personal use, without the prior written consent of ARS Automation.
 
-ARS S.r.l. declines all liability for consequences resulting from incorrect operations performed by the user or improper use of the product.
+ARS Automation disclaims all liability for consequences resulting from incorrect operations performed by the user or improper use of the product.
 
-**Registered trademarks**: FlexiBowl® is a registered trademark of ARS S.r.l. All other trademarks, trade names, and logos mentioned in this document belong to their respective owners and are used exclusively for identification purposes.
+**Registered trademarks**: FlexiBowl® is a registered trademark of ARS Automation. All other trademarks, trade names and logos mentioned in this document belong to their respective owners and are used for identification purposes only.
 ```
 ---
 

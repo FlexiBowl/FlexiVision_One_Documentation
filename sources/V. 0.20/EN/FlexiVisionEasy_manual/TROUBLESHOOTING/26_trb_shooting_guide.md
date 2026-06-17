@@ -1,9 +1,9 @@
 (troubleshooting)=
 # **Troubleshooting**
 
-Select the component for which you need support.
+Select the component requiring support.
 
-## **Mechanical Installation**
+## Mechanical Installation
 
 :::{card} VisionController
 :link: troubleshooting_vision_controller
@@ -25,9 +25,9 @@ Select the component for which you need support.
 :link-type: ref
 :::
 
-## **Wiring and Connections**
+## Wiring and Connections
 
-:::{card} Power Supply
+:::{card} Power supply
 :link: troubleshooting_alimentazione
 :link-type: ref
 :::
@@ -37,7 +37,7 @@ Select the component for which you need support.
 :link-type: ref
 :::
 
-:::{card} Pneumatics
+:::{card} Pneumatic
 :link: troubleshooting_pneumatica
 :link-type: ref
 :::
@@ -57,9 +57,19 @@ Select the component for which you need support.
 :link-type: ref
 :::
 
-## **Initial Configuration**
+## Initial Configuration
 
-:::{card} FlexiBowl Setup
+:::{card} Camera Setup
+:link: troubleshooting_cam_setup
+:link-type: ref
+:::
+
+:::{card} Camera Calibration
+:link: troubleshooting_calib_cam
+:link-type: ref
+:::
+
+:::{card} FlexiBowl® Setup
 :link: troubleshooting_fb_setup
 :link-type: ref
 :::
@@ -74,24 +84,21 @@ Select the component for which you need support.
 :link-type: ref
 :::
 
-:::{card} Camera Setup
-:link: troubleshooting_cam_setup
-:link-type: ref
-:::
 
-## **Calibration and Recipes**
+
+## Calibration and Recipes
 
 :::{card} Camera Calibration
 :link: troubleshooting_calib_cam
 :link-type: ref
 :::
 
-:::{card} New Recipe Creation
+:::{card} Creating a New Recipe
 :link: troubleshooting_nuova_ricetta
 :link-type: ref
 :::
 
-:::{card} New Model Creation
+:::{card} Creating a New Model
 :link: troubleshooting_nuovo_modello
 :link-type: ref
 :::
@@ -111,9 +118,9 @@ Select the component for which you need support.
 :link-type: ref
 :::
 
-## **Advanced and Monitoring**
+## Advanced and Monitoring
 
-:::{card} FlexiBowl Wizard
+:::{card} FlexiBowl® Wizard
 :link: troubleshooting_fb_wizard
 :link-type: ref
 :::
@@ -130,21 +137,20 @@ Select the component for which you need support.
 26b_Installazione_Mecc.md
 26c_Cablaggio_Connessioni.md
 26d_Conf_Iniziale.md
-26e_Calib_Cam.md
 26g_Creazione_Ricette_Modelli.md
 26h_FlexiBowl_Wizard.md
 26i_Conf_Tramoggia.md
 ```
 
-### License cannot be activated
+### *License cannot be activated*
 
 ```{note}
 **License problems**
 
-If the license does not activate:
+If the licence does not activate:
 - Check the Internet connection 
 - Check the date/time of the Windows operating system (it must be correct)
-- Make sure you entered the key exactly as provided
+- Make sure you have entered the key exactly as supplied
 ```
 
 ---

@@ -7,86 +7,84 @@
 * - Term
   - Definition
 * - **Accept Threshold**
-  - Minimum similarity threshold (score 0.0–1.0) required for a detected object to be accepted by pattern matching. Typical values: 0.70–0.90.
+  - Minimum similarity threshold (score 0.0-1.0) for a detected object to be accepted by pattern matching. Typical values: 0.70–0.90.
 * - **Air-blow**
-  - Optional pneumatic module for separating components on the disk using compressed-air jets. Requires a 5–6 bar supply.
-* - **Artifact**
-  - Defect in the acquired image caused by electromagnetic interference, wiring problems, or sensor malfunctions.
+  - Optional pneumatic module for separating components on the disc by jets of compressed air. Requires supply at 5-6 bar.
+* - **Artefact**
+  - Defect in the captured image caused by electromagnetic interference, wiring problems or sensor malfunction.
 * - **Camera Calibration**
-  - Pixel/real-coordinate correlation using a calibration target with a known pattern. Calculates the intrinsic and extrinsic parameters of the camera.
+  - Real pixel/coordinate correlation via calibration target with known pattern. It calculates the intrinsic and extrinsic parameters of the camera.
 * - **Clearance**
-  - Analysis of the grayscale level distribution over a defined area. Used to detect the presence/absence of objects (gripper check, free area).
-* - **POE Camera**
-  - Industrial camera powered and connected through a single Ethernet cable. Standard: IEEE 802.3af (15.4W) or 802.3at (30W).
+  - Analysis of the distribution of greyscales over a defined area. Used to detect presence/absence of objects (gripper control, clear area).
+* - **POE camera**
+  - Industrial camera powered and connected via a single Ethernet cable. Standard: IEEE 802.3af (15.4W) or 802.3at (30W).
 * - **CAPTURE**
-  - Software command used to acquire the reference images of the empty and full disk, required for automatic calculation of the hopper thresholds.
+  - Software command to acquire reference images of the empty and full disk, necessary for automatic calculation of hopper thresholds.
 * - **COMPLEX / FLAT / CYLINDRICAL**
-  - Geometric categories of components in the FlexiBowl Wizard. *FLAT*: flat shapes (washers, gaskets). *CYLINDRICAL*: cylindrical shapes (pins, screws). *COMPLEX*: irregular or asymmetrical geometries.
+  - Geometrical categories of components in the FlexiBowl® Wizard. *FLAT*: flat shapes (washers, gaskets). *CYLINDRICAL*: cylindrical shapes (pins, screws). *COMPLEX*: irregular or asymmetrical geometries.
 * - **Working Distance**
-  - Optimal distance between the lens and the disk surface. Typically 950–1000mm in standard configurations.
+  - Ideal distance between lens and disk surface. Typically 950-1000mm in standard configurations.
 * - **Optical Distortion**
-  - Geometric deformation of the image caused by the lens. Automatically compensated during camera calibration.
+  - Geometrical distortion of the image due to the lens. Automatically compensated during camera calibration.
 * - **Exposure**
-  - Light collection time of the camera sensor. Measured in μs or ms; directly affects image quality in production.
+  - Light-gathering time of the camera sensor. Measured in μs or ms; directly affects image quality in production.
 * - **Feature Threshold**
-  - Feature extraction threshold (edges, lines) during model training. Typical values: 0.3–0.8.
-* - **FlexiBowl**
-  - Vibrating rotary-disk feeding system for random positioning and orientation of components for robotic picking.
-* - **FlexiBowl Wizard**
-  - Guided procedure for automatic calculation of the optimal FlexiBowl parameters based on component geometry and behavior.
+  - Feature extraction threshold (borders, lines) during model training. Typical values: 0.3–0.8.
+* - **FlexiBowl®**
+  - Vibrating rotating disc feeding system for random positioning and orientation of components for robotic picking.
+* - **FlexiBowl® Wizard**
+  - Wizard for automatic calculation of optimal FlexiBowl® parameters based on component geometry and behaviour.
 * - **Flip**
-  - Pneumatic pulse under the disk used to reposition components. Configurable through *Flip Count* (number of pulses) and *Flip Delay* (interval in ms between pulses).
+  - Pneumatic impulse under the disc to reposition the components. Configurable via *Flip Count* (number of pulses) and *Flip Delay* (interval in ms between pulses).
 * - **Grab Train Image**
-  - Software command used to acquire the image to be used for training a new model.
+  - Software command to acquire the image to be used in the training of a new model.
 * - **Gripper Offset**
-  - Correction vector (ΔX, ΔY, ΔRZ) that compensates for the offset between the optical center of the vision system and the gripper TCP.
+  - Correction vector (ΔX, ΔY, ΔRZ) that compensates for the offset between the optical centre of the vision system and the gripper TCP.
 * - **Hotspot**
-  - Direct light reflection area in the image. Appears as an overexposed area and may compromise recognition.
+  - Zone of direct light reflection in the image. It appears as an overexposed area and may impair identification.
 * - **Lens**
-  - Optical component of the camera. It must be screwed in until metal-to-metal contact; the focal length (e.g. 16mm, 25mm) determines the field of view at the working distance.
-* - **Model (Model)**
-  - Geometric template of the component created during training. Each recipe supports up to 8 models.
+  - Optical component of the camera. It must be screwed until metal-to-metal contact; the focal length (e.g. 16mm, 25mm) determines the field of view at the working distance.
+* - **Model**
+  - Geometric template of the component created during the training phase. Each recipe supports up to 8 models per FlexiBowl®.
 * - **Model Origin**
-  - Reference point on the component used as the center of the coordinate system for position calculation. Typically corresponds to the picking TCP.
+  - Reference point on the component used as the centre of the coordinate system to calculate positions. It typically corresponds to the pick TCP.
 * - **Orthogonality**
-  - Perpendicularity of the camera with respect to the disk (tolerance ±1°). Can be checked with a precision level.
+  - Perpendicularity of the camera with respect to the disc (tolerance ±1°). Verifiable with precision level.
 * - **Pattern Matching**
-  - Algorithm that locates components in the image by comparing them with the reference model recorded during training.
-* - **Protocol (Protocol)**
-  - Communication format between VisionController and robot. Defines message structure, coordinate order, and units of measurement.
-* - **Recipe (Recipe)**
-  - XML file containing all system configuration parameters: models, thresholds, calibrations, FlexiBowl setup, and robot setup.
+  - Algorithm that locates the components in the image by comparing them with the reference model recorded during training.
+* - **Protocol**
+  - Communication format between VisionController and robot. It defines message structure, coordinate order and units of measurement.
+* - **Recipe**
+  - XML file containing all system configuration parameters: models, thresholds, calibrations, FlexiBowl® and robot setup.
 * - **Region Search**
-  - Rectangular area in the image within which pattern matching performs the search. Reduces processing time and increases accuracy.
+  - Rectangular area in the image within which the pattern matching performs the search. It reduces processing time and increases accuracy.
 * - **ROI (Region of Interest)**
-  - Rectangular area that delimits the component in the image during model training.
+  - Rectangular area delimiting the component in the image during model training.
 * - **RZ / Rotation Z**
-  - Rotation angle around the Z axis communicated to the robot for component orientation. Expressed in degrees (0–360°).
+  - Angle of rotation around the Z axis communicated to the robot for component orientation. Expressed in degrees (0-360°).
 * - **Score**
-  - Similarity index (0.0–1.0) between the model and the detected object. Determines recognition confidence.
-* - **Gripper Clearance Simulators**
-  - Physical objects placed around the component during training to exclude from the model the areas occupied by the gripper during picking.
+  - Similarity index (0.0-1.0) between the model and the detected object. It determines the trustworthiness of identification.
+* - **Gripper Footprint Simulators**
+  - Physical objects placed around the component during training to exclude from the model the areas engaged by the gripper during picking.
 * - **Steps**
-  - Number of hopper vibration cycles required for the components to reach the picking area. Critical parameter for synchronization with the robot cycle.
+  - Number of movements of the FlexiBowl® required for components to reach the hopper unloading area from the vision area. 
 * - **Subnet**
-  - FlexiBowl and VisionController must share the same subnet (e.g. 192.168.1.x) for TCP/IP communication.
+  - Subnet that FlexiBowl® and VisionController must share (e.g. 192.168.1.x) for TCP/IP communication.
 * - **Synchronize Parameters**
-  - Software command that transfers parameters from the VisionController to the FlexiBowl. Required after each change to make the settings effective.
-* - **Calibration Target**
-  - Printed geometric pattern (circles or checkerboard) with known dimensions and a flat surface, used for camera calibration.
+  - Software command that transfers parameters to the FlexiBowl®. Mandatory after each change to make the settings effective.
 * - **Timeout**
-  - Maximum waiting time for a communication response. An error is generated when it is exceeded.
+  - Maximum time to wait for a communication reply. An error is triggered when it is exceeded.
 * - **Tilt**
-  - Inclination of the camera relative to the horizontal plane. Allowed value: 0° ± 1°.
+  - Inclination of the camera with respect to the horizontal plane. Allowed value: 0° ± 1°.
 * - **Toplight**
-  - LED illuminator positioned above the disk that provides uniform top lighting. Power supply: 24V DC.
+  - LED illuminator positioned above the disc for even illumination from above. Power supply: 24V DC.
 * - **Training**
-  - Process of creating the recognition model by selecting the component's distinctive features from a reference image.
+  - Process of creating the identification model by selecting the distinctive features of the component from a reference image.
 * - **Trigger**
-  - Image acquisition start signal. It may be software-based (timed) or hardware-based (external electrical signal).
+  - Image capture start signal. It can be software-related (timed) or hardware-related (external electrical signal).
 * - **Vision Result**
-  - Vision system output: coordinates (X, Y, RZ) and score of the detected component, transmitted to the robot for picking.
+  - Output of the vision system: coordinates (X, Y, RZ) and score of the detected component, transmitted to the robot for picking.
 * - **VisionController**
-  - Industrial computer that runs FlexiVision One, manages the cameras, processes images, and communicates with FlexiBowl and the robot.
+  - Industrial computer that runs FlexiVision One, manages cameras, processes images and communicates with FlexiBowl® and robots.
 ```
 

@@ -1,7 +1,7 @@
 (protocollo)=
 # **Robot-Vision Communication Protocol**
 
-FlexiVision One communicates with the robot via **TCP/IP** protocol over an Ethernet network. 
+FlexiVision One dialogues with the robot via **TCP/IP** protocol over an Ethernet network.
 
 ## Protocol specifications
 
@@ -27,9 +27,9 @@ FlexiVision One communicates with the robot via **TCP/IP** protocol over an Ethe
 
 ## Available commands
 
-The system supports the following commands through text strings sent over the TCP/IP connection:
+The system supports the following commands via text strings sent over the TCP/IP connection:
 
-### Recipe management
+### *Recipe management*
 
 ```{list-table}
 :header-rows: 1
@@ -39,14 +39,14 @@ The system supports the following commands through text strings sent over the TC
   - Action
   - Return Value
 * - `set_Recipe=nome_ricetta`
-  - Loads the recipe corresponding to the specified "nome_ricetta"
+  - Uploads the recipe matching the specified "recipe_name"
   - None
 * - `get_Recipe`
-  - Returns the name of the currently loaded recipe
+  - Returns the name of the currently uploaded recipe
   - `nome_ricetta`
 ```
 
-### Localization commands
+### *Tracking commands*
 
 ```{list-table}
 :header-rows: 1
@@ -56,23 +56,23 @@ The system supports the following commands through text strings sent over the TC
   - Action
   - Return Value
 * - `start_Locator`
-  - Starts the part localization process. If no pickable parts are present, it automatically calls the FlexiBowl movement routine.
+  - It starts the part tracking process. If there are no parts that can be picked up, it automatically retrieves the FlexiBowl® movement routine.
   - `Pattern_n;x;y;r` / `Hopper;signalnumber;time`
 * - `stop_Locator`
-  - Stops the localization process
+  - It stops the tracking process
   - None
 * - `turn_Locator`
-  - If no part has been picked, it rotates the FlexiBowl and restarts the search
+  - If no parts have been picked up, it rotates the FlexiBowl® and restarts the search
   - `Pattern_n;x;y;r`
 * - `test_Locator`
-  - Starts localization without activating the FlexiBowl (image acquisition only)
+  - It starts tracking without activating the FlexiBowl® (image acquisition only)
   - `Pattern_n;x;y;r`/ None
 * - `state_Locator`
-  - Returns the diagnostic status of the locator
+  - It returns the diagnostic status of the locator
   - `Locator is Running` / `Locator is in Error` / `Locator is not Running`
 ```
 
-### FlexiBowl commands
+### *FlexiBowl® Commands*
 
 ```{list-table}
 :header-rows: 1
@@ -82,22 +82,22 @@ The system supports the following commands through text strings sent over the TC
   - Action
   - Return Value
 * - `start_Empty`
-  - Starts the FlexiBowl quick emptying sequence (Quick-Emptying)
+  - It starts the FlexiBowl® Quick-Emptying sequence
   - `start_Empty ended`
 ```
 
 
-### Optional hopper signals
+### *Optional hopper signals*
 
 ```{note}
-If the hopper must be activated, we will receive the string: `"Hopper;signalnumber;time"`
+If the hopper needs to be switched on, we will receive the string: `"Hopper;signalnumber;time"`
 
 ```
 
 
 
-For detailed information on physical installation and electrical connections, proceed with the following sections:
-- [Optimal Camera Distance Calculation](05_Calcolo_distanza_ottimale.md)
+For detailed information on physical installation and electrical connections, go to the following sections:
+- [Ideal Camera Distance Calculation](05_Calcolo_distanza_ottimale.md)
 - [Mechanical Installation](../INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.md)
 - [Wiring and Connections](../INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.md)
 

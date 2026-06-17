@@ -1,23 +1,22 @@
 # **FlexiVision One Manual**
 
 ## **Welcome to the FlexiVision One manual!**  
-test We are pleased to welcome you to your new FlexiVision One guide!
-This manual has been created specifically to serve as your clear and reliable reference. We hope that, by consulting it, you can fully benefit from everything our system offers.
-Your opinion is essential to us: please do not hesitate to provide your feedback by [contacting us](https://www.flexibowl.it/contatti)! 
+We are excited to welcome you to your new FlexiVision One guide!
+This manual has been specifically drafted to be your clear and reliable reference. We hope that, by consulting it, you will fully enjoy all the benefits of our system.
+Your opinion is crucial to us: please do not hesitate to give us your feedback [by contacting us](https://www.flexibowl.it/contatti)!
 
-*- The Ars Automation Team*    
+*- The ARS Automation Team*    
 <a href="https://www.arsautomation.com" target="_blank">
   <img src="../../_shared/static/logo_fv.png" alt="Ars logo" class="only-light img-logo">
   <img src="../../_shared/static/logo_fv_black.png" alt="Ars logo" class="only-dark img-logo">
 </a>
   
 ## **What is FlexiVision One?**  
-FlexiVision One is our VisionController-based vision solution, designed to guide the robot and available as an add-on component for FlexiBowl® systems.
-While retaining all the powerful functions of the previous version, therefore allowing the unloading, separation, recognition, and picking of loose parts on the feeder surface, FlexiVision One revolutionizes the user experience.
-Thanks to complete step-by-step guidance and intuitive tools, we have greatly simplified the process, making programming and use accessible and usable by anyone, regardless of experience level.
+FlexiVision One is our vision solution based on VisionController, designed to guide the robot and available as an add-on for FlexiBowl® systems.
+Retaining all the full-capacity functions of the previous version, thus allowing unloading, separation, identification and picking of bulk parts on the feeder surface, FlexiVision One revolutionises the user’s experience.
+With comprehensive step-by-step guidance and intuitive tools, we have greatly simplified the process, making programming and operation accessible and usable by anyone, regardless of their level of expertise.
 
 ## **System overview** 
-Example system diagram with connections for up to three FlexiBowl units, three cameras, and three hoppers.
 
 ```{figure} ../../_shared/media/images/Icon_FlexiVision.png
 :align: center
@@ -26,60 +25,60 @@ Example system diagram with connections for up to three FlexiBowl units, three c
 Example diagram of the FlexiVision One system
 ```
 ## **How to read the manual**  
-This manual has been designed to support both the design and system integration phase and the field installation and commissioning phase. 
-For this reason, it is divided into macro-sections with different audiences and purposes.
+This manual is intended to support both the system design and integration phase, as well as the on-field installation and commissioning phase.
+For this reason, it is divided into macro-sections with distinct addressees and purposes.
   
 ## **Which section are you looking for?**  
 ```{list-table}
 :widths: 40 60
 :header-rows: 1
 
-* - If you need to...
-  - The information is located in...
+* - If you must...
+  - The information can be found in...
 
-* - Check dimensions, weights, electrical requirements, and communication protocols
+* - Check dimensions, weights, electrical requirements and communication protocols
   - [**TECHNICAL REFERENCE AND SPECIFICATIONS**](specifiche_tecniche)
 
-* - Install components, wire the system, configure the network, or calibrate camera/robot
-  - [**SYSTEM INSTALLATION**](Installazione_Meccanica) and [**QUICKSTART**](quickstart)
+* - Install the components, wire the system, configure the network or calibrate the camera/robot
+  - [**SYSTEM INSTALLATION**](Installazione_Meccanica) and [**QUICKSTART**](setupcomponenti)
 
-* - Program a new part model or configure the feeding system
-  - [**QUICKSTART**](quickstart)
+* - Program a new part model or configure the feed system
+  - [**QUICKSTART**](setupcomponenti)
 
-* - Troubleshoot problems or request assistance
+* - Solve problems or request assistance
   - [**TROUBLESHOOTING**](troubleshooting) and [**SUPPORT**](support)
 ```
-## **Work groups and responsibilities**
+## **Intervention groups and responsibilities**
 
-Correct implementation of FlexiVision One requires collaboration among several professional roles. This table clarifies roles and responsibilities:
+The successful implementation of FlexiVision One requires the collaboration of several professionals. This table establishes roles and responsibilities:
 
 ```{list-table}
 :widths: 25 35 40
 :header-rows: 1
 
-* - Professional role
+* - Professional figure
   - Main responsibilities
-  - Reference manual sections
+  - Sections of the reference manual
 
-* - **System integrator**
-  - Layout design, component sizing, verification of technical requirements
+* - **System Integrator**
+  - Layout design, component dimensioning, assessment of technical requirements
   - Technical reference and specifications, Options
 
 * - **Installation technician**
   - Mechanical assembly, electrical wiring, network configuration
-  - System installation, Wiring and connections
+  - System installation, wiring and connections
 
 * - **Robot programmer**
-  - Camera-robot calibration, plugin integration, programming of picking logic
+  - Camera-robot calibration, plugin integration, pick logic programming
   - Quickstart, Protocol Setup, Calibration
 
 * - **Line operator**
-  - Creation of new part models, configuration of FlexiBowl parameters, performance monitoring
-  - Run Time results verification
+  - Creating new part models, configuring FlexiBowl® parameters, monitoring performance
+  - Checking Run Time results
 
 * - **Maintenance technician**
-  - Problem diagnosis, component replacement, software updates
-  - New model, FlexiBowl configuration, Troubleshooting, Support
+  - Troubleshooting, component replacement, software upgrades
+  - New model, FlexiBowl® configuration, Troubleshooting, Support
 ```
 
 ## **Conventions and symbols used**
@@ -87,7 +86,6 @@ Correct implementation of FlexiVision One requires collaboration among several p
 Throughout the manual, information banners are used to highlight important content:
 
 ```{list-table}
-:widths: 20 80
 :header-rows: 1
 
 * - Type
@@ -96,27 +94,27 @@ Throughout the manual, information banners are used to highlight important conte
 * - ```{warning}
     Warning
     ```
-  - Indicates a potentially hazardous situation or a critical procedure which, if not performed correctly, could cause equipment damage or serious system malfunctions.
+  - Indicates a potentially hazardous situation or critical procedure which, if not carried out correctly, could result in damage to the equipment or serious system malfunctioning.
 
 * - ```{important}
     Important
     ```
-  - Highlights essential information that must not be ignored in order to ensure correct system operation or operational safety.
+  - Highlights vital information that must not be ignored to ensure the correct functioning of the system or the safety of the operation.
 
 * - ```{note}
     Information note
     ```
-  - Provides essential information for correct execution of the procedure, technical clarifications, or references to related chapters.
+  - Provides essential information to correctly carry out the procedure, technical clarifications or references to related chapters.
 
 * - ```{tip}
     Tip
     ```
-  - Suggests a best practice, an alternative, or advice that can simplify installation or improve system performance.
+  - Suggests a best practice, alternative or advice that can simplify installation or improve system performance.
 
 * - ```{error}
     Error
     ```
-  - Indicates a critical error or fault condition requiring immediate intervention. It highlights situations that compromise system operation and require corrective action.
+  - Indicates a critical error or faulty condition requiring immediate action. It signals situations that jeopardise system operation and require corrective action.
 ```
 
 
@@ -153,7 +151,7 @@ FlexiVisionEasy_manual/27b_Glossario.md
 
 ```{toctree}
 :hidden:
-:caption: TECHNICAL REFERENCE AND SPECIFICATIONS 
+:caption: TECHNICAL REFERENCE AND SPECIFICATIONS
 
 FlexiVisionEasy_manual/rif_tecnico_specifiche/04_Specifiche_FlexiVision.md
 ```    
@@ -192,12 +190,35 @@ FlexiVisionEasy_manual/INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.md
   
 ```{toctree}
 :hidden:
-:caption: QUICKSTART
+:caption: INTERFACE OVERVIEW
 
-FlexiVisionEasy_manual/QUICKSTART/12_Panoramica_Interfaccia.md
-```     
+FlexiVisionEasy_manual/PANORAMICA_INTERFACCIA/12a_Home.md
+```  
 ```{toctree}
 :hidden:
+
+FlexiVisionEasy_manual/PANORAMICA_INTERFACCIA/12c_Dashboard.md
+```    
+```{toctree}
+:hidden:
+
+FlexiVisionEasy_manual/PANORAMICA_INTERFACCIA/12b_Recipes.md
+```    
+```{toctree}
+:hidden:
+
+FlexiVisionEasy_manual/PANORAMICA_INTERFACCIA/12d_Setup.md
+```    
+
+```{toctree}
+:hidden:
+
+FlexiVisionEasy_manual/PANORAMICA_INTERFACCIA/12e_TastiInfo.md
+```    
+
+```{toctree}
+:hidden:
+:caption: QUICKSTART
 FlexiVisionEasy_manual/QUICKSTART/SETUP/13_setup.md
 ``` 
 
@@ -211,6 +232,13 @@ FlexiVisionEasy_manual/QUICKSTART/Nuovo_Modello/16_Nuovo_modello.md
 :hidden:
 FlexiVisionEasy_manual/QUICKSTART/24_Verifica_Risultati.md
 ```
+
+```{toctree}
+:hidden:
+:caption: EXPERT
+
+FlexiVisionEasy_manual/EXPERT/32_Expert.md
+```  
 
 ```{toctree}
 :hidden:
@@ -239,7 +267,7 @@ FlexiVisionEasy_manual/CONFIGURAZIONI_MULTI-DISPOSITIVO/31_3FB3CAM.md
 
 ```{toctree}  
 :hidden:
-:caption: WARRANTY 
+:caption: WARRANTY
 
 FlexiVisionEasy_manual/25_Garanzia.md
 ```

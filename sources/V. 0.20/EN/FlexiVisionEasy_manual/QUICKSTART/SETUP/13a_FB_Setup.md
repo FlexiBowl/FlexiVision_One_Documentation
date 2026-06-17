@@ -1,72 +1,70 @@
 (fbsetup)=
-# **Step 4: FlexiBowl Setup**
+# **FlexiBowl® Setup**
 
-This section describes the procedure for connecting and configuring the FlexiBowl with the FlexiVision One system.
+This section describes the procedure for connecting and configuring the FlexiBowl® with the FlexiVision One system. 
 
 ```{note}
 **Prerequisites**
 
 Make sure that:
-- Mechanical installation of all components has been completed ([Mechanical Installation](Installazione_Meccanica))
-- All cables are connected correctly ([Wiring and Connections](cablaggio))
+- Mechanical installation of all components is completed ([Mechanical Installation](Installazione_Meccanica))
+- All cables are correctly connected ([Wiring and Connections](cablaggio)) 
 ```
 
 ---
 
-## Accessing FlexiBowl configuration
-
+## Access the FlexiBowl® Setup
 ```{list-table}
-* - **1**
-  - From the main software page, click <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
+* - **1** 
+  - From the software home page, click <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
 * - **2**
-  - In the SETUP page, locate and click the **FlexiBowl Setup** icon
-    ```{dropdown} Setup page
-       ![Setup page](../../../../../_shared/media/images/pagina_setup1.png)
+  - On the SETUP page, identify and click the **FlexiBowl® Setup** icon
+    ```{dropdown} Setup page 
+       ![Setup Page](../../../../../_shared/media/images/pagina_setup1.png)
     ```
 * - **3**
-  - The FlexiBowl configuration screen opens
+  - The FlexiBowl® Setup screen opens
 ```
-
-![FlexiBowl Setup page](../../../../../_shared/media/images/pagina_FBsetup.png)
-
+![FlexiBowl® Setup Page](../../../../../_shared/media/images/pagina_FBsetup.png)
 ---
 
 ## Connection procedure
 
-### **Step 1: Configure the network address**
+### *Step 1: Network address configuration*
 
 ```{list-table}
 * - **4**
-  - Verify that the address is on the same subnet as the VisionController
-
+  - Make sure that the address is on the same subnet as the VisionController
+  
 * - **5**
-  - In the **FlexiBowl IP** field, enter the FlexiBowl IP address
-      - Format: `192.168.1.XXX`, or according to your network configuration
+  - In the field **FlexiBowl® IP**, enter the IP address of the FlexiBowl®
+      - Format: `192.168.1.XXX` (or depending on your network configuration)
 ```
-
 :::{tip}
-For consistency and convenience, start from the first available FlexiBowl.
+For the sake of convenience and consistency, start with the first FlexiBowl® available 
 :::
-
 :::{note}
-The FlexiBowl is shipped with default IP address `192.168.1.10`
+The FlexiBowl® is shipped with a default IP address `192.168.1.10`
+:::
+:::{important}
+For instructions on how to change the IP address of your FlexiBowl®, please refer to the manual available in the [Download](https://www.flexibowl.it/downloads) section.
 :::
 
-### **Step 2: Test the connection**
+### *Step 2: Connection test*
 
 ```{list-table}
 :widths: 5 95
 
 * - **6**
-  - After entering the IP address, click **Connection Test**
+  - After entering the IP, click the **Connection Test** button
 
 * - **7**
-  - The system performs a communication test, or ping, toward the FlexiBowl
+  - The system performs a communication test (ping) to the FlexiBowl®
 
 * - **8**
-  - Check the **Status** indicator:
-    - 🟢 **Green**: connection established correctly
-    - 🔴 **Red**: connection failed, verify IP address and wiring
+  - Watch the **Status** indicator:
+    - 🟢 **Green**: Connection successful
+    - 🔴 **Red**: Connection failed (check IP address and wiring)
 ```
 
 ```{warning}
@@ -74,64 +72,63 @@ The FlexiBowl is shipped with default IP address `192.168.1.10`
 
 If the indicator remains red or an error message appears:
 
-0. Verify that the FlexiBowl is powered on
-1. Verify that the entered IP address is correct
-2. Physically check the Ethernet cable and ensure it is fully inserted
-3. If present, verify that the network switch or router is powered on
-4. Make sure the FlexiBowl and VisionController are on the same subnet
-5. Try pinging the FlexiBowl from a Windows terminal:
+0. Check that you have switched on the FlexiBowl®
+1. Check that the IP address entered is correct
+2. Physically check the Ethernet cable (it must be fully inserted)
+3. If present, check that the network switch/router is on
+4. Ensure that FlexiBowl® and VisionController are on the same subnet
+5. Try pinging the FlexiBowl® from a Windows terminal:
    - Open Command Prompt
-   - Type: `ping 192.168.1.XXX`, replacing with the real IP
-   - If ping fails, the issue is network-related
+   - Type: `ping 192.168.1.XXX` (replace with actual IP)
+   - If the ping fails, it is a network problem
 
-If the problem persists, refer to [Troubleshooting](troubleshooting).
+If the problem persists, see [Troubleshooting](troubleshooting).
 ```
 
 ---
 
-## FlexiBowl parameter configuration
+## FlexiBowl® parameter configuration
 
-Once the connection has been established, continue with configuration of the operating parameters.
+Once the connection is established, proceed to set the operating parameters.
 
-### **Step 3: Access the configuration**
+### *Step 3: Configuration access*
 
 ```{list-table}
-* - **9**
-  - Click <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl" >
+* - **9** 
+  - Click the button <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl" >
 * - **10**
-  - A window opens with the configurable FlexiBowl parameters
+  - A window opens with the configurable parameters of the FlexiBowl®
 ```
 
-### **Step 5: Synchronize parameters**
+
+### *Step 4: Parameter synchronisation*
 
 ```{list-table}
 
 * - **12**
   - Click **Synchronize Parameters**
 * - **13**
-  - Return to the main SETUP page and continue with the next setup step
+  - Go back to the main SETUP page to proceed with the next setup 
 ```
 
 ```{warning}
-**Do not skip synchronization**
+**Do not skip the synchronisation**
 
-It is essential to click **Synchronize Parameters** after every modification. Without this step:
-- Changes are not applied to the FlexiBowl
+It is essential to click **Synchronize Parameters** after any change is made. Without this step:
+- The changes are not applied to the FlexiBowl® 
 - The system may behave inconsistently
-- Settings are not saved
+- The settings are not saved 
 ```
-
 ---
-
 (configfb)=
-# **Guided Configuration: FlexiBowl® Wizard**
+# **Guided configuration: FlexiBowl® Wizard**
 
-The **FlexiBowl® Wizard** interface is an interactive tool designed to guide the user through configuration of feeding parameters based on the specific product family to be handled.
 
-## **Step 1: Access the Wizard**
+The **FlexiBowl® Wizard** interface is an interactive tool designed to guide the user in configuring feed parameters according to the specific product family to be managed.
+
+## Step 1: Accessing the Wizard
 
 To start the procedure:
-
 ```{list-table}
 :widths: 5 95
 
@@ -139,84 +136,123 @@ To start the procedure:
   - Go to the <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon"> section of the FlexiVision One software
 
 * - **2**
-  - Click **FlexiBowl Setup**. A page opens showing all FlexiBowls managed by FlexiVision One
+  - Click the **FlexiBowl® Setup** button. This will open a page with all the FlexiBowl® devices that can be managed with FlexiVision One
 
-    :::{dropdown} FlexiBowl Setup page
-    ![FlexiBowl Setup page](../../../../../_shared/media/images/pagina_FBsetup.png)
+    :::{dropdown} FlexiBowl® Setup Page  
+    ![FlexiBowl® Setup Page](../../../../../_shared/media/images/pagina_FBsetup.png)
     :::
 
 * - **3**
-  - Click <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl">. A page opens with all movements available for the selected FlexiBowl
+  - Click the button <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl"> to open a page with all available movements for the selected FlexiBowl
 
-    :::{dropdown} FlexiBowl Configuration page
-    ![FlexiBowl Config page](../../../../../_shared/media/images/pagina_FBsetup.png)
+    :::{dropdown} FlexiBowl® Configuration Page  
+    ![FlexiBowl® Config page](../../../../../_shared/media/images/pagina_FBsetup.png)
     :::
 
 * - **4**
-  - Click **FlexiBowl X Wizard** to open the Wizard welcome page
+  - Click the **FlexiBowl® X Wizard** button; the Wizard welcome page opens
 
 * - **5**
   - Click <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon icon-small">
-
+    
     :::{note}
-    Click <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon icon-small"> on each Wizard page to move forward through the guided configuration.
+    Click <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon icon-small"> on each page of the wizard to move forward in the guided setup
     :::
 ```
 
-## **Step 2: Select model and rotation**
+## Step 2: Model Selection and Rotation
 
-In this phase, the hardware characteristics of the system are defined:
-
+In this step, the hardware features of the system are defined:
 ```{list-table}
 * - **6**
-  - Select the device size, for example 200, 350, 500, and so on.
+  - Select the size of the device (e.g. 200, 350, 500, etc.).
 * - **7**
-  - Define the plate rotation direction, **Clockwise** or **CounterClockwise**.
+  - Define the direction of disc rotation (**Clockwise** or **CounterClockwise**).
 ```
+## Step 3: Component Characterisation
 
-## **Step 3: Component characterization**
-
-The system requires information about part morphology to optimize separation.
-
-```{list-table}
+The system requires information on the morphology of the parts to optimise separation.
+````{list-table}
 * - **8**
-  - Select the geometry that best describes the component:
-      * **FLAT**: flat components
-      * **CYLINDRICAL**: cylindrical components
-      * **COMPLEX**: articulated or irregular geometries
+  - Select component size:**
+
+    **For FlexiBowl Models 200, 350, 500, 650:**
+
+    :::{card}
+    <= 150mm
+    :::
+
+    :::{card}
+    &gt; 150mm
+    :::
+
+    **For FlexiBowl Models 800 and 1200:**
+
+    :::{card}
+    <= 250mm
+    :::
+
+    :::{card}
+    &gt; 250mm
+    :::
+
 * - **9**
-  - Define how the components interact with each other on the surface:
-      * **Overlapping**: parts tend to overlap
-      * **Not Overlapping**: parts do not overlap
-      * **Tangling / Stacking**: parts tend to hook or stack together
-      * **Not Tangling / Not Stacking**: parts remain separated and do not interlock
-```
+  - Select the geometry that best describes the component:
+      * **FLAT**: Flat components.
+      * **CYLINDRICAL**: Cylindrical components.
+      * **COMPLEX**: Articulated or irregular geometries
 
-## **Step 4: Accessory tests**
+      ![Flat Cylindrical or Complex](../../../../../_shared/media/images/flatorcomplex.png)
 
-```{list-table}
+      *Examples of geometries: Flat, Cylindrical and Complex.*
+
 * - **10**
-  - Select from the dropdown menu whether the FlexiBowl® is equipped with the **Air-blow** module
-* - **11**
-  - Click **TEST Air-blow** to verify operation
-* - **12**
-  - Select **USE** to enable it in the current application, otherwise click **DON'T USE**
-* - **13**
-  - Click **TEST FLIP** to verify actual striker activation.  
-      Flip is the unit that generates the mechanical impulse used to turn parts over. It is essential for separating, disentangling, or overturning components during the feeding cycle.
+  - Define how the components interact with each other on the surface:
+      * **Overlapping**: The pieces tend to overlap.
+      * **Not Overlapping**: The pieces do not overlap.
+      * **Tangling / Stacking**: The pieces tend to hook together or stack.
+      * **Not Tangling / Not Stacking**: The pieces remain separate and do not interlock.
 
-      :::{important}
-      If the impulse is not noticeable, verify that compressed air is connected and adjust the mechanical pressure regulator located on the control panel.
+      ![Overlapping](../../../../../_shared/media/videos/overlapping.gif)
+
+      *Not Overlapping: the pieces do not overlap on the surface.*
+
+      ::::{grid} 2
+      :::{grid-item}
+      ![Stacking](../../../../../_shared/media/videos/stacking.gif)
+
+      *Stacking: the pieces stack up.*
       :::
-* - **14**
-  - At the end of the Wizard, by clicking **FINISH**, the system automatically calculates:
-    - movement parameters, speed, acceleration, angle
-    - shake parameters
-    - accessory timings, flip and blow
-* - **15**
-  - These values can then be fine-tuned in the summary dashboard
-```
+      :::{grid-item}
+      ![Tangling](../../../../../_shared/media/videos/tangling.gif)
 
+      *Tangling: the pieces get entangled with each other.*
+      :::
+      ::::
+````
+## Step 4: Testing of Accessories
+```{list-table}
+* - **11**
+  - Select from the drop-down menu whether the FlexiBowl® is equipped with the **Air-blow** module.
+* - **12**
+  - Click **TEST Air-blow** to check that it works properly.
+* - **13**
+  - Select **USE** to enable it in the current application, otherwise click **DON'T USE**.
+* - **14**
+  - Click **TEST FLIP** to check the actual activation of the flip unit.
+      The 'Flip' is the unit that generates the mechanical impulse to flip parts; it is essential for separating, untangling or flipping components during the feeding cycle.
+ 
+      :::{important}
+      If the pulse is not noticeable, verify that compressed air is connected and adjust the mechanical pressure regulator on the control panel.
+      :::
+* - **15**
+  - At the end of the Wizard, clicking **FINISH**, the system will automatically calculate the parameters: 
+    - Motion parameters (speed, acceleration, angle)
+    - Shake parameters (shake)
+    - Accessory timings (flip, blow)
+* - **16**
+  - They can then be fine-tuned in the summary dashboard.
+```
 ```{list-table} Parameter Overview
    :widths: 20 30 50
    :header-rows: 1
@@ -226,37 +262,38 @@ The system requires information about part morphology to optimize separation.
      - Description
    * - **Move**
      - Accel, Decel, Speed, Angle
-     - Main plate movement parameters
+     - Main disc movement parameters.
    * - **Option**
      - Flip Count, Flip Delay, Blow Time
-     - Timing management for accessory activation
+     - Management of accessory activation timing.
    * - **Shake**
      - Accel, Speed, Angle CW/CCW
-     - Shake vibration parameters for part separation
+     - Shake (separation) vibration parameters.
 ```
 
-## **Step 5: Validate the sequence**
+## Step 5: Sequence Validation
 
-Use **Test Sequence** to verify that the cycle meets the following efficiency criteria:
-
+Use the **Test Sequence** function to check that the cycle meets the following efficiency criteria:
 ```{list-table}
 :widths: 5 95
 :header-rows: 0
 
-* - **Synchronization**
-  - The Flip impulse must end exactly when the movement, or *Move*, ends. Adjust *Flip Count* and *Delay* values to align them.
+* - **Synchronisation**
+  - The Flip impulse must end at exactly the same time as the movement (*Move*). Adjust the *Flip Count* and *Delay* values to align them.
 
-* - **Image stability**
-  - Components must be still at the moment the camera captures the image.
-    - If the parts move, reduce speed or acceleration, or add a pause such as `pause 200ms`
+* - **Image Stability**
+  - The components must be still when the camera takes the picture.
+    - If the pieces are moving, decrease speed/acceleration or insert a pause (e.g. `pause 200ms`).
+
+* - **Positioning of pieces during the sequence**
+  - During the movement, the pieces must be conveyed towards the centre of the FlexiBowl® range to maximise the effectiveness of the flip. At the end of the sequence, the pieces should practically be arranged in the centre of the vision area.
 ```
 
 :::{warning}
-Always click **Synchronize Parameters** after every manual change so the variations become active in the controller.
+Always click **Synchronize Parameters** after any manual change to activate the changes in the controller.
 :::
 
-## FlexiBowl parameter overview
-
+## Overview of FlexiBowl® Parameters
 ```{list-table}
 :header-rows: 1
 :widths: 5 25 70
@@ -265,69 +302,67 @@ Always click **Synchronize Parameters** after every manual change so the variati
   - Element
   - Description
 * - 1
-  - MOVE - Acceleration
-  - Acceleration value used for each MOVE command
+  - MOVE – Acceleration
+  - Acceleration value used at each MOVE command
 * - 2
-  - MOVE - Deceleration
-  - Deceleration value used for each MOVE command
+  - MOVE – Deceleration
+  - Deceleration value used at each MOVE command
 * - 3
-  - MOVE - Speed
-  - Speed value in rpm used for each MOVE command
+  - MOVE – Speed
+  - Speed value (rpm) used at each MOVE command
 * - 4
-  - MOVE - Angle
-  - Angle used by FlexiBowl® for each MOVE command
+  - MOVE – Angle
+  - Angle at which FlexiBowl® moves at each MOVE command
 * - 5
-  - SHAKE - Acceleration
-  - Acceleration value used for each SHAKE command
+  - SHAKE – Acceleration
+  - Acceleration value used at each SHAKE command
 * - 6
-  - SHAKE - Deceleration
-  - Deceleration value used for each SHAKE command
+  - SHAKE – Deceleration
+  - Deceleration value used at each SHAKE command
 * - 7
-  - SHAKE - Speed
-  - Speed value in rpm used for each SHAKE command
+  - MOVE – Speed
+  - Speed value (rpm) used at each SHAKE command
 * - 8
-  - SHAKE - Angle CW
-  - Clockwise angle used by FlexiBowl® for each SHAKE command
+  - MOVE – CW angle
+  - Clockwise angle at which FlexiBowl® moves at each SHAKE command
 * - 9
-  - SHAKE - Angle CCW
-  - Counterclockwise angle used by FlexiBowl® for each SHAKE command
+  - MOVE – CCW angle
+  - Counterclockwise angle at which FlexiBowl® moves at each SHAKE command
 * - 10
-  - OPTION - Flip Count
-  - Number of Flip activations to be executed
+  - OPTION – Flip count
+  - Number of times Flip will be activated
 * - 11
-  - OPTION - Flip Delay
-  - Time in milliseconds between one flip activation and the next deactivation
+  - OPTION – Flip Delay
+  - Time (in milliseconds) between an activation and a deactivation of the flip
 * - 12
-  - OPTION - Blow Time
-  - Time in milliseconds for blow activation
+  - OPTION – Blow Time
+  - Time (in milliseconds) for activating the blow
 * - 13
-  - OPTION - Light ON
-  - Press to enable or disable the backlight
+  - OPTION – Light on
+  - Press to enable/disable the backlight
 ```
-
-## Next steps
-
-Once FlexiBowl configuration is complete, continue with:
-
-**-> [Hopper Configuration](../23_Config_Hopper.md)** - if an external hopper is present
-
-**-> [Verify Results](../24_Verifica_Risultati.md)** - monitor the complete application
 
 ```{tip}
 **Production test**
 
-Before going into production:
-1. Run 50 to 100 test cycles to verify consistency
-2. Monitor the plate fill rate, which should remain constant
-3. Verify that there are no abnormal accumulations or persistent empty zones
-4. Increase gradually toward production speed
+Before using in production:
+1. Run 50-100 test cycles to check consistency
+2. Monitor disk fill rate (it must be constant)
+3. Check that there are no abnormal accumulations or persistent empty zones
+4. Gradually increase to production speed
 
-The optimal configuration may require two or three fine-tuning sessions with the real part in significant quantity.
+The ideal configuration may require 2-3 fine-tuning sessions with the actual part in significant quantities.
 ```
 
 ## Next steps
 
-Once FlexiBowl Setup is completed, proceed with:
+Once the FlexiBowl® Setup is complete, proceed with:
 
-- [Step 5: Hopper Setup](13b_Hopper_Setup.md)
-- [Step 6: Robot Setup](13c_Robot_Setup.md)
+- [Hopper Setup](13b_Hopper_Setup.md)
+- [Robot Setup](13c_Robot_Setup.md)
+- [Protocol Setup](protocol_setup)
+- [Save Recipe](ricettabase)
+
+
+
+

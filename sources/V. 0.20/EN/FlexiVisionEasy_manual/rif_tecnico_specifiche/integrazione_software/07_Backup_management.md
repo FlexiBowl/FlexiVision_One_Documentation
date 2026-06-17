@@ -1,91 +1,90 @@
 (backup)=
-# **BackUp Management**
+# **Backup Management**
 
-## **Overview**
+## Overview
 
-FlexiVision One backup consists of copying the `Recipes` folder located on the VisionController. This folder contains all recipes configured in the system — including models, recognition parameters, and associated settings — and represents the only user data that must be preserved.
+The entire configuration of FlexiVision One - hardware setup, calibrations, part models and protocol parameters - is contained in the recipe files. For this reason, backups are essential to keep all data safe.
 
-Since no dedicated tool is required, the backup process is reduced to a simple copy-and-paste operation through File Explorer.
 ```{important}
-It is recommended to perform a backup every time a recipe is created or modified, and in any case before any software update or maintenance intervention on the VisionController.
+It is recommended to perform a backup after each creation or significant modification of a recipe, before upgrading the FlexiVision software and before any hardware intervention on the system.
+
+**Minimum rule:** at least once a week during normal operation.
 ```
 
 ---
 
-## **Backup Contents**
+## Backup Procedure
 
-The following structure is present inside the FlexiVision One installation folder:
-```
-C:\FlexiVision One\
-├── Data\
-├── Languages\
-├── Recipes\          ← unica cartella da includere nel backup
-├── Flexivision_Smart_018
-└── Package.dat
-```
-
-The only folder that contains user data is `Recipes\`. The other folders and files present belong to the software installation and must not be included in the backup.
-```{note}
-The exact path of the installation folder may vary depending on the system configuration. If in doubt, check the path in the software settings.
-```
-
----
-
-## **Backup Procedure**
 ```{list-table}
 :header-rows: 1
-:widths: 10 90
+:widths: 30 70
 
 * - **Step**
   - **Action**
-* - 1
-  - Make sure that the FlexiVision One software is **closed**.
-* - 2
-  - Open File Explorer on the VisionController and navigate to `C:\FlexiVision One\`.
-* - 3
-  - Right-click the `Recipes` folder and select **Copy**.
-* - 4
-  - Navigate to the desired backup destination (USB drive, network folder, NAS, etc.).
-* - 5
-  - Paste the folder into the destination. It is recommended to rename it by including the date, for example: `Recipes_backup_2025-06-01`.
-```
-```{warning}
-Do not perform the backup while the FlexiVision One software is running. Copying open files may result in an incomplete or corrupted backup.
+* - Click Backup
+  - Click the Backup button in the Recipe menu.
+* - Choose the FlexiVision folder
+  - Locate the FlexiVision One runtime folder on the VisionController.
+* - Choose the destination folder
+  - Select the destination folder for the backup.
+* - Name with date
+  - Always assign a name that includes the date, software version and system identifier or other useful information such as the customer's name. Examples:
+    
+    - `FV_Recipes_LineA_20260402_SW1.2.xml`
+    - `Backup_FlexiVision_ClientABC_Plant3_20260402.xml`
+    - `Recipes_FB500_Commissioning_20260315_v1.zip`
+    
+    Include the software version (visible on the Home page) in the name or in an attached text file.
 ```
 
 ---
 
-## **Restore Procedure**
+## Import Backup Procedure
 
-In case of data loss or VisionController replacement, previous recipes can be restored by following these steps:
 ```{list-table}
 :header-rows: 1
-:widths: 10 90
+:widths: 30 70
 
 * - **Step**
   - **Action**
-* - 1
-  - Make sure that FlexiVision One is installed on the VisionController and **closed**.
-* - 2
-  - Open File Explorer and navigate to `C:\FlexiVision One\`.
-* - 3
-  - Rename the existing `Recipes` folder (e.g. `Recipes_old`) as a precautionary measure.
-* - 4
-  - Copy the backup folder to `C:\FlexiVision One\` and rename it `Recipes`.
-* - 5
-  - Start FlexiVision One: all previously saved recipes will be available again.
-```
-```{important}
-The software version installed on the VisionController must be compatible with the version used at the time of the backup. In case of a software update, contact technical support before proceeding with the restore.
+* - Click Import Backup
+  - Click Import Backup from the Recipes section.
+* - Select the FlexiVision runtime folder
+  - **Select the folder containing the FlexiVision installation.**
+* - Select the backup path
+  - Set the path of the backup file. FlexiVision will reboot during this process.
+* - Post-reset checks
+  - After reset, perform the following checks before restarting production:
+
+    1. Check that all expected recipes are listed on the Recipes page.
+    2. Confirm that the main recipe can be uploaded without errors.
+    3. Check that FlexiBowl® and camera connection tests are passed (green) in Camera Setup.
+    4. Confirm that the Dashboard shows the correctly connected devices.
+
+    **Run a test cycle with the main operating recipe to verify correct operation.**
 ```
 
 ---
 
-## **Recommendations**
+## Correct recipe management
 
-- Keep at least **two backup copies** in separate physical locations (e.g. a local USB drive and a remote network folder).
-- Always label backups with **date and software version** to make them easier to identify over time.
-- Do not manually modify the contents of the `Recipes` folder: recipes must be managed exclusively through the FlexiVision One interface.
-```{tip}
-For environments with multiple VisionController units, it is recommended to centralize backups in a shared network folder, organized by machine name and date.
+```{list-table}
+:header-rows: 1
+:widths: 25 37 38
+
+* - **Action**
+  - **Correct method**
+  - **Method to avoid**
+* - Rename a recipe
+  - Recipe page → Rename function in the software.
+  - Rename the XML file via File Explorer.
+* - Delete a recipe
+  - Recipe page → **Delete Recipe** button.
+  - Delete the XML file manually.
+* - Copy a recipe to another system
+  - Recipe Page → Backup → Import Backup to the other system.
+  - Copy and paste XML files between two Recipe folders.
+* - Edit a recipe parameter
+  - Open the recipe in **Edit** mode in the software.
+  - Edit the XML file with a text editor.
 ```

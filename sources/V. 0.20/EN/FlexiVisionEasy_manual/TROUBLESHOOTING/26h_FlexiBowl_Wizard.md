@@ -1,4 +1,4 @@
-(troubleshooting_fb_wizard)=
+﻿(troubleshooting_fb_wizard)=
 # **FlexiBowl Wizard**
 
 ```{list-table}
@@ -9,23 +9,23 @@
   - Possible Causes
   - Solutions
 * - **Wizard does not start**
-  - • Recipe not loaded
+  - • Recipe not uploaded
     
-    • FlexiBowl not connected
+    • FlexiBowl® not connected
     
     • Initial setup not completed
-  - • Load or create a recipe first
+  - • First upload or create recipe
     
-    • Check FlexiBowl connection
+    • Check FlexiBowl® connection
     
     • Complete basic system configuration
 
-* - **Set rotation direction does not match**
+* - **Set direction of rotation does not match**
   - • CW/CCW selection error
     
-  - • Visually verify the actual rotation direction
+  - • Visually verify actual direction of rotation
     
-    • Correct the selection in the Wizard
+    • Correct selection in the Wizard
     
 * - **Air-blow test does not work**
   - • Compressed air not connected
@@ -33,69 +33,69 @@
     • Insufficient pressure
     
     • Module not physically present
-  - • Check compressed-air connection
+  - • Check compressed air connection
     
     • Increase pressure to 5-6 bar
     
-    • Select "FlexiBowl NOT equipped" if the module is absent
+    • Select "FlexiBowl® NOT equipped" if module absent
 * - **Flip test not noticeable**
   - • Compressed air not connected/insufficient
     
     • Pressure regulator closed
     
     • Pneumatic circuit leaks
-  - • Verify compressed air is connected
+  - • Check connected compressed air
     
     • Open regulator on control panel
     
-    • Verify pressure 5-6 bar
+    • Check pressure 5-6 bar
     
     • Inspect fittings for leaks
-* - **Calculated parameters not optimal**
-  - • Incorrect component characterization
+* - **Calculated parameters not ideal**
+  - • Incorrect component characterisation
     
     • Wizard uses generic values
-  - • Review selected geometry and behavior
+  - • Review selected geometry and behaviour
     
-    • Accept Wizard parameters as a starting point
+    • Accept Wizard Parameters as a starting point
     
-    • Fine-tune manually in the summary dashboard
+    • Manually fine-tune in summary dashboard
 
-* - **Components move during acquisition**
+* - **Components move during capture**
   - • Speed/acceleration too high
     
-    • Stabilization pauses absent
+    • No stabilisation pauses
     
-    • Grip surface not suitable
+    • Unsuitable grip surface
   - • Decrease Speed and Accel
     
-    • Insert 200-500ms pauses
+    • Insert pauses 200-500ms
     
-    • Replace grip surface with a more adhesive one
-* - **Air blow not effective**
-  - • Air pressure insufficient/excessive
+    • Replace grip surface with more adherent
+* - **Blow not effective**
+  - • Too much/little air pressure
     
-    • Nozzles clogged
-  - • Verify pressure 5-6 bar
+    • Clogged nozzles
+  - • Check pressure 5-6 bar
     
     • Clean air-blow nozzles
 
-* - **Parameter changes are not applied**
-  - • "Synchronize Parameters" not pressed
+* - **Parameter changes do not apply**
+  - • 'Synchronize Parameters' not pressed
     
     • Recipe not saved
   - • **ALWAYS** click Synchronize Parameters after changes
     
     • Save recipe to make changes permanent
 * - **Turn FLB does not work during setup**
-  - • FlexiBowl not connected
+  - • FlexiBowl® not connected
     
     • Command not configured
     
-    • FlexiBowl in error
-  - • Check FlexiBowl connection
+    • FlexiBowl® in error
+  - • Check FlexiBowl® connection
     
-    • Check FlexiBowl Setup configuration
+    • Check FlexiBowl® Setup
     
-    • Check FlexiBowl READY LED
+    • Check FlexiBowl® READY LED
 ```

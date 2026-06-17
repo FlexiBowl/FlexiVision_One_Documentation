@@ -1,241 +1,213 @@
 (protocol_setup)=
-# **Step 7: Protocol Setup**
+# **Protocol Setup**
 
-The **Protocol Setup** page allows configuration of the parameters that regulate communication flow and data exchange between the FlexiVision One vision system and the robot. These parameters determine how many objects are sent, how they are sorted, and how the system manages statistics and operating states.
-
-```{note}
-**Position of Protocol Setup in the workflow**
-
-Protocol Setup is typically configured:
-- **After**: robot calibration and model creation
-- **Before**: continuous production monitoring
-
-This is because:
-- It requires understanding of robot behavior, such as speed and gripper type
-- It affects the statistics shown in the Dashboard
-- It is the last configuration step before real production
-
-Once configured correctly, it rarely requires changes unless the robot or the operating mode changes.
-```
+The **Protocol Setup** page allows you to configure the parameters governing the communication flow and data exchange between the FlexiVision One system and the robot. These parameters determine how many objects are sent, how they are sorted, and how the system manages statistics and operational states.
 
 ---
 
-## Accessing Protocol Setup
+## Access Protocol Setup
 
-1. From the main menu, access the section dedicated to the communication protocol
+1. From the main menu, access the communication protocol section
 2. Select **Protocol Setup**
-3. The interface opens with the configurable parameters
+3. The interface opens with configurable parameters
+
 
 ---
 
-## Configurable parameters
+## Configurable Parameters
 
-![Protocol Setup page](../../../../../_shared/media/images/pagina_protocolsetup.png)
+![Protocol Setup Page](../../../../../_shared/media/images/pagina_protocolsetup.png)
 
 ```{list-table}
 :header-rows: 1
 :widths: 35 65
 
 * - **Parameter**
-  - **Description and function**
+  - **Description and Function**
 * - [**Max Object Count Return**](maxobject)
-  - Indicates the **maximum** number of objects, meaning coordinate triplets, that the vision system can return to the robot in a single run. If vision detects more objects than this limit, no more than this number will be sent, selected according to the configured sorting criterion.
+  - This indicates the **maximum** number of objects (i.e. their triad of coordinates) that the vision system can return to the robot in a single run. If the vision detects more objects than this limit, a maximum of this number are sent, selected according to the configured sorting criterion (Sorting Mode).
 * - [**Min Object Count Return**](minobject)
-  - Indicates the **minimum** number of objects that must be returned in one run for the result to be considered valid. If the number is below this threshold, the run is considered invalid.
+  - This indicates the **minimum** number of objects that must be returned in a run for the result to be considered valid. If the number is below this threshold, the run is considered invalid.
 * - [**Sorting Mode Results**](sortingmode)
-  - Defines the **sorting criterion** used to order the list of objects returned by the vision system. This parameter determines pick priority and which objects are included in the Max Object Count Return.
-
-    *Typical option:* descending score.
+  - This defines the **sorting criterion** by which the list of objects returned by the vision is sorted. This parameter determines the picking priority and determines which objects are included in the Max Object Count Return.
+    
+    *Typical option:* for decreasing score.
 * - [**Pickable parts by the robot detected by vision in each cycle**](pickableparts)
-  - Indicates how many picks the robot performs for each vision run. For example, a double pick corresponds to value `2`. It does not represent the number of objects detected by vision, but the number of robot picks per cycle. This parameter is used for statistical calculations.
+  - This indicates the number of picks the robot makes per vision run. For example, a double pick corresponds to value 2. It does not represent the number of objects detected by the vision, but the number of robot picks per cycle. Parameter used for the calculation of statistics.
 
-* - [**Maximum processing time per part with the robot (in seconds)**](maxprocessingtime)
-  - Defines the maximum reference time after which the system considers handling or transmission of the coordinates related to a run completed and typically switches from RUN to IDLE. This parameter is used for **statistics and workflow management**.
+* - **Maximum processing time per part with the robot (in seconds)**
+  - This defines the maximum time after which the system considers the management/sending of coordinates for a run to be complete and typically switches from the RUN status to the IDLE status. Parameter used for **statistics and workflow management**.
 
     :::{attention}
-    **It is not a robot error timeout**, but a time reference used for cycle calculation and productivity metrics.
+    **It is not a robot error timeout**, but a time reference for cycle calculation and productivity metrics.
     :::
 ```
 
 ---
 
-## Detailed parameter configuration
+## Detailed Parameters Configuration
 
 (maxobject)=
-### Max Object Count Return
+### *Max Object Count Return*
 
 ```{list-table}
  :class: align-top
 
 * - **Function**:
-  - Limits the maximum number of coordinates sent to the robot for each vision cycle.
+  - Limits the maximum number of coordinates that are sent to the robot per vision cycle.
 
 * - **Typical values:**
-  -
-    - **1-3 objects**: most common configuration for robots with single, double, or triple picking
-    - **4-8 objects**: for systems with a buffer or fast robots able to manage queues
-    - **>8 objects**: rarely required and may saturate communication
+  - 
+    - **1** : Most common configuration for robots with single picking
+    - **2** : Configuration for robots with double picking
+    - **3** : Configuration for robots with triple picking
+    - **4-8 objects**: For systems with circular tracking
+    - **>8 objects**: Rarely necessary, it may saturate communication
 
     :::{tip}
     **How to choose the value:**
-    1. Consider robot speed, meaning pick-and-place time per part
-    2. Consider the vision plus FlexiBowl cycle time
-    3. Approximate formula: `Max Count = (Vision+FlexiBowl cycle time) / (Robot pick time)`
+    1. Consider the speed of the robot (pick & place time per part)
+    2. Consider the vision + FlexiBowl® cycle time
+    3. Approximate formula: `Max Count = (Vision+FlexiBowl® cycle time) / (Robot pick time)`
 
     **Practical example:**
-    - Vision plus FlexiBowl cycle: 3 seconds
-    - Robot pick time: 2 seconds per part
-    - Optimal Max Count: 3/2 = 1.5 -> round to 2 objects
+    - Vision+FlexiBowl® cycle: 3 seconds
+    - Robot pick time: 2 seconds/piece
+    - Optimum Max Count: 3/2 = 1.5 → Round off to 2 objects
     :::
 ```
 
 (minobject)=
-### Min Object Count Return
+### *Min Object Count Return*
 
 ```{list-table}
 * - **Function**:
-  - Sets the minimum number of coordinates sent to the robot for each vision cycle.
+  - Limits the minimum number of coordinates that are sent to the robot per vision cycle.
 
 * - **Typical values:**
-  -
-    - **1**: most common configuration, even a single recognized part is acceptable
-    - **>2**: only for special applications with mandatory multi-pick
+  - 
+    - **1**: Most common configuration - even a single identified piece is acceptable
+    - **>2**: Only for special applications with mandatory multi-pick
 
-* - **System behavior:**
-  -
-    - **Detected objects >= Min Count**: coordinates are sent to the robot
-    - **Detected objects < Min Count**: coordinates are not sent and the FlexiBowl sequence is executed
+* - **System behaviour:**
+  - 
+    - **Detected objects ≥ Min Count**: coordinate(s) sent to robot
+    - **Detected objects < Min Count**: coordinates not sent and execution of the FlexiBowl® sequence
+
 
 * - **Impact on productivity**
-  -
+  - 
     **Min Count = 1** (more permissive):
-    - ✓ Maximum flexibility, the robot works even if only one part is available
-    - ✗ Possible low-efficiency cycles, such as 1 part every several seconds
+    - ✓ Maximum flexibility, robot works even if there is only one piece
+    - ✗ Possible cycles with low efficiency (1 piece every N seconds)
 
-    **Min Count = 3** (more restrictive):
-    - ✓ Ensures a minimum cycle efficiency
-    - ✗ May cause waiting time if filling is variable
+    **Min Count = 3** (most restrictive):
+    - ✓ Guarantees minimum efficiency per cycle
+    - ✗ Can cause waiting if filling is variable
 ```
 
 (sortingmode)=
-### Sorting Mode Results
+### *Sorting Mode Results*
+
 
 ```{list-table}
 :header-rows: 1
 :widths: 30 70
 
-* - Sorting mode
-  - Description and when to use it
+* - Sorting Mode
+  - Description and When to Use
 * - **By Score (Descending)**
-  - Sorts by score from highest to lowest. Objects with the best match to the model are sent first.  
-    **Most common and recommended**: ensures picking starts from the most reliably recognized parts.
+  - Sort by score from highest to lowest. Objects that better match the model are sent first.
+    **More common and recommended**: It always guarantees parts picking with more reliable identification.
 * - **By Score (Ascending)**
-  - Sorts by score from lowest to highest. Objects with the weakest match to the model are sent first.  
-    **NOT RECOMMENDED**: does not ensure picking starts from the most reliable detections.
+  - Sorts by score from lowest to highest. Objects that worst match the model are sent first.
+    **NOT RECOMMENDED**: It does NOT always guarantee parts picking with more reliable identification.
 * - **By X Coordinate (Ascending)**
-  - Sorts by increasing X coordinate. Useful if the robot prefers sequential picking along one axis.
+  - Sort by ascending X coordinate. Useful if robot has sequential picking preference along one axis.
 * - **By X Coordinate (Descending)**
-  - Sorts by decreasing X coordinate.
+  - Sorts by descending X coordinate.
 * - **By Y Coordinate (Ascending)**
-  - Sorts by increasing Y coordinate.
+  - Sorts by ascending Y coordinate.
 * - **By Y Coordinate (Descending)**
-  - Sorts by decreasing Y coordinate.
+  - Sorts by descending Y coordinate.
 * - **X Alternating**
-  - Alternates ordering along the X axis.
+  - The system alternates the selection of the component between the first and the last one detected on the X-axis. Since the two selected components are far apart, there is less risk that a previous pick has moved parts nearby, ensuring a safer and more reliable pick.
 * - **Y Alternating**
-  - Alternates ordering along the Y axis.
+  - The system alternates component selection between the first and last detected on the Y axis. Same principle as X Alternating: the distance between the two picking points minimises interference caused by accidental movement of adjacent parts.
 ```
 
 ```{tip}
-**Choosing the optimal sorting mode**
+**Choosing the optimal Sorting Mode**
 
 **Recommended in most cases: By Score (Descending)**
 
 **Advantages**:
-- Maximum reliability: the robot always picks the best recognized parts first
-- Reduces the risk of incorrect picks
+- Maximum reliability: robot always picks the best identified parts
+- Reduces risk of incorrect picking
 - Independent of physical position
 ```
 
 ```{note}
-Sorting mode interacts with Max Object Count. The first objects according to the selected criterion are the ones returned.
+Sorting mode interacts with Max Object Count. The first N objects (according to the criteria) are sent.
 ```
-
 (pickableparts)=
-### Pickable parts by the robot - **Robot picks per vision cycle**
+### *Pickable parts by the robot*
 
 **Function**
 
-Statistical parameter indicating how many parts are **actually picked** by the robot for each vision cycle.
+Statistical parameter indicating how many parts are **actually picked up** by the robot per vision cycle.
 
 **Typical values**
 
-- **1**: robot with a single gripper, picks one part at a time
-- **2**: robot with a double gripper or double suction cup
-- **>2**: robot with a multi-pick gripper or suction tool
+- **1**: robot with single gripper, picks up 1 piece at a time
+- **2**: robot with double gripper or double suction cup
+- **>2**: robot with multi-pick gripper or suction cup
 
 ```{important}
-This value represents the **physical picks**, not the number of objects detected by the vision system.
+This value represents the **physical picks**, not the objects detected by vision.
 ```
 
-**Clarifying example**
+**Explanatory example**
 
 Scenario: double gripper, vision detects 5 objects.
 
-- If you want to send a maximum of 2 objects to the robot, set `Max Object Count = 2`.
-- If you want the robot to pick at least 2 objects at a time, set `Min Object Count = 2`.
-- In this case, set `Pickable Parts by the robot = 2`.
-- If you also want to allow picking only one object, set `Max Object Count = 2`, `Min Object Count = 1`, and `Pickable Parts by the robot = 2`.
+- If I want to send the robot a maximum of 2 objects, I set `Max Object Count = 2`.
+- If I want the robot to pick at least 2 objects at a time, I set `Min Object Count = 2`.
+- In this case I set `Pickable Parts by the robot = 2`.
+- If, on the other hand, I also want to allow the pick-up of only one object, I set `Max Object Count = 2`, `Min Object Count = 1` and `Pickable Parts by the robot = 2`.
 
 **Impact on Dashboard statistics**
 
-This parameter is crucial for accurate **Parts Per Minute (PPM)** calculation.
+This parameter is crucial for the accurate calculation of **Parts Per Minute (PPM)**.
 
 - Formula: `PPM = (Pickable parts x 60) / Total cycle time in seconds`
-- If set incorrectly, the displayed PPM will not reflect reality
+- If set incorrectly, the PPM displayed will not match reality
 
-(maxprocessingtime)=
-### Maximum processing time per part
 
-```{list-table}
-* - **Function**:
-  - Reference time in seconds used by the system to determine when a cycle is considered complete and when to switch from RUN to IDLE.
-
-* - **Typical values:**
-  -
-    - Set the value slightly above the real robot handling time per part
-    - Increase it if the robot performs complex movements or waiting phases
-
-* - **How to calculate it**:
-  -
-    - Measure the average handling time per part, from coordinate receipt to completed pick
-    - Add a small safety margin to cover normal variability
-
-* - **Impact on Dashboard processing time**
-  -
-    - Influences productivity metrics and displayed cycle statistics
-    - If set too low, cycles may appear artificially short
-    - If set too high, cycle closure may appear delayed in statistics
-```
 
 ---
 
-## Saving the configuration
+## Save Configuration
 
 ```{warning}
-**Saving is mandatory**
+**Saving mandatory**
 
 After configuring the Protocol Setup parameters:
 
-1. Verify that all values are set correctly
-2. Click **Recipes > Save Recipe**
+1. Check that all values are set correctly
+2. Click Recipes > Save Recipe
 3. The parameters are saved in the system configuration
 ```
 
 ---
 
-## Next steps
+## Next Steps
 
-Once Protocol Setup is complete, the system is fully configured for operation:
+Once Protocol Setup is completed, the system is fully configured for operation:
 
-**-> [Verify Results (Dashboard)](../24_Verifica_Risultati.md)** - production monitoring and configuration validation
+- [Save Recipe](ricettabase)
+
+
+
+
+

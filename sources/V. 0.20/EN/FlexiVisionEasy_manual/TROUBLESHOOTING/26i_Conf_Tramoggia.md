@@ -1,4 +1,4 @@
-(troubleshooting_conf_tramoggia)=
+﻿(troubleshooting_conf_tramoggia)=
 # **Hopper Configuration** 
 ```{list-table}
 :header-rows: 1
@@ -8,65 +8,65 @@
   - Possible Causes
   - Solutions
 
-* - **Control area cannot be defined**
-  - • Image not acquired
+* - **Control area not definable**
+  - • Image not captured
     
     • Wrong section
-  - • Acquire test image
+  - • Capture test image
     
-    • Access through Config Hopper X
+    • Access via Config Hopper X
 
 
 * - **AUTO does not calculate Mean and Std Dev correctly**
-  - • CAPTURE not performed
+  - • CAPTURE not executed
     
-    • CAPTURE order reversed
+    • Reverse CAPTURE order
     
     • Control area too small
-  - • Perform empty CAPTURE then full CAPTURE
+  - • Run CAPTURE empty then CAPTURE full
     
     • Repeat in the correct order
     
-    • Enlarge the control area
-* - **TEST always GREEN (hopper never activates)**
-  - • Threshold too permissive
+    • Enlarge control area
+* - **TEST always GREEN (hopper never switches on)**
+  - • Threshold too large
     
-    • Full CAPTURE with too many components
+    • CAPTURE full with too many components
     
-    • Incorrect calculated Mean
-  - • Repeat full CAPTURE with the correct minimum number
+    • Wrong calculated mean
+  - • Repeat CAPTURE full with correct minimum number
     
-    • Verify that AUTO recalculates correctly
+    • Check AUTO recalculates correctly
     
-    • Manually adjust the threshold if necessary
-* - **TEST always RED (hopper always activates)**
+    • Adjust threshold manually if necessary
+* - **TEST always RED (hopper always switches on)**
   - • Threshold too restrictive
     
-    • Empty CAPTURE with components present
+    • CAPTURE empty with components present
     
-  - • Repeat empty CAPTURE with a completely clean area
+  - • Repeat CAPTURE empty with completely clean area
     
     • Repeat AUTO
 
-* - **Vibration time does not produce the desired effect**
+* - **Time vibration does not produce desired effect**
   - • Value too low
     
     • Value too high 
     
-    • Variable hopper bowl level
+    • Variable hopper tank level
   - • Start with 500ms
     
-    • Increase by ±100ms to adjust the flow
+    • Increase ±100ms to adjust flow
     
-    • **CRITICAL**: Maintain a constant load in the bowl
+    • **CRITICAL**: Maintain a constant load in the tank
 
-* - **Hopper discharges at the wrong times**
-  - • Incorrect Steps
+* - **Hopper unloaded at wrong time**
+  - • Steps not correct
 
-    • Hopper Controller hardware not configured correctly 
+    • Hopper Controller Hardware not configured properly 
 
   - • Recalculate Steps
 
-    • Check the configuration specifications in the [dedicated Hopper manual]() 
+    • Check the configuration specifications in the [hopper manual]() 
 ```
 
