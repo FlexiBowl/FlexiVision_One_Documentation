@@ -86,7 +86,7 @@
 (cablaggio_illuminatore)=
 ## Illuminator wiring
 
-![Toplight Pin](../../../../_shared/media/images/pin_toplight.png)
+![Toplight Pin](../../../../_shared/media/images/pin_toplight1.png)
 
 ```{list-table} 
 :header-rows: 1

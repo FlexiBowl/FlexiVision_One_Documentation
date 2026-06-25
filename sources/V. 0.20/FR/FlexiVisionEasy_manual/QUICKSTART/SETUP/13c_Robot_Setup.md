@@ -118,13 +118,13 @@ Après la reconfiguration, vérifier que le serveur est actif :
 ```{list-table}
 
 * - **7**
-  - Observer l'indicateur **Server Online :**
-   - **Vert** : Serveur actif
-     **Rouge** : Serveur non actif
+  - Observer l'indicateur **Server Online :**  
+   - **Vert** : Serveur actif  
+     **Rouge** : Serveur non actif  
 * - **8**
   - après avoir lancé le programme à partir du robot, observer l'indicateur **Client Online :**
-   - **Vert** : robot connecté
-     **Rouge** : robot non connecté
+   - **Vert** : robot connecté  
+     **Rouge** : robot non connecté  
 
 ```
 ```{note}

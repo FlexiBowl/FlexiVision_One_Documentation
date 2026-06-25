@@ -223,7 +223,7 @@ Spezifikationen des Kameranetzkabels
 :align: center
 :width: 50%
 ```
-```{dropdown} Obiettivo 35mm
+```{dropdown} Objektiv 35mm
 | Parameter | Referenzvergrößerung | M.O.D. |
 |------------|-----------------------------|--------|
 | **Linsentyp** | CCTV Lens | CCTV Lens |
@@ -249,7 +249,7 @@ Spezifikationen des Kameranetzkabels
 | **Bildkreis (mm)** | φ11 | φ11 |
 | **Maximal kompatible Kamera** | 2/3" | 2/3" |
 ```
-```{dropdown} Obiettivo 25mm
+```{dropdown} Objektiv 25mm
 | Parameter | Referenzvergrößerung | M.O.D. |
 |-----------|:----------------------------:|:------:|
 | **Linsentyp** | CCTV Lens | CCTV Lens |
@@ -275,7 +275,7 @@ Spezifikationen des Kameranetzkabels
 | **Bildkreis (mm)** | φ11 | φ11 |
 | **Maximal kompatible Kamera** | 2/3" | 2/3" |
 ```
-```{dropdown} Obiettivo 16mm
+```{dropdown} Objektiv 16mm
 | Parameter | Referenzvergrößerung | M.O.D. |
 |-----------|:----------------------------:|:------:|
 | **Linsentyp** | CCTV Lens | CCTV Lens |
@@ -301,7 +301,7 @@ Spezifikationen des Kameranetzkabels
 | **Bildkreis (mm)** | φ11 | φ11 |
 | **Maximal kompatible Kamera** | 2/3" | 2/3" |
 ```
-```{dropdown} Obiettivo 12mm
+```{dropdown} Objektiv 12mm
 | Parameter | Referenzvergrößerung | M.O.D. |
 |-----------|:----------------------------:|:------:|
 | **Linsentyp** | CCTV Lens | CCTV Lens |

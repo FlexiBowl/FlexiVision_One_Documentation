@@ -37,16 +37,16 @@ Por ello, se divide en macrosecciones con destinatarios y propósitos distintos.
   - La información puede encontrarse en...
 
 * - Compruebe las dimensiones, pesos, requisitos eléctricos y protocolos de comunicación
-  - [**REFERENCIA TÉCNICA Y ESPECIFICACIONES**](lock id=)
+  - [**REFERENCIA TÉCNICA Y ESPECIFICACIONES**](specifiche_tecniche)
 
 * - Instalar los componentes, cablear el sistema, configurar la red o calibrar la cámara/robot
-  - [**INSTALACIÓN DEL SISTEMA**](lock id=) e [**INICIO RÁPIDO**](lock id=)
+  - [**INSTALACIÓN DEL SISTEMA**](Installazione_Meccanica) e [**INICIO RÁPIDO**](setupcomponenti)
 
 * - Programación de un nuevo modelo de pieza o configuración del sistema de alimentación
   - [**INICIO RÁPIDO**](setupcomponenti)
 
 * - Solución de problemas o solicitud de asistencia
-  - [**SOLUCIÓN DE PROBLEMAS**](lock id=) e [**APOYO**](lock id=)
+  - [**SOLUCIÓN DE PROBLEMAS**](troubleshooting) e [**APOYO**](support)
 ```
 ## **Grupos de intervención y responsabilidades**
 

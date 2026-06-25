@@ -149,7 +149,7 @@ Wenn eine der Anzeigen rot leuchtet, überprüfen Sie Folgendes:
   - Die Kommunikationsparameter werden automatisch gespeichert
 
 * - **11**
-  - Kehren Sie zur **SETUP-**Hauptseite zurück
+  - Kehren Sie zur **SETUP** Hauptseite zurück
 ```
 
 ---

@@ -2,7 +2,7 @@
 # **Botones INFO**
 En cada una de las secciones operativas hay un botón INFO en la esquina superior derecha.
 Una explicación del procedimiento paso a paso está disponible en este botón, el mismo procedimiento se puede ver en el video tutorial.
-```{dropdown} Botón de información de la página [Camera FLB](cameraFLB)
+```{dropdown} Botón Info de la página [Camera FLB](cameraFLB)
 
    :::{video} ../../../../_shared/media/videos/TastoInfo_CameraFLB_1280x720.mp4
    :width: 100%
@@ -11,7 +11,7 @@ Una explicación del procedimiento paso a paso está disponible en este botón, 
 
 ```
 
-```{dropdown} Botón Info en la página [Calibración](calibrazione)
+```{dropdown} Botón Info de la página [Calibración](calibrazione)
 
    :::{video} ../../../../_shared/media/videos/TastoInfo_Calibration_1280x720.mp4
    :width: 100%

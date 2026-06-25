@@ -1,5 +1,5 @@
 (calibrazione)=
-# **Calibrazión de la cámara y el robot**
+# **Calibración de la cámara y el robot**
 
 La calibración es el paso crucial que establece la relación geométrica exacta entre el mundo real (coordenadas en milímetros) y la imagen captada por la cámara (píxeles). Sin una calibración precisa, la precisión del sistema de picking se ve comprometida, lo que hace que toda la aplicación no sea fiable.
 

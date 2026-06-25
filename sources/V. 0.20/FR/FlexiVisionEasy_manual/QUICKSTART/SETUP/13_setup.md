@@ -75,7 +75,8 @@ FlexiVision One supporte plusieurs profils d'utilisateurs avec différents nivea
 
 Après la première connexion, s’il faut activer la licence FlexiVision One, suivre les étapes suivantes :
 
-```{list-table}
+````{list-table}
+
 * - **4** 
   - Depuis la page principale du logiciel, cliquer sur <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
 * - **5**
@@ -88,20 +89,20 @@ Après la première connexion, s’il faut activer la licence FlexiVision One, s
 * - **7**
   - Saisir l'adresse IP du FlexiBowl® (par défaut&nbsp;: `192.168.1.10` )
 * - **8**
-  Après avoir saisi l'adresse IP, cliquer sur le bouton **Connection** **Test**
+  - Après avoir saisi l'adresse IP, cliquer sur le bouton **Connection** **Test**
 * - **9**
-  Le système effectue un test de communication (ping) avec le FlexiBowl®.
+  - Le système effectue un test de communication (ping) avec le FlexiBowl®.
 * - **10**
   - Observer l'indicateur de **Statut** :
-    - 🟢 **Vert** : Connexion établie avec succès
-    - 🔴 **Rouge :** Échec de la connexion (vérifier l'adresse IP et le câblage)
+    - 🟢 **Vert** : Connexion établie avec succès  
+    - 🔴 **Rouge :** Échec de la connexion (vérifier l'adresse IP et le câblage)  
 * - **11** 
   - Cliquer sur le bouton <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl" >
 * - **12**
   - Une fenêtre s'ouvre avec les paramètres configurables du FlexiBowl®
 * - **13**
   - Activer le rétro-éclairage en cochant la case «&nbsp;Light ON ».
-```
+````
 
 ---
 

@@ -239,10 +239,10 @@ Los gráficos de la parte inferior del cuadro de mandos permiten realizar análi
         ✓ Ningún cuello de botella crítico  
 
     * - **PPM en disminución progresiva**:
-      - 
-        ⚠️ Posible desgaste de componentes (superficie de agarre de FlexiBowl®)  
-        ⚠️ Hopper que se vacía 
-        ⚠️ Acumulación de suciedad en la cámara/iluminación  
+      -   
+        ⚠️ Posible desgaste de componentes (superficie de agarre de FlexiBowl®)    
+        ⚠️ Hopper que se vacía   
+        ⚠️ Acumulación de suciedad en la cámara/iluminación    
 
     * - **PPM con fluctuaciones amplias**:
       - 

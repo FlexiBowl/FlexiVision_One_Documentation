@@ -240,9 +240,9 @@ Les graphiques situés en bas du tableau de bord permettent une analyse prédict
 
     * - **PPM progressivement décroissant** :
       - 
-        ⚠️ Usure possible des composants (surface de préhension du FlexiBowl®)  
-        ⚠️ Trémie qui se vide 
-        ⚠️ Accumulation de saleté sur la caméra/l'éclairage  
+        ⚠️ Usure possible des composants (surface de préhension du FlexiBowl®)     
+        ⚠️ Trémie qui se vide   
+        ⚠️ Accumulation de saleté sur la caméra/l'éclairage    
 
     * - **PPM avec de fortes fluctuations** :
       - 
