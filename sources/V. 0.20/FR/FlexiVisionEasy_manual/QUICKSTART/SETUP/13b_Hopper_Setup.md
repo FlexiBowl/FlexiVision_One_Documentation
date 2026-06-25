@@ -1,131 +1,120 @@
 (hoppersetup)=
-# **Passo 5: Hopper Setup**
+# **Hopper Setup**
 
-Questa sezione descrive la procedura per configurare la tramoggia (Hopper). L'Hopper è il componente che alimenta automaticamente pezzi sul FlexiBowl quando il livello scende sotto una soglia minima.
+Cette section décrit la procédure de configuration de la trémie. La trémie est le composant qui alimente automatiquement le FlexiBowl® en pièces lorsque le niveau tombe en dessous d'un seuil minimum.
 
+:::{important}  **Logique de fonctionnement**  
+
+FlexiVision gère la logique d'activation de la trémie. Il enverra en effet la chaîne `Hopper;signalnumber;time` lorsqu'il jugera l'activation nécessaire. 
+:::
 ```{note}
-**Prerequisiti**
+**Conditions préalables**
 
-Prima di procedere, assicurarsi che:
-- L'Hopper sia stata installata meccanicamente 
-- I collegamenti elettrici siano stati completati (segnali di controllo e alimentazione)
-- Il FlexiBowl sia già connesso
+Avant de poursuivre, s'assurer que :
+- La trémie a été installée mécaniquement
+- Les branchements électriques sont terminés (signaux de contrôle et d'alimentation électrique)
+- Le FlexiBowl® est déjà connecté
 ```
 ---
+## Préparation de l'installation physique
 
-## Accesso alla configurazione Hopper
+````{list-table}
+* - **0**
+  - Retirer la grille d'étalonnage et rétablir la disposition initiale :
+    - Repositionner la surface
+    - Repositionner la bride centrale
+    - Fixer la bride centrale avec ses quatre vis
+````
+---
+## Accès à la configuration Hopper
 
 ```{list-table}
 * - **1** 
-  - Dalla pagina principale del software, cliccare su <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
+  - Depuis la page principale du logiciel, cliquer sur <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
 * - **2**
-  - Nella pagina SETUP, identificare e cliccare sull'icona **Hopper Setup**
-    ```{dropdown} Pagina Setup 
-       ![Pagina Setup](../../../../../_shared/media/images/pagina_setup1.png)
+  - Sur la page SETUP, identifier et cliquer sur l'icône **Hopper Setup**
+    ```{dropdown} Page Setup 
+       ![Page Setup](../../../../../_shared/media/images/pagina_setup1.png)
     ```
 * - **3** 
-  - Si apre la pagina di configurazione dell'Hopper
+  - La page de configuration du Hopper s'ouvre
 ```
 
 ---
 
-## Panoramica interfaccia Hopper Setup
+## Aperçu de l'interface Hopper Setup
 
-La pagina Hopper Setup presenta diverse sezioni per la configurazione dei parametri operativi delle varie tramogge:
+La page Hopper Setup comporte plusieurs sections permettant de configurer les paramètres de fonctionnement des différentes trémies :
 
-![Pagina Hopper Setup](../../../../../_shared/media/images/pagina_hoppersetup.png)
+![Page Hopper Setup](../../../../../_shared/media/images/pagina_hoppersetup.png)
 
 ```{list-table}
 :header-rows: 1
 :widths: 30 70
 
-* - Sezione
-  - Descrizione
+* - Section
+  - Description
 * - **Enable Hopper**
-  - Interruttore per abilitare/disabilitare l'utilizzo dell'Hopper nel sistema
+  - Interrupteur pour activer/désactiver l'utilisation du Hopper dans le système
 * - **Steps**
-  - Numero di sequenze necessarie con cui la sezione del disco che attualmente si trova nell'area di visione, arriva sotto l'area di scarico della tramoggia
+  - Nombre de séquences nécessaires pour que la section du disque qui se trouve actuellement dans la zone de visualisation parvienne sous la zone de déchargement de la trémie
 * - **Time**
-  - Durata dell'attivazione della tramoggia in millisecondi
+  - Durée de l'activation de la trémie en millisecondes
 * - **Signal**
-  - Numero del segnale digitale utilizzato per controllare l'Hopper
+  - Numéro du signal numérique utilisé pour contrôler la trémie
 * - **Config Hopper**
-  - Pulsante per configurare la tramoggia (da utilizzare in seguito)
-```
----
-
-## Procedura di configurazione
-
-```{list-table}
-:widths: 10 30 70 
-* - Step 1
-  - Abilitazione Hopper 
-  - Spuntare la checkbox **Enable Hopper**
-* - Step 2
-  - Configurazione Signal 
-  - Nel campo **Signal**, inserire il numero del segnale digitale (DO - Digital Output) utilizzato per controllare l'Hopper
-* - Step 3
-  - Salvataggio e Completamento 
-  - Tornare alla pagina <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon"> principale per procedere con il setup successivo
+  - Bouton pour configurer la trémie (à utiliser ultérieurement)
 ```
 
-```{important}
-
-Abilitare l'Hopper solo se il dispositivo è correttamente installato
-
-```
-
-```{warning}
-
-È fondamentale inserire il numero di segnale corretto:
-- Un numero errato attiverà il segnale sbagliato (potenzialmente pericoloso)
-- Consultare lo schema elettrico realizzato durante l'installazione
-- In caso di dubbio, contattare chi ha effettuato il cablaggio
-```
-
-```{tip}
-
-I parametri impostati in questa fase sono sufficienti per la configurazione iniziale del sistema.
-Durante la procedura andremo poi a definire gli altri aspetti della configurazione della tramoggia.
-```
 
 ---
 (confighopper)=
-# **Configurazione della Tramoggia (Hopper)**
+# **Configuration de la trémie (Hopper)**
 
-La configurazione della tramoggia permette di gestire il rifornimento automatico dei componenti sul disco del FlexiBowl®. Il sistema utilizza la visione per determinare quando il livello di riempimento è insufficiente e attivare la tramoggia.
+La configuration de la trémie permet le réapprovisionnement automatique des composants sur le disque FlexiBowl®. Le système utilise la vision pour déterminer si le niveau de remplissage est insuffisant et activer la trémie.
 
-## **Step 1: Accesso alla Configurazione**
+## Étape 1 : Accès à la configuration
 ```{list-table}
 * - **1**
-  - Cliccare sulla sezione <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
-* - **2**
-  - Dalla sezione **Hopper Setup**, è possibile visualizzare e gestire le unità di carico collegate.
+  - Cliquer sur <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">.   
+    La section **Hopper Setup** permet de visualiser et gérer les unités de charge connectées.
     
-    :::{dropdown} Pagina Hopper Setup 
-    ![Pagina Hooper Setup](../../../../../_shared/media/images/pagina_hoppersetup.png)
+    :::{dropdown} Page Hopper Setup 
+    ![Page Hooper Setup](../../../../../_shared/media/images/pagina_hoppersetup.png)
+    :::
+* - **2**
+  - Dans le champ **Signal**, entrer le numéro du signal numérique (DO - Digital Output) utilisé pour contrôler la trémie
+    :::{warning}
+      Il est essentiel d'entrer le bon numéro de signal :
+      - Un numéro incorrect activera le mauvais signal (potentiellement dangereux)
+      - Se reporter au schéma électrique réalisé lors de l'installation
+      - En cas de doute, contacter la personne qui a réalisé le câblage
     :::
 * - **3**
-  - Selezionare la casella **Enable Hopper X** per attivare la tramoggia corrispondente.
+  - Cocher la case **Enable Hopper X** pour activer la trémie correspondante.
+      :::{important}
+      N'activer la trémie que si l'appareil est correctement installé
+      :::
 * - **4**
-  - Cliccare sul pulsante **Config Hopper X** per accedere alla configurazione specifica 
+  - Cliquer sur le bouton **Config Hopper X** pour accéder à la configuration spécifique 
 ```
-## **Step 2: Definizione dell'Area di Controllo**
+## Étape 2 : Définition de la zone de contrôle
 
 :::{video} ../../../../../_shared/media/videos/TastoInfo_AreaHopper_1280x720.mp4
     :width: 100%
     :align: center
 :::
 
-In questa fase si definisce la porzione di disco che la telecamera deve monitorare per lo scarico.
+À ce stade, la partie du disque que la caméra doit surveiller pour le déchargement est définie.
 ```{list-table}
 * - **5**
-  - Modificare il riquadro blu a schermo per inquadrare l'area in cui verranno rilevati i componenti.
-   **Strumenti di supporto**:
-      * **Info**: Cliccare per visualizzare dettagli sulle funzionalità della pagina.
+  - Modifier le cadre bleu de l'écran pour encadrer la zone où les composants seront détectés.
 ```
+:::{tip}
+En cas de doutes lors de la configuration, veuillez consulter le bouton **INFOS** sur la page actuelle.
+:::
 
-## **Step 3: Definizione dei Valori di Soglia**
+## Étape 3 : Définition des valeurs seuils
 
 :::{video} ../../../../../_shared/media/videos/TastoInfo_Hopper_1280x720.mp4
 :width: 100%
@@ -133,208 +122,134 @@ In questa fase si definisce la porzione di disco che la telecamera deve monitora
 :::
 ```{list-table}
 * - **6**
-  - Cliccare <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon icon-small"> per accedere alla pagina **Define Value Hopper Cam**, dove si istruisce il sistema a distinguere tra disco vuoto e disco pieno.
-    :::{dropdown} Pagina Define Value Hopper Cam 
-    ![Pagina Define Value Hopper Cam](../../../../../_shared/media/images/pagina_valuehopper.png)
+  - Cliquer sur <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon icon-small"> pour accéder à la page **Define Value Hopper Cam**, où vous indiquez au système de faire la distinction entre un disque vide et un disque plein.
+    :::{dropdown} Page Define Value Hopper Cam 
+    ![Page Define Value Hopper Cam](../../../../../_shared/media/images/pagina_valuehopper.png)
     :::
 * - **7**
-  - Rimuovere tutti i componenti dall'area di visione e cliccare sul primo pulsante **CAPTURE**.
+  - Retirer tous les composants de la zone de visualisation et cliquer sur le premier bouton **CAPTURE**.
 * - **8**
-  - Posizionare il numero minimo di componenti che si desidera mantenere in area di visione. Se il numero scende sotto questa soglia, la tramoggia si attiverà.
+  - Placer le nombre minimum de composants à conserver dans la zone de visualisation. Si le nombre est inférieur à ce seuil, la trémie est activée.
 * - **9**
-  - Cliccare sul secondo pulsante **CAPTURE**.
+  - Cliquer sur le deuxième bouton **CAPTURE**.
 * - **10**
-  - Cliccando su <img src="../../../../../_shared/media/images/tasto_AUTO.png" class="inline-icon"> nell'Expression Builder, il sistema calcola automaticamente i valori di **Mean** (Media) e **Standard Deviation**.
+  - En cliquant sur <img src="../../../../../_shared/media/images/tasto_AUTO.png" class="inline-icon"> dans l'Expression Builder (générateur d'expression), le système calcule automatiquement les valeurs de **Mean** (moyenne) et **Standard Deviation**.
 * - **11**
-  - Rimuovere alcuni pezzi e cliccare su <img src="../../../../../_shared/media/images/tasto_TEST.png" class="inline-icon">. 
+  - Enlever quelques pièces et cliquer sur <img src="../../../../../_shared/media/images/tasto_TEST.png" class="inline-icon">. 
 * - **12**
-  - Osservare l'indicatore risultato:
-    - **Verde** 🟢: Livello insufficiente, Hopper si attiva (scarico necessario)
-    - **Rosso** 🔴: Livello sufficiente, Hopper NON si ATTIVA (OK)
+  - Observer l'indicateur de résultat :
+    - **Vert** 🟢: Niveau insuffisant, la trémie est activée (déchargement nécessaire)
+    - **Rouge** 🔴: Niveau suffisant, la trémie NE S'ACTIVE PAS (OK)
 
       :::{warning}
-      **Calibrazione insufficiente**
+      **Étalonnage insuffisant**
 
-      Se il sistema non rileva correttamente il livello:
+      Si le système ne détecte pas le niveau correctement :
 
-      **Problema: Sempre verde (attiva sempre Hopper)**  
-      → Soglia troppo bassa o interferenze nell'area  
-      → Soluzione: Aumentare numero pezzi nella seconda acquisizione, verificare pulizia area  
+      **Problème : Toujours vert (active toujours la trémie)**  
+      → Seuil trop bas ou interférences dans la zone  
+      → Solution : Augmenter le nombre de pièces lors de la deuxième acquisition, vérifier la propreté de la zone  
 
-      **Problema: Sempre rosso (non attiva mai Hopper)**  
-      → Soglia troppo alta o area monitoraggio non rappresentativa  
-      → Soluzione: Ridurre numero pezzi nella seconda acquisizione CAPTURE, ripetere AUTO  
+      **Problème : Toujours rouge (n'active jamais la trémie)**  
+      → Seuil trop élevé ou zone de surveillance non représentative  
+      → Solution : Réduire le nombre de pièces lors de la deuxième acquisition CAPTURE, répéter AUTO  
 
-      **Problema: Comportamento errato (alterna verde/rosso casualmente)**  
-      → Illuminazione instabile o area troppo piccola  
-      → Soluzione: Verificare backlight stabile, ingrandire area monitoraggio, ripetere calibrazione  
+      **Problème : Comportement incorrect (alternance aléatoire vert/rouge)**  
+      → Éclairage instable ou surface trop petite  
+      → Solution : Vérifier la stabilité du rétroéclairage, agrandir la zone de surveillance, répéter l'étalonnage  
       :::
 ```
-```{note}  
-**Fill Hopper Threshold** = ... 
-```
-## **Step 4: Parametri Operativi**
+```{note}
+**Hopper Fill Threshold**
 
-Tornare alla schermata principale di Hopper Setup per definire il comportamento meccanico.
-![Pagina Hopper Setup](../../../../../_shared/media/images/pagina_hoppersetup.png)
-```{list-table} Parametri di Funzionamento
+Le paramètre **Hopper Fill Threshold** définit le seuil en pourcentage de remplissage en dessous duquel la trémie est automatiquement activée.
+
+La valeur de 100 % correspond à la quantité de pièces acquises lors de la deuxième CAPTURE (surface complète). Par conséquent, un seuil de 50 % correspond à la moitié de cette quantité.
+
+Le système fixe automatiquement la valeur initiale à **70 %**, ce qui constitue un bon équilibre pour la plupart des applications.
+
+**Modification en cours**
+
+Il est possible d'ajuster le seuil sans répéter la procédure d'acquisition :
+
+- Pour décharger **moins de pièces** → réduire le pourcentage (par exemple 50 %) et cliquer sur **AUTO**
+- Pour décharger **plus de pièces** → augmenter le pourcentage (par exemple 85 %) et cliquer sur **AUTO**
+
+```
+
+:::{tip}
+En cas de doutes lors de la configuration, veuillez consulter le bouton **INFOS** sur la page actuelle.
+:::
+
+## Étape 4 : Paramètres opérationnels
+
+Revenir à l'écran principal de Hopper Setup pour définir le comportement mécanique.
+![Page Hopper Setup](../../../../../_shared/media/images/pagina_hoppersetup.png)
+```{list-table} Paramètres de fonctionnement
 :widths: 20 80
 :header-rows: 1
 
-* - **Parametro**
-  - **Descrizione e Procedura**
+* - **Paramètre**
+  - **Description et procédure**
 * - **Steps**
-  - Numero di avanzamenti del FlexiBowl (sequenze) necessari per portare i pezzi dall'area di visione all'area di scarico della tramoggia.
-
-    :::{note}
-    **Come calcolarlo:**
-
-    :::::{list-table}
-
-    * - 1.
-      - Svuotare completamente il disco FlexiBowl
-    * - 2.
-      - Lasciare un componente al centro dell'area di visione
-    * - 3.
-      - Eseguire sequenze FlexiBowl fino a che il componente non arriva all'area di scarico della tramoggia e contare quanti avanzamenti sono stati necessari 
-    * - 4.
-      - Il risultato del conteggio è il valore da inserire in **Steps**
-    :::::
-    :::
-
+  - Nombre d'avancements du FlexiBowl® (séquences) nécessaires pour amener les pièces de la zone de visualisation à la zone de déchargement de la trémie.
 * - **Time**
-  - Millisecondi di attivazione della tramoggia.   Valore consigliato: **100 – 1000 ms** (Media: **500 ms**). Regolare di ±50 ms in base al flusso desiderato.
+  - Millisecondes d'activation de la trémie.   Valeur recommandée : **100 – 1000 ms** (moyenne : **500 ms**). Ajuster de ±50 ms selon le débit désiré.
 ```
 ```{tip}
-   Il tempo di attivazione dipende non solo dal valore impostato, ma anche dal volume di componenti attualmente presenti nella vasca della tramoggia. È essenziale mantenere un carico costante per un flusso uniforme.
+   Le temps d'activation dépend non seulement de la valeur réglée, mais aussi du volume des composants présents dans la cuve de la trémie. Il est essentiel de maintenir une charge constante pour obtenir un débit régulier.
 ```
 ```{tip}
-Il valore Time è strettamente connesso al volume di carico della tramoggia: 
-- Con tramoggia piena si avrà un maggior numero di pezzi nell'area di scarico 
-- Con tramoggia semipiena si avrà un minor numero di pezzi nell'area di scarico 
+La valeur Time est étroitement liée au volume de chargement de la trémie : 
+- Avec une trémie pleine, il y aura plus de pièces dans la zone de déchargement 
+- Avec une trémie à moitié pleine, il y aura moins de pièces dans la zone de déchargement 
 
-Un tempo di attivazione efficace dipende da:
-  :::{list-table}
-  :header-rows: 1
-
-  * - **Peso del pezzo** (*)
-    - **Comportamento del pezzo**
-    - **Volume di carico della Tramoggia**
-    - **Time consigliato**
-
-  * - **Pezzi pesanti**
-    - 
-      - Si incastrano 
-      - Non si incastrano
-    - 
-      - Meno del 30% (<30%)
-      - Compreso tra 50% e 80% (>50% e <80%)
-    - 
-      - Time maggiore di 600 ms
-      - Time maggiore di 600 ms
-
-  * - **Pezzi leggeri**
-    - 
-      - Si incastrano 
-      - Non si incastrano
-    - 
-      - Meno del 30% (<30%)
-      - Compreso tra 50% e 80% (>50% e <80%)
-    - 
-      - Time compreso tra 100-500 ms
-      - Time compreso tra 100-500 ms
-  :::
-
- **Best practice generale**: Mantenere la tramoggia costantemente piena per >50% e <80% per ottenere un flusso uniforme
-
- (*) Per **peso del pezzo** si intende relativo alla dimensione della tramoggia utilizzata.
 ```
 :::{important}
-In generale, è importante non superare mai il carico massimo della tramoggia utilizzata. 
+En général, il est important de ne jamais dépasser la charge maximale de la trémie utilisée. 
 :::
 
-## Salvataggio Configurazione
-```{warning}
-**Salvataggio ricetta obbligatorio**
+### *Calculer le paramètre Steps*
 
-Al termine della configurazione Hopper:
+![Première page Steps](../../../../../_shared/media/images/Steps1.png)
+![Deuxième page Steps](../../../../../_shared/media/images/Steps2.png)
+![Troisième page Steps](../../../../../_shared/media/images/Steps3.png)
+![Quatrième page Steps](../../../../../_shared/media/images/Steps4.png)
+
+## Sauvegarde de la configuration
+```{warning}
+**Sauvegarde obligatoire de recette**
+
+À la fin de la configuration de la trémie :
 
   :::{list-table}
     * - 1. 
-      - Verificare che tutti i parametri siano configurati correttamente:
-        - Area monitoraggio posizionata
-        - Soglie calibrate (TEST funzionante)
-        - Steps e Time impostati
+      - Vérifier que tous les paramètres sont correctement configurés :
+        - Zone de surveillance positionnée
+        - Seuils calibrés (TEST fonctionnel)
+        - Steps et Time réglés
     * - 2. 
-      - Tornare alla pagina principale <img src="../../../../../_shared/media/images/tasto_recipes.png" class="inline-icon icon-small">
+      - Revenir à la page principale <img src="../../../../../_shared/media/images/tasto_recipes.png" class="inline-icon icon-small">
     * - 3. 
-      - Cliccare su <img src="../../../../../_shared/media/images/tasto_save_recipes.png" class="inline-icon icon-small">
+      - Cliquer sur <img src="../../../../../_shared/media/images/tasto_save_recipes.png" class="inline-icon icon-small">
     * - 4. 
-      - Confermare il salvataggio
+      - Confirmer la sauvegarde
   :::
-**IMPORTANTE**: Ogni variazione apportata viene memorizzata **SOLO** se la ricetta viene salvata correttamente prima di uscire o cambiare pagina.
+**IMPORTANT** : Toute modification apportée n'est enregistrée **QUE** si la recette est correctement sauvegardée avant de quitter ou de changer de page.
 
-Senza salvataggio, tutte le configurazioni Hopper verranno perse alla chiusura di FlexiVision One!
+Sans sauvegarde, toutes les configurations de Hopper seront perdues à la fermeture de FlexiVision One !
 ```
 
 ---
 
-## Troubleshooting Hopper
 
-### Problemi comuni e soluzioni
-```{warning}
-**Hopper non si attiva mai**
+## Étapes suivantes
 
-**Sintomi**: Disco si svuota ma Hopper non scarica
+Une fois que la configuration de la trémie est terminée (ou ignorée si elle n'est pas présente), passer à :
 
-**Cause possibili:**
-- Soglia configurata troppo bassa (sistema pensa sia sempre pieno)
-- Area monitoraggio mal posizionata (non rappresentativa)
-- Enable Hopper disabilitato
-
-**Soluzioni:**
-1. Verificare Enable Hopper attivo
-2. Ripetere calibrazione soglie con più pezzi nella seconda acquisizione
-3. Spostare area monitoraggio in zona più rappresentativa
-4. Eseguire TEST manualmente per verificare trigger
-```
-```{warning}
-**Hopper si attiva troppo frequentemente**
-
-**Sintomi**: Hopper scarica continuamente, disco si riempie eccessivamente
-
-**Cause possibili:**
-- Soglia configurata troppo alta
-- Time di scarico troppo lungo
-- Area monitoraggio in zona sempre vuota
-
-**Soluzioni:**
-1. Ridurre soglia (meno pezzi nella seconda acquisizione CAPTURE)
-2. Ridurre Time (durata vibrazione) di 100-200 ms
-3. Verificare posizionamento area monitoraggio
-```
-```{warning}
-**Pezzi scaricati non arrivano in tempo**
-
-**Sintomi**: Robot trova disco vuoto subito dopo attivazione Hopper
-
-**Cause possibili:**
-- Steps troppo pochi (pezzi non hanno tempo di arrivare)
-- Sequenze FlexiBowl non efficaci
-- Ostruzione percorso scarico
-
-**Soluzioni:**
-1. Aumentare Steps di 1-2 unità
-2. Verificare parametri Config FlexiBowl (velocità, angolo)
-3. Ispezionare fisicamente percorso scarico Hopper → Disco
-```
-
----
-## Passi successivi
-
-Una volta completato l'Hopper Setup (o saltato se non presente), procedere con:
-
-**[Passo 6: Robot Setup](13c_Robot_Setup.md)** - Configurazione comunicazione con il robot
+- [Robot Setup](13c_Robot_Setup.md)
+- [Protocol Setup](protocol_setup)
+- [Sauvegarder la recette](ricettabase)
 
 
 

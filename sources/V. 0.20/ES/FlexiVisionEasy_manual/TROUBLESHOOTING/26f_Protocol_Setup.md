@@ -3,8 +3,8 @@ orphan: true
 ---
 
 (troubleshooting_protocol_setup)=
-# Protocol Setup
+# Configuración del protocolo
 
 ```{note}
-Esta página se mantiene como referencia rápida. Para el procedimiento completo, consultar [Paso 7: Protocol Setup](../QUICKSTART/SETUP/15_Protocol_Setup.md).
+Esta página se mantiene como referencia rápida. Para el procedimiento completo, consulte [Paso 7: Configuración del protocolo](../QUICKSTART/SETUP/15_Protocol_Setup.md).
 ```

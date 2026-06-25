@@ -1,33 +1,32 @@
 # **FlexiVision One Handbuch**
 
-## **Willkommen im FlexiVision One Handbuch!**  
-test Wir freuen uns, Sie bei Ihrer neuen FlexiVision One Anleitung begrüßen zu dürfen!
-Dieses Handbuch wurde eigens erstellt, um Ihnen als klare und zuverlässige Referenz zu dienen. Wir hoffen, dass Sie durch seine Nutzung alle Vorteile unseres Systems vollständig ausschöpfen können.
-Ihre Meinung ist für uns sehr wichtig: Zögern Sie nicht, uns Ihr Feedback zu geben, indem Sie [uns kontaktieren](https://www.flexibowl.it/contatti)! 
+## **Willkommen im Handbuch zu FlexiVision One!**  
+Wir freuen uns, Sie bei Ihrem neuen FlexiVision One-Handbuch willkommen zu heißen!
+Dieses Handbuch wurde speziell als klarer und zuverlässiger Leitfaden für Sie erstellt. Wir hoffen, dass Sie durch die Nutzung dieses Handbuchs alle Vorteile unseres Systems voll ausschöpfen können.
+Ihre Meinung ist uns wichtig: Zögern Sie nicht, uns Ihr Feedback mitzuteilen, [indem Sie uns kontaktieren](https://www.flexibowl.it/contatti)! 
 
-*- Das Team von Ars Automation*    
+*- Das Team von ARS Automation*    
 <a href="https://www.arsautomation.com" target="_blank">
   <img src="../../_shared/static/logo_fv.png" alt="Ars logo" class="only-light img-logo">
   <img src="../../_shared/static/logo_fv_black.png" alt="Ars logo" class="only-dark img-logo">
 </a>
   
 ## **Was ist FlexiVision One?**  
-FlexiVision One ist unsere auf VisionController basierende Bildverarbeitungslösung, die zur Führung des Roboters entwickelt wurde und als Zusatzkomponente für FlexiBowl® Systeme erhältlich ist.
-Unter Beibehaltung aller leistungsstarken Funktionen der vorherigen Version, wodurch das Entladen, Trennen, Erkennen und Entnehmen loser Teile auf der Oberfläche des Zuführsystems ermöglicht wird, revolutioniert FlexiVision One die Benutzererfahrung.
-Dank einer vollständigen Schritt-für-Schritt-Anleitung und intuitiver Werkzeuge haben wir den Prozess stark vereinfacht, sodass Programmierung und Nutzung für jeden zugänglich und verwendbar sind, unabhängig vom Erfahrungsniveau.
+FlexiVision One ist unsere auf dem VisionController basierende Bildverarbeitungslösung, die zur Steuerung des Roboters entwickelt wurde und als Zusatzkomponente für FlexiBowl®-Systeme erhältlich ist.
+FlexiVision One behält alle leistungsstarken Funktionen der Vorgängerversion bei und ermöglicht somit das Entladen, Trennen, Erkennen und Entnehmen von Schüttgut auf der Oberfläche des Zuführers. Gleichzeitig revolutioniert es die Benutzererfahrung.
+Dank einer umfassenden Schritt-für-Schritt-Anleitung und intuitiver Werkzeuge haben wir den Prozess extrem vereinfacht, sodass die Programmierung und Nutzung für jeden zugänglich und nutzbar ist, unabhängig vom Erfahrungsniveau.
 
 ## **Systemübersicht** 
-Beispielhaftes Systemschema mit Verbindungen für bis zu drei FlexiBowl, drei Kameras und drei Hopper.
 
 ```{figure} ../../_shared/media/images/Icon_FlexiVision.png
 :align: center
 :width: 50%
 
-Beispielhaftes Schema des FlexiVision One Systems
+Beispieldiagramm des FlexiVision One-Systems
 ```
-## **So lesen Sie das Handbuch**  
-Dieses Handbuch wurde entwickelt, um sowohl die Phase der Systemplanung und -integration als auch die Installation und Inbetriebnahme im Feld zu unterstützen. 
-Aus diesem Grund ist es in Makroabschnitte mit unterschiedlichen Zielgruppen und Zwecken gegliedert.
+## **Hinweise zum Lesen des Handbuchs**  
+Dieses Handbuch soll sowohl die Planungs- und Systemintegrationsphase als auch die Installation und Inbetriebnahme vor Ort unterstützen. 
+Aus diesem Grund ist es in Makroabschnitte mit unterschiedlichen Zielgruppen und Schwerpunkten unterteilt.
   
 ## **Welchen Abschnitt suchen Sie?**  
 ```{list-table}
@@ -35,59 +34,58 @@ Aus diesem Grund ist es in Makroabschnitte mit unterschiedlichen Zielgruppen und
 :header-rows: 1
 
 * - Wenn Sie...
-  - Die Information befindet sich in...
+  - finden Sie die Informationen unter...
 
-* - Abmessungen, Gewichte, elektrische Anforderungen und Kommunikationsprotokolle prüfen müssen
-  - [**TECHNISCHE REFERENZ UND SPEZIFIKATIONEN**](specifiche_tecniche)
+* - Abmessungen, Gewichte, elektrische Anforderungen und Kommunikationsprotokolle überprüfen möchten
+  - [**TECHNISCHE HINWEISE UND SPEZIFIKATIONEN**](specifiche_tecniche)
 
-* - Komponenten installieren, das System verkabeln, das Netzwerk konfigurieren oder Kamera/Roboter kalibrieren müssen
-  - [**SYSTEMINSTALLATION**](Installazione_Meccanica) und [**QUICKSTART**](quickstart)
+* - Komponenten installieren, das System verkabeln, das Netzwerk konfigurieren oder Kamera/Roboter kalibrieren möchten
+  - [**SYSTEMINSTALLATION**](Installazione_Meccanica) und [**QUICKSTART**](setupcomponenti)
 
-* - Ein neues Teilemodell programmieren oder das Zuführsystem konfigurieren müssen
-  - [**QUICKSTART**](quickstart)
+* - Ein neues Werkstückmodell programmieren oder das Zuführsystem konfigurieren möchten
+  - [**QUICKSTART**](setupcomponenti)
 
-* - Probleme beheben oder Unterstützung anfordern müssen
+* - Probleme beheben oder Support anfordern möchten
   - [**FEHLERSUCHE**](troubleshooting) und [**SUPPORT**](support)
 ```
-## **Arbeitsgruppen und Verantwortlichkeiten**
+## **Aufgabenbereiche und Verantwortlichkeiten**
 
-Die korrekte Implementierung von FlexiVision One erfordert die Zusammenarbeit verschiedener Fachrollen. Diese Tabelle erläutert Rollen und Verantwortlichkeiten:
+Die korrekte Implementierung von FlexiVision One erfordert die Zusammenarbeit verschiedener Fachleute. Diese Tabelle verdeutlicht die Rollen und Verantwortlichkeiten:
 
 ```{list-table}
 :widths: 25 35 40
 :header-rows: 1
 
-* - Fachrolle
-  - Hauptverantwortlichkeiten
-  - Referenzabschnitte des Handbuchs
+* - Fachkraft
+  - Hauptaufgaben
+  - Abschnitte des Referenzhandbuchs
 
 * - **Systemintegrator**
-  - Layoutplanung, Dimensionierung der Komponenten, Prüfung der technischen Anforderungen
-  - Technische Referenz und Spezifikationen, Optionen
+  - Layoutplanung, Dimensionierung der Komponenten, Überprüfung der technischen Anforderungen
+  - Technische Hinweise und Spezifikationen, Optionen
 
 * - **Installationstechniker**
-  - Mechanische Montage, elektrische Verdrahtung, Netzwerkkonfiguration
+  - Mechanische Montage, elektrische Verkabelung, Netzwerkkonfiguration
   - Systeminstallation, Verkabelung und Anschlüsse
 
 * - **Roboterprogrammierer**
-  - Kamera-Roboter-Kalibrierung, Plugin-Integration, Programmierung der Entnahmelogiken
-  - Quickstart, Protocol Setup, Kalibrierung
+  - Kamera-Roboter-Kalibrierung, Plugin-Integration, Programmierung der Aufnahmelogik
+  - Quickstart, Protokoll-Setup, Kalibrierung
 
-* - **Linienbediener**
-  - Erstellung neuer Teilemodelle, Konfiguration der FlexiBowl-Parameter, Leistungsüberwachung
-  - Prüfung der Run-Time-Ergebnisse
+* - **Anlagenbediener**
+  - Erstellung neuer Werkstückmodelle, Konfiguration der FlexiBowl®-Parameter, Überwachen der Leistung
+  - Überprüfung der Laufzeitergebnisse
 
 * - **Wartungstechniker**
-  - Problemdiagnose, Austausch von Komponenten, Softwareaktualisierungen
-  - Neues Modell, FlexiBowl-Konfiguration, Fehlersuche, Support
+  - Fehlerdiagnose, Austausch von Komponenten, Software-Updates
+  - Neues Modell, FlexiBowl®-Konfiguration, Fehlerbehebung, Support
 ```
 
-## **Verwendete Konventionen und Symbole**
+## **Verwendete Begriffe und Symbole**
 
 Im gesamten Handbuch werden Informationsbanner verwendet, um wichtige Inhalte hervorzuheben:
 
 ```{list-table}
-:widths: 20 80
 :header-rows: 1
 
 * - Typ
@@ -96,7 +94,7 @@ Im gesamten Handbuch werden Informationsbanner verwendet, um wichtige Inhalte he
 * - ```{warning}
     Warnung
     ```
-  - Weist auf eine potenziell gefährliche Situation oder ein kritisches Verfahren hin, das bei nicht korrekter Ausführung zu Schäden an der Ausrüstung oder zu schwerwiegenden Systemstörungen führen kann.
+  - Weist auf eine potenziell gefährliche Situation oder einen kritischen Vorgang hin, der bei unsachgemäßer Ausführung zu Schäden am Gerät oder schwerwiegenden Systemfehlern führen kann.
 
 * - ```{important}
     Wichtig
@@ -104,19 +102,19 @@ Im gesamten Handbuch werden Informationsbanner verwendet, um wichtige Inhalte he
   - Hebt grundlegende Informationen hervor, die nicht ignoriert werden dürfen, um den ordnungsgemäßen Betrieb des Systems oder die Sicherheit des Vorgangs zu gewährleisten.
 
 * - ```{note}
-    Informationshinweis
-    ```
-  - Liefert wesentliche Informationen für die korrekte Durchführung des Verfahrens, technische Erläuterungen oder Verweise auf verwandte Kapitel.
-
-* - ```{tip}
     Hinweis
     ```
-  - Empfiehlt eine bewährte Vorgehensweise, eine Alternative oder einen Rat, der die Installation vereinfachen oder die Systemleistung verbessern kann.
+  - Enthält wichtige Informationen für die ordnungsgemäße Durchführung des Vorgangs, technische Erläuterungen oder Verweise auf verwandte Kapitel.
+
+* - ```{tip}
+    Tipp
+    ```
+  - Schlägt eine bewährte Vorgehensweise, eine Alternative oder einen Ratschlag vor, der die Installation vereinfachen oder die Systemleistung verbessern kann.
 
 * - ```{error}
     Fehler
     ```
-  - Weist auf einen kritischen Fehler oder einen Störungszustand hin, der sofortiges Eingreifen erfordert. Kennzeichnet Situationen, die den Systembetrieb beeinträchtigen und Korrekturmaßnahmen erfordern.
+  - Weist auf einen kritischen Fehler oder einen Fehlerzustand hin, der sofortiges Eingreifen erfordert. Weist auf Situationen hin, die den Betrieb des Systems beeinträchtigen und Korrekturmaßnahmen erfordern.
 ```
 
 
@@ -127,7 +125,7 @@ Im gesamten Handbuch werden Informationsbanner verwendet, um wichtige Inhalte he
 
 ```{toctree}
 :hidden:
-:caption: VOR DEM START 
+:caption: BEVOR SIE ANFANGEN 
 
 FlexiVisionEasy_manual/01_informazioni_preliminari.md
 ```  
@@ -153,7 +151,7 @@ FlexiVisionEasy_manual/27b_Glossario.md
 
 ```{toctree}
 :hidden:
-:caption: TECHNISCHE REFERENZ UND SPEZIFIKATIONEN 
+:caption: TECHNISCHE HINWEISE UND SPEZIFIKATIONEN 
 
 FlexiVisionEasy_manual/rif_tecnico_specifiche/04_Specifiche_FlexiVision.md
 ```    
@@ -192,12 +190,35 @@ FlexiVisionEasy_manual/INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.md
   
 ```{toctree}
 :hidden:
-:caption: QUICKSTART
+:caption: ÜBERSICHT ÜBER DIE BENUTZEROBERFLÄCHE
 
-FlexiVisionEasy_manual/QUICKSTART/12_Panoramica_Interfaccia.md
-```     
+FlexiVisionEasy_manual/PANORAMICA_INTERFACCIA/12a_Home.md
+```  
 ```{toctree}
 :hidden:
+
+FlexiVisionEasy_manual/PANORAMICA_INTERFACCIA/12c_Dashboard.md
+```    
+```{toctree}
+:hidden:
+
+FlexiVisionEasy_manual/PANORAMICA_INTERFACCIA/12b_Recipes.md
+```    
+```{toctree}
+:hidden:
+
+FlexiVisionEasy_manual/PANORAMICA_INTERFACCIA/12d_Setup.md
+```    
+
+```{toctree}
+:hidden:
+
+FlexiVisionEasy_manual/PANORAMICA_INTERFACCIA/12e_TastiInfo.md
+```    
+
+```{toctree}
+:hidden:
+:caption: QUICKSTART
 FlexiVisionEasy_manual/QUICKSTART/SETUP/13_setup.md
 ``` 
 
@@ -214,6 +235,13 @@ FlexiVisionEasy_manual/QUICKSTART/24_Verifica_Risultati.md
 
 ```{toctree}
 :hidden:
+:caption: EXPERT
+
+FlexiVisionEasy_manual/EXPERT/32_Expert.md
+```  
+
+```{toctree}
+:hidden:
 :caption: MIX-ANWENDUNGEN
 
 FlexiVisionEasy_manual/APPLICAZIONI_MIX/28_Panoramica_Mix.md
@@ -226,7 +254,7 @@ FlexiVisionEasy_manual/APPLICAZIONI_MIX/29_Comandi_Mix.md
 
 ```{toctree}
 :hidden:
-:caption: MEHRGERÄTE-KONFIGURATIONEN
+:caption: MULTI-GERÄTE-KONFIGURATIONEN
 
 FlexiVisionEasy_manual/CONFIGURAZIONI_MULTI-DISPOSITIVO/30_2FB2CAM.md
 ```
@@ -241,7 +269,7 @@ FlexiVisionEasy_manual/CONFIGURAZIONI_MULTI-DISPOSITIVO/31_3FB3CAM.md
 :hidden:
 :caption: GARANTIE 
 
-FlexiVisionEasy_manual/25_Garanzia.md
+FlexiVisionEasy_manual/25_Garantie.md
 ```
 
 ```{toctree}  

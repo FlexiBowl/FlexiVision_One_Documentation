@@ -1,71 +1,72 @@
-﻿(nuovomodello)=
-# **Creare un Nuovo Modello**
+(nuovomodello)=
+# **Créer un nouveau modèle**
 
-In questa pagina vedremo come creare un modello di riferimento per il riconoscimento dei componenti.
+Sur cette page, nous verrons comment créer un modèle de référence pour la reconnaissance des composants.
 
 
-## **Step 1: Preparazione del Setup Fisico**
+## Étape 1 : Préparation de l'installation physique
+Si elle n'a pas déjà été faite, suivre ces étapes :
 ````{list-table}
 * - **1**
-  - Smontare la griglia di calibrazione e ripristinare il layout iniziale:
-    - Riposizionare la superficie
-    - riposizionare la flangia centrale 
-    - fissare la flangia centrale con le sue quattro viti
+  - Retirer la grille d'étalonnage et rétablir la disposition initiale :
+    - Repositionner la surface
+    - Repositionner la bride centrale
+    - Fixer la bride centrale avec ses quatre vis
 * - **2**
-  - Posizionare un oggetto al centro dell'area di visione
+  - Placer un objet au centre de la zone d'observation
 ````
 ---
 
-## **Step 2: Accesso al Modello** 
+## Étape 2 : Accès au modèle
 
-Completata la preparazione fisica, si procede con l'acquisizione dell'immagine e la creazione del modello
+Une fois la préparation physique terminée, procéder à l'acquisition de l'image et à la création du modèle
 ````{list-table}
 * - **3**
-  - Dalla pagina "Recipes", con la giusta ricetta selezionata, cliccare su "Edit Recipe"
+  - À partir de la page «&nbsp;Recipes&nbsp;», une fois la bonne recette sélectionnée, cliquer sur <img src="../../../../../_shared/media/images/tasto_edit_recipes.png" class="inline-icon">
 * - **4**
-  - Selezionare il FlexiBowl con cui si sta lavorando
-    :::{dropdown}
-
+  - Sélectionner le FlexiBowl® avec lequel vous travaillez
+    :::{dropdown} **Choix du FlexiBowl®**
+    ![Choix FB](../../../../../_shared/media/images/scelta_FB.png)
     :::
 * - **5**
-  - Verranno mostrati gli slot disponibili per i modelli (fino a 8 modelli per ricetta)
+  - Les emplacements disponibles pour les modèles seront affichés (jusqu'à 8 modèles par recette)
 * - **6**
-  - Cliccare sul **Modello 1** per accedere alla pagina "Train Model 1 Cam 1"
+  - Cliquer sur **Modèle 1** pour accéder à la page «&nbsp;Train Model 1 Cam 1&nbsp;»
 ````
 
-#### Panoramica interfaccia Train Model
+### *Aperçu de l'interface Train Model*
 
-![Pagina Train Model](../../../../../_shared/media/images/pagina_trainmodel.png)
+![Page Train Model](../../../../../_shared/media/images/pagina_trainmodel.png)
 ````{list-table}
 :header-rows: 1
 :widths: 30 70
 
-* - Parametro
-  - Funzione
+* - Paramètre
+  - Fonction
 * - **Enable Model**
-  - Attiva questo slot di modello rendendolo utilizzabile
+  - Active cette fente de modèle pour la rendre utilisable
 * - **Grab Train Image**
-  - Scatta una foto del componente di riferimento per il training
+  - Prend une image du composant de référence pour l'entraînement
 * - **Score Threshold**
-  - Regola il livello di dettaglio del modello (da 0 = massimo dettaglio a 1 = minimo dettaglio)
+  - Règle le niveau de détail du modèle (de 0 = détail maximum à 1 = détail minimum)
 * - **Train**
-  - Genera effettivamente il modello elaborando l'immagine acquisita
+  - Génère réellement le modèle en traitant l'image capturée
 * - **Model Name**
-  - Campo di testo per assegnare un nome descrittivo al modello
+  - Champ de texte pour attribuer un nom descriptif au modèle
 ````
 ````{tip}
-**Gestione modelli multipli**
+**Gestion de modèles multiples**
 
-In questa fase si attiva solo il primo modello. Dopo averlo completato, sarà possibile:
-- Abilitare slot aggiuntivi (Modello 2, Modello 3, ecc.) per pezzi diversi nella stessa ricetta
-- Modificare modelli esistenti
-- Disabilitare modelli non più necessari
+Dans cette phase, seul le premier modèle est activé. Après l'achèvement, il sera possible de :
+- Activer des emplacements supplémentaires (Modèle 2, Modèle 3, etc.) pour des pièces différentes dans la même recette
+- Modifier les modèles existants
+- Désactiver les modèles qui ne sont plus nécessaires
 
-Per ora, concentrarsi sul completamento del primo modello.
+Pour l'instant, se concentrer sur l'achèvement du premier modèle.
 ````
 ---
 
-## **Step 3: Procedura di Training**
+## Étape 3 : Procédure de formation
 ````{video} ../../../../../_shared/media/videos/TastoInfo_TrainModel_1280x720.mp4
 :width: 100%
 :align: center 
@@ -74,127 +75,130 @@ Per ora, concentrarsi sul completamento del primo modello.
 :widths: 5 95
 
 * - **7**
-  - Cliccare su **Enable Model** per abilitare questo modello. Il modello è ora attivo e pronto per essere configurato.
+  - Cliquer sur **Enable Model** pour activer ce modèle. Le modèle est maintenant actif et prêt à être configuré.
 
 * - **8**
-  - Cliccare su **Grab Train Image** per scattare una foto del componente di riferimento che abbiamo posizionato sul FlexiBowl
+  - Cliquer sur **Grab Train Image** pour prendre une photo du composant de référence qui a été placé sur le FlexiBowl®
     
     :::{warning}
-    Il componente di riferimento dovrà rimanere fermo in quel punto per tutto il processo di creazione dell'applicazione
+    Le composant de référence doit rester immobile à cet endroit pendant tout le processus de création de l'application
     :::
 
 * - **9**
-  - Spostare il **riquadro ROI** per inquadrare completamente il componente
+  - Déplacer l'**encadré ROI** pour encadrer complètement le composant
 
 * - **10**
-  - Spostare l'**origine** (punto di riferimento) al centro dell'area del riquadro
+  - Déplacer l'**origine** (point de référence) au centre de la zone de l'encadré
     
     :::{tip}
-    **Dove posizionare l'origine?**
+    **Où placer l'origine ?**
     
-    L'origine viene automaticamente posizionato al centro del componente.  
-    Se il punto di presa non coincide con il centro geometrico, spostare l'origine nel:
-    - **Punto di presa**: Per pezzi asimmetrici, posizionare dove la pinza afferra
+    L'origine est automatiquement placée au centre du composant.  
+    Si le point de préhension ne coïncide pas avec le centre géométrique, déplacer l'origine vers :
+    - **Point de préhension** : Pour les pièces asymétriques, placer là où la pince saisit
     
-    *L'origine definisce il punto (0,0) del sistema di coordinate del modello.*
+    *L'origine définit le point (0,0) du système de coordonnées du modèle.*
     :::
 
 * - **11**
-  - Usare lo **Score Threshold** per regolare il livello di dettaglio desiderato
+  - Utiliser le **Score Threshold** pour ajuster le niveau de détail souhaité
     
     ::::{note}
     **Score Threshold**
      
-      ![Confronto Score threshold](../../../../../_shared/media/images/confrontomodello.png)
+      ![Comparaison Score threshold](../../../../../_shared/media/images/confrontomodello.png)
     
-    **Valore vicino a 0** → Rileva PIÙ dettagli (modello più preciso)
+    **Valeur proche de 0** → Détecte PLUS de détails (modèle plus précis)
     
-    **Valore vicino a 1** → Rileva MENO dettagli (modello più semplice)
+    **Valeur proche de 1** → Détecte MOINS de détails (modèle plus simple)
     ::::
     
     :::{tip}
-    **Come scegliere lo Score Threshold ottimale?**
+    **Comment choisir le Score Threshold optimal ?**
     
-    **Usare valore BASSO (0.1-0.3) quando:**
-    - Il pezzo ha molti dettagli distintivi (incisioni, loghi, texture)
-    - I pezzi sono sempre molto simili tra loro (tolleranze strette)
-    - Si vuole massima precisione anche con orientamenti difficili
+    **Utiliser une valeur BASSE (0.1-0.3) lorsque :**
+    - La pièce présente de nombreux détails distinctifs (gravures, logos, textures)
+    - Les pièces sont toujours très similaires les unes aux autres (tolérances étroites)
+    - Une précision maximale est souhaitée, même avec des orientations difficiles
     
-    **Usare valore ALTO (0.4-0.6) quando:**
-    - Il pezzo ha forma distintiva ma semplice
-    - Si desidera equilibrio tra precisione e tolleranza
-    - Prima configurazione di un modello (punto di partenza)
+    **Utiliser une valeur ÉLEVÉE (0.4-0.6) lorsque :**
+    - La pièce a une forme distinctive mais simple
+    - Un équilibre entre précision et tolérance est souhaité
+    - Première configuration d'un modèle (point de départ)
     
-    **Usare valore MOLTO ALTO (0.7-0.9) quando:**
-    - Ci sono variazioni significative tra i pezzi (tolleranze larghe)
-    - La superficie del pezzo è molto riflettente o variabile
+    **Utiliser une valeur TRÈS ÉLEVÉE (0.7-0.9) lorsque :**
+    - Il existe des variations significatives entre les pièces (tolérances larges)
+    - La surface de la pièce est très réfléchissante ou variable
     :::
 
 * - **12**
-  - Cliccare su **Train**
+  - Cliquer sur **Train**
 ````
+:::{tip}
+En cas de doutes lors de la configuration, consulter le bouton **INFO** présent sur la page actuelle.
+:::
 ---
 
-## **Step 4: Controllo Visivo**
+## Étape 4 : Inspection visuelle
 
-Dopo aver generato il modello, è fondamentale verificarne la qualità prima di procedere.
+Après avoir généré le modèle, il est essentiel de vérifier sa qualité avant de continuer.
 ````{list-table}
 
 * - **13**
-  - Fare **Zoom** sull'immagine per ispezionare i dettagli del modello creato e verificare che il modello sia corretto
+  - **Zoomer** sur l'image pour inspecter les détails du modèle créé et vérifier que le modèle est correct
     
     :::{tip}
-      **Caratteristiche Modello Valido**  
-      ✓ Avere abbastanza linee per riconoscere il componente  
-      ✓ Non includere la trama della superficie retrostante  
-      ✓ Evitare riflessi di luce  
+      **Caractéristiques d'un modèle valide**  
+      ✓ Avoir suffisamment de lignes pour reconnaître le composant  
+      ✓ Ne pas inclure la texture de la surface arrière  
+      ✓ Éviter les reflets de lumière  
     :::
 
-    ![Confronto Modello](../../../../../_shared/media/images/confrontomodello2.png)
+    ![Comparaison de modèle](../../../../../_shared/media/images/confrontomodello2.png)
 ````
 ````{attention}
-Se il modello non è soddisfacente:
-- Modificare lo **Score Threshold**
-- Cliccare nuovamente su **Train**
-- Ripetere fino a ottenere un modello ottimale
+Si le modèle n'est pas satisfaisant :
+- Modifier le **Score Threshold**
+- Cliquer à nouveau sur **Train**
+- Recommencer jusqu'à l'obtention d'un modèle optimal
 ````
 ````{tip}
-**Strategia di ottimizzazione**
+**Stratégie d'optimisation**
 
-**Problema: Modello include trama superficie**  
-→ Soluzione: Aumentare Score Threshold o il valore Cam Exposure (SETUP > Camera Setup > Cam Exposure)
+**Problème : Le modèle inclut la texture de la surface**  
+→ Solution : Augmenter Score Threshold ou la valeur Cam Exposure (SETUP > Camera Setup > Cam Exposure)
 
-**Problema: Modello ha troppo poche linee, non distintivo**  
-→ Soluzione: Diminuire Score Threshold 
+**Problème : Le modèle comporte trop peu de lignes et n'est pas distinctif**  
+→ Solution : Diminuer Score Threshold 
 
-**Problema: Modello include riflessi**  
-→ Soluzione: Aumentare Score Threshold oppure regolare esposizione camera
+**Problème : Le modèle comprend des reflets**  
+→ Solution : Augmenter Score Threshold ou bien régler l'exposition de la caméra
 
-Effettuare modifiche graduali (step di 0.1-0.2) e testare ogni volta.
+Effectuer des changements progressifs (par étapes de 0,1 à 0,2) et les tester à chaque fois.
 ````
 ---
 
-## **Step 5: Salvataggio**
+## Étape 5 : Sauvegarde
 ````{list-table}
 * - **14**
-  - Nominare il modello con un nome descrittivo  
+  - Nommer le modèle avec un nom descriptif  
     :::{tip}
-    **Evitare nomi generici**
+    **Éviter les noms génériques**
 
-    ❌ Nomi da evitare:
+    ❌ Noms à éviter :
     - `Test`, `Prova`, `Modello1`, `Nuovo_Modello`
 
-    ✓ Nomi consigliati:
+    ✓ Noms recommandés :
     - `Prod_Viti_M8_Acciaio`
     - `Assembly_Connettori_2024`
     - `QC_Ingranaggi_Serie_X`
 
-    Un nome chiaro facilita la gestione quando si hanno molti modelli diverse.
+    Un nom clair facilite la gestion lorsque vous avez plusieurs modèles différents.
     :::
 * - **15**
-  - Cliccare su **Next** → si aprirà la pagina **Define Robot Pick Area**  
+  - Cliquer sur <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon"> → s'ouvre la page **Define Robot Pick Area**  
 ````
 ````{seealso}
-Procedi alla [Definizione ROI](roitest) per continuare la configurazione.
+Passer à la [Définition ROI](roitest) pour continuer la configuration.
 ````
 

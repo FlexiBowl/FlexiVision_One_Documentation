@@ -26,9 +26,9 @@ The Dashboard interface is divided into four main sections:
 * - Element
   - Description and Function
 * - **In Run**
-  - Status indicator showing whether the system is currently running.
-    **Green** 🟢: System on and operational.
-    **Red** 🔴: System stopped or paused.
+  - Status indicator showing whether the system is currently running.  
+    **Green** 🟢: System on and operational.  
+    **Red** 🔴: System stopped or paused.  
 * - **In Run Time**
   - This displays the total system uptime since application start-up.
 * - **FlexiBowl® selection**
@@ -126,13 +126,13 @@ Communication with external devices status indicators:
 * - Indicator
   - Description
 * - **FlexiBowl®**
-  - Status of the hardware connection between the VisionController (PC) and FlexiBowl®.
-    **Green**: Connected and communicating.
-    **Red**: Disconnected or communication error.
+  - Status of the hardware connection between the VisionController (PC) and FlexiBowl®.  
+    **Green**: Connected and communicating.  
+    **Red**: Disconnected or communication error.  
 * - **Robot**
-  - Status of communication with the robot.
-    **Green**: TCP/IP connection established.
-    **Red**: Disconnected or communication timeout.
+  - Status of communication with the robot.  
+    **Green**: TCP/IP connection established.  
+    **Red**: Disconnected or communication timeout.  
 ```
 
 ```{warning}
@@ -232,23 +232,23 @@ The charts at the bottom of the dashboard provide a predictive and diagnostic an
 
   :::{list-table} **PPM Interpretation**
 
-    * - **Constant and stable PPM**:
+    * - **Constant and stable PPM**:  
       - 
-        ✓ System configured properly
-        ✓ Optimised parameters
-        ✓ No critical bottlenecks
+        ✓ System configured properly  
+        ✓ Optimised parameters  
+        ✓ No critical bottlenecks  
 
-    * - **PPM progressively decreasing**:
+    * - **PPM progressively decreasing**:  
       - 
-        ⚠️ Possible component wear (FlexiBowl® grip surface)
-        ⚠️ Hopper emptying
-        ⚠️ Dirt buildup on camera/lighting
+        ⚠️ Possible component wear (FlexiBowl® grip surface)  
+        ⚠️ Hopper emptying  
+        ⚠️ Dirt buildup on camera/lighting  
 
-    * - **PPM with large fluctuations**:
+    * - **PPM with large fluctuations**:  
       - 
-        ⚠️ Instability in the process
-        ⚠️ Intermittent identification problems
-        ⚠️ External interference (vibrations, variable light)
+        ⚠️ Instability in the process  
+        ⚠️ Intermittent identification problems  
+        ⚠️ External interference (vibrations, variable light)  
 
     * - **Corrective actions**:
       - 
@@ -280,29 +280,29 @@ The charts at the bottom of the dashboard provide a predictive and diagnostic an
   
   :::{list-table} **Fill Hopper Pattern Analysis**
 
-    * - **Regular and constant activations**:
+    * - **Regular and constant activations**:  
       - 
-        ✓ Optimal Hopper Configuration
-        ✓ Stable and foreseeable flow of parts
-        ✓ Calculated autonomy (e.g. activation every 10 minutes)
+        ✓ Optimal Hopper Configuration  
+        ✓ Stable and foreseeable flow of parts  
+        ✓ Calculated autonomy (e.g. activation every 10 minutes)  
 
-    * - **Ever more frequent activations**:
+    * - **Ever more frequent activations**:  
       - 
-        ⚠️ Hopper is emptying (fewer parts = more activations to maintain level)
-        ⚠️ Insufficient unloading time due to reduced volume
-        **Action**: Plan Hopper recharge soon
+        ⚠️ Hopper is emptying (fewer parts = more activations to maintain level)  
+        ⚠️ Insufficient unloading time due to reduced volume  
+        **Action**: Plan Hopper recharge soon  
 
-    * - **No activation for a long time**:
+    * - **No activation for a long time**:  
       - 
-        ⚠️ Robot stopped or slowed down (parts not consumed)
-        ⚠️ Possible system problem that does not require parts
-        **Action**: Check production status
+        ⚠️ Robot stopped or slowed down (parts not consumed)  
+        ⚠️ Possible system problem that does not require parts  
+        **Action**: Check production status  
 
-    * - **Very close activations (bursts)**:
+    * - **Very close activations (bursts)**:  
       - 
-        ⚠️ Hopper threshold not configured properly (too high)
-        ⚠️ Insufficient steps (parts do not arrive on time)
-        **Action**: Review Hopper Config
+        ⚠️ Hopper threshold not configured properly (too high)  
+        ⚠️ Insufficient steps (parts do not arrive on time)  
+        **Action**: Review Hopper Config  
   :::
 ```
 
@@ -330,12 +330,12 @@ The charts at the bottom of the dashboard provide a predictive and diagnostic an
     - Check that typical scores are 0.85-0.95
     - Investigate if scores regularly drop below 0.80
 
-* - **Gradually decreasing scores**:
+* - **Gradually decreasing scores**:  
   - 
-    ⚠️ Real parts different from training (production variations)
-    ⚠️ Lighting changed (weaker backlight, dirt)
-    ⚠️ Camera no longer focused (vibration, blows)
-    ⚠️ FlexiBowl® surface dirty (interfering pattern)
+    ⚠️ Real parts different from training (production variations)  
+    ⚠️ Lighting changed (weaker backlight, dirt)  
+    ⚠️ Camera no longer focused (vibration, blows)  
+    ⚠️ FlexiBowl® surface dirty (interfering pattern)  
 
 * - **Corrective Actions**:
   - 

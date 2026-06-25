@@ -1,4 +1,4 @@
-(troubleshooting_fb_wizard)=
+﻿(troubleshooting_fb_wizard)=
 # **FlexiBowl Wizard**
 
 ```{list-table}
@@ -9,48 +9,48 @@
   - Mögliche Ursachen
   - Lösungen
 * - **Wizard startet nicht**
-  - • Rezeptur nicht geladen
+  - • Rezept nicht geladen
     
-    • FlexiBowl nicht verbunden
+    • FlexiBowl® nicht angeschlossen
     
-    • Initiales Setup nicht abgeschlossen
-  - • Zuerst Rezeptur laden oder erstellen
+    • Ersteinrichtung nicht abgeschlossen
+  - • Zuerst Rezept laden oder erstellen
     
-    • FlexiBowl-Verbindung prüfen
+    • Verbindung zum FlexiBowl® überprüfen
     
     • Grundkonfiguration des Systems abschließen
 
 * - **Eingestellte Drehrichtung stimmt nicht überein**
-  - • Fehler bei der Auswahl CW/CCW
+  - • Fehler bei der Auswahl von CW/CCW
     
-  - • Tatsächliche Drehrichtung visuell prüfen
+  - • Tatsächliche Drehrichtung visuell überprüfen
     
     • Auswahl im Wizard korrigieren
     
-* - **Air-blow Test funktioniert nicht**
+* - **Air-blow-Test funktioniert nicht**
   - • Druckluft nicht angeschlossen
     
-    • Druck unzureichend
+    • Druck zu niedrig
     
     • Modul physisch nicht vorhanden
-  - • Druckluftanschluss prüfen
+  - • Druckluftanschluss überprüfen
     
-    • Druck auf 5-6 bar erhöhen
+    • Druck auf 5–6 bar erhöhen
     
-    • "FlexiBowl NOT equipped" auswählen, wenn das Modul fehlt
-* - **Flip Test nicht wahrnehmbar**
+    • „FlexiBowl® NOT equipped“ auswählen, wenn das Modul fehlt
+* - **Test Flip nicht wahrnehmbar**
   - • Druckluft nicht angeschlossen/unzureichend
     
     • Druckregler geschlossen
     
     • Leckagen im Pneumatikkreis
-  - • Prüfen, ob Druckluft angeschlossen ist
+  - • Überprüfen, ob die Druckluft angeschlossen ist
     
     • Regler am Bedienfeld öffnen
     
-    • Druck 5-6 bar prüfen
+    • Druck von 5–6 bar überprüfen
     
-    • Anschlüsse auf Leckagen prüfen
+    • Anschlüsse auf Undichtigkeiten prüfen
 * - **Berechnete Parameter nicht optimal**
   - • Falsche Komponentencharakterisierung
     
@@ -61,41 +61,41 @@
     
     • Manuell im Übersichts-Dashboard verfeinern
 
-* - **Komponenten bewegen sich während der Aufnahme**
+* - **Komponenten bewegen sich während der Erfassung**
   - • Geschwindigkeit/Beschleunigung zu hoch
     
-    • Stabilisierungspausen fehlen
+    • Keine Stabilisierungspause
     
-    • Grip-Oberfläche nicht geeignet
-  - • Speed und Accel verringern
+    • Ungeeignete Greifoberfläche
+  - • Geschwindigkeit und Beschleunigung verringern
     
-    • Pausen von 200-500ms einfügen
+    • Pausen von 200–500 ms einfügen
     
-    • Grip-Oberfläche durch eine haftfähigere ersetzen
+    • Greifoberfläche durch eine mit besserer Haftung ersetzen
 * - **Luftstoß nicht wirksam**
-  - • Luftdruck unzureichend/übermäßig
+  - • Luftdruck zu niedrig/zu hoch
     
     • Düsen verstopft
-  - • Druck 5-6 bar prüfen
+  - • Druck von 5–6 bar prüfen
     
-    • Air-blow-Düsen reinigen
+    • Air-Blow-Düsen reinigen
 
-* - **Parameteränderungen werden nicht angewendet**
-  - • "Synchronize Parameters" nicht gedrückt
+* - **Parameteränderungen werden nicht übernommen**
+  - • „Synchronize Parameters“ nicht gedrückt
     
-    • Rezeptur nicht gespeichert
-  - • Nach Änderungen **IMMER** Synchronize Parameters klicken
+    • Rezept nicht gespeichert
+  - • Nach Änderungen **IMMER** auf „Synchronize Parameters“ klicken
     
-    • Rezeptur speichern, um Änderungen dauerhaft zu machen
-* - **Turn FLB funktioniert während des Setups nicht**
-  - • FlexiBowl nicht verbunden
+    • Rezept speichern, um Änderungen dauerhaft zu machen
+* - **Turn FLB funktioniert während Setup nicht**
+  - • FlexiBowl® nicht angeschlossen
     
-    • Befehl nicht konfiguriert
+    • Steuerung nicht konfiguriert
     
-    • FlexiBowl in Fehlerzustand
-  - • FlexiBowl-Verbindung prüfen
+    • FlexiBowl® im Fehlerzustand
+  - • Verbindung zum FlexiBowl® überprüfen
     
-    • FlexiBowl Setup Konfiguration prüfen
+    • FlexiBowl®-Setup-Konfiguration prüfen
     
-    • FlexiBowl READY-LED prüfen
+    • LED READY FlexiBowl® prüfen
 ```

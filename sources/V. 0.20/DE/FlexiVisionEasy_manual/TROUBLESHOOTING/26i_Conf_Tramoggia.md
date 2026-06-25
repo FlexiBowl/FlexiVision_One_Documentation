@@ -1,5 +1,5 @@
-(troubleshooting_conf_tramoggia)=
-# **Hopper-Konfiguration** 
+﻿(troubleshooting_conf_tramoggia)=
+# **Trichter-Konfiguration** 
 ```{list-table}
 :header-rows: 1
 :widths: 30 35 35
@@ -9,64 +9,64 @@
   - Lösungen
 
 * - **Kontrollbereich nicht definierbar**
-  - • Bild nicht aufgenommen
+  - • Bild nicht erfasst
     
     • Falscher Abschnitt
-  - • Testbild aufnehmen
+  - • Testbild erfassen
     
-    • Über Config Hopper X zugreifen
+    • Zugriff über Config Hopper X
 
 
-* - **AUTO berechnet Mean und Std Dev nicht korrekt**
+* - **AUTO berechnet Mittelwert und Standardabweichung nicht korrekt**
   - • CAPTURE nicht ausgeführt
     
     • CAPTURE-Reihenfolge vertauscht
     
     • Kontrollbereich zu klein
-  - • Zuerst leeren CAPTURE, dann vollen CAPTURE ausführen
+  - • Leeren CAPTURE ausführen, dann vollen CAPTURE
     
-    • In der korrekten Reihenfolge wiederholen
+    • In der richtigen Reihenfolge wiederholen
     
     • Kontrollbereich vergrößern
-* - **TEST immer GRÜN (Hopper wird nie aktiviert)**
-  - • Schwelle zu permissiv
+* - **TEST immer GRÜN (Trichter wird nie aktiviert)**
+  - • Schwellenwert zu großzügig
     
     • Voller CAPTURE mit zu vielen Komponenten
     
     • Mean falsch berechnet
-  - • Vollen CAPTURE mit korrekter Mindestanzahl wiederholen
+  - • Voller CAPTURE mit korrekter Mindestanzahl wiederholen
     
-    • Prüfen, ob AUTO korrekt neu berechnet
+    • Überprüfen, ob AUTO korrekt neu berechnet
     
-    • Schwelle bei Bedarf manuell anpassen
-* - **TEST immer ROT (Hopper wird immer aktiviert)**
-  - • Schwelle zu restriktiv
+    • Schwellenwert bei Bedarf manuell anpassen
+* - **TEST immer ROT (Trichter wird immer aktiviert)**
+  - • Schwellenwert zu restriktiv
     
     • Leerer CAPTURE mit vorhandenen Komponenten
     
-  - • Leeren CAPTURE mit vollständig sauberem Bereich wiederholen
+  - • Leeren CAPTURE mit vollständig gereinigtem Bereich wiederholen
     
     • AUTO wiederholen
 
-* - **Vibrationszeit erzeugt nicht die gewünschte Wirkung**
+* - **Vibrationszeit erzeugt nicht den gewünschten Effekt**
   - • Wert zu niedrig
     
-    • Wert zu hoch 
+    • Wert zu hoch
     
-    • Variabler Füllstand der Hopper-Schale
-  - • Mit 500ms beginnen
+    • Variabler Trichterfüllstand
+  - • Start mit 500ms
     
-    • In Schritten von ±100ms erhöhen, um den Fluss einzustellen
+    • Um ±100 ms erhöhen, um den Durchfluss anzupassen
     
-    • **KRITISCH**: Konstante Beladung in der Schale beibehalten
+    • **KRITISCH**: Konstante Beladung im Behälter aufrechterhalten
 
-* - **Hopper entlädt zu falschen Zeitpunkten**
+* - **Trichter entleert zu falschen Zeitpunkten**
   - • Steps nicht korrekt
 
-    • Hardware des Hopper Controllers nicht korrekt konfiguriert 
+    • Hardware der Trichter-Steuerung nicht korrekt konfiguriert
 
   - • Steps neu berechnen
 
-    • Die Konfigurationsspezifikationen im [dedizierten Hopper-Handbuch]() prüfen 
+    • Konfigurationsspezifikationen im [Handbuch für den Trichter]() überprüfen
 ```
 

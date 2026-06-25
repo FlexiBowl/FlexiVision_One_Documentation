@@ -1,47 +1,37 @@
-﻿(calibrazione)=
-# **Calibrazione della Camera**
+(calibrazione)=
+# **Kalibrierung von Kamera und Roboter**
 
-La calibrazione è il passaggio cruciale che stabilisce la relazione geometrica esatta tra il mondo reale (coordinate in millimetri) e l'immagine acquisita dalla telecamera (pixel). Senza una calibrazione accurata, la precisione del sistema di picking risulta compromessa, rendendo inaffidabile l'intera applicazione.
+Die Kalibrierung ist der entscheidende Schritt, der die exakte geometrische Beziehung zwischen der realen Welt (Koordinaten in Millimetern) und dem von der Kamera aufgenommenen Bild (Pixel) herstellt. Ohne eine genaue Kalibrierung ist die Genauigkeit des Picking-Systems beeinträchtigt, was die gesamte Anwendung unzuverlässig macht.
 
-```{warning}
-**Prerequisito fondamentale**
 
-Prima di procedere con la calibrazione, assicurarsi che tutti i setup hardware siano stati completati correttamente:
-- [FlexiBowl Setup](13a_FB_Setup.md) ✓
-- [Hopper Setup](13b_Hopper_Setup.md) ✓
-- [Robot Setup](13c_Robot_Setup.md) ✓
-- [Camera Setup](13d_Camera_Setup.md) ✓
-
-La calibrazione deve essere ripetuta ogni volta che viene alterata la posizione della camera e/o del robot.
-```
 :::{tip}
-Non è necessario eseguire nuovamente la calibrazione nel caso in cui viene alterata la posizione del FlexiBowl.
+Eine erneute Kalibrierung ist nicht erforderlich, wenn die Position des FlexiBowl® verändert wird.
 :::
 ---
 
-## **Perché la calibrazione è necessaria?**
+## Warum ist eine Kalibrierung notwendig?
 
-La calibrazione è necessaria perché ogni combinazione di sensore e lente introduce alterazioni specifiche nell'immagine. Il suo obiettivo principale è correggere queste distorsioni.
+Die Kalibrierung ist notwendig, weil jede Kombination von Sensor und Objektiv spezifische Veränderungen im Bild hervorruft. Ihr Hauptziel ist es, diese Verzerrungen zu korrigieren.
 
-### Tipi di distorsioni ottiche
+### *Arten von optischen Verzerrungen*
 
 ```{figure} ../../../../../_shared/media/images/distorsioni_new.png
-:alt: Tipi di distorsioni ottiche
+:alt: Arten optischer Verzerrungen
 :width: 80%
 :align: center
 
-Esempi di distorsioni ottiche: nessuna distorsione (sinistra), distorsione a barile (centro), distorsione a cuscinetto (destra)
+Beispiele für optische Verzerrungen: keine Verzerrung (links), tonnenförmige Verzerrung (Mitte), kissenförmige Verzerrung (rechts)
 ```
 
 ---
 
 
-## **Step 1: La griglia di calibrazione**
+## Schritt 1: Das Kalibrierungsgitter
 
 :::{error}
-Assicurarsi di avere: 
-- Backlight acceso (SETUP > FlexiBowl Setup > Config FlexiBowl > Light ON attivo)
-- Toplight spento
+Stellen Sie sicher, dass Folgendes gegeben ist: 
+- Backlight eingeschaltet (SETUP > FlexiBowl®-Setup > Config FlexiBowl® > Light ON aktiv)
+- Toplight aus
 :::
 
 :::{video} ../../../../../_shared/media/videos/Step1_calib.mp4
@@ -49,34 +39,58 @@ Assicurarsi di avere:
     :align: center
 :::
 
-La griglia di calibrazione dedicata ARS deve essere posizionata sul FlexiBowl:
+Das spezielle ARS-Kalibrierungsgitter muss auf dem FlexiBowl® gelegt werden:
 
-```{list-table}
-* - **0** 
-  - Se presenti, rimuovere i deviatori montati sul FlexiBowl.
-* - **1** 
-  - **Allentare le quattro viti** della flangia centrale del FlexiBowl
-* - **2** 
-  - **Ruotare leggermente la flangia** centrale in senso antiorario e **Rimuoverla**
+````{list-table}
+:widths: 10 50 40
+:header-rows: 1
+
+* - Step
+  - Vorgang
+  - Bild
+* - **0**
+  - Falls vorhanden, entfernen Sie die am FlexiBowl® montierten Ablenkplatten.
+  - ```{image} ../../../../../_shared/media/images/rimuoveredeviatori.jpg
+      
+    ```
+* - **1**
+  - **Lösen Sie die vier Schrauben** des mittleren Flansches des FlexiBowl®.
+  - ```{image} ../../../../../_shared/media/images/rimuovereflangia.jpg
+      
+    ```
+* - **2**
+  - **Drehen Sie den mittleren Flansch** leicht gegen den Uhrzeigersinn und **nehmen Sie ihn ab**.
+  - 
 * - **3**
-  - **Sollevare** con cura e **Rimuovere la superficie**  
+  - Vorsichtig **anheben** und **die Oberfläche entfernen**.
+  - ```{image} ../../../../../_shared/media/images/rimuoveredisco.jpg
+      
+    ```
 * - **4**
-  - **Posizionare la griglia ARS** sul FlexiBowl allineando i perni di posizionamento con i fori predefiniti 
-```
+  - Bringen Sie bei Bedarf magnetische Abstandshalter an den vier Seiten des Gitters an.
+  - ```{image} ../../../../../_shared/media/images/aggiungerespacer.jpg
+      
+    ```
+* - **5**
+  - Positionieren Sie **das ARS-Gitter** auf dem FlexiBowl® und richten Sie dabei die Positionierungsstifte an den vorgegebenen Löchern am Rand des Backlights aus.
+  - ```{image} ../../../../../_shared/media/images/posizionaregriglia.jpg
+      
+    ```
+````
 
 ```{figure} ../../../../../_shared/media/images/griglia_su_flexibowl.png
-:alt: Posizionamento griglia calibrazione
+:alt: Positionierung Kalibrierungsgitter
 :width: 60%
 :align: center
 
-Corretto posizionamento della griglia di calibrazione ARS sul FlexiBowl
+Korrekte Positionierung des ARS-Kalibrierungsgitters auf der FlexiBowl®
 ```
 :::{attention} 
- La griglia di calibrazione deve essere posizionata **alla stessa altezza dell'oggetto** utilizzato nell'applicazione.
+ Das Kalibrierungsgitter muss auf **derselben Höhe wie das in der Anwendung verwendete Objekt** positioniert werden.
  
-   Per questo motivo, viene fornita con dei **distanziali** da inserire nei pioli della griglia prima di installarla sul FlexiBowl.
-   I distanziali hanno la funzione di **sollevare la griglia** fino al livello dell'altezza del pezzo, garantendo una calibrazione accurata.
-  ![Distanziali](../../../../../_shared/media/images/distanziali_griglia.JPG)
+   Aus diesem Grund wird es mit **Abstandshaltern** geliefert, die vor der Installation auf dem FlexiBowl® in die Stifte des Gitters eingesetzt werden müssen.
+   Die Abstandshalter dienen dazu, das **Gitter** auf die Höhe des Teils **anzuheben** und so eine genaue Kalibrierung zu gewährleisten.
+  ![Abstandshalter](../../../../../_shared/media/images/distanziali_griglia.JPG)
   
   ```{figure} ../../../../../_shared/media/images/altezzacalibrazione.png
     :width: 100%
@@ -84,62 +98,60 @@ Corretto posizionamento della griglia di calibrazione ARS sul FlexiBowl
   ```
 :::
 
-## **Step 2: Regolazioni fondamentali**
-
-:::{video} ../../../../../_shared/media/videos/Step2_calib.mp4
-    :width: 100%
-    :align: center
-:::
+## Schritt 2: Grundlegende Einstellungen
 
 ```{list-table}
 
 * - **5**
-  - Accedere alla sezione Camera SETUP dalla sezione SETUP 
+  - Rufen Sie den Abschnitt Camera SETUP im Menü SETUP auf 
 * - **6**
-  - Cliccare il pulsante Config Camera della camera corrispondente 
+  - Klicken Sie auf die Schaltfläche Config Camera der entsprechenden Kamera 
 * - **7**
-  - Cliccare EXPERT dalla pagina Camera FLB 
+  - Klicken Sie auf der Seite Camera FLB auf EXPERT 
 * - **8**
-  - **Mettere la camera in modalità "live display"**
-      Prima di regolare l'apertura, attivare la modalità di visualizzazione continua:
-      - immagine
+  - **Versetzen Sie die Kamera in den Modus „Live Display“**
+      Aktivieren Sie vor dem Einstellen der Blende den kontinuierlichen Anzeigemodus:
+      :::{figure} ../../../../../_shared/media/images/livedisplay.jpg
+    :width: 100%
+    :align: center
+    :::
 * - **9**
-  - **Impostare l'apertura del diaframma**
-    - Svitare leggermente la vite dell'anello superiore della camera 
-    - Ruotare l'anello osservando l'immagine live, fino a che la giusta quantità di luce non entra nella camera 
-    - Stringere la vite dell'anello superiore della camera 
+  - **Stellen Sie die Blendenöffnung ein**
+    - Lösen Sie die Schraube am oberen Kameraring leicht
+    - Drehen Sie den Ring, während Sie das Live-Bild beobachten, bis die richtige Lichtmenge in die Kamera eintritt
+    - Ziehen Sie die Schraube am oberen Kameraring fest
 
     :::{figure} ../../../../../_shared/media/images/Esp_Corretta.png
     :width: 100%
     :align: center
     :::
 * - **10**
-  - **Regolare manualmente il fuoco della camera**
-    - Svitare leggermente la vite dell'anello inferiore della camera
-    - Ruotare l'anello lentamente osservando l'immagine live
-    - Quando il pattern appare nitido, il fuoco è corretto
-    - Stringere la vite dell'anello inferiore della camera 
-    - Chiudere la schermata
+  - **Stellen Sie den Fokus der Kamera manuell ein**
+    - Lösen Sie die Schraube am unteren Ring der Kamera leicht
+    - Drehen Sie den Ring langsam, während Sie das Live-Bild beobachten
+    - Wenn das Muster scharf erscheint, ist der Fokus korrekt
+    - Ziehen Sie die Schraube am unteren Ring der Kamera fest
+    - Schließen Sie den Bildschirm
     :::{figure} ../../../../../_shared/media/images/Fuoco_Corretto.png
     :width: 100%
     :align: center
     :::
 * - **11**
-  - Cliccare Back 
+  - Klicken Sie auf Zurück 
 ```
 
 ```{warning}
-**Attenzione alla profondità di campo**
+**Achtung zur Schärfentiefe**
 
-La messa a fuoco deve garantire nitidezza su **tutta la superficie** del FlexiBowl, non solo al centro.
+Die Fokussierung muss eine Schärfe über die **gesamte Oberfläche** des FlexiBowl® gewährleisten, nicht nur in der Mitte.
 
-Se il centro è nitido ma i bordi sono sfocati:
-- Verificare che l'ottica sia pulita
-- Verificare che la distanza di lavoro sia corretta
-- Verificare che la camera sia perfettamente parallela al piatto
-- Chiudere leggermente il diaframma per aumentare la profondità di campo
+Wenn die Mitte scharf, die Ränder jedoch unscharf sind:
+- Überprüfen Sie, ob die Optik sauber ist
+- Überprüfen Sie, ob der Arbeitsabstand korrekt ist
+- Überprüfen Sie, ob die Kamera perfekt parallel zur Arbeitsfläche des FlexiBowl® ausgerichtet ist
+- Schließen Sie die Blende leicht, um die Schärfentiefe zu erhöhen
 
-Se il problema persiste, potrebbe essere necessario rivedere il montaggio meccanico della camera.
+Wenn das Problem weiterhin besteht, muss möglicherweise die mechanische Montage der Kamera überprüft werden.
 ```
 :::{video} ../../../../../_shared/media/videos/Step2b_calib.mp4
     :width: 100%
@@ -147,43 +159,46 @@ Se il problema persiste, potrebbe essere necessario rivedere il montaggio meccan
 :::
 
 :::{error}
-Se cliccando piu volte il tasto RUN appare anche solo una volta una schermata completamente blu, fare riferimento a [Troubleshooting calibrazione camera](../../TROUBLESHOOTING/26e_Calib_Cam.md)
+Wenn beim mehrfachen Drücken der RUN-Taste auch nur einmal ein vollständig blauer Bildschirm erscheint, siehe [Troubleshooting Kamera-Setup](schermo_blu)
 :::
+
 
 ```{list-table}
 * - **12** 
-  - **Regolare l'esposizione della camera**
-    - Dalla pagina **Camera FLB x**, individuare il parametro **Cam Exposure** (Esposizione della Camera):
-    - Regolare il parametro "Cam Exposure" e cliccare su "TEST", ripetere questo passaggio fino a che non viene trovata la giusta esposizione per l'immagine: 
-   		- Pattern della griglia chiaramente visibile (nero su bianco o viceversa)
-   		- Contrasto elevato tra quadrati bianchi e neri
-   		- Nessuna sovraesposizione (aree completamente bianche "bruciate")
-   		- Nessuna sottoesposizione (immagine troppo scura)
+  - **Stellen Sie die Belichtung der Kamera ein**
+    - Rufen Sie auf der Seite **Camera FLB x** den Parameter **Cam Exposure** (Kamerabelichtung) auf:
+    - Stellen Sie den Parameter „Cam Exposure“ ein und klicken Sie auf <img src="../../../../../_shared/media/images/tasto_TEST.png" class="inline-icon">. Wiederholen Sie diesen Schritt, bis die richtige Belichtung für das Bild gefunden ist: 
+   		- Gittermuster deutlich sichtbar (schwarz auf weiß oder umgekehrt)
+   		- Hoher Kontrast zwischen weißen und schwarzen Quadraten
+   		- Keine Überbelichtung (vollständig weiße „ausgebrannte“ Bereiche)
+   		- Keine Unterbelichtung (Bild zu dunkel)
 * - **13** 
-  - Cliccare NEXT
+  - Klicken Sie auf NEXT
 ```
 
 ```{figure} ../../../../../_shared/media/images/Esposizioni.png
-:alt: Esempio esposizione corretta
+:alt: Beispiel korrekte Belichtung
 :width: 60%
 :align: center
 
-Esempio di esposizione corretta: contrasto elevato, pattern ben definito, nessuna area bruciata
+Beispiel für eine korrekte Belichtung: hoher Kontrast, gut definiertes Muster, keine überbelichteten Bereiche
 ```
 
 ```{tip}
-**Ottimizzazione esposizione**
+**Optimierung der Belichtung**
 
-**Più alto sarà il tempo, più luce entrerà nell'ottica**
+**Je länger die Belichtungszeit, desto mehr Licht fällt in das Objektiv**
 
-- **Tempo troppo breve**: Immagine scura, pattern poco visibile
-- **Tempo troppo lungo**: Immagine sovraesposta, perdita di dettagli
-- **Tempo ottimale**: Massimo contrasto senza saturazione
+- **Zu kurze Belichtungszeit**: Dunkles Bild, Muster kaum sichtbar
+- **Zu lange Belichtungszeit**: Überbelichtetes Bild, Verlust von Details
+- **Optimale Belichtungszeit**: Maximaler Kontrast ohne Übersättigung
 ```
+:::{tip}
+Wenn Sie während der Konfiguration Zweifel haben, konsultieren Sie bitte die **INFO**-Taste auf der aktuellen Seite.
+:::
 
 
-
-## **Step 3: Calibrazione Camera**
+## Schritt 3: Kamerakalibrierung
 
 :::{video} ../../../../../_shared/media/videos/Step3_calib.mp4
     :width: 100%
@@ -194,87 +209,88 @@ Esempio di esposizione corretta: contrasto elevato, pattern ben definito, nessun
 :widths: 5 95
 
 * - **14**
-  - Verificare che la griglia sia centrata, nitida e completamente visibile prima di acquisire l'immagine di calibrazione.
+  - Vergewissern Sie sich, dass das Gitter zentriert, scharf und vollständig sichtbar ist, bevor Sie das Kalibrierungsbild aufnehmen.
 * - **15**
-  - Cliccare su "Grab Image Calib" per scattare una foto della griglia di calibrazione.
+  - Klicken Sie auf „Grab Image“, um ein Foto des Kalibrierungsgitters aufzunehmen.
     
-    Verificare visivamente che:
-    - L'intera griglia sia visibile
-    - Il pattern sia nitido
-    - Non ci siano ombre o riflessi
+    Überprüfen Sie Folgendes visuell:
+    - Das gesamte Gitter ist sichtbar
+    - Das Muster ist scharf
+    - Es gibt keine Schatten oder Reflexionen
 
 * - **16**
-  - Impostare i valori "Tile Size X" e "Tile Size Y" entrambi a 10
+  - Stellen Sie die Werte „Tile Size X“ und „Tile Size Y“ für alle Modelle von FlexiBowl® 500 bis 1200 auf 10 ein.  
+     **Bei den Modellen FlexiBowl® 200 und FlexiBowl® 350 hingegen stellen Sie die Tile Sizes auf 2,5 ein.**
 
 * - **17**
-  - Cliccare su "Calibrate" per effettuare la calibrazione
+  - Klicken Sie auf „Calibrate“, um die Kalibrierung durchzuführen
 
 * - **18**
-  - **Valutare la qualità della calibrazione**
+  - **Bewertung der Kalibrierungsqualität**
     
-    Il parametro "Result Calibration" restituirà un valore:
+    Der Parameter „Result Calibration“ gibt einen Wert zurück:
     
-    🟢 **Excellent (Verde)**: Calibrazione eccellente, precisione ottimale. 
+    🟢 **Excellent (Grün)**: Hervorragende Kalibrierung, optimale Genauigkeit. 
     
-    🟠 **Acceptable (Arancione)**: Calibrazione accettabile, precisione buona ma non ottimale.
+    🟠 **Acceptable (Orange)**: Akzeptable Kalibrierung, gute, aber nicht optimale Genauigkeit.
     
-    🔴 **Bad (Rosso)**: Calibrazione scadente, precisione insufficiente. Da ripetere obbligatoriamente.
+    🔴 **Bad (Rot)**: Schlechte Kalibrierung, unzureichende Genauigkeit. Muss unbedingt wiederholt werden.
     
     :::{important}
-    Accettare solo calibrazioni Eccellenti 🟢, altri risultati comprometteranno il funzionamento dell'intera applicazione.
+    Akzeptieren Sie nur ausgezeichnete Kalibrierungen 🟢; andere Ergebnisse beeinträchtigen den Betrieb der gesamten Anwendung.
     :::
 
 ```
 
 ```{note}
-**Criterio di accettabilità**
+**Akzeptanzkriterium**
 
-Un risultato soddisfacente comprende il settaggio dell'apertura, la messa a fuoco, e il settaggio dell'esposizione migliore per l'applicazione.
+Ein zufriedenstellendes Ergebnis umfasst die Einstellung der Blende, die Fokussierung und die für die Anwendung optimale Belichtungseinstellung.
 
 ```
 
 ```{warning}
-**Errori durante il calcolo**
+**Fehler während der Berechnung**
 
-Se il calcolo della calibrazione fallisce:
+Wenn die Kalibrierungsberechnung fehlschlägt:
 
-**Possibili cause**:
-- Pattern non rilevato (immagine troppo scura o sovraesposta)
-- Quadrati della griglia parzialmente oscurati
-- Distorsione eccessiva (camera troppo vicina o lontana)
-- Tile Size inserito errato
+**Mögliche Ursachen**:
+- Muster nicht erkannt (Bild zu dunkel oder überbelichtet)
+- Rasterquadrate teilweise verdeckt
+- Übermäßige Verzerrung (Kamera zu nah oder zu weit weg)
+- Falsche Tile Size eingegeben
 
-**Soluzione**:
-- Verificare e migliorare la qualità dell'immagine acquisita
-- Assicurarsi che l'intera griglia sia visibile e ben illuminata
-- Verificare il valore Tile Size
-- Ripetere l'acquisizione immagine (Grab Image) e tentare nuovamente
+**Lösung**:
+- Prüfen und verbessern Sie die Qualität des aufgenommenen Bildes
+- Stellen Sie sicher, dass das gesamte Raster sichtbar und gut ausgeleuchtet ist
+- Prüfen Sie den Wert für die Tile Size
+- Wiederholen Sie die Bildaufnahme (Grab Image) und versuchen Sie es erneut
 ```
 
+:::{tip}
+Wenn Sie während der Konfiguration Zweifel haben, konsultieren Sie bitte die **INFO**-Taste auf der aktuellen Seite.
+:::
 
-**Nota: spiegare che per i dubbi si può aprire info**
-
-In quali casi si apre Expert? Expert si apre per la configurazione della luminosità o per altri parametri.
 
 
 ---
 
-### Quando è necessario ripetere la calibrazione
+### *Wann muss die Kalibrierung wiederholt werden*
 ```{list-table}
 :widths: 50 50
 :header-rows: 0
 
-* - **Ricalibrare quando:**
-  - Primo setup del sistema (obbligatorio). Dopo aver modificato la posizione della camera. Dopo aver spostato il robot. Se si riscontrano errori sistematici di picking.
+* - **Kalibrieren Sie in folgenden Fällen neu:**
+  - Bei der ersten Einrichtung des Systems (obligatorisch). Nach einer Änderung der Kameraposition. Nach einer Verschiebung des Roboters. Wenn systematische Fehler beim Greifen auftreten.
 
-* - **Non è necessario ricalibrare quando:**
-  - Se si cambia tipo di pezzo a parita di FlexiBowl e camera. Se si modificano fuoco o apertura dell'obiettivo. Se si modifica la ricetta software. Se si regolano parametri di riconoscimento. Se si aggiornano i programmi robot.
+* - **Eine Neukalibrierung ist in folgenden Fällen nicht erforderlich:**
+  - Bei einem Wechsel des Teiltyps unter Beibehaltung des FlexiBowl® und der Kamera. Bei einer Änderung des Fokus oder der Blende des Objektivs. Wenn das Software-Rezept geändert wird. Wenn Erkennungsparameter angepasst werden. Wenn die Roboterprogramme aktualisiert werden.
 ```
 
 ---
-# **Calibrazione Robot**
+# **Roboter-Kalibrierung**
 
-## **Step 4: Montaggio Laser**
+## Schritt 4: Laser-Montage
 
 :::{video} ../../../../../_shared/media/videos/Step4_calib.mp4
     :width: 100%
@@ -283,25 +299,50 @@ In quali casi si apre Expert? Expert si apre per la configurazione della luminos
 
 ```{list-table}
 * - **19** 
-  - Una volta ottenuta una calibrazione di ottima qualità, Cliccare "NEXT". 
-    Apparirà una finestra che richiede la calibrazione del robot prima di proseguire, **NON** cliccare su "Sì" e seguire i prossimi passaggi
+  - Sobald eine Kalibrierung von ausgezeichneter Qualität erreicht wurde, klicken Sie auf <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon icon-small">.  
+  
+    Es erscheint ein Fenster, das eine Roboter-Kalibrierung vor dem Fortfahren anfordert. Klicken Sie **NICHT** auf „Ja“ und folgen Sie den nächsten Schritten
 * - **20** 
-  - Montare il Laser Tool con il suo supporto personalizzato 
+  - Montieren Sie das Laser Tool mit seinem individuellen Halter 
+    :::{important}
+    Die Halterung zum Anbringen des Laser-Tools anstelle des Robotergreifers wird **NICHT** mitgeliefert, da sie für jeden Roboter variiert und angepasst werden muss.
+    :::
+    :::{figure} ../../../../../_shared/media/images/step1calrobot.jpg
+    :width: 30%
+    :align: center
+    :::
 * - **21**
-  - Posizionare lo Spacer Bracket  (**A**) sotto il laser 
+  - Positionieren Sie den Spacer Bracket (**A**) unter dem Laser 
+    :::{figure} ../../../../../_shared/media/images/step2calrobot.jpg
+    :width: 30%
+    :align: center
+    :::
 * - **22**
-  - Abbassare il laser fino al livello dello spacer (**A**), così il laser avrà un'altezza di esattamente 3cm dalla griglia di calibrazione
+  - Senken Sie den Laser auf die Höhe des Spacers (**A**) ab, sodass der Laser genau 3 cm über dem Kalibrierungsgitter liegt
     :::{image} ../../../../../_shared/media/images/spacerbracket.png
     :align: center 
     :width: 75%
     :::
 * - **23**
-  - Rimuovere lo Spacer Bracket 
+  - Entfernen Sie den Spacer Bracket 
+    :::{figure} ../../../../../_shared/media/images/step3calrobot.jpg
+    :width: 30%
+    :align: center
+    :::
 * - **24**
-  - Accendere il laser 
+  - Schalten Sie den Laser ein 
+    :::{figure} ../../../../../_shared/media/images/step4calrobot.jpg
+    :width: 30%
+    :align: center
+    :::
 ```
 
-## **Step 5: Disegnare un piano a 3 punti**
+:::{tip}
+Wenn Sie während der Konfiguration Zweifel haben, konsultieren Sie bitte die **INFO**-Taste auf der aktuellen Seite.
+:::
+
+
+## Schritt 5: Zeichnen einer 3-Punkt-Ebene
 
 :::{video} ../../../../../_shared/media/videos/Step5_calib.mp4
     :width: 100%
@@ -310,14 +351,31 @@ In quali casi si apre Expert? Expert si apre per la configurazione della luminos
 
 ```{list-table}
 * - **25**
-  - Portare il laser sul punto di origine 
+  - Führen Sie den Laser zum Ursprungspunkt 
+  - :::{figure} ../../../../../_shared/media/images/origine.jpg
+    :width: 100%
+    :align: center
+    :::
 * - **26**
-  - Portare il laser nel punto finale dell'asse X
+  - Führen Sie den Laser zum Endpunkt der X-Achse
+  - :::{figure} ../../../../../_shared/media/images/assex.jpg
+    :width: 100%
+    :align: center
+    :::
 * - **27**
-  - Portare il laser nel punto finale dell'asse Y 
+  - Führen Sie den Laser zum Endpunkt der Y-Achse 
+  - :::{figure} ../../../../../_shared/media/images/assey.jpg
+    :width: 100%
+    :align: center
+    :::
 ```
 
-## **Step 6: Verifica della traiettoria del robot**
+:::{tip}
+Wenn Sie während der Konfiguration Zweifel haben, konsultieren Sie bitte die **INFO**-Taste auf der aktuellen Seite.
+:::
+
+
+## Schritt 6: Überprüfung der Roboterbahn
 
 :::{video} ../../../../../_shared/media/videos/Step6_calib.mp4
     :width: 100%
@@ -326,64 +384,83 @@ In quali casi si apre Expert? Expert si apre per la configurazione della luminos
 
 ```{list-table}
 * - **28** 
-  - Riportare il laser sul punto di origine
+  - Führen Sie den Laser zurück zum Ursprungspunkt
 * - **29**
-  - Muovere il robot dalla sua teach pendant lungo gli assi X e Y. 
+  - Bewegen Sie den Roboter über seine Teach Pendant entlang der X- und Y-Achsen. 
 * - **30**
-  - Verificare che la corretta traiettoria sia seguita: il robot, muovendosi esclusivamente lungo gli assi X e Y, deve seguire correttamente le linee della griglia 
+  - Überprüfen Sie, ob die korrekte Trajektorie eingehalten wird: Der Roboter muss sich ausschließlich entlang der X- und Y-Achsen bewegen und dabei korrekt den Linien des Gitters folgen 
 * - **31**
-  - Cliccare "YES"
-  ```
-## **Step 7: Salvataggio Ricetta Base** 
+  - Klicken Sie auf „YES“
+    :::{figure} ../../../../../_shared/media/images/clickyes.jpg
+    :width: 50%
+    :align: center
+    :::
+```
+:::{tip}
+Wenn Sie während der Konfiguration Zweifel haben, konsultieren Sie bitte die **INFO**-Taste auf der aktuellen Seite.
+:::
+
+
+## Schritt 7: Speichern des Basisrezepts
 ```{list-table}
 :header-rows: 0
 :widths: 10 90
 
 * - **32**
-  - Cliccare su **Recipes**
+  - Klicken Sie auf <img src="../../../../../_shared/media/images/tasto_recipes.png" class="inline-icon">
 
 * - **33**
-  - Controllare di avere la ricetta contenente tutti i setup e la calibrazione selezionata nel menu a sinistra e cliccare su **Save Recipe**
+  - Vergewissern Sie sich, dass Sie das Rezept mit allen Einstellungen und der Kalibrierung im Menü links ausgewählt haben, und klicken Sie auf <img src="../../../../../_shared/media/images/tasto_save_recipes.png" class="inline-icon">
 
 * - **34**
-  - Questa ci permetterà di avere salvati a parte tutti i passaggi fatti fin'ora, in modo da avere una base per tutte le future ricette che conterranno i vari modelli per il sistema calibrato
+  - Dadurch werden alle bisher durchgeführten Schritte separat gespeichert, sodass Sie eine Grundlage für alle zukünftigen Rezepte haben, die die verschiedenen Modelle für das kalibrierte System enthalten
 
 * - **35**
-  - Per continuare con la creazione dei modelli, duplicare la ricetta base, rinominarla come si preferisce e cliccare su **Edit Recipe**: si aprirà una pagina con l'elenco di tutti i modelli disponibili
+  - Um mit der Erstellung der Modelle fortzufahren, duplizieren Sie das Basisrezept, benennen Sie es nach Belieben um und klicken Sie auf <img src="../../../../../_shared/media/images/tasto_edit_recipes.png" class="inline-icon">: Es wird eine Seite mit der Liste aller verfügbaren Modelle geöffnet
 ```
 ---
 
-# **Problemi comuni durante la calibrazione**
+# **Häufige Probleme bei der Kalibrierung**
 
-## **Pattern non rilevato**
-
-```{warning}
-**Errore: "Unable to detect calibration pattern"**
-
-Causa: Il software non riesce a identificare il pattern della griglia.
-
-**Soluzioni**:
-- Aumentare il contrasto (regolare esposizione o illuminazione)
-- Verificare che l'intera griglia sia visibile nell'immagine
-- Migliorare la messa a fuoco
-- Pulire la superficie della griglia (polvere o impronte possono interferire)
-```
-
-## **Calibrazione sempre "Bad" o "Acceptable"**
+## Muster nicht erkannt
 
 ```{warning}
-**Qualità calibrazione insufficiente**
+**Fehler: „Unable to detect calibration pattern“**
 
-Se nonostante le regolazioni la calibrazione rimane sotto "Excellent":
+Ursache: Die Software kann das Gittermuster nicht erkennen.
 
-1. Verificare la distanza di lavoro camera-FlexiBowl (deve essere quella calcolata)
-2. Controllare cje la camera sia parallela rispetto al piano del FlexiBowl (deve essere perfettamente orizzontale)
-3. Assicurarsi che la camera sia stabile (no vibrazioni durante acquisizione)
-4. Verificare che l'obiettivo sia avvitato completamente 
-
-Se il problema persiste, potrebbe esserci un problema meccanico nel montaggio. Consultare [Installazione Meccanica](../../INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.md) per revisione.
+**Lösungen**:
+- Erhöhen Sie den Kontrast (passen Sie die Belichtung oder Beleuchtung an)
+- Stellen Sie sicher, dass das gesamte Gitter im Bild sichtbar ist
+- Verbessern Sie die Schärfe
+- Reinigen Sie die Oberfläche des Gitters (Staub oder Fingerabdrücke können stören)
 ```
 
+## Kalibrierung immer „Bad“ oder „Acceptable“
+
+```{warning}
+**Unzureichende Kalibrierungsqualität**
+
+Wenn die Kalibrierung trotz Anpassungen unter „Excellent“ bleibt:
+
+1. Überprüfen Sie den Arbeitsabstand zwischen Kamera und FlexiBowl® (er muss dem berechneten Wert entsprechen)
+2. Stellen Sie sicher, dass die Kamera parallel zur Ebene des FlexiBowl® ausgerichtet ist (sie muss perfekt horizontal sein)
+3. Stellen Sie sicher, dass die Kamera stabil ist (keine Vibrationen während der Aufnahme)
+4. Überprüfen Sie, ob das Objektiv vollständig festgeschraubt ist 
+
+Wenn das Problem weiterhin besteht, liegt möglicherweise ein mechanisches Problem bei der Montage vor. Siehe [Mechanische Installation](../../INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.md) zur Überprüfung.
+```
+---
+
+## Nächste Schritte
+
+Sobald die Kalibrierung der Kamera und des Roboters abgeschlossen ist, fahren Sie mit fort:
+
+- [FlexiBowl®-Setup](fbsetup)
+- [Trichter-Setup](13b_Hopper_Setup.md)
+- [Roboter-Setup](13c_Robot_Setup.md)
+- [Protocol Setup](protocol_setup)
+- [Rezept speichern](ricettabase)
 
 
 

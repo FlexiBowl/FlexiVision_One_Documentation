@@ -1,9 +1,9 @@
 (troubleshooting)=
 # **Dépannage**
 
-Sélectionnez le composant pour lequel vous avez besoin d'assistance.
+Sélectionnez le composant pour lequel vous avez besoin d'aide.
 
-## **Installation Mécanique**
+## Installation mécanique
 
 :::{card} VisionController
 :link: troubleshooting_vision_controller
@@ -20,14 +20,14 @@ Sélectionnez le composant pour lequel vous avez besoin d'assistance.
 :link-type: ref
 :::
 
-:::{card} Lumière Ambiante
+:::{card} Lumière ambiante
 :link: troubleshooting_luce_ambientale
 :link-type: ref
 :::
 
-## **Câblage et Connexions**
+## Câblage et connexions
 
-:::{card} Alimentation
+:::{card} Alimentation électrique
 :link: troubleshooting_alimentazione
 :link-type: ref
 :::
@@ -42,24 +42,34 @@ Sélectionnez le composant pour lequel vous avez besoin d'assistance.
 :link-type: ref
 :::
 
-:::{card} Connexion Caméra
+:::{card} Connexion de la caméra
 :link: troubleshooting_connessione_camera
 :link-type: ref
 :::
 
-:::{card} Connexion Toplight
+:::{card} Connexion du toplight
 :link: troubleshooting_connessione_toplight
 :link-type: ref
 :::
 
-:::{card} Multi-Dispositif
+:::{card} Multi-appareils
 :link: troubleshooting_multi
 :link-type: ref
 :::
 
-## **Configuration Initiale**
+## Configuration initiale
 
-:::{card} FlexiBowl Setup
+:::{card} Camera Setup
+:link: troubleshooting_cam_setup
+:link-type: ref
+:::
+
+:::{card} Étalonnage de la caméra
+:link: troubleshooting_calib_cam
+:link-type: ref
+:::
+
+:::{card} FlexiBowl® Setup
 :link: troubleshooting_fb_setup
 :link-type: ref
 :::
@@ -74,24 +84,21 @@ Sélectionnez le composant pour lequel vous avez besoin d'assistance.
 :link-type: ref
 :::
 
-:::{card} Camera Setup
-:link: troubleshooting_cam_setup
-:link-type: ref
-:::
 
-## **Calibration et Recettes**
 
-:::{card} Calibration Caméra
+## Étalonnage et recettes
+
+:::{card} Étalonnage de la caméra
 :link: troubleshooting_calib_cam
 :link-type: ref
 :::
 
-:::{card} Création Nouvelle Recette
+:::{card} Création d'une nouvelle recette
 :link: troubleshooting_nuova_ricetta
 :link-type: ref
 :::
 
-:::{card} Création Nouveau Modèle
+:::{card} Création d'un nouveau modèle
 :link: troubleshooting_nuovo_modello
 :link-type: ref
 :::
@@ -111,14 +118,14 @@ Sélectionnez le composant pour lequel vous avez besoin d'assistance.
 :link-type: ref
 :::
 
-## **Avancées et Surveillance**
+## Avancées et suivi
 
-:::{card} FlexiBowl Wizard
+:::{card} FlexiBowl® Wizard
 :link: troubleshooting_fb_wizard
 :link-type: ref
 :::
 
-:::{card} Hopper
+:::{card} Trémie
 :link: troubleshooting_conf_tramoggia
 :link-type: ref
 :::
@@ -130,21 +137,20 @@ Sélectionnez le composant pour lequel vous avez besoin d'assistance.
 26b_Installazione_Mecc.md
 26c_Cablaggio_Connessioni.md
 26d_Conf_Iniziale.md
-26e_Calib_Cam.md
 26g_Creazione_Ricette_Modelli.md
 26h_FlexiBowl_Wizard.md
 26i_Conf_Tramoggia.md
 ```
 
-### Licence non activable
+### *Licence non activable*
 
 ```{note}
 **Problèmes avec la licence**
 
-Si la licence ne s'active pas:
+Si la licence ne s'active pas :
 - Vérifier la connexion Internet 
-- Contrôler la date/l'heure du système d'exploitation Windows (elle doit être correcte)
-- S'assurer d'avoir saisi la clé exactement comme fournie
+- Vérifier la date/heure du système d'exploitation Windows (elle doit être correcte)
+- S'assurer que la clé a été introduite exactement comme elle a été fournie
 ```
 
 ---

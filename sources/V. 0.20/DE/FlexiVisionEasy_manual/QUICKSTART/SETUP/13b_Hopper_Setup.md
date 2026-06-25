@@ -1,131 +1,120 @@
 (hoppersetup)=
-# **Passo 5: Hopper Setup**
+# **Hopper Setup**
 
-Questa sezione descrive la procedura per configurare la tramoggia (Hopper). L'Hopper è il componente che alimenta automaticamente pezzi sul FlexiBowl quando il livello scende sotto una soglia minima.
+In diesem Abschnitt wird die Vorgehensweise zur Konfiguration des Trichters (Hopper) beschrieben. Der Trichter ist die Komponente, die automatisch Teile in den FlexiBowl® befördert, sobald der Füllstand unter einen Mindestwert fällt.
 
+:::{important}  **Betriebslogik**  
+
+FlexiVision steuert die Aktivierungslogik des Trichters. Er sendet die Zeichenfolge `Hopper;signalnumber;time`, wenn er die Aktivierung für notwendig erachtet. 
+:::
 ```{note}
-**Prerequisiti**
+**Voraussetzungen**
 
-Prima di procedere, assicurarsi che:
-- L'Hopper sia stata installata meccanicamente 
-- I collegamenti elettrici siano stati completati (segnali di controllo e alimentazione)
-- Il FlexiBowl sia già connesso
+Stellen Sie vor dem Fortfahren Folgendes sicher:
+- Der Trichter wurde mechanisch installiert 
+- Die elektrischen Anschlüsse sind hergestellt (Steuersignale und Stromversorgung)
+- Die FlexiBowl® ist bereits angeschlossen
 ```
 ---
+## Vorbereitung der physischen Einrichtung
 
-## Accesso alla configurazione Hopper
+````{list-table}
+* - **0**
+  - Demontieren Sie das Kalibrierungsgitter und stellen Sie das ursprüngliche Layout wieder her:
+    - Setzen Sie die Oberfläche wieder ein
+    - Setzen Sie den Mittelflansch wieder ein 
+    - Befestigen Sie den Mittelflansch mit den vier Schrauben
+````
+---
+## Zugriff auf die Hopper-Konfiguration
 
 ```{list-table}
 * - **1** 
-  - Dalla pagina principale del software, cliccare su <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
+  - Klicken Sie auf der Hauptseite der Software auf <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
 * - **2**
-  - Nella pagina SETUP, identificare e cliccare sull'icona **Hopper Setup**
-    ```{dropdown} Pagina Setup 
-       ![Pagina Setup](../../../../../_shared/media/images/pagina_setup1.png)
+  - Suchen Sie auf der SETUP-Seite das Symbol **Hopper Setup** und klicken Sie darauf
+    ```{dropdown} Setup-Seite 
+       ![Setup-Seite](../../../../../_shared/media/images/pagina_setup1.png)
     ```
 * - **3** 
-  - Si apre la pagina di configurazione dell'Hopper
+  - Die Seite zur Konfiguration des Trichters wird geöffnet
 ```
 
 ---
 
-## Panoramica interfaccia Hopper Setup
+## Übersicht über die Benutzeroberfläche Hopper Setup
 
-La pagina Hopper Setup presenta diverse sezioni per la configurazione dei parametri operativi delle varie tramogge:
+Die Seite Hopper Setup enthält verschiedene Abschnitte zur Konfiguration der Betriebsparameter der verschiedenen Trichter:
 
-![Pagina Hopper Setup](../../../../../_shared/media/images/pagina_hoppersetup.png)
+![Seite Hopper Setup](../../../../../_shared/media/images/pagina_hoppersetup.png)
 
 ```{list-table}
 :header-rows: 1
 :widths: 30 70
 
-* - Sezione
-  - Descrizione
+* - Abschnitt
+  - Beschreibung
 * - **Enable Hopper**
-  - Interruttore per abilitare/disabilitare l'utilizzo dell'Hopper nel sistema
+  - Schalter zum Aktivieren/Deaktivieren der Verwendung des Trichters im System
 * - **Steps**
-  - Numero di sequenze necessarie con cui la sezione del disco che attualmente si trova nell'area di visione, arriva sotto l'area di scarico della tramoggia
+  - Anzahl der erforderlichen Sequenzen, in denen der Teil der Scheibe, der sich gerade im Sichtbereich befindet, unter den Auslaufbereich des Trichters gelangt
 * - **Time**
-  - Durata dell'attivazione della tramoggia in millisecondi
+  - Dauer der Trichteraktivierung in Millisekunden
 * - **Signal**
-  - Numero del segnale digitale utilizzato per controllare l'Hopper
+  - Nummer des digitalen Signals, das zur Steuerung des Trichters verwendet wird
 * - **Config Hopper**
-  - Pulsante per configurare la tramoggia (da utilizzare in seguito)
-```
----
-
-## Procedura di configurazione
-
-```{list-table}
-:widths: 10 30 70 
-* - Step 1
-  - Abilitazione Hopper 
-  - Spuntare la checkbox **Enable Hopper**
-* - Step 2
-  - Configurazione Signal 
-  - Nel campo **Signal**, inserire il numero del segnale digitale (DO - Digital Output) utilizzato per controllare l'Hopper
-* - Step 3
-  - Salvataggio e Completamento 
-  - Tornare alla pagina <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon"> principale per procedere con il setup successivo
+  - Schaltfläche zum Konfigurieren des Trichters (für die spätere Verwendung)
 ```
 
-```{important}
-
-Abilitare l'Hopper solo se il dispositivo è correttamente installato
-
-```
-
-```{warning}
-
-È fondamentale inserire il numero di segnale corretto:
-- Un numero errato attiverà il segnale sbagliato (potenzialmente pericoloso)
-- Consultare lo schema elettrico realizzato durante l'installazione
-- In caso di dubbio, contattare chi ha effettuato il cablaggio
-```
-
-```{tip}
-
-I parametri impostati in questa fase sono sufficienti per la configurazione iniziale del sistema.
-Durante la procedura andremo poi a definire gli altri aspetti della configurazione della tramoggia.
-```
 
 ---
 (confighopper)=
-# **Configurazione della Tramoggia (Hopper)**
+# **Konfiguration des Trichters (Hopper)**
 
-La configurazione della tramoggia permette di gestire il rifornimento automatico dei componenti sul disco del FlexiBowl®. Il sistema utilizza la visione per determinare quando il livello di riempimento è insufficiente e attivare la tramoggia.
+Die Konfiguration des Trichters ermöglicht die Steuerung der automatischen Zuführung von Komponenten auf die Scheibe des FlexiBowl®. Das System erkennt mit Hilfe von Bildverarbeitung, wann der Füllstand zu niedrig ist und aktiviert den Trichter.
 
-## **Step 1: Accesso alla Configurazione**
+## Schritt 1: Zugriff auf die Konfiguration
 ```{list-table}
 * - **1**
-  - Cliccare sulla sezione <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
-* - **2**
-  - Dalla sezione **Hopper Setup**, è possibile visualizzare e gestire le unità di carico collegate.
+  - Klicken Sie auf <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">.   
+    Im Abschnitt **Hopper Setup** können Sie die angeschlossenen Ladeeinheiten anzeigen und verwalten.
     
-    :::{dropdown} Pagina Hopper Setup 
-    ![Pagina Hooper Setup](../../../../../_shared/media/images/pagina_hoppersetup.png)
+    :::{dropdown} Seite Hopper Setup 
+    ![Seite Hooper Setup](../../../../../_shared/media/images/pagina_hoppersetup.png)
+    :::
+* - **2**
+  - Geben Sie im Feld **Signal** die Nummer des digitalen Signals (DO - Digital Output) ein, das zur Steuerung des Trichters verwendet wird
+    :::{warning}
+      Es ist äußerst wichtig, die richtige Signalnummer einzugeben:
+      - Eine falsche Nummer aktiviert das falsche (potenziell gefährliche) Signal
+      - Beachten Sie den bei der Installation erstellten Schaltplan
+      - Wenden Sie sich im Zweifelsfall an denjenigen, der die Verkabelung vorgenommen hat
     :::
 * - **3**
-  - Selezionare la casella **Enable Hopper X** per attivare la tramoggia corrispondente.
+  - Aktivieren Sie das Kästchen **Enable Hopper X**, um den entsprechenden Hopper zu aktivieren.
+      :::{important}
+      Aktivieren Sie den Trichter nur, wenn das Gerät korrekt installiert ist
+      :::
 * - **4**
-  - Cliccare sul pulsante **Config Hopper X** per accedere alla configurazione specifica 
+  - Klicken Sie auf die Schaltfläche **Config Hopper X**, um die spezifische Konfiguration aufzurufen 
 ```
-## **Step 2: Definizione dell'Area di Controllo**
+## Schritt 2: Festlegen des Überwachungsbereichs
 
 :::{video} ../../../../../_shared/media/videos/TastoInfo_AreaHopper_1280x720.mp4
     :width: 100%
     :align: center
 :::
 
-In questa fase si definisce la porzione di disco che la telecamera deve monitorare per lo scarico.
+In diesem Schritt legen Sie den Bereich der Scheibe fest, den die Kamera für die Entleerung überwachen soll.
 ```{list-table}
 * - **5**
-  - Modificare il riquadro blu a schermo per inquadrare l'area in cui verranno rilevati i componenti.
-   **Strumenti di supporto**:
-      * **Info**: Cliccare per visualizzare dettagli sulle funzionalità della pagina.
+  - Passen Sie den blauen Rahmen auf dem Bildschirm an, um den Bereich einzurahmen, in dem die Komponenten erfasst werden sollen.
 ```
+:::{tip}
+Wenn Sie während der Konfiguration Zweifel haben, konsultieren Sie bitte die **INFO**-Taste auf der aktuellen Seite.
+:::
 
-## **Step 3: Definizione dei Valori di Soglia**
+## Schritt 3: Festlegung der Schwellenwerte
 
 :::{video} ../../../../../_shared/media/videos/TastoInfo_Hopper_1280x720.mp4
 :width: 100%
@@ -133,208 +122,134 @@ In questa fase si definisce la porzione di disco che la telecamera deve monitora
 :::
 ```{list-table}
 * - **6**
-  - Cliccare <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon icon-small"> per accedere alla pagina **Define Value Hopper Cam**, dove si istruisce il sistema a distinguere tra disco vuoto e disco pieno.
-    :::{dropdown} Pagina Define Value Hopper Cam 
-    ![Pagina Define Value Hopper Cam](../../../../../_shared/media/images/pagina_valuehopper.png)
+  - Klicken Sie auf <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon icon-small">, um die Seite **Define Value Hopper Cam** aufzurufen, auf der Sie das System anweisen, zwischen einer leeren und einer vollen Scheibe zu unterscheiden.
+    :::{dropdown} Seite Define Value Hopper Cam 
+    ![Seite Define Value Hopper Cam](../../../../../_shared/media/images/pagina_valuehopper.png)
     :::
 * - **7**
-  - Rimuovere tutti i componenti dall'area di visione e cliccare sul primo pulsante **CAPTURE**.
+  - Entfernen Sie alle Komponenten aus dem Sichtbereich und klicken Sie auf die erste Schaltfläche **CAPTURE**.
 * - **8**
-  - Posizionare il numero minimo di componenti che si desidera mantenere in area di visione. Se il numero scende sotto questa soglia, la tramoggia si attiverà.
+  - Legen Sie die Mindestanzahl an Komponenten fest, die im Sichtbereich verbleiben sollen. Fällt die Zahl unter diesen Schwellenwert, wird der Trichter aktiviert.
 * - **9**
-  - Cliccare sul secondo pulsante **CAPTURE**.
+  - Klicken Sie auf die zweite Schaltfläche **CAPTURE**.
 * - **10**
-  - Cliccando su <img src="../../../../../_shared/media/images/tasto_AUTO.png" class="inline-icon"> nell'Expression Builder, il sistema calcola automaticamente i valori di **Mean** (Media) e **Standard Deviation**.
+  - Durch Klicken auf <img src="../../../../../_shared/media/images/tasto_AUTO.png" class="inline-icon"> im Expression Builder berechnet das System automatisch die Werte für **Mean** (Mittelwert) und **Standard Deviation** (Standardabweichung).
 * - **11**
-  - Rimuovere alcuni pezzi e cliccare su <img src="../../../../../_shared/media/images/tasto_TEST.png" class="inline-icon">. 
+  - Entfernen Sie einige Teile und klicken Sie auf <img src="../../../../../_shared/media/images/tasto_TEST.png" class="inline-icon">. 
 * - **12**
-  - Osservare l'indicatore risultato:
-    - **Verde** 🟢: Livello insufficiente, Hopper si attiva (scarico necessario)
-    - **Rosso** 🔴: Livello sufficiente, Hopper NON si ATTIVA (OK)
+  - Beobachten Sie die Ergebnisanzeige:
+    - **Grün** 🟢: Füllstand unzureichend, der Trichter wird aktiviert (Entleerung erforderlich)
+    - **Rot** 🔴: Füllstand ausreichend, der Trichter wird NICHT aktiviert (OK)
 
       :::{warning}
-      **Calibrazione insufficiente**
+      **Unzureichende Kalibrierung**
 
-      Se il sistema non rileva correttamente il livello:
+      Wenn das System den Füllstand nicht korrekt erkennt:
 
-      **Problema: Sempre verde (attiva sempre Hopper)**  
-      → Soglia troppo bassa o interferenze nell'area  
-      → Soluzione: Aumentare numero pezzi nella seconda acquisizione, verificare pulizia area  
+      **Problem: Immer grün (Trichter immer aktiv)**  
+      → Schwellenwert zu niedrig oder Störungen im Bereich  
+      → Lösung: Anzahl der Teile bei der zweiten Erfassung erhöhen, Sauberkeit des Bereichs überprüfen  
 
-      **Problema: Sempre rosso (non attiva mai Hopper)**  
-      → Soglia troppo alta o area monitoraggio non rappresentativa  
-      → Soluzione: Ridurre numero pezzi nella seconda acquisizione CAPTURE, ripetere AUTO  
+      **Problem: Immer rot (Trichter wird nie aktiviert)**  
+      → Schwellenwert zu hoch oder Überwachungsbereich nicht repräsentativ  
+      → Lösung: Reduzieren Sie die Anzahl der Teile in der zweiten CAPTURE-Erfassung, wiederholen Sie AUTO  
 
-      **Problema: Comportamento errato (alterna verde/rosso casualmente)**  
-      → Illuminazione instabile o area troppo piccola  
-      → Soluzione: Verificare backlight stabile, ingrandire area monitoraggio, ripetere calibrazione  
+      **Problem: Fehlerhaftes Verhalten (wechselt zufällig zwischen grün und rot)**  
+      → Instabile Beleuchtung oder zu kleiner Bereich  
+      → Lösung: Stabile Hintergrundbeleuchtung prüfen, Überwachungsbereich vergrößern, Kalibrierung wiederholen  
       :::
 ```
-```{note}  
-**Fill Hopper Threshold** = ... 
-```
-## **Step 4: Parametri Operativi**
+```{note}
+**Hopper Fill Threshold**
 
-Tornare alla schermata principale di Hopper Setup per definire il comportamento meccanico.
-![Pagina Hopper Setup](../../../../../_shared/media/images/pagina_hoppersetup.png)
-```{list-table} Parametri di Funzionamento
+Der Parameter **Hopper Fill Threshold** definiert den prozentualen Schwellenwert des Sichtfelds, bei dessen Unterschreitung der Hopper automatisch aktiviert wird.
+
+Der Wert 100 % entspricht der während des zweiten CAPTURE erfassten Stückzahl (voller Bereich). Ein Schwellenwert von 50 % entspricht also der Hälfte dieser Menge.
+
+Das System setzt den Anfangswert automatisch auf **70 %**, was für die meisten Anwendungen ein gutes Gleichgewicht darstellt.
+
+**Änderung während des Betriebs**
+
+Der Schwellenwert kann angepasst werden, ohne den Erfassungsvorgang zu wiederholen:
+
+- Um **weniger Teile** zu entladen → den Prozentsatz verringern (z. B. 50 %) und auf **AUTO** klicken
+- Um **mehr Teile** zu entladen → den Prozentsatz erhöhen (z. B. 85 %) und auf **AUTO** klicken
+
+```
+
+:::{tip}
+Wenn Sie während der Konfiguration Zweifel haben, konsultieren Sie bitte die **INFO**-Taste auf der aktuellen Seite.
+:::
+
+## Schritt 4: Betriebsparameter
+
+Kehren Sie zum Hauptbildschirm von Hopper Setup zurück, um das mechanische Verhalten festzulegen.
+![Seite Hopper Setup](../../../../../_shared/media/images/pagina_hoppersetup.png)
+```{list-table} Betriebsparameter
 :widths: 20 80
 :header-rows: 1
 
-* - **Parametro**
-  - **Descrizione e Procedura**
+* - **Parameter**
+  - **Beschreibung und Vorgehensweise**
 * - **Steps**
-  - Numero di avanzamenti del FlexiBowl (sequenze) necessari per portare i pezzi dall'area di visione all'area di scarico della tramoggia.
-
-    :::{note}
-    **Come calcolarlo:**
-
-    :::::{list-table}
-
-    * - 1.
-      - Svuotare completamente il disco FlexiBowl
-    * - 2.
-      - Lasciare un componente al centro dell'area di visione
-    * - 3.
-      - Eseguire sequenze FlexiBowl fino a che il componente non arriva all'area di scarico della tramoggia e contare quanti avanzamenti sono stati necessari 
-    * - 4.
-      - Il risultato del conteggio è il valore da inserire in **Steps**
-    :::::
-    :::
-
+  - Anzahl der erforderlichen FlexiBowl®-Vorschübe (Sequenzen), um die Teile vom Sichtbereich zum Entladebereich des Trichters zu befördern.
 * - **Time**
-  - Millisecondi di attivazione della tramoggia.   Valore consigliato: **100 – 1000 ms** (Media: **500 ms**). Regolare di ±50 ms in base al flusso desiderato.
+  - Millisekunden der Trichteraktivierung.   Empfohlener Wert: **100 – 1000 ms** (Durchschnitt: **500 ms**). Passen Sie den Wert je nach gewünschtem Durchsatz um ±50 ms an.
 ```
 ```{tip}
-   Il tempo di attivazione dipende non solo dal valore impostato, ma anche dal volume di componenti attualmente presenti nella vasca della tramoggia. È essenziale mantenere un carico costante per un flusso uniforme.
+   Die Aktivierungszeit hängt nicht nur vom eingestellten Wert ab, sondern auch vom Volumen der derzeit im Trichterbehälter vorhandenen Teile. Für einen gleichmäßigen Durchsatz ist es unerlässlich, eine konstante Beladung aufrechtzuerhalten.
 ```
 ```{tip}
-Il valore Time è strettamente connesso al volume di carico della tramoggia: 
-- Con tramoggia piena si avrà un maggior numero di pezzi nell'area di scarico 
-- Con tramoggia semipiena si avrà un minor numero di pezzi nell'area di scarico 
+Der Zeitwert steht in engem Zusammenhang mit dem Ladevolumen des Trichters: 
+- Bei einem vollen Trichter befinden sich mehr Teile im Auslaufbereich 
+- Bei einem halbvollen Trichter befinden sich weniger Teile im Auslaufbereich 
 
-Un tempo di attivazione efficace dipende da:
-  :::{list-table}
-  :header-rows: 1
-
-  * - **Peso del pezzo** (*)
-    - **Comportamento del pezzo**
-    - **Volume di carico della Tramoggia**
-    - **Time consigliato**
-
-  * - **Pezzi pesanti**
-    - 
-      - Si incastrano 
-      - Non si incastrano
-    - 
-      - Meno del 30% (<30%)
-      - Compreso tra 50% e 80% (>50% e <80%)
-    - 
-      - Time maggiore di 600 ms
-      - Time maggiore di 600 ms
-
-  * - **Pezzi leggeri**
-    - 
-      - Si incastrano 
-      - Non si incastrano
-    - 
-      - Meno del 30% (<30%)
-      - Compreso tra 50% e 80% (>50% e <80%)
-    - 
-      - Time compreso tra 100-500 ms
-      - Time compreso tra 100-500 ms
-  :::
-
- **Best practice generale**: Mantenere la tramoggia costantemente piena per >50% e <80% per ottenere un flusso uniforme
-
- (*) Per **peso del pezzo** si intende relativo alla dimensione della tramoggia utilizzata.
 ```
 :::{important}
-In generale, è importante non superare mai il carico massimo della tramoggia utilizzata. 
+Generell ist es wichtig, die maximale Beladung des verwendeten Trichters niemals zu überschreiten. 
 :::
 
-## Salvataggio Configurazione
-```{warning}
-**Salvataggio ricetta obbligatorio**
+### *Berechnung des Parameters Schritte*
 
-Al termine della configurazione Hopper:
+![Erste Seite Schritte](../../../../../_shared/media/images/Steps1.png)
+![Zweite Seite Schritte](../../../../../_shared/media/images/Steps2.png)
+![Dritte Seite Schritte](../../../../../_shared/media/images/Steps3.png)
+![Vierte Seite Schritte](../../../../../_shared/media/images/Steps4.png)
+
+## Speichern der Konfiguration
+```{warning}
+**Obligatorische Rezeptspeicherung**
+
+Am Ende der Hopper-Konfiguration:
 
   :::{list-table}
     * - 1. 
-      - Verificare che tutti i parametri siano configurati correttamente:
-        - Area monitoraggio posizionata
-        - Soglie calibrate (TEST funzionante)
-        - Steps e Time impostati
+      - Überprüfen Sie, ob alle Parameter korrekt konfiguriert sind:
+        - Überwachungsbereich positioniert
+        - Schwellenwerte kalibriert (TEST funktioniert)
+        - Steps und Time eingestellt
     * - 2. 
-      - Tornare alla pagina principale <img src="../../../../../_shared/media/images/tasto_recipes.png" class="inline-icon icon-small">
+      - Kehren Sie zur Hauptseite zurück <img src="../../../../../_shared/media/images/tasto_recipes.png" class="inline-icon icon-small">
     * - 3. 
-      - Cliccare su <img src="../../../../../_shared/media/images/tasto_save_recipes.png" class="inline-icon icon-small">
+      - Klicken Sie auf <img src="../../../../../_shared/media/images/tasto_save_recipes.png" class="inline-icon icon-small">
     * - 4. 
-      - Confermare il salvataggio
+      - Bestätigen Sie die Speicherung
   :::
-**IMPORTANTE**: Ogni variazione apportata viene memorizzata **SOLO** se la ricetta viene salvata correttamente prima di uscire o cambiare pagina.
+**WICHTIG**: Jede vorgenommene Änderung wird **NUR** gespeichert, wenn das Rezept vor dem Verlassen oder Wechseln der Seite ordnungsgemäß gespeichert wurde.
 
-Senza salvataggio, tutte le configurazioni Hopper verranno perse alla chiusura di FlexiVision One!
+Ohne Speichern gehen alle Trichterkonfigurationen beim Schließen von FlexiVision One verloren!
 ```
 
 ---
 
-## Troubleshooting Hopper
 
-### Problemi comuni e soluzioni
-```{warning}
-**Hopper non si attiva mai**
+## Nächste Schritte
 
-**Sintomi**: Disco si svuota ma Hopper non scarica
+Nach Abschluss des Trichter-Setups (oder Überspringen, falls nicht vorhanden) fahren Sie fort mit:
 
-**Cause possibili:**
-- Soglia configurata troppo bassa (sistema pensa sia sempre pieno)
-- Area monitoraggio mal posizionata (non rappresentativa)
-- Enable Hopper disabilitato
-
-**Soluzioni:**
-1. Verificare Enable Hopper attivo
-2. Ripetere calibrazione soglie con più pezzi nella seconda acquisizione
-3. Spostare area monitoraggio in zona più rappresentativa
-4. Eseguire TEST manualmente per verificare trigger
-```
-```{warning}
-**Hopper si attiva troppo frequentemente**
-
-**Sintomi**: Hopper scarica continuamente, disco si riempie eccessivamente
-
-**Cause possibili:**
-- Soglia configurata troppo alta
-- Time di scarico troppo lungo
-- Area monitoraggio in zona sempre vuota
-
-**Soluzioni:**
-1. Ridurre soglia (meno pezzi nella seconda acquisizione CAPTURE)
-2. Ridurre Time (durata vibrazione) di 100-200 ms
-3. Verificare posizionamento area monitoraggio
-```
-```{warning}
-**Pezzi scaricati non arrivano in tempo**
-
-**Sintomi**: Robot trova disco vuoto subito dopo attivazione Hopper
-
-**Cause possibili:**
-- Steps troppo pochi (pezzi non hanno tempo di arrivare)
-- Sequenze FlexiBowl non efficaci
-- Ostruzione percorso scarico
-
-**Soluzioni:**
-1. Aumentare Steps di 1-2 unità
-2. Verificare parametri Config FlexiBowl (velocità, angolo)
-3. Ispezionare fisicamente percorso scarico Hopper → Disco
-```
-
----
-## Passi successivi
-
-Una volta completato l'Hopper Setup (o saltato se non presente), procedere con:
-
-**[Passo 6: Robot Setup](13c_Robot_Setup.md)** - Configurazione comunicazione con il robot
+- [Roboter-Setup](13c_Robot_Setup.md)
+- [Protocol Setup](protocol_setup)
+- [Rezept speichern](ricettabase)
 
 
 

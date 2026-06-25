@@ -1,24 +1,24 @@
 (istogrammi)=
-# **Le Clearances** 
- In questa pagina vedremo come configurare le Clearances per verificare che le aree critiche siano libere da ostacoli.
+# **Las Clearances** 
+ En esta página veremos cómo configurar las Clearances para verificar que las áreas críticas estén libres de obstáculos.
 
- **Cos'è una Clearance?**  
-Una **Clearance** in FlexiVision One è uno strumento che monitora un'area specifica dell'immagine per verificare che sia libera. Viene utilizzato per controllare, ad esempio, che lo spazio necessario alla pinza per afferrare il componente non sia occupato da altri oggetti.
-````{note} Principio di Funzionamento.
+ **¿Qué es una Clearance?**  
+Una **Clearance** en FlexiVision One es una herramienta que supervisa un área específica de la imagen para verificar que está despejada. Sirve para comprobar, por ejemplo, que el espacio necesario para que la pinza agarre el componente no está ocupado por otros objetos.
+````{note} Principio de funcionamiento.
 
-La Clearance analizza le variazioni dei livelli di grigio in un'area definita:
-- 🟢 **Verde** → Area libera (OK per il prelievo)
-- 🔴 **Rosso** → Area occupata (presenza di ostacoli)
+La Clearance analiza los cambios en los niveles de gris en un área definida:
+- 🟢 **Verde** → Zona libre (OK para la recogida)
+- 🔴 **Rojo** → Zona ocupada (presencia de obstáculos)
 ````
 :::{attention}
-L'utilizzo delle Clearances varia al variare del pezzo di cui si deve fare il modello. Questa è una valutazione a carico della figura incaricata di creare l'applicazione. 
+El uso de las Clearances varía en función de la pieza que se vaya a modelar. Se trata de una evaluación que debe realizar la persona encargada de crear la aplicación. 
 :::
 --- 
 (setupclearances)=
-## **Step 1: Setup Fisico**
+## Paso 1: Configuración física
 
-:::{danger} **Attenzione!**
-  Vi mostreremo la procedura con il Tool Pinza, in quanto necessita obbligatoriamente della configurazione di Clearances per i modelli. Altri Tool per il robot potrebbero non aver bisogno delle Clearances per simularne l'ingombro. 
+:::{danger} **¡Atención!**
+  Le mostraremos el procedimiento con la Herramienta Pinza, ya que requiere obligatoriamente la configuración de Clearances para los modelos. Otras herramientas robóticas pueden no necesitar las Clearances para simular la huella. 
 :::
 :::{video} ../../../../../_shared/media/videos/Step1.mp4
     :width: 100%
@@ -28,72 +28,75 @@ L'utilizzo delle Clearances varia al variare del pezzo di cui si deve fare il mo
 :widths: 5 95
 
 * - **1**
-  - Dal **pendant del robot**:
-    - Selezionare il **frame** e il **tool** calibrato su FlexiVision One
-    - Portare l'**ultimo asse** del tool a **rotazione zero** (Rz = 0°)
+  - Desde la **botonera del robot**:
+    - Seleccionar el **frame** y el **tool** calibrado en FlexiVision One
+    - Llevar el **último eje** de la herramienta a **rotación cero** (Rz = 0°)
 * - **2**
-  - Simulare una presa:
-    - Aprire la pinza
-    - Portare il tool del robot sul componente a livello della superficie, come per afferrarlo
+  - Simular un agarre:
+    - Abrir la pinza
+    - Acercar la herramienta del robot al componente a nivel de la superficie, como para agarrarlo
 * - **3**
-  - Posizionare **due oggetti** ai lati della pinza per avere, una volta rimosso il robot, le aree libere fra il componente di riferimento e i due oggetti.  
-  Esse rappresenteranno le aree di ingombro della pinza del robot. 
+  - Colocar **dos objetos** a los lados de la pinza para disponer, una vez retirado el robot, de las zonas libres entre el componente de referencia y los dos objetos.  
+  Representarán las áreas de huella de la pinza del robot. 
     
     :::{important}
-    Lasciare gli oggetti leggermente più distanti del necessario per evitare errori nella creazione del modello. (margine 2-3 mm)
+    Deje los objetos ligeramente más separados de lo necesario para evitar errores en la creación del modelo. (margen 2-3 mm)
     :::
     
 * - **4**
-  - Annotare le Coordinate:
-    - Salvare le coordinate dell'ultimo asse del robot:
-      - **X** (coordinata X)
-      - **Y** (coordinata Y)
-      - **Rz** (rotazione attorno a Z)
+  - Anotar las coordenadas:
+    - Guardar las coordenadas del último eje del robot:
+      - **X** (coordenada X)
+      - **Y** (coordenada Y)
+      - **Rz** (rotación alrededor de Z)
     
     :::{important}
-    Annotare queste coordinate! Saranno indispensabili nella fase di calibrazione robot.
+    ¡Anote estas coordenadas! Serán indispensables en la fase de calibración del robot.
     :::
 * - **5**
-  - Allontanare il robot con il pendant **senza spostare nulla** sulla superficie
+  - Alejar el robot con la botonera **sin mover nada** en la superficie
 ````
+:::{tip}
+Si tiene alguna duda durante la configuración, consulte el botón **INFO** de la página actual.
+:::
 ---
 
-## **Step 2: Accesso alla pagina Clearance**
+## Paso 2: Acceso a la página Clearance
 ````{list-table}
 :widths: 5 95
 
 * - **6**
-  - Dalla pagina **Locator Model**, dopo aver cliccato su **Next**, si aprirà l'elenco delle clearance disponibili (fino a 8 per modello).
+  - Desde la página **Locator Model**, tras hacer clic en **Next**, se abrirá la lista de Clearances disponibles (hasta 8 por modelo).
     
-    :::{dropdown} **Pagina Clearances**
+    :::{dropdown} **Página Clearances**
     
-      ![Pagina Clearances](../../../../../_shared/media/images/pagina_clearances.png)
+      ![Página Clearances](../../../../../_shared/media/images/pagina_clearances.png)
     
-      | Elemento | Descrizione |
+      | Elemento | Descripción |
       |----------|-------------|
-      | **Clearance 1...8** | Slot disponibili per creare fino a 8 clearance diversi per lo stesso modello |
-      | **Test (globale)** | Pulsante per testare simultaneamente tutte le clearance abilitate |
-      | **Next** | Avanzamento alla fase successiva (Robot Pick) dopo configurazione clearance |
+      | **Clearance 1...8** | Ranuras disponibles para crear hasta 8 Clearances distintas para el mismo modelo |
+      | **Test (global)** | Botón para probar simultáneamente todas las Clearances habilitadas |
+      | **Next** | Avance a la fase siguiente (Robot Pick) tras la configuración de Clearances |
     :::
 * - **7**
-  - Cliccare su **Clearance 1**, si aprirà la pagina relativa alla configurazione della prima clearance "Clearance 1"
+  - Haga clic en **Clearance 1**; se abrirá la página de configuración de la primera Clearance "Clearance 1"
     
-    :::{dropdown} **Pagina Clearance 1**
+    :::{dropdown} **Página Clearance 1**
 
-      ![Pagina Clearance 1](../../../../../_shared/media/images/pagina_clearance1.png)
+      ![Página Clearance 1](../../../../../_shared/media/images/pagina_clearance1.png)
 
-      | Parametro | Funzione |
+      | Parámetro | Función |
       |-----------|----------|
-      | **Enable Histogram** | Attiva questa clearance rendendola operativa |
-      | **Expression Builder** | Strumento per configurare automaticamente le soglie di rilevamento |
-      | **Mean and Standard Deviation** | Valori statistici calcolati sull'area selezionata (media e deviazione standard dei livelli di grigio) |
-      | **Test** | Verifica immediata del funzionamento della clearance |
-      | **Result** | Indicatore visivo dello stato (Verde = OK, Rosso = Triggered) |
+      | **Enable Clearance** | Activa esta Clearance y la deja operativa |
+      | **Expression Builder** | Herramienta para configurar automáticamente los umbrales de detección |
+      | **Mean and Standard Deviation** | Valores estadísticos calculados en el área seleccionada (media y desviación estándar de los niveles de gris) |
+      | **Test** | Verificación inmediata del funcionamiento de la Clearance |
+      | **Result** | Indicador visual del estado (Verde = OK, Rojo = Triggered) |
     :::
 ````
 ---
 
-## **Step 3: Attivazione e Posizionamento Area**
+## Paso 3: Activación y posicionamiento del área
 
 :::{video} ../../../../../_shared/media/videos/Step3.mp4
     :width: 100%
@@ -101,23 +104,26 @@ L'utilizzo delle Clearances varia al variare del pezzo di cui si deve fare il mo
 :::
 ````{list-table}
 * - **8**
-  - Cliccare su **Enable Clearance** per attivare la clearance 
+  - Haga clic en **Enable Clearance** para activar la Clearance 
 * - **9**
-  - Spostare il **riquadro** della Clearance nell'area che deve rimanere libera
-      - Tipicamente: area di presa della pinza (una clearance per ogni area di presa della pinza)
-      - Margini attorno al componente
-      - Zone di passaggio del robot
+  - Desplace el **cuadro** de la Clearance hasta la zona que debe quedar libre
+      - Normalmente: zona de agarre de la pinza (una Clearance por zona de agarre de la pinza)
+      - Márgenes alrededor del componente
+      - Zonas de paso del robot
     :::{important}
-    Tenere sempre in considerazione questi due aspetti importanti:
-    - La ROI della Clearance, quando viene configurata, deve essere completamente libera (quindi priva di oggetti, ombre, artefatti)
-    - Creare sempre una clearance leggermente più grande dello stretto necessario per evitare falsi errori.
+    Tenga siempre en cuenta estos dos aspectos importantes:
+    - La ROI de la Clearance, cuando se configura, debe estar completamente libre (es decir, sin objetos, sombras ni artefactos)
+    - Cree siempre una Clearance ligeramente mayor que lo estrictamente necesario para evitar falsos errores.
 
-    La mancata osservanza di questi due punti potrebbe comportare collisioni del robot con conseguenti danni a FlexiBowl, componenti o robot stesso. 
+    La inobservancia de estos dos puntos podría provocar colisiones del robot que dañarían el FlexiBowl®, los componentes o el propio robot. 
     :::
 ````
+:::{tip}
+Si tiene alguna duda durante la configuración, consulte el botón **INFO** de la página actual.
+:::
 ---
 
-## **Step 4: Configurazione Automatica**
+## Paso 4: Configuración automática
 
 :::{video} ../../../../../_shared/media/videos/Step4.mp4
     :width: 100%
@@ -125,84 +131,91 @@ L'utilizzo delle Clearances varia al variare del pezzo di cui si deve fare il mo
 :::
 ````{list-table}
 * - **10**
-  - Cliccare su <img src="../../../../../_shared/media/images/tasto_AUTO.png" class="inline-icon"> in Expression Builder
+  - Haga clic en <img src="../../../../../_shared/media/images/tasto_AUTO.png" class="inline-icon"> en Expression Builder
 * - **11**
-  - Cliccare su <img src="../../../../../_shared/media/images/tasto_TEST.png" class="inline-icon">
+  - Haga clic en <img src="../../../../../_shared/media/images/tasto_TEST.png" class="inline-icon">
 * - **12**
-  - Verificare che il riquadro diventi **verde** 
+  - Compruebe que el recuadro se vuelva **verde** 
 * - **13**
-  - Cliccare su <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon">
+  - Haga clic en <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon">
 ````
 ````{warning}
-**Cosa fare se il test fallisce (riquadro rosso)?**
+**¿Qué hacer si el test falla (recuadro rojo)?**
 
-Se dopo AUTO il riquadro diventa rosso:
+Si después de AUTO el recuadro se vuelve rojo:
 
-**Possibili cause:**
-- C'è effettivamente qualcosa nell'area (pezzo, ombra, sporcizia)
-- L'illuminazione è variata tra configurazione AUTO e TEST
-- L'area selezionata include bordi del FlexiBowl o artefatti
+**Posibles causas:**
+- Realmente hay algo en la zona (pieza, sombra, suciedad)
+- La iluminación ha cambiado entre la configuración AUTO y TEST
+- La zona seleccionada incluye bordes del FlexiBowl® o artefactos
 
-**Soluzioni:**
-1. Verificare visivamente che l'area sia completamente libera
-2. Ripetere AUTO con condizioni di illuminazione stabili
-3. Ripetere TEST per verificare
+**Soluciones:**
+1. Compruebe visualmente que la zona está completamente despejada
+2. Repita AUTO con condiciones de luz estables
+3. Repita TEST para verificar
 ````
-
+:::{tip}
+Si tiene alguna duda durante la configuración, consulte el botón **INFO** de la página actual.
+:::
 ---
 
-## Clearance Multipli - Quando Usarli
+## Clearances múltiples — cuándo usarlas
 
-Crea più clearance quando:
-- Il tool del robot è una pinza: serve una clearance per ognuna delle due aree occupate dalla pinza ai lati del componente di riferimento 
-- Ci sono più punti critici da monitorare
-- L'area di presa ha geometrie particolari
+Cree más Clearances cuando:
+- La herramienta del robot es una pinza: se necesita una Clearance para cada una de las dos zonas ocupadas por la pinza a cada lado del componente de referencia 
+- Hay varios puntos críticos que controlar
+- La zona de agarre tiene geometrías especiales
 
-### **Step 2-3: Ripetizione**
-Selezionare una nuova clearance dalla pagina elenco delle Clearances, tipo "Clearance 2" e ripetere gli Step 2-3.
-Ripetere la procedura per ogni clearance necessaria (fino a 8 per modello). 
+### *Paso 2-3: Repetición*
+Seleccione una nueva Clearance en la página de la lista de Clearances, como "Clearance 2" y repita los pasos 2-3.
+Repita el procedimiento para cada Clearance necesaria (hasta 8 por modelo). 
 
-### **Step 4: Test Complessivo**
-Nella pagina di elenco di tutte le clearance, cliccare su **TEST**
-Visualizzare tutte le clearance contemporaneamente
+### *Paso 4: Prueba global* 
 
+En la página de lista de todas las Clearances, haga clic en **TEST** para ver todas las Clearances a la vez  
+
+![Página Clearances](../../../../../_shared/media/images/activatedclearances.png)
 ---
 
-## Interpretazione Stati
+## Interpretación de estados
 
-### Stati delle Clearance 
+### *Estados de las Clearances*
+
 ````{list-table}
 :header-rows: 1
-:widths: 15 35 50
+:widths: 10 15 30 45
 
-* - Colore
-  - Stato
-  - Significato
+* - Color
+  - Estado
+  - Significado
+  - Imagen
 * - 🟢 Verde
   - OK
-  - Area libera, prelievo possibile
-* - 🔴 Rosso
+  - Zona libre, recogida posible
+  - ![](../../../../../_shared/media/images/greenclearances.png)
+* - 🔴 Rojo
   - Triggered
-  - Area occupata, prelievo non possibile
+  - Zona ocupada, recogida no posible
+  - ![](../../../../../_shared/media/images/redclearances.png)
 ````
 
-### Cosa Significa "Triggered"?
+### *¿Qué significa "Triggered"?*
 
-Una clearance diventa rossa (triggered) quando rileva al suo interno:
-- Presenza di altri componenti
-- Ombre o riflessi significativi
-- Qualsiasi elemento che rende l'area non libera
+Una Clearance se vuelve roja (triggered) cuando detecta en su interior:
+- Presencia de otros componentes
+- Sombras o reflejos significativos
+- Cualquier elemento que haga que el área no esté libre
 
 ---
 
-## **Step 5: Finalizzazione**
+## Paso 5: Finalización
 ````{list-table}
 * - **14**
-  - Dopo aver configurato tutte le clearance necessarie, cliccare su **Next**
+  - Después de configurar todas las Clearances necesarias, haga clic en <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon">
 * - **15**
-  - Si aprirà la pagina **Robot Model Pick Cam**
+  - Se abrirá la página **Robot Model Pick Cam**
 ````
 ````{seealso}
-Procedi alla [Calibrazione Robot](robotpick) per completare la configurazione.
+Proceda a la [Calibración del robot](robotpick) para completar la configuración.
 ````
 

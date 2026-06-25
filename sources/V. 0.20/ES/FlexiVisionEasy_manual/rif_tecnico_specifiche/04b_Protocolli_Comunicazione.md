@@ -1,7 +1,7 @@
 (protocollo)=
-# **Protocolo de Comunicación Robot-Visión**
+# **Protocolo de comunicación Robot-Vision**
 
-FlexiVision One se comunica con el robot mediante protocolo **TCP/IP** en red Ethernet. 
+FlexiVision One se comunica con el robot mediante el protocolo **TCP/IP** a través de una red Ethernet. 
 
 ## Especificaciones del protocolo
 
@@ -14,22 +14,22 @@ FlexiVision One se comunica con el robot mediante protocolo **TCP/IP** en red Et
 * - Protocolo
   - TCP/IP
 * - Puerto
-  - Configurable (predeterminado: FB1 → 4001 ; FB2 → 4002 ; FB3 → 4003)
+  - Configurable (por defecto: FB1 → 4001 ; FB2 → 4002 ; FB3 → 4003)
 * - Carácter de terminación
-  - CHR(13) - Carriage Return
+  - CHR(13) - Retorno de carro
 * - Formato de datos
   - Cadena ASCII
-* - Timeout
-  - Configurable (predeterminado: 5000 ms)
-* - Encoding
+* - Tiempo de espera
+  - Configurable (por defecto: 5000 ms)
+* - Codificación
   - UTF-8
 ```
 
 ## Comandos disponibles
 
-El sistema admite los siguientes comandos mediante cadenas de texto enviadas por la conexión TCP/IP:
+El sistema admite los siguientes comandos mediante cadenas de texto enviadas a través de la conexión TCP/IP:
 
-### Gestión de recetas
+### *Gestión de recetas*
 
 ```{list-table}
 :header-rows: 1
@@ -37,16 +37,16 @@ El sistema admite los siguientes comandos mediante cadenas de texto enviadas por
 
 * - Comando
   - Acción
-  - Valor de Retorno
+  - Valor de retorno
 * - `set_Recipe=nome_ricetta`
-  - Carga la receta correspondiente al "nome_ricetta" especificado
+  - Carga la receta correspondiente al "nombre_receta" especificado
   - Ninguno
 * - `get_Recipe`
-  - Devuelve el nombre de la receta actualmente cargada
+  - Devuelve el nombre de la receta cargada actualmente
   - `nome_ricetta`
 ```
 
-### Comandos de localización
+### *Comandos de localización*
 
 ```{list-table}
 :header-rows: 1
@@ -54,25 +54,25 @@ El sistema admite los siguientes comandos mediante cadenas de texto enviadas por
 
 * - Comando
   - Acción
-  - Valor de Retorno
+  - Valor de retorno
 * - `start_Locator`
-  - Inicia el proceso de localización de las piezas. Si no hay piezas recogibles, llama automáticamente a la rutina de movimiento del FlexiBowl.
+  - Inicia el proceso de localización de piezas. Si no hay piezas que puedan recogerse, invoca automáticamente la rutina de manipulación del FlexiBowl®.
   - `Pattern_n;x;y;r` / `Hopper;signalnumber;time`
 * - `stop_Locator`
   - Detiene el proceso de localización
   - Ninguno
 * - `turn_Locator`
-  - Si no se ha recogido ninguna pieza, hace girar el FlexiBowl y reinicia la búsqueda
+  - Si no se ha recogido ninguna pieza, hace girar el FlexiBowl® y reinicia la búsqueda
   - `Pattern_n;x;y;r`
 * - `test_Locator`
-  - Inicia la localización sin activar el FlexiBowl (solo adquisición de imagen)
+  - Inicia la localización sin activar el FlexiBowl® (solo adquisición de imagen)
   - `Pattern_n;x;y;r`/ Ninguno
 * - `state_Locator`
-  - Devuelve el estado diagnóstico del localizador
-  - `Locator is Running` / `Locator is in Error` / `Locator is not Running`
+  - Devuelve el estado de diagnóstico del localizador
+  - `El localizador está en ejecución` / `El localizador está en error` / `El localizador no está en ejecución`
 ```
 
-### Comandos FlexiBowl
+### *Comandos FlexiBowl®*
 
 ```{list-table}
 :header-rows: 1
@@ -80,24 +80,24 @@ El sistema admite los siguientes comandos mediante cadenas de texto enviadas por
 
 * - Comando
   - Acción
-  - Valor de Retorno
+  - Valor de retorno
 * - `start_Empty`
-  - Inicia la secuencia de vaciado rápido (Quick-Emptying) del FlexiBowl
-  - `start_Empty ended`
+  - Inicia la secuencia de vaciado rápido del FlexiBowl®
+  - `start_Empty finalizado`
 ```
 
 
-### Señales hopper opcionales
+### *Señales hopper opcional*
 
 ```{note}
-Si el hopper debe activarse, recibiremos la cadena: `"Hopper;signalnumber;time"`
+Si debe activarse la tolva, recibiremos la cadena: `"Hopper;signalnumber;time"`
 
 ```
 
 
 
-Para información detallada sobre la instalación física y las conexiones eléctricas, continuar con las secciones siguientes:
-- [Cálculo de Distancia Óptima Cámara](05_Calcolo_distanza_ottimale.md)
-- [Instalación Mecánica](../INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.md)
-- [Cableado y Conexiones](../INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.md)
+Para obtener información detallada sobre la instalación física y las conexiones eléctricas, consulte las secciones siguientes:
+- [Cálculo de la distancia óptima de la cámara](05_Calcolo_distanza_ottimale.md)
+- [Instalación mecánica](../INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.md)
+- [Cableado y conexiones](../INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.md)
 

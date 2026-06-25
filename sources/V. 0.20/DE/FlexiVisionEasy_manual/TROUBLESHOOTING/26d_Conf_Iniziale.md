@@ -1,366 +1,600 @@
-# **Setup Iniziale**
+# **Ersteinrichtung**
 ```{warning}
-**Componenti non raggiungibili**
+**Nicht erreichbare Komponenten**
 
-Se FlexiBowl, robot o camera non sono raggiungibili:
+Wenn FlexiBowl®, Roboter oder Kamera nicht erreichbar sind:
 
-1. Verificare che tutti i cavi Ethernet siano collegati correttamente
-2. Controllare che switch/router siano accesi
-3. Verificare gli indirizzi IP di tutti i dispositivi:
-   - Devono essere sulla stessa subnet (es: 192.168.1.x)
-   - Non devono esserci conflitti di IP (due dispositivi con stesso IP)
-4. Utilizzare il comando `ping` da terminale per testare la raggiungibilità
-5. Disabilitare temporaneamente il firewall di Windows sulla porta/adattatore usato per le telecamere GigE
+1. Überprüfen Sie, ob alle Ethernet-Kabel korrekt angeschlossen sind  
+2. Überprüfen Sie, ob Switch/Router eingeschaltet sind  
+3. Überprüfen Sie die IP-Adressen aller Geräte:  
+   - Sie müssen sich im selben Subnetz befinden (z. B.: 192.168.1.x)  
+   - Es dürfen keine IP-Konflikte vorliegen (zwei Geräte mit derselben IP)  
+4. Verwenden Sie den Befehl `ping` im Terminal, um die Erreichbarkeit zu testen  
+5. Deaktivieren Sie vorübergehend die Windows-Firewall für den Port/Adapter, der für die GigE-Kameras verwendet wird  
 
-Per dettagli sulla configurazione di rete, vedere [Cablaggio e Connessioni](cablaggio).
+Einzelheiten zur Netzwerkkonfiguration finden Sie unter [Verkabelung und Anschlüsse](cablaggio).
 ```
-(troubleshooting_fb_setup)=
-## Troubleshooting per la sezione Passo 4: FlexiBowl Setup 
-
-```{list-table}
-:header-rows: 1
-:widths: 30 35 35
-
-* - Problema
-  - Possibili Cause
-  - Soluzioni
-* - **FlexiBowl non risponde ai comandi software**
-  - • Indirizzo IP non configurato o errato
-    
-    • FlexiBowl non connesso in rete
-    
-    • Firewall blocca comunicazione
-    
-    • FlexiBowl non acceso
-  - • Verificare e configurare correttamente IP in FlexiBowl Setup
-    
-    • Testare connessione con ping da VisionController
-    
-    • Disabilitare firewall temporaneamente per test
-    
-    • Verificare LED READY acceso su FlexiBowl
-* - **Impossibile salvare configurazione FlexiBowl**
-  - • Disco pieno
-
-  - • Liberare spazio su disco
- 
-* - **Parametri FlexiBowl non si applicano**
-  - • Pulsante "Synchronize Parameters" non premuto
-    
-    • Connessione FlexiBowl persa
-    
-    • FlexiBowl in errore
-  - • Cliccare sempre "Synchronize Parameters" dopo modifiche
-    
-    • Verificare stabilità connessione Ethernet
-    
-    • Riavviare FlexiBowl 
-* - **Wizard FlexiBowl calcola parametri errati**
-  - • Caratterizzazione componente non corretta (geometria/comportamento)
-    
-    • Modello FlexiBowl selezionato errato
-    
-    • Senso rotazione impostato male
-  - • Rivedere selezione geometria (FLAT/CYLINDRICAL/COMPLEX)
-    
-    • Verificare taglia FlexiBowl installato vs selezionato
-    
-    • Verificare senso rotazione fisico e confrontare con impostazione
-```
-
-(troubleshooting_hopper_setup)=
-## Troubleshooting per la sezione Passo 5: Hopper Setup 
-
-```{list-table}
-:header-rows: 1
-:widths: 30 35 35
-
-* - Problema
-  - Possibili Cause
-  - Soluzioni
-* - **Tramoggia non si attiva mai automaticamente**
-  - • Hopper non abilitato in software  
-    • Campo Signal errato
-    • Area di controllo non definita
-    
-    • Soglie non calibrate
-    
-    • Tramoggia non collegata elettricamente
-  - • Abilitare checkbox "Enable Hopper X"  
-    • Verificare che il numero **Signal** corrisponda al DO fisicamente connesso
-    • Definire area di controllo in "Define Area Check"
-    
-    • Eseguire calibrazione soglie con CAPTURE vuoto/pieno
-    
-    • Verificare collegamenti elettrici 
-* - **Tramoggia si attiva continuamente**
-  - • Soglie calibrate in modo errato
-    
-    • Tempo vibrazione insufficiente (scarica troppo pochi pezzi)
-    
-    • Parameter "Steps" errato
-  - • Ripetere calibrazione rimuovendo TUTTI i pezzi per CAPTURE vuoto
-    
-    • Aumentare parametro "Time" (es: da 500ms a 700ms)
-    
-    • Ricalcolare "Steps" contando cicli effettivi
-* - **Test hopper sempre rosso (non si attiva)**
-  - • Troppi componenti nell'area durante calibrazione
-    
-    • Illuminazione cambiata tra calibrazione e test
-    
-    • Riflessi/ombre nell'area di controllo
-  - • Ripetere calibrazione con numero minimo corretto di pezzi
-    
-    • Eseguire calibrazione e test con illuminazione stabile
-    
-    • Riposizionare area escludendo zone con riflessi
-* - **Test hopper sempre verde (si attiva sempre)**
-  - • Area di controllo include zone non pertinenti
-    
-    • Calibrazione vuoto eseguita con pezzi presenti
-    
-    • Expression Builder non calcolato correttamente
-  - • Ridefinire area di controllo più stretta
-    
-    • Ripetere CAPTURE vuoto assicurandosi area completamente pulita
-    
-    • Cliccare nuovamente su AUTO per ricalcolare Mean e Std Dev
-* - **Flusso componenti non uniforme**
-  - • Calcolo del tempo di vibrazione errato  
-    
-    • Carico iniziale troppo elevato che supera il payload
-  - • Rivedere il calcolo della vibrazione sulla base del riempimento iniziale 
-    
-    • Controllare che il carico non superi il payload della tramoggia 
-```
-
-(troubleshooting_robot_setup)=
-## Troubleshooting per la sezione Passo 6: Robot Setup
-
-```{warning}
-**Diagnosi connessione fallita**
-
-Se il robot non riesce a stabilire la connessione:
-
-**Verifiche base**:
-1. Server FlexiVision One online (indicatore verde)
-2. Indirizzo IP corretto nel programma robot
-3. Porta corretta nel programma robot (uguale a FlexiVision One)
-4. Cavo Ethernet collegato correttamente
-
-**Verifiche rete**:
-1. Ping dal VisionController al robot:
-   - Aprire Prompt comandi su VisionController
-   - `ping <IP_ROBOT>` (es: `ping 192.168.1.10`)
-   - Se fallisce: problema di rete fisica/configurazione IP
-
-2. Ping dal robot al VisionController (se disponibile funzione ping sul robot)
-
-3. Verificare che robot e VisionController siano sulla stessa subnet
-
-**Verifiche firewall**:
-1. Disabilitare temporaneamente firewall Windows per test
-2. Se funziona, problema firewall → configurare eccezione
-
-**Verifiche robot**:
-1. Verificare sintassi corretta comando connessione TCP/IP (consultare manuale robot)
-2. Controllare timeout connessione (aumentare se necessario)
-3. Verificare permessi di rete sul controller robot
-```
-
-```{note}
-**Stabilizzazione connessione**
-
-Se la connessione si interrompe frequentemente:
-
-1. Verificare qualità cavo Ethernet (utilizzare da Cat6 in su)
-2. Evitare cavi troppo lunghi 
-3. Verificare che non ci sia traffico di rete eccessivo sulla stessa subnet, si possono utilizzare programmi come Wireshark o TCP dump 
-4. Verificare alimentazione stabile del VisionController
-5. Controllare log di Windows per errori di rete
-
-Se il problema persiste, contattare supporto tecnico per analisi approfondita.
-```
-```{warning}
-**Sintassi comandi errata**
-
-Se FlexiVision One risponde con "Invalid command":
-
-1. Verificare la sintassi esatta del comando (case-sensitive, underscore, ecc.)
-2. Assicurarsi di inviare il carattere terminatore CHR(13) dopo ogni comando
-3. Non aggiungere spazi extra all'inizio o alla fine del comando
-4. Verificare, nel log messaggi della sezione Robot Setup, il comando che FlexiVision One ha ricevuto 
-
-Esempi corretti vs errati:
-- ✅ `start_Locator` (con underscore, minuscolo)
-- ❌ `Start_Locator` (maiuscola errata)
-- ❌ `start Locator` (spazio invece di underscore)
-- ❌ `startLocator` (manca underscore)
-
-Consultare [Protocollo TCP/IP](protocollo) per l'elenco completo e corretto dei comandi.
-```
-
-```{list-table}
-:header-rows: 1
-:widths: 30 35 35
-
-* - Problema
-  - Possibili Cause
-  - Soluzioni
-* - **Robot non si collega a FlexiVision One**
-  - • Indirizzo IP robot non sulla stessa sottorete del VisionController
-    
-    • Porta TCP/IP non configurata
-    
-    • Firewall VisionController blocca comunicazione
-    
-  - • Verificare e configurare sottorete corretta in Robot Setup
-    
-    • Configurare porta TCP/IP (tipicamente 5000 o secondo robot)
-    
-    • Disabilitare firewall per test
-    
-    • Selezionare protocollo compatibile con robot in [Protocol Setup](../QUICKSTART/SETUP/15_Protocol_Setup.md)
-* - **Robot va in posizioni sbagliate**
-  - • Calibrazione robot non eseguita o non eseguita correttamente
-    
-    • Frame/Tool robot non corretto
-    
-    • Offset gripper errato
-    
-    • Coordinate salvate sbagliate durante setup modello
-  - • Eseguire calibrazione robot completa
-    
-    • Verificare Frame e Tool selezionati sul robot
-    
-    • Ripetere calibrazione Robot Pick con coordinate corrette
-    
-    • Rifare training modello salvando coordinate precise
-* - **Impossibile connettersi al robot**
-  - • Robot spento 
-    
-    • Cavo Ethernet non collegato
-    
-    • Robot e VisionController su subnet diverse
-
-  - • Accendere robot e portare in automatico
-    
-    • Verificare connessione fisica Ethernet robot-VisionController
-    
-    • Configurare robot e VisionController stessa rete
-```
-
 (troubleshooting_cam_setup)=
-## Troubleshooting per la sezione Passo 7: Camera Setup 
+## Fehlerbehebung für den Abschnitt Kameraeinrichtung
 
 ```{warning}
-**Problemi di messa a fuoco**
+**Fokussierungsprobleme**
 
-Se l'immagine appare sfocata:
+Wenn das Bild unscharf erscheint:
 
-1. Verificare che la camera sia alla distanza di lavoro corretta ([Calcolo Distanza Ottimale](../rif_tecnico_specifiche/05_Calcolo_distanza_ottimale.md))
-2. Controllare che la lente sia avvitata completamente 
-3. Verificare che non ci siano sporcizia o impronte sulla lente
-4. Assicurarsi che la camera sia montata perfettamente parallela al piatto FlexiBowl
+1. Prüfen Sie, ob sich die Kamera im richtigen Arbeitsabstand befindet ([Calcolo Distanza Ottimale](../rif_tecnico_specifiche/05_Calcolo_distanza_ottimale.md))  
+2. Überprüfen Sie, ob das Objektiv vollständig festgeschraubt ist   
+3. Vergewissern Sie sich, dass sich kein Schmutz oder Fingerabdrücke auf dem Objektiv befinden  
+4. Stellen Sie sicher, dass die Kamera genau parallel zur FlexiBowl®-Arbeitsfläche montiert ist  
 
 ```
 ```{tip}
-**Problemi di luminosità**
+**Probleme mit der Helligkeit**
 
-Se l'immagine acquisita è troppo scura o troppo chiara:
+Wenn das aufgenommene Bild zu dunkel oder zu hell ist:
 
-**Troppo scura**:
-- Verificare che il backlight/toplight sia acceso (Config FlexiBowl)
-- Aumentare il tempo di esposizione (parametro Cam Exposure in [Camera FLB])
+**Zu dunkel**:
+- Überprüfen Sie, ob Backlight/Toplight eingeschaltet ist (Konfig FlexiBowl®)  
+- Erhöhen Sie die Belichtungszeit (Parameter Cam Exposure in [Camera FLB])  
 
-**Troppo chiara (sovraesposta)**:
-- Ridurre il tempo di esposizione (parametro Cam Exposure in [Camera FLB])
-- Verificare che non ci sia luce ambientale eccessiva
-- Regolare l'apertura del diaframma nel corpo dell'ottica della camera 
+**Zu hell (überbelichtet)**:
+- Verringern Sie die Belichtungszeit (Parameter Cam Exposure in [Camera FLB])  
+- Vergewissern Sie sich, dass kein übermäßiges Umgebungslicht vorhanden ist  
+- Passen Sie die Blendenöffnung im Objektivgehäuse der Kamera an  
   :::{warning}
-  Fare particolare attenzione nel maneggiare la camera, in quanto, se la calibrazione è già stata effettuata, anche un piccolo spostamento della camera può compromettere l'affidabilità della calibrazione 
+  Seien Sie beim Umgang mit der Kamera besonders vorsichtig, da bereits eine kleine Verschiebung der Kamera die Zuverlässigkeit der Kalibrierung beeinträchtigen kann, wenn diese bereits durchgeführt wurde
   :::
 ```
 ```{note}
-**Performance acquisizione**
+**Aufnahmeleistung**
 
-Se l'acquisizione immagini è lenta:
-- Verificare che il cavo Ethernet sia Gigabit (da  Cat6 in su )
-- Controllare che lo switch di rete sia Gigabit Ethernet (non Fast Ethernet 100Mbps)
-- Cambiare il Latency Level se non ci sono problemi di schermate blu
-- Ridurre il Packet Size a 1500-2000 
+Wenn die Bildaufnahme langsam ist:
+- Überprüfen Sie, ob das Ethernet-Kabel ein Gigabit-Kabel ist (ab Cat6 )  
+- Überprüfen Sie, ob der Netzwerk-Switch ein Gigabit-Ethernet-Switch ist (kein Fast-Ethernet-Switch mit 100 Mbit/s)  
+- Ändern Sie die Latenzstufe, wenn es keine Probleme mit blauen Bildschirmen gibt  
+- Reduzieren Sie die Paketgröße auf 1500-2000  
 
 
-Il frame rate massimo della camera è 24 fps (immagini al secondo), sufficiente per tutte le applicazioni di picking standard.
+Die maximale Bildrate der Kamera beträgt 24 fps (Bilder pro Sekunde), was für alle standardmäßigen Picking-Anwendungen ausreichend ist.
 ```
 
 ```{list-table}
 :header-rows: 1
 :widths: 30 35 35
 
-* - Problema
-  - Possibili Cause
-  - Soluzioni
-* - **Immagine troppo scura**
-  - • Esposizione camera troppo bassa
+* - Problem
+  - Mögliche Ursachen
+  - Lösungen
+* - **Bild zu dunkel**
+  - • Belichtung der Kamera zu niedrig  
     
-    • Toplight spento o guasto
+    • Toplight ausgeschaltet oder defekt  
 
-    • Backlight spento o guasto
+    • Backlight ausgeschaltet oder defekt  
 
-    • Toplight con potenza insufficiente
+    • Toplight mit unzureichender Leistung  
     
-    • Lente con tappo protettivo
-  - • Aumentare esposizione in Camera Setup
+    • Objektiv mit Schutzkappe  
+  - • Belichtung in den Kameraeinstellungen erhöhen  
     
-    • Verificare che il toplight sia acceso 
+    • Sicherstellen, dass das Toplight eingeschaltet ist  
     
-    • Verificare che in Configurazione FlexiBowl sia accesa la spunta Light On
+    • Sicherstellen, dass in der FlexiBowl®-Konfiguration das Häkchen bei „Light On“ gesetzt ist  
     
-    • Verificare alimentazione toplight
+    • Stromversorgung des Toplights überprüfen  
     
-    • Rimuovere tappo protettivo lente
-* - **Immagine troppo chiara (sovraesposta)**
-  - • Esposizione camera troppo alta
+    • Schutzkappe vom Objektiv entfernen  
+* - **Bild zu hell (überbelichtet)**
+  - • Belichtung in den Kameraeinstellungen zu hoch  
     
-    • Riflessi da superficie FlexiBowl
-  - • Diminuire esposizione in Camera Setup
+    • Reflexionen von der FlexiBowl®-Oberfläche
+  - • Belichtung in den Kameraeinstellungen verringern  
     
-    • Sostituire superficie grip con una meno riflettente
-* - **Immagine sfocata**
-  - • Lente non a fuoco 
+    • Greiffläche durch eine weniger reflektierende ersetzen  
+* - **Bild unscharf**
+  - • Linse nicht scharfgestellt  
     
-    • Lente non avvitata completamente
+    • Objektiv nicht vollständig festgeschraubt  
     
-    • Lente sporca
+    • Objektiv verschmutzt  
     
-    • Camera in movimento/vibrazioni
-  - • Correggere fuoco camera
+    • Kamera bewegt sich/Vibrationen  
+  - • Kamerafokus korrigieren  
     
-    • Avvitare lente fino a contatto metal-metal
+    • Objektiv festschrauben, bis Metall-Metall-Kontakt besteht  
     
-    • Pulire lente con panno in microfibra
+    • Objektiv mit Mikrofasertuch reinigen  
     
-    • Fissare meglio camera e ridurre vibrazioni
-* - **Immagine con artefatti o linee**
-  - • Interferenze elettromagnetiche
+    • Kamera besser befestigen und Vibrationen reduzieren  
+* - **Bild mit Artefakten oder Linien**  
+  - • Elektromagnetische Störungen  
     
-    • Cavo camera danneggiato
+    • Kamerakabel beschädigt  
     
-    • Sensore camera danneggiato
-  - • Allontanare cavo camera da fonti EMI, usare cavo schermato
+    • Kamerasensor beschädigt  
+  - • Kamerakabel von EMI-Quellen fernhalten, abgeschirmtes Kabel verwenden  
     
-    • Sostituire cavo Ethernet camera
+    • Ethernet-Kabel der Kamera austauschen  
     
-    • Sostituire camera
-* - **Camera non acquisisce durante ciclo**
-  - • Trigger non configurato
+    • Kamera austauschen  
+* - **Kamera nimmt während des Zyklus keine Bilder auf**  
+  - • Trigger nicht konfiguriert  
     
-  - • Configurare trigger acquisizione correttamente
-* - **Camera non processa durante ciclo**
+  - • Erfassungstrigger korrekt konfigurieren  
+* - **Kamera verarbeitet während des Zyklus nicht**  
   - 
+```
+(scelta_camera)=
+### *Konfigurationsverfahren*
+
+```{list-table}
+* - **Zugriff auf die Konfiguration**
+  - 1. Klicken Sie auf die Schaltfläche **Config Camera X** (wobei X die Nummer der Kamera ist)
+    2. Es öffnet sich die erste Seite des Kalibrierungsassistenten, auf der Sie den Parameter „**Cam Exposure**“ ändern können
+
+* - **Aktivierung des erweiterten Modus**
+  - 3. Klicken Sie auf die Schaltfläche **Expert** (unten rechts)
+    4. Dieser Modus bietet Zugriff auf alle erweiterten Kameraeinstellungen, die für die Erstkonfiguration erforderlich sind
+* - **Konfiguration des Bildaufnahmegeräts**
+  - 5. Klicken Sie im Fenster **Expert** unter **Settings** auf den Abschnitt **Image Acquisition**
+    6. Klicken Sie auf **Image Acquisition Device**
+    7. Es öffnet sich ein Menü zur Auswahl der verfügbaren Aufnahmegeräte
+* - **Spezifische Kamera-Identifikation**
+  - 8. Wählen Sie im Gerätemenü die gewünschte Kamera aus
+        - Suchen Sie in der Liste nach der Seriennummer oder dem Modell der Kamera
+        - Beispiel: „CAM-CIC-5000-20G-XXXXX" (wobei XXXXX die Seriennummer ist)
+    9. Klicken Sie auf die Kamera, um sie auszuwählen
+```
+:::{video} ../../../../_shared/media/videos/Step2_calib.mp4
+  :width: 100%
+  :align: center
+:::
+
+```{tip}
+**Ermittlung der richtigen Seriennummer**
+
+Wenn mehrere Kameras oder Geräte aufgelistet sind:
+- Die Seriennummer befindet sich auf einem Etikett an der Kamera
+- Vergleichen Sie die letzte Zeichengruppe der Seriennummer, um die richtige Kamera zu identifizieren
+- Trennen Sie im Zweifelsfall andere Kameras ab, um die verwendete Kamera zu identifizieren
 ```
 
 
+```{list-table} 
+* - **Auswahl des Videoformats**
+  - 11. Klicken Sie auf **Video Formats**
+    12. Wählen Sie aus der Liste der verfügbaren Formate aus **Generic GigEVision**
+    13. Wählen Sie **Mono** (monochrom) als Sensortyp
+```
+
+
+```{warning}
+**Korrektes Format erforderlich**
+
+Wählen Sie unbedingt **Generic GigEVision Mono**:
+- Andere Formate funktionieren möglicherweise nicht oder verursachen Fehler
+- Farbformate sind mit dieser Kamera nicht kompatibel
+- Wenn das Format nicht verfügbar ist, fehlen möglicherweise Treiber oder Systemkonfigurationen
+```
+
+```{list-table}
+* - **Erfassungssystem aktivieren**
+  - 14. Nachdem Sie das richtige Format ausgewählt haben, klicken Sie auf „**Initialize Acquisition**“.
+    15. Warten Sie, bis die Initialisierung abgeschlossen ist (einige Sekunden)
+* - **Funktionsprüfung der Datenerfassung**
+  - 16. Suchen Sie die Schaltfläche **Run** oben links in der Benutzeroberfläche (Symbol „Play“)
+    17. Klicken Sie 5 bis 10 Mal hintereinander auf „**Run**“, um Testbilder aufzunehmen
+    18. Beachten Sie den Bildanzeigebereich:
+        - Es sollte die Kameraansicht auf dem FlexiBowl® angezeigt werden
+        - Das Bild sollte bei jedem Klick auf „Run“ aktualisiert werden
+```
+
+(schermo_blu)=
+```{warning}
+**Diagnose vollständig blauer Bildschirm**
+
+Wenn das aufgenommene Bild während des Tests mindestens einmal **komplett blau** erscheint:
+
+**Ursache**: GigE-Kommunikationsproblem (Netzwerklatenz oder suboptimale Paketgröße)
+
+**Lösung**:
+
+1. Wählen Sie im oberen Menü **GigE** (oder **GigE Vision Settings**)
+
+2. Ändern Sie die folgenden Parameter:
+   - **Latency Level** (Latenzstufe)
+   - **Packet Size** (Paketgröße)
+
+Fahren Sie mit den folgenden Schritten fort, um diese Parameter optimal zu konfigurieren.
+```
+
+---
+
+#### *Latency Level (Latenzstufe)*
+
+```{note}
+**Einstellung der Latency**
+
+Der Parameter **Latency Level** steuert den Kommunikationspuffer zwischen der Kamera und VisionController.
+
+**Typische Werte**:
+- Standardwert: 0
+- Verfügbarer Bereich: 0-3
+
+**So nehmen Sie die Einstellung vor:**
+
+1. Erhöhen Sie den Wert schrittweise
+2. Testen Sie nach jeder Änderung die Erfassung (Schaltfläche Run) 5-10 Mal
+3. Wenn keine blauen Bildschirme mehr erscheinen, ist der Wert korrekt
+4. Wenn weiterhin blaue Bildschirme angezeigt werden, erhöhen Sie den Wert weiter oder versuchen Sie, den Parameter Packet Size zu ändern
+```
+
+#### *Packet Size (Paketgröße)*
+
+```{note}
+**Einstellung des Packet Size**
+
+Der Parameter **Packet Size** definiert die Größe der über das Ethernet-Netzwerk übertragenen Datenpakete.
+
+**Typische Werte**:
+- Standardwert: 8164 Bytes
+
+**So nehmen Sie die Einstellung vor:**
+
+1. Schrittweise auf 8000, 7000 usw. verringern.
+2. Testen Sie nach jeder Änderung die Erfassung (Schaltfläche Run) 5-10 Mal
+3. Wenn keine blauen Bildschirme mehr erscheinen, ist der Wert korrekt
+4. Wenn weiterhin blaue Bildschirme angezeigt werden, verringern Sie den Wert weiter oder versuchen Sie, den Parameter Latency Level zu ändern
+```
+
+
+---
+
+```{list-table}
+* - **Abschließende Überprüfung und Speichern**
+  - 19. Klicken Sie mindestens 2–3 Mal hintereinander auf „**Run**“
+    20. Bitte überprüfen Sie Folgendes:
+      - Kein Bild erscheint vollständig blau oder schwarz
+      - Die Bilder werden regelmäßig aktualisiert
+      - Die Oberfläche der FlexiBowl® ist deutlich sichtbar
+      - Die Beleuchtung ist gleichmäßig
+    21. Wenn alle Tests positiv ausfallen, ist die Konfiguration korrekt
+```
+
+(troubleshooting_calib_cam)=
+## Kamera-Kalibrierung
+
+### *Muster nicht erkannt*
+
+```{warning}
+**Fehler: „Unable to detect calibration pattern“**
+
+Ursache: Die Software kann das Gittermuster nicht erkennen.
+
+**Lösungen**:
+- Erhöhen Sie den Kontrast (passen Sie die Belichtung oder Beleuchtung an)
+- Stellen Sie sicher, dass das gesamte Gitter im Bild sichtbar ist
+- Verbessern Sie die Schärfe
+- Reinigen Sie die Oberfläche des Gitters (Staub oder Fingerabdrücke können stören)
+- Überprüfen Sie, dass es sich um das richtige Gitter handelt (Quadrate, keine Kreise oder andere Muster)
+```
+
+### *Kalibrierung immer „Bad“ oder „Acceptable“*
+
+```{warning}
+**Unzureichende Kalibrierungsqualität**
+
+Wenn die Kalibrierung trotz Anpassungen unter „Excellent“ bleibt:
+
+1. Überprüfen Sie den Arbeitsabstand zwischen Kamera und FlexiBowl® (er muss dem berechneten Wert entsprechen)
+2. Stellen Sie sicher, dass die Kamera parallel zur Ebene des FlexiBowl® ausgerichtet ist (sie muss perfekt horizontal sein)
+3. Stellen Sie sicher, dass die Kamera stabil ist (keine Vibrationen während der Aufnahme)
+4. Überprüfen Sie, ob das Objektiv vollständig festgeschraubt ist
+
+Wenn das Problem weiterhin besteht, liegt möglicherweise ein mechanisches Problem bei der Montage vor. Siehe [Mechanische Installation](09_Installazione_Meccanica.md) zur Überprüfung.
+```
+
+### *Fehler nach Wechsel der Beleuchtung*
+
+```{tip}
+**Neukalibrierung nach Änderung von Backlight/Toplight**
+
+Wenn Sie von Backlight zu Toplight (oder umgekehrt) wechseln:
+
+1. Die geometrische Kalibrierung bleibt gültig (sie muss nicht erneut durchgeführt werden)
+2. Es ist lediglich erforderlich, die Belichtung der Kamera an die neue Beleuchtungsart anzupassen
+3. Nehmen Sie ein Testbild auf, um zu prüfen, ob das Muster noch deutlich sichtbar ist
+
+Generell ist es ratsam, sich von Anfang an für eine Beleuchtungsart zu entscheiden und diese Konfiguration beizubehalten.
+```
+```{list-table}
+:header-rows: 1
+:widths: 30 35 35
+
+* - Problem
+  - Mögliche Ursachen
+  - Lösungen
+* - **Kalibrierung schlägt fehl (Softwarefehler)**
+  - • Kalibrierungsgitter nicht korrekt erkannt
+    
+    • Unzureichende/übermäßige Beleuchtung
+    
+    • Beschädigtes oder verschmutztes Kalibriergitter
+    
+  - • Zielobjekt flach und gut sichtbar positionieren
+    
+    • Belichtung der Kamera anpassen, um das Zielobjekt gut darzustellen
+    
+    • Sauberes und unbeschädigtes Kalibriergitter verwenden
+    
+* - **Kalibrierungsfehler zu hoch**
+  - • Kamera nicht perfekt senkrecht zur Oberfläche
+    
+    • Kalibriergitter nicht flach
+    
+    • Übermäßige optische Verzerrung
+    
+  - • Senkrechte Ausrichtung der Kamera mit Wasserwaage überprüfen (Toleranz ±1°)
+    
+    • Platzieren Sie das Zielobjekt auf einer festen und ebenen Oberfläche
+    
+    • Qualität der optischen Linse prüfen, reinigen oder ersetzen
+    
+* - **Tatsächliche Koordinaten stimmen nicht mit den gemessenen Koordinaten überein**
+  - • Falscher Skalierungsfaktor (falsche Tile Size)
+    
+    • Kamera nach Kalibrierung verschoben
+    
+  - • Kalibrierung vollständig wiederholen
+    
+    • Kamera fest fixieren, um Verschiebungen zu vermeiden
+    
+    • Überprüfen Sie die Abmessungen des Kalibrierungsziels gemäß der Dokumentation
+* - **Kalibrierung nur in der Bildmitte gültig**
+  - • Periphere optische Verzerrung
+    
+    • Kalibrierung mit zu wenigen Punkten
+  - • Verwenden Sie ein hochwertiges Objektiv mit geringer Verzerrung
+    
+    • Prüfen Sie, ob der Arbeitsabstand korrekt ist
+```
+
+
+
+(troubleshooting_fb_setup)=
+## Fehlersuche für den Abschnitt FlexiBowl® Setup
+
+```{list-table}
+:header-rows: 1
+:widths: 30 35 35
+
+* - Problem
+  - Mögliche Ursachen
+  - Lösungen
+* - **FlexiBowl® reagiert nicht auf Softwarebefehle**
+  - • IP-Adresse nicht konfiguriert oder falsch
+    
+    • FlexiBowl® nicht mit dem Netzwerk verbunden
+    
+    • Firewall blockiert die Kommunikation
+    
+    • FlexiBowl® nicht eingeschaltet
+  - • IP-Adresse im FlexiBowl® Setup überprüfen und korrekt konfigurieren
+    
+    • Verbindung mit einem Ping vom VisionController aus testen
+    
+    • Firewall zu Testzwecken vorübergehend deaktivieren
+    
+    • Überprüfen, ob die LED READY am FlexiBowl® leuchtet
+* - **FlexiBowl®-Konfiguration kann nicht gespeichert werden**
+  - • Festplatte voll
+
+  - • Speicherplatz auf der Festplatte freigeben
+ 
+* - **FlexiBowl®-Parameter werden nicht übernommen**
+  - • Schaltfläche „Synchronize Parameters“ wurde nicht gedrückt
+    
+    • Verbindung zu FlexiBowl® unterbrochen
+    
+    • FlexiBowl®-Fehler
+  - • Nach Änderungen immer auf „Synchronize Parameters“ klicken
+    
+    • Stabilität der Ethernet-Verbindung prüfen
+    
+    • FlexiBowl® neu starten
+* - **Wizard FlexiBowl® berechnet falsche Parameter**
+  - • Falsche Komponentencharakterisierung (Geometrie/Verhalten)
+    
+    • Falsches FlexiBowl®-Modell ausgewählt
+    
+    • Drehrichtung falsch eingestellt
+  - • Auswahl der Geometrie überprüfen (FLAT/CYLINDRICAL/COMPLEX)
+    
+    • Größe des installierten FlexiBowl® mit der ausgewählten Größe vergleichen
+    
+    • Physische Drehrichtung überprüfen und mit der Einstellung vergleichen
+```
+
+(troubleshooting_hopper_setup)=
+## Fehlersuche für den Abschnitt Trichter-Setup
+
+```{list-table}
+:header-rows: 1
+:widths: 30 35 35
+
+* - Problem
+  - Mögliche Ursachen
+  - Lösungen
+* - **Hopper wird nie automatisch aktiviert**
+  - • Hopper in der Software nicht aktiviert
+    • Falsches Signal-Feld
+    • Kontrollbereich nicht definiert
+    
+    • Schwellenwerte nicht kalibriert
+    
+    • Trichter nicht elektrisch angeschlossen
+  - • Kontrollkästchen „Enable Hopper X“ aktivieren
+    • Überprüfen, ob die **Signal**-Nummer mit dem physisch angeschlossenen DO übereinstimmt
+    • Kontrollbereich in „Define Area Check“ definieren
+    
+    • Schwellenwertkalibrierung mit leerem/vollem CAPTURE durchführen
+    
+    • Elektrische Anschlüsse überprüfen
+* - **Trichter wird kontinuierlich aktiviert**
+  - • Schwellenwerte falsch kalibriert
+    
+    • Unzureichende Vibrationszeit (entlädt zu wenige Teile)
+    
+    • Falscher Parameter „Steps“
+  - • Kalibrierung wiederholen, indem ALLE Teile für CAPTURE leer entfernt werden
+    
+    • Parameter „Time“ erhöhen (z. B. von 500 ms auf 700 ms)
+    
+    • „Steps“ neu berechnen, indem die tatsächlichen Zyklen gezählt werden
+* - **Hopper-Test immer rot (aktiviert sich nicht)**
+  - • Zu viele Komponenten im Bereich während der Kalibrierung
+    
+    • Beleuchtung zwischen Kalibrierung und Test verändert
+    
+    • Reflexionen/Schatten im Kontrollbereich
+  - • Kalibrierung mit der korrekten Mindestanzahl an Teilen wiederholen
+    
+    • Kalibrierung und Test bei stabiler Beleuchtung durchführen
+    
+    • Bereich neu positionieren und Zonen mit Reflexionen ausschließen
+* - **Hopper-Test immer grün (wird immer aktiviert)**
+  - • Kontrollbereich umfasst irrelevante Bereiche
+    
+    • Kalibrierung im leeren Zustand mit vorhandenen Teilen durchgeführt
+    
+    • Expression Builder nicht korrekt berechnet
+  - • Kontrollbereich enger definieren
+    
+    • CAPTURE im leeren Zustand wiederholen und sicherstellen, dass der Bereich vollständig sauber ist
+    
+    • Erneut auf AUTO klicken, um Mean und Std Dev neu zu berechnen
+* - **Ungleichmäßiger Komponentenstrom**
+  - • Falsche Berechnung der Vibrationszeit
+    
+    • Zu hohe Anfangsbeladung, die die Payload überschreitet
+  - • Überprüfen Sie die Vibrationsberechnung auf Basis der Anfangsbeladung
+    
+    • Stellen Sie sicher, dass die Beladung die Payload des Trichters nicht überschreitet
+```
+
+(troubleshooting_robot_setup)=
+## Fehlerbehebung für den Abschnitt Robot Setup
+
+```{warning}
+**Verbindungsdiagnose fehlgeschlagen**
+
+Wenn der Roboter keine Verbindung herstellen kann:
+
+**Grundlegende Überprüfungen**:
+1. FlexiVision One Server online (grüne Anzeige)
+2. Korrekte IP-Adresse im Roboterprogramm
+3. Korrekter Port im Roboterprogramm (entspricht dem von FlexiVision One)
+4. Ethernet-Kabel korrekt angeschlossen
+
+**Netzwerküberprüfungen**:
+1. Ping vom VisionController zum Roboter:
+   - Öffnen Sie die Eingabeaufforderung auf VisionController
+   - `ping <IP_ROBOT>` (z. B.: `ping 192.168.1.10`)
+   - Falls fehlgeschlagen: Problem mit dem physischen Netzwerk/der IP-Konfiguration
+
+2. Ping vom Roboter zum VisionController (sofern die Ping-Funktion auf dem Roboter verfügbar ist)
+
+3. Überprüfen Sie, ob sich Roboter und VisionController im selben Subnetz befinden
+
+**Firewall-Prüfungen**:
+1. Windows-Firewall vorübergehend für Testzwecke deaktivieren
+2. Falls dies funktioniert: Firewall-Problem → Ausnahme konfigurieren
+
+**Roboterüberprüfungen**:
+1. Richtige Syntax des TCP/IP-Verbindungsbefehls überprüfen (siehe Roboterhandbuch)
+2. Verbindungs-Timeout prüfen (ggf. erhöhen)
+3. Netzwerkberechtigungen auf der Robotersteuerung überprüfen
+```
+
+```{note}
+**Verbindungsstabilisierung**
+
+Falls die Verbindung häufig unterbrochen wird:
+
+1. Überprüfen Sie die Qualität des Ethernet-Kabels (verwenden Sie mindestens Cat6)
+2. Vermeiden Sie zu lange Kabel
+3. Stellen Sie sicher, dass kein übermäßiger Netzwerkverkehr im selben Subnetz vorliegt; dazu können Sie Programme wie Wireshark oder TCP Dump verwenden
+4. Stellen Sie eine stabile Stromversorgung des VisionControllers sicher
+5. Überprüfen Sie die Windows-Protokolle auf Netzwerkfehler
+
+Wenn das Problem weiterhin besteht, wenden Sie sich für eine eingehende Analyse an den technischen Support.
+```
+```{warning}
+**Falsche Befehlssyntax**
+
+Wenn FlexiVision One mit „Invalid command“ antwortet:
+
+1. Überprüfen Sie die genaue Syntax des Befehls (Groß-/Kleinschreibung, Unterstriche usw.)
+2. Achten Sie darauf, nach jedem Befehl das Abschlusszeichen CHR(13) zu senden
+3. Fügen Sie keine zusätzlichen Leerzeichen am Anfang oder Ende des Befehls ein
+4. Überprüfen Sie im Meldungsprotokoll des Abschnitts „Robot Setup“ den Befehl, den FlexiVision One empfangen hat
+
+Richtige vs. falsche Beispiele:
+- ✅ `start_Locator` (mit Unterstrich, Kleinbuchstaben)
+- ❌ `Start_Locator` (falsche Großbuchstaben)
+- ❌ `start Locator` (Leerzeichen statt Unterstrich)
+- ❌ `startLocator` (Unterstrich fehlt)
+
+Eine vollständige und korrekte Liste der Befehle finden Sie unter [Protocollo TCP/IP](protocollo).
+```
+
+```{list-table}
+:header-rows: 1
+:widths: 30 35 35
+
+* - Problem
+  - Mögliche Ursachen
+  - Lösungen
+* - **Roboter verbindet sich nicht mit FlexiVision One**
+  - • IP-Adresse des Roboters befindet sich nicht im selben Subnetz wie der VisionController
+    
+    • TCP/IP-Port nicht konfiguriert
+    
+    • Firewall des VisionControllers blockiert die Kommunikation
+    
+  - • Richtiges Subnetz in „Robot Setup“ überprüfen und konfigurieren
+    
+    • TCP/IP-Port konfigurieren (typischerweise 5000 oder je nach Roboter)
+    
+    • Firewall für Testzwecke deaktivieren
+    
+    • Im [Protocol Setup](../QUICKSTART/SETUP/15_Protocol_Setup.md) ein mit dem Roboter kompatibles Protokoll auswählen
+* - **Roboter fährt zu falschen Positionen**
+  - • Roboterkalibrierung nicht oder nicht korrekt durchgeführt
+    
+    • Falscher Roboter-Frame/Tool
+    
+    • Falscher Greifer-Offset
+    
+    • Falsche Koordinaten beim Modell-Setup gespeichert
+  - • Vollständige Roboterkalibrierung durchführen
+    
+    • Ausgewählten Frame und Tool am Roboter überprüfen
+    
+    • Wiederholen Sie die Kalibrierung des Pick-Roboters mit den korrekten Koordinaten
+    
+    • Führen Sie das Modelltraining erneut durch und speichern Sie dabei die genauen Koordinaten
+* - **Verbindung zum Roboter nicht möglich**
+  - • Roboter ausgeschaltet
+    
+    • Ethernet-Kabel nicht angeschlossen
+    
+    • Roboter und VisionController in unterschiedlichen Subnetzen
+
+  - • Roboter einschalten und in den Automatikmodus versetzen
+    
+    • Physische Ethernet-Verbindung zwischen Roboter und VisionController überprüfen
+    
+    • Roboter und VisionController im selben Netzwerk konfigurieren
+```
 

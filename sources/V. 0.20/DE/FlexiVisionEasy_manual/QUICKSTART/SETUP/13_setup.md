@@ -1,71 +1,68 @@
 (setupcomponenti)=
-# **Configurazione Iniziale del Sistema**
+# **Erstkonfiguration des Systems**
 
-Questa sezione guida l'utente attraverso la configurazione completa dei componenti hardware e software del sistema FlexiVision One. È fondamentale seguire i passaggi nell'ordine indicato per garantire il corretto funzionamento del sistema.
+Dieser Abschnitt führt den Benutzer durch die vollständige Konfiguration der Hardware- und Softwarekomponenten des FlexiVision One-Systems. Es ist unbedingt erforderlich, die Schritte in der angegebenen Reihenfolge zu befolgen, um den ordnungsgemäßen Betrieb des Systems zu gewährleisten.
 
 ```{note}
-**Prerequisiti**
+**Voraussetzungen**
 
-Prima di iniziare la configurazione software, assicurarsi che:
-- L'installazione meccanica di tutti i componenti sia completata ([Installazione Meccanica](Installazione_Meccanica))
-- Tutti i cavi siano collegati correttamente ([Cablaggio e Connessioni](cablaggio)) 
+Bevor Sie mit der Softwarekonfiguration beginnen, müssen Sie Folgendes sicherstellen:
+- Die mechanische Installation aller Komponenten ist abgeschlossen ([Mechanische Installation](Installazione_Meccanica))
+- Alle Kabel sind korrekt angeschlossen ([Verkabelung und Anschlüsse](cablaggio)) 
 ```
-
+![WorkFlow](../../../../../_shared/media/images/workflow.png)
 ---
 
-## Panoramica del processo di setup
+## Überblick über den Einrichtungsprozess
 
-Il processo di configurazione iniziale è composto da sette passaggi principali:
+Der anfängliche Konfigurationsprozess besteht aus sieben Hauptschritten:
 
-0. **Inserimento Chiave di Licenza** fornita nel kit
-1. **Login** - Accesso al software con credenziali utente
-2. se presente illuminatore Backlight: **Configurazione Indirizzo IP FlexiBowl** e **Accensione Backlight** 
-3. **Camera Setup** - Configurazione della camera
-4. **FlexiBowl Setup** - Connessione e configurazione del FlexiBowl
-5. **Hopper Setup**  - Configurazione della tramoggia 
-6. **Robot Setup** - Configurazione comunicazione con il robot
-7. **Protocol Setup** - Configurazione di parametri di protocollo
-8. **Rinominare e Salvare la Ricetta Base** - Configurazione del profilo applicativo
+0. **Eingabe des** im Kit enthaltenen **Lizenzschlüssels**
+1. **Login** - Zugriff auf die Software mit den Benutzerdaten
+2. Falls vorhanden: Backlight-Beleuchtung: **Konfiguration der FlexiBowl®-IP-Adresse** und **Einschalten des Backlights** 
+3. **Kamera Setup** - Konfiguration der Kamera
+4. **FlexiBowl Setup** - Anschluss und Konfiguration des FlexiBowl®
+5. **Trichter-Setup**  - Konfiguration des Trichters 
+6. **Roboter-Setup** - Konfiguration der Kommunikation mit dem Roboter
+7. **Protocol Setup** - Konfiguration der Protokollparameter
+8. **Umbenennen und Speichern des Grundrezepts** - Konfiguration des Anwendungsprofils
 
-:::{note}
-Lo schema completo del flusso di setup non e ancora disponibile come immagine esportata in questo repository. Fare riferimento alla sequenza guidata riportata qui sotto.
-:::
+
 
 ```{warning}
-**Ordine dei passaggi**
+**Reihenfolge der Schritte**
 
-L'ordine dei setup è importante! Non saltare passaggi o modificare la sequenza, poiché alcune configurazioni dipendono da quelle precedenti.
+Die Reihenfolge der Einstellungen ist wichtig! Überspringen Sie keine Schritte und ändern Sie die Reihenfolge nicht, da einige Konfigurationen von den vorherigen abhängen.
 ```
 
 ---
 
-## Operazioni preliminari
+## Vorbereitende Schritte
 
 :::{important}
-Il primo passo prima dell'avvio del software FlexiVision One è inserire la chiave di licenza fornita con il kit. 
+Der erste Schritt vor dem Start der FlexiVision One-Software ist die Eingabe des mit dem Kit gelieferten Lizenzschlüssels. 
 :::
 
-### Passo 1: Login al sistema
+### *Anmeldung am System*
 
-All'avvio del software FlexiVision One, viene presentata la pagina Home. 
+Beim Start der FlexiVision One-Software wird die Startseite angezeigt. 
 ```{list-table} 
    :widths: 10 90
    :header-rows: 0
    * - **0**
-     - Cliccare su Setup 
+     - Klicken Sie auf Setup 
    * - **1**
-     - **Selezionare l'utente ARS** dal menu a tendina in alto a destra.
+     - **Wählen Sie den Benutzer ENGINEER** aus dem Dropdown-Menü oben rechts aus.
    * - **2**
-     - **Inserire la password** ArS2025.
-       *(Nota: il campo è case-sensitive)*.
+     - **Geben Sie das Passwort** '3' ein.
    * - **3**
-     - Cliccare sul pulsante **LOGIN** per accedere all'interfaccia.
+     - Klicken Sie auf die Schaltfläche **LOGIN** , um auf die Benutzeroberfläche zuzugreifen.
 ```
 
 ```{tip}
-**Gestione utenti**
+**Benutzerverwaltung**
 
-FlexiVision One supporta profili utente multipli con diversi livelli di permessi:
+FlexiVision One unterstützt mehrere Benutzerprofile mit unterschiedlichen Berechtigungsstufen:
 - **ARS**
 - **Engineer**
 - **Technician**
@@ -74,120 +71,54 @@ FlexiVision One supporta profili utente multipli con diversi livelli di permessi
 
 ---
 
-### Passo 2: Accendere il Backlight se presente
+### *Backlight einschalten, falls vorhanden*
 
-Dopo il primo login, se è necessario attivare la licenza FlexiVision One, seguire questi passi: 
+Wenn nach der ersten Anmeldung die FlexiVision One-Lizenz aktiviert werden muss, befolgen Sie diese Schritte: 
 
 ```{list-table}
-* - **1** 
-  - Dalla pagina principale del software, cliccare su <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
-* - **2**
-  - Nella pagina SETUP, identificare e cliccare sull'icona **FlexiBowl Setup**
-    ```{dropdown} Pagina Setup 
-       ![Pagina Setup](../../../../../_shared/media/images/pagina_setup1.png)
+* - **4** 
+  - Klicken Sie auf der Hauptseite der Software auf <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
+* - **5**
+  - Auf der Seite „SETUP“ das Symbol **FlexiBowl®-Setup** identifizieren und anklicken
+    ```{dropdown} Setup-Seite 
+       ![Setup-Seite](../../../../../_shared/media/images/pagina_setup1.png)
     ```
-* - **3**
-  - Si apre la schermata di configurazione dei FlexiBowl
-* - **4**
-  - Inserire l'indirizzo IP del FlexiBowl (default: `192.168.1.10` )
-* - **5**
-  - Dopo aver inserito l'IP, cliccare sul pulsante **Connection Test**
 * - **6**
-  - Il sistema esegue un test di comunicazione (ping) verso il FlexiBowl
+  - Die Seite zur Konfiguration des FlexiBowl® öffnet sich
 * - **7**
-  - Osservare l'indicatore di **Status**:
-    - 🟢 **Verde**: Connessione stabilita correttamente
-    - 🔴 **Rosso**: Connessione fallita (verificare indirizzo IP e cablaggio)
-* - **8** 
-  - Cliccare sul pulsante <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl" >
-* - **9**
-  - Si apre una finestra con i parametri configurabili del FlexiBowl
-* - **10**
-  - Accendere il backlight spuntando la casella "Light ON"
-```
----
-
-### Sequenza setup consigliata
-
-```{list-table}
-:header-rows: 1
-:widths: 15 35 50
-
-* - Passo
-  - Componente
-  - Descrizione
-* - **3**
-  - [Camera Setup](camerasetup)
-  - Configurazione acquisizione immagini e test camera
-* - **4**
-  - [FlexiBowl Setup](fbsetup)
-  - Connessione e test comunicazione con FlexiBowl
-* - **5**
-  - [Hopper Setup](hoppersetup)
-  - Configurazione tramoggia esterna se presente
-* - **6**
-  - [Robot Setup](robotsetup)
-  - Configurazione porta TCP/IP e test comunicazione con il robot
-* - **7**
-  - [Protocol Setup](protocol_setup)
-  - Configurazione dei parametri di scambio dati e delle statistiche operative
-```
-
-```{warning}
-**Importanza della sequenza**
-
-Seguire l'ordine indicato è importante perché la camera ha bisogno che il FlexiBowl sia configurato per testare l'illuminazione e  alcuni parametri dipendono dalle configurazioni precedenti
-```
-
-(ricettabase)=
-### Passo 8: Salva e Rinomina la ricetta base
-
-Prima di configurare i componenti hardware, è necessario creare una ricetta di base che definisca i parametri del sistema.
-
-````{list-table}
-:header-rows: 0
-:widths: 10 90
-
+  - Geben Sie die IP-Adresse des FlexiBowl® ein (Standard: `192.168.1.10` )
 * - **8**
-  - Accedere alla sezione |tasto_recipes| dal pulsante in alto
-
+  - Klicken Sie nach Eingabe der IP-Adresse auf die Schaltfläche **Connection Test**
 * - **9**
-  - Inserire il nome della ricetta.
-
-    Utilizzare un nome descrittivo (es: "Ricetta_Base").
-
-    Evitare caratteri speciali o spazi (usare underscore ``_`` al posto degli spazi).
-
+  - Das System führt einen Kommunikationstest (Ping) mit dem FlexiBowl® durch.
+* - **10**
+  - Beachten Sie die **Statusanzeige**:
+    - 🟢 **Grün**: Verbindung erfolgreich hergestellt
+    - 🔴 **Rot:** Verbindung fehlgeschlagen (IP-Adresse und Verkabelung prüfen)
+* - **11** 
+  - Klicken Sie auf die Schaltfläche <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl" >
 * - **12**
-  - Cliccare su **Save Recipe** per salvare la ricetta
-````
-
-```{tip}
-**Organizzazione ricette**
-
-FlexiVision One permette di creare ricette multiple per diversi tipi di pezzi o configurazioni. Convenzioni consigliate:
-
-- Utilizzare nomi che identificano chiaramente il pezzo (es: "Vite_M6_Zincata")
-
-Per maggiori dettagli sulla gestione ricette, consultare la sezione [Creare una nuova ricetta](nuovaricetta).
+  - Es öffnet sich ein Fenster mit den konfigurierbaren Parametern des FlexiBowl®.
+* - **13**
+  - Schalten Sie das Backlight ein, indem Sie das Kontrollkästchen „Light ON“ aktivieren.
 ```
 
 ---
 
-## Configurazione componenti hardware
+## Konfiguration der Hardwarekomponenten
 
-Una volta completate le operazioni preliminari, procedere con la configurazione dei componenti hardware nell'ordine seguente.
+Sobald die vorbereitenden Schritte abgeschlossen sind, fahren Sie mit der Konfiguration der Hardwarekomponenten in der folgenden Reihenfolge fort.
 
-Tutti i setup hardware sono accessibili dalla pagina centrale **SETUP** del software.
+Alle Hardware-Einstellungen sind über die zentrale **SETUP-Seite** der Software zugänglich.
 
 
 ```{list-table} 
 * - **14** 
-  - Dal menu principale, cliccare su <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
+  - Klicken Sie im Hauptmenü auf <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
 * - **15** 
-  - Vengono visualizzate le icone dei diversi componenti da configurare
+  - Es werden Symbole für die verschiedenen zu konfigurierenden Komponenten angezeigt.
 * - **16**
-  - Cliccare sull'icona del componente desiderato per accedere alla sua configurazione specifica
+  - Klicken Sie auf das Symbol der gewünschten Komponente, um auf deren spezifische Konfiguration zuzugreifen.
 ```
 
 ---
@@ -200,5 +131,6 @@ Tutti i setup hardware sono accessibili dalla pagina centrale **SETUP** del soft
 13b_Hopper_Setup.md
 13c_Robot_Setup.md
 15_Protocol_Setup.md
+15b_SaveRecipe.md
 ```
 

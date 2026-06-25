@@ -1,168 +1,133 @@
-(quickstart)=
-# **Panoramica dell'interfaccia**
-L’interfaccia di FlexiVision One è strutturata in sezioni funzionali che guidano l’utente dalla configurazione iniziale alla gestione operativa del sistema.
-Ogni pagina fornisce informazioni in tempo reale su stato macchina, connessioni, prestazioni e parametri di processo, con accesso diretto alle funzioni principali.
-La navigazione è progettata per garantire semplicità d’uso, controllo immediato delle operazioni e monitoraggio continuo delle performance di visione, alimentazione e robot.
-## Pagina Home  
-<img src="../../../../_shared/media/images/pagina_homeW.png" class="only-light" style="width: 95%; display: block; margin: 0 auto;">
-<img src="../../../../_shared/media/images/pagina_homeB.png" class="only-dark" style="width: 95%; display: block; margin: 0 auto;">
 
-```{list-table} Descrizione Pagina Home
-:header-rows: 1
-:widths: 10 90
 
-* - **#**
-  - **Descrizione**
-
-* - 1
-  - **Informazioni di Stato e Utente**:
-    * **Current selected recipe**: visualizza il nome della ricetta attualmente caricata e pronta all'uso.
-    * **Current user name**: mostra il nome dell'utente loggato e il suo livello di accesso al sistema.
-    * **In run**: indica lo stato operativo; segnala se il sistema è attualmente in funzione o in stato di stop.
-
-* - 2
-  - **Informazioni Software e Assistenza**:
-    * **Version software**: indica la versione del software FlexiVision One attualmente installata.
-    * **Contact us**: pulsante che permette di accedere rapidamente alle informazioni di contatto per il supporto tecnico e l'assistenza.
-
-* - 3
-  - **Risorse e Guide Rapide**:
-    * **Documentation**: pulsante che rimanda alla libreria completa della documentazione tecnica e dei manuali.
-    * **QuickStart**: sezione dedicata alla procedura guidata per una configurazione veloce e intuitiva del sistema.
-
-* - 4
-  - **Sezione Informativa Generale**:
-    * **What is FlexiVision One?**: area descrittiva che fornisce una panoramica sulle funzionalità principali del sistema e sulla sua integrazione con il dispositivo FlexiBowl®.
-```
-
-## Pagina DashBoard 
+# **DashBoard-Seite** 
 <img src="../../../../_shared/media/images/pagina_dashboardW.png" class="only-light" style="width: 20%; height: auto;">
 <img src="../../../../_shared/media/images/pagina_dashboardB.png" class="only-dark" style="width: 20%; height: auto;">
 
-```{list-table} Descrizione Pagina Dashboard
+```{list-table} Beschreibung der Dashboard-Seite
 :header-rows: 1
 :widths: 10 90
 
 * - **#**
-  - **Descrizione**
+  - **Beschreibung**
 
 * - 1
-  - **Area Visione e Rilevamento**
-    * **Detected vision parts con grafico**: quanti componenti sono stati rilevati nell'immagine corrente e l'andamento nel tempo (30s).
+  - **Bereich Bildverarbeitung und Erkennung**
+    * **Erkannte Bildverarbeitungsteile mit Grafik**: Anzahl der im aktuellen Bild erkannten Komponenten und zeitlicher Verlauf (30 s).
     
 
 * - 2
-  - **Stato Operativo**
-    * **In run**: indicatore luminoso che segnala se il sistema è in funzione o fermo.
-    * **In run time**: cronometro che indica il tempo totale di attività del sistema.
+  - **Betriebsstatus**
+    * **In run (In Betrieb)**: Leuchtanzeige, die anzeigt, ob das System in Betrieb oder im Stillstand ist.
+    * **In run time (Betriebszeit)**: Stoppuhr, die die Gesamtbetriebszeit des Systems anzeigt.
 
 * - 3
-  - **Controlli e Selezione**
-    * **Menù tendina FlexiBowl**: permette di selezionare il dispositivo FlexiBowl® su cui si intende operare.
-    * **Test Locator**: avvia movimentazioni cicliche di FlexiBowl e tramoggia finché ci sono componenti nell'area di visione.
+  - **Steuerung und Auswahl**
+    * **FlexiBowl®-Dropdown-Menü**: Hier können Sie das FlexiBowl®-Gerät auswählen, mit dem Sie arbeiten möchten.
+    * **Test Locator**: Startet zyklische Bewegungen von FlexiBowl® und Trichter, solange sich Komponenten im Sichtbereich befinden.
 
 * - 4
-  - **Stato Connessioni**
-    * **FlexiBowl**: indica lo stato della connessione in tempo reale con il FlexiBowl.
-    * **Robot**: indica lo stato della connessione in tempo reale con il robot.
+  - **Verbindungsstatus**
+    * **FlexiBowl®**: Zeigt den Status der Echtzeitverbindung mit dem FlexiBowl® an.
+    * **Roboter**: Zeigt den Status der Echtzeitverbindung mit dem Roboter an.
 
 * - 5
-  - **Analisi Tempi di Ciclo (Timings)**
-    * **Camera/Locator processing time**: tempi singoli di scatto immagine e riconoscimento componenti.
-    * **Total vision processing Time**: somma dei tempi di camera e locator.
-    * **Total FlexiBowl / Robot time**: tempo per una sequenza di movimento FB e per un singolo pick & place del robot.
-    * **Total processing time**: tempo totale del processo (Visione + FB + Robot).
-    * **Fill hopper**: storico degli scarichi effettuati dalla tramoggia sul disco del FlexiBowl.
-    * **Vision - FlexiBowl - Robot**: grafico comparativo delle tre funzioni per capire l'impatto di ogni singolo processo sul tempo totale.
+  - **Analyse der Zykluszeiten (Timings)**
+    * **Camera/Locator processing time** **(Verarbeitungszeit von Kamera/Locator)**: Einzelzeiten für die Bildaufnahme und die Erkennung der Komponenten.
+    * **Total vision processing Time (Gesamte Bildverarbeitungszeit)**: Summe der Zeiten für Kamera und Locator
+    * **Total FlexiBowl® / Robot time (Gesamtzeit für FlexiBowl® / Roboter)**: Zeit für eine Bewegungssequenz des FB und für einen einzelnen Pick & Place-Vorgang des Roboters.
+    * **Total processing time (Gesamtbearbeitungszeit)**: Gesamtzeit des Prozesses (Vision + FB + Roboter).
+    * **Fill hopper** **(Trichterbefüllung)**: Verlauf der Entleerungen des Trichters auf die Scheibe des FlexiBowl®.
+    * **Vision - FlexiBowl® - Robot**: Vergleichsdiagramm der drei Funktionen, um den Einfluss jedes einzelnen Prozesses auf die Gesamtzeit zu verstehen
 * - 6
-  - **Grafici di Performance e Storico**
-    * **Elenco modelli rilevati**: tabella con coordinate (**X**, **Y**), rotazione (**Rot**) del componente e lo **Score** (grado di similarità dell'oggetto riconosciuto rispetto al modello di riferimento).
-    * **Parts per minute**: grafico della media dei componenti prelevati al minuto.
+  - **Leistungs- und Verlaufsdiagramme**
+    * **Liste der erfassten Modelle**: Tabelle mit Koordinaten (**X**, **Y**), Drehung (**Rot**) des Bauteils und dem **Score** (Ähnlichkeitsgrad des erkannten Objekts im Vergleich zum Referenzmodell).
+    * **Parts per minute (Teile pro Minute)**: Diagramm der durchschnittlich entnommenen Teile pro Minute.
 ```
 (recipes)=
-## Pagina Recipes 
+# **Seite Recipes (Rezepte)** 
 <img src="../../../../_shared/media/images/pagina_recipesW.png" class="only-light" style="width: 20%; height: auto;">
 <img src="../../../../_shared/media/images/pagina_recipesB.png" class="only-dark" style="width: 20%; height: auto;">
 
-```{list-table} Descrizione Pagina Recipes
+```{list-table} Beschreibung Seite Rezepte
 :header-rows: 1
 :widths: 10 90
 
 * - **#**
-  - **Descrizione**
+  - **Beschreibung**
 
 * - 1
-  - **Gestione Database Ricette**
-    * **Backup**: effettua un backup di tutte le ricette in un unico file .xml, salvabile nella posizione desiderata.
-    * **Import backup**: permette l'importazione di qualsiasi backup precedentemente effettuato con FlexiVision One.
-    * **Load recipe**: carica la ricetta selezionata nell'elenco sopra per renderla operativa.
-    * **Delete recipe**: elimina definitivamente la ricetta selezionata dall'elenco.
+  - **Rezeptdatenbank-Verwaltung**
+    * **Backup**: Erstellt eine Sicherung aller Rezepte in einer einzigen XML-Datei, die an einem beliebigen Speicherort gespeichert werden kann.
+    * **Import backup (Backup importieren)**: Ermöglicht den Import einer beliebigen zuvor mit FlexiVision One erstellten Sicherung.
+    * **Load recipe (Rezept laden)**: Lädt das in der obigen Liste ausgewählte Rezept, um es aktiv zu machen.
+    * **Delete recipe** **(Rezept löschen):** Löscht das ausgewählte Rezept endgültig aus der Liste.
 
 * - 2
-  - **Creazione e Salvataggio**
-    * **New recipe**: avvia la creazione di una nuova ricetta. Dopo aver scelto il nome e il FlexiBowl con cui stiamo lavorando, si apre direttamente il menù di creazione modello. 
+  - **Erstellen und Speichern**
+    * **New recipe (Neues Rezept)**: Startet die Erstellung eines neuen Rezepts. Nachdem Sie den Namen und den FlexiBowl® ausgewählt haben, mit dem Sie arbeiten, öffnet sich direkt das Menü zur Erstellung der Vorlage. 
       :::{note}
-        La ricetta deve poi essere salvata cliccando su Save. 
+        Das Rezept muss anschließend durch Klicken auf „Save“ gespeichert werden. 
       :::
-    * **Save recipe**: salva la ricetta corrente sovrascrivendo i parametri modificati o crea un nuovo file se non ancora esistente.
+    * **Save recipe (Rezept speichern)**: Speichert das aktuelle Rezept, wobei die geänderten Parameter überschrieben werden, oder erstellt eine neue Datei, falls diese noch nicht existiert.
 
 * - 3
-  - **Modifica Ricetta**
-    * **Edit recipe**: pulsante diretto che porta al menù di configurazione e creazione del modello per la ricetta attualmente selezionata.
+  - **Rezept bearbeiten**
+    * **Edit recipe**: Direkte Schaltfläche, die zum Menü für die Konfiguration und Erstellung des Modells für das aktuell ausgewählte Rezept führt.
 ```
 
-## Pagina Setup 
+# **Setup-Seite** 
 <img src="../../../../_shared/media/images/pagina_setupW.png" class="only-light" style="width: 20%; height: auto;">
 <img src="../../../../_shared/media/images/pagina_setupB.png" class="only-dark" style="width: 20%; height: auto;">
 
 
-```{list-table} Descrizione Pagina Setup
+```{list-table} Beschreibung der Setup-Seite
 :header-rows: 1
 :widths: 10 90
 
 * - **#**
-  - **Descrizione**
+  - **Beschreibung**
 
 * - 1
-  - **Informazioni di Stato**
-     - **Current selected recipe**: indica il nome della ricetta attualmente in uso.
-     - **Current user name**: mostra l'utente loggato e il relativo livello di accesso.
-     - **In Run**: indica se l'applicazione è attiva.
+  - **Statusinformationen**
+     - **Current selected recipe** **(Aktuell ausgewähltes Rezept)**: Zeigt den Namen des derzeit verwendeten Rezepts an.
+     - **Current user name (Aktueller Benutzername)**: Zeigt den angemeldeten Benutzer und dessen Zugriffsebene an.
+     - **In Run**: Zeigt an, ob die Anwendung aktiv ist.
 
 * - 2
-  - **Pannello di Accesso**
-     - **Name**: campo per l'inserimento del nome utente.
-     - **Login**: pulsante per confermare le credenziali ed effettuare l'accesso al sistema.
+  - **Anmeldebereich**
+     - **Name**: Feld zur Eingabe des Benutzernamens.
+     - **Login** (**Anmeldung)**: Schaltfläche zum Bestätigen der Anmeldedaten und zum Anmelden im System.
 
 * - 3
-  - **Camera setup**: sezione dedicata alla configurazione dei parametri delle telecamere.
+  - **Camera setup (Kameraeinstellungen)**: Bereich für die Konfiguration der Kameraparameter.
 * - 4
-  - **Flexibowl setup**: area per impostare i parametri di movimento e controllo del FlexiBowl.
+  - **FlexiBowl®-Setup**: Bereich zur Einstellung der Bewegungs- und Steuerungsparameter des FlexiBowl®.
      
 * - 5
-  - **Hopper setup**: configurazione dei parametri della tramoggia (vibrazione e scarico).
+  - **Hopper setup (Trichtereinstellung)**: Konfiguration der Trichterparameter (Vibration und Entleerung).
      
 * - 6
-  - **Robot setup**: sezione per la configurazione della comunicazione del robot.
+  - **Roboter-Setup**: Bereich zur Konfiguration der Roboterkommunikation.
 
 * - 7
-  - **Protocol setup**: pagina di configurazione dei parametri che definiscono quanti oggetti la visione deve o può restituire in ogni ciclo, con quale ordine vengono prioritizzati e quali valori statistici usare in base al numero di prese robot e al tempo massimo di gestione per ogni componente.
+  - **Protocol setup (Protokolleinrichtung)**: Seite zur Konfiguration der Parameter, die festlegen, wie viele Objekte die Bildverarbeitung in jedem Zyklus zurückgeben muss oder kann, in welcher Reihenfolge sie priorisiert werden und welche statistischen Werte basierend auf der Anzahl der Robotergriffe und der maximalen Bearbeitungszeit für jede Komponente verwendet werden sollen.
      
 * - 8
-  - **Account setup**: permette di configurare i vari account utente in base ai livelli di accesso.
+  - **Account setup (Kontoeinrichtung)**: Ermöglicht die Konfiguration der verschiedenen Benutzerkonten entsprechend den Zugriffsebenen.
 
 * - 9
-  - **Laser pointer**: permette di usare uno strumento laser per simulare un prelievo (pick) in assenza del robot.
+  - **Laserpointer**: Ermöglicht die Verwendung eines Lasers, um eine Entnahme (Pick) ohne Roboter zu simulieren.
 * - 10
-  - **Evaluate PPM**: permette di effettuare una stima dei pezzi al minuto (PPM) quando si utilizza il laser pointer.
+  - **Evaluate PPM (PPM-Schätzung)**: Ermöglicht die Schätzung der Stückzahl pro Minute (PPM) bei Verwendung des Laserpointers.
 
 * - 11
-  - **Licence software**: pagina per l'attivazione della licenza software.
+  - **Softwarelizenz**: Seite zur Aktivierung der Softwarelizenz.
 ```
-## i tasti INFO
-In ognuna delle sezioni operative, è disponibile un tasto INFO in alto a destra.
-All'interno di questo pulsante è disponibile la spiegazione della procedura Step By Step, la stessa procedura è visibile nel video tutorial.
-```{dropdown} Tasto Info della pagina [Camera FLB](cameraFLB)
+# **INFO-Schaltflächen**
+In jedem der Arbeitsbereiche befindet sich oben rechts eine INFO-Schaltfläche.
+Über diese Schaltfläche wird eine Schritt-für-Schritt-Anleitung aufgerufen, die auch im Video-Tutorial zu sehen ist.
+```{dropdown} Info-Schaltfläche auf der Seite [Camera FLB](cameraFLB)
 
    :::{video} ../../../../_shared/media/videos/TastoInfo_CameraFLB_1280x720.mp4
    :width: 100%
@@ -171,7 +136,7 @@ All'interno di questo pulsante è disponibile la spiegazione della procedura Ste
 
 ```
 
-```{dropdown} Tasto Info della pagina [Calibration](calibrazione)
+```{dropdown} Info-Schaltfläche auf der Seite [Calibration](calibrazione)
 
    :::{video} ../../../../_shared/media/videos/TastoInfo_Calibration_1280x720.mp4
    :width: 100%
@@ -179,7 +144,7 @@ All'interno di questo pulsante è disponibile la spiegazione della procedura Ste
    :::
 
 ```
-```{dropdown} Tasto Info della pagina [Train Model](modello)
+```{dropdown} Info-Schaltfläche auf der Seite [Train Model](modello)
 
    :::{video} ../../../../_shared/media/videos/TastoInfo_TrainModel_1280x720.mp4
    :width: 100%
@@ -187,7 +152,7 @@ All'interno di questo pulsante è disponibile la spiegazione della procedura Ste
    :::
 
 ```
-```{dropdown} Tasto Info della pagina [Define Robot Picking Area](robotarea)
+```{dropdown} Info-Schaltfläche auf der Seite [Define Robot Picking Area](robotarea)
 
    :::{video} ../../../../_shared/media/videos/TastoInfo_DefineRobotArea_1280x720.mp4
    :width: 100%
@@ -195,7 +160,7 @@ All'interno di questo pulsante è disponibile la spiegazione della procedura Ste
    :::
 
 ```
-```{dropdown} Tasto Info della pagina [Locator Model](locator)
+```{dropdown} Info-Schaltfläche auf der Seite [Locator Model](locator)
 
    :::{video} ../../../../_shared/media/videos/TastiInfo_LocatorModel_1280x720.mp4
    :width: 100%
@@ -203,7 +168,7 @@ All'interno di questo pulsante è disponibile la spiegazione della procedura Ste
    :::
 
 ```
-```{dropdown} Tasto Info della pagina [Clearances](clearances)
+```{dropdown} Info-Schaltfläche auf der Seite [Clearances](clearances)
 
    :::{video} ../../../../_shared/media/videos/TastoInfo_Clearances_1280x720.mp4
    :width: 100%
@@ -211,7 +176,7 @@ All'interno di questo pulsante è disponibile la spiegazione della procedura Ste
    :::
 
 ```
-```{dropdown} Tasto Info della pagina [Clearance 1](clearance1)
+```{dropdown} Info-Schaltfläche auf der Seite [Clearance 1](clearance1)
 
    :::{video} ../../../../_shared/media/videos/TastoInfo_Clearance1_1280x720.mp4
    :width: 100%
@@ -219,7 +184,7 @@ All'interno di questo pulsante è disponibile la spiegazione della procedura Ste
    :::
 
 ```
-```{dropdown} Tasto Info della pagina [Picking Offset](pickingoffset)
+```{dropdown} Info-Schaltfläche auf der Seite [Picking Offset](pickingoffset)
 
    :::{video} ../../../../_shared/media/videos/TastoInfo_PickingOffset_1280x720.mp4
    :width: 100%
@@ -227,7 +192,7 @@ All'interno di questo pulsante è disponibile la spiegazione della procedura Ste
    :::
 
 ```
-```{dropdown} Tasto Info della pagina [Define Hopper Area](definehopperarea)
+```{dropdown} Info-Schaltfläche auf der Seite [Define Hopper Area](definehopperarea)
 
    :::{video} ../../../../_shared/media/videos/TastoInfo_AreaHopper_1280x720.mp4
    :width: 100%
@@ -235,7 +200,7 @@ All'interno di questo pulsante è disponibile la spiegazione della procedura Ste
    :::
 
 ```
-```{dropdown} Tasto Info della pagina [Define Value Hopper](definevaluehopper)
+```{dropdown} Info-Schaltfläche auf der Seite [Define Value Hopper](definevaluehopper)
 
    :::{video} ../../../../_shared/media/videos/TastoInfo_Hopper_1280x720.mp4
    :width: 100%

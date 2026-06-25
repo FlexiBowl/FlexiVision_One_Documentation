@@ -1,50 +1,49 @@
 (cablaggio)=
-# **Câblage et Connexions**
-image d'ensemble des connexions électriques 
-type:  
+# **Câblage et connexions**
+  
 ![Pan Coll](../../../../_shared/media/images/panoramicacollegamenti.png)
 ```{list-table}
 :widths: 25 25 50
 :header-rows: 1
 
 * - **De**
-  - **À**
-  - **Connexion**
+  - **Vers**
+  - **Branchement**
 
 * - Réseau électrique
-  - FlexiBowl
+  - FlexiBowl®
   - Alimentation 110/220 Vdc
 
 * - Réseau électrique
   - Robot
-  - Alimentation selon les spécifications du robot en votre possession
+  - Alimentation conformément aux spécifications du robot en votre possession
 
 * - Réseau électrique
   - Caméra
   - Alimentation 24 Vdc
 
 * - Réseau électrique
-  - Illuminateur (lumière)
+  - Dispositif d'éclairage (lumière)
   - Alimentation 24 Vdc
 
 * - Réseau électrique
-  - Contrôleur Hopper
+  - Contrôleur de trémie
   - Alimentation 110/220 Vdc
 
-* - Contrôleur Hopper
-  - Hopper
+* - Contrôleur de trémie
+  - Trémie
   - Alimentation et signal
 
 * - Robot
-  - Contrôleur Hopper
-  - I/O Numériques
+  - Contrôleur de trémie
+  - E/S numériques
 
 * - VisionController
   - Caméra
   - Ethernet TCP
 
 * - VisionController
-  - FlexiBowl
+  - FlexiBowl®
   - Ethernet TCP
 
 * - VisionController
@@ -52,7 +51,7 @@ type:
   - Ethernet TCP
 ```
 
-## Procédure guidée de câblage
+## Assistant de câblage
 
 ```{list-table} 
 :header-rows: 1
@@ -60,32 +59,32 @@ type:
 * - **Étape**
   - **Action**
 * - 1
-  - Connecter l'alimentation du FlexiBowl®.  
-    [🔗 Se référer au manuel pour les spécifications d'alimentation](http://link-al-manuale.com)
+  - Brancher l'alimentation électrique du FlexiBowl®.  
+    [🔗 Reportez-vous au manuel pour connaître les spécifications de l'alimentation électrique](https://www.flexibowl.com/wp-content/uploads/2026/04/Manuale-Utente-Flexibowl_IT_Rev2.9.pdf)
 * - 2
-  - Connecter le [câble d'alimentation Hirose 24V](cavo) à la Caméra.
+  - Brancher le [câble d'alimentation Hirose 24V](cavo) à la caméra.
 * - 3
-  - Connecter le FlexiBowl® au VisionController avec un câble Ethernet.
+  - Connecter le FlexiBowl® au VisionController à l'aide d'un câble Ethernet.
 * - 4
-  - Connecter la Caméra au VisionController (PC) avec un câble Ethernet.
+  - Connecter la caméra au VisionController (PC) à l'aide d'un câble Ethernet.
 * - 5
-  - Connecter le Robot au VisionController avec un câble Ethernet.
+  - Connecter le robot au VisionController à l'aide d'un câble Ethernet.
 * - 6
-  - Connecter l'air comprimé au FlexiBowl®.  
-    [🔗 Se référer au manuel pour les spécifications pneumatiques](http://link-al-manuale.com)
+  - Raccorder l'air comprimé au FlexiBowl®.  
+    [🔗 Se référer au manuel pour les spécifications pneumatiques](https://www.flexibowl.com/wp-content/uploads/2026/04/Manuale-Utente-Flexibowl_IT_Rev2.9.pdf)
 * - 7
-  - Si présent, connecter le hopper à son contrôleur
+  - Si présent, brancher la trémie à son contrôleur
 * - 8
-  - Si présent, connecter le robot au contrôleur du hopper (I/O Numériques)
+  - Si présent, brancher le robot au contrôleur de la trémie (E/S numériques)
 * - 9 
-  - Si présent, alimenter le contrôleur du hopper (110/220 V selon l'option choisie lors de l'achat de la base vibrante du hopper)
+  - Si présent, alimenter le contrôleur de la trémie (110/220 V selon l'option choisie lors de l'achat de la base vibrante de la trémie)
 * - 10
-  - Allumer l'interrupteur AC du FlexiBowl® (position "I"). La LED READY est **ON**.
+  - Allumer l'interrupteur AC du FlexiBowl® (position « I »). Le voyant READY est **allumé**.
 * - 11
-  - Allumer tous les autres dispositifs
+  - Allumer tous les autres appareils
 ```
 (cablaggio_illuminatore)=
-## Câblage illuminateur
+## Câblage du dispositif d'éclairage
 
 ![Pin Toplight](../../../../_shared/media/images/pin_toplight.png)
 
@@ -96,29 +95,29 @@ type:
 * - Paramètre
   - Exigence / Action
 * - **Tension**
-  - 24V DC (±10%). Tension minimale de fonctionnement: 20V DC sur l'entrée lumière.
+  - 24V DC (±10 %). Tension minimale de fonctionnement : 20V DC sur l'entrée lumière.
 * - **Connecteur**
-  - M12 Male. 
+  - M12 mâle. 
     :::{note}
       Pour connecter le toplight, il est également possible d'acheter son [câble d'alimentation](cavoalimtoplight). 
     :::
-* - **Pinout connecteur**
-  - Pin 1: +24V (marron) — Pin 3: GND (bleu) — Pin 4: STROBE PNP (noir)
+* - **Brochage du connecteur**
+  - Broche 1 : +24V (marron) — Broche 3 : GND (bleu) — Broche 4 : STROBE PNP (noir)
 * - **Mode STROBE (PNP)**
-  - De 5V à 24V pour allumage à 100%. De 0V à 1V pour extinction à 100%.
+  - De 5V à 24V pour une activation à 100 %. De 0V à 1V pour une extinction à 100 %.
 * - **Mode CONTINU**
-  - Pin 1 (+24V) et Pin 3 (GND) connectés; Pin 4 (PNP) connecté à Pin 1.
-* - **Chute de tension (câble M12, 10m)**
-  - 1.15V @ 5A — 2.3V @ 10A — 3.5V @ 15A — 4.6V @ 20A (max 20A)
+  - Broche 1 (+24V) et Broche 3 (GND) connectées ; Broche 4 (PNP) connectée à la Broche 1.
+* - **Chute de tension (câble M12, 10 m)**
+  - 1,15V @ 5A — 2,3V @ 10A — 3,5V @ 15A — 4,6V @ 20A (max 20A)
 * - **Blindage**
   - Utiliser des câbles blindés pour réduire les interférences électromagnétiques (EMI).
 ```
 ```{warning}
 **Sécurité électrique**
 
-- Respecter les tensions d'alimentation et les bornes de connexion indiquées.
-- Ne pas modifier ni démonter le produit.
-- Ne pas connecter ou nettoyer l'appareil lorsqu'il est sous tension.
+- Respecter les tensions d'alimentation et les bornes de raccord indiquées.
+- Ne pas modifier ou démonter le produit.
+- Ne pas brancher ou nettoyer l'appareil lorsqu'il est sous tension.
 - Ne pas regarder directement la source lumineuse.
 ```
 

@@ -1,128 +1,133 @@
-(nuovaricetta)=
-# **Creare una Nuova Ricetta**
+(nuovaricetta)=  
+# **Ein Neues Rezept erstellen**
 
-Questa sezione descrive come creare una nuova ricetta applicativa in FlexiVision One. Una ricetta è il contenitore principale che include tutti i modelli pezzo, le configurazioni FlexiBowl/Hopper e i parametri robot necessari per un'applicazione completa di picking.
+Dieser Abschnitt beschreibt, wie Sie in FlexiVision One ein neues Anwendungsrezept erstellen. Ein Rezept ist der Hauptcontainer, der alle Teilemodelle, FlexiBowl®-/Trichter-Konfigurationen und Roboterparameter enthält, die für eine vollständige Picking-Anwendung erforderlich sind.
 ```{note}
-**Creare una nuova ricetta quando:**
+**Erstellen Sie ein neues Rezept, wenn:**
 
-- Si lavora con un **tipo di pezzo completamente diverso**
-- Si cambia **applicazione** 
+- Sie mit einem **völlig anderen Teiletyp** arbeiten
+- Sie die **Anwendung** wechseln
 
-**NON serve creare una nuova ricetta quando:**
-- Si aggiunge una faccia dello stesso pezzo (creare nuovo modello nella stessa ricetta per lo stesso pezzo in posizioni diverse)
-- Si fanno piccole regolazioni ai parametri esistenti (cam exposure)
-- Si modifica solo l'accept threshold, score threshold, ecc.
+**Es ist NICHT erforderlich, ein neues Rezept zu erstellen, wenn:**
+- Sie eine Seite desselben Teils hinzufügen (erstellen Sie ein neues Modell im selben Rezept für dasselbe Teil an verschiedenen Positionen)
+- Sie kleine Anpassungen an bestehenden Parametern vornehmen (Cam Exposure)
+- Sie nur den Accept Threshold, Score Threshold usw. ändern
 ```
 
 ---
 
-## Panoramica interfaccia
+## Übersicht über die Benutzeroberfläche
 
-Prima di procedere con il training del modello, familiarizzare con l'interfaccia [Recipes](recipes).
+Bevor Sie mit dem Training des Modells fortfahren, machen Sie sich mit der Benutzeroberfläche [Recipes](recipes) vertraut.
 
+![Seite „Rezepte“](../../../../../_shared/media/images/pagina_recipesNEW.png)
 
-## Salvataggio ricetta base
+## Speichern des Basisrezepts
 
-Prima di procedere, assicurarsi di aver salvato la ricetta base creata durante il setup iniziale:
+Bevor Sie fortfahren, stellen Sie sicher, dass Sie das bei der Ersteinrichtung erstellte Basisrezept gespeichert haben:
 :::{list-table}
   * - **1**
-    - Dalla pagina principale, cliccare su **Recipes**
+    - Klicken Sie auf der Hauptseite auf <img src="../../../../../_shared/media/images/tasto_recipes.png" class="inline-icon">
   * - **2**
-    - Verificare che la ricetta corrente sia quella base (es: "Ricetta_Base" creata durante il setup)
+    - Vergewissern Sie sich, dass das aktuelle Rezept das Basisrezept ist (z. B.: „Basisrezept“, das bei der Ersteinrichtung erstellt wurde)
   * - **3**
-    - Cliccare su **Save Recipe**
+    - Klicken Sie auf <img src="../../../../../_shared/media/images/tasto_save_recipes.png" class="inline-icon">
   * - **4**
-    - Mantenere lo stesso nome nel campo di salvataggio (si sta sovrascrivendo la ricetta con le configurazioni aggiornate)
+    - Behalten Sie den gleichen Namen im Speicherfeld bei (Sie überschreiben das Rezept mit den aktualisierten Konfigurationen)
   * - **5**
-    - Confermare il salvataggio
+    - Bestätigen Sie die Speicherung
 :::
 ```{important}
 
-**Perché salvare la ricetta base?**
+**Warum das Basisrezept speichern?**
 
-La ricetta base contiene tutte le configurazioni hardware completate durante il setup:
-- Connessione FlexiBowl (IP, parametri)
-- Connessione Hopper 
-- Connessione Robot (porta TCP/IP)
-- Calibrazione camera
+Das Basisrezept enthält alle während der Einrichtung vorgenommenen Hardware-Konfigurationen:
+- FlexiBowl®-Verbindung (IP, Parameter)
+- Trichterverbindung
+- Roboterverbindung (TCP/IP-Port)
+- Kamerakalibrierung
 
-Avere una ricetta base già pronta consente di riutilizzare tutte queste configurazioni senza doverle ripetere.
+Ein bereits vorbereitetes Basisrezept ermöglicht es, all diese Konfigurationen wiederzuverwenden, ohne sie erneut vornehmen zu müssen.
 ```
 
 ---
-## Step 1: Duplicare la ricetta base 
+## Schritt 1: Duplizieren Sie das Basisrezept
 
-Per partire con la creazione del primo modello, e quindi con la configurazione di una nuova applicazione, si consiglia sempre di duplicare la ricetta base appena salvata.   
-Questo è utile perché permette di mantenere salvati a parte tutti i setup appena configurati. E questo è vantaggioso per due motivi: 
-- Per iniziare una nuova applicazione con lo stesso sistema, non si deve ripetere tutti i passaggi fatti fin'ora 
-- Se cambia un solo elemento nella configurazione, si possono tenere validi i setup di tutti gli altri componenti 
+Um mit der Erstellung des ersten Modells und damit mit der Konfiguration einer neuen Anwendung zu beginnen, empfiehlt es sich immer, das soeben gespeicherte Basisrezept zu duplizieren.
+Dies ist nützlich, da so alle soeben konfigurierten Einstellungen separat gespeichert bleiben. Und das ist aus zwei Gründen von Vorteil:
+- Um eine neue Anwendung mit demselben System zu starten, müssen Sie nicht alle bisher durchgeführten Schritte wiederholen
+- Wenn sich nur ein Element in der Konfiguration ändert, können die Einstellungen aller anderen Komponenten beibehalten werden
 ```{list-table}
 * - **6**
-  - Dalla pagina principale del software FlexiVision One, cliccare su **Recipes**
+  - Klicken Sie auf der Hauptseite der Software FlexiVision One auf <img src="../../../../../_shared/media/images/tasto_recipes.png" class="inline-icon">
 * - **7**
-  - Si apre la pagina di gestione ricette con l'elenco di tutte le ricette esistenti
+  - Es öffnet sich die Seite zur Rezeptverwaltung mit der Liste aller vorhandenen Rezepte
 * - **8**
-  - Selezionare la Ricetta Base
+  - Wählen Sie das Basisrezept aus
 * - **9**
-  - Duplicare la Ricetta Base
+  - Duplizieren Sie das Basisrezept
 * - **10**
-  - Cliccare su Load Recipe 
+  - Klicken Sie auf „Load Recipe“ (Rezept laden)
 * - **11**
-  - Verificare nella barra superiore che il nome visualizzato sia quello della nuova ricetta
+  - Überprüfen Sie in der oberen Leiste, ob der angezeigte Name dem des neuen Rezepts entspricht
     :::{warning}
-    **Lavorare sempre sulla ricetta corretta**
+    **Arbeiten Sie immer mit dem richtigen Rezept**
 
-    Con più ricette presenti, verificare sempre che sia selezionata quella corretta prima di iniziare modifiche. Modifiche applicate alla ricetta sbagliata richiedono di rifare il lavoro.
+    Wenn mehrere Rezepte vorhanden sind, überprüfen Sie immer, ob das richtige ausgewählt ist, bevor Sie Änderungen vornehmen. Änderungen, die am falschen Rezept vorgenommen werden, erfordern eine Neuausführung der Arbeit.
     :::
 ```
-## Step 2: Nominare la Ricetta
+## Schritt 2: Benennung des Rezepts
 
-Prima di cliccare su "Save Recipe", scegliere un nome descrittivo.
+Bevor Sie auf „Save Recipe“ (Rezept speichern) klicken, wählen Sie einen aussagekräftigen Namen.
 ```{list-table}
 * - **12**
-  - Rinominare la Ricetta duplicata   
-    **Convenzioni consigliate:**
-    - Nomi che identificano chiaramente il pezzo o l'applicazione
-    - Niente spazi (usare `_` o `-`)
-    - Includere informazioni rilevanti (tipo pezzo, dimensione, applicazione)
+  - Das duplizierte Rezept umbenennen
+    **Empfohlene Vorgehensweisen:**
+    - Namen, die das Teil oder die Anwendung eindeutig identifizieren
+    - Keine Leerzeichen (verwenden Sie `_` oder `-`)
+    - Geben Sie relevante Informationen an (Art des Teils, Größe, Anwendung)
     
     :::{tip}
-    **Evitare nomi generici**
+    **Vermeiden Sie allgemeine Namen**
 
-    ❌ Nomi da evitare:
+    ❌ Zu vermeidende Namen:
     - `Test`, `Prova`, `Ricetta1`, `Nuova_Ricetta`
 
-    ✓ Nomi consigliati:
+    ✓ Empfohlene Namen:
     - `Prod_Viti_M8_Acciaio`
     - `Assembly_Connettori_2024`
     - `QC_Ingranaggi_Serie_X`
 
-    **Formato suggerito**: `[LINEA]_[PRODOTTO]_[VARIANTE]_[ANNO]`
+    **Empfohlenes Format**: `[LINEA]_[PRODOTTO]_[VARIANTE]_[GG_MM_AAAA]`
 
-    Un nome chiaro facilita la gestione quando si hanno molte ricette diverse.
+    Ein eindeutiger Name erleichtert die Verwaltung, wenn Sie viele verschiedene Rezepte haben.
     :::
 ```
 ```{warning}
-**Backup ricette**
+**Backup von Rezepten**
 
-Dopo aver creato e configurato una ricetta:
-- Utilizzare la funzione di backup del software ([Backup Management](backup))
-- Esportare periodicamente le ricette su supporto esterno
-- Documentare parametri critici su supporto cartaceo/digitale
+Nachdem Sie ein Rezept erstellt und konfiguriert haben:
+- Nutzen Sie die Backup-Funktion der Software ([Backup Management](backup))
+- Exportieren Sie die Rezepte regelmäßig auf einen externen Datenträger
+- Dokumentieren Sie kritische Parameter in Papierform/digital
 
-Una ricetta ben configurata rappresenta ore di lavoro. Proteggerla adeguatamente previene perdite di dati.
+Ein gut konfiguriertes Rezept entspricht vielen Arbeitsstunden. Durch angemessenen Schutz beugen Sie Datenverlusten vor.
 ```
 
 ---
 
-## Prossimi passi
+## Nächste Schritte
 
-**→ [Creare un Modello](18_NuovoModello.md)**
+- **[Modell erstellen](18_NuovoModello.md)**
+- **[ROI-Definition](roitest)**
+- **[Konfiguration der Clearances](istogrammi)**
+- **[Roboter-Pick-Kalibrierung](robotpick)**
+
 ```{tip}
-**Cosa serve per il prossimo step**
+**Was Sie für den nächsten Schritt benötigen**
 
-- Pezzi fisici da riconoscere (almeno 10-15 pezzi)
-- FlexiBowl vuoto e pulito
-- Se il tool del robot che stiamo utilizzando è una pinza, ci occorreranno anche due oggetti diversi dai pezzi di cui si vuole fare il modello da utilizzare come simulatori per l'ingombro del tool. 
-- Foglio per annotare coordinate robot (X, Y, RZ)
+- Zu erkennende physische Teile (mindestens 10-15 Teile)
+- Leerer und sauberer FlexiBowl®
+- Wenn das verwendete Roboterwerkzeug eine Greifzange ist, benötigen wir zusätzlich zwei Objekte, die sich von den Teilen unterscheiden, für die das Modell erstellt werden soll, um als Simulatoren für den Platzbedarf des Werkzeugs zu dienen.
+- Blatt zum Notieren der Roboterkoordinaten (X, Y, RZ)
 ```

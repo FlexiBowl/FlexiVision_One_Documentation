@@ -1,72 +1,72 @@
-(troubleshooting_conf_tramoggia)=
-# **Configuration Hopper** 
+﻿(troubleshooting_conf_tramoggia)=
+# **Configuration de la trémie** 
 ```{list-table}
 :header-rows: 1
 :widths: 30 35 35
 
 * - Problème
-  - Causes Possibles
+  - Causes possibles
   - Solutions
 
 * - **Zone de contrôle non définissable**
   - • Image non acquise
     
-    • Section incorrecte
-  - • Acquérir une image de test
+    • Mauvaise section
+  - • Acquérir l'image test
     
-    • Accéder via Config Hopper X
+    • Accès via Config Hopper X
 
 
 * - **AUTO ne calcule pas correctement Mean et Std Dev**
-  - • CAPTURE non exécutés
+  - • CAPTURE pas exécutée
     
     • Ordre CAPTURE inversé
     
     • Zone de contrôle trop petite
   - • Exécuter CAPTURE vide puis CAPTURE plein
     
-    • Répéter dans l'ordre correct
+    • Répéter dans le bon ordre
     
     • Agrandir la zone de contrôle
-* - **TEST toujours VERT (hopper ne s'active jamais)**
+* - **TEST toujours VERT (la trémie ne s'active jamais)**
   - • Seuil trop permissif
     
-    • CAPTURE plein avec trop de composants
+    • CAPTURE pleine avec trop de composants
     
-    • Mean calculé incorrect
-  - • Répéter CAPTURE plein avec le nombre minimal correct
+    • Moyenne calculée erronée
+  - • Répéter la CAPTURE complète avec le nombre minimum correct
     
     • Vérifier qu'AUTO recalcule correctement
     
-    • Régler manuellement le seuil si nécessaire
-* - **TEST toujours ROUGE (hopper s'active toujours)**
+    • Ajuster le seuil manuellement si nécessaire
+* - **TEST toujours ROUGE (trémie toujours activée)**
   - • Seuil trop restrictif
     
     • CAPTURE vide avec composants présents
     
-  - • Répéter CAPTURE vide avec une zone complètement propre
+  - • Répéter l'opération CAPTURE vide avec une zone complètement propre
     
     • Répéter AUTO
 
-* - **Temps de vibration ne produit pas l'effet souhaité**
-  - • Valeur trop basse
+* - **Time vibration ne produit pas l'effet désiré**
+  - • Valeur trop faible
     
     • Valeur trop élevée 
     
-    • Niveau de cuve hopper variable
-  - • Commencer avec 500ms
+    • Niveau variable de la cuve de la trémie
+  - • Démarrer avec 500 ms
     
-    • Augmenter de ±100ms pour régler le flux
+    • Augmenter ±100 ms pour ajuster le débit
     
-    • **CRITIQUE**: Maintenir une charge constante dans la cuve
+    • **CRITIQUE** : Maintenir une charge constante dans la cuve
 
-* - **Hopper décharge aux mauvais moments**
-  - • Steps non correct
+* - **Trémie déchargée au mauvais moment**
+  - • Paramètre « Steps » incorrect
 
-    • Matériel du Contrôleur Hopper non configuré correctement 
+    • Matériel du contrôleur de trémie mal configuré 
 
-  - • Recalculer Steps
+  - • Recalculer les Steps
 
-    • Contrôler les spécifications de configuration dans le [manuel dédié au Hopper]() 
+    • Vérifier les spécifications de configuration dans le [manuel de la trémie]() 
 ```
 

@@ -1,253 +1,253 @@
-# **3 FlexiBowl® e 3 Camere**
+# **3 FlexiBowl® y 3 Cámaras**
 
-Questa sezione descrive le configurazioni disponibili quando si desidera operare con **tre FlexiBowl®** e **tre camere** all'interno della stessa isola di picking, gestiti da un unico VisionController FlexiVision One.
+Esta sección describe las configuraciones disponibles cuando se desea operar con **tres FlexiBowl®** y **tres cámaras** dentro de la misma isla de picking, gestionadas por un único VisionController FlexiVision One.
 
 ---
 
-## Panoramica della configurazione
+## Resumen de la configuración
 
-In una configurazione **3 FlexiBowl® + 3 Camere**, il sistema comprende tre stazioni di alimentazione e visione indipendenti, tutte gestite dallo stesso VisionController. Ciascuna stazione è composta da:
+En una configuración **3 FlexiBowl® + 3 Cámaras**, el sistema consta de tres estaciones de alimentación y visión independientes, todas controladas por el mismo VisionController. Cada estación consta de:
 
 * 1 FlexiBowl®
-* 1 Camera con ottica dedicata
-* 1 Tramoggia (opzionale, se presente)
+* 1 Cámara con óptica dedicada
+* 1 Tolva (opcional, si existe)
 
-Le tre stazioni comunicano con il VisionController attraverso uno **Switch di rete**.
+Las tres estaciones se comunican con el VisionController a través de un **Switch de red**.
 ```{important}
-Lo **Switch** è un componente **obbligatorio** in tutte le configurazioni multi-dispositivo. Senza di esso non è possibile collegare contemporaneamente più FlexiBowl® e più camere al VisionController. Per le specifiche tecniche e i codici d'ordine, consultare la sezione [Switch](../rif_tecnico_specifiche/08_Opzioni.md#switch).
+El **Switch** es un componente **obligatorio** en todas las configuraciones multidispositivo. Sin él, no es posible conectar simultáneamente varios FlexiBowl® y varias cámaras al VisionController. Para las especificaciones técnicas y los códigos de pedido, consulte la sección [Switch](../rif_tecnico_specifiche/08_Opzioni.md#switch).
 ```
 
-Questa configurazione supporta tre varianti operative, in base al numero di robot disponibili nell'impianto:
+Esta configuración admite tres variantes de funcionamiento, en función del número de robots disponibles en la planta:
 
 | | **Variante A** | **Variante B** | **Variante C** |
 |---|---|---|---|
 | **Robot** | 1 | 2 | 3 |
 | **FlexiBowl®** | 3 | 3 | 3 |
-| **Camere** | 3 | 3 | 3 |
-| **Logica operativa** | Il robot raggiunge tutte e tre le stazioni | Primo robot su un FlexiBowl, secondo robot su due FlexiBowl | Ogni robot è dedicato a una stazione |
-| **Switch richiesto** | Sì | Sì | Sì |
+| **Cámaras** | 3 | 3 | 3 |
+| **Lógica operativa** | El robot alcanza las tres estaciones | Primer robot en un FlexiBowl®, segundo robot en dos FlexiBowl® | Cada robot está dedicado a una estación |
+| **Switch requerido** | Sí | Sí | Sí |
 ---
 
-## Variante A — 1 Robot, 3 FlexiBowl®
+## Variante A - 1 Robot, 3 FlexiBowls
 
-![Panoramica Sistema 3FB3CAM1Robot](../../../../_shared/media/images/3FB3CAM1R.png)
+![Visión general del sistema 3FB3CAM1Robot](../../../../_shared/media/images/3FB3CAM1R.png)
 
-Un **singolo robot** opera su tutte e tre le stazioni. Il robot deve essere posizionato in modo da poter raggiungere l'area di picking di ciascun FlexiBowl®. Il VisionController gestisce le tre stazioni in modo indipendente, ciascuna con la propria ricetta e il proprio canale di comunicazione TCP/IP.
+Un **único robot** opera en las tres estaciones. El robot debe colocarse de forma que pueda alcanzar la zona de recogida de cada FlexiBowl®. El VisionController gestiona las tres estaciones de forma independiente, cada una con su propia receta y canal de comunicación TCP/IP.
 
-Ogni stazione supporta applicazioni di tipo **Standard** o **Mix**.
+Cada estación admite aplicaciones de tipo **Standard** o **Mix**.
 
-| Parametro | Valore |
+| Parámetro | Valor |
 |---|---|
 | FlexiBowl® | 3 |
-| Camere | 3 |
+| Cámaras | 3 |
 | Robot | 1 |
-| Switch richiesto | **Sì** |
+| Switch requerido | **Sí** |
 
 
 ```{important}
-**Ricetta base e gestione delle ricette**
+**Receta básica y gestión de recetas**
 
-Come per la configurazione singola, anche in una configurazione 3FB + 3CAM il processo parte dalla creazione di un'**unica ricetta base**, che contiene i setup hardware e la calibrazione della camera per l'intero sistema. Questa ricetta base viene poi **duplicata** per ciascuna stazione: ogni duplicato costituisce la ricetta operativa di quella stazione, all'interno della quale vengono creati i modelli dei pezzi (fino a 8 per stazione).
+Al igual que en la configuración individual, en una configuración 3FB + 3CAM el proceso comienza con la creación de una **única receta base**, que contiene la configuración del hardware y la calibración de la cámara para todo el sistema. A continuación, esta receta base se duplica para cada estación: cada duplicado constituye la receta de funcionamiento de dicha estación, dentro de la cual se crean los modelos de piezas (hasta 8 por estación).
 
-Per questo è fondamentale che l'associazione tra i dispositivi venga configurata correttamente fin dall'inizio:
+Por lo tanto, es crucial que la asociación entre los dispositivos se configure correctamente desde el principio:
 
-* **Camera 1** → FlexiBowl® 1 (+ Tramoggia 1, se presente)
-* **Camera 2** → FlexiBowl® 2 (+ Tramoggia 2, se presente)
-* **Camera 3** → FlexiBowl® 3 (+ Tramoggia 3, se presente)
+* **Cámara 1** → FlexiBowl® 1 (+ Tolva 1, si existe)
+* **Cámara 2** → FlexiBowl® 2 (+ Tolva 2, si existe)
+* **Cámara 3** → FlexiBowl® 3 (+ Tolva 3, si existe)
 
-Un'associazione errata in fase di setup si ripercuoterebbe su tutte le ricette derivate, compromettendo il riconoscimento dei pezzi e il corretto funzionamento dell'intero sistema.
+Una asociación incorrecta durante la configuración afectaría a todas las recetas derivadas, comprometiendo el reconocimiento de las piezas y el correcto funcionamiento de todo el sistema.
 ```
 ---
 
-## Variante B — 2 Robot, 3 FlexiBowl®
+## Variante B - 2 Robots, 3 FlexiBowls
 
-![Panoramica Sistema 3FB3CAM2Robot](../../../../_shared/media/images/3FB3CAM2R.png)
+![Visión general del sistema 3FB3CAM2Robot](../../../../_shared/media/images/3FB3CAM2R.png)
 
-In questa variante **due robot** si suddividono le tre stazioni. Il primo robot farà il picking su un solo FlexiBowl, il secondo sugli altri due FlexiBowl. La distribuzione del carico tra i robot è definita dalla logica del programma robot e dalla disposizione fisica dell'impianto. 
+En esta variante **dos robots** comparten las tres estaciones. El primer robot recogerá en un solo FlexiBowl®, el segundo en los otros dos FlexiBowl®. La distribución de la carga entre los robots viene definida por la lógica del programa del robot y la disposición física de la planta. 
 
-Ogni stazione supporta applicazioni di tipo **Standard** o **Mix**.
+Cada estación admite aplicaciones de tipo **Standard** o **Mix**.
 
-| Parametro | Valore |
+| Parámetro | Valor |
 |---|---|
 | FlexiBowl® | 3 |
-| Camere | 3 |
+| Cámaras | 3 |
 | Robot | 2 |
-| Switch richiesto | **Sì** |
+| Switch requerido | **Sí** |
 
 ```{important}
-**Ricetta base e gestione delle ricette**
+**Receta básica y gestión de recetas**
 
-Come per la configurazione singola, anche in una configurazione 3FB + 3CAM il processo parte dalla creazione di un'**unica ricetta base**, che contiene i setup hardware e la calibrazione della camera per l'intero sistema. Questa ricetta base viene poi **duplicata** per ciascuna stazione: ogni duplicato costituisce la ricetta operativa di quella stazione, all'interno della quale vengono creati i modelli dei pezzi (fino a 8 per stazione).
+Al igual que en la configuración individual, en una configuración 3FB + 3CAM el proceso comienza con la creación de una **única receta base**, que contiene la configuración del hardware y la calibración de la cámara para todo el sistema. A continuación, esta receta base se duplica para cada estación: cada duplicado constituye la receta de funcionamiento de dicha estación, dentro de la cual se crean los modelos de piezas (hasta 8 por estación).
 
-Per questo è fondamentale che l'associazione tra i dispositivi venga configurata correttamente fin dall'inizio:
+Por lo tanto, es crucial que la asociación entre los dispositivos se configure correctamente desde el principio:
 
-* **Camera 1** → FlexiBowl® 1 (+ Tramoggia 1, se presente)
-* **Camera 2** → FlexiBowl® 2 (+ Tramoggia 2, se presente)
-* **Camera 3** → FlexiBowl® 3 (+ Tramoggia 3, se presente)
+* **Cámara 1** → FlexiBowl® 1 (+ Tolva 1, si existe)
+* **Cámara 2** → FlexiBowl® 2 (+ Tolva 2, si existe)
+* **Cámara 3** → FlexiBowl® 3 (+ Tolva 3, si existe)
 
-Un'associazione errata in fase di setup si ripercuoterebbe su tutte le ricette derivate, compromettendo il riconoscimento dei pezzi e il corretto funzionamento dell'intero sistema.
+Una asociación incorrecta durante la configuración afectaría a todas las recetas derivadas, comprometiendo el reconocimiento de las piezas y el correcto funcionamiento de todo el sistema.
 ```
 ---
 
-## Variante C — 3 Robot, 3 FlexiBowl®
+## Variante C - 3 Robots, 3 FlexiBowl®
 
-![Panoramica Sistema 3FB3CAM3Robot](../../../../_shared/media/images/3FB3CAM3R.png)
+![Visión general del sistema 3FB3CAM3Robot](../../../../_shared/media/images/3FB3CAM3R.png)
 
-Ogni robot è dedicato a una singola stazione: massima produttività con le tre celle che operano in parallelo e in modo completamente indipendente.
+Cada robot está dedicado a una única estación: máxima productividad con las tres células funcionando en paralelo y de forma totalmente independiente.
 
-Ogni stazione supporta applicazioni di tipo **Standard** o **Mix**.
+Cada estación admite aplicaciones de tipo **Standard** o **Mix**.
 
-| Parametro | Valore |
+| Parámetro | Valor |
 |---|---|
 | FlexiBowl® | 3 |
-| Camere | 3 |
+| Cámaras | 3 |
 | Robot | 3 |
-| Switch richiesto | **Sì** |
+| Switch requerido | **Sí** |
 
 ```{tip}
-La variante C garantisce le migliori prestazioni complessive. Ciascuna cella è completamente autonoma e non dipende dalla disponibilità delle altre.
+La variante C garantiza el mejor rendimiento global. Cada célula es completamente autónoma y no depende de la disponibilidad de las demás.
 ```
 ```{important}
-**Ricetta base e gestione delle ricette**
+**Receta básica y gestión de recetas**
 
-Come per la configurazione singola, anche in una configurazione 3FB + 3CAM il processo parte dalla creazione di un'**unica ricetta base**, che contiene i setup hardware e la calibrazione della camera per l'intero sistema. Questa ricetta base viene poi **duplicata** per ciascuna stazione: ogni duplicato costituisce la ricetta operativa di quella stazione, all'interno della quale vengono creati i modelli dei pezzi (fino a 8 per stazione).
+Al igual que en la configuración individual, en una configuración 3FB + 3CAM el proceso comienza con la creación de una **única receta base**, que contiene la configuración del hardware y la calibración de la cámara para todo el sistema. A continuación, esta receta base se duplica para cada estación: cada duplicado constituye la receta de funcionamiento de dicha estación, dentro de la cual se crean los modelos de piezas (hasta 8 por estación).
 
-Per questo è fondamentale che l'associazione tra i dispositivi venga configurata correttamente fin dall'inizio:
+Por lo tanto, es crucial que la asociación entre los dispositivos se configure correctamente desde el principio:
 
-* **Camera 1** → FlexiBowl® 1 (+ Tramoggia 1, se presente)
-* **Camera 2** → FlexiBowl® 2 (+ Tramoggia 2, se presente)
-* **Camera 3** → FlexiBowl® 3 (+ Tramoggia 3, se presente)
+* **Cámara 1** → FlexiBowl® 1 (+ Tolva 1, si existe)
+* **Cámara 2** → FlexiBowl® 2 (+ Tolva 2, si existe)
+* **Cámara 3** → FlexiBowl® 3 (+ Tolva 3, si existe)
 
-Un'associazione errata in fase di setup si ripercuoterebbe su tutte le ricette derivate, compromettendo il riconoscimento dei pezzi e il corretto funzionamento dell'intero sistema.
+Una asociación incorrecta durante la configuración afectaría a todas las recetas derivadas, comprometiendo el reconocimiento de las piezas y el correcto funcionamiento de todo el sistema.
 ```
 ---
 
-## Componenti necessari
+## Componentes necesarios
 
-### Kit base FlexiVision One
+### *Kit base FlexiVision One*
 
-Il **kit base FlexiVision One** (fornito con il sistema) include già tutto il necessario per la **prima stazione** (camera, ottica, cavi, griglia di calibrazione), incluso il VisionController. Non è necessario acquistare un secondo kit completo per le stazioni aggiuntive.
+El **kit base FlexiVision One** (suministrado con el sistema) ya incluye todo lo necesario para la **primera estación** (cámara, óptica, cables, rejilla de calibración), incluido el VisionController. No es necesario adquirir un segundo kit completo para estaciones adicionales.
 
-### Kit Camera Aggiuntiva (× 2)
+### *Kit de cámara adicional (× 2)*
 
-Per le stazioni 2 e 3 è necessario acquistare **due Kit Camera Aggiuntiva**, uno per ciascuna stazione, selezionando il codice corrispondente alla taglia del FlexiBowl® di ogni stazione. Il kit include:
+Para las estaciones 2 y 3 es necesario adquirir **dos Kits de cámara adicional**, uno para cada estación, seleccionando el código correspondiente al tamaño del FlexiBowl® de cada estación. El kit incluye:
 
-* 1 Camera
-* 1 Ottica dedicata alla taglia FlexiBowl®
-* 1 Griglia di calibrazione
-* 1 Cavo alimentazione camera
-* 2 Cavi Ethernet
+* 1 Cámara
+* 1 Óptica dedicada al tamaño FlexiBowl®
+* 1 Rejilla de calibración
+* 1 Cable de alimentación de la cámara
+* 2 Cables Ethernet
 
-Selezionare il kit in base alla taglia del FlexiBowl® di ciascuna stazione aggiuntiva:
+Seleccione el kit en función del tamaño del FlexiBowl® de cada estación complementaria:
 
-| Taglia FlexiBowl® | Codice Kit Camera Aggiuntiva | Ottica inclusa |
+| Tamaño FlexiBowl® | Código Kit Cámara Adicional | Óptica incluida |
 |---|---|---|
-| FB 200 | GM002002 | CE000881 — FlexiVision One 35mm Optic |
-| FB 350 | GM002003 | CE000881 — FlexiVision One 35mm Optic |
-| FB 500 | GM002004 | CE000880 — FlexiVision One 25mm Optic |
-| FB 650 | GM002005 | CE000879 — FlexiVision One 16mm Optic |
-| FB 800 | GM002006 | CE000879 — FlexiVision One 16mm Optic |
-| FB 1200 | GM002007 | CE000878 — FlexiVision One 12mm Optic |
+| FB 200 | GM002002 | CE000881 - Óptica FlexiVision One de 35 mm |
+| FB 350 | GM002003 | CE000881 - Óptica FlexiVision One de 35 mm |
+| FB 500 | GM002004 | CE000880 - Óptica FlexiVision One de 25 mm |
+| FB 650 | GM002005 | CE000879 - Óptica FlexiVision One 16mm |
+| FB 800 | GM002006 | CE000879 - Óptica FlexiVision One 16mm |
+| FB 1200 | GM002007 | CE000878 - Óptica FlexiVision One de 12 mm |
 
 ```{note}
-Se le stazioni aggiuntive utilizzano FlexiBowl® di taglie diverse, acquistare un kit per ciascuna taglia.  
- Ad esempio, per una configurazione con FB500 + FB650 + FB800, il kit base copre la prima stazione, mentre per la seconda e la terza stazione è necessario ordinare rispettivamente GM002004 e GM002006.
+Si las estaciones adicionales utilizan FlexiBowl® de tamaños diferentes, adquiera un kit para cada tamaño.  
+ Por ejemplo, para una configuración con FB500 + FB650 + FB800, el kit base cubre la primera estación, mientras que para la segunda y la tercera estación es necesario pedir respectivamente GM002004 y GM002006.
 ```
 
-### Switch
+### *Switch*
 
-Lo Switch è sempre necessario nelle configurazioni multi-dispositivo. Per codice, specifiche elettriche e fisiche consultare la sezione dedicata:
+El Switch siempre es necesario en las configuraciones multidispositivo. Para código, especificaciones eléctricas y físicas, consulte la sección dedicada:
 
 **→ [Switch](../rif_tecnico_specifiche/08_Opzioni.md#switch)**
 
 ---
 
-## Cablaggio
+## Cableado
 
-Nella **Variante A** (1 robot), tutti i dispositivi di campo (FlexiBowl®, camere, robot) si collegano allo **Switch**, e lo Switch si collega al **VisionController** tramite una singola porta Ethernet. Il numero totale di connessioni rientra nelle 8 porte disponibili sullo Switch.
+En la **Variante A** (1 robot), todos los dispositivos de campo (FlexiBowl®, cámaras, robot) se conectan al **Switch**, y el Switch se conecta al **VisionController** a través de un único puerto Ethernet. El número total de conexiones está dentro de los 8 puertos disponibles en el Switch.
 
-Dalla **Variante B** in poi, il numero totale di dispositivi supera le porte disponibili sullo Switch.   
-In questi casi, una porta del VisionController viene utilizzata per collegarlo allo Switch, mentre le restanti porte libere del VisionController accolgono i dispositivi che non trovano posto sullo Switch:
+A partir de la **Variante B**, el número total de dispositivos supera los puertos disponibles en el Switch.   
+En estos casos, se utiliza un puerto del VisionController para conectarlo al Switch, mientras que el resto de puertos libres del VisionController alojan dispositivos que no tienen cabida en el Switch:
 
-- Nella **Variante B** (2 robot), il **FlexiBowl® 3** si collega direttamente a una porta libera del VisionController.
-- Nella **Variante C** (3 robot), il **FlexiBowl® 3** e la **Camera 3** si collegano direttamente alle porte libere del VisionController.
+- En la **Variante B** (2 robot), el **FlexiBowl® 3** se conecta directamente a un puerto libre del VisionController.
+- En la **Variante C** (3 robot), el **FlexiBowl® 3** y la **Cámara 3** se conectan directamente a los puertos libres del VisionController.
 
 ```{important}
-Lo Switch dispone di **8 porte Ethernet**. A partire dalla Variante B, non è possibile connettere tutti i dispositivi esclusivamente attraverso lo Switch: i dispositivi in eccesso vanno collegati direttamente alle porte Ethernet libere del VisionController, come indicato nelle tabelle di seguito.
+El Switch dispone de **8 puertos Ethernet**. A partir de la Variante B, no es posible conectar todos los dispositivos exclusivamente a través del Switch: los dispositivos en exceso deben conectarse directamente a los puertos Ethernet libres del VisionController, como se indica en las tablas siguientes.
 ```
 :::{note}
-Si può arbitrariamente decidere quali dispositivi connettere al VisionController. L'mportante è lasciare sempre una porta libera per connettere il VisionController allo Switch
+Se puede decidir arbitrariamente qué dispositivos conectar al VisionController. Lo importante es dejar siempre un puerto libre para conectar el VisionController al Switch
 :::
 
-### Schema di connessione
+### *Diagrama de conexión*
 
-| Dispositivo | Variante A (1 Robot) | Variante B (2 Robot) | Variante C (3 Robot) |
+| DISPOSITIVO | Variante A (1 Robot) | Variante B (2 Robots) | Variante C (3 Robots) |
 |---|---|---|---|
 | FlexiBowl® 1 | → Switch | → Switch | → Switch |
 | FlexiBowl® 2 | → Switch | → Switch | → Switch |
-| FlexiBowl® 3 | → Switch | **→ VisionController (porta libera)** | **→ VisionController (porta libera)**  |
-| Camera 1 | → Switch | → Switch | → Switch |
-| Camera 2 | → Switch | → Switch | → Switch |
-| Camera 3 | → Switch | → Switch | **→ VisionController (porta libera)**  |
+| FlexiBowl® 3 | → Switch | **→ VisionController (puerto libre)** | **→ VisionController (puerto libre)**  |
+| Cámara 1 | → Switch | → Switch | → Switch |
+| Cámara 2 | → Switch | → Switch | → Switch |
+| Cámara 3 | → Switch | → Switch | **→ VisionController (puerto libre)**  |
 | Robot 1 | → Switch | → Switch | → Switch |
 | Robot 2 | — | → Switch | → Switch |
 | Robot 3 | — | — | → Switch |
 | **Switch** | **→ VisionController** | **→ VisionController** | **→ VisionController** |
 
 :::{note}
-Si può arbitrariamente decidere quali dispositivi connettere al VisionController. L'mportante è lasciare sempre una porta libera per connettere il VisionController allo Switch
+Se puede decidir arbitrariamente qué dispositivos conectar al VisionController. Lo importante es dejar siempre un puerto libre para conectar el VisionController al Switch
 :::
 
 ```{tip}
-Verificare che a ciascun dispositivo sia assegnato un indirizzo IP univoco nella stessa subnet.  
- Le porte TCP/IP utilizzate dal VisionController per le tre stazioni sono configurabili: per default **FB1 → 4001**, **FB2 → 4002**, **FB3 → 4003**.  
- lo  Consultare la sezione [Protocollo Comunicazione Robot-Visione](../rif_tecnico_specifiche/04b_Protocolli_Comunicazione.md) per i dettagli.
+Verifique que a cada dispositivo se le asigne una dirección IP única en la misma subred.  
+ Los puertos TCP/IP utilizados por el VisionController para las tres estaciones son configurables: por defecto **FB1 → 4001**, **FB2 → 4002**, **FB3 → 4003**.  
+ Consulte la sección [Protocolo Comunicación Robot-Visione](../rif_tecnico_specifiche/04b_Protocolli_Comunicazione.md) para los detalles.
 ```
-### Porte Switch occupate per variante
+### *Puertos Switch ocupados por variante*
 
-| Porta Switch | Variante A (1 Robot) | Variante B (2 Robot) | Variante C (3 Robot) |
+| Puerto Switch | Variante A (1 Robot) | Variante B (2 Robots) | Variante C (3 Robots) |
 |---|---|---|---|
 | 1 | FlexiBowl® 1 | FlexiBowl® 1 | FlexiBowl® 1 |
 | 2 | FlexiBowl® 2 | FlexiBowl® 2 | FlexiBowl® 2 |
-| 3 | FlexiBowl® 3 | Camera 1 | Camera 1 |
-| 4 | Camera 1 | Camera 2 | Camera 2 |
-| 5 | Camera 2 | Camera 3 | Robot 1 |
-| 6 | Camera 3 | Robot 1 | Robot 2 |
+| 3 | FlexiBowl® 3 | Cámara 1 | Cámara 1 |
+| 4 | Cámara 1 | Cámara 2 | Cámara 2 |
+| 5 | Cámara 2 | Cámara 3 | Robot 1 |
+| 6 | Cámara 3 | Robot 1 | Robot 2 |
 | 7 | Robot 1 | Robot 2 | Robot 3 |
 | 8 | VisionController | VisionController | VisionController |
 
-### Porte VisionController occupate per variante
+### *Puertos VisionController ocupados por variante*
 
-| Porta VisionController | Variante A (1 Robot) | Variante B (2 Robot) | Variante C (3 Robot) |
+| Puerto VisionController | Variante A (1 Robot) | Variante B (2 Robots) | Variante C (3 Robots) |
 |---|---|---|---|
 | 1 | Switch | Switch | Switch |
 | 2 | — | FlexiBowl® 3 | FlexiBowl® 3 |
-| 3 | — | — | Camera 3 |
+| 3 | — | — | Cámara 3 |
 
 :::{note}
-Si può arbitrariamente decidere quali dispositivi connettere al VisionController. L'mportante è lasciare sempre una porta libera per connettere il VisionController allo Switch
+Se puede decidir arbitrariamente qué dispositivos conectar al VisionController. Lo importante es dejar siempre un puerto libre para conectar el VisionController al Switch
 :::
 
 ```{note}
-Nella **Variante B** le porte dello Switch sono tutte occupate (7 dispositivi + VisionController): il FlexiBowl® 2 si collega direttamente al VisionController. Nella **Variante C** anche Camera 3 si collega direttamente al VisionController, occupando la terza porta disponibile.
+En la **Variante B** los puertos del Switch están todos ocupados (7 dispositivos + VisionController): el FlexiBowl® 3 se conecta directamente al VisionController. En la **Variante C** también la Cámara 3 se conecta directamente al VisionController, ocupando el tercer puerto disponible.
 ```
 ```{note}
-**Cablaggio dei singoli componenti**
+**Cableado de los componentes individuales**
 
-Le procedure di collegamento fisico di ciascun componente (FlexiBowl®, camera, tramoggia, robot) sono descritte integralmente nella sezione [Cablaggio e Connessioni](../INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.md).  
- In una configurazione 3FB + 3CAM le stesse operazioni vanno semplicemente eseguite **tre volte** — una per ciascuna stazione — con l'unica differenza che ogni dispositivo si collega allo **Switch** anziché direttamente al VisionController, ad eccezione del **FlexiBowl® 2** (Varianti B e C) e della **Camera 3** (Variante C), che si collegano direttamente alle porte Ethernet libere del VisionController.
+Los procedimientos de conexión física de cada componente (FlexiBowl®, cámara, tolva, robot) se describen detalladamente en la sección [Cableado y conexiones](../INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.md).  
+ En una configuración 3FB + 3CAM, simplemente hay que realizar las mismas operaciones **tres veces** —una por cada estación— con la única diferencia de que cada dispositivo se conecta al **Switch** en lugar de directamente al VisionController, con la excepción del **FlexiBowl® 3** (Variantes B y C) y de la **Cámara 3** (Variante C), que se conectan directamente a los puertos Ethernet libres del VisionController.
 ```
 ```{important}
-**Associazione dispositivi nel software**
+**Asociación de dispositivos en el software**
 
-FlexiVision One è in grado di gestire contemporaneamente tutte le stazioni, ma è fondamentale che l'associazione tra i dispositivi venga configurata correttamente nel software. Assicurarsi di associare:
+FlexiVision One puede gestionar todas las estaciones simultáneamente, pero es esencial que la asociación entre los dispositivos esté configurada correctamente en el software. Asegúrese de asociar:
 
-* **Camera 1** → FlexiBowl® 1 (+ Tramoggia 1, se presente)
-* **Camera 2** → FlexiBowl® 2 (+ Tramoggia 2, se presente)
-* **Camera 3** → FlexiBowl® 3 (+ Tramoggia 3, se presente)
+* **Cámara 1** → FlexiBowl® 1 (+ Tolva 1, si existe)
+* **Cámara 2** → FlexiBowl® 2 (+ Tolva 2, si existe)
+* **Cámara 3** → FlexiBowl® 3 (+ Tolva 3, si existe)
 
-Un'associazione errata comprometterebbe la localizzazione dei pezzi e il corretto funzionamento dell'intero sistema.
+Una asociación incorrecta comprometería la localización de las piezas y el correcto funcionamiento de todo el sistema.
 ```
 
-**→ [Configurazione Iniziale del Sistema](../QUICKSTART/SETUP/13_setup.md)**
+**→ [Configuración inicial del sistema](../QUICKSTART/SETUP/13_setup.md)**
 

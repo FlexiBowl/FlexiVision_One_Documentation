@@ -1,5 +1,5 @@
-﻿---
+---
 orphan: true
 ---
 
-# experto de la página... 
+# experto en páginas...

@@ -1,9 +1,9 @@
 (troubleshooting)=
-# **Fehlersuche**
+# **Fehlerbehebung**
 
 Wählen Sie die Komponente aus, für die Sie Unterstützung benötigen.
 
-## **Mechanische Installation**
+## Mechanische Installation
 
 :::{card} VisionController
 :link: troubleshooting_vision_controller
@@ -25,7 +25,7 @@ Wählen Sie die Komponente aus, für die Sie Unterstützung benötigen.
 :link-type: ref
 :::
 
-## **Verkabelung und Anschlüsse**
+## Verkabelung und Anschlüsse
 
 :::{card} Stromversorgung
 :link: troubleshooting_alimentazione
@@ -42,56 +42,63 @@ Wählen Sie die Komponente aus, für die Sie Unterstützung benötigen.
 :link-type: ref
 :::
 
-:::{card} Kameraverbindung
+:::{card} Kameraanschluss
 :link: troubleshooting_connessione_camera
 :link-type: ref
 :::
 
-:::{card} Toplight-Verbindung
+:::{card} Toplight-Anschluss
 :link: troubleshooting_connessione_toplight
 :link-type: ref
 :::
 
-:::{card} Mehrgeräte
+:::{card} Multi-Gerät
 :link: troubleshooting_multi
 :link-type: ref
 :::
 
-## **Initialkonfiguration**
+## Anfängliche Konfiguration
 
-:::{card} FlexiBowl Setup
-:link: troubleshooting_fb_setup
-:link-type: ref
-:::
-
-:::{card} Hopper Setup
-:link: troubleshooting_hopper_setup
-:link-type: ref
-:::
-
-:::{card} Robot Setup
-:link: troubleshooting_robot_setup
-:link-type: ref
-:::
-
-:::{card} Camera Setup
+:::{card} Kamera-Setup
 :link: troubleshooting_cam_setup
 :link-type: ref
 :::
 
-## **Kalibrierung und Rezepturen**
-
-:::{card} Kamerakalibrierung
+:::{card} Kamera-Kalibrierung 
 :link: troubleshooting_calib_cam
 :link-type: ref
 :::
 
-:::{card} Erstellung neuer Rezeptur
+:::{card} FlexiBowl®-Setup
+:link: troubleshooting_fb_setup
+:link-type: ref
+:::
+
+:::{card} Trichter-Setup
+:link: troubleshooting_hopper_setup
+:link-type: ref
+:::
+
+:::{card} Roboter-Setup
+:link: troubleshooting_robot_setup
+:link-type: ref
+:::
+
+
+
+## Kalibrierung und Rezepte
+
+:::{card} Kamera-Kalibrierung
+:link: troubleshooting_calib_cam
+:link-type: ref
+:::
+
+:::{card} Erstellen eines neuen Rezepts
 :link: troubleshooting_nuova_ricetta
 :link-type: ref
 :::
 
-:::{card} Erstellung neues Modell
+:::{card} Erstellen eines neuen Modells
 :link: troubleshooting_nuovo_modello
 :link-type: ref
 :::
@@ -106,19 +113,19 @@ Wählen Sie die Komponente aus, für die Sie Unterstützung benötigen.
 :link-type: ref
 :::
 
-:::{card} Robot Pick
+:::{card} Roboter-Pick
 :link: troubleshooting_robot_pick
 :link-type: ref
 :::
 
-## **Erweitert und Überwachung**
+## Erweitert und Überwachung
 
-:::{card} FlexiBowl Wizard
+:::{card} FlexiBowl® Wizard
 :link: troubleshooting_fb_wizard
 :link-type: ref
 :::
 
-:::{card} Hopper
+:::{card} Trichter
 :link: troubleshooting_conf_tramoggia
 :link-type: ref
 :::
@@ -130,21 +137,20 @@ Wählen Sie die Komponente aus, für die Sie Unterstützung benötigen.
 26b_Installazione_Mecc.md
 26c_Cablaggio_Connessioni.md
 26d_Conf_Iniziale.md
-26e_Calib_Cam.md
 26g_Creazione_Ricette_Modelli.md
 26h_FlexiBowl_Wizard.md
 26i_Conf_Tramoggia.md
 ```
 
-### Lizenz nicht aktivierbar
+### *Lizenz kann nicht aktiviert werden*
 
 ```{note}
-**Probleme mit der Lizenz**
+**Lizenzprobleme**
 
-Wenn die Lizenz nicht aktiviert wird:
-- Die Internetverbindung prüfen 
-- Datum/Uhrzeit des Windows-Betriebssystems prüfen (muss korrekt sein)
-- Sicherstellen, dass der Schlüssel genau wie bereitgestellt eingegeben wurde
+Wenn sich die Lizenz nicht aktivieren lässt:
+- Überprüfen Sie die Internetverbindung 
+- Überprüfen Sie Datum und Uhrzeit des Windows-Betriebssystems (müssen korrekt sein)
+- Vergewissern Sie sich, dass Sie den Schlüssel genau wie geliefert eingegeben haben
 ```
 
 ---

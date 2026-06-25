@@ -1,4 +1,4 @@
-# **Glossaire** 
+# **Glossaire**
 
 ```{list-table}
 :header-rows: 1
@@ -7,86 +7,84 @@
 * - Terme
   - Définition
 * - **Accept Threshold**
-  - Seuil minimal de similarité (score 0.0–1.0) pour qu'un objet détecté soit accepté par le pattern matching. Valeurs typiques: 0.70–0.90.
+  - Seuil de similarité minimum (score 0,0-1,0) pour qu'un objet détecté soit accepté par le pattern matching. Valeurs typiques : 0.70–0.90.
 * - **Air-blow**
-  - Module pneumatique optionnel pour la séparation des composants sur le disque au moyen de jets d'air comprimé. Nécessite une alimentation à 5–6 bar.
+  - Module pneumatique optionnel permettant de séparer les composants du disque par des jets d'air comprimé. Nécessite une alimentation à 5-6 bars.
 * - **Artefact**
-  - Défaut dans l'image acquise causé par des interférences électromagnétiques, des problèmes de câblage ou des dysfonctionnements du capteur.
-* - **Calibration Caméra**
-  - Corrélation pixels/coordonnées réelles au moyen d'une cible de calibration avec un motif connu. Calcule les paramètres intrinsèques et extrinsèques de la caméra.
+  - Défaut dans l'image capturée causé par des interférences électromagnétiques, des problèmes de câblage ou un dysfonctionnement du capteur.
+* - **Étalonnage de la caméra**
+  - Corrélation entre les pixels et les coordonnées réelles par le biais d'une cible d’étalonnage avec un modèle connu. Il calcule les paramètres intrinsèques et extrinsèques de la caméra.
 * - **Clearance**
-  - Analyse de la distribution des niveaux de gris sur une zone définie. Utilisée pour détecter la présence/absence d'objets (contrôle de pince, zone libre).
+  - Analyse de la distribution des niveaux de gris sur une zone définie. Utilisé pour détecter la présence/absence d'objets (contrôle de la pinces, de la zone libre).
 * - **Caméra POE**
-  - Caméra industrielle alimentée et connectée par un seul câble Ethernet. Standard: IEEE 802.3af (15.4W) ou 802.3at (30W).
+  - Caméra industrielle alimentée et connectée via un seul câble Ethernet. Standard : IEEE 802.3af (15.4W) ou 802.3at (30W).
 * - **CAPTURE**
-  - Commande logicielle permettant d'acquérir les images de référence du disque vide et plein, nécessaires au calcul automatique des seuils du hopper.
+  - Commande logicielle permettant d'acquérir des images de référence du disque vide et du disque plein, nécessaires au calcul automatique des seuils de la trémie.
 * - **COMPLEX / FLAT / CYLINDRICAL**
-  - Catégories géométriques des composants dans le FlexiBowl Wizard. *FLAT*: formes plates (rondelles, joints). *CYLINDRICAL*: formes cylindriques (goupilles, vis). *COMPLEX*: géométries irrégulières ou asymétriques.
-* - **Distance de Travail**
-  - Distance optimale entre l'objectif et la surface du disque. Typiquement 950–1000mm dans les configurations standard.
-* - **Distorsion Optique**
-  - Déformation géométrique de l'image due à l'objectif. Compensée automatiquement pendant la calibration caméra.
+  - Catégories géométriques de composants dans l'assistant FlexiBowl®. *FLAT* : formes plates (rondelles, joints). *CYLINDRICAL* : formes cylindriques (broches, vis). *COMPLEX* : géométries irrégulières ou asymétriques.
+* - **Distance de travail**
+  - Distance optimale entre l'objectif et la surface du disque. Typiquement 950-1000 mm dans les configurations standards.
+* - **Distorsion optique**
+  - Déformation géométrique de l'image due à l'objectif. Compensation automatique lors de l'étalonnage de la caméra.
 * - **Exposition**
-  - Temps de collecte de lumière du capteur caméra. Mesuré en μs ou ms; influence directement la qualité de l'image en production.
+  - Temps de collecte de la lumière par le capteur de la caméra. Mesuré en μs ou en ms ; influe directement sur la qualité de l'image en production.
 * - **Feature Threshold**
-  - Seuil d'extraction des caractéristiques (bords, lignes) pendant le training du modèle. Valeurs typiques: 0.3–0.8.
-* - **FlexiBowl**
-  - Système d'alimentation à disque rotatif vibrant pour le positionnement et l'orientation aléatoire des composants en vue de la prise robotisée.
-* - **FlexiBowl Wizard**
-  - Procédure guidée pour le calcul automatique des paramètres optimaux du FlexiBowl en fonction de la géométrie et du comportement des composants.
+  - Seuil d'extraction des caractéristiques (arêtes, lignes) lors du training du modèle. Valeurs typiques : 0.3–0.8.
+* - **FlexiBowl®**
+  - Système d'alimentation par disque rotatif vibrant pour le positionnement et l'orientation aléatoire des composants pour le prélèvement robotisé.
+* - **FlexiBowl® Wizard**
+  - Assistant pour le calcul automatique des paramètres optimaux de FlexiBowl® en fonction de la géométrie et du comportement des composants.
 * - **Flip**
-  - Impulsion pneumatique sous le disque pour repositionner les composants. Configurable via *Flip Count* (nombre d'impulsions) et *Flip Delay* (intervalle en ms entre les impulsions).
+  - Impulsion pneumatique sous le disque pour repositionner les composants. Configurable par le biais du *Flip Count* (nombre d'impulsions) et du *Flip Delay* (intervalle en ms entre les impulsions).
 * - **Grab Train Image**
-  - Commande logicielle permettant d'acquérir l'image à utiliser pour le training d'un nouveau modèle.
+  - Commande logicielle permettant d'acquérir l'image à utiliser au cours du training d'un nouveau modèle.
 * - **Gripper Offset**
-  - Vecteur de correction (ΔX, ΔY, ΔRZ) qui compense le décalage entre le centre optique du système de vision et le TCP du gripper.
+  - Vecteur de correction (ΔX, ΔY, ΔRZ) qui compense le décalage entre le centre optique du système de vision et le TCP de la pince.
 * - **Hotspot**
   - Zone de réflexion directe de la lumière dans l'image. Elle apparaît comme une zone surexposée et peut compromettre la reconnaissance.
 * - **Objectif**
-  - Composant optique de la caméra. Il doit être vissé jusqu'au contact métal-métal; la focale (p. ex. 16mm, 25mm) détermine le champ de vision à la distance de travail.
+  - Composant optique de la caméra. Il doit être vissé dans un contact métal sur métal ; la longueur focale (par exemple 16 mm, 25 mm) détermine le champ de vision à la distance de travail.
 * - **Model (Modèle)**
-  - Gabarit géométrique du composant créé pendant le training. Chaque recette prend en charge jusqu'à 8 modèles.
-* - **Origine Modèle**
-  - Point de référence sur le composant utilisé comme centre du système de coordonnées pour le calcul des positions. Correspond généralement au TCP de prise.
+  - Modèle géométrique du composant créé lors de la phase de training. Chaque recette prend en charge jusqu'à 8 modèles par FlexiBowl®.
+* - **Origine du modèle**
+  - Point de référence sur le composant utilisé comme centre du sistema di coordinate per il calcolo delle posizioni. Corrisponde generalmente al TCP di presa.
 * - **Orthogonalité**
-  - Perpendicularité de la caméra par rapport au disque (tolérance ±1°). Vérifiable avec un niveau de précision.
-* - **Pattern Matching**
-  - Algorithme qui localise les composants dans l'image en les comparant au modèle de référence enregistré pendant le training.
+  - Perpendicularité de la chambre par rapport au disque (tolérance ±1°). Vérifiable à l'aide d'un niveau de précision.
+* - **Pattern matching**
+  - Algorithme qui localise les composants de l'image en les comparant au modèle de référence enregistré pendant le training.
 * - **Protocol (Protocole)**
-  - Format de communication entre VisionController et robot. Définit la structure des messages, l'ordre des coordonnées et les unités de mesure.
+  - Format de communication entre le VisionController et le robot. Définit la structure des messages, l'ordre des coordonnées et les unités de mesure.
 * - **Recipe (Recette)**
-  - Fichier XML contenant tous les paramètres de configuration du système: modèles, seuils, calibrations, setup FlexiBowl et robot.
-* - **Region Search**
-  - Zone rectangulaire dans l'image dans laquelle le pattern matching effectue la recherche. Réduit les temps de traitement et augmente la précision.
+  - Fichier XML contenant tous les paramètres de configuration du système : modèles, seuils, étalonnages, configuration FlexiBowl® et robot.
+* - **Region search**
+  - Surface rectangulaire de l'image à l'intérieur de laquelle le pattern matching effectue la recherche. Il réduit le temps de traitement et augmente la précision.
 * - **ROI (Region of Interest)**
-  - Zone rectangulaire qui délimite le composant dans l'image pendant le training du modèle.
+  - Surface rectangulaire délimitant le composant dans l'image lors du training du modèle.
 * - **RZ / Rotation Z**
-  - Angle de rotation autour de l'axe Z communiqué au robot pour l'orientation du composant. Exprimé en degrés (0–360°).
+  - Angle de rotation autour de l'axe Z communiqué au robot pour l'orientation du composant. Exprimé en degrés (0-360°).
 * - **Score**
-  - Indice de similarité (0.0–1.0) entre le modèle et l'objet détecté. Détermine la confiance de la reconnaissance.
-* - **Simulateurs d'Encombrement de Pince**
-  - Objets physiques placés autour du composant pendant le training pour exclure du modèle les zones occupées par la pince lors de la prise.
+  - Indice de similarité (0,0-1,0) entre le modèle et l'objet détecté. Il détermine le degré de confiance de la reconnaissance.
+* - **Simulateurs d’encombrement de pince**
+  - Objets physiques placés autour du composant pendant le training afin d'exclure du modèle les zones occupées par la pince pendant le prélèvement.
 * - **Steps**
-  - Nombre de cycles de vibration du hopper nécessaires pour que les composants atteignent la zone de prise. Paramètre critique pour la synchronisation avec le cycle robot.
+  - Nombre de manutentions du FlexiBowl® nécessaires pour que les composants, de la zone de vision, atteignent la zone de déchargement de la trémie.
 * - **Subnet**
-  - FlexiBowl et VisionController doivent partager le même subnet (p. ex. 192.168.1.x) pour la communication TCP/IP.
+  - Sous-réseau que le FlexiBowl® et le VisionController doivent partager (par exemple 192.168.1.x) pour la communication TCP/IP.
 * - **Synchronize Parameters**
-  - Commande logicielle qui transfère les paramètres du VisionController au FlexiBowl. Obligatoire après chaque modification pour rendre les réglages effectifs.
-* - **Cible de Calibration**
-  - Motif géométrique imprimé (cercles ou damier) avec dimensions connues et surface plane, utilisé pour la calibration caméra.
+  - Commande logicielle qui transfère les paramètres au FlexiBowl®. Obligatoire après chaque modification pour que les configurations soient effectives.
 * - **Timeout**
-  - Temps maximal d'attente d'une réponse en communication. En cas de dépassement, une erreur est générée.
+  - Temps d'attente maximum pour une réponse de communication. Une erreur est générée en cas de dépassement.
 * - **Tilt**
-  - Inclinaison de la caméra par rapport au plan horizontal. Valeur admise: 0° ± 1°.
+  - Inclinaison de la caméra par rapport au plan horizontal. Valeur autorisée : 0° ± 1°.
 * - **Toplight**
-  - Illuminateur LED positionné au-dessus du disque, qui garantit un éclairage uniforme par le haut. Alimentation: 24V DC.
+  - Éclairage LED positionné au-dessus du disque pour un éclairage homogène par le haut. Alimentation électrique : 24V DC.
 * - **Training**
-  - Processus de création du modèle de reconnaissance par sélection des caractéristiques distinctives du composant à partir d'une image de référence.
+  - Processus de création du modèle de reconnaissance par la sélection des caractéristiques distinctives du composant à partir d'une image de référence.
 * - **Trigger**
-  - Signal de démarrage de l'acquisition d'image. Il peut être logiciel (temporisé) ou matériel (signal électrique externe).
+  - Signal de démarrage de l’acquisition d'image. Il peut être logiciel (temporisé) ou matériel (signal électrique externe).
 * - **Vision Result**
-  - Sortie du système de vision: coordonnées (X, Y, RZ) et score du composant détecté, transmis au robot pour la prise.
+  - Sortie du sistema di visione: coordinate (X, Y, RZ) e score del componente rilevato, trasmessi al robot per il prelievo.
 * - **VisionController**
-  - Ordinateur industriel qui exécute FlexiVision One, gère les caméras, traite les images et communique avec FlexiBowl et le robot.
+  - Ordinateur industriel qui fait fonctionner FlexiVision One, gère les caméras, traite les images et communique avec FlexiBowl® et les robots.
 ```
 

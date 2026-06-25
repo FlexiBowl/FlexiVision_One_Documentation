@@ -1,11 +1,11 @@
 (distanza_lavoro)=
 # **Berechnung des optimalen Arbeitsabstands**
 
-Dieser Abschnitt definiert den empfohlenen Arbeitsabstand (Working Distance) zwischen der Kamera und dem FlexiBowl-Teller sowie die daraus resultierende Auswahl der erforderlichen Objektive zur Gewährleistung des korrekten Sichtfelds (Field of View, FOV).
+In diesem Abschnitt wird der empfohlene Arbeitsabstand (Working Distance) zwischen der Kamera und der Arbeitsfläche des FlexiBowl sowie die daraus resultierende Auswahl der erforderlichen Objektive beschrieben, um das richtige Sichtfeld (Field of View, FOV) zu gewährleisten.
 
-Die korrekte Wahl von Arbeitsabstand und Objektiv ist wesentlich, um:
-- Sicherzustellen, dass die gesamte nutzbare Oberfläche des FlexiBowl sichtbar ist
-- Die erforderliche Auflösung zur Erkennung der Teile zu erhalten
+Die richtige Wahl des Arbeitsabstands und des Objektivs ist entscheidend, um:
+- Sicherstellen, dass die gesamte Nutzfläche der FlexiBowl® sichtbar ist
+- Die zur Erkennung der Teile erforderliche Auflösung zu erzielen
 - Optische Verzerrungen zu minimieren
 - Die Kalibrierung des Systems zu erleichtern
 
@@ -13,18 +13,18 @@ Die korrekte Wahl von Arbeitsabstand und Objektiv ist wesentlich, um:
 
 ## Empfohlene Arbeitsabstände und Objektivauswahl
 
-Die Wahl des Objektivs hängt eng vom empfohlenen Montageabstand zwischen Kamera und Oberfläche des FlexiBowl-Tellers ab. Die Einhaltung des Standard-Arbeitsabstands gewährleistet das korrekte FOV und minimiert Probleme durch optische Verzerrung.
+Die Wahl des Objektivs hängt eng mit dem empfohlenen Montageabstand zwischen der Kamera und der Arbeitsfläche des FlexiBowl® zusammen. Die Einhaltung des Standard-Arbeitsabstands gewährleistet das korrekte Sichtfeld (FOV) und minimiert Probleme mit optischen Verzerrungen.
 
 
 ```{note}
-**Objektiv bereits enthalten**
+**Linse bereits enthalten**
 
-Das für das in der Bestellung angegebene FlexiBowl-Modell geeignete Objektiv ist immer im FlexiVision One Paket enthalten und wird in einer von der Kamera getrennten Verpackung geliefert. Es muss nicht separat erworben werden.
+Das geeignete Objektiv für das in der Bestellung angegebene FlexiBowl®-Modell ist immer im FlexiVision One-Paket enthalten und wird in einer von der Kamera getrennten Verpackung geliefert. Es muss nicht separat erworben werden.
 ```
 
-### Schema der Abstände und des Sichtfelds
+### *Schema zu Abständen und Sichtfeld*
 
-Das folgende Diagramm zeigt die Beziehung zwischen Arbeitsabstand, Brennweite des Objektivs und resultierendem Sichtbereich für die verschiedenen FlexiBowl-Modelle.
+Das folgende Diagramm veranschaulicht den Zusammenhang zwischen Arbeitsabstand, Brennweite des Objektivs und dem resultierenden Sichtfeld für die verschiedenen FlexiBowl®-Modelle.
 
 ```{image} ../../../../_shared/media/images/working_distance.JPG
 :alt: Arbeitsabstand
@@ -33,16 +33,16 @@ Das folgende Diagramm zeigt die Beziehung zwischen Arbeitsabstand, Brennweite de
 ```
 
 **Legende zum Schema:**
-- **Arbeitsabstand**: Vertikaler Abstand zwischen der Frontfläche des Objektivs und der Oberfläche des FlexiBowl-Tellers
-- **Sichtbereich**: Bereich der FlexiBowl-Oberfläche, der vom Sichtfeld der Kamera abgedeckt wird
+- **Arbeitsabstand**: Vertikaler Abstand zwischen der Kameralinse und der Arbeitsfläche des FlexiBowl®
+- **Sichtbereich**: Bereich der FlexiBowl®-Oberfläche, der vom Sichtfeld der Kamera abgedeckt wird
 
-### Übersichtstabelle nach Modell
+### *Übersichtstabelle nach Modell*
 
 ```{list-table}
 :header-rows: 1
 :widths: 25 40 35
 
-* - FlexiBowl-Modell
+* - Modell FlexiBowl®
   - Empfohlener Arbeitsabstand (Working Distance)
   - Im Kit enthaltenes Objektiv (Brennweite)
 * - **FB 200**
@@ -66,18 +66,18 @@ Das folgende Diagramm zeigt die Beziehung zwischen Arbeitsabstand, Brennweite de
 ```
 
 ```{warning}
-**Bedeutung des korrekten Abstands**
+**Die Bedeutung des richtigen Abstands**
 
-Erhebliche Abweichungen vom empfohlenen Arbeitsabstand können Folgendes verursachen:
+Erhebliche Abweichungen vom empfohlenen Arbeitsabstand können folgende Probleme verursachen:
 
-- **Abstand zu kurz**: Unzureichendes FOV (ein Teil des FlexiBowl ist nicht sichtbar).
-- **Abstand zu lang**: Unzureichende Auflösung zur Erkennung kleiner Teile, Unschärfe
+- **Abstand zu gering**: Unzureichendes Sichtfeld (Teil des FlexiBowl® nicht sichtbar).
+- **Abstand zu groß**: Unzureichende Auflösung zur Erkennung kleiner Teile, Unschärfe
 
-Die in der Tabelle angegebenen Abstände bei der mechanischen Montage der Kamera stets einhalten.
+Halten Sie bei der mechanischen Montage der Kamera stets die in der Tabelle angegebenen Abstände ein.
 ```
-### Kamerapositionierung 
+### *Positionierung der Kamera*
 
-**Korrekte Konfiguration.** Die Kamera muss zentral und mit derselben Winkelausrichtung zur Sichtfläche des FlexiBowl (Backlight-Zone) positioniert werden. Auf diese Weise deckt das Sichtfeld (grün dargestellt) den gesamten Arbeitsbereich symmetrisch ab und gewährleistet den korrekten Betrieb des Bildverarbeitungssystems.  
+**Korrekte Konfiguration.** Die Kamera muss mittig und mit derselben Winkelausrichtung zum Sichtbereich des FlexiBowl® (Hintergrundbeleuchtung-Bereich) positioniert werden. Auf diese Weise deckt das Sichtfeld (grün markiert) den gesamten Arbeitsbereich symmetrisch ab und gewährleistet so den korrekten Betrieb des Bildverarbeitungssystems.
 
 ```{image} ../../../../_shared/media/images/config_giusta.JPG
 :alt: Arbeitsabstand
@@ -85,7 +85,7 @@ Die in der Tabelle angegebenen Abstände bei der mechanischen Montage der Kamera
 :align: center
 ```
 
-**Fehlerhafte Konfigurationen.** Die Bilder zeigen Beispiele einer nicht korrekten Kamerapositionierung: Das Sichtfeld (rot dargestellt) ist gegenüber dem Sichtbereich versetzt, deckt den Arbeitsbereich nur teilweise ab oder schließt Bereiche außerhalb davon ein. Diese Konfigurationen beeinträchtigen die Teileerkennung und den Betrieb des Bildverarbeitungssystems.  
+**Falsche Konfigurationen.** Die Bilder zeigen Beispiele für eine falsche Positionierung der Kamera: Das Sichtfeld (rot markiert) ist gegenüber dem Sichtbereich dezentriert, sodass es den Arbeitsbereich nur teilweise abdeckt oder Bereiche außerhalb davon einbezieht. Diese Konfigurationen beeinträchtigen die Teileerkennung und die Funktion des Bildverarbeitungssystems.
 
 ```{image} ../../../../_shared/media/images/config_sbagliata.png
 :alt: Arbeitsabstand
@@ -99,9 +99,9 @@ Die in der Tabelle angegebenen Abstände bei der mechanischen Montage der Kamera
 ```
 ---
 
-## TopLight-Positionierung 
+## TopLight Positionierung
 
-Wenn das System ein TopLight (Beleuchtung von oben) enthält, muss dessen Positionierung dieselbe Winkelausrichtung wie die Kamera haben, um eine gleichmäßige Beleuchtung zu gewährleisten. Es muss auf einer mechanisch vom Kamerahalter unabhängigen Halterung installiert werden, sodass zum Entfernen oder Austauschen des Beleuchtungssystems die Kamera nicht gelöst oder demontiert werden muss.
+Wenn das System ein TopLight (Beleuchtung von oben) umfasst, muss dessen Positionierung denselben Winkel wie die Kamera aufweisen, um eine gleichmäßige Ausleuchtung zu gewährleisten. Es muss auf einer Halterung installiert werden, die mechanisch unabhängig von der Kamerahalterung ist, sodass zum Entfernen oder Austauschen des Beleuchtungssystems die Kamera nicht gelöst oder demontiert werden muss.
 
 ```{list-table}
 :header-rows: 1
@@ -109,14 +109,14 @@ Wenn das System ein TopLight (Beleuchtung von oben) enthält, muss dessen Positi
 
 * - Parameter
   - Empfohlener Wert
-* - **Abstand von der FlexiBowl-Oberfläche**
-  - Ähnlich der Working Distance der Kamera (±100 mm)
-* - **Position zur Kamera**
+* - **Abstand zur FlexiBowl®-Oberfläche**
+  - Entspricht dem Arbeitsabstand der Kamera (±100 mm)
+* - **Position relativ zur Kamera**
   - Konzentrisch (gleiche optische Achse wie die Kamera)
 * - **Ausrichtung**
-  - Parallel zur FlexiBowl-Oberfläche und mit derselben Winkelausrichtung der Kamera (lange Seite des Sichtbereichs - lange Seite der Beleuchtung)
+  - Parallel zur Oberfläche des FlexiBowl® und gleiche Winkelausrichtung wie die Kamera (Längsseite des Sichtfelds – Längsseite der Beleuchtung)
 * - **Relative Höhe Kamera-TopLight**
-  - Sichtoptik bündig mit der oberen Oberfläche des Top Light (freien Zugang zu den Einstellringen der Sichtoptik lassen)
+  - Sichtoptik bündig mit der Oberseite des TopLight (Freier Zugang zu den Einstellringen der Sichtoptik gewährleisten)
     :::{figure} ../../../../_shared/media/images/posizione_cam_TPL_B.png
     :alt: Arbeitsabstand
     :width: 80%
@@ -125,28 +125,28 @@ Wenn das System ein TopLight (Beleuchtung von oben) enthält, muss dessen Positi
 ```
 
 ```{tip}
-Um die beste Gleichmäßigkeit der Beleuchtung zu erzielen, die soeben aufgeführten Hinweise befolgen 
+Um eine möglichst gleichmäßige Ausleuchtung zu erzielen, befolgen Sie bitte die oben genannten Anweisungen.
 ```
 
 ```{warning}
 **Direkte Reflexionen vermeiden**
 
-Beim Positionieren des TopLight sicherstellen, dass:
+Bei der Positionierung des TopLight ist Folgendes zu beachten:
 
-- Das Licht nicht direkt von der Oberfläche des FlexiBowl zur Kamera reflektiert wird (Blendung)
-- Keine Schatten durch mechanische Komponenten entstehen
-- Die Beleuchtung über die gesamte nutzbare Oberfläche möglichst gleichmäßig ist
+- Das Licht darf nicht direkt von der Oberfläche des FlexiBowl® in die Kamera reflektiert werden (was zu Blendung führt)
+- Es dürfen keine Schatten durch mechanische Komponenten entstehen
+- Die Beleuchtung muss über die gesamte Nutzfläche so gleichmäßig wie möglich sein
 
 ```
 
 ---
 
-## Zugehörige Referenzen
+## Verwandte Referenzen
 
-Zur Vervollständigung der Installation und Konfiguration des Systems:
+So schließen Sie die Installation und Konfiguration des Systems ab:
 
-- **Mechanische Installation der Kamera**: [Mechanische Installation](../INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.md)
-- **Technische Spezifikationen der Kamera**: [Spezifikationen FlexiVision One](04_Specifiche_FlexiVision.md)
+- **Mechanische Kameramontage**: [Mechanische Installation](../INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.md)
+- **Technische Daten der Kamera:** [Detaillierte technische Daten FlexiVision One](04_Specifiche_FlexiVision.md)
 - **Systemkalibrierung**: [Kamerakalibrierung](../QUICKSTART/SETUP/14_calibrazione_camera.md)
 - **Elektrische Verkabelung**: [Verkabelung und Anschlüsse](../INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.md)
 

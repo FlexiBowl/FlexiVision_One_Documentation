@@ -1,438 +1,438 @@
-﻿# **Creazione Ricette e modelli** 
+# **Erstellen von Rezepten und Vorlagen**
 
 (troubleshooting_nuova_ricetta)=
-## Troubleshooting per la sezione Creare una Nuova Ricetta 
+## Fehlerbehebung für den Abschnitt Neues Rezept erstellen
 
 ```{warning}
-**Errore durante salvataggio**
+**Fehler beim Speichern**
 
-Se il salvataggio della ricetta fallisce:
-- Verificare che ci sia sufficiente spazio sul disco 
-- Assicurarsi che il nome non contenga caratteri non ammessi N`/ \ : * ? " < > |`)
-- Verificare che non esista già una ricetta con lo stesso nome
-- Verificare di avere permessi di scrittura sulla cartella del software
+Wenn das Speichern des Rezepts fehlschlägt:
+- Überprüfen Sie, ob genügend Speicherplatz auf der Festplatte vorhanden ist  
+- Vergewissern Sie sich, dass der Name keine unzulässigen Zeichen enthält N`/ \ : * ? " < > |`)  
+- Überprüfen Sie, ob bereits ein Rezept mit demselben Namen existiert  
+- Überprüfen Sie, ob Sie Schreibrechte für den Software-Ordner haben  
 ```
 
 ```{list-table}
 :header-rows: 1
 :widths: 30 35 35
 
-* - Problema
-  - Possibili Cause
-  - Soluzioni
-* - **Impossibile creare nuova ricetta**
-  - • Disco pieno
+* - Problem
+  - Mögliche Ursachen
+  - Lösungen
+* - **Neues Rezept kann nicht erstellt werden**
+  - • Festplatte voll  
+     
+    • Rezeptname enthält unzulässige Zeichen  
+  - • Speicherplatz auf der Festplatte freigeben  
     
-    • Nome ricetta contiene caratteri non ammessi
-  - • Liberare spazio su disco
-    
-    • Evitare caratteri speciali nel nome N/ \ : * ? " < > |)
+    • Sonderzeichen im Namen vermeiden N`/ \ : * ? " < > |)  
 
-* - **Ricetta salvata ma configurazioni perse**
-  - • Salvataggio non confermato correttamente
+* - **Rezept gespeichert, aber Einstellungen verloren**  
+  - • Speichern nicht korrekt bestätigt  
     
-    • Chiusura forzata software
+    • Software wurde zwangsweise beendet  
     
-    • Errore scrittura disco
-  - • Cliccare sempre "Save Recipe" e attendere conferma
+    • Schreibfehler auf der Festplatte  
+  - • Immer auf „Save Recipe“ klicken und auf Bestätigung warten  
     
-    • Chiudere software correttamente
+    • Software ordnungsgemäß schließen  
     
-    • Verificare log errori Windows
-* - **Impossibile caricare ricetta creata**
-  - • File ricetta corrotto
+    • Windows-Fehlerprotokoll überprüfen  
+* - **Erstelltes Rezept kann nicht geladen werden**
+  - • Rezeptdatei beschädigt  
     
-    • Percorso file cambiato
-  - • Ripristinare da backup se disponibile
+    • Dateipfad geändert  
+  - • Aus Backup wiederherstellen, falls verfügbar  
     
-    • Verificare percorso cartella ricette in configurazione
-* - **Ricetta caricata ha configurazioni errate**
-  - • Ricetta sbagliata selezionata
+    • Pfad zum Rezeptordner in der Konfiguration überprüfen  
+* - **Geladenes Rezept weist fehlerhafte Einstellungen auf**
+  - • Falsches Rezept ausgewählt  
     
-    • Modifiche non salvate in precedenza
+    • Änderungen zuvor nicht gespeichert  
     
-    • Conflitto tra ricette con nomi simili
-  - • Verificare nome ricetta nella barra superiore
+    • Konflikt zwischen Rezepten mit ähnlichen Namen  
+  - • Rezeptnamen in der oberen Leiste überprüfen  
     
-    • Ricaricare ricetta corretta dall'elenco
+    • Richtiges Rezept aus der Liste neu laden  
     
-    • Utilizzare naming convention univoche
+    • Eindeutige Namenskonventionen verwenden  
 ```
 
 (troubleshooting_nuovo_modello)=
-## Troubleshooting per la sezione Creare un Nuovo Modello 
+## Fehlerbehebung für den Abschnitt „Ein neues Modell erstellen“
 
 ```{list-table}
 :header-rows: 1
 :widths: 30 35 35
 
-* - Problema
-  - Possibili Cause
-  - Soluzioni
+* - Problem
+  - Mögliche Ursachen
+  - Lösungen
 
-* - **Grab Train Image acquisisce immagine nera**
-  - • Camera non connessa
+* - **Grab Train Image nimmt ein schwarzes Bild auf**
+  - • Kamera nicht angeschlossen  
     
-    • Toplight spento
+    • Toplight ausgeschaltet  
 
-    • Backlight spento 
+    • Hintergrundbeleuchtung ausgeschaltet  
     
-    • Esposizione troppo bassa
+    • Belichtung zu niedrig  
     
-    • Lente con tappo protettivo
-  - • Verificare connessione camera in Camera Setup
+    • Objektiv mit Schutzkappe  
+  - • Kameraverbindung in „Kamera-Setup“ überprüfen
     
-    • Accendere toplight e verificare alimentazione
-
-    • Controllare che light on in Configurazione FlexiBowl sia spuntato
-    
-    • Aumentare esposizione camera
-    
-    • Rimuovere tappo lente
-* - **ROI non si sposta o ridimensiona**
-  - • Immagine non acquisita
-    
-    • Software bloccato
-  - • Eseguire Grab Train Image prima
-    
-    • Riavviare software
-
-* - **Apply Train non genera modello**
-  - • ROI troppo piccolo
-    
-    • Immagine senza contrasto sufficiente
+    • Toplight einschalten und Stromversorgung überprüfen
   
-  - • Ingrandire ROI per includere tutto il componente
+    • Überprüfen, ob „Light on“ in der FlexiBowl®-Konfiguration angekreuzt ist  
+     
+    • Belichtung der Kamera erhöhen     
     
-    • Migliorare contrasto/illuminazione
+    • Objektivabdeckung entfernen  
+* - **ROI verschiebt sich nicht oder lässt sich nicht in der Größe anpassen**
+  - • Bild wurde nicht aufgenommen  
+    
+    • Software blockiert  
+  - • Zuerst „Grab Train Image“ ausführen  
+    
+    • Software neu starten  
 
-* - **Modello creato include trama superficie**
-  - • Feature Threshold troppo basso
+* - **Apply Train erzeugt kein Modell**
+  - • ROI zu klein  
     
-    • Contrasto insufficiente componente-superficie
-  - • Aumentare Feature Threshold Nes: da 0.3 a 0.6)
+    • Bild ohne ausreichenden Kontrast  
+  
+  - • ROI vergrößern, um die gesamte Komponente einzubeziehen  
     
-    • Migliorare illuminazione per aumentare contrasto
-* - **Modello creato ha troppe poche linee**
-  - • Feature Threshold troppo alto
-    
-    • Immagine sfocata
+    • Kontrast/Beleuchtung verbessern  
 
-    • Immagine senza contrasto sufficiente
-  - • Diminuire Feature Threshold Nes: da 0.8 a 0.5)
+* - **Erstelltes Modell enthält Oberflächenstruktur**
+  - • Feature-Threshold zu niedrig  
     
-    • Verificare fuoco camera e correggere se necessario
+    • Unzureichender Kontrast zwischen Komponente und Oberfläche  
+  - • Feature Threshold Nes erhöhen: von 0.3 auf 0.6)  
+    
+    • Beleuchtung verbessern, um den Kontrast zu erhöhen  
+* - **Das erstellte Modell hat zu wenige Linien**
+  - • Feature Threshold zu hoch  
+    
+    • Unscharfes Bild  
 
-     • Migliorare contrasto/illuminazione
+    • Bild ohne ausreichenden Kontrast  
+  - • Feature Threshold Nes verringern: von 0.8 auf 0.5)  
+    
+    • Kamerafokus überprüfen und gegebenenfalls korrigieren  
 
-* - **Modello include riflessi luce**
-  - • Feature Threshold troppo basso
-    
-    • Illuminazione non uniforme
-    
-  - • Aumentare Feature Threshold
-    
-    • Regolare posizione/angolo toplight
+     • Kontrast/Beleuchtung verbessern  
 
+* - **Modell enthält Lichtreflexe**
+  - • Feature Threshold zu niedrig  
+    
+    • Beleuchtung ungleichmäßig  
+    
+  - • Feature Threshold erhöhen  
+    
+    • Position/Winkel des Toplights anpassen  
+ 
 
-* - **Impossibile nominare modello**
-  - • Nome contiene caratteri non ammessi
+* - **Modell kann nicht benannt werden**
+  - • Name enthält unzulässige Zeichen  
     
-    • Lunghezza nome eccessiva
-  - • Usare solo lettere, numeri, underscore e trattini
+    • Name zu lang  
+  - • Verwenden Sie nur Buchstaben, Zahlen, Unterstriche und Bindestriche  
     
-    • Limitare nome a max 50 caratteri
+    • Begrenzen Sie den Namen auf maximal 50 Zeichen  
 ```
 
 (troubleshooting_modelli_roi)=
-## Troubleshooting per la sezione Definizione ROI e Tolleranze 
+## Fehlerbehebung für den Abschnitt „ROI-Definition und Toleranzen“
 
 ```{list-table}
 :header-rows: 1
 :widths: 30 35 35
 
-* - Problema
-  - Possibili Cause
-  - Soluzioni
+* - Problem
+  - Mögliche Ursachen
+  - Lösungen
 
-* - **Test non rileva alcun componente**
-  - • Accept Threshold troppo alto
+* - **Test erkennt keine Komponenten**
+  - • Accept Threshold zu hoch  
     
-    • Componenti fuori dalla Region Search
+    • Komponenten außerhalb der Region Search  
     
-    • Modello non corretto
+    • Falsches Modell  
     
-    • Illuminazione cambiata rispetto a training
-  - • Diminuire Accept Threshold Nes: da 0.90 a 0.75)
+    • Beleuchtung im Vergleich zum Training verändert  
+  - • Accept Threshold Nes verringern: von 0.90 auf 0.75)  
     
-    • Allargare Region Search per includere componenti
+    • Suchbereich erweitern, um Komponenten einzubeziehen  
     
-    • Ripetere training modello
+    • Modelltraining wiederholen  
     
-    • Stabilizzare illuminazione
-* - **Test rileva troppi falsi positivi**
-  - • Accept Threshold troppo basso
+    • Beleuchtung stabilisieren  
+* - **Test erkennt zu viele Fehlalarme**
+  - • Accept Threshold zu niedrig  
     
-    • Modello troppo semplice/generico
+    • Modell zu einfach/allgemein  
     
-    • Sono presenti componenti molto simili ma che hanno molte differenze allo stesso tempo
-  - • Aumentare Accept Threshold Nes: da 0.70 a 0.85)
+    • Es sind sehr ähnliche Komponenten vorhanden, die sich jedoch gleichzeitig stark unterscheiden  
+  - • Accept Threshold Nes erhöhen: von 0.70 auf 0.85)  
     
-    • Rifare modello con Feature Threshold più basso Npiù dettagliato)
+    • Modell mit niedrigerem Feature Threshold (detaillierter)  
     
-    • Separare in modelli diversi se necessario
-* - **Test rileva componenti ma con score troppo bassi**
-  - • Variabilità componenti reali vs modello training
+    • Bei Bedarf in verschiedene Modelle aufteilen  
+* - **Test erkennt Komponenten, aber mit zu niedrigen Werten**  
+  - • Variabilität der realen Komponenten im Vergleich zum Trainingsmodell  
     
-    • Illuminazione diversa
+    • Unterschiedliche Beleuchtung  
     
-    • Componenti sporchi/danneggiati
+    • Verschmutzte/beschädigte Komponenten  
     
-    • Modello troppo dettagliato
-  - • Verificare qualità componenti e pulire se necessario
+    • Modell zu detailliert  
+  - • Qualität der Komponenten überprüfen und bei Bedarf reinigen  
     
-    • Standardizzare illuminazione
+    • Beleuchtung standardisieren  
     
-    • Scartare componenti danneggiati
+    • Beschädigte Komponenten aussortieren  
     
-    • Rifare modello con Feature Threshold più alto Nmeno dettagliato)
+    • Modell mit höherem Feature Threshold (weniger detailliert) neu erstellen  
 
-* - **Results Panel vuoto anche con componenti visibili**
-  - • Nessun componente supera Accept Threshold
+* - **Ergebnistafel leer, obwohl Komponenten sichtbar sind**
+  - • Keine Komponenten überschreiten den Accept Threshold  
     
-    • Region Search non include componenti
+    • Region Search enthält keine Komponenten   
     
-    • Test non eseguito
-  - • Diminuire Accept Threshold
+    • Test nicht ausgeführt  
+  - • Accept Threshold verringern  
     
-    • Verificare e allargare Region Search
+    • Region Search überprüfen und erweitern  
     
-    • Cliccare pulsante Test
-* - **Coordinate X,Y,Rotation non corrette**
-  - • Calibrazione camera non eseguita o eseguita male 
+    • Auf die Schaltfläche Test klicken  
+* - **X-, Y- und Rotationskoordinaten sind falsch**
+  - • Kamerakalibrierung nicht oder fehlerhaft durchgeführt  
     
-    • Sistema di riferimento errato
+    • Referenzsystem falsch  
     
-    • Camera spostata dopo calibrazione
-  - • Eseguire calibrazione camera completa o rivedere quella corrente 
+    • Kamera nach Kalibrierung verschoben  
+  - • Vollständige Kamerakalibrierung durchführen oder die aktuelle überprüfen  
     
-    • Verificare origine sistema coordinate
+    • Ursprung des Koordinatensystems überprüfen  
     
-    • Ripetere calibrazione camera
+    • Kamerakalibrierung wiederholen  
 ```
 
 (troubleshooting_istogrammi)=
-## Troubleshooting per la sezione Istogrammi 
+## Fehlerbehebung für den Abschnitt „Histogramme“
 
 ```{list-table}
 :header-rows: 1
 :widths: 30 35 35
 
-* - Problema
-  - Possibili Cause
-  - Soluzioni
-* - **Impossibile abilitare istogramma**
-  - • Modello non riconosciuto
+* - Problem
+  - Mögliche Ursachen
+  - Lösungen
+* - **Histogramm kann nicht aktiviert werden**
+  - • Modell nicht erkannt  
     
-    • Limite massimo istogrammi raggiunto N8 per modello)
+    • Höchstgrenze der Histogramme erreicht: N8 pro Modell)  
     
-    • Slot già occupato
-  - • Completare configurazione modello prima
+    • Steckplatz bereits belegt  
+  - • Zuerst Modellkonfiguration abschließen  
     
-    • Disabilitare istogrammi non utilizzati
+    • Nicht verwendete Histogramme deaktivieren  
     
-    • Selezionare slot libero
+    • Freien Steckplatz auswählen  
 
-* - **AUTO non calcola corretttamente**
-  - • Area istogramma troppo piccola
+* - **AUTO berechnet nicht korrekt**
+  - • Histogrammbereich zu klein  
     
-    • Istogramma fuori dall'immagine
+    • Histogramm außerhalb des Bildes  
     
-    • Immagine non caricata
-  - • Ingrandire area istogramma
+    • Bild nicht geladen
+  - • Histogrammbereich vergrößern  
     
-    • Spostare istogramma dentro area visibile
+    • Histogramm in den sichtbaren Bereich verschieben  
     
-    • Acquisire nuova immagine
-* - **Test sempre ROSSO anche con area libera**
-  - • Calibrazione AUTO eseguita con area occupata
+    • Neues Bild erfassen  
+* - **Test immer ROT, auch bei freiem Bereich**  
+  - • AUTO-Kalibrierung mit belegtem Bereich durchgeführt  
     
-    • Ombra o riflesso nell'area
+    • Schatten oder Reflexion im Bereich  
     
-    • Bordo FlexiBowl incluso nell'area
+    • FlexiBowl®-Rand im Bereich enthalten  
     
-    • Sporcizia sulla superficie
-  - • Ripetere AUTO con area completamente libera
+    • Verschmutzung auf der Oberfläche  
+  - • AUTO mit vollständig freiem Bereich wiederholen  
     
-    • Escludere zone con ombre/riflessi
+    • Bereiche mit Schatten/Reflexionen ausschließen  
     
-    • Ridurre area escludendo bordi
+    • Bereich durch Ausschluss der Ränder verkleinern  
     
-    • Pulire superficie FlexiBowl
-* - **Test sempre VERDE anche con area occupata**
-  - • Calibrazione AUTO eseguita con componenti già presenti
+    • FlexiBowl®-Oberfläche reinigen  
+* - **Test immer GRÜN, auch bei belegtem Bereich**  
+  - • AUTO-Kalibrierung mit bereits vorhandenen Komponenten durchgeführt  
     
-    • Soglie calcolate male
+    • Schwellenwerte falsch berechnet  
     
-    • Contrasto insufficiente
-  - • Ripetere AUTO assicurandosi area completamente vuota
+    • Unzureichender Kontrast  
+  - • AUTO wiederholen und sicherstellen, dass der Bereich vollständig leer ist  
     
-    • Ripetere calibrazione con illuminazione stabile
+    • Kalibrierung bei stabiler Beleuchtung wiederholen  
     
-    • Migliorare contrasto illuminazione
-* - **Istogramma triggera casualmente**
-  - • Area troppo grande include zone variabili
+    • Kontrast/Beleuchtung verbessern  
+* - **Histogramm löst zufällig aus**  
+  - • Zu großer Bereich umfasst variable Zonen  
     
-    • Illuminazione instabile
+    • Beleuchtung instabil  
     
-    • Soglia troppo stretta
-  - • Ridurre area al minimo necessario
+    • Schwellenwert zu eng   
+  - • Bereich auf das notwendige Minimum reduzieren  
     
-    • Stabilizzare illuminazione
+    • Beleuchtung stabilisieren  
     
-    • Ripetere calibrazione AUTO
-* - **Istogramma non triggera quando dovrebbe**
-  - • Area troppo piccola non include ostacolo
+    • AUTO-Kalibrierung wiederholen  
+* - **Histogramm löst nicht aus, wenn es sollte**  
+  - • Zu kleiner Bereich umfasst kein Hindernis  
     
-    • Soglia troppo permissiva
+    • Schwellenwert zu großzügig  
     
-  - • Ingrandire area istogramma
+  - • Histogrammbereich vergrößern  
     
-    • Ripetere calibrazione AUTO con maggior contrasto
+    • AUTO-Kalibrierung mit höherem Kontrast wiederholen  
     
-* - **Impossibile creare secondo istogramma per pinza**
-  -  • Slot istogramma sbagliato selezionato
-  -  • Tornare all'elenco e selezionare Histogram 2
-* - **Test multipli istogrammi non funziona**
-  - • Non tutti gli istogrammi abilitati
+* - **Zweites Histogramm für Greifer kann nicht erstellt werden**
+  - • Falscher Histogramm-Slot ausgewählt  
+  - • Zur Liste zurückkehren und Histogramm 2 auswählen  
+* - **Test mit mehreren Histogrammen funktioniert nicht**  
+  - • Nicht alle Histogramme aktiviert  
     
-    • Configurazione incompleta
+    • Konfiguration unvollständig  
     
-    • Conflitto tra istogrammi
-  - • Verificare abilitazione di tutti gli istogrammi necessari
+    • Konflikt zwischen Histogrammen  
+  - • Überprüfen, ob alle erforderlichen Histogramme aktiviert sind  
     
-    • Completare configurazione AUTO per ogni istogramma
+    • AUTO-Konfiguration für jedes Histogramm abschließen  
     
-    • Verificare che aree non si sovrappongano
+    • Sicherstellen, dass sich die Bereiche nicht überlappen  
 ```
 
 (troubleshooting_robot_pick)=
-## Troubleshooting per la sezione Calibrazione Robot Pick 
+## Fehlerbehebung für den Abschnitt „Kalibrierung des Pick-Roboters“
 
 ```{list-table}
 :header-rows: 1
 :widths: 30 35 35
 
-* - Problema
-  - Possibili Cause
-  - Soluzioni
-* - **Coordinate robot non disponibili Nperse/dimenticate)**
-  - • Non annotate durante preparazione fisica
+* - Problem
+  - Mögliche Ursachen
+  - Lösungen
+* - **Robotkoordinaten nicht verfügbar (verloren/vergessen)**
+  - • Bei der physischen Vorbereitung nicht notiert  
     
-    • Foglio appunti perso
+    • Notizblatt verloren  
     
-    • Coordinate sovrascritte
-  - • **OBBLIGATORIO**: Ripetere l'intera preparazione fisica dal punto 1 al punto 9 di [Creazione Modello](../QUICKSTART/Nuovo_Modello/18_NuovoModello.md)
+    • Koordinaten überschrieben  
+  - • **UNBEDINGT ERFORDERLICH**: Wiederholen Sie die gesamte physische Vorbereitung von Punkt 1 bis Punkt 9 von [Creazione Modello](../QUICKSTART/Nuovo_Modello/18_NuovoModello.md)  
     
-    • Salvare coordinate in file digitale oltre che su carta
+    • Koordinaten nicht nur auf Papier, sondern auch in einer digitalen Datei speichern  
     
-    • Fotografare display pendant robot
-* - **Find Object non rileva componente**
-  - • Componente di riferimento spostato
+    • Display des Roboterpendants fotografieren  
+* - **Find Object erkennt Komponente nicht**
+  - • Referenzkomponente verschoben  
     
-    • Accept Threshold troppo alto
+    • Accept Threshold zu hoch  
     
-    • Componente fuori Region Search
-  - • Verificare posizione componente riferimento
+    • Komponenten außerhalb von Region Search  
+  - • Referenzposition der Komponente überprüfen  
     
-    • Abbassare temporaneamente Accept Threshold
+    • Accept Threshold vorübergehend senken  
     
-    • Verificare Region Search include componente
-* - **Vision Result mostra coordinate errate**
-  - • Calibrazione camera non eseguita
+    • Überprüfen, ob Region Search die Komponente enthält  
+* - **Vision Result zeigt falsche Koordinaten an**  
+  - • Kamerakalibrierung nicht durchgeführt  
     
-    • Sistema coordinate non configurato
+    • Koordinatensystem nicht konfiguriert  
     
-    • Camera spostata dopo calibrazione
-  - • Eseguire calibrazione camera prima di Robot Pick
+    • Kamera nach Kalibrierung verschoben  
+  - • Kamerakalibrierung vor dem Pick-Robot durchführen  
     
-    • Verificare origine sistema riferimento
+    • Ursprung des Referenzsystems überprüfen  
     
-    • Ripetere calibrazione camera
-* - **Impossibile inserire coordinate robot**
-  - • Campi bloccati
+    • Kamerakalibrierung wiederholen  
+* - **Robotkoordinaten können nicht eingegeben werden**  
+  - • Felder gesperrt  
     
-    • Enable Robot Pick non attivato
+    • Enable Robot Pick nicht aktiviert  
     
-    • Formato numeri errato
-  - • Cliccare Enable Robot Pick prima
+    • Falsches Zahlenformat  
+  - • Zuerst auf „Enable Robot Pick“ klicken  
     
-    • Attivare campi cliccandoci sopra
+    • Felder durch Anklicken aktivieren  
     
-    • Usare punto come separatore decimale
-* - **Gripper Offset calcola valori assurdi**
-  - • Coordinate robot inserite erroneamente
+    • Punkt als Dezimaltrennzeichen verwenden  
+* - **Gripper Offset berechnet unsinnige Werte**  
+  - • Falsch eingegebene Roboterkoordinaten  
     
-    • X e Y scambiati
+    • X und Y vertauscht  
     
-    • Segno +/- errato
+    • Falsches Vorzeichen (+/-)  
     
-    • Decimali errati o approssimati
-  - • **CRITICO**: Verificare attentamente ogni coordinata
+    • Falsche oder ungenaue Dezimalstellen  
+  - • **KRITISCH**: Prüfen Sie jede Koordinate sorgfältig  
     
-    • Controllare ordine X, Y, RZ
+    • Reihenfolge von X, Y, RZ kontrollieren  
     
-    • Verificare segni delle coordinate
+    • Vorzeichen der Koordinaten überprüfen  
+     
+    • Werte genau wie notiert kopieren, ohne Rundungen  
+* - **Roboter greift nach der Kalibrierung an falschen Positionen**  
+  - • Notierte Roboterkordinaten waren falsch  
     
-    • Copiare i valori esattamente come annotati senza approssimazioni
-* - **Robot preleva in posizioni sbagliate dopo calibrazione**
-  - • Coordinate robot annotate erano errate
+    • Roboter-Frame/Tool nach der Notiz geändert  
     
-    • Frame/Tool robot cambiato dopo annotazione
+    • Referenzkomponente wurde während der Notiz verschoben  
     
-    • Componente riferimento era spostato durante annotazione
+    • Gripper-Offset nicht gespeichert  
+  - • Physische Vorbereitung wiederholen und dabei korrekten Frame/Tool überprüfen  
     
-    • Gripper Offset non salvato
-  - • Ripetere preparazione fisica verificando Frame/Tool corretti
+    • Sicherstellen, dass Frame/Tool für Notiz und Entnahme identisch sind   
     
-    • Assicurarsi stesso Frame/Tool per annotazione e prelievo
+    • Setup mit korrekt positioniertem Bauteil wiederholen  
     
-    • Ripetere setup con componente correttamente posizionato
+    • Rezept nach Berechnung des Greifer-Offsets speichern  
+* - **Roboter-Offset gilt nur für Referenzteil**  
+  - • Hohe optische Verzerrung  
+     
+    • Kamerakalibrierung ungenau  
+     
+    • Region Search im Vergleich zur Kalibrierung zu groß  
+  - • Kamerakalibrierung verbessern  
     
-    • Salvare ricetta dopo calcolo Gripper Offset
-* - **Offset robot valido solo per componente riferimento**
-  - • Distorsione ottica elevata
+    • Objektiv mit geringer Verzerrung verwenden  
     
-    • Calibrazione camera imprecisa
+    • Region Search nach Möglichkeit verkleinern  
+* - **Gripper-Offset kann nicht gespeichert werden**  
+  - • Rezept nicht geladen   
     
-    • Region Search troppo grande rispetto a calibrazione
-  - • Migliorare calibrazione camera
+    • Berechtigungen unzureichend  
     
-    • Usare lente a bassa distorsione
+    • Festplatte voll  
+  - • Überprüfen, ob das Rezept korrekt geladen wurde  
     
-    • Ridurre Region Search se possibile
-* - **Impossibile salvare Gripper Offset**
-  - • Ricetta non caricata
+    • Schreibberechtigungen überprüfen  
     
-    • Permessi insufficienti
+    • Speicherplatz auf der Festplatte freigeben  
+* - **RZ-Rotation des Roboters immer falsch**  
+  - • RZ des Roboters war während des Setups nicht auf 0° eingestellt  
     
-    • Disco pieno
-  - • Verificare ricetta caricata correttamente
+    • Letzte Roboterachse nicht korrekt  
     
-    • Verificare permessi scrittura
+    • Koordinatensystem gedreht  
+  - • Setup wiederholen und letzte Roboterachse auf RZ=0° bringen  
     
-    • Liberare spazio disco
-* - **Rotazione RZ robot sempre errata**
-  - • RZ robot non era a 0° durante setup
+    • Überprüfen, ob das ausgewählte Tool korrekt ist  
     
-    • Ultimo asse robot non corretto
-    
-    • Sistema coordinate rotato
-  - • Ripetere setup portando ultimo asse robot a RZ=0°
-    
-    • Verificare che tool selezionato sia corretto
-    
-    • Verificare orientamento sistema coordinate
+    • Ausrichtung des Koordinatensystems überprüfen  
 ```
 
 

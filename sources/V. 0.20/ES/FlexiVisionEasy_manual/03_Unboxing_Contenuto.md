@@ -1,13 +1,13 @@
-# **Desembalaje y Contenido de la Caja**
+# **Unboxing y contenido de la caja**
 
-Una vez recibido tu kit FlexiVision One, comprueba que todos los elementos indicados a continuación estén incluidos y en buen estado.
+Una vez que reciba su kit FlexiVision One, compruebe que todos los elementos que se indican a continuación están incluidos y en buen estado.
 
 ## Kit FlexiVision One
-```{figure} ../../../_shared/media/images/Kit_Senzasfondo.png
+```{figure} ../../../_shared/media/images/kit.png
 :alt: Contenido del kit FlexiVision One
 :align: center
 
-Componentes incluidos en el kit FlexiVision One estándar.
+componentes incluidos en el kit estándar FlexiVision One.
 ```
 
 ```{list-table}
@@ -18,89 +18,88 @@ Componentes incluidos en el kit FlexiVision One estándar.
 * - 1
   - Cámara
 * - 1
-  - Objetivo *(distancia focal específica para la distancia de trabajo seleccionada)*
+  - Objetivo *(distancia focal específica para la distancia de trabajo elegida)*
 * - 1
-  - Rejilla de Calibración *(específica para el modelo pedido)*
+  - Rejilla de calibración *(específica para el modelo solicitado)*
 * - 1
   - VisionController
 * - 1
-  - Clave de Licencia
+  - Llave de licencia
 * - 1
-  - Herramienta Láser para calibración
+  - Herramienta de calibración láser
 * - 1
   - Cable de alimentación (10 m)
 * - 3
   - Cables Ethernet
 ```
 ```{note}
-La rejilla de calibración y la óptica pueden diferir de las imágenes según el kit seleccionado.
+La rejilla de calibración y la óptica pueden diferir de las imágenes en función del kit elegido.
 ```
-### Vista General del Kit
+### *Descripción general del kit*
 ```{list-table}
 :header-rows: 1
 :widths: 30 40 35
 
 * - **Componente**
-  - **Especificaciones Técnicas**
+  - **Especificaciones técnicas**
   - **Imagen**
 * - Cámara
-  - [Ir a las especificaciones de la Cámara](specifiche_camera)
-  - :::{figure} ../../../_shared/media/images/Camera.png
+  - [Ir a Especificaciones de la cámara](specifiche_camera)
+  - :::{figure} ../../../_shared/media/images/camera_nuova.png
     :width: 150px
     :::
 * - Objetivo
-  - [Ir a las especificaciones del Objetivo](specifiche_obiettivo)
+  - [Ir a Especificaciones del objetivo](specifiche_obiettivo)
   - :::{figure} ../../../_shared/media/images/Ottica.png
     :width: 150px
     :::
-* - Rejilla de Calibración
-  - [Ir a las especificaciones de la Rejilla de Calibración](specifiche_griglia)
+* - Rejilla de calibración
+  - [Ir a las especificaciones de la Rejilla de calibración](specifiche_griglia)
   - :::{figure} ../../../_shared/media/images/Calib_Grid.png
     :width: 150px
     :::
 * - VisionController
-  - [Ir a las especificaciones del VisionController](specifiche_VC)
+  - [Ir a las especificaciones de VisionController](specifiche_VC)
   - :::{figure} ../../../_shared/media/images/VisionController.png
     :width: 150px
     :::
-* - Herramienta Láser para calibración
-  - [Ir a las especificaciones de la Herramienta Láser](laser)
+* - Instrumento láser para calibración
+  - [Ir a Especificaciones del instrumento láser](laser)
   - :::{figure} ../../../_shared/media/images/laser.png
     :width: 150px
     :::
 * - Cable de alimentación (10 m)
-  - [Ir a las especificaciones del Cable](cavo)
+  - [Ir a Especificaciones del cable](cavo)
   - :::{figure} ../../../_shared/media/images/Cavo_Alim.png
     :width: 150px
     :::
 * - 3 Cables Ethernet (3 m)
-  - Cat 6 con S/STP Shielding
+  - Cat 6 con blindaje S/STP
   - :::{figure} ../../../_shared/media/images/cavoethernet.png
     :width: 150px
     :::
-* - Clave de Licencia
+* - Clave de licencia
   - 
   - :::{figure} ../../../_shared/media/images/Chiave_Licenza.png
     :width: 150px
     :::
 ```
 
-## Accesorios Opcionales
+## Accesorios opcionales
 
-Según tu aplicación, los siguientes accesorios opcionales podrían estar incluidos en el pedido:
+En función de su aplicación, su pedido puede incluir los siguientes accesorios opcionales:
 
-| Componente | Variantes disponibles |
+| componente | Variantes disponibles |
 |------------|----------------------|
-| Toplight | [Enlace a la Sección](toplight) |
-| Cable de Alimentación Toplight | [Enlace a la Sección](cavoalimtoplight) |
-| Backlight | [Enlace a la Sección](backlight) |
-| Filtro IR | [Enlace a la Sección](filtroIR) |
+| Toplight | [Enlace a la sección](toplight) |
+| Cable de alimentación Toplight | [Enlace a la sección](cavoalimtoplight) |
+| Backlight | [Enlace a la sección](backlight) |
+| Filtro IR | [Enlace a la sección](filtroIR) |
 | Cable Ethernet |  5 m / 10 m |
-| Camera bracket stand | [Enlace a la Sección](supporto) |
-| Switch Ethernet | [Enlace a la Sección](switch) |
-| Display | [Enlace a la Sección](display) |
+| Switch Ethernet | [Enlace a la sección](switch) |
+| Mostrar | [Enlace a la sección](display) |
 
 ---
 ```{importante}
-Si los artículos recibidos no corresponden al pedido o están dañados, **no firmes el documento de entrega**. Contacta inmediatamente con el soporte de FlexiVision One o con tu distribuidor local.
+Si los artículos recibidos no corresponden al pedido o están dañados, **no firme el documento de entrega**. Póngase en contacto de inmediato con el soporte técnico de FlexiVision One o con su distribuidor local.
 ```

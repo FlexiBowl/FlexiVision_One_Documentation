@@ -1,19 +1,18 @@
 (roitest)=
-# **Definizione ROI e Tolleranze**
+# **Définition ROI et tolérances**
 
-In questa sezione si procede alla definizione della Region Search (area di ricerca) e delle tolleranze di riconoscimento per il modello creato. Questi parametri determinano dove e con quale precisione FlexiVision One cercherà i componenti durante il funzionamento.
+Cette section permet de définir la Region Search (zone de recherche) et les tolérances de reconnaissance pour le modèle créé. Ces paramètres déterminent où et avec quelle précision FlexiVision One recherchera les composants pendant le fonctionnement.
 
-**Cos'è la Region Search?**  
-La **Region Search** è l'area all'interno della quale FlexiVision One cercherà e rileverà i componenti da prelevare.
+**Qu'est-ce que la Region Search ?**  
+La **Region Search** est la zone dans laquelle FlexiVision One recherchera et détectera les composants à prélever.
 
-# Procedura
+# Procédure
 
-Dopo aver cliccato "Next" nella pagina di training, si apre automaticamente la pagina **Define Robot Picking Limit Area Model**.
-
-![Pagina Define Robot Pick Area](../../../../../_shared/media/images/pagina_definerobotpickarea.png)
+Après avoir cliqué sur «&nbsp;Next&nbsp;» sur la page de formation, la page **Define Robot Picking Limit Area Model** s'ouvre automatiquement.
 
 
-## **Step 1: Definizione Area**
+
+## Étape 1 : Définition de la zone
 
 :::{video} ../../../../../_shared/media/videos/TastoInfo_DefineRobotArea_1280x720.mp4
     :width: 100%
@@ -21,34 +20,37 @@ Dopo aver cliccato "Next" nella pagina di training, si apre automaticamente la p
 :::
 ```{list-table}
 * - **1**
-  - Nella pagina **Define Robot Picking Limit Area Model**, modificare il riquadro per delimitare l'area di ricerca
+  - Sur la page **Define Robot Picking Limit Area Model**, modifier l'encadré pour délimiter la zone de recherche
 * - **2**
-  - Una volta dimensionata correttamente la Region Search, Cliccare su <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon">
+  - Une fois que la Region Search est correctement dimensionnée, cliquer sur <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon">
 * - **3**
-  - Si aprirà la pagina **Locator Model 1 Cam 1**
+  - S'ouvre la page **Locator Model 1 Cam 1**
 ```
 ```{tip}
-Dimensiona l'area in base allo spazio effettivo di lavoro del robot, evitando zone non raggiungibili.
+Dimensionner la zone en fonction de l'espace de travail réel du robot, en évitant les zones inaccessibles.
 ```
+:::{tip}
+En cas de doutes lors de la configuration, consulter le bouton **INFO** présent sur la page actuelle.
+:::
 
-### Panoramica interfaccia Locator Model
+### *Aperçu de l'interface Locator Model*
 
-![Pagina Locator Model](../../../../../_shared/media/images/pagina_locatormodel.png)
+![Page Locator Model](../../../../../_shared/media/images/pagina_locatormodel.png)
 ```{list-table}
 :header-rows: 1
 :widths: 30 70
 
-* - Parametro
-  - Descrizione
+* - Paramètre
+  - Description
 * - **Test**
-  - Esegue un test di riconoscimento in tempo reale con i parametri correnti
+  - Effectue un test de reconnaissance en temps réel avec les paramètres actuels
 * - **Accept Threshold**
-  - Soglia minima di fedeltà (score) che un componente deve avere per essere accettato
+  - Seuil de fidélité minimum (score) qu'un composant doit avoir pour être accepté
 * - **Results Panel**
-  - Pannello che mostra tutti i componenti rilevati con dettagli (Id, coordinate, score)
+  - Panneau montrant tous les composants détectés avec des détails (Id, coordonnées, score)
 ```
-### **Video Tutorial**
-Video tutorial esplicativo dei successivi Step 2 e Step 3: 
+### Tutoriel vidéo
+Tutoriel vidéo expliquant les étapes 2 et 3 qui suivent : 
 :::{video} ../../../../../_shared/media/videos/TastiInfo_LocatorModel_1280x720.mp4
     :width: 100%
     :align: center
@@ -57,96 +59,99 @@ Video tutorial esplicativo dei successivi Step 2 e Step 3:
 
 
 
-## **Step 2: Preparazione Scena**
+## Étape 2 : Préparation de la scène
 ```{list-table}
 :widths: 5 95
 
 * - **4**
-  - Posizionare **altri componenti** nell'area di visione in modo casuale intorno al componente di riferimento in modo da non confonderli con esso.
+  - Placer **d'autres composants** dans la zone de visualisation de manière aléatoire autour du composant de référence afin de ne pas les confondre avec lui.
     
     :::{warning}
-    Non toccare il componente di riferimento usato per il training! E non perderlo di vista!
+    Ne pas toucher au composant de référence utilisé pour le training ! Et ne pas le perdre de vue !
     :::
 ```
 
-## **Step 3: Esecuzione Test e Accept Threshold**
+## Étape 3 : Exécution de Test et Accept Threshold
 ```{list-table}
 :widths: 5 95
 
 * - **5**
-  - Cliccare su <img src="../../../../../_shared/media/images/tasto_TEST.png" class="inline-icon"> per effettuare il riconoscimento
+  - Cliquer sur <img src="../../../../../_shared/media/images/tasto_TEST.png" class="inline-icon"> pour effectuer la reconnaissance
 
 * - **6**
-  - Osservare quanti componenti vengono rilevati e con quali score
+  - Observer combien de composants sont détectés et avec quels scores
 
 * - **7**
-  - Modificare l'**Accept Threshold** in base alle esigenze dell'applicazione
+  - Modifier l'**Accept Threshold** en fonction des exigences de l'application
     
     :::{note}
-    **Cos'è l'Accept Threshold?**
+    **Qu'est-ce que l'Accept Threshold ?**
     
-    È il **grado minimo di fedeltà** (score) che un componente rilevato deve avere rispetto al modello di riferimento per essere accettato.
+    C'est le **degré minimal de fidélité** (score) qu'un composant détecté doit avoir par rapport au modèle de référence pour être accepté.
     
-    - **Valore 0.95** → Accetta solo componenti con fedeltà ≥ 95%
-    - **Valore 0.80** → Accetta componenti con fedeltà ≥ 80%
-    - **Valore più alto** → Più restrittivo (meno falsi positivi)
-    - **Valore più basso** → Più permissivo (rileva anche componenti meno simili a quello di riferimento)
+    - **Valeur 0,95** → N'accepte que les composants avec une fidélité ≥ 95 %
+    - **Valeur 0,80** → Accepte les composants avec une fidélité ≥ 80 %
+    - **Valeur plus élevée** → Plus restrictif (moins de faux positifs)
+    - **Valeur plus basse** → Plus permissif (détecte également les composants moins similaires à celui de référence)
     :::
 ```
 ```{tip}
 
-**Approccio iterativo consigliato:**
+**Approche itérative recommandée :**
 
-1. Iniziare con Accept Threshold = 0.85
-2. Fare Test e osservare risultati
-3. Se **troppi pezzi accettati** (inclusi falsi positivi) → Aumentare threshold (es: 0.90)
-4. Se **troppo pochi pezzi rilevati** (pezzi buoni scartati) → Diminuire threshold (es: 0.80)
-5. Ripetere fino a trovare il valore ottimale per l'applicazione
+1. Commencer avec Accept Threshold = 0.85
+2. Faire des tests et observer les résultats
+3. Si **trop de pièces sont acceptées** (y compris les faux positifs) → Augmenter le seuil (par ex. : 0,90)
+4. Si **trop peu de pièces sont détectées** (bonnes pièces écartées) → Diminuer le seuil (par ex. : 0,80)
+5. Répéter jusqu'à trouver la valeur optimale pour l'application
 
-**Obiettivo**: Trovare il valore più alto possibile che rileva tutti i pezzi buoni ma scarta i peggiori.
+**Objectif** : Trouver la valeur la plus élevée possible qui détecte toutes les bonnes pièces mais écarte les plus mauvaises.
 ```
+:::{tip}
+En cas de doutes lors de la configuration, consulter le bouton **INFO** présent sur la page actuelle.
+:::
 
 ---
 
-## Interpretazione Risultati
+## Interprétation des résultats
 
-### Visualizzazione componenti rilevati
+### *Affichage des composants détectés*
 
-Nel pannello Results vengono mostrati tutti i componenti rilevati che rispettano l'Accept Threshold:
+Le panneau Results affiche tous les composants détectés qui respectent l'Accept Threshold :
 ```{list-table}
 :header-rows: 1
 :widths: 15 25 60
 
-* - Campo
-  - Tipo
-  - Descrizione
+* - Champ
+  - Type
+  - Description
 * - **Id**
-  - Intero
-  - Identificativo univoco progressivo (0, 1, 2, ...)
+  - Entier
+  - Identifiant unique progressif (0, 1, 2, ...)
 * - **X**
-  - Millimetri
-  - Coordinata X del componente (riferimento origine della griglia di calibrazione)
+  - Millimètres
+  - Coordonnée X du composant (référence origine de la grille d'étalonnage)
 * - **Y**
-  - Millimetri
-  - Coordinata Y del componente (riferimento origine della griglia di calibrazione)
+  - Millimètres
+  - Coordonnée Y du composant (référence origine de la grille d'étalonnage)
 * - **Rotation**
-  - Gradi
-  - Angolo di rotazione del componente (0-360°)
+  - Degrés
+  - Angle de rotation du composant (0-360°)
 * - **Score**
-  - Percentuale
-  - Grado di fedeltà rispetto al modello di riferimento (0.00-1.00)
+  - Pourcentage
+  - Degré de fidélité par rapport au modèle de référence (0.00-1.00)
 ```
-```{admonition} Sistema di Priorità
+```{admonition} Système de priorité
 :class: info
-FlexiVision One di dafault ordina automaticamente tutti i componenti riconosciuti per **score decrescente**:
-- **Id 0** → Componente con score più alto (più simile al modello di riferimento)
-- **Id 1** → Secondo miglior componente
-- **Id 2** → Terzo miglior componente
-- E così via...
+Par défaut, FlexiVision One trie automatiquement tous les composants reconnus par **score décroissant** :
+- **Id 0** → Composant ayant le score le plus élevé (le plus similaire au modèle de référence)
+- **Id 1** → Deuxième meilleur composant
+- **Id 2** → Troisième meilleur composant
+- Et ainsi de suite...
 ```
-### Esempio interpretazione
+### *Exemple d'interprétation*
 
-Supponiamo che dopo il Test appaiano questi risultati:
+Supposons que ces résultats apparaissent après le test :
 
 | Id | X | Y | Rotation | Score |
 |----|-------|-------|----------|-------|
@@ -155,32 +160,32 @@ Supponiamo che dopo il Test appaiano questi risultati:
 | 2 | 45.7 | 110.3 | 92.1° | 0.86 |
 | 3 | -150.2 | -95.7 | 45.8° | 0.83 |
 
-**Interpretazione:**
-- **Id 0**: Migliore corrispondenza (92%), sarà prelevato per primo
-- **Id 1**: Buona corrispondenza (89%), seconda opzione
-- **Id 2**: Corrispondenza discreta (86%), terza opzione
-- **Id 3**: Corrispondenza accettabile (83%), quarta opzione
+**Interprétation :**
+- **Id 0** : Meilleure correspondance (92 %), sera prélevé en premier
+- **Id 1** : Bonne correspondance (89 %), deuxième option
+- **Id 2** : Correspondance satisfaisante (86 %), troisième option
+- **Id 3** : Correspondance acceptable (83 %), quatrième option
 
-Se Accept Threshold fosse 0.85:
-- Id 0, 1, 2 sarebbero accettati
-- Id 3 sarebbe scartato (score 0.83 < 0.85)
+Si Accept Threshold est à 0,85 :
+- Id 0, 1, 2 seraient acceptés
+- Id 3 serait rejeté (score 0.83 < 0.85)
 
 ---
 
-# Finalizzazione
+# Finalisation
 
-## **Step 4: Pulizia e Proseguimento**
+## Étape 4 : Nettoyage et suite
 ```{list-table}
 * - **8**
-  - Rimuovere **tutti i componenti** dall'area, **tranne il componente di riferimento** e i due oggetti ai suoi lati
+  - Retirer **tous les composants** de la zone, **à l'exception du composant de référence** et des deux objets situés à ses côtés
     :::{danger}
-      **Non spostare il componente di riferimento!**
-      Anche durante la pulizia della scena, fare attenzione a non urtare o spostare il componente di riferimento. Le sue coordinate sono ancora necessarie per la calibrazione robot nella fase finale.
+      **Ne pas déplacer le composant de référence !**
+      Même en nettoyant la scène, veillez à ne pas heurter ou déplacer le composant de référence. Ses coordonnées sont encore nécessaires pour l'étalonnage du robot dans la phase finale.
     :::
 * - **9**
-  - Cliccare su <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon"> → si aprirà la pagina delle **Clearances**
+  - Cliquer sur <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon"> → s'ouvre la page **Clearances**
 ```
 ```{seealso}
-Procedi alla [Configurazione Clearances](istogrammi) per definire le aree libere.
+Passer à la [Configuration des Clearances](istogrammi) pour définir les zones libres.
 ```
 

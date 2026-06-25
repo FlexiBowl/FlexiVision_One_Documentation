@@ -1,9 +1,9 @@
-﻿---
+---
 orphan: true
 ---
 
 # Étapes suivantes
 
-Une fois la configuration du Hopper terminée, poursuivez avec :
+Une fois la configuration de la trémie terminée, passer à :
 
-**→ [Vérification des résultats et Dashboard](24_Verifica_Risultati.md)** - Surveillance de l'application complète en production
+→ **[Contrôle des résultats et du tableau de bord](24_Verifica_Risultati.md)** - Suivi de l'application complète en production

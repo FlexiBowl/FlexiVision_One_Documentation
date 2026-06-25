@@ -1,183 +1,184 @@
-# **Creazione Ricette e Modelli - Panoramica**
+# **Erstellen von Rezepten und Modellen - Überbsicht**
 
-Questa sezione guida l'utente attraverso il processo completo di creazione di una ricetta applicativa e dei modelli pezzo necessari per il riconoscimento e il picking robotizzato.
+Dieser Abschnitt führt den Benutzer durch den gesamten Prozess der Erstellung eines Anwendungsrezepts und der für die Erkennung und das robotergestützte Picking erforderlichen Werkstückmodelle.
 
 ```{note}
-**Prerequisiti**
+**Voraussetzungen**
 
-Prima di procedere con la creazione di ricette e modelli, assicurarsi che:
-- Tutti i setup hardware siano completati ([Setup Componenti](setupcomponenti))
-- La calibrazione camera sia stata eseguita con successo ([Calibrazione Camera](calibrazione))
-- La calibrazione robot sia completata
-- Si disponga dei pezzi fisici da riconoscere
+Bevor Sie mit der Erstellung von Rezepten und Modellen fortfahren, stellen Sie sicher, dass:
+- Alle Hardware-Einstellungen sind abgeschlossen ([Component Setup](setupcomponenti))
+- Die Kamerakalibrierung wurde erfolgreich durchgeführt ([Camera Calibration](calibrazione))
+- Die Roboterkalibrierung ist abgeschlossen
+- Die zu erkennenden physischen Teile sind verfügbar
 ```
 
 ---
 
-## Ricetta vs Modello: Differenze fondamentali
+## Rezept vs. Modell: Grundlegende Unterschiede
 
-Prima di iniziare, è importante comprendere la differenza tra **Ricetta** e **Modello**:
+Bevor wir beginnen, ist es wichtig, den Unterschied zwischen **Rezept** und **Modell** zu verstehen:
 
 ```{list-table}
    :widths: 50 50
    :header-rows: 1
 
-   * - Cos'è una Ricetta?
-     - Cos'è un Modello?
-   * - Il contenitore globale dell'intera applicazione di picking.
-     - La definizione specifica di un singolo componente da riconoscere.
-   * - Include fino a 8 modelli, parametri FlexiBowl, Hopper e logiche di comunicazione.
-     - Include immagini di training, ROI, feature visive, filtri e offset robot.
-   * - Gestisce parametri hardware (vibrazioni, velocità) e rete (porta TCP/IP, timeout).
-     - Gestisce parametri di visione (threshold, score minimo) e coordinate di prelievo (gripper).
-   * - Può gestire più tipi di pezzi simultaneamente (multi-modello).
-     - Focalizzato su un unico pattern visivo specifico.
+   * - Was ist ein Rezept?
+     - Was ist ein Modell?
+   * - Der übergeordnete Sammelbegriff für die gesamte Picking-Anwendung.
+     - Die spezifische Definition einer einzelnen anzuerkennenden Komponente.
+   * - Beinhaltet bis zu 8 Modelle, FlexiBowl®-Parameter, Trichter und Kommunikationslogiken.
+     - Umfasst Trainingsbilder, ROIs, visuelle Merkmale, Filter und Roboter-Offsets.
+   * - Verwaltet Hardware-Parameter (Vibrationen, Geschwindigkeit) und Netzwerkparameter (TCP/IP-Port, Timeout).
+     - Verwaltet Bildverarbeitungsparameter (Schwellenwert, Mindestwert) und Entnahmekoordinaten (Greifer).
+   * - Kann mehrere Teiletypen gleichzeitig verwalten (Multi-Modell).
+     - Konzentriert sich auf ein spezifisches visuelles Muster.
 ```
 
 
 ```{tip}
-Una ricetta può contenere fino a 8 modelli diversi, permettendo al robot di riconoscere e prelevare diversi tipi di pezzi dalla stessa applicazione senza cambiare configurazione.
+Ein Rezept kann bis zu 8 verschiedene Modelle enthalten, sodass der Roboter verschiedene Arten von Teilen aus derselben Anwendung erkennen und entnehmen kann, ohne die Konfiguration zu ändern.
 ```
 
 
 ---
 
-## Panoramica del processo completo
+## VÜberblick über den gesamten Prozess
 
-Il processo di creazione di una ricetta completa e funzionante si articola in diverse fasi sequenziali:
+Der Prozess zur Erstellung eines vollständigen und funktionsfähigen Rezepts gliedert sich in mehrere aufeinanderfolgende Phasen:
 
 ```{figure} ../../../../../_shared/media/images/newmodel4.jpg
 :alt: Workflow creazione ricetta e modelli
 :width: 100%
 :align: center
 
-Schema completo del processo di creazione ricetta e modelli
+Vollständiges Schema des Prozesses zur Rezept- und Modellerstellung
 ```
 
-### Fasi principali
+### *Hauptphasen*
 
 ```{list-table}
 :header-rows: 1
 :widths: 10 30 60
 
-* - Fase
-  - Nome
-  - Descrizione
+* - Phase
+  - Name
+  - Beschreibung
 * - **1**
-  - Creazione Ricetta
-  - Definizione della ricetta applicativa con nome, tipo e FlexiBowl utilizzato
+  - Rezepterstellung
+  - Definition des Anwendungsrezepts mit Name, Typ und verwendetem FlexiBowl®
 * - **2**
-  - Preparazione Fisica
-  - Posizionamento del pezzo di riferimento nell'area di visione
+  - Phaysische Vorbereitung
+  - Positionierung des Referenzteils im Sichtfeld
 * - **3**
-  - Training Modello
-  - Acquisizione immagine e creazione del pattern di riconoscimento
+  - Modelltraining
+  - Bildaufnahme und Erstellung des Erkennungsmusters
 * - **4**
-  - Definizione ROI
-  - Definizione dell'area di ricerca dove cercare i pezzi
+  - ROI-Definition
+  - Festlegung des Suchbereichs, in dem nach den Teilen gesucht werden soll
 * - **5**
-  - Impostazione Filtri
-  - Configurazione accept threshold e tolleranze di riconoscimento
+  - Filtereinstellung
+  - Konfiguration akzeptieren Schwellenwert und Erkennungstoleranzen
 * - **6**
-  - Preparazione fisica 
-  - Simulazione di picking con robot per posizionare gli oggetti che andranno a simulare l'ingombro della pinza 
+  - Physische Vorbereitung 
+  - Picking-Simulation mit dem Roboter, um die Objekte zu positionieren, die den Platzbedarf des Greifers simulieren sollen 
 * - **7**
-  - Salvataggio coordinate 
-  - Salvare le coordinate del robot nella posizione di picking del componente di riferimento 
+  - Speichern der Koordinaten 
+  - Speichern der Roboterkoordinaten an der Picking-Position des Referenzbauteils 
 * - **8**
-  - Creazione Clearances
-  - Definizione zone che devono rimanere libere (area pinza, ostacoli)
+  - Erstellen von Freiräumen
+  - Definition von Bereichen, die frei bleiben müssen (Greiferbereich, Hindernisse)
 * - **9**
-  - Coordinate Robot
-  - Calcolo offset gripper per prelievo corretto
+  - Roboterkoordinaten
+  - Berechnung des Greifer-Offsets für die korrekte Entnahme
 * - **10**
-  - Test e Validazione
-  - Verifica funzionamento completo e salvataggio ricetta
+  - Test und Validierung
+  - Überprüfung der vollständigen Funktionsweise und Speichern des Rezepts
 ```
 
 ---
 
-## Guida alla navigazione sezioni dettagliate
+## Leitfaden zur Navigation durch die detaillierten Abschnitte
 
-Per informazioni complete su ogni fase del processo, consultare le sezioni dedicate:
+Ausführliche Informationen zu jedem Prozessschritt finden Sie in den entsprechenden Abschnitten:
 
-- **[Creazione Nuova Ricetta](nuovaricetta)** - Come creare e configurare una nuova ricetta
-- **[Training Modello]((nuovomodello))** - Acquisizione immagine e creazione pattern
-- **[Definizione ROI e Filtri]((roitest))** - Configurazione area di ricerca e tolleranze
-- **[Creazione Clearances](istogrammi)** - Definizione delle zone da lasciare libere 
-- **[Coordinate Robot Pick](robotpick)** - Calcolo gripper offset 
+- **[Neues Rezept erstellen](nuovaricetta)** - So erstellen und konfigurieren Sie ein neues Rezept
+- **[Modelltraining](nuovomodello)** - Bildaufnahme und Mustererstellung
+- **[ROI-Definition und Toleranzen](roitest)** - Konfiguration des Suchbereichs und der Toleranzen
+- **[Erstellen von Freiräumen](istogrammi)** - Definition der Bereiche, die frei bleiben müssen 
+- **[Roboter-Pick-Kalibrierung](robotpick)** - Berechnung des Greifer-Offsets 
 
 ---
 
-## Consigli pratici prima di iniziare
+## Praktische Tipps vor dem Start
 
-### Preparazione materiale
+### *Materialvorbereitung*
 
 ```{tip}
-**Checklist preparazione**
+**Checkliste zur Vorbereitung**
 
-Prima di iniziare la creazione di modelli, preparare:
+Bevor Sie mit der Erstellung von Modellen beginnen, bereiten Sie Folgendes vor:
 
--  Almeno 10-20 pezzi del tipo da riconoscere (per test)
--  Pezzi puliti e in buone condizioni (rappresentativi della produzione)
--  Simulatori ingombro pinza (NON devono essere pezzi dello stesso tipo, poichè è importante non confonderli con il pezzo di riferimento.)
--  Foglio per annotare coordinate robot (X, Y, RZ)
--  FlexiBowl vuoto e pulito
--  Backlight/Toplight acceso
+-  Mindestens 10–20 Teile des zu erkennenden Typs (zum Testen)
+-  Saubere und in gutem Zustand befindliche Teile (repräsentativ für die Produktion)
+-  Simulatoren für den Platzbedarf des Greifers (es dürfen KEINE Teile desselben Typs sein, da es wichtig ist, diese nicht mit dem Referenzteil zu verwechseln.)
+-  Blatt zum Notieren der Roboterkoordinaten (X, Y, RZ)
+-  Leerer und sauberer FlexiBowl®
+-  Hintergrundbeleuchtung/Toplight eingeschaltet
 ```
 
-### Ambiente ottimale
+### *Optimale Umgebung*
 
 ```{note}
-**Condizioni ideali per training**
+**Ideale Bedingungen für das Training**
 
-- Illuminazione stabile (evitare luce solare diretta variabile)
-- FlexiBowl fermo 
-- Robot in posizione sicura (non deve interferire durante le acquisizioni)
-- Software FlexiVision One aperto e ricetta base caricata
+- Stabile Beleuchtung (direktes, wechselndes Sonnenlicht vermeiden)
+- FlexiBowl® stillstehend 
+- Roboter in sicherer Position (darf die Aufnahme nicht stören)
+- FlexiVision One-Software geöffnet und Basisrezept geladen
 ```
 
-### Errori comuni da evitare
+### *Häufige Fehler, die es zu vermeiden gilt*
 
 ```{error}
-**Evitare questi errori frequenti**
+**Vermeiden Sie diese häufigen Fehler**
 
-❌ **Non salvare le coordinate robot** durante la preparazione fisica → impossibile calcolare gripper offset 
+❌ **Roboterkordinaten** werden während der physischen Vorbereitung **nicht gespeichert** → Greifer-Offset kann nicht berechnet werden 
 
-❌ **Spostare il pezzo** dopo aver salvato le coordinate → offset errato
+❌ **Das Teil** wird nach dem Speichern der Koordinaten **verschoben** → falscher Offset
 
-❌ **Feature threshold troppo basso** → modello troppo dettagliato, riconosce trama superficie
+❌ **Feature-Schwellenwert zu niedrig** → Modell zu detailliert, erkennt Oberflächenstruktur
 
-❌ **ROI troppo stretta** → pezzi ai bordi non vengono rilevati
+❌ **ROI zu engl** → Teile an den Rändern werden nicht erkannt
 
-❌ **Clearances troppo piccoli** → collisioni pinza con pezzi adiacenti
+❌ **Abstände zu klein** → Kollisionen des Greifers mit benachbarten Teilen
 
-❌ **Non testare con pezzi multipli** → problemi non rilevati fino alla produzione
+❌ **Nicht mit mehreren Teilen testen** → Probleme werden erst in der Produktion erkannt
 
-Seguire attentamente le procedure dettagliate nelle prossime sezioni per evitare questi problemi.
+Befolgen Sie die in den folgenden Abschnitten beschriebenen Schritte genau, um diese Probleme zu vermeiden.
 ```
 
 ---
 
-## Supporto e risorse aggiuntive
+## Unterstützung und weitere Ressourcen
 
 ```{note}
-**i Tasti INFO**
+**INFO-Schaltfläche**  
+In jedem der Arbeitsbereiche befindet sich oben rechts eine INFO-Schaltfläche.
+Über diese Schaltfläche wird eine Schritt-für-Schritt-Anleitung aufgerufen, die auch im Video-Tutorial zu sehen ist.
 
-- **Video tutorial**: 
-- **Spiegazione Passo-Passo**:
-- **Supporto tecnico**: [support@arsautomation.com](mailto:support@arsautomation.com) per assistenza
+- [**Umfassende Video-Tutorials**](vidtutcompleti) 
+- **Technische Unterstützung**: [support@arsautomation.com](mailto:support@arsautomation.com) für Unterstützung
 
-Per problemi specifici durante la creazione di modelli, consultare la sezione [Troubleshooting](troubleshooting).
+Bei spezifischen Problemen beim Erstellen von Vorlagen lesen Sie bitte den Abschnitt [Troubleshooting](troubleshooting).
 ```
 
 ---
 
-## Prossimi passi
+## Nächste Schritte
 
-Una volta compresa la panoramica del processo, procedere con la creazione effettiva:
+Sobald Sie den Überblick über den Prozess gewonnen haben, fahren Sie mit der eigentlichen Erstellung fort:
 
-**→ [Inizia: Creazione Nuova Ricetta](nuovaricetta)**
+**→ [Start: Neues Rezept erstellen](nuovaricetta)**
 
 
 ```{toctree}

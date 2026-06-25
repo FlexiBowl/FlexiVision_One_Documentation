@@ -1,436 +1,433 @@
 (dashboard)=
-# **Monitoraggio Applicazione: Dashboard**
+# **Anwendungsüberwachung: Dashboard**
 
-La **Dashboard** è l'interfaccia principale per il monitoraggio in tempo reale del sistema FlexiVision One. In questa pagina è possibile verificare l'efficienza del processo, analizzare i tempi di ciclo, validare il riconoscimento dei componenti e identificare eventuali colli di bottiglia nel sistema.
+Das **Dashboard** ist die Hauptschnittstelle für die Echtzeitüberwachung des FlexiVision One-Systems. Auf dieser Seite können Sie die Prozesseffizienz überprüfen, die Zykluszeiten analysieren, die Erkennung der Komponenten validieren und eventuelle Engpässe im System ermitteln.
 
 
 ---
 
-## Panoramica Interfaccia
+## Übersicht über die Benutzeroberfläche
 
-L'interfaccia della Dashboard si divide in quattro sezioni principali:
-![Pagina Hooper Setup](../../../../_shared/media/images/pagina_dashboard.png)
-1. [**Controllo Operativo**](controllooperativo): Comandi e stato esecuzione
-2. [**Analisi della Visione**](analisivisione): Visualizzazione pezzi rilevati e dettagli
-3. [**Indicatori Performance**](indicatoriperformance): Connettività e tempi ciclo
-4. [**Analisi Grafica**](analisigrafica): Grafici storici produttività e tempi
+Die Benutzeroberfläche des Dashboards ist in vier Hauptbereiche unterteilt:
+![Seite „Hooper Setup“](../../../../_shared/media/images/pagina_dashboard.png)
+1. [**Betriebssteuerung**](controllooperativo): Befehle und Ausführungsstatus
+2. [**Bildverarbeitung**](analisivisione): Anzeige der erfassten Teile und Details
+3. [**Leistungsindikatoren**](indicatoriperformance): Konnektivität und Zykluszeiten
+4. [**Grafische Analyse**](analisigrafica): Historische Diagramme zu Produktivität und Zeiten
 
 ---
 (controllooperativo)=
-## Controllo Operativo - Comandi e stato esecuzione
+## Betriebssteuerung - Befehle und Ausführungsstatus
 
 ```{list-table}
 :header-rows: 1
 :widths: 25 75
 
-* - Elemento
-  - Descrizione e Funzione
+* - Element
+  - Beschreibung und Funktion
 * - **In Run**
-  - Indicatore di stato che segnala se il sistema è attualmente in funzione.  
-    **Verde** 🟢: Sistema attivo e operativo.  
-    **Rosso** 🔴: Sistema arrestato o in pausa.
+  - Statusanzeige, die anzeigt, ob das System derzeit in Betrieb ist.  
+    **Grün** 🟢: System aktiv und betriebsbereit.  
+    **Rot** 🔴: System angehalten oder im Pausenmodus.
 * - **In Run Time**
-  - Visualizza il tempo totale di attività del sistema dall'avvio dell'applicazione. 
-* - **Selezione FlexiBowl**
-  - Menu a tendina per selezionare il FlexiBowl specifico da monitorare. 
+  - Zeigt die Gesamtbetriebszeit des Systems seit dem Start der Anwendung an. 
+* - **FlexiBowl®-Auswahl**
+  - Dropdown-Menü zur Auswahl des spezifischen FlexiBowl®, der überwacht werden soll. 
 * - **Test Locator**
-  - Scatta una foto dell'area di visione e avvia il riconoscimento dei componenti presenti. 
+  - Nimmt ein Foto des Sichtbereichs auf und startet die Erkennung der vorhandenen Komponenten. 
 ```
 
 ```{tip}
 **Test Locator**
-Utile per:
-- Verificare che i componenti effettivamente vengano riconosciuti dalla visione 
-- Nel caso in cui sia ha una collisione tra robot e comonente e voglio controllare l'affidabilità delle clearances
+Nützlich für:
+- Um zu überprüfen, ob die Teile tatsächlich vom Bildverarbeitungssystem erkannt werden.
+- Für den Fall, dass es zu einer Kollision zwischen Roboter und Bauteil kommt und die Zuverlässigkeit der Sicherheitsabstände überprüft werden soll
 ```
 
 ---
 (analisivisione)=
-## Analisi della Visione
+## Bildanalyse
 
-Al centro della dashboard vengono riportati i dati relativi ai componenti identificati dal sistema di visione.
+In der Mitte des Dashboards werden die Daten zu den vom Bildverarbeitungssystem identifizierten Komponenten angezeigt.
 
-### Detected Vision Parts
+### *Detected Vision Parts (Erkannte Bildverarbeitungs-Teile)*
 
-**Detected Vision Parts** mostra:
-- Immagine acquisita in tempo reale dalla camera
-- Un **grafico storico** dei rilevamenti negli ultimi 30 secondi che mostra l'andamento del numero di pezzi riconosciuti per acquisizione.
+**Detected Vision Parts** zeigt:
+- In Echtzeit von der Kamera aufgenommenes Bild
+- Ein **Verlaufsdiagramm** der Erfassungen der letzten 30 Sekunden, das den Verlauf der Anzahl der pro Aufnahme erkannten Teile anzeigt.
 
 
-### Tabella Modelli Rilevati
+### *Tabelle der erkannten Modelle*
 
-**Dettaglio componenti riconosciuti**
+**Details zu den erkannten Komponenten**
 
-La tabella sotto l'immagine elenca tutti i componenti presenti nell'area di pick con i seguenti parametri:
+Die Tabelle unter dem Bild listet alle im Picking-Bereich vorhandenen Komponenten mit den folgenden Parametern auf:
 
 ```{list-table}
 :header-rows: 1
 :widths: 15 20 65
 
-* - Campo
-  - Tipo Dato
-  - Descrizione
+* - Feld
+  - Datentyp
+  - Beschreibung
 * - **Id**
-  - Intero
-  - Identificativo univoco progressivo del componente (0, 1, 2, ...).   
-  Id 0 = componente con score più alto (migliore corrispondenza al modello se ordinati con Score Descending come consigliato).
+  - Ganzzahl
+  - Eindeutige fortlaufende Kennung der Komponente (0, 1, 2, ...).   
+  Id 0 = Komponente mit der höchsten Punktzahl (beste Übereinstimmung mit dem Modell, wenn wie empfohlen nach „Score Descending“ sortiert).
 * - **X**
-  - Millimetri
-  - Coordinata X del componente.
+  - Millimeter
+  - X-Koordinate des Bauteils.
 * - **Y**
-  - Millimetri
-  - Coordinata Y del componente.
+  - Millimeter
+  - Y-Koordinate des Bauteils.
 * - **Rot (Rotation)**
-  - Gradi
-  - Angolo di rotazione del componente. 
+  - Grad
+  - Drehwinkel der Komponente. 
 * - **Score**
-  - Percentuale
-  - Valore percentuale (0.00-1.00 o 0%-100%) che esprime il grado di affidabilità del riconoscimento. Rappresenta la vicinanza/fedeltà rispetto al modello di riferimento. Score più alto = corrispondenza migliore.
+  - Prozentsatz
+  - Prozentwert (0,00-1,00 oder 0%-100%), der den Grad der Erkennungszuverlässigkeit ausdrückt. Er steht für die Übereinstimmung/Genauigkeit mit dem Referenzmodell. Höherer Score = bessere Übereinstimmung.
 ```
 
-```{list-table} **Interpretazione Score**
+```{list-table} **Interpretation des Scores**
 
 * - **Score > 0.90 (90%)**:
   - 
-    - Eccellente corrispondenza al modello
-    - Picking ad alta confidenza
+    - Hervorragende Übereinstimmung mit dem Modell
+    - Picking mit hoher Zuverlässigkeit
 
 * - **Score 0.80-0.90 (80-90%)**:
   - 
-    - Buona corrispondenza
-    - Picking sicuro se Accept Threshold configurato appropriatamente
+    - Gute Übereinstimmung
+    - Sicheres Picking, sofern der Accept Threshold richtig konfiguriert ist
 
 * - **Score 0.70-0.80 (70-80%)**:
   - 
-    - Corrispondenza accettabile
-    - Verificare consistenza nel tempo
+    - Akzeptable Übereinstimmung
+    - Die Konsistenz im Laufe der Zeit überprüfen
 
 * - **Score < 0.70 (< 70%)**:
   - 
-    - Corrispondenza scarsa
-    - Se ricorrente, rivedere modello o Accept Threshold.
+    - Geringe Übereinstimmung
+    - Bei wiederkehrenden Ereignissen das Modell oder Accept Threshold überprüfen.
 ```
 
 ---
 (indicatoriperformance)=
-## Indicatori di Stato e Performance
+## Status- und Leistungsindikatoren
 
-### Connettività
+### *Konnektivität*
 
-Indicatori di stato delle comunicazioni con i dispositivi esterni:
+Statusindikatoren Anzeige für die Kommunikation mit externen Geräten:
 
 ```{list-table}
 :header-rows: 1
 :widths: 25 75
 
-* - Indicatore
-  - Descrizione
-* - **FlexiBowl**
-  - Stato della connessione hardware tra il VisionController (PC) e FlexiBowl.  
-    **Verde**: Connesso e comunicante.  
-    **Rosso**: Disconnesso o errore comunicazione.
-* - **Robot**
-  - Stato della comunicazione con il robot.   
-    **Verde**: Connessione TCP/IP stabilita.  
-    **Rosso**: Disconnesso o timeout comunicazione.
+* - Indikator
+  - Beschreibung
+* - **FlexiBowl®**
+  - Status der Hardwareverbindung zwischen dem VisionController (PC) und FlexiBowl®.  
+    **Grün**: Verbunden und kommunizierend.  
+    **Rot**: Verbindung unterbrochen oder Kommunikationsfehler.
+* - **Roboter**
+  - Status der Kommunikation mit dem Roboter.   
+    **Grün**: TCP/IP-Verbindung hergestellt.  
+    **Rot**: Verbindung unterbrochen oder Zeitüberschreitung bei der Kommunikation.
 ```
 
 ```{warning}
-**Azioni in caso di disconnessione**
+**Maßnahmen bei einer Unterbrechung der Verbindung**
 
-**FlexiBowl rosso**:
-- Verificare cavo Ethernet FlexiBowl → VisionController
-- Controllare alimentazione FlexiBowl
-- Verificare IP FlexiBowl in FlexiBowl Setup
-- Tentare reconnect o riavvio software
+**FlexiBowl® rot**:
+- Überprüfen Sie das Ethernet-Kabel FlexiBowl® → VisionController
+- Überprüfen Sie die FlexiBowl®-Stromversorgung
+- Überprüfen Sie die FlexiBowl®-IP im FlexiBowl®-Setup
+- Versuchen Sie, eine neue Verbindung herzustellen oder die Software neu zu starten
 
-**Robot rosso**:
-- Verificare cavo Ethernet Robot → VisionController
-- Controllare che robot abbia aperto connessione TCP/IP
-- Verificare porta TCP/IP in Robot Setup
-- Controllare programma robot (Indirizzo IP del VisionController e Porta inserita correttamente nella sezione robot setup )
+**Roboter rot**:
+- Überprüfen Sie das Ethernet-Kabel Roboter → VisionController
+- Prüfen, ob der Roboter eine TCP/IP-Verbindung hergestellt hat
+- TCP/IP-Port im Roboter-Setup überprüfen
+- Roboterprogramm überprüfen (IP-Adresse des VisionControllers und Port im Abschnitt „Roboter-Setup“ korrekt eingegeben)
 
-In produzione, entrambi gli indicatori devono essere sempre verdi.
+In der Produktion müssen beide Indikatoren immer grün sein.
 ```
 
-### Analisi dei Tempi
+### *Zeitanalyse*
 
-Il sistema fornisce un breakdown dettagliato dei tempi di ciclo per individuare eventuali colli di bottiglia e ottimizzare il processo.
+Das System liefert eine detaillierte Aufschlüsselung der Zykluszeiten, um mögliche Engpässe zu erkennen und den Prozess zu optimieren.
 
 ```{list-table}
 :header-rows: 1
 :widths: 35 65
 
-* - Voce Temporale
-  - Descrizione
-* - **Camera Processing Time**
-  - Tempo impiegato per l'acquisizione dell'immagine dal sensore camera. Include tempo di esposizione e trasferimento dati. 
+* - Zeitposten
+  - Beschreibung
+* - **Kameraverarbeitungszeit**
+  - Zeit, die für die Bildaufnahme vom Kamerasensor benötigt wird. Einschließlich Belichtungszeit und Datenübertragung. 
 * - **Locator Processing Time**
-  - Tempo necessario all'algoritmo di visione per localizzare e riconoscere i componenti nell'immagine acquisita. Dipende da: numero modelli attivi, complessità modelli, numero clearances. 
+  - Zeit, die der Bildverarbeitungsalgorithmus benötigt, um die Komponenten im aufgenommenen Bild zu lokalisieren und zu erkennen. Abhängig von: Anzahl der aktiven Modelle, Komplexität der Modelle, Anzahl der Abstände. 
 * - **Total Vision Processing**
-  - Somma dei tempi di Camera e Locator. Rappresenta il tempo totale che il sistema di visione impiega per elaborare un'immagine e inviare la/le coordinate.       
-* - **Total FlexiBowl Time**
-  - Tempo impiegato dal FlexiBowl per eseguire una sequenza di movimentazione completa. 
+  - Summe der Zeiten für Kamera und Locator. Stellt die Gesamtzeit dar, die das Bildverarbeitungssystem benötigt, um ein Bild zu verarbeiten und die Koordinaten zu senden.       
+* - **Total FlexiBowl® Time**
+  - Zeit, die der FlexiBowl® benötigt, um eine vollständige Bewegungssequenz auszuführen. 
 * - **Total Robot Time**
-  - Tempo stimato o rilevato per l'operazione di Pick & Place completa del robot. Include: avvicinamento → presa → sollevamento → deposito → ritorno. 
+  - Geschätzte oder gemessene Zeit für den vollständigen Pick-&-Place-Vorgang des Roboters. Beinhaltet: Anfahren → Greifen → Anheben → Ablegen → Zurückfahren. 
 * - **Total Processing Time**
-  - Tempo totale del ciclo completo (Visione + FlexiBowl + Robot). Rappresenta il tempo dall'inizio di un ciclo all'inizio del successivo. Determina la produttività massima teorica (PPM).
+  - Gesamtzeit des gesamten Zyklus (Vision + FlexiBowl® + Roboter). Bezeichnet die Zeit vom Beginn eines Zyklus bis zum Beginn des nächsten. Bestimmt die theoretische maximale Produktivität (PPM).
 ```
 
 ```{tip}
-**Interpretazione tempi per ottimizzazione**
+**Auswertung der Zeiten zur Optimierung**
 
-Il grafico dei tempi permette di identificare il **collo di bottiglia** del sistema:
+Anhand des Zeitdiagramms lässt sich der **Engpass** des Systems ermitteln:
 
-**Se Total Vision Processing è il maggiore**:
-- Troppi modelli attivi → Disabilitare modelli non necessari
-- Modelli troppo complessi → Semplificare con Score Threshold più alto
-- Troppi Clearances → Ridurre numero o dimensione clearances
-- Camera Processing alto → Ridurre tempo esposizione
+**Wenn „Total Vision Processing“ den größten Anteil ausmacht**:
+- Zu viele aktive Modelle → Nicht benötigte Modelle deaktivieren
+- Zu komplexe Modelle → Durch einen höheren Score-Schwellenwert vereinfachen
+- Zu viele Clearances → Anzahl oder Größe der Clearances reduzieren
+- Hohe Kamera-Verarbeitungszeit → Belichtungszeit verkürzen
 
-**Se Total FlexiBowl Time è il maggiore**:
-- Troppe pause → Ottimizzare sincronizzazione Flip/Move e ridurre la pausa di stabilizzazione (Pause X ms)
-- Sequenza movimentazione troppo lenta → Aumentare velocità in Config FlexiBowl
-- Angolo rotazione eccessivo → Ridurre Move Angle
-- Shake troppo lungo → Aumentare velocità SHAKE e ridurre cicli SHAKE  
+**Wenn „Total FlexiBowl® Time“ den größten Anteil ausmacht**:
+- Zu viele Pausen → Synchronisation von Flip/Move optimieren und Stabilisierungspause (Pause X ms) verkürzen
+- Bewegungssequenz zu langsam → Geschwindigkeit in Config FlexiBowl® erhöhen
+- Drehwinkel zu groß → Move Angle verringern
+- Shake zu lang → SHAKE-Geschwindigkeit erhöhen und SHAKE-Zyklen reduzieren  
 
-**Se Total Robot Time è il maggiore**:
-- Traiettoria robot non ottimizzata → Ottimizzare path planning robot
-- Velocità robot troppo bassa → Aumentare velocità movimento (se sicuro)
-- Distanza deposito eccessiva → Riposizionare punto deposito più vicino
-- Tempi di presa troppo lunghi → Ottimizzare apertura/chiusura gripper
+**Wenn die „Total Robot Time“ den größten Anteil ausmacht**:
+- Roboterbahn nicht optimiert → Bahnplanung des Roboters optimieren
+- Robotergeschwindigkeit zu niedrig → Bewegungsgeschwindigkeit erhöhen (sofern sicher)
+- Ablageabstand zu groß → Ablagepunkt näher positionieren
+- Greifzeiten zu lang → Greiferöffnung/-schließung optimieren
 
-**Obiettivo ottimizzazione**: Bilanciare i tre tempi per ridurre Total Processing Time complessivo.
+**Optimierungsziel**: Die drei Zeiten ausgleichen, um die Gesamtverarbeitungszeit zu reduzieren.
 ```
 
 ---
 (analisigrafica)=
-## Analisi Grafica
+## Grafische Analyse
 
-I grafici nella parte inferiore della dashboard permettono un'analisi predittiva e diagnostica delle performance del sistema nel tempo.
+Die Grafiken im unteren Bereich des Dashboards ermöglichen eine prädiktive und diagnostische Analyse der Systemleistung im Zeitverlauf.
 
-### 1. Parts Per Minute (PPM)
+### *1. Parts Per Minute (PPM)*
 
 ```{list-table}
-* - **Grafico produttività**
-  - Mostra la produttività media del sistema espressa in **componenti prelevati al minuto** (Parts Per Minute).
+* - **Produktivitätsdiagramm**
+  - Zeigt die durchschnittliche Produktivität des Systems an, ausgedrückt in **entnommenen Teilen pro Minute** (Parts Per Minute).
 
-* - **Caratteristiche**:
+* - **Merkmale**:
   - 
-    - Asse X: Tempo 
-    - Asse Y: PPM (pezzi/secondo)
-    - Linea trend: Media mobile per identificare tendenze
+    - X-Achse: Zeit 
+    - Y-Achse: PPM (Teile/Sekunde)
+    - Trendlinie: Gleitender Durchschnitt zur Ermittlung von Trends
 
-* - **Utilizzo**:
+* - **Verwendung**:
   - 
-    - Monitorare stabilità produttività nel tempo
-    - Identificare degradazioni performance
-    - Calcolare throughput effettivo vs teorico
+    - Überwachung der Produktivitätsstabilität im Zeitverlauf
+    - Erkennen Sie Leistungseinbußen
+    - Berechnung des tatsächlichen Durchsatzes im Vergleich zum theoretischen Durchsatz
 ```
 
 ```{tip}
 
-  :::{list-table} **Interpretazione PPM**
+  :::{list-table} **PPM-Auslegung**
 
-    * - **PPM costante e stabile**:
+    * - **PPM konstant und stabil**:
       - 
-        - ✓ Sistema ben configurato
-        - ✓ Parametri ottimizzati
-        - ✓ Nessun collo di bottiglia critico
+        ✓ System gut konfiguriert  
+        ✓ Parameter optimiert  
+        ✓ Keine kritischen Engpässe  
 
-    * - **PPM in diminuzione progressiva**:
+    * - **Progressiv sinkender PPM**:
       - 
-        - ⚠️ Possibile usura componenti (superficie grip FlexiBowl)
-        - ⚠️ Hopper che si svuota (se presente, meno pressione = scarico più lento)
-        - ⚠️ Accumulo sporcizia su camera/illuminazione
+        ⚠️ Möglicher Verschleiß der Teile (FlexiBowl®-Grip-Oberfläche)  
+        ⚠️ Der Trichter leert sich 
+        ⚠️ Schmutzablagerungen an Kamera/Beleuchtung  
 
-    * - **PPM con fluttuazioni ampie**:
+    * - **PPM mit starken Schwankungen**:
       - 
-        - ⚠️ Instabilità nel processo
-        - ⚠️ Problemi intermittenti di riconoscimento
-        - ⚠️ Interferenze esterne (vibrazioni, luce variabile)
+        ⚠️ Instabilität im Prozess  
+        ⚠️ Gelegentliche Erkennungsprobleme  
+        ⚠️ Äußere Störungen (Vibrationen, wechselndes Licht)  
 
-    * - **Azioni correttive**:
+    * - **Korrekturmaßnahmen**:
       - 
-        - Analizzare correlazione con grafici tempi
-        - Identificare quale componente (Vision/FlexiBowl/Robot) causa variazioni
-        - Intervenire su parametri specifici
+        - Korrelation anhand von Zeitdiagrammen analysieren
+        - Ermitteln, welche Komponente (Vision/FlexiBowl®/Roboter) Abweichungen verursacht
+        - Auf bestimmte Parameter einwirken
   :::
 ```
 
-### 2. Fill Hopper
+### *2. Fill Hopper (Trichter befüllen)*
 
 ```{list-table}
-* - **Grafico attivazioni tramoggia**
-  - Rappresenta lo storico degli impulsi di scarico inviati alla tramoggia (Hopper), utile per monitorare l'autonomia del magazzino componenti.
+* - **Grafik Trichteraktivierungen**
+  - Zeigt den Verlauf der an den Trichter (Hopper) gesendeten Entleerungsimpulse an.
 
-* - **Caratteristiche**:
+* - **Merkmale**:
   - 
-    - Asse X: Tempo
-    - Asse Y: Attivazioni Hopper (eventi)
-    - Picchi: Ogni picco rappresenta un'attivazione scarico
+    - X-Achse: Zeit
+    - Y-Achse: Trichteraktivierungen (Ereignisse)
+    - Spitzen: Jeder Spitzenwert steht für eine Entleerungsaktivierung
 
-* - **Utilizzo**:
+* - **Verwendung**:
   - 
-    - Prevedere quando ricaricare Hopper fisicamente
-    - Verificare efficacia configurazione Hopper
-    - Identificare anomalie nel comportamento scarico
+    - Wirksamkeit der Trichterkonfiguration überprüfen
+    - Anomalien im Entleerungsverhalten erkennen
 ```
 
 ```{tip}
   
-  :::{list-table} **Analisi pattern Fill Hopper**
+  :::{list-table} **Analyse des Fill-Hopper-Musters**
 
-    * - **Attivazioni regolari e costanti**:
+    * - **Regelmäßige und kontinuierliche Aktivierungen**:
       - 
-        - ✓ Configurazione Hopper ottimale
-        - ✓ Flusso pezzi stabile e prevedibile
-        - ✓ Autonomia calcolabile (es: attivazione ogni 10 min)
+        ✓ Optimale Hopper-Konfiguration  
+        ✓ Stabiler und vorhersehbarer Teilefluss  
+        ✓ Berechenbare Betriebsdauer (z. B.: Aktivierung alle 10 Minuten)  
 
-    * - **Attivazioni sempre più frequenti**:
+    * - **Immer häufiger auftretende Aktivierungen**:
       - 
-        - ⚠️ Hopper si sta svuotando (meno pezzi = più attivazioni per mantenere livello)
-        - ⚠️ Time scarico insufficiente per volume ridotto
-        - **Azione**: Pianificare ricarica Hopper a breve
+        ⚠️ Der Trichter leert sich (weniger Teile = mehr Aktivierungen, um den Füllstand aufrechtzuerhalten)  
+        ⚠️ Unzureichende Entladezeit aufgrund geringen Volumens    
+        **Maßnahme**: Aufladen des Hoppers rechtzeitig planen
 
-    * - **Nessuna attivazione per lungo periodo**:
+    * - **Keine Aktivierung über einen längeren Zeitraum**:
       - 
-        - ⚠️ Robot fermo o rallentato (pezzi non vengono consumati)
-        - ⚠️ Possibile problema sistema che non richiede pezzi
-        - **Azione**: Verificare stato produzione
+        ⚠️ Roboter steht still oder läuft verlangsamt (Teile werden nicht verarbeitet)  
+        ⚠️ Mögliches Systemproblem, das keine Teile anfordert    
+        **Maßnahme**: Produktionsstatus prüfen
 
-    * - **Attivazioni molto ravvicinate (burst)**:
+    * - **Sehr kurz aufeinanderfolgende Auslösungen (Burst)**:
       - 
-        - ⚠️ Soglia Hopper mal configurata (troppo alta)
-        - ⚠️ Steps insufficienti (pezzi non arrivano in tempo)
-        - **Azione**: Rivedere Config Hopper
+        ⚠️ Hopper-Schwellenwert falsch konfiguriert (zu hoch)  
+        ⚠️ Unzureichende Schritte (Teile kommen nicht rechtzeitig an)  
+        **Maßnahme**: „Config Hopper“ überprüfen
   :::
 ```
 
-### 3. Vision - FlexiBowl - Robot (Grafico Comparativo)
+### *3. Vision - FlexiBowl® - Roboter (Vergleichsdiagramm)*
 
 ```{list-table} 
-* - **Grafico tempi sovrapposti**
-  - Un grafico comparativo a tre linee che sovrappone i tempi dei singoli processi nel tempo.
+* - **Diagramm mit überlappenden Zeiträumen**
+  - Ein Vergleichsdiagramm mit drei Linien, in dem die Dauer der einzelnen Prozesse zeitlich übereinandergelegt wird.
 
-* - **Utilizzo**: 
-  - Identificare istantaneamente quale processo influenza maggiormente il tempo di ciclo totale e come varia nel tempo.
+* - **Verwendung**: 
+  - Sofort erkennen, welcher Prozess die Gesamtzykluszeit am stärksten beeinflusst und wie sich dies im Laufe der Zeit verändert.
 ```
 ---
 
-## Monitoraggio Qualità - Indicatori critici da monitorare
+## Qualitätsüberwachung - Zu überwachende kritische Indikatoren
 
 ```{list-table}
-* - **Score dei componenti**
-  - Assicurarsi che lo **Score** dei componenti rilevati sia costantemente sopra la soglia di tolleranza (Accept Threshold) impostata durante la configurazione modello.
+* - **Komponenten-Score**
+  - Sicherstellen, dass der **Score** der erkannten Komponenten stets über dem Toleranzschwellenwert (Accept Threshold) liegt, der bei der Modellkonfiguration festgelegt wurde.
 
-* - **Monitoraggio Score**:
+* - **Überwachung der Werte**:
   - 
-    - Controllare periodicamente tabella Modelli Rilevati
-    - Verificare che score tipici siano 0.85-0.95
-    - Investigare se score scendono sotto 0.80 regolarmente
+    - Tabelle der erkannten Modelle regelmäßig überprüfen
+    - Sicherstellen, dass typische Werte zwischen 0,85 und 0,95 liegen
+    - Untersuchen, ob die Werte regelmäßig unter 0,80 fallen
 
-* - **Score in diminuzione progressiva**:
+* - **Progressiv sinkende Werte**:
   - 
-    - ⚠️ Pezzi reali diversi da quello di training (variazioni produzione)
-    - ⚠️ Illuminazione cambiata (backlight più debole, sporcizia)
-    - ⚠️ Camera non più a fuoco (vibrazioni, urti)
-    - ⚠️ Superficie FlexiBowl sporca (pattern interferente)
+    ⚠️ Echte Teile weichen vom Trainingsteil ab (Produktionsabweichungen)  
+    ⚠️ Beleuchtung verändert (schwächeres Hintergrundlicht, Verschmutzung)  
+    ⚠️ Kamera nicht mehr scharfgestellt (Vibrationen, Stöße)  
+    ⚠️ FlexiBowl®-Oberfläche verschmutzt (störende Muster)  
 
-* - **Azioni correttive**:
+* - **Korrekturmaßnahmen**:
   - 
-    - Pulire camera, illuminazione, superficie FlexiBowl
-    - Verificare messa a fuoco camera
-    - Considerare re-training modello se pezzi sono cambiati
-    - Ridurre Accept Threshold se score sono comunque affidabili ma più bassi
+    - Kamera, Beleuchtung und FlexiBowl®-Oberfläche reinigen
+    - Fokussierung der Kamera überprüfen
+    - Bei geänderten Teilen ein erneutes Training des Modells in Betracht ziehen
+    - Akzeptanzschwelle senken, wenn die Werte zwar zuverlässig, aber niedriger sind
 ```
 ---
 
-## Best Practices Monitoraggio Produttivo
+## Best Practices für die Produktionsüberwachung
 
-### Check giornalieri
+### *Tägliche Kontrollen*
 
 ```{list-table}
-* - **All'avvio produzione** (5 minuti):
+* - **Zu Beginn der Produktion** (5 Minuten):
   - 
-    - Verificare indicatori connettività FlexiBowl e Robot (verdi)
-    - Controllare che primi cicli mostrino score normali (>0.85)
-    - Osservare che PPM si stabilizzi su valore atteso
+    - Prüfen Sie den FlexiBowl®- und Roboter-Verbindungsanzeigen (grün).
+    - Prüfen Sie, ob die ersten Zyklen normale Werte (>0,85) aufweisen.
+    - Man kann beobachten, dass sich PPM auf dem erwarteten Wert stabilisiert.
 
-* - **Durante produzione** (check ogni 1-2 ore):
+* - **Während der Produktion** (Kontrolle alle 1–2 Stunden):
   - 
-    - Dare un'occhiata a PPM per verificare stabilità
-    - Controllare Fill Hopper per prevedere ricarica necessaria
-    - Verificare assenza errori o warning nel log
+    - PPM überprüfen, um die Stabilität sicherzustellen
+    - Füllstand des Trichters kontrollieren, um den Nachfüllbedarf abzuschätzen
+    - Log auf Fehler oder Warnungen überprüfen
 
-* - **A fine turno** (2 minuti):
+* - **Am Ende der Schicht** (2 Minuten):
   - 
-    - Annotare PPM medio del turno
-    - Controllare numero attivazioni Hopper
-    - Verificare eventuali anomalie o eventi
-    - Confrontare con dati giorno precedente
+    - Notieren Sie den durchschnittlichen PPM-Wert der Schicht
+    - Überprüfen Sie die Anzahl der Trichteraktivierungen
+    - Überprüfen Sie auf eventuelle Anomalien oder Ereignisse
+    - Vergleichen Sie mit den Daten des Vortags
 ```
-Questa routine minima garantisce identificazione rapida di problemi e mantiene tracciabilità performance.
+Diese Mindestroutine gewährleistet eine schnelle Problemerkennung und gewährleistet die Nachverfolgbarkeit der Leistung.
 
-### Report performance  
+### *Leistungsbericht*  
 
-```{tip} **Metriche chiave da tracciare**
-Per valutazione performance nel tempo, tracciare:
+```{tip} **Zu erfassende Schlüsselkennzahlen**
+Zur Bewertung der Leistung im Zeitverlauf erfassen Sie:
 
   :::{list-table} 
 
-    * - **Giornalmente**:
+    * - **Täglich**:
       - 
-        - PPM medio del turno
-        - Numero pezzi totali prelevati
-        - Numero attivazioni Hopper
-        - Downtime totale (e cause)
+        - Durchschnittlicher PPM-Wert der Schicht
+        - Gesamtzahl der aufgenommenen Teile
+        - Anzahl der Hopper-Aktivierungen
+        - Gesamtausfallzeit (und Ursachen)
 
-    * - **Settimanalmente**:
+    * - **Wöchentlich**:
       - 
-        - Trend PPM (in aumento/diminuzione?)
-        - Confronto PPM teorico vs reale
-        - Score medio componenti rilevati
-        - Eventuali modifiche configurazione e loro impatto
+        - PPM-Trend (steigend/fallend?)
+        - Vergleich von theoretischem und realem PPM
+        - Durchschnittlicher Score der erkannten Komponenten
+        - Eventuelle Konfigurationsänderungen und deren Auswirkungen
 
-    * - **Mensilmente**:
+    * - **Monatlich**:
       - 
         - Overall Equipment Effectiveness (OEE)
-        - Analisi colli di bottiglia principali
-        - Necessità di manutenzione predittiva
-        - ROI del sistema
+        - Analyse der hauptsächlichen Engpässe
+        - Notwendigkeit der vorausschauenden Wartung
+        - ROI des Systems
   :::
 
-Questi dati permettono ottimizzazione continua e giustificano investimenti in miglioramenti.
+Diese Daten ermöglichen eine kontinuierliche Optimierung und rechtfertigen Investitionen in Verbesserungen.
 ```
 
 ---
 
-```{tip}
-**Sistema operativo completato!**
-
-Congratulazioni! Il sistema FlexiVision One è ora completamente configurato, ottimizzato e validato per la produzione.
-
-**Riepilogo percorso completato:**
-- ✓ Setup hardware (FlexiBowl, Robot, Camera)
-- ✓ Calibrazione completa (Camera, Robot)
-- ✓ Modelli pezzo creati e ottimizzati
-- ✓ FlexiBowl configurato per movimentazione ottimale
-- ✓ Hopper configurato per alimentazione automatica (se presente)
-- ✓ Sistema validato con monitoraggio Dashboard
-- ✓ Performance verificate e stabili
-
-Il sistema è pronto per operare in produzione con supervisione minima. Utilizzare la Dashboard per monitoraggio continuo e ottimizzazione nel tempo.
-
-**Tempo totale investito**: 4-8 ore (primo sistema completo)
-
-**Risultato**: Sistema di picking robotizzato completamente autonomo e ottimizzato!
+```{raw} html
+<div style="border: 2px solid #0d6efd; border-radius: 12px; padding: 2rem; margin: 1.5rem 0; background-color: #f0f6ff; display: flex; align-items: flex-start; gap: 2rem;">
+  <div style="flex: 1; min-width: 0;">
+    <div style="font-size: 1.2rem; font-weight: 700; color: #0d6efd; margin-bottom: 0.5rem;"> Das System ist nun betriebsbereit!</div>
+    <div style="font-size: 0.95rem; color: #444; line-height: 1.6;">Glückwunsch! Das FlexiVision One-System ist nun vollständig konfiguriert, optimiert und für die Produktion validiert.</div>
+  </div>
+  <div style="flex: 1.4; background: white; border-radius: 8px; padding: 1.2rem 1.5rem; border: 1px solid #d0e4ff; font-size: 0.88rem; color: #333; line-height: 1.8;">
+    <div style="font-weight: 600; margin-bottom: 0.5rem;">Zusammenfassung des abgeschlossenen Arbeitsablaufs:</div>
+    <div>✓ Hardware-Einrichtung (FlexiBowl®, Roboter, Kamera)</div>
+    <div>✓ Vollständige Kalibrierung (Kamera, Roboter)</div>
+    <div>✓ FlexiBowl® für optimale Handhabung konfiguriert</div>
+    <div>✓ Trichter für automatische Beschickung konfiguriert (falls vorhanden)</div>
+    <div>✓ Teilemodelle erstellt und optimiert</div>
+    <div>✓ System mit Dashboard-Überwachung validiert</div>
+    <div>✓ Leistung geprüft und stabil</div>
+    <div style="margin-top: 0.8rem; font-style: italic; color: #555;">Das System ist bereit für den Einsatz in der Produktion mit minimaler Überwachung.</div>
+  </div>
+  <div style="flex: 0.7; display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.9rem;">
+    <div style="color: #555; font-weight: 600;">Neueste nützliche Tools:</div>
+    <a href="../FEHLERSUCHE/26_trb_shooting_guide.html" style="display: block; padding: 0.6rem 1rem; background: #0d6efd; color: white; border-radius: 6px; text-decoration: none; font-weight: 500;"> Troubleshooting</a>
+    <div style="font-size: 0.82rem; color: #555; margin-top: -0.4rem; padding-left: 0.3rem;">Leitfaden zur Fehlerbehebung bei häufigen Problemen</div>
+    <a href="../27_Support.html" style="display: block; padding: 0.6rem 1rem; background: #0d6efd; color: white; border-radius: 6px; text-decoration: none; font-weight: 500;"> Support</a>
+    <div style="font-size: 0.82rem; color: #555; margin-top: -0.4rem; padding-left: 0.3rem;">Kontakt zum technischen Support</div>
+  </div>
+</div>
 ```
----
-
-Una volta validato il sistema tramite Dashboard:
-
-**→ [Troubleshooting](../TROUBLESHOOTING/26_trb_shooting_guide.md)** - Guida risoluzione problemi comuni
-
-**→ [Support](../27_Support.md)** - Contatti assistenza tecnica
-

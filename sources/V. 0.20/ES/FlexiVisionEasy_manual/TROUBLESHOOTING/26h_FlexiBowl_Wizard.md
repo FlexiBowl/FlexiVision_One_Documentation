@@ -1,101 +1,101 @@
 (troubleshooting_fb_wizard)=
-# **FlexiBowl Wizard**
+# **Asistente FlexiBowl**
 
 ```{list-table}
 :header-rows: 1
 :widths: 30 35 35
 
 * - Problema
-  - Posibles Causas
+  - Posibles causas
   - Soluciones
-* - **Wizard no se inicia**
+* - **El asistente no se inicia**
   - • Receta no cargada
     
-    • FlexiBowl no conectado
+    • FlexiBowl® no conectado
     
-    • Setup inicial no completado
-  - • Cargar o crear receta primero
+    • Configuración inicial no completada
+  - • Cargue o cree una receta antes
     
-    • Verificar conexión FlexiBowl
+    • Compruebe la conexión FlexiBowl®
     
-    • Completar configuración base sistema
+    • Complete la configuración básica del sistema
 
-* - **Sentido de rotación configurado no corresponde**
+* - **El sentido de giro ajustado no corresponde**
   - • Error de selección CW/CCW
     
-  - • Verificar visualmente sentido de rotación real
+  - • Compruebe visualmente el sentido de giro real
     
-    • Corregir selección en el Wizard
+    • Corrija la selección en el asistente
     
-* - **Test Air-blow no funciona**
+* - **La prueba de soplado de aire no funciona**
   - • Aire comprimido no conectado
     
     • Presión insuficiente
     
     • Módulo no presente físicamente
-  - • Verificar conexión aire comprimido
+  - • Compruebe la conexión de aire comprimido
     
-    • Aumentar presión a 5-6 bar
+    • Aumente la presión a 5-6 bar
     
-    • Seleccionar "FlexiBowl NOT equipped" si el módulo está ausente
-* - **Test Flip no perceptible**
+    • Seleccione "FlexiBowl® NOT equipped" si el módulo está ausente
+* - **Prueba Flip no perceptible**
   - • Aire comprimido no conectado/insuficiente
     
     • Regulador de presión cerrado
     
-    • Fugas circuito neumático
-  - • Verificar aire comprimido conectado
+    • Fugas en el circuito neumático
+  - • Compruebe el aire comprimido conectado
     
-    • Abrir regulador en panel de control
+    • Abra el regulador en el panel de control
     
-    • Verificar presión 5-6 bar
+    • Compruebe la presión 5-6 bar
     
-    • Inspeccionar racores para detectar fugas
+    • Inspeccione los racores en busca de fugas
 * - **Parámetros calculados no óptimos**
-  - • Caracterización componente incorrecta
+  - • Caracterización incorrecta del componente
     
-    • Wizard usa valores genéricos
-  - • Revisar geometría y comportamiento seleccionados
+    • El asistente utiliza valores genéricos
+  - • Revise la geometría y el comportamiento seleccionados
     
-    • Aceptar parámetros Wizard como punto de partida
+    • Acepte los parámetros del asistente como punto de partida
     
-    • Afinar manualmente en dashboard resumen
+    • Ajuste manualmente en el panel resumen
 
-* - **Componentes se mueven durante adquisición**
+* - **Los componentes se mueven durante la adquisición**
   - • Velocidad/aceleración demasiado altas
     
-    • Pausas de estabilización ausentes
+    • Ausencia de pausas de estabilización
     
-    • Superficie grip no adecuada
-  - • Disminuir Speed y Accel
+    • Superficie de agarre no adecuada
+  - • Disminuya Speed y Accel
     
-    • Insertar pausas 200-500ms
+    • Inserte pausas de 200-500 ms
     
-    • Sustituir superficie grip por una más adherente
+    • Sustituya la superficie de agarre por una más adherente
 * - **Soplado no eficaz**
-  - • Presión aire insuficiente/excesiva
+  - • Presión de aire insuficiente/excesiva
     
     • Boquillas obstruidas
-  - • Verificar presión 5-6 bar
+  - • Compruebe la presión 5-6 bar
     
-    • Limpiar boquillas air-blow
+    • Limpie las boquillas de soplado
 
-* - **Modificaciones parámetros no se aplican**
+* - **Los cambios de parámetros no se aplican**
   - • "Synchronize Parameters" no pulsado
     
     • Receta no guardada
-  - • Hacer clic **SIEMPRE** en Synchronize Parameters después de modificaciones
+  - • **SIEMPRE** haga clic en Synchronize Parameters después de los cambios
     
-    • Guardar receta para hacer permanentes las modificaciones
-* - **Turn FLB no funciona durante setup**
-  - • FlexiBowl no conectado
+    • Guarde la receta para hacer permanentes las modificaciones
+* - **Turn FLB no funciona durante la configuración**
+  - • FlexiBowl® no conectado
     
     • Comando no configurado
     
-    • FlexiBowl en error
-  - • Verificar conexión FlexiBowl
+    • FlexiBowl® en error
+  - • Compruebe la conexión FlexiBowl®
     
-    • Controlar configuración FlexiBowl Setup
+    • Compruebe la configuración FlexiBowl® Setup
     
-    • Verificar LED READY FlexiBowl
+    • Compruebe el LED READY del FlexiBowl®
 ```

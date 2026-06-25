@@ -1,68 +1,68 @@
-# **Información de Seguridad**
+# **Información de seguridad**
 
-Las siguientes instrucciones de seguridad, precauciones generales y normas relativas a la manipulación y al entorno operativo deben respetarse escrupulosamente para garantizar la seguridad del personal, la integridad del producto y el correcto funcionamiento de la instalación.
+Las siguientes instrucciones de seguridad, precauciones generales y normas relativas a la manipulación y el entorno operativo deben respetarse escrupulosamente para garantizar la seguridad del personal, la integridad del producto y el correcto funcionamiento del sistema.
 
 ```{warning}
 **Responsabilidad del usuario**
 
-El cumplimiento de todas las normas de seguridad indicadas en esta sección es obligatorio y responsabilidad del usuario final. El incumplimiento puede causar daños a personas, equipos o comprometer el funcionamiento del sistema.
+El cumplimiento de todas las normas de seguridad de esta sección es obligatorio y responsabilidad del usuario final. De lo contrario, pueden producirse daños personales y materiales o afectar al funcionamiento del sistema.
 ```
 
 ---
 
 ## Seguridad operativa
 
-### Integración con sistemas robotizados
+### *Integración con sistemas robotizados*
 
-#### **Requisitos de seguridad de la celda**
 
-```{warning}
-FlexiVision One opera en estrecha conexión con sistemas robotizados de terceros. El usuario debe garantizar que el área de trabajo esté equipada con todas las medidas de seguridad necesarias exigidas por la normativa pertinente
+```{warning} **Requisitos de seguridad de las células**  
+
+FlexiVision One funciona en estrecha conexión con sistemas robóticos de terceros. El usuario debe asegurarse de que la zona de trabajo está equipada con todas las medidas de seguridad necesarias impuestas por la normativa pertinente.
 ```
-#### **Atención durante la operación**
 
-```{warning}
 
-Durante el funcionamiento del sistema, tener siempre en cuenta:
+```{warning} **Precaución durante el funcionamiento**    
 
-- Dimensiones físicas del robot y del FlexiBowl
-- Trayectorias y velocidades de los movimientos robóticos
+Al utilizar el sistema, tenga siempre en cuenta:
+
+- Dimensiones físicas del robot y del FlexiBowl®
+- Trayectorias y velocidad de los movimientos del robot
 - Posibles situaciones imprevistas (caída de piezas, errores de recogida)
-- Zonas de peligro durante las fases de vibración del FlexiBowl
+- Zonas de peligro durante las fases de manipulación del FlexiBowl®
 ```
 
-### Precauciones generales antes de las intervenciones
+### *Precauciones generales antes de las intervenciones*
 
-#### **Desconexión de alimentaciones**
 
-```{warning}
-Antes de realizar cualquier intervención de mantenimiento, modificación o inspección en el sistema, asegurarse siempre de que:
+```{warning} **Desconexión de la alimentación**  
 
-- Todas las fuentes de alimentación eléctrica estén desconectadas (VisionController, FlexiBowl, Cámara, Iluminador)
-- La alimentación neumática esté descargada y desconectada (si está presente)
-- Los cables de conexión estén físicamente desconectados
-- El robot esté en modo de seguridad o completamente apagado
-```
-#### **Procedimientos de seguridad**
+Antes de realizar cualquier trabajo de mantenimiento, modificación o inspección en el sistema, asegúrese siempre de que:
 
-```{warning}
-
-No confiar exclusivamente en los interruptores: utilizar procedimientos de lockout/tagout (LOTO) cuando estén disponibles.
+- Todas las fuentes de energía están desconectadas (VisionController, FlexiBowl®, Cámara, Iluminador)
+- La energía neumática está descargada y desconectada (si está presente)
+- Los cables de conexión están físicamente desconectados
+- El robot está en modo de seguridad o completamente apagado
 ```
 
-### Modificaciones y manipulaciones
 
-#### **Prohibición de modificaciones no autorizadas**
+```{warning} **Procedimientos de seguridad**    
 
-```{warning}
-No modificar nunca el producto ni sus componentes sin autorización escrita expresa de ARS S.r.l.
+No confíe únicamente en los interruptores: utilice procedimientos de bloqueo/etiquetado (LOTO) cuando estén disponibles.
 ```
-#### **Consecuencias de las modificaciones**
 
-```{warning}
+### *Modificaciones y manipulaciones*
+
+
+```{warning} **Prohibición de modificaciones no autorizadas**    
+
+No modifique nunca el producto o sus componentes sin la autorización expresa y por escrito de ARS S.r.l.
+```
+
+```{warning} **Consecuencias de los cambios**    
+
 Las modificaciones no autorizadas pueden:
 
-- Causar fallos de funcionamiento del sistema
+- Provocar fallos de funcionamiento del sistema
 - Invalidar la garantía
 - Crear riesgos de lesiones, descargas eléctricas o incendios
 - Comprometer las certificaciones de seguridad del producto
@@ -70,154 +70,213 @@ Las modificaciones no autorizadas pueden:
 
 ---
 
+## Predisposiciones a cargo del cliente
+
+Sin perjuicio de cualquier acuerdo contractual en contrario, las siguientes disposiciones son **normalmente responsabilidad del Cliente**:
+
+````{list-table}
+:header-rows: 1
+:widths: 25 75
+
+* - Categoría
+  - Descripción
+* - **Locales**
+  - Obras de albañilería, cimientos, canalizaciones e iluminación eventualmente requeridas.
+* - **Instalaciones eléctricas**
+  - Hasta los puntos de alimentación de la máquina, de conformidad con las normas vigentes en el país de instalación. Las especificaciones técnicas se incluyen en el contrato de venta. El fabricante no asume ninguna responsabilidad si el cliente no las garantiza.
+* - **Alimentación eléctrica**
+  - Incluido el conductor de puesta a tierra, de acuerdo con las características y tolerancias especificadas en este manual.
+* - **Servicios auxiliares**
+  - Adecuados a las necesidades de la máquina.
+* - **Utensilios y materiales de consumo**
+  - Necesarios para el montaje y la instalación.
+* - **Lubricantes**
+  - Necesarios para la puesta en marcha de la máquina.
+* - **Alimentación neumática**
+  - Adecuada según se especifica en la sección "Datos técnicos".
+* - **Manipulación**
+  - Medios de elevación y manipulación adecuados.
+````
+
+---
+
+## Condiciones ambientales admisibles
+
+El sistema está diseñado para uso **exclusivo en interiores**, protegido de la intemperie y los agentes agresivos. El entorno no debe estar clasificado ATEX.
+
+````{list-table}
+:header-rows: 1
+:widths: 30 70
+
+* - Parámetro
+  - Límite admitido
+* - **Temperatura ambiente**
+  - 5 ÷ 40 °C
+* - **Humedad relativa**
+  - 5 – 90% (sin condensación), variación máx. 0,005 p.u./h
+* - **Iluminación ambiente**
+  - Luz de neón
+* - **Polvo**
+  - Ausencia de polvo excesivo, abrasivo o combustible
+* - **Vapores y gases**
+  - Ausencia de humos corrosivos, vapores oleosos, mezclas explosivas
+* - **Vibraciones y golpes**
+  - Ausencia de vibraciones, golpes o sacudidas anormales
+* - **Variaciones térmicas**
+  - Máximo 5K/h
+* - **Otras exclusiones**
+  - Aire salobre, intemperie, radiación nuclear, condiciones inusuales de almacenamiento
+````
+
+````{warning}
+Las condiciones ambientales distintas de las especificadas pueden causar graves daños en la máquina y anular la garantía.
+````
+
+````{important}
+La superficie de trabajo debe estar suficientemente iluminada. En presencia de zonas de sombra o desniveles, corresponde al usuario disponer dispositivos de iluminación adecuados.
+````
+
+La máquina está diseñada y fabricada para funcionar con seguridad en las siguientes condiciones ambientales:
+
+| Condiciones ambientales admisibles | |
+|---|---|
+| **Temperatura ambiente** | 5 ÷ 40 °C |
+| **Rango de humedad** | 5 - 90 % (sin condensación) |
+| **Iluminación ambiental** | Luz de neón |
+
+```{warning}
+Las condiciones ambientales distintas de las especificadas pueden causar graves daños en la máquina. La instalación de la máquina en entornos que no correspondan a lo indicado anula la garantía de los componentes a sustituir.
+```
+
+```{important}
+La superficie de trabajo debe estar suficientemente iluminada. Si en el puesto de trabajo se detectan zonas de sombra o desniveles, corresponderá al usuario disponer dispositivos de iluminación adecuados.
+```
+
+---
+
 ## Condiciones ambientales y protección
 
-### Protección contra líquidos
+### *Protección contra líquidos*
 
-#### **Riesgo de contacto con líquidos**
 
-```{warning}
+```{warning} **Riesgo de contacto con líquidos**    
 
-No utilizar el producto en entornos donde el VisionController, la cámara u otros componentes electrónicos puedan entrar en contacto con:
+No utilice el producto en entornos en los que el VisionController, la cámara u otros componentes electrónicos puedan entrar en contacto:
 
-- Gotas de agua o salpicaduras
+- Gotas o salpicaduras de agua
 - Aceites, lubricantes u otros líquidos industriales
 - Condensación o humedad excesiva
-- Polvos conductivos
-```
-#### **Soluciones para entornos críticos**
-
-```{note}
-
-Si el sistema debe operar en entornos con presencia de líquidos, prever protecciones adecuadas (envolventes IP65 o superiores) y consultar al servicio técnico ARS para soluciones personalizadas.
+- Polvos conductores
 ```
 
-### Temperaturas operativas
+```{note} **Soluciones para entornos críticos**    
 
-#### **Superficies calientes - Temperaturas máximas**
-
-```{warning}
-En condiciones de uso intenso o en entornos cálidos, algunos componentes del sistema pueden alcanzar temperaturas elevadas:
-
-- VisionController: hasta 50°C en las superficies externas
-- Iluminador LED: hasta 40°C en la superficie frontal
-- Cámara industrial: hasta 50°C en el cuerpo metálico
+Si el sistema va a funcionar en entornos con presencia de líquidos, proporcione una protección adecuada (envolventes IP65 o superior) y consulte al Servicio Técnico de ARS para obtener soluciones personalizadas.
 ```
-#### **Responsabilidad del cliente**
 
-```{warning}
+### *Temperaturas de funcionamiento*
+
+
+```{warning} **Superficies calientes - Temperaturas máximas**    
+
+En condiciones de uso intensivo o ambientes calurosos, algunos componentes del sistema pueden alcanzar altas temperaturas:
+
+- VisionController: hasta 50°C en superficies exteriores
+- Iluminador LED: hasta 40°C en superficie frontal
+- Cámara industrial: hasta 50°C en carcasa metálica
+```
+
+
+```{warning} **Responsabilidad del cliente**    
+
 Es responsabilidad del cliente:
 
-- Documentar los riesgos térmicos en su propia evaluación de riesgos
-- Instruir al personal sobre los procedimientos para evitar contactos accidentales
-- Prever señalización de advertencia donde sea necesario
-- Garantizar una ventilación adecuada de los componentes
+- Documente los riesgos térmicos en su evaluación de riesgos
+- Forme al personal en los procedimientos para evitar el contacto accidental
+- Coloque señales de advertencia cuando sea necesario
+- Garantice una ventilación adecuada de los componentes
 ```
 
-### Condiciones ambientales para instalación y almacenamiento
+### *Condiciones ambientales para la instalación y el almacenamiento*
 
-#### **Requisitos ambientales - Tabla de referencia**
+```{note} **Requisitos medioambientales - Tabla de referencia**    
 
-```{note}
+Para garantizar la durabilidad y fiabilidad, el VisionController y la cámara deben utilizarse y almacenarse en las siguientes condiciones:
 
-Para garantizar duración y fiabilidad, el VisionController y la cámara deben utilizarse y conservarse en las siguientes condiciones:
-
-| Parámetro | Condiciones operativas | Condiciones de almacenamiento |
+| Parámetro | Condiciones de funcionamiento | Condiciones de almacenamiento |
 |-----------|---------------------|--------------------------|
-| **Temperatura** | +1°C ÷ +50°C | -20°C ÷ +65°C |
+| **Temperatura** | +5°C ÷ +40°C | +5°C ÷ +40°C |
 | **Humedad relativa** | <90% (sin condensación) | <90% (sin condensación) |
-
-
 ```
-#### **Precauciones ambientales adicionales**
 
-```{note}
+```{note} **Precauciones adicionales para el medio ambiente**    
+
 Para preservar la integridad de los componentes:
 
-- Evitar la exposición directa a la luz solar
-- Proteger contra vibraciones excesivas durante el almacenamiento
-- Mantener en un entorno seco y libre de polvos agresivos
-- La cámara es sensible a los choques mecánicos: manipular con cuidado
+- Evite la exposición directa a la luz solar
+- Protéjala de vibraciones excesivas durante el almacenamiento
+- Consérvela en un entorno seco y sin polvo
+- La cámara es sensible a los golpes mecánicos: manipúlela con cuidado
 ```
 
 ---
 
 ## Transporte y manipulación
 
-### Recepción e inspección
+### *Recepción e inspección*
 
-#### **Inspección a la llegada**
+```{note} **Inspección a la llegada**    
 
-```{note}
 Al recibir el producto, antes de firmar el albarán de entrega:
 
-1. **Inspección externa del embalaje**: Verificar la integridad de la caja y del embalaje exterior. Comprobar la presencia de posibles señales de golpes, aplastamientos o humedad.
-
-2. **Verificación del contenido**: Comparar el contenido con la nota de entrega. Verificar la presencia de todos los componentes pedidos.
+1. **Inspección externa de los envases**: Compruebe la integridad de la caja y del embalaje exterior. Compruebe si hay signos de impacto, aplastamiento o humedecimiento.
+2. **Verificación del contenido**: Compare el contenido con el albarán de entrega. Compruebe que están presentes todos los componentes solicitados.
 ```
 
-#### **En caso de daños o discrepancias**
+```{note} **En caso de daños o discrepancias**    
 
-```{note}
-Si se detectan problemas:
+Si surgen problemas:
 
-- NO firmar el recibo como "conforme"
-- Anotar los daños en el documento de transporte
-- Fotografiar cualquier daño evidente
-- Contactar inmediatamente con el servicio de asistencia ARS: 
-    [service@arsautomation.com](mailto:service@arsautomation.com) 
-    [us.service@arsautomation.com](mailto:us.service@arsautomation.com) si se contacta desde América
+- NO firme el recibo como "conforme"
+- Anote los daños en el documento de transporte
+- Fotografíe cualquier daño evidente
+- Póngase en contacto con el servicio ARS inmediatamente:
+  [service@arsautomation.com](mailto:service@arsautomation.com)
+  [us.service@arsautomation.com](mailto:us.service@arsautomation.com) si contacta desde América
 ```
 
-### Manipulación y almacenamiento
-Para prevenir daños durante el transporte y el almacenamiento:
+### *Manipulación y almacenamiento*
 
-#### **Transporte**
+Para evitar daños durante el transporte y el almacenamiento:
 
 ```{tip}
 **Durante el transporte:**
-- Manipular siempre el embalaje en posición vertical (respetar las flechas "ARRIBA" del embalaje)
+- Mover siempre el embalaje en posición vertical (respetar las flechas "ARRIBA" en el embalaje)
 - No dejar caer ni golpear el paquete
 - Utilizar carros o transpaletas adecuados al peso
 - Evitar cambios bruscos de temperatura
 ```
-#### **Almacenamiento**
 
 ```{tip}
 **Durante el almacenamiento:**
-- Conservar en un lugar seco y cubierto
-- No superponer otras cargas sobre el embalaje
-- No subirse ni apoyarse sobre el embalaje
+- Conservar en lugar seco y cubierto
+- No apilar otras cargas sobre el embalaje
+- No subir ni apoyarse en el embalaje
 - Respetar las condiciones ambientales indicadas en la tabla anterior
 ```
-#### **Desembalaje**
 
 ```{tip}
 **Durante el desembalaje:**
 - Abrir con cuidado para no dañar los componentes internos
 - Conservar el embalaje original para posibles devoluciones o transportes futuros
-- Verificar la presencia de todos los accesorios y de la documentación
+- Comprobar la presencia de todos los accesorios y la documentación
 ```
 
 ---
 
-## Eliminación y fin de vida
-
-### **Eliminación responsable**
+## Eliminación y fin de vida útil
 
 ```{warning}
-
-Cuando el producto alcance el final de su ciclo de vida, debe eliminarse de conformidad con las normativas vigentes relativas a los residuos de aparatos eléctricos y electrónicos (RAEE/WEEE).
+Cuando el producto llegue al final de su ciclo de vida, debe eliminarse de conformidad con la normativa vigente relativa a los residuos de aparatos eléctricos y electrónicos (RAEE/WEEE).
 ```
-### **Componentes sujetos a eliminación especial**
-
-```{note}
-**Componentes sujetos a eliminación especial:**
-- Tarjetas electrónicas (VisionController): RAEE categoría 6
-- Cámara industrial: RAEE categoría 6
-- Iluminadores LED: RAEE categoría 5
-- Cables y conectores: eliminación con materiales eléctricos
-```
----
-
 

@@ -1,4 +1,4 @@
-(troubleshooting_fb_wizard)=
+﻿(troubleshooting_fb_wizard)=
 # **FlexiBowl Wizard**
 
 ```{list-table}
@@ -6,96 +6,96 @@
 :widths: 30 35 35
 
 * - Problème
-  - Causes Possibles
+  - Causes possibles
   - Solutions
 * - **Wizard ne démarre pas**
-  - • Recette non chargée
+  - • La recette n'est pas chargée
     
-    • FlexiBowl non connecté
+    • FlexiBowl® non connecté
     
-    • Setup initial non terminé
+    • La configuration initiale n'est pas terminée
   - • Charger ou créer d'abord une recette
     
-    • Vérifier connexion FlexiBowl
+    • Vérifier la connexion du FlexiBowl
     
-    • Compléter configuration de base système
+    • Terminer la configuration de base du système
 
-* - **Sens de rotation configuré ne correspond pas**
+* - **Le sens de rotation réglé ne correspond pas à**
   - • Erreur de sélection CW/CCW
     
   - • Vérifier visuellement le sens de rotation réel
     
     • Corriger la sélection dans le Wizard
     
-* - **Test Air-blow ne fonctionne pas**
-  - • Air comprimé non connecté
+* - **Le test d'air soufflé ne fonctionne pas**
+  - • L'air comprimé n'est pas raccordé
     
     • Pression insuffisante
     
-    • Module non présent physiquement
-  - • Vérifier connexion air comprimé
+    • Le module n'est pas physiquement présent
+  - • Vérifier la connexion à l'air comprimé
     
-    • Augmenter pression à 5-6 bar
+    • Augmenter la pression à 5-6 bars
     
-    • Sélectionner "FlexiBowl NOT equipped" si le module est absent
-* - **Test Flip non perceptible**
-  - • Air comprimé non connecté/insuffisant
+    • Sélectionner «FlexiBowl® NOT equipped»  si le module est absent
+* - **Test de renversement non perceptible**
+  - • Air comprimé non raccordé/insuffisant
     
     • Régulateur de pression fermé
     
-    • Fuites circuit pneumatique
-  - • Vérifier air comprimé connecté
+    • Fuites du circuit pneumatique
+  - • Vérifier l'air comprimé raccordé
     
-    • Ouvrir régulateur sur panneau de contrôle
+    • Ouvrir le régulateur sur le panneau de contrôle
     
-    • Vérifier pression 5-6 bar
+    • Vérifier que la pression est à 5-6 bar
     
-    • Inspecter les raccords pour fuites
+    • Vérifier l'étanchéité des raccords
 * - **Paramètres calculés non optimaux**
-  - • Caractérisation composant erronée
+  - • Caractérisation incorrecte du composant
     
-    • Wizard utilise valeurs génériques
-  - • Revoir géométrie et comportement sélectionnés
+    • L'assistant utilise des valeurs génériques
+  - • Revoir la géométrie et le comportement sélectionnés
     
-    • Accepter paramètres Wizard comme point de départ
+    • Accepter les paramètres de l'assistant comme point de départ
     
-    • Affiner manuellement dans dashboard récapitulatif
+    • Affiner manuellement dans le tableau de bord récapitulatif
 
-* - **Composants bougent pendant acquisition**
-  - • Vitesse/accélération trop élevées
+* - **Les composants se déplacent pendant l'acquisition**
+  - • Vitesse/accélération trop élevée
     
-    • Pauses stabilisation absentes
+    • Absence des pauses de stabilisation
     
-    • Surface grip non adaptée
-  - • Diminuer Speed et Accel
+    • Surface d'adhérence inadaptée
+  - • Diminuer la vitesse et l'accélération
     
-    • Insérer pauses 200-500ms
+    • Saisir des pauses 200-500 ms
     
-    • Remplacer surface grip par une plus adhérente
-* - **Soufflage non efficace**
-  - • Pression air insuffisante/excessive
+    • Remplacer la surface de préhension par une surface plus adhérente
+* - **Soufflage inefficace**
+  - • Pression d'air insuffisante/excessive
     
-    • Buses obstruées
-  - • Vérifier pression 5-6 bar
+    • Buses bouchées
+  - • Vérifier que la pression est à 5-6 bar
     
-    • Nettoyer buses air-blow
+    • Nettoyer les buses de soufflage d'air
 
-* - **Modifications paramètres ne s'appliquent pas**
-  - • "Synchronize Parameters" non appuyé
+* - **Les changements de paramètres ne s'appliquent pas**
+  - •&nbsp;« Synchronize Parameters&nbsp;» n'a pas été actionné
     
-    • Recette non enregistrée
-  - • **TOUJOURS** cliquer sur Synchronize Parameters après modifications
+    • Recette non sauvegardée
+  - • **TOUJOURS** cliquer sur Synchronise Parameters après les modifications
     
-    • Enregistrer recette pour rendre les modifications permanentes
-* - **Turn FLB ne fonctionne pas pendant setup**
-  - • FlexiBowl non connecté
+    • Sauvegarder la recette pour rendre les modifications permanentes
+* - **Turn FLB ne fonctionne pas pendant la configuration**
+  - • FlexiBowl® n'est pas connecté
     
     • Commande non configurée
     
-    • FlexiBowl en erreur
-  - • Vérifier connexion FlexiBowl
+    • FlexiBowl® en erreur
+  - • Vérifier la connexion du FlexiBowl®
     
-    • Contrôler configuration FlexiBowl Setup
+    • Vérifier la configuration du FlexiBowl
     
-    • Vérifier LED READY FlexiBowl
+    • Vérifier la LED READY FlexiBowl®
 ```

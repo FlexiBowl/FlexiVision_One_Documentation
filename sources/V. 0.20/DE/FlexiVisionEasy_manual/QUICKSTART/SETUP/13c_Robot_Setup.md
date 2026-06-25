@@ -1,163 +1,164 @@
 (robotsetup)=
-# **Passo 6 : Robot Setup** 
+# **Roboter Setup** 
 
-Questa sezione descrive la procedura per configurare la comunicazione TCP/IP tra il sistema FlexiVision One e il robot industriale. Una comunicazione corretta è essenziale per permettere lo scambio di coordinate e comandi tra i due sistemi.
+In diesem Abschnitt wird das Verfahren zur Konfiguration der TCP/IP-Kommunikation zwischen dem FlexiVision One-System und dem Industrieroboter beschrieben. Um den Austausch von Koordinaten und Befehlen zwischen den beiden Systemen zu ermöglichen, ist eine gute Kommunikation unerlässlich.
 
 ```{note}
-**Prerequisiti**
+**Voraussetzungen**
 
-Prima di procedere, assicurarsi che:
-- Il robot sia acceso e operativo
-- Il cavo Ethernet tra VisionController e robot sia collegato
-- Il robot sia configurato per accettare connessioni TCP/IP (consultare manuale robot)
-- Si conosca la porta di comunicazione configurata nel codice del robot
+Stellen Sie vor dem Fortfahren Folgendes sicher:
+- Der Roboter ist eingeschaltet und betriebsbereit
+- Das Ethernet-Kabel zwischen VisionController und Roboter ist angeschlossen
+- Der Roboter ist so konfiguriert, dass er TCP/IP-Verbindungen akzeptiert (siehe Roboterhandbuch)
+- Der im Robotercode konfigurierte Kommunikationsport ist bekannt
 ```
 
 ---
 
-## Accesso alla configurazione Robot
+## Zugriff auf die Roboterkonfiguration
 
 ```{list-table}
 
 * - **1** 
-  - Dalla pagina principale del software, cliccare su <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
+  - Klicken Sie auf der Hauptseite der Software auf <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
 * - **2**
-  - Nella pagina SETUP, identificare e cliccare sull'icona **Robot Setup**
-    ```{dropdown} Pagina Setup 
-       ![Pagina Setup](../../../../../_shared/media/images/pagina_setup1.png)
+  - Suchen Sie auf der SETUP-Seite das Symbol **Roboter Setup** und klicken Sie darauf
+    ```{dropdown} Setup-Seite 
+       ![Setup-Seite](../../../../../_shared/media/images/pagina_setup1.png)
     ```
 * - **3**
-  - Si apre la pagina di configurazione della comunicazione robot
+  - Die Seite zur Konfiguration der Roboterkommunikation wird geöffnet
 ```
 
 ---
 
-## Panoramica interfaccia Robot Setup
+## Übersicht über die Benutzeroberfläche Roboter-Setup
 
-La pagina Robot Setup presenta diverse sezioni per configurare e testare la comunicazione:
-![Pagina Robot Setup](../../../../../_shared/media/images/pagina_robotsetup.png)
+Die Seite Roboter-Setup enthält mehrere Abschnitte zum Konfigurieren und Testen der Kommunikation:
+![Seite Roboter-Setup](../../../../../_shared/media/images/pagina_robotsetup.png)
 
 ```{list-table}
 :header-rows: 1
 :widths: 30 70
 
-* - Sezione
-  - Descrizione
+* - Abschnitt
+  - Beschreibung
 * - **Port**
-  - Porta TCP/IP con cui il robot comunica (configurata sul controller robot)
+  - TCP/IP-Port, über den der Roboter kommuniziert (auf der Robotersteuerung konfiguriert)
 * - **Reconfigure Server**
-  - Pulsante per riconfigurare il server di comunicazione con nuovi parametri
+  - Schaltfläche zum Neukonfigurieren des Kommunikationsservers mit neuen Parametern
 * - **Server Online**
-  - Indicatore di stato del server FlexiVision One (verde = server attivo e accessibile)
+  - Statusanzeige des FlexiVision One Servers (grün = Server aktiv und erreichbar)
 * - **Client Connect**
-  -  Indicatore di stato del client robot (verde = robot connesso)
-* - **Messaggi robot-flexivision**
-  - Finestre di log che mostrano i messaggi scambiati tra robot e FlexiVision One (utilizzata per debugging):
-      - la prima finestra (la più piccola )indica i messaggi che FlexiVision One o l'operatore inviano
-      - la seconda finestra indica i messaggi che Flexiision riceve
+  - Statusanzeige des Roboter-Clients (grün = Roboter verbunden)
+* - **Roboter-Flexivision-Meldungen**
+  - Log-Fenster, die die zwischen Roboter und FlexiVision One ausgetauschten Meldungen anzeigen (wird zum Debuggen verwendet):
+      - Das erste (kleinste) Fenster zeigt die Meldungen an, die FlexiVision One oder der Bediener senden
+      - Das zweite Fenster zeigt die Meldungen an, die FlexiVision empfängt
 ```
 
 ---
-## Procedura di configurazione
+## Konfigurationsverfahren
 
-### Step 1: Inserimento porta di comunicazione
+### *Schritt 1: Eingabe des Kommunikationsports*
 
-La porta TCP/IP è il parametro critico che deve corrispondere tra robot e FlexiVision One:
+Der TCP/IP-Port ist der entscheidende Parameter, der zwischen Roboter und FlexiVision One übereinstimmen muss:
 
 ```{list-table}
 * - **4** 
-  - Nel campo **Port**, inserire il numero della porta TCP/IP con cui il robot comunicherà
+  - Geben Sie im Feld **Port** die TCP/IP-Portnummer ein, mit der der Roboter kommunizieren soll.
 ```
 ```{note}
-Valore predefinito:      (porta standard FlexiVision One)  
-Il numero di porta deve essere:
-   - Lo stesso configurato nel programma robot
-   - Compreso tra 1024 e 65535 (porte utente)
-   - Non in conflitto con altri servizi sulla rete
+Standardwert: (Standard-Port FlexiVision One)  
+Die Portnummer muss:
+   - mit der im Roboterprogramm konfigurierten übereinstimmen
+   - zwischen 1024 und 65535 liegen (Benutzerports)
+   - keinen Konflikt mit anderen Diensten im Netzwerk verursachen
 ```
 
 ```{warning}
 
-È **fondamentale** che il numero di porta sia identico su entrambi i lati:
-- **FlexiVision One**: Porta configurata in questa pagina
-- **Robot**: Porta configurata nel programma robot 
+Es ist **wichtig,** dass die Portnummer auf beiden Seiten identisch ist:
+- **FlexiVision One**: Auf dieser Seite konfigurierter Port
+- **Roboter**: Im Roboterprogramm konfigurierter Port
 
-Se i numeri non corrispondono, la connessione fallirà sempre.
+Wenn die Nummern nicht übereinstimmen, schlägt die Verbindung immer fehl.
 
-Esempio:
-- ❌ ERRATO: FlexiVision One porta 2000, Robot porta 2001 → Nessuna comunicazione
-- ✅ CORRETTO: FlexiVision One porta 2000, Robot porta 2000 → Comunicazione funzionante
+Beispiel:
+- ❌ FALSCH: FlexiVision One Port 2000, Robot Port 2001 → Keine Kommunikation
+- ✅ RICHTIG: FlexiVision One Port 2000, Robot Port 2000 → Kommunikation funktioniert
 ```
 
-### Step 2: Riconfigurazione server
+### *Schritt 2: Neukonfiguration des Servers*
 
-Dopo aver impostato la porta corretta, è necessario riavviare il server di comunicazione:
+Nach der Einstellung des richtigen Ports muss der Kommunikationsserver neu gestartet werden:
 
 ```{list-table}
 * - **5** 
-  - Cliccare sul pulsante **Reconfigure Server**
+  - Klicken Sie auf die Schaltfläche **Reconfigure Server**
 * - **6**
-  - Attendere alcuni secondi per il completamento della riconfigurazione
+  - Bitte warten Sie einige Sekunden, bis die Neukonfiguration abgeschlossen ist.
 ```
 
 ```{note}
 
-È necessario cliccare su **Reconfigure Server** ogni volta che:
-- Si modifica il numero di porta
-- Si desidera riavviare il server dopo un errore
-- Si è modificata la configurazione di rete del VisionController
-- Si vuole forzare la chiusura di connessioni esistenti
+In den folgenden Fällen müssen Sie jedes Mal auf **Reconfigure Server** klicken:
+- Die Portnummer wird geändert
+- Der Server soll nach einem Fehler neu gestartet werden
+- Die Netzwerkkonfiguration des VisionControllers wurde geändert
+- Der Abbruch bestehender Verbindungen soll erzwungen werden
 
-Il server si avvia automaticamente all'apertura del software FlexiVision One, ma richiede riconfigurazione manuale dopo modifiche.
+Der Server startet beim Öffnen der FlexiVision One-Software automatisch, muss jedoch nach Änderungen manuell neu konfiguriert werden.
 ```
 
-### Step 3: Verifica stato server
+### *Schritt 3: Serverstatus überprüfen*
 
-Dopo la riconfigurazione, verificare che il server sia attivo:
+Überprüfen Sie nach der Neukonfiguration, ob der Server aktiv ist:
 
 ```{list-table}
 
 * - **7**
-  - Osservare l'indicatore **Server Online**:
-   - **Verde**: Server attivo   
-     **Rosso**: Server non attivo  
+  - Beobachten Sie die Anzeige **„Server Online“**:
+   - **Grün**: Server aktiv   
+     **Rot**: Server nicht aktiv  
 * - **8**
-  - dopo aver avviato il programma dal robot, osservare l'indicatore **Client Online**:
-   - **Verde**: robot connesso  
-     **Rosso**: robot non connesso 
+  - Nachdem Sie das Programm vom Roboter aus gestartet haben, beobachten Sie die Anzeige **Client Online**:
+   - **Grün**: Roboter verbunden  
+     **Rot**: Roboter nicht verbunden 
 
 ```
 ```{note}
-Se gli indicatori sono verdi, il sistema è correttamentre connesso. 
+Wenn die Anzeigen grün leuchten, ist das System ordnungsgemäß angeschlossen. 
 
-Se uno degli indicatori è rosso, verificare:
-   - Controllare che il programma sul robot sia stato avviato 
-   - Controllare che gli indirizzi IP siano sulla stessa subnet
-   - Che la porta non sia già in uso da un altro programma
-   - I log di sistema per messaggi di errore
+Wenn eine der Anzeigen rot leuchtet, überprüfen Sie Folgendes:
+   - Überprüfen Sie, ob das Programm auf dem Roboter gestartet wurde
+   - Überprüfen Sie, ob sich die IP-Adressen im selben Subnetz befinden
+   - Überprüfen Sie, ob der Port nicht bereits von einem anderen Programm verwendet wird
+   - Überprüfen Sie die Systemprotokolle auf Fehlermeldungen
 ```
-### Step 4: Salvataggio e completamento
+### *Schritt 4: Speichern und Abschluss*
 
 ```{list-table}
 :header-rows: 0
 :widths: 10 90
 
 * - **9**
-  - Verificare che la connessione robot → FlexiVision One sia stabile
+  - Überprüfen Sie, ob die Verbindung zwischen Roboter und FlexiVision One stabil ist
 
 * - **10**
-  - I parametri di comunicazione sono automaticamente salvati
+  - Die Kommunikationsparameter werden automatisch gespeichert
 
 * - **11**
-  - Tornare alla pagina **SETUP** principale
+  - Kehren Sie zur **SETUP-**Hauptseite zurück
 ```
 
 ---
 
-## Passi successivi
+## Nächste Schritte
 
-Una volta completato il Robot Setup, procedere con:
+Sobald das Roboter-Setup abgeschlossen ist, fahren Sie fort mit:
 
-**[Passo 7: Camera Setup](13d_Camera_Setup.md)** - Configurazione e test acquisizione camera
+- [Protocol Setup](protocol_setup)
+- [Rezept speichern](ricettabase)
 
 

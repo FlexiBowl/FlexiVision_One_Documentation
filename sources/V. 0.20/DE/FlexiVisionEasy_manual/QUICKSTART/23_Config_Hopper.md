@@ -1,9 +1,9 @@
-﻿---
+---
 orphan: true
 ---
 
 # Nächste Schritte
 
-Nachdem die Hopper-Konfiguration abgeschlossen ist, fahren Sie fort mit:
+Sobald die Konfiguration des Trichters abgeschlossen ist, fahren Sie wie folgt fort:
 
-**→ [Ergebnisprüfung und Dashboard](24_Verifica_Risultati.md)** - Überwachung der vollständigen Anwendung in der Produktion
+**→ [Ergebnisüberprüfung und Dashboard](24_Verifica_Risultati.md)** - Umfassende Anwendungsüberwachung in der Produktion

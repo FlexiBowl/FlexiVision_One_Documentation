@@ -1,24 +1,24 @@
 (istogrammi)=
-# **Le Clearances** 
- In questa pagina vedremo come configurare le Clearances per verificare che le aree critiche siano libere da ostacoli.
+# **Die Clearances** 
+Auf dieser Seite erfahren Sie, wie Sie Clearances konfigurieren, um sicherzustellen, dass kritische Bereiche frei von Hindernissen sind.
 
- **Cos'è una Clearance?**  
-Una **Clearance** in FlexiVision One è uno strumento che monitora un'area specifica dell'immagine per verificare che sia libera. Viene utilizzato per controllare, ad esempio, che lo spazio necessario alla pinza per afferrare il componente non sia occupato da altri oggetti.
-````{note} Principio di Funzionamento.
+ **Was ist ein Clearance?**  
+Ein **Clearance** in FlexiVision One ist ein Werkzeug, das einen bestimmten Bildbereich überwacht, um sicherzustellen, dass dieser frei ist. Es wird beispielsweise verwendet, um zu überprüfen, ob der für den Greifer zum Ergreifen des Bauteils erforderliche Raum nicht von anderen Objekten belegt ist.
+````{note} Funktionsprinzip.
 
-La Clearance analizza le variazioni dei livelli di grigio in un'area definita:
-- 🟢 **Verde** → Area libera (OK per il prelievo)
-- 🔴 **Rosso** → Area occupata (presenza di ostacoli)
+Das Clearance analysiert die Graustufenveränderungen in einem definierten Bereich:
+- 🟢 **Grün** → Freier Bereich (OK für die Aufnahme)
+- 🔴 **Rot** → Belegter Bereich (Vorhandensein von Hindernissen)
 ````
 :::{attention}
-L'utilizzo delle Clearances varia al variare del pezzo di cui si deve fare il modello. Questa è una valutazione a carico della figura incaricata di creare l'applicazione. 
+Die Verwendung der Clearances variiert je nach dem Teil, für das das Modell erstellt werden soll. Diese Beurteilung ist Aufgabe der Person, die für die Erstellung der Anwendung zuständig ist.
 :::
 --- 
 (setupclearances)=
-## **Step 1: Setup Fisico**
+## Schritt 1: Physikalische Einrichtung
 
-:::{danger} **Attenzione!**
-  Vi mostreremo la procedura con il Tool Pinza, in quanto necessita obbligatoriamente della configurazione di Clearances per i modelli. Altri Tool per il robot potrebbero non aver bisogno delle Clearances per simularne l'ingombro. 
+:::{danger} **Achtung!**
+  Wir zeigen Ihnen das Verfahren mit dem Greifer-Tool, das unbedingt die Konfiguration von Clearances für die Modelle erfordert. Andere Werkzeuge für den Roboter benötigen möglicherweise keine Clearances, um ihren Platzbedarf zu simulieren.
 :::
 :::{video} ../../../../../_shared/media/videos/Step1.mp4
     :width: 100%
@@ -28,72 +28,75 @@ L'utilizzo delle Clearances varia al variare del pezzo di cui si deve fare il mo
 :widths: 5 95
 
 * - **1**
-  - Dal **pendant del robot**:
-    - Selezionare il **frame** e il **tool** calibrato su FlexiVision One
-    - Portare l'**ultimo asse** del tool a **rotazione zero** (Rz = 0°)
+  - Über das **Roboter-Pendant**:
+    - Wählen Sie den **Rahmen** und das auf FlexiVision One kalibrierte **Werkzeug** aus
+    - Bringen Sie die **letzte Achse** des Werkzeugs auf **Null-Drehung** (Rz = 0°)
 * - **2**
-  - Simulare una presa:
-    - Aprire la pinza
-    - Portare il tool del robot sul componente a livello della superficie, come per afferrarlo
+  - Simulieren Sie einen Greifvorgang:
+    - Öffnen Sie den Greifer
+    - Bringen Sie das Roboterwerkzeug auf das Bauteil in Höhe der Oberfläche, als ob Sie es greifen wollten
 * - **3**
-  - Posizionare **due oggetti** ai lati della pinza per avere, una volta rimosso il robot, le aree libere fra il componente di riferimento e i due oggetti.  
-  Esse rappresenteranno le aree di ingombro della pinza del robot. 
+  - Positionieren Sie **zwei Objekte** an den Seiten des Greifers, um nach dem Entfernen des Roboters die freien Bereiche zwischen dem Referenzteil und den beiden Objekten zu erhalten.
+  Diese stellen die Ausmaßbereiche des Robotergreifers dar.
     
     :::{important}
-    Lasciare gli oggetti leggermente più distanti del necessario per evitare errori nella creazione del modello. (margine 2-3 mm)
+    Platzieren Sie die Objekte etwas weiter auseinander als unbedingt nötig, um Fehler bei der Modellerstellung zu vermeiden. (Abstand 2–3 mm)
     :::
     
 * - **4**
-  - Annotare le Coordinate:
-    - Salvare le coordinate dell'ultimo asse del robot:
-      - **X** (coordinata X)
-      - **Y** (coordinata Y)
-      - **Rz** (rotazione attorno a Z)
+  - Koordinaten notieren:
+  - Speichern Sie die Koordinaten der letzten Roboterachse:
+    - **X** (X-Koordinate)
+    - **Y** (Y-Koordinate)
+    - **Rz** (Rotation um Z)
     
     :::{important}
-    Annotare queste coordinate! Saranno indispensabili nella fase di calibrazione robot.
+    Notieren Sie diese Koordinaten! Sie sind für die Roboterkalibrierung unerlässlich.
     :::
 * - **5**
-  - Allontanare il robot con il pendant **senza spostare nulla** sulla superficie
+  - Entfernen Sie den Roboter mit dem Pendant, **ohne etwas auf der Oberfläche zu verschieben**
 ````
+:::{tip}
+Bei Fragen während der Konfiguration klicken Sie bitte auf die Schaltfläche „**INFO**“ auf der aktuellen Seite.
+:::
 ---
 
-## **Step 2: Accesso alla pagina Clearance**
+## Schritt 2: Aufruf der Seite „Clearance“
 ````{list-table}
 :widths: 5 95
 
 * - **6**
-  - Dalla pagina **Locator Model**, dopo aver cliccato su **Next**, si aprirà l'elenco delle clearance disponibili (fino a 8 per modello).
+  - Auf der Seite „**Locator Model**“ öffnet sich nach dem Klicken auf „**Next**“ die Liste der verfügbaren Clearances (bis zu 8 pro Modell).
     
-    :::{dropdown} **Pagina Clearances**
+    :::{dropdown} **Seite „Clearances“**
     
-      ![Pagina Clearances](../../../../../_shared/media/images/pagina_clearances.png)
+      ![Seite „Clearances“](../../../../../_shared/media/images/pagina_clearances.png)
     
-      | Elemento | Descrizione |
+      | Element | Beschreibung |
       |----------|-------------|
-      | **Clearance 1...8** | Slot disponibili per creare fino a 8 clearance diversi per lo stesso modello |
-      | **Test (globale)** | Pulsante per testare simultaneamente tutte le clearance abilitate |
-      | **Next** | Avanzamento alla fase successiva (Robot Pick) dopo configurazione clearance |
+      | **Clearance 1...8** | Verfügbare Slots zum Erstellen von bis zu 8 verschiedenen Clearances für dasselbe Modell |
+      | **Test (global)** | Schaltfläche zum gleichzeitigen Testen aller aktivierten Clearances |
+      | **Next** | Weiter zur nächsten Phase (Roboter-Pick) nach der Konfiguration der Clearances |
     :::
 * - **7**
-  - Cliccare su **Clearance 1**, si aprirà la pagina relativa alla configurazione della prima clearance "Clearance 1"
+  - Klicken Sie auf „**Clearance 1**“, um die Seite zur Konfiguration des ersten Freiraums „Clearance 1“ zu öffnen
     
-    :::{dropdown} **Pagina Clearance 1**
+    :::{dropdown} **Seite Clearance 1**
 
-      ![Pagina Clearance 1](../../../../../_shared/media/images/pagina_clearance1.png)
+      ![Seite Clearance 1](../../../../../_shared/media/images/pagina_clearance1.png)
 
-      | Parametro | Funzione |
+      | Parameter | Funktion |
       |-----------|----------|
-      | **Enable Histogram** | Attiva questa clearance rendendola operativa |
-      | **Expression Builder** | Strumento per configurare automaticamente le soglie di rilevamento |
-      | **Mean and Standard Deviation** | Valori statistici calcolati sull'area selezionata (media e deviazione standard dei livelli di grigio) |
-      | **Test** | Verifica immediata del funzionamento della clearance |
-      | **Result** | Indicatore visivo dello stato (Verde = OK, Rosso = Triggered) |
+      | **Enable Clearance** | Aktiviert diesen Freiraum und macht ihn betriebsbereit |
+      | **Expression Builder** | Werkzeug zur automatischen Konfiguration der Erkennungsschwellen |
+      | **Mean and Standard Deviation** | Statistische Werte, die für den ausgewählten Bereich berechnet wurden (Mittelwert und Standardabweichung der Graustufen) |
+      | **Test** | Sofortige Überprüfung der Funktion „Clearance“ |
+      | **Result** | Visuelle Statusanzeige (Grün = OK, Rot = Triggered) |
     :::
 ````
 ---
 
-## **Step 3: Attivazione e Posizionamento Area**
+## Schritt 3: Aktivierung und Positionierung des Bereichs
 
 :::{video} ../../../../../_shared/media/videos/Step3.mp4
     :width: 100%
@@ -101,23 +104,26 @@ L'utilizzo delle Clearances varia al variare del pezzo di cui si deve fare il mo
 :::
 ````{list-table}
 * - **8**
-  - Cliccare su **Enable Clearance** per attivare la clearance 
+  - Klicken Sie auf „**Enable Clearance**“, um den Freiraum zu aktivieren
 * - **9**
-  - Spostare il **riquadro** della Clearance nell'area che deve rimanere libera
-      - Tipicamente: area di presa della pinza (una clearance per ogni area di presa della pinza)
-      - Margini attorno al componente
-      - Zone di passaggio del robot
+  - Verschieben Sie den Clearance-**Rahmen** in den Bereich, der frei bleiben muss
+      - Typischerweise: Greiferbereich (ein Freiraum pro Greiferbereich)
+      - Ränder um das Teil herum
+      - Durchfahrtsbereiche des Roboters
     :::{important}
-    Tenere sempre in considerazione questi due aspetti importanti:
-    - La ROI della Clearance, quando viene configurata, deve essere completamente libera (quindi priva di oggetti, ombre, artefatti)
-    - Creare sempre una clearance leggermente più grande dello stretto necessario per evitare falsi errori.
+    Beachten Sie immer diese beiden wichtigen Aspekte:
+    - Der ROI des Freiraums muss bei der Konfiguration vollständig frei sein (also frei von Objekten, Schatten, Artefakten)
+    - Erstellen Sie den Freiraum immer etwas größer als unbedingt nötig, um Fehlalarme zu vermeiden.
 
-    La mancata osservanza di questi due punti potrebbe comportare collisioni del robot con conseguenti danni a FlexiBowl, componenti o robot stesso. 
+    Die Nichtbeachtung dieser beiden Punkte kann zu Kollisionen des Roboters führen, was Schäden am FlexiBowl®, an Komponenten oder am Roboter selbst zur Folge haben kann.
     :::
 ````
+:::{tip}
+Bei Fragen während der Konfiguration klicken Sie bitte auf die Schaltfläche „**INFO**“ auf der aktuellen Seite.
+:::
 ---
 
-## **Step 4: Configurazione Automatica**
+## Schritt 4: Automatische Konfiguration
 
 :::{video} ../../../../../_shared/media/videos/Step4.mp4
     :width: 100%
@@ -125,84 +131,91 @@ L'utilizzo delle Clearances varia al variare del pezzo di cui si deve fare il mo
 :::
 ````{list-table}
 * - **10**
-  - Cliccare su <img src="../../../../../_shared/media/images/tasto_AUTO.png" class="inline-icon"> in Expression Builder
+  - Klicken Sie auf <img src="../../../../../_shared/media/images/tasto_AUTO.png" class="inline-icon"> im Expression Builder
 * - **11**
-  - Cliccare su <img src="../../../../../_shared/media/images/tasto_TEST.png" class="inline-icon">
+  - Klicken Sie auf <img src="../../../../../_shared/media/images/tasto_TEST.png" class="inline-icon">
 * - **12**
-  - Verificare che il riquadro diventi **verde** 
+  - Prüfen Sie, ob das Kästchen **grün** wird
 * - **13**
-  - Cliccare su <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon">
+  - Klicken Sie auf <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon">
 ````
 ````{warning}
-**Cosa fare se il test fallisce (riquadro rosso)?**
+**Was ist zu tun, wenn der Test fehlschlägt (rotes Kästchen)?**
 
-Se dopo AUTO il riquadro diventa rosso:
+Wenn das Kästchen nach AUTO rot wird:
 
-**Possibili cause:**
-- C'è effettivamente qualcosa nell'area (pezzo, ombra, sporcizia)
-- L'illuminazione è variata tra configurazione AUTO e TEST
-- L'area selezionata include bordi del FlexiBowl o artefatti
+**Mögliche Ursachen:**
+- Es befindet sich tatsächlich etwas im Bereich (Teil, Schatten, Verschmutzung)
+- Die Beleuchtung hat sich zwischen der AUTO- und der TEST-Konfiguration verändert
+- Der ausgewählte Bereich umfasst Ränder des FlexiBowl® oder Artefakte
 
-**Soluzioni:**
-1. Verificare visivamente che l'area sia completamente libera
-2. Ripetere AUTO con condizioni di illuminazione stabili
-3. Ripetere TEST per verificare
+**Lösungen:**
+1. Überprüfen Sie visuell, ob der Bereich vollständig frei ist
+2. Wiederholen Sie AUTO unter stabilen Lichtverhältnissen
+3. Wiederholen Sie TEST zur Überprüfung
 ````
-
+:::{tip}
+Sollten Sie während der Konfiguration Zweifel haben, konsultieren Sie bitte die **INFO-Taste** auf der aktuellen Seite.
+:::
 ---
 
-## Clearance Multipli - Quando Usarli
+## Mehrere Clearances – Wann sie zu verwenden sind
 
-Crea più clearance quando:
-- Il tool del robot è una pinza: serve una clearance per ognuna delle due aree occupate dalla pinza ai lati del componente di riferimento 
-- Ci sono più punti critici da monitorare
-- L'area di presa ha geometrie particolari
+Erstellen Sie mehrere Clearances, wenn:
+- Das Roboterwerkzeug eine Greifzange ist: Für jeden der beiden Bereiche, die die Greifzange an den Seiten des Referenzbauteils einnimmt, ist ein Clearance erforderlich
+- Es mehrere kritische Punkte zu überwachen gibt
+- Der Greifbereich besondere Geometrien aufweist
 
-### **Step 2-3: Ripetizione**
-Selezionare una nuova clearance dalla pagina elenco delle Clearances, tipo "Clearance 2" e ripetere gli Step 2-3.
-Ripetere la procedura per ogni clearance necessaria (fino a 8 per modello). 
+### *Schritt 2-3: Wiederholung*
+Wählen Sie eine neue Clearance aus der Clearance-Liste aus, z. B. „Clearance 2“, und wiederholen Sie die Schritte 2–3.
+Wiederholen Sie den Vorgang für jede erforderliche Clearance (bis zu 8 pro Modell).
 
-### **Step 4: Test Complessivo**
-Nella pagina di elenco di tutte le clearance, cliccare su **TEST**
-Visualizzare tutte le clearance contemporaneamente
+### *Schritt 4: Gesamttest*
 
+Klicken Sie auf der Seite mit der Liste aller Clearances auf „**TEST**“, um alle Clearances gleichzeitig anzuzeigen
+
+![Seite „Clearances“](../../../../../_shared/media/images/activatedclearances.png)
 ---
 
-## Interpretazione Stati
+## Interpretation der Status
 
-### Stati delle Clearance 
+### *Status der Clearances*
+
 ````{list-table}
 :header-rows: 1
-:widths: 15 35 50
+:widths: 10 15 30 45
 
-* - Colore
-  - Stato
-  - Significato
-* - 🟢 Verde
+* - Farbe
+  - Status
+  - Bedeutung
+  - Bild
+* - 🟢 Grün
   - OK
-  - Area libera, prelievo possibile
-* - 🔴 Rosso
+  - Freier Bereich, Aufnahme möglich
+  - ![](../../../../../_shared/media/images/greenclearances.png)
+* - 🔴 Rot
   - Triggered
-  - Area occupata, prelievo non possibile
+  - Bereich belegt, Aufnahme nicht möglich
+  - ![](../../../../../_shared/media/images/redclearances.png)
 ````
 
-### Cosa Significa "Triggered"?
+### *Was bedeutet „Triggered“?*
 
-Una clearance diventa rossa (triggered) quando rileva al suo interno:
-- Presenza di altri componenti
-- Ombre o riflessi significativi
-- Qualsiasi elemento che rende l'area non libera
+Eine Freigabe wird rot (triggered), wenn sie in ihrem Inneren Folgendes erkennt:
+- Vorhandensein anderer Komponenten
+- Erhebliche Schatten oder Spiegelungen
+- Jedes Element, das den Bereich belegt
 
 ---
 
-## **Step 5: Finalizzazione**
+## Schritt 5: Abschluss
 ````{list-table}
 * - **14**
-  - Dopo aver configurato tutte le clearance necessarie, cliccare su **Next**
+  - Nachdem Sie alle erforderlichen Clearances konfiguriert haben, klicken Sie auf <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon">
 * - **15**
-  - Si aprirà la pagina **Robot Model Pick Cam**
+  - Die Seite **Robot Model Pick Cam** wird geöffnet
 ````
 ````{seealso}
-Procedi alla [Calibrazione Robot](robotpick) per completare la configurazione.
+Führen Sie die [Roboter-Pick-Kalibrierung](robotpick) durch, um die Konfiguration abzuschließen.
 ````
 

@@ -1,144 +1,144 @@
-﻿# **Installazione Meccanica**
+# **Mechanische Installation**
 (troubleshooting_vision_controller)=
-## Problemi con il VisionController 
+## Probleme mit dem VisionController
 
 ```{list-table}
 :header-rows: 1
 :widths: 30 35 35
 
-* - Problema
-  - Possibili Cause
-  - Soluzioni
-* - **VisionController si surriscalda e si spegne automaticamente**
-  - • Ventilazione insufficiente rspazio < 50mm)
+* - Problem
+  - Mögliche Ursachen
+  - Lösungen
+* - **VisionController überhitzt und schaltet sich automatisch ab**
+  - • Unzureichende Belüftung (Freiraum < 50 mm)  
     
-    • Temperatura ambiente > 50°C
+    • Umgebungstemperatur > 50°C  
     
-  - • Verificare spazio libero di almeno 50mm su tutti i lati
+  - • Mindestens 50 mm Freiraum auf allen Seiten sicherstellen  
     
-    • Spostare in ambiente più fresco o aggiungere condizionamento
+    • An einen kühleren Ort stellen oder eine Klimaanlage installieren  
     
-* - **VisionController non si fissa correttamente alla guida DIN**
-  - • Guida DIN non conforme rnon 35mm)
+* - **Der VisionController lässt sich nicht richtig an der DIN-Schiene befestigen**
+  - • DIN-Schiene nicht konform (nicht 35 mm)  
     
-    • Meccanismo di aggancio danneggiato
+    • Befestigungsmechanismus beschädigt  
     
-    • Guida non fissata saldamente
-  - • Verificare che la guida sia DIN 35mm standard
+    • Schiene nicht fest montiert  
+  - • Überprüfen, ob es sich um eine Standard-DIN-Schiene (35 mm) handelt  
     
-    • Ispezionare meccanismo di aggancio per danni
+    • Befestigungsmechanismus auf Beschädigungen überprüfen  
     
-    • Fissare meglio la guida DIN al pannello
-* - **VisionController si allenta dal pannello rmontaggio con viti)**
-  - • Coppia di serraggio insufficiente
+    • DIN-Schiene besser an der Montageplatte befestigen  
+* - **VisionController löst sich von der Montageplatte (Befestigung mit Schrauben)**
+  - • Unzureichendes Anzugsmoment  
     
-    • Viti non idonee rnon M4)
+    • Ungeeignete Schrauben (nicht M4)  
     
-    • Foratura pannello non corretta
-  - • Serrare le 4 viti M4 con coppia di 1.2 Nm
+    • Falsche Bohrungen in der Montageplatte  
+  - • Die 4 M4-Schrauben mit einem Drehmoment von 1,2 Nm anziehen  
     
-    • Utilizzare viti M4 come da specifiche
+    • M4-Schrauben gemäß Spezifikationen verwenden  
     
-    • Verificare pattern di foratura secondo disegni tecnici
-* - **Protezione IP insufficiente**
-  - • Montaggio all'esterno del quadro elettrico
+    • Bohrbild gemäß technischen Zeichnungen überprüfen  
+* - **Unzureichender IP-Schutz**
+  - • Montage außerhalb des Schaltschranks  
     
-    • Quadro con IP < 40
+    • Schaltschrank mit IP < 40  
     
-    • Presenza di polvere/umidità
-  - • Montare all'interno di quadro elettrico IP54
+    • Vorhandensein von Staub/Feuchtigkeit  
+  - • Montage innerhalb eines Schaltschranks mit IP54  
     
-    • Verificare protezione minima IP40
+    • Mindestschutz IP40 überprüfen  
     
-    • Sigillare meglio il quadro elettrico
+    • Schaltschrank besser abdichten  
 ```
 (troubleshooting_camera)=
-## Problemi con la Camera 
+## Probleme mit der Kamera
 
 ```{list-table}
 :header-rows: 1
 :widths: 30 35 35
 
-* - Problema
-  - Possibili Cause
-  - Soluzioni
-* - **Immagine non a fuoco**
-  - • Distanza di lavoro non corretta per il modello di FlexiBowl
+* - Problem
+  - Mögliche Ursachen
+  - Lösungen
+* - **Das Bild ist nicht scharf**
+  - • Falscher Arbeitsabstand für das FlexiBowl®-Modell  
     
-    • Lente non avvitata completamente
+    • Objektiv nicht vollständig festgeschraubt  
     
-  - • Misurare e correggere distanza secondo [Calcolo Distanza Ottimale](../rif_tecnico_specifiche/05_Calcolo_distanza_ottimale.md)
+  - • Abstand gemäß [Calcolo Distanza Ottimale](../rif_tecnico_specifiche/05_Calcolo_distanza_ottimale.md) messen und korrigieren  
     
-    • Avvitare completamente la lente rcontatto metal-metal)
+    • Objektiv vollständig festschrauben (Metall-auf-Metall-Kontakt)  
     
-* - **Immagine distorta o con prospettiva errata**
-  - • Camera non centrata sull'area di visione del FlexiBowl rerrore > ±5mm)
+* - **Verzerrtes Bild oder falsche Perspektive**
+  - • Kamera nicht auf den Sichtbereich des FlexiBowl® zentriert (Fehler > ±5 mm)  
     
-    • Camera inclinata rispetto alla superficie rtilt > ±1°)
+    • Kamera in Bezug auf die Oberfläche geneigt (Neigung > ±1°)  
     
 
-  - • Misurare centratura con metro/calibro e correggere
+  - • Zentrierung mit Maßband/Messschieber messen und korrigieren  
     
-    • Verificare ortogonalità con livella di precisione
+    • Rechtwinkligkeit mit Präzisionswasserwaage überprüfen  
     
 
 ```
 (troubleshooting_toplight)=
-## Problemi con il Toplight 
+## Probleme mit dem Toplight
 
 ```{list-table}
 :header-rows: 1
 :widths: 30 35 35
 
-* - Problema
-  - Possibili Cause
-  - Soluzioni
-* - **Illuminazione non uniforme con ombre evidenti**
-  - • Distanza toplight dalla superficie non corretta
+* - Problem
+  - Mögliche Ursachen
+  - Lösungen
+* - **Ungleichmäßige Beleuchtung mit deutlichen Schatten**
+  - • Falscher Abstand des Toplights zur Oberfläche  
     
-    • Toplight non parallelo al disco FlexiBowl
+    • Toplight nicht parallel zur FlexiBowl®-Scheibe  
     
-    • Angolo di illuminazione non perpendicolare rtilt ≠ 0°)
-  - • Posizionare toplight a distanza simile a quella della camera
+    • Beleuchtungswinkel nicht senkrecht (Neigung ≠ 0°)  
+  - • Toplight in einem ähnlichen Abstand wie die Kamera positionieren  
     
-    • Verificare parallelismo con livella
+    • Parallelität mit Wasserwaage überprüfen  
     
-    • Correggere orientamento a 0° tilt
-* - **Riflessi indiretti verso la camera**
-  - • Superficie non compatibile con illuminatore 
+    • Ausrichtung auf 0° Neigung korrigieren  
+* - **Indirekte Reflexionen in Richtung der Kamera**
+  - • Oberfläche nicht kompatibel mit der Beleuchtung  
 
-  - • Controllare la compatibilità con la superficie 
+  - • Kompatibilität mit der Oberfläche prüfen  
 
 ```
 (troubleshooting_luce_ambientale)=
-## Problemi di Schermatura Luce Ambientale 
+## Probleme bei der Abschirmung von Umgebungslicht
 
 ```{list-table}
 :header-rows: 1
 :widths: 30 35 35
 
-* - Problema
-  - Possibili Cause
-  - Soluzioni
-* - **Rilevamenti incoerenti a diverse ore del giorno**
-  - • Luce solare diretta o indiretta variabile
+* - Problem
+  - Mögliche Ursachen
+  - Lösungen
+* - **Uneinheitliche Messwerte zu verschiedenen Tageszeiten**
+  - • Variierendes direktes oder indirektes Sonnenlicht  
     
-    • Finestre non schermate
+    • Ungeschirmte Fenster  
     
-    • Illuminazione artificiale con dimmer
-  - • Installare tende oscuranti o pannelli opachi
+    • Künstliche Beleuchtung mit Dimmer  
+  - • Verdunkelungsvorhänge oder undurchsichtige Paneele anbringen  
     
-    • Schermare completamente finestre nella cella
+    • Fenster in der Messzelle vollständig abschirmen  
     
-    • Utilizzare illuminazione fissa non regolabile
-* - **Riflessi da superfici circostanti**
-  - • Superfici riflettenti nelle vicinanze rmacchine, pannelli)
+    • Nicht dimmbare, feste Beleuchtung verwenden  
+* - **Reflexionen von umgebenden Oberflächen**
+  - • Reflektierende Oberflächen in der Nähe (Maschinen, Paneele)  
     
-  - • Coprire superfici riflettenti con materiale opaco
+  - • Reflektierende Oberflächen mit undurchsichtigem Material abdecken  
     
-    • Riposizionare elementi riflettenti
+    • Reflektierende Elemente neu positionieren  
     
-    • Verniciare superfici con vernice opaca
+    • Oberflächen mit matter Farbe streichen  
 ```
 
 

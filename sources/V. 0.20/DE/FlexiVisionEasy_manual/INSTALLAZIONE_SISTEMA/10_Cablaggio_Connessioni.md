@@ -1,7 +1,6 @@
 (cablaggio)=
-# **Verkabelung und Anschlüsse**
-Übersichtsbild der elektrischen Anschlüsse 
-Typ:  
+# **Verdrahtung und Anschlüsse**
+  
 ![Pan Coll](../../../../_shared/media/images/panoramicacollegamenti.png)
 ```{list-table}
 :widths: 25 25 50
@@ -9,34 +8,34 @@ Typ:
 
 * - **Von**
   - **Nach**
-  - **Verbindung**
+  - **Anschluss**
 
 * - Stromnetz
-  - FlexiBowl
-  - Versorgung 110/220 Vdc
+  - FlexiBowl®
+  - Stromversorgung 110/220 VDC
 
 * - Stromnetz
   - Roboter
-  - Versorgung gemäß den Spezifikationen des vorhandenen Roboters
+  - Stromversorgung gemäß den Spezifikationen des Roboters in Ihrem Besitz
 
 * - Stromnetz
   - Kamera
-  - Versorgung 24 Vdc
+  - 24 Vdc-Stromversorgung
 
 * - Stromnetz
-  - Beleuchtung (Licht)
-  - Versorgung 24 Vdc
+  - Beleuchtungseinrichtung (Licht)
+  - 24 Vdc-Stromversorgung
 
 * - Stromnetz
-  - Hopper Controller
-  - Versorgung 110/220 Vdc
+  - Trichtersteuerung
+  - Stromversorgung 110/220 Vdc
 
-* - Hopper Controller
-  - Hopper
-  - Versorgung und Signal
+* - Trichtersteuerung
+  - Trichter
+  - Stromversorgung und Signal
 
 * - Roboter
-  - Hopper Controller
+  - Trichtersteuerung
   - Digitale I/O
 
 * - VisionController
@@ -44,7 +43,7 @@ Typ:
   - Ethernet TCP
 
 * - VisionController
-  - FlexiBowl
+  - FlexiBowl®
   - Ethernet TCP
 
 * - VisionController
@@ -52,7 +51,7 @@ Typ:
   - Ethernet TCP
 ```
 
-## Geführtes Verkabelungsverfahren
+## Verdrahtungsassistent
 
 ```{list-table} 
 :header-rows: 1
@@ -60,32 +59,32 @@ Typ:
 * - **Schritt**
   - **Aktion**
 * - 1
-  - Die Versorgung des FlexiBowl® anschließen.  
-    [🔗 Für die Versorgungsspezifikationen das Handbuch heranziehen](http://link-al-manuale.com)
+  - Schließen Sie den FlexiBowl® an die Stromversorgung an.  
+    [🔗 Siehe Handbuch für Spezifikationen zur Stromversorgung](https://www.flexibowl.com/wp-content/uploads/2026/04/Manuale-Utente-Flexibowl_IT_Rev2.9.pdf)
 * - 2
-  - Das [Hirose 24V Versorgungskabel](cavo) an die Kamera anschließen.
+  - Schließen Sie das [Hirose-24V-Stromkabel](cavo) an die Kamera an.
 * - 3
-  - Den FlexiBowl® mit einem Ethernet-Kabel an den VisionController anschließen.
+  - Verbinden Sie den FlexiBowl® über ein Ethernet-Kabel mit dem VisionController.
 * - 4
-  - Die Kamera mit einem Ethernet-Kabel an den VisionController (PC) anschließen.
+  - Verbinden Sie die Kamera über ein Ethernet-Kabel mit dem VisionController (PC).
 * - 5
-  - Den Roboter mit einem Ethernet-Kabel an den VisionController anschließen.
+  - Verbinden Sie den Roboter über ein Ethernet-Kabel mit dem VisionController.
 * - 6
-  - Die Druckluft an den FlexiBowl® anschließen.  
-    [🔗 Für die Pneumatikspezifikationen das Handbuch heranziehen](http://link-al-manuale.com)
+  - Schließen Sie Druckluft an die FlexiBowl® an.  
+    [🔗 Siehe Handbuch für pneumatische Spezifikationen](https://www.flexibowl.com/wp-content/uploads/2026/04/Manuale-Utente-Flexibowl_IT_Rev2.9.pdf)
 * - 7
-  - Falls vorhanden, den Hopper an seinen Controller anschließen
+  - Falls vorhanden, schließen Sie den Trichter an die Steuerung an
 * - 8
-  - Falls vorhanden, den Roboter an den Hopper-Controller anschließen (Digitale I/O)
+  - Falls vorhanden, schließen Sie den Roboter an die Trichtersteuerung an (Digital I/O)
 * - 9 
-  - Falls vorhanden, den Hopper-Controller versorgen (110/220 V gemäß der beim Kauf der Hopper-Vibrationsbasis gewählten Option)
+  - Falls vorhanden, versorgen Sie die Trichtersteuerung mit Strom (110/220 V, je nach der beim Kauf der Trichter-Rüttelbasis gewählten Option)
 * - 10
-  - Den AC-Schalter des FlexiBowl® einschalten (Position "I"). Die READY-LED ist **ON**.
+  - Schalten Sie den Netzschalter des FlexiBowl® ein (Stellung „I“). Die READY-LED ist eingeschaltet.
 * - 11
-  - Alle anderen Geräte einschalten
+  - Schalten Sie alle anderen Geräte ein
 ```
 (cablaggio_illuminatore)=
-## Verkabelung der Beleuchtung
+## Verkabelung der Beleuchtungsanlage
 
 ![Pin Toplight](../../../../_shared/media/images/pin_toplight.png)
 
@@ -96,30 +95,30 @@ Typ:
 * - Parameter
   - Anforderung / Aktion
 * - **Spannung**
-  - 24V DC (±10%). Mindestbetriebsspannung: 20V DC am Lichteingang.
-* - **Steckverbinder**
+  - 24V DC (±10%). Minimale Betriebsspannung: 20V DC am Lichteingang.
+* - **Stecker**
   - M12 Male. 
     :::{note}
-      Zum Anschließen des toplight kann auch das zugehörige [Versorgungskabel](cavoalimtoplight) erworben werden. 
+      Zum Anschluss des Toplights kann auch das dazugehörige [Stromversorgungskabel](cavoalimtoplight) erworben werden. 
     :::
 * - **Steckerbelegung**
   - Pin 1: +24V (braun) — Pin 3: GND (blau) — Pin 4: STROBE PNP (schwarz)
 * - **STROBE-Modus (PNP)**
-  - Von 5V bis 24V für 100% Einschaltung. Von 0V bis 1V für 100% Ausschaltung.
-* - **DAUERBETRIEB**
-  - Pin 1 (+24V) und Pin 3 (GND) verbunden; Pin 4 (PNP) mit Pin 1 verbunden.
+  - 5 V bis 24 V für 100 % Einschalten. 0V bis 1V für 100% Abschaltung.
+* - **DAUER-Betrieb**
+  - Pin 1 (+24 V) und Pin 3 (GND) verbunden; Pin 4 (PNP) mit Pin 1 verbunden.
 * - **Spannungsabfall (M12-Kabel, 10m)**
-  - 1.15V @ 5A — 2.3V @ 10A — 3.5V @ 15A — 4.6V @ 20A (max 20A)
-* - **Schirmung**
-  - Geschirmte Kabel verwenden, um elektromagnetische Störungen (EMI) zu reduzieren.
+  - 1,15V @ 5A — 2,3V @ 10A — 3,5V @ 15A — 4,6V @ 20A (max 20A)
+* - **Abschirmung**
+  - Verwenden Sie abgeschirmte Kabel, um elektromagnetische Störungen (EMI) zu reduzieren.
 ```
 ```{warning}
 **Elektrische Sicherheit**
 
-- Die angegebenen Versorgungsspannungen und Anschlussklemmen einhalten.
-- Das Produkt nicht verändern oder demontieren.
-- Das Gerät nicht anschließen oder reinigen, wenn es unter Spannung steht.
-- Nicht direkt in die Lichtquelle blicken.
+- Beachten Sie die angegebenen Versorgungsspannungen und Anschlussklemmen.
+- Verändern Sie das Produkt nicht und nehmen Sie es nicht auseinander.
+- Schließen Sie das Gerät nicht an und reinigen Sie es nicht, wenn es unter Spannung steht.
+- Schauen Sie nicht direkt in die Lichtquelle.
 ```
 
 

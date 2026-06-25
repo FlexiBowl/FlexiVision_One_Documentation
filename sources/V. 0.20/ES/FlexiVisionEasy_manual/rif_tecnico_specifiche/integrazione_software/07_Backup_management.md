@@ -1,91 +1,90 @@
 (backup)=
-# **BackUp Management**
+# **Gestión de copias de seguridad**
 
-## **Vista general**
+## Resumen
 
-El backup de FlexiVision One consiste en copiar la carpeta `Recipes` presente en el VisionController. Esta carpeta contiene todas las recetas configuradas en el sistema — incluidos modelos, parámetros de reconocimiento y ajustes asociados — y representa el único dato de usuario que debe conservarse.
+Toda la configuración de FlexiVision One — configuración de hardware, calibraciones, modelos de piezas y parámetros de protocolo — está contenida en los archivos de receta. Por esta razón, las copias de seguridad son esenciales para mantener todos los datos a salvo.
 
-Como no se requiere ninguna herramienta dedicada, el proceso de backup se reduce a una simple operación de copiar y pegar mediante el Explorador de archivos.
 ```{important}
-Se recomienda realizar un backup cada vez que se cree o modifique una receta, y en cualquier caso antes de cualquier actualización de software o intervención de mantenimiento en el VisionController.
+Se recomienda realizar una copia de seguridad después de cada creación o modificación significativa de una receta, antes de actualizar el software FlexiVision y antes de cualquier intervención de hardware en el sistema.
+
+**Regla mínima:** al menos una vez a la semana durante el funcionamiento normal.
 ```
 
 ---
 
-## **Contenido del Backup**
+## Procedimiento de copia de seguridad
 
-Dentro de la carpeta de instalación de FlexiVision One se encuentra la siguiente estructura:
-```
-C:\FlexiVision One\
-├── Data\
-├── Languages\
-├── Recipes\          ← unica cartella da includere nel backup
-├── Flexivision_Smart_018
-└── Package.dat
-```
-
-La única carpeta que contiene datos de usuario es `Recipes\`. Las demás carpetas y archivos presentes pertenecen a la instalación del software y no deben incluirse en el backup.
-```{note}
-La ruta exacta de la carpeta de instalación puede variar según la configuración del sistema. En caso de duda, verificar la ruta en los ajustes del software.
-```
-
----
-
-## **Procedimiento de Backup**
 ```{list-table}
 :header-rows: 1
-:widths: 10 90
+:widths: 30 70
 
 * - **Paso**
   - **Acción**
-* - 1
-  - Asegurarse de que el software FlexiVision One esté **cerrado**.
-* - 2
-  - Abrir el Explorador de archivos en el VisionController y navegar hasta `C:\FlexiVision One\`.
-* - 3
-  - Hacer clic con el botón derecho en la carpeta `Recipes` y seleccionar **Copiar**.
-* - 4
-  - Navegar hasta el destino de backup deseado (memoria USB, carpeta de red, NAS, etc.).
-* - 5
-  - Pegar la carpeta en el destino. Se recomienda renombrarla incluyendo la fecha, por ejemplo: `Recipes_backup_2025-06-01`.
-```
-```{warning}
-No realizar el backup mientras el software FlexiVision One está en ejecución. La copia de archivos abiertos podría resultar incompleta o corrupta.
+* - Haga clic en Copia de seguridad
+  - En el menú Recetas, haga clic en el botón Copia de seguridad.
+* - Elija la carpeta FlexiVision
+  - Localice la carpeta runtime de FlexiVision One en el VisionController.
+* - Elija la carpeta de destino
+  - Seleccione la carpeta de destino de la copia de seguridad.
+* - Nomenclatura con fecha
+  - Asigne siempre un nombre que incluya la fecha, la versión del software y el identificador del sistema u otra información útil, como el nombre del cliente. Ejemplos:
+    
+    - `FV_Recipes_LineA_20260402_SW1.2.xml`
+    - `Backup_FlexiVision_ClientABC_Plant3_20260402.xml`
+    - `Recipes_FB500_Commissioning_20260315_v1.zip`
+    
+    Incluya la versión del software (visible en la página de inicio) en el nombre o en un archivo de texto adjunto.
 ```
 
 ---
 
-## **Procedimiento de Restauración (Restore)**
+## Importar copia de seguridad
 
-En caso de pérdida de datos o sustitución del VisionController, es posible restaurar las recetas anteriores siguiendo estos pasos:
 ```{list-table}
 :header-rows: 1
-:widths: 10 90
+:widths: 30 70
 
 * - **Paso**
   - **Acción**
-* - 1
-  - Asegurarse de que FlexiVision One esté instalado en el VisionController y **cerrado**.
-* - 2
-  - Abrir el Explorador de archivos y navegar hasta `C:\FlexiVision One\`.
-* - 3
-  - Renombrar la carpeta `Recipes` existente (p. ej. `Recipes_old`) como medida de precaución.
-* - 4
-  - Copiar la carpeta de backup en la ubicación `C:\FlexiVision One\` y renombrarla `Recipes`.
-* - 5
-  - Iniciar FlexiVision One: todas las recetas guardadas anteriormente volverán a estar disponibles.
-```
-```{important}
-La versión del software instalada en el VisionController debe ser compatible con la utilizada en el momento del backup. En caso de actualización de software, contactar con el soporte técnico antes de proceder con la restauración.
+* - Haga clic en Importar copia de seguridad
+  - En la sección Recetas, haga clic en Importar copia de seguridad.
+* - Seleccione la carpeta runtime de FlexiVision
+  - **Seleccione la carpeta que contiene la instalación de FlexiVision.**
+* - Seleccionar ruta de copia de seguridad
+  - Establezca la ruta del archivo de copia de seguridad. FlexiVision se reiniciará durante este proceso.
+* - Comprobaciones posteriores a la recuperación
+  - Tras la recuperación, realice las siguientes comprobaciones antes de reiniciar la producción:
+
+    1. Compruebe que todas las recetas previstas aparecen en la página Recetas.
+    2. Confirme que la receta principal puede cargarse sin errores.
+    3. Compruebe que las pruebas de conexión del FlexiBowl® y de la cámara son positivas (verde) en Configuración de la cámara.
+    4. Confirme que el panel de control muestra correctamente los dispositivos conectados.
+
+    **Ejecute un ciclo de prueba con la receta de funcionamiento principal para verificar el funcionamiento correcto.**
 ```
 
 ---
 
-## **Recomendaciones**
+## Gestión correcta de las recetas
 
-- Conservar al menos **dos copias del backup** en ubicaciones físicas distintas (p. ej. una memoria USB local y una carpeta de red remota).
-- Etiquetar siempre los backups con **fecha y versión de software** para facilitar su identificación con el tiempo.
-- No modificar manualmente el contenido de la carpeta `Recipes`: las recetas deben gestionarse exclusivamente mediante la interfaz de FlexiVision One.
-```{tip}
-Para entornos con varios VisionController, se recomienda centralizar los backups en una carpeta de red compartida, organizada por nombre de máquina y fecha.
+```{list-table}
+:header-rows: 1
+:widths: 25 37 38
+
+* - **Acción**
+  - **Método correcto**
+  - **Método a evitar**
+* - Renombrar una receta
+  - Página de recetas → función Renombrar en el software.
+  - Cambie el nombre del archivo XML a través del Explorador de archivos.
+* - Eliminar una receta
+  - Página de recetas → botón **Borrar receta**.
+  - Elimine el archivo XML manualmente.
+* - Copiar una receta en otro sistema
+  - Página de recetas → Backup → Import Backup en el otro sistema.
+  - Copie y pegue los archivos XML entre dos carpetas Recipes.
+* - Modificar un parámetro de receta
+  - Abra la receta en modo **Edición** en el software.
+  - Edite el archivo XML con un editor de texto.
 ```

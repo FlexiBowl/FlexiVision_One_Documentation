@@ -1,266 +1,266 @@
-﻿# **Cablaggio e Connessioni**
+# **Câblage et connexions**
 (troubleshooting_alimentazione)=
-## Problemi di Alimentazione FlexiBowl 
+## Problèmes d'alimentation du FlexiBowl
 
 ```{list-table}
 :header-rows: 1
 :widths: 30 35 35
 
-* - Problema
-  - Possibili Cause
-  - Soluzioni
-* - **LED READY non si accende**
-  - • Alimentazione non collegata correttamente
+* - Problème
+  - Causes possibles
+  - Solutions
+* - **La LED READY ne s'allume pas**  
+  - • L'alimentation n'est pas bien branchée  
     
-    • Switch AC in posizione "O" invece di "I"
+    • Interrupteur AC en position «&nbsp;O&nbsp;» au lieu de «&nbsp;I »  
     
-    • Cavo alimentazione danneggiato
+    • Câble d’alimentation endommagé  
     
-    • Fusibili all'interno del pannello frontale bruciati 
-  - • Verificare connessione alimentazione secondo manuale FlexiBowl
+    • Fusibles grillés à l'intérieur du panneau avant  
+  - • Vérifier la connexion électrique conformément au manuel FlexiBowl®  
     
-    • Portare switch in posizione "I" (ON)
+    • Amener l’interrupteur en position «I» (ON)  
+     
+    • Inspecter le câble pour vérifier qu'il ne soit pas endommagé et le remplacer si nécessaire  
     
-    • Ispezionare cavo per danni e sostituire se necessario
+    • Contactez l’assistance technique pour le remplacement du fusible  
+* - Le **FlexiBowl® s'éteint aléatoirement**  
+  - • Connexion électrique desserrée  
     
-    • Contattare supporto tecnico per sostituzione fusibile
-* - **FlexiBowl si spegne casualmente**
-  - • Connessione alimentazione allentata
+    • Interférences électriques  
     
-    • Interferenze elettriche
+  - • Serrer les connexions électriques  
     
-  - • Serrare connessioni alimentazione
-    
-    • Collegare a linea dedicata con filtro EMI
+    • Brancher à une ligne dédiée avec filtre EMI  
 
 ```
 (troubleshooting_ethernet)=
-## Problemi di Connessione Ethernet 
+## Problèmes de connexion Ethernet
 
 ```{list-table}
 :header-rows: 1
 :widths: 30 35 35
 
-* - Problema
-  - Possibili Cause
-  - Soluzioni
-* - **FlexiBowl non comunica con VisionController**
-  - • FlexiBowl non acceso (LED READY spento)  
-    • Cavo Ethernet non collegato correttamente al FlexiBowl e/o al VisionController  
-    • Cavo Ethernet danneggiato    
-    • Indirizzo IP errato  
-    • FlexiBowl e VisionController su subnet diverse  
-    • Firewall blocca comunicazione  
-    • Porta Ethernet VisionController guasta  
-  - • Verificare LED READY acceso sul FlexiBowl  
-    • Verificare connessione fisica cavo Ethernet su entrambi i lati  
-    • Testare cavo con cable tester o sostituire  
-    • Verificare configurazione IP in [FlexiBowl Setup](../QUICKSTART/SETUP/13a_FB_Setup.md)  
-    • Configurare FlexiBowl e VisionController nella stessa rete (es: 192.168.1.x)  
-    • Disabilitare temporaneamente firewall per test  
-    • Provare altra porta Ethernet del VisionController  
-* - **Connessione intermittente**  
-  - • Cavo troppo lungo (> 100m)  
-    • Connettore RJ45 danneggiato o mal crimpato  
-    • Interferenze elettromagnetiche  
-  - • Ridurre lunghezza cavo sotto 100m o usare switch intermedio  
-    • Sostituire connettori o cavo completo  
-    • Utilizzare cavo schermato (STP) lontano da fonti EMI  
+* - Problème
+  - Causes possibles
+  - Solutions
+* - **FlexiBowl® ne communique pas avec le VisionController**  
+  - • FlexiBowl® n'est pas allumé (LED READY éteinte)  
+    • Le câble Ethernet n'est pas correctement connecté au FlexiBowl® et/ou au VisionController  
+    • Le câble Ethernet est endommagé  
+    • Mauvaise adresse IP  
+    • Le FlexiBowl® et le VisionController se trouvent sur des sous-réseaux différents  
+    • Le pare-feu bloque la communication  
+    • Le port Ethernet du VisionController est défectueux  
+  - • Vérifier l’allumage de la LED READY sur le FlexiBowl®  
+    • Vérifier la connexion physique du câble Ethernet des deux côtés  
+    • Tester le câble avec un testeur de câble ou le remplacer  
+    • Vérifier la configuration IP dans [FlexiBowl® Setup](../QUICKSTART/SETUP/13a_FB_Setup.md)  
+    • Configurer le FlexiBowl® et le VisionController dans le même réseau (par exemple : 192.168.1.x)  
+    • Désactiver temporairement le pare-feu pour les tests  
+    • Essayer un autre port Ethernet du VisionController  
+* - **Connexion intermittente**  
+  - • Câble trop long (> 100 m)  
+    • Connecteur RJ45 endommagé ou mal serti  
+    • Interférences électromagnétiques  
+  - • Réduire la longueur du câble en dessous de 100 m ou utiliser un interrupteur intermédiaire  
+    • Remplacer les connecteurs ou le câble complet  
+    • Utiliser un câble blindé (STP) loin des sources d'EMI  
 ```
 (troubleshooting_pneumatica)=
-## Problemi Pneumatici (Aria Compressa)
+## Problèmes pneumatiques (air comprimé)
 
 ```{list-table}
 :header-rows: 1
 :widths: 30 35 35
 
-* - Problema
-  - Possibili Cause
-  - Soluzioni
-* - **Flip non funziona o impulso molto debole**
-  - • Aria compressa non collegata  
-    • Tubo pneumatico danneggiato o ostruito  
-    • Regolatore di pressione chiuso o su minimo  
+* - Problème
+  - Causes possibles
+  - Solutions
+* - **Le Flip ne fonctionne pas ou l'impulsion est très faible**  
+  - • L'air comprimé n'est pas connecté  
+    • Le tuyau pneumatique est endommagé ou obstrué  
+    • Le régulateur de pression est fermé ou est au minimum  
     
-    • Pressione insufficiente (< 5 bar)
-    
-    
-    
-    • Perdite nel circuito pneumatico
+    • Pression insuffisante (< 5 bar)  
     
     
-  - • Collegare aria compressa alla connessione FlexiBowl (vedere manuale)  
+    
+    • Fuites dans le circuit pneumatique  
+    
+    
+  - • Raccorder l'air comprimé à la connexion FlexiBowl® (voir manuel)  
 
-    • Verificare tubo per pieghe/ostruzioni, sostituire se necessario  
-    • Aprire regolatore di pressione sul pannello di controllo  
+    • Vérifier que le tuyau ne soit pas plié ou obstrué, le remplacer si nécessaire  
+    • Ouvrir le régulateur de pression sur le panneau de contrôle  
     
-    • Aumentare pressione a 5-6 bar
-    
-    
-    
-    • Ispezionare raccordi con acqua saponata, serrare o sostituire
+    • Augmenter la pression à 5-6 bars  
     
     
-* - **Air-blow non funziona**
-  - • FlexiBowl non predisposto con opzione Air-Blow  
+    
+    • Inspecter les raccords avec de l'eau savonneuse, les resserrer ou les remplacer  
+    
+    
+* - **L'air-blow ne **fonctionne** pas**  
+  - • Le FlexiBowl® n'est pas configuré avec l'option Air-Blow  
 
-    • Deviatori ad aria non alimentati esternamente   
+    • Déviateurs d’air non alimentés à l’extérieur  
 
-    • Regolatori Flusso chiusi   
+    • Régulateurs de flux fermés  
 
-    • Pressione aria insufficiente  
+    • Pression d’ait insuffisante  
   
     
-    • Elettrovalvola guasta
-  - • Verificare che il FlexiBowl ordinato abbia la voce Option Blow Test sia True  nel foglio produzione   
+    • Électrovanne défectueuse  
+  - • Vérifier que le FlexiBowl® commandé comporte l'option Blow Test True dans la fiche de production  
 
-    • Verificare che alimentazione Pneumatica esterna sia presente (tubo fornito)     
+    • Vérifier que l'alimentation pneumatique externe est présente (tuyau fourni)  
 
-    • In presenza di più deviatori ad aria, controllare che il regolatore di flusso sul lato del FlexiBowl sia impostato sopra lo zero     
+    • S'il y a plusieurs déviateurs d'air, vérifier que le régulateur de débit situé sur le côté du FlexiBowl® est réglé au-dessus de zéro  
 
-    • Controllare pressione aria (5-6 bar)    
+    • Vérifier la pression d'air (5-6 bar)  
 
     
-    • seguire [Istruzioni]()
+    • suivre les [instructions]  
 ```
 (troubleshooting_connessione_camera)=
-## Problemi di Connessione Camera
+## Problèmes de connexion de la caméra
 
 ```{list-table}
 :header-rows: 1
 :widths: 30 35 35
 
-* - Problema
-  - Possibili Cause
-  - Soluzioni
-* - **Camera non rilevata dal VisionController**
-  - • Cavo Ethernet camera non collegato
+* - Problème
+  - Causes possibles
+  - Solutions
+* - La **caméra n'est pas détectée par le VisionController**  
+  - • Le câble Ethernet de la caméra n'est pas connecté  
     
-    • Camera collegata a porta non POE del VisionController
+    • Caméra connectée au port non-POE du VisionController  
     
 
     
-    • Indirizzo IP camera in conflitto con quelli di altri dispositivi nella stessa sottorete  
-    • Porta POE VisionController guasta
-  - • Verificare connessione fisica cavo camera  
-    • Collegare camera SOLO a porta POE del VisionController  
-    • Reimpostare IP camera o configurare IP statico univoco    
-    • Provare altra porta POE del VisionController  
-* - **Immagine camera nera o assente**
-  - • Illuminatore spento   
-    • Esposizione camera troppo bassa  
-    • Lente con tappo protettivo non rimosso    
-    • Lente non installata    
-    • Camera non alimentata (POE non attivo)  
+    • L'adresse IP de la caméra est en conflit avec celles d'autres appareils du même sous-réseau  
+    • Port POE du VisionController défectueux  
+  - • Vérifier la connexion physique du câble de la caméra  
+    • Connecter la caméra UNIQUEMENT au port POE du VisionController  
+    • Réinitialiser l'IP de la caméra ou configurer une IP statique unique  
+    • Essayer un autre port POE du VisionController  
+* - **Image de la caméra noire ou absente**  
+  - • Dispositif d’éclairage éteint  
+    • Exposition de la caméra trop faible  
+    • Objectif avec capuchon de protection non retiré  
+    • Objectif non installé  
+    • Caméra non alimentée (POE non actif)  
     
      
-    • Camera guasta  
-  - • Controllare che l'illuminatore sia acceso   
-    • Aumentare esposizione in [Camera Setup](../QUICKSTART/SETUP/13d_Camera_Setup.md)  
-    • Rimuovere tappo protettivo lente   
-    • Installare lente con focale corretta  
-    • Verificare LED camera acceso (indicatore POE attivo)  
-    • Sostituire camera  
+    • Caméra défectueuse  
+  - • Vérifier que le dispositif d’éclairage est allumé  
+    • Augmenter l'exposition dans [Camera Setup](../QUICKSTART/SETUP/13d_Camera_Setup.md)  
+    • Retirer le capuchon de protection de l'objectif  
+    • Installer l'objectif avec la longueur focale correcte  
+    • Vérifier que la LED de la caméra est allumée (indicateur POE actif)  
+    • Remplacer la caméra
 
-* - **Camera si disconnette casualmente**
-  - • Alimentazione POE insufficiente (potenza < richiesta camera)
+* - **La caméra se déconnecte de façon aléatoire**  
+  - • Alimentation POE insuffisante (puissance < demande de la caméra)  
     
-    • Cavo danneggiato
+    • Câble endommagé  
     
-    • Surriscaldamento camera
+    • Surchauffe de la caméra  
     
-    • Porta POE danneggiata
-  - • Verificare potenza POE disponibile   
-    • Sostituire cavo Ethernet  
+    • Port POE endommagé  
+  - • Vérifier la puissance POE disponible  
+    • Remplacer le câble Ethernet  
     
-    • Migliorare ventilazione area camera  
+    • Améliorer la ventilation de la zone caméra  
     
-    • Sostituire switch POE o porta VisionController  
+    • Remplacer le commutateur POE ou le port du VisionController  
 ```
 (troubleshooting_connessione_toplight)=
-## Problemi di Connessione Toplight 
+## Problèmes de connexion du Toplight
 ```{list-table}
 :header-rows: 1
 :widths: 30 35 35
 
-* - Problema
-  - Possibili Cause
-  - Soluzioni
-* - **Toplight non si accende**
-  - • Alimentazione 24V DC non collegata
+* - Problème
+  - Causes possibles
+  - Solutions
+* - **Le toplight ne s'allume pas**
+  - • L'alimentation 24V DC n'est pas connectée
     
-    • Cavo alimentazione danneggiato
+    • Câble d’alimentation endommagé
     
-    • Tensione errata (≠ 24V)
+    • Tension incorrecte (≠ 24V)
     
-    • Toplight guasto
+    • Toplight en panne
     
-    • Fusibile/protezione scattata
-  - • Verificare connessione alimentazione 24V DC
+    • Fusible/protection déclenchée
+  - • Vérifier la connexion de l'alimentation 24V DC
     
-    • Ispezionare cavo, sostituire se danneggiato
+    • Inspecter le câble, le remplacer s'il est endommagé
     
-    • Misurare tensione con multimetro, deve essere 24V DC (±10%)
+    • Mesurer la tension à l'aide d'un multimètre, elle doit être de 24V DC (±10 %)
     
-    • Sostituire toplight
+    • Remplacer le toplight
     
-    • Verificare protezioni nel quadro elettrico
-* - **Luminosità toplight variabile**
-  - • Alimentazione instabile
+    • Vérifier les protections dans le tableau électrique
+* - **Luminosité variable du toplight**
+  - • Alimentation électrique instable
     
-    • Connessioni allentate
+    • Connexions desserrées
     
-    • Alimentatore sottodimensionato
+    • Alimentation électrique sous-dimensionnée
     
-    • Toplight a fine vita
-  - • Verificare stabilità tensione alimentazione
+    • Toplight en fin de vie
+  - • Vérifier la stabilité de la tension d'alimentation
     
-    • Serrare tutte le connessioni elettriche
+    • Serrer toutes les connexions électriques
     
-    • Verificare corrente assorbita vs capacità alimentatore
+    • Vérifier la consommation de courant par rapport à la capacité du bloc d’alimentation
     
-    • Sostituire toplight
-* - **Toplight si surriscalda**
-  - • Ventilazione insufficiente
+    • Remplacer le toplight
+* - **Toplight se surchauffe**
+  - • Ventilation insuffisante
     
-    • Corrente eccessiva
+    • Courant excessif
     
-    • Ciclo di lavoro continuo 100%
-  - • Migliorare circolazione aria attorno a toplight
+    • Cycle de fonctionnement continu à 100 %
+  - • Améliorer la circulation de l'air autour du toplight
     
-    • Verificare corrente assorbita non superi specifiche
+    • Vérifier que la consommation de courant ne dépasse pas les spécifications
     
-    • Implementare ciclo lavoro intermittente se possibile
+    • Mettre en œuvre un cycle de travail intermittent si possible
 ```
 (troubleshooting_multi)=
-## Problemi Configurazioni Multi-Dispositivo
+## Problèmes de Configurations Multi-appareils
 ```{list-table}
 :header-rows: 1
 :widths: 30 35 35
 
-* - Problema
-  - Possibili Cause
-  - Soluzioni
-* - **Sistema con 2-3 FlexiBowl: solo uno comunica**
-  - • FlexiBowl spenti  
-    • Indirizzi IP duplicati  
-    • Cavi incrociati  
-  - • Controllare che il FlexiBowl sia acceso  
-    • Assegnare IP univoci a ogni FlexiBowl (es: 192.168.1.10, .11, .12)  
-    • Verificare corretto cablaggio stella (no daisy-chain)  
-* - **Sistema con 2-3 camere: solo una acquisisce**  
-  - • Alimentazione non sufficiente   
-    • Indirizzi IP camere in conflitto  
-  - • Controllare che l'alimentazione sia compresa fra 6 - 26 V  
-    • Configurare IP statico univoco per ogni camera  
-    • Abilitare tutte le camere in [Camera Setup](../QUICKSTART/SETUP/13d_Camera_Setup.md)  
-* - **Sistema con 2-3 tramogge: controllo errato**  
-  - • Tramogge non abilitate individualmente in software  
-    • Alimentazione errata   
-    • Contatto al robot errato   
-  - • Abilitare ogni tramoggia in [Hopper Setup](../QUICKSTART/SETUP/13b_Hopper_Setup.md)  
-    • Controllare alimentazione  
-    • Controllare contatto al robot   
+* - Problème
+  - Causes possibles
+  - Solutions
+* - **Système avec 2-3 FlexiBowl® : un seul communique**  
+  - • FlexiBowl® éteint  
+    • Adresses IP en double  
+    • Câbles croisés  
+  - • Vérifier que le FlexiBowl® est allumé  
+    • Attribuer des IP uniques à chaque FlexiBowl® (par ex : 192.168.1.10, .11, .12)  
+    • Vérifier le câblage en étoile (pas de guirlande)  
+* - **Système avec 2-3 caméras : une seule acquiert**  
+  - • Alimentation électrique insuffisante  
+    • Adresses IP des caméras contradictoires  
+  - • Vérifier que l'alimentation électrique est comprise entre 6 et 26 V  
+    • Configurer une IP statique unique pour chaque caméra  
+    • Activer toutes les caméras dans [Camera Setup](../QUICKSTART/SETUP/13d_Camera_Setup.md)  
+* - **Système avec 2-3 trémies : contrôle incorrect**  
+  - • Les trémies ne sont pas activées individuellement dans le logiciel  
+    • Alimentation électrique incorrecte  
+    • Contact robot incorrect  
+  - • Activer chaque trémie dans [Hopper Setup](../QUICKSTART/SETUP/13b_Hopper_Setup.md)  
+    • Vérifier l'alimentation électrique  
+    • Vérifier le contact avec le robot  
 ```
 
 

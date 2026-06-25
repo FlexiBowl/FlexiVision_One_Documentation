@@ -1,72 +1,72 @@
 (troubleshooting_conf_tramoggia)=
-# **Configuración Hopper** 
+# **Configuración de la tolva** 
 ```{list-table}
 :header-rows: 1
 :widths: 30 35 35
 
 * - Problema
-  - Posibles Causas
+  - Posibles causas
   - Soluciones
 
 * - **Área de control no definible**
   - • Imagen no adquirida
     
     • Sección incorrecta
-  - • Adquirir imagen de prueba
+  - • Adquiera una imagen de prueba
     
-    • Acceder mediante Config Hopper X
+    • Acceda a través de Config Hopper X
 
 
-* - **AUTO no calcula Mean y Std Dev correctamente**
+* - **AUTO no calcula correctamente la media y la desviación estándar**
   - • CAPTURE no ejecutados
     
     • Orden de CAPTURE invertido
     
     • Área de control demasiado pequeña
-  - • Ejecutar CAPTURE vacío y luego CAPTURE lleno
+  - • Ejecute CAPTURE vacío y luego CAPTURE lleno
     
-    • Repetir en el orden correcto
+    • Repita en el orden correcto
     
-    • Ampliar el área de control
-* - **TEST siempre VERDE (hopper no se activa nunca)**
+    • Amplíe el área de control
+* - **TEST siempre VERDE (la tolva nunca se activa)**
   - • Umbral demasiado permisivo
     
     • CAPTURE lleno con demasiados componentes
     
-    • Mean calculado incorrectamente
-  - • Repetir CAPTURE lleno con el número mínimo correcto
+    • Media calculada incorrectamente
+  - • Repita CAPTURE lleno con el número mínimo correcto
     
-    • Verificar que AUTO recalcula correctamente
+    • Compruebe que AUTO recalcula correctamente
     
-    • Ajustar manualmente el umbral si es necesario
-* - **TEST siempre ROJO (hopper se activa siempre)**
+    • Ajuste el umbral manualmente si es necesario
+* - **TEST siempre ROJO (la tolva siempre se activa)**
   - • Umbral demasiado restrictivo
     
     • CAPTURE vacío con componentes presentes
     
-  - • Repetir CAPTURE vacío con el área completamente limpia
+  - • Repita CAPTURE vacío con el área completamente limpia
     
-    • Repetir AUTO
+    • Repita AUTO
 
 * - **Tiempo de vibración no produce el efecto deseado**
   - • Valor demasiado bajo
     
     • Valor demasiado alto 
     
-    • Nivel variable de la cuba del hopper
-  - • Empezar con 500ms
+    • Nivel del depósito de la tolva variable
+  - • Comience con 500 ms
     
-    • Incrementar ±100ms para regular el flujo
+    • Incremente ±100 ms para ajustar el flujo
     
-    • **CRÍTICO**: Mantener carga constante en la cuba
+    • **CRÍTICO**: Mantenga la carga constante en el depósito
 
-* - **Hopper descarga en momentos incorrectos**
-  - • Steps no correcto
+* - **La tolva descarga en momentos incorrectos**
+  - • Steps incorrecto
 
-    • Hardware del Controlador Hopper no configurado correctamente 
+    • Hardware del controlador de tolva no configurado correctamente 
 
-  - • Recalcular Steps
+  - • Recalcule Steps
 
-    • Comprobar las especificaciones de configuración en el [manual dedicado al Hopper]() 
+    • Compruebe las especificaciones de configuración en el [manual dedicado a la tolva]() 
 ```
 

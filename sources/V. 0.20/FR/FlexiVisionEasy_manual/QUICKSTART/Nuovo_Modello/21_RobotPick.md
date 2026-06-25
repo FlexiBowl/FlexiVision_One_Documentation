@@ -1,44 +1,44 @@
 (robotpick)=
-# **Calibrazione Robot Pick**
-In questa pagina vedremo come collegare le coordinate della visione con quelle del robot per consentire un prelievo preciso dei componenti.
+# **Étalonnage du Robot Pick**
+Sur cette page, nous verrons comment relier les coordonnées de la vision à celles du robot pour permettre un prélèvement précis des composants.
 
 
-**Cos'è il Robot Pick?**  
-La funzione **Robot Pick** calcola l'offset tra le coordinate rilevate da FlexiVision One e le coordinate reali del robot, permettendo al robot di prelevare i componenti nella posizione corretta.
+**Qu'est-ce que le Robot Pick ?**  
+La fonction **Robot Pick** calcule le décalage entre les coordonnées détectées par FlexiVision One et les coordonnées réelles du robot, ce qui permet au robot de prélever les composants dans la bonne position.
 ```{danger}
-**Coordinate robot fondamentali!**
+**Coordonnées fondamentales du robot !**
 
-Questa fase richiede **OBBLIGATORIAMENTE** le coordinate X, Y, Rz salvate durante la preparazione fisica del setup (Step 1 della sezione Clearances).
+Cette étape nécessite **OBLIGATOIREMENT** les coordonnées X, Y, Rz enregistrées lors de la préparation physique du réglage (étape 1 de la section Clearances).
 
-Senza queste coordinate, non è possibile completare la calibrazione. Se sono state perse o dimenticate, sarà necessario ripetere l'intera preparazione fisica con il robot.
+Sans ces coordonnées, l'étalonnage ne peut être effectué. En cas de perte ou d'oubli, il faudra recommencer toute la préparation physique avec le robot.
 ```
 ---
 
-## Panoramica Interfaccia Robot Pick
+## Aperçu de l'interface Robot Pick
 
-Dopo aver cliccato "Next" nella pagina Clearances, si apre la pagina **Robot Model Pick**.
+Après avoir cliqué sur « Next » à la page Clearance, la page **Robot Model Pick** s'ouvre.
 
-![Pagina Robot Pick](../../../../../_shared/media/images/pagina_robotpick.png)
+![Page Robot Pick](../../../../../_shared/media/images/pagina_robotpick.png)
 
-|Sezione | Parametro | Funzione |
+|Section | Paramètre | Fonction |
 |-----------|-----------|----------|
-| Enable | **Enable Robot Pick** | Attiva la calibrazione del robot |
-|Vision Result| **X cord** | Coordinata X rilevata dalla visione |
-|Vision Result| **Y cord** | Coordinata Y rilevata dalla visione |
-|Vision Result| **RZ cord** | Rotazione Z rilevata dalla visione |
-|Insert Robot Coordinate| **X cord** | Coordinata X del robot (da inserire) |
-|Insert Robot Coordinate| **Y cord** | Coordinata Y del robot (da inserire) |
-|Insert Robot Coordinate| **RZ cord** | Rotazione Z del robot (da inserire) |
+| Enable | **Enable Robot Pick** | Active l'étalonnage du robot |
+|Vision Result| **X cord** | Coordonnée X détectée par la vision |
+|Vision Result| **Y cord** | Coordonnée Y détectée par la vision |
+|Vision Result| **RZ cord** | Rotation Z détectée par la vision |
+|Insert Robot Coordinate| **X cord** | Coordonnées X du robot (à saisir) |
+|Insert Robot Coordinate| **Y cord** | Coordonnées Y du robot (à saisir) |
+|Insert Robot Coordinate| **RZ cord** | Rotation Z du robot (à saisir) |
 
 
-| Funzione | Descrizione |
+| Fonction | Description |
 |----------|-------------|
-| **Find Object** | Rileva il componente e mostra coordinate visione |
-| **Picking Offset** | Calcola l'offset per il prelievo corretto |
+| **Find Object** | Détecte le composant et affiche les coordonnées de vision |
+| **Picking Offset** | Calcule le décalage pour un prélèvement correct |
 
 ---
 
-## **Step 1: Attivazione e Rilevamento Componente**
+## Étape 1 : Activation et détection du composant
 
 :::{video} ../../../../../_shared/media/videos/Step1_robot.mp4
     :width: 100%
@@ -46,18 +46,21 @@ Dopo aver cliccato "Next" nella pagina Clearances, si apre la pagina **Robot Mod
 :::
 ```{list-table}
 * - **1**
-  - Cliccare su **Enable Robot Pick**
+  - Cliquer sur **Enable Robot Pick**
 * - **2**
-  - Cliccare su <img src="../../../../../_shared/media/images/tasto_FIND_OBJECT1.png" class="inline-icon">:
-      - Il sistema rileverà il componente di riferimento
-      - Le coordinate appariranno nella sezione **Vision Result**
+  - Cliquer sur <img src="../../../../../_shared/media/images/tasto_FIND_OBJECT1.png" class="inline-icon">:
+      - Le système détecte le composant de référence
+      - Les coordonnées apparaissent dans la section **Vision Result**
 
       :::{note} Vision Result:
-      Queste sono le coordinate che FlexiVision One "vede" nell'immagine. Non sono ancora collegate al sistema di coordinate del robot.
+      Ce sont les coordonnées que FlexiVision One « voit » dans l'image. Elles ne sont pas encore connectées au système de coordonnées du robot.
       :::
 ```
+:::{tip}
+En cas de doutes lors de la configuration, veuillez consulter le bouton **INFO** sur la page en cours.
+:::
 
-## **Step 2: Inserimento Coordinate Robot e calcolo Offset**
+## Étape 2 : Saisie des coordonnées du robot et calcul du décalage
 
 :::{video} ../../../../../_shared/media/videos/Step2_robot.mp4
     :width: 100%
@@ -65,87 +68,79 @@ Dopo aver cliccato "Next" nella pagina Clearances, si apre la pagina **Robot Mod
 :::
 ```{list-table}
 * - **3**
-  - Nel riquadro **Insert Robot Coordinates**, inserire le coordinate salvate durante la creazione del modello:
-      - **X cord** → Coordinata X annotata al punto 1 della [Creazione Clearances](setupclearances)
-      - **Y cord** → Coordinata Y annotata al punto 1 della [Creazione Clearances](setupclearances)
-      - **RZ cord** → Rotazione Z annotata al punto 1 della [Creazione Clearances](setupclearances)
+  - Dans la case **Insert Robot Coordinates**, entrer les coordonnées enregistrées lors de la création du modèle :
+      - **X cord** → coordonnée X notée à l'étape 1 de la [Création Clearances](setupclearances)
+      - **Y cord** → coordonnée Y notée à l'étape 1 de la [Création Clearances](setupclearances)
+      - **RZ cord** → rotation Z notée à l'étape 1 de la [Création Clearances](setupclearances)
 
       :::{danger}
-      Usa le coordinate salvate durante il setup del modello. Senza queste coordinate, la calibrazione sarà errata!  
-      Le coordinate devono essere inserite con **massima precisione**:
-      - Copiare i valori esattamente come annotati (inclusi decimali)
-      - **NON approssimare** (es: 450.23 ≠ 450.2 ≠ 450)
-      - Verificare di non aver scambiato X e Y
-      - Controllare il segno (+ o -) di ciascuna coordinata
+      Utiliser les coordonnées enregistrées lors de la configuration du modèle. Sans ces coordonnées, l'étalonnage sera incorrect !  
+      Les coordonnées doivent être saisies avec une **précision maximale** :
+      - Copier les valeurs exactement telles qu'elles sont écrites (y compris les décimales)
+      - **NE PAS approximer** (ex. : 450,23 ≠ 450,2 ≠ 450)
+      - Vérifier de ne pas avoir inversé X et Y
+      - Vérifier le signe (+ ou -) de chaque coordonnée
 
-      **Errori in questa fase causano offset robot completamente errati**, risultando in tentativi di prelievo in posizioni sbagliate (anche decine di centimetri di errore). La mancata osservanza di questi due punti potrebbe comportare collisioni del robot con conseguenti danni a FlexiBowl, componenti o robot stesso.  
+      Les **erreurs commises à ce stade entraînent des décalages complètement erronés du robot**, ce qui se traduit par des tentatives de prélèvement dans des positions erronées (même des dizaines de centimètres d'erreur). Le non-respect de ces deux points peut entraîner des collisions avec le robot et endommager le FlexiBowl®, les composants ou le robot lui-même.  
       :::
 * - **4**
-  - Cliccare su <img src="../../../../../_shared/media/images/tasto_GRIPPER_OFFSET.png" class="inline-icon">
-      - Il sistema calcolerà automaticamente la trasformazione tra coordinate visione e coordinate robot
-      - Questo offset verrà applicato a tutti i futuri rilevamenti
+  - Cliquer sur <img src="../../../../../_shared/media/images/tasto_GRIPPER_OFFSET.png" class="inline-icon">
+      - Le système calcule automatiquement la transformation entre les coordonnées de la vision et les coordonnées du robot
+      - Ce décalage sera appliqué à tous les relevés ultérieurs
 ```
 ---
-```{admonition} **Come Funziona il Gripper Offset?**
+```{admonition} **Comment fonctionne le Gripper Offset ?**
 :class: info
-Il sistema confronta:
-- **Coordinate Visione**: dove FlexiVision One "vede" l'origine del componente
-- **Coordinate Robot**: dove il robot ha effettivamente afferrato il componente
+Le système compare :
+- **Coordonnées Vision** : là où FlexiVision One « voit » l'origine du composant
+- **Coordonnées Robot** : là où le robot a effectivement saisi le composant
 
-Calcola la differenza e la memorizza come **offset**. Questo offset verrà applicato a tutti i componenti rilevati in futuro, garantendo che il robot prelevi sempre nella posizione corretta.
+Il calcule la différence et l'enregistre en tant que **décalage**. Ce décalage sera appliqué à tous les composants détectés à l'avenir, afin de garantir que le robot ramasse toujours dans la bonne position.
 ```
-
+:::{tip}
+En cas de doutes lors de la configuration, veuillez consulter le bouton **INFO** sur la page en cours.
+:::
 ---
 
-## **Step 3: Finalizzazione e Salvataggio**
+## Étape 3 : Finalisation et sauvegarde
 ```{list-table}
 * - **5**
-  - Cliccando su <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon">, torneremo alla pagina delle ricette <img src="../../../../../_shared/media/images/tasto_recipes.png" class="inline-icon">
+  - En cliquant sur <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon">, retour à la page des recettes <img src="../../../../../_shared/media/images/tasto_recipes.png" class="inline-icon">
 * - **6**
-  - Cliccare su <img src="../../../../../_shared/media/images/tasto_save_recipes.png" class="inline-icon"> per salvare l'intera configurazione
+  - Cliquer sur <img src="../../../../../_shared/media/images/tasto_save_recipes.png" class="inline-icon"> pour sauvegarder l'ensemble de la configuration
 
-      :::{admonition} Salvataggio Completo
+      :::{admonition} Sauvegarde complète
       :class: success
-      Il salvataggio include:
-      - ✓ Modello creato
-      - ✓ Area di lavoro (ROI)
-      - ✓ Tolleranze (Accept Threshold)
-      - ✓ Clearances configurate
-      - ✓ Calibrazione robot (Gripper Offset)
+      La sauvegarde comprend :
+      - ✓ Modèle créé
+      - ✓ Zone de travail (ROI)
+      - ✓ Tolérances (Accept Threshold)
+      - ✓ Clearances configurées
+      - ✓ Calibrage du robot (Gripper Offset)
       :::
 ```
 
 ---
 
-## Modelli Multipli - Aggiungere Altri Modelli
+## Modèles multiples - Ajouter d'autres modèles
 
-### **Step 4: Modelli Aggiuntivi (opzionale)**
+### *Étape 4 : Modèles supplémentaires (optionnel)*
 ```{list-table}
 * - **7**
-  - Per creare altri modelli nella stessa ricetta:
-      - Tornare su <img src="../../../../../_shared/media/images/tasto_edit_recipes.png" class="inline-icon">
-      - Selezionare un nuovo modello non ancora configurato 
-      - Ripetere l'intera procedura dalla [Creazione Modello](nuovomodello)
+  - Pour créer des modèles supplémentaires dans la même recette :
+      - Revenir à <img src="../../../../../_shared/media/images/tasto_edit_recipes.png" class="inline-icon">
+      - Sélectionner un nouveau modèle non encore configuré 
+      - Répéter toute la procédure depuis la [Création de modèle](nuovomodello)
 
       :::{tip}
-      Ogni modello nella ricetta può avere configurazioni diverse (ROI, clearance, offset), permettendo di gestire componenti con caratteristiche diverse nella stessa applicazione.
+      Chaque modèle de la recette peut avoir différentes configurations (ROI, clearance, offset), ce qui permet de gérer des composants aux caractéristiques différentes dans la même application.
       :::
 ```
 
----
-
-## Verifica Finale
-
-Prima di considerare la ricetta completata, continua con:
-
-- [Configurazione del FlexiBowl](configfb)
-- [Configurazione della Tramoggia](confighopper)
-- [Monitoraggio Applicazione](dashboard)
 ```{seealso}
-- [Troubleshooting](troubleshooting)
+Pour tout problème rencontré lors des étapes qui viennent d'être effectuées, consulter [Résolution des problèmes](troubleshooting)
 ```
 
 ---
 
 
-[Back To Top]()

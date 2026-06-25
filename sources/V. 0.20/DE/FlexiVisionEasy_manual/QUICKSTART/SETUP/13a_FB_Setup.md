@@ -1,320 +1,367 @@
 (fbsetup)=
-# **Passo 4: FlexiBowl Setup**
+# **FlexiBowl® Setup**
 
-Questa sezione descrive la procedura per connettere e configurare il FlexiBowl con il sistema FlexiVision One. 
+In diesem Abschnitt wird beschrieben, wie Sie den FlexiBowl® an das FlexiVision One-System anschließen und konfigurieren.
 
 ```{note}
-**Prerequisiti**
+**Voraussetzungen**
 
-Assicurarsi che:
-- L'installazione meccanica di tutti i componenti sia completata ([Installazione Meccanica](Installazione_Meccanica))
-- Tutti i cavi siano collegati correttamente ([Cablaggio e Connessioni](cablaggio)) 
+Stellen Sie Folgendes sicher:
+- Die mechanische Installation aller Komponenten ist abgeschlossen ([Mechanische Installation](Installazione_Meccanica))
+- Alle Kabel sind korrekt angeschlossen ([Verkabelung und Anschlüsse](cablaggio)) 
 ```
 
 ---
 
-## Accesso alla configurazione FlexiBowl
+## Zugriff auf die FlexiBowl®-Konfiguration
 ```{list-table}
 * - **1** 
-  - Dalla pagina principale del software, cliccare su <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
+  - Klicken Sie auf der Startseite der Software auf <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon">
 * - **2**
-  - Nella pagina SETUP, identificare e cliccare sull'icona **FlexiBowl Setup**
-    ```{dropdown} Pagina Setup 
-       ![Pagina Setup](../../../../../_shared/media/images/pagina_setup1.png)
+  - Suchen Sie auf der SETUP-Seite das Symbol **FlexiBowl® Setup** und klicken Sie darauf
+    ```{dropdown} Setup-Seite 
+       ![Setup-Seite](../../../../../_shared/media/images/pagina_setup1.png)
     ```
 * - **3**
-  - Si apre la schermata di configurazione dei FlexiBowl
+  - Der Konfigurationsbildschirm für den FlexiBowl® wird geöffnet
 ```
-![Pagina FlexiBowl Setup](../../../../../_shared/media/images/pagina_FBsetup.png)
+![FlexiBowl® Setup-Seite](../../../../../_shared/media/images/pagina_FBsetup.png)
 ---
 
-## Procedura di connessione
+## Verbindungsvorgang
 
-### **Step 1: Configurazione indirizzo di rete**
+### *Schritt 1: Konfiguration der Netzwerkadresse*
 
 ```{list-table}
 * - **4**
-  - Verificare che l'indirizzo sia sulla stessa subnet del VisionController
+  - Stellen Sie sicher, dass sich die Adresse im selben Subnetz wie der VisionController befindet.
   
 * - **5**
-  - Nel campo **FlexiBowl IP**, inserire l'indirizzo IP del FlexiBowl
-      - Formato: `192.168.1.XXX` (o secondo la configurazione della vostra rete)
+  - Geben Sie im Feld **FlexiBowl® IP** die IP-Adresse des FlexiBowl® ein
+      - Format: `192.168.1.XXX` (oder abhängig von Ihrer Netzwerkkonfiguration)
 ```
 :::{tip}
-Per comodità e coerenza, partire dal primo FlexiBowl disponibile 
+Der Einfachheit und der Einheitlichkeit halber beginnen Sie bitte mit dem ersten verfügbaren FlexiBowl®.
 :::
 :::{note}
-Il FlexiBowl viene spedito con indirizzo IP di default `192.168.1.10`
+Der FlexiBowl® wird mit einer Standard-IP-Adresse ausgeliefert. `192.168.1.10`
+:::
+:::{important}
+Anweisungen zum Ändern der IP-Adresse des FlexiBowl® finden Sie im Handbuch, das im [Downloads](https://www.flexibowl.co.uk/downloads)-Bereich verfügbar ist.
 :::
 
-### **Step 2: Test di connessione**
+### *Schritt 2: Verbindungstest*
 
 ```{list-table}
 :widths: 5 95
 
 * - **6**
-  - Dopo aver inserito l'IP, cliccare sul pulsante **Connection Test**
+  - Klicken Sie nach Eingabe der IP auf die Schaltfläche **Connection Test**
 
 * - **7**
-  - Il sistema esegue un test di comunicazione (ping) verso il FlexiBowl
+  - Das System führt einen Kommunikationstest (Ping) mit der FlexiBowl® durch
 
 * - **8**
-  - Osservare l'indicatore di **Status**:
-    - 🟢 **Verde**: Connessione stabilita correttamente
-    - 🔴 **Rosso**: Connessione fallita (verificare indirizzo IP e cablaggio)
+  - Beobachten Sie die **Statusanzeige**:
+    - 🟢 **Grün**: Verbindung erfolgreich hergestellt
+    - 🔴 **Rot:** Verbindung fehlgeschlagen (IP-Adresse und Verkabelung prüfen)
 ```
 
 ```{warning}
-**Connessione fallita**
+**Verbindung fehlgeschlagen**
 
-Se l'indicatore rimane rosso o appare un messaggio di errore:
+Wenn die Anzeige rot bleibt oder eine Fehlermeldung erscheint:
 
-0. Verificare di aver acceso il FlexiBowl
-1. Verificare che l'indirizzo IP inserito sia corretto
-2. Controllare fisicamente il cavo Ethernet (deve essere inserito completamente)
-3. Se presente,verificare che lo switch/router di rete sia acceso
-4. Assicurarsi che FlexiBowl e VisionController siano sulla stessa subnet
-5. Provare a pingare il FlexiBowl da terminale Windows:
-   - Aprire Prompt dei comandi
-   - Digitare: `ping 192.168.1.XXX` (sostituire con IP effettivo)
-   - Se il ping fallisce, si tratta di un problema di rete
+0. Überprüfen Sie, ob der FlexiBowl® eingeschaltet ist
+1. Überprüfen Sie, ob die eingegebene IP-Adresse korrekt ist
+2. Überprüfen Sie das Ethernet-Kabel auf physische Fehler (es muss vollständig eingesteckt sein)
+3. Falls vorhanden, überprüfen Sie, ob der Netzwerk-Switch/Router eingeschaltet ist
+4. Stellen Sie sicher, dass sich FlexiBowl® und VisionController im selben Subnetz befinden
+5. Versuchen Sie, den FlexiBowl® von einem Windows-Terminal aus anzupingen:
+   - Öffnen Sie die Eingabeaufforderung
+   - Geben Sie ein: `ping 192.168.1.XXX` (durch tatsächliche IP-Adresse ersetzen)
+   - Wenn der Ping fehlschlägt, liegt ein Netzwerkproblem vor
 
-Se il problema persiste, consultare [Troubleshooting](troubleshooting).
+Wenn das Problem weiterhin besteht, lesen Sie den Abschnitt [Troubleshooting](troubleshooting).
 ```
 
 ---
 
-## Configurazione parametri FlexiBowl
+## Konfiguration der FlexiBowl®-Parameter
 
-Una volta stabilita la connessione, procedere con la configurazione dei parametri operativi.
+Sobald die Verbindung hergestellt ist, fahren Sie mit der Konfiguration der Betriebsparameter fort.
 
-### **Step 3: Accesso configurazione**
+### *Schritt 3: Zugriff auf die Konfiguration*
 
 ```{list-table}
 * - **9** 
-  - Cliccare sul pulsante <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl" >
+  - Klicken Sie auf die Schaltfläche <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl" >
 * - **10**
-  - Si apre una finestra con i parametri configurabili del FlexiBowl
+  - Es öffnet sich ein Fenster mit den konfigurierbaren Parametern des FlexiBowl®.
 ```
 
 
-### **Step 5: Sincronizzazione parametri**
+### *Schritt 4: Parametersynchronisierung*
 
 ```{list-table}
 
 * - **12**
-  - Cliccare su **Synchronize Parameters**
+  - Klicken Sie auf **Synchronize Parameters**
 * - **13**
-  - Tornare alla pagina SETUP principale per procedere con il setup successivo 
+  - Kehren Sie zur SETUP-Hauptseite zurück, um mit der nächsten Einstellung fortzufahren 
 ```
 
 ```{warning}
-**Non saltare la sincronizzazione**
+**Die Synchronisierung nicht auslassen**
 
-È fondamentale cliccare su **Synchronize Parameters** dopo ogni modifica. Senza questo passaggio:
-- Le modifiche non vengono applicate al FlexiBowl 
-- Il sistema potrebbe comportarsi in modo incoerente
-- Le impostazioni non vengono salvate 
+Es ist wichtig, nach jeder Änderung auf **Synchronize Parameters** zu klicken. Ohne diesen Schritt:
+- werden die Änderungen nicht auf den FlexiBowl® angewendet
+- kann das System unvorhersehbar reagieren
+- werden die Einstellungen nicht gespeichert 
 ```
 ---
 (configfb)=
-# **Configurazione guidata: FlexiBowl® Wizard**
+# **Konfigurationsassistent: FlexiBowl® Wizard**
 
 
-L'interfaccia **FlexiBowl® Wizard** è uno strumento interattivo progettato per guidare l'utente nella configurazione dei parametri di alimentazione in base alla specifica famiglia di prodotti da gestire.
+Die Benutzeroberfläche des **FlexiBowl®-Wizard** ist ein interaktives Tool, das den Benutzer bei der Konfiguration der Zuführparameter entsprechend der jeweiligen Produktfamilie, die verwaltet werden soll, unterstützt.
 
-## **Step 1: Accesso al Wizard**
+## Schritt 1: Zugriff auf den Wizard
 
-Per avviare la procedura:
+So starten Sie den Vorgang:
 ```{list-table}
 :widths: 5 95
 
 * - **1**
-  - Recarsi nella sezione <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon"> del software FlexiVision One
+  - Gehen Sie auf <img src="../../../../../_shared/media/images/tasto_setup1.png" class="inline-icon"> in der FlexiVision One Software
 
 * - **2**
-  - Cliccare sul pulsante **FlexiBowl Setup**, si aprirà una pagina con tutti i FlexiBowl gestibili con FlexiVision One
+  - Klicken Sie auf die Schaltfläche **FlexiBowl® Setup**. Es öffnet sich eine Seite mit allen FlexiBowl®-Geräten, die mit FlexiVision One verwaltet werden können
 
-    :::{dropdown} Pagina FlexiBowl Setup  
-    ![Pagina FlexiBowl Setup](../../../../../_shared/media/images/pagina_FBsetup.png)
+    :::{dropdown} FlexiBowl®-Setup-Seite  
+    ![FlexiBowl® Setup-Seite](../../../../../_shared/media/images/pagina_FBsetup.png)
     :::
 
 * - **3**
-  - Cliccare sul pulsante <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl">, si aprirà una pagina con tutte le movimentazioni disponibili per il FlexiBowl selezionato
+  - Klicken Sie auf die Schaltfläche <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl">. Es öffnet sich eine Seite mit allen für den ausgewählten FlexiBowl verfügbaren Bewegungsabläufen
 
-    :::{dropdown} Pagina Configurazione FlexiBowl  
-    ![Pagina FlexiBowl Config](../../../../../_shared/media/images/pagina_FBsetup.png)
+    :::{dropdown} Seite Konfiguration FlexiBowl®  
+    ![Seite FlexiBowl® Konfig](../../../../../_shared/media/images/pagina_FBsetup.png)
     :::
 
 * - **4**
-  - Cliccare sul pulsante **FlexiBowl X Wizard**, si aprirà una pagina di benvenuto al Wizard
+  - Klicken Sie auf die Schaltfläche **FlexiBowl® X Wizard**; es öffnet sich eine Willkommensseite des Assistenten
 
 * - **5**
-  - Cliccare su <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon icon-small">
+  - Klicken Sie auf <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon icon-small">
     
     :::{note}
-    Cliccare <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon icon-small"> in ogni pagina del wizard per andare avanti nella configurazione guidata
+    Klicken Sie <img src="../../../../../_shared/media/images/tasto_next.png" class="inline-icon icon-small"> auf jeder Seite des Assistenten, um in der geführten Einrichtung fortzufahren.
     :::
 ```
 
-## **Step 2: Selezione Modello e Rotazione**
+## Schritt 2: Auswahl von Modell und Drehung
 
-In questa fase si definiscono le caratteristiche hardware del sistema:
+In dieser Phase werden die Hardware-Eigenschaften des Systems festgelegt:
 ```{list-table}
 * - **6**
-  - Selezionare la taglia del dispositivo (es. 200, 350, 500, ecc.).
+  - Wählen Sie die Größe des Geräts aus (z. B. 200, 350, 500, usw.).
 * - **7**
-  - Definire il senso di rotazione del disco (**Clockwise** o **CounterClockwise**).
+  - Bestimmen Sie die Drehrichtung der Scheibe (**Clockwise** oder **CounterClockwise**).
 ```
-## **Step 3: Caratterizzazione del Componente**
+## Schritt 3: Charakterisierung der Komponente
 
-Il sistema richiede informazioni sulla morfologia dei pezzi per ottimizzare la separazione.
-```{list-table}
+Das System benötigt Informationen zur Morphologie der Teile, um die Trennung zu optimieren.
+````{list-table}
 * - **8**
-  - Selezionare la geometria che meglio descrive il componente:
-      * **FLAT**: Componenti piatti.
-      * **CYLINDRICAL**: Componenti cilindrici.
-      * **COMPLEX**: Geometrie articolate o irregolari.
+  - Wählen Sie die Größe der Komponente:**
+
+    **Für FlexiBowl-Modelle 200, 350, 500, 650:**
+
+    :::{card}
+    <= 150mm
+    :::
+
+    :::{card}
+    &gt; 150mm
+    :::
+
+    **Für die FlexiBowl-Modelle 800 und 1200:**
+
+    :::{card}
+    <= 250mm
+    :::
+
+    :::{card}
+    &gt; 250mm
+    :::
+
 * - **9**
-  - Definire come i componenti interagiscono tra loro sulla superficie:
-      * **Overlapping**: I pezzi tendono a sovrapporsi.
-      * **Not Overlapping**: I pezzi non si sovrappongono.
-      * **Tangling / Stacking**: I pezzi tendono ad agganciarsi o impilarsi.
-      * **Not Tangling / Not Stacking** : I pezzi rimangono separati e non si incastrano
-```
-## **Step 4: Test degli Accessori**
-```{list-table}
+  - Wählen Sie die Geometrie aus, die das Teil am besten beschreibt:
+      * **FLAT**: Flache Komponenten.
+      * **CYLINDRICAL**: Zylindrische Komponenten.
+      * **COMPLEX**: Komplizierte oder unregelmäßige Geometrien
+
+      ![Flat Cylindrical or Complex](../../../../../_shared/media/images/flatorcomplex.png)
+
+      *Beispiele für Geometrien: Flat, Cylindrical und Complex.*
+
 * - **10**
-  - Selezionare dal menu a tendina se il FlexiBowl® è equipaggiato con il modulo **Air-blow**.
+  - Legen Sie fest, wie die Teile auf der Oberfläche miteinander interagieren:
+      * **Overlapping**: Die Teile neigen dazu, sich zu überlappen.
+      * **Not Overlapping**: Die Teile überschneiden sich nicht.
+      * **Tangling / Stacking**: Die Teile neigen dazu, sich zu verhaken oder zu stapeln.
+      * **Not Tangling / Not Stacking**: Die Teile bleiben getrennt und verhaken sich nicht.
+
+      ![Overlapping](../../../../../_shared/media/videos/overlapping.gif)
+
+      *Not Overlapping: Die Teile überschneiden sich nicht auf der Oberfläche.*
+
+      ::::{grid} 2
+      :::{grid-item}
+      ![Stacking](../../../../../_shared/media/videos/stacking.gif)
+
+      *Stacking: Die Teile stapeln sich.*
+      :::
+      :::{grid-item}
+      ![Tangling](../../../../../_shared/media/videos/tangling.gif)
+
+      *Tangling: Die Teile verhaken sich ineinander.*
+      :::
+      ::::
+````
+## Schritt 4: Zubehörtest
+```{list-table}
 * - **11**
-  - Cliccare su **TEST Air-blow** per verificare il funzionamento.
+  - Wählen Sie aus dem Dropdown-Menü, ob die FlexiBowl® mit dem **Air-blow-Modul** ausgestattet ist.
 * - **12**
-  - Selezionare **USE** per abilitarlo nell'applicazione corrente, altrimenti cliccare su **DON'T USE**.
+  - Klicken Sie auf **TEST Air-blow**, um den Betrieb zu überprüfen.
 * - **13**
-  - Cliccare su **TEST FLIP** per verificare l'effettiva attivazione del percussore.
-      Il "Flip" è l'unità che genera l'impulso meccanico per ribaltare i pezzi, è fondamentale per separare, districare o capovolgere i componenti durante il ciclo di alimentazione.
+  - Wählen Sie **USE**, um es in der aktuellen Anwendung zu aktivieren, andernfalls klicken Sie auf **DON'T USE**.
+* - **14**
+  - Klicken Sie auf **TEST FLIP**, um die tatsächliche Aktivierung des Stößels zu überprüfen.
+      Der "Flip" ist die Einheit, die den mechanischen Impuls zum Wenden der Teile erzeugt; sie ist für das Trennen, Entwirren oder Wenden der Teile während des Zuführzyklus unerlässlich.
  
       :::{important}
-      Se l'impulso non è avvertibile, verificare che l'aria compressa sia collegata e agire sul regolatore di pressione meccanico posto sul pannello di controllo.
+      Wenn der Impuls nicht spürbar ist, überprüfen Sie, ob die Druckluft angeschlossen ist, und stellen Sie am mechanischen Druckregler am Bedienfeld ein.
       :::
-* - **14**
-  - Al termine del Wizard, cliccando su **FINISH**, il sistema calcolerà automaticamente i parametri: 
-    - Parametri di movimento (velocità, accelerazione, angolo)
-    - Parametri di scuotimento (shake)
-    - Temporizzazioni accessori (flip, blow)
 * - **15**
-  - Sarà quindi possibile affinarli nella dashboard riassuntiva.
+  - Am Ende des Assistenten berechnet das System nach einem Klick auf **FINISH** automatisch die Parameter: 
+    - Bewegungsparameter (Geschwindigkeit, Beschleunigung, Winkel)
+    - Rüttelparameter (Shake)
+    - Zubehör-Zeitsteuerungen (Flip, Blow)
+* - **16**
+  - Anschließend können diese in der Übersichts-Dashboard fein abgestimmt werden.
 ```
 ```{list-table} Panoramica Parametri
    :widths: 20 30 50
    :header-rows: 1
 
-   * - Gruppo
-     - Parametro
-     - Descrizione
+   * - Gruppe
+     - Parameter
+     - Beschreibung
    * - **Move**
      - Accel, Decel, Speed, Angle
-     - Parametri del movimento principale del disco.
+     - Parameter für die Hauptbewegung der Scheibe.
    * - **Option**
      - Flip Count, Flip Delay, Blow Time
-     - Gestione dei tempi di attivazione degli accessori.
+     - Verwaltung der Auslösezeiten des Zubehörs.
    * - **Shake**
      - Accel, Speed, Angle CW/CCW
-     - Parametri della vibrazione di scuotimento (separazione).
+     - Parameter der Rüttelbewegung (Trennung).
 ```
 
-## **Step 5: Validazione della Sequenza**
+## Schritt 5: Validierung der Sequenz
 
-Utilizzare la funzione **Test Sequence** per verificare che il ciclo rispetti i seguenti criteri di efficienza:
+Verwenden Sie die Funktion **Test Sequence**, um zu prüfen, ob der Zyklus die folgenden Effizienzkriterien erfüllt:
 ```{list-table}
 :widths: 5 95
 :header-rows: 0
 
-* - **Sincronizzazione**
-  - L'impulso di Flip deve terminare esattamente nello stesso istante in cui termina il movimento (*Move*). Regolare i valori di *Flip Count* e *Delay* per allinearli.
+* - **Synchronisation**
+  - Der Flip-Impuls muss genau in dem Moment enden, in dem die Bewegung (*Move*) endet. Passen Sie die Werte für *Flip Count* und *Delay* an, um sie aufeinander abzustimmen.
 
-* - **Stabilità Immagine**
-  - I componenti devono essere immobili al momento dello scatto della camera.
-    - Se i pezzi si muovono, diminuire velocità/accelerazione o inserire una pausa (es. `pause 200ms`).
+* - **Bildstabilität**
+  - Die Komponenten müssen stillstehen, wenn die Kamera ausgelöst wird.
+    - Wenn sich die Teile bewegen, verringern Sie Geschwindigkeit/Beschleunigung oder fügen Sie eine Pause ein (z. B. `pause 200ms`).
+
+* - **Positionierung der Teile während der Sequenz**
+  - Während der Bewegung müssen die Teile zur Mitte des FlexiBowl®-Radius befördert werden, um die Wirksamkeit des Flip zu maximieren. Am Ende der Sequenz sollten die Stücke ungefähr in der Mitte des Sichtfeldes angeordnet sein.
 ```
 
 :::{warning}
-Cliccare sempre su **Synchronize Parameters** dopo ogni modifica manuale per rendere attive le variazioni nel controller.
+Klicken Sie nach jeder manuellen Änderung immer auf **Synchronize Parameters**, damit die Änderungen im Controller wirksam werden.
 :::
 
-## Panoramica Parametri Flexibowl
+## Übersicht über die FlexiBowl®-Parameter
 ```{list-table}
 :header-rows: 1
 :widths: 5 25 70
 
 * - ID
-  - Elemento
-  - Descrizione
+  - Element
+  - Beschreibung
 * - 1
-  - MOVE – Accelerazione
-  - Valore di accelerazione utilizzato ad ogni comando MOVE
+  - MOVE – Beschleunigung
+  - Beschleunigungswert, der bei jedem MOVE-Befehl verwendet wird
 * - 2
-  - MOVE – Decelerazione
-  - Valore di decelerazione utilizzato ad ogni comando MOVE
+  - MOVE – Verzögerung
+  - Verzögerungswert, der bei jedem MOVE-Befehl verwendet wird
 * - 3
-  - MOVE – Velocità
-  - Valore di velocità (rpm) utilizzato ad ogni comando MOVE
+  - MOVE – Geschwindigkeit
+  - Geschwindigkeitswert (U/min), der bei jedem MOVE-Befehl verwendet wird
 * - 4
-  - MOVE – Angolo
-  - Angolo con cui FlexiBowl® si muove ad ogni comando MOVE
+  - MOVE – Winkel
+  - Winkel, in dem sich der FlexiBowl® bei jedem MOVE-Befehl bewegt
 * - 5
-  - SHAKE – Accelerazione
-  - Valore di accelerazione utilizzato ad ogni comando SHAKE
+  - SHAKE – Beschleunigung
+  - Beschleunigungswert, der bei jedem SHAKE-Befehl verwendet wird
 * - 6
-  - SHAKE – Decelerazione
-  - Valore di decelerazione utilizzato ad ogni comando SHAKE
+  - SHAKE – Verzögerung
+  - Verzögerungswert, der bei jedem SHAKE-Befehl verwendet wird
 * - 7
-  - MOVE – Velocità
-  - Valore di velocità (rpm) utilizzato ad ogni comando SHAKE
+  - MOVE – Geschwindigkeit
+  - Geschwindigkeitswert (U/min), der bei jedem SHAKE-Befehl verwendet wird
 * - 8
-  - MOVE – Angolo CW
-  - Angolo orario con cui FlexiBowl® si muove ad ogni comando SHAKE
+  - MOVE – CW-Winkel
+  - Winkel im Uhrzeigersinn, in dem sich der FlexiBowl® bei jedem SHAKE-Befehl bewegt
 * - 9
-  - MOVE – Angolo CCW
-  - Angolo antiorario con cui FlexiBowl® si muove ad ogni comando SHAKE
+  - MOVE – CCW-Winkel
+  - Winkel entgegen dem Uhrzeigersinn, in dem sich der FlexiBowl® bei jedem SHAKE-Befehl bewegt
 * - 10
-  - OPTION – Conteggio Flip
-  - Numero di attivazioni Flip che verranno eseguite
+  - OPTION – Flip-Zählung
+  - Anzahl der Flip-Aktivierungen, die durchgeführt werden
 * - 11
-  - OPTION – Ritardo Flip
-  - Tempo (in millisecondi) tra un'attivazione e una disattivazione del flip
+  - OPTION – Flip-Verzögerung
+  - Zeit (in Millisekunden) zwischen einer Aktivierung und einer Deaktivierung des Flips
 * - 12
-  - OPTION – Tempo Blow
-  - Tempo (in millisecondi) di attivazione del blow
+  - OPTION – Blow-Zeit
+  - Zeit (in Millisekunden) für die Aktivierung des Blows
 * - 13
-  - OPTION – Luce accesa
-  - Premere per abilitare/disabilitare la retroilluminazione
+  - OPTION – Licht ein
+  - Drücken, um die Hintergrundbeleuchtung zu aktivieren/deaktivieren
 ```
-## Prossimi Passi
 
-Una volta completata la configurazione del FlexiBowl, procedere con:
-
-**→ [Configurazione Hopper](../23_Config_Hopper.md)** - Se presente tramoggia esterna
-
-**→ [Verifica Risultati](../24_Verifica_Risultati.md)** - Monitoraggio applicazione completa
 ```{tip}
-**Test produzione**
+**Produktionstest**
 
-Prima di utilizzare in produzione:
-1. Eseguire 50-100 cicli di test per verificare consistenza
-2. Monitorare tasso di riempimento disco (deve essere costante)
-3. Verificare che non ci siano accumuli anomali o zone vuote persistenti
-4. Incrementare gradualmente verso velocità produttiva
+Vor dem Einsatz in der Produktion:
+1. Führen Sie 50-100 Testzyklen durch, um die Konsistenz zu prüfen
+2. Überwachen Sie die Füllrate der Scheibe (sie muss konstant sein)
+3. Stellen Sie sicher, dass keine ungewöhnlichen Ansammlungen oder anhaltende leere Bereiche vorhanden sind
+4. Schrittweise Erhöhung der Produktionsgeschwindigkeit
 
-La configurazione ottimale può richiedere 2-3 sessioni di fine-tuning con il pezzo reale in quantità significativa.
+Die optimale Konfiguration kann 2-3 Feinabstimmungs-Sitzungen mit dem tatsächlichen Teil in nennenswerter Stückzahl erfordern.
 ```
 
-## Passi successivi
+## Nächste Schritte
 
-Una volta completato il FlexiBowl Setup, procedere con:
+Nach Abschluss des FlexiBowl®-Setups fahren Sie fort mit:
 
-- [Passo 5: Hopper Setup](13b_Hopper_Setup.md)
-- [Passo 6: Robot Setup](13c_Robot_Setup.md)
+- [Trichter-Setup](13b_Hopper_Setup.md)
+- [Roboter-Setup](13c_Robot_Setup.md)
+- [Protocol Setup](protocol_setup)
+- [Rezept speichern](ricettabase)
 
 
 

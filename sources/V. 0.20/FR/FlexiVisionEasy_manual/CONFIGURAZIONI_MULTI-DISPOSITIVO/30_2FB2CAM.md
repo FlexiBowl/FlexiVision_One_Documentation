@@ -1,131 +1,131 @@
 # **2 FlexiBowl® et 2 Caméras**
 
-Cette section décrit les configurations disponibles lorsque l'on souhaite fonctionner avec **deux FlexiBowl®** et **deux caméras** gérés par un seul VisionController FlexiVision One.
+Cette section décrit les configurations disponibles pour le fonctionnement de **deux FlexiBowl®** et de **deux caméras** gérés par un seul VisionController FlexiVision One.
 
 ---
 
-## Vue d'ensemble de la configuration
+## Aperçu de la configuration
 
-Dans une configuration **2 FlexiBowl® + 2 Caméras**, le système comprend deux stations d'alimentation et de vision indépendantes, toutes deux gérées par le même VisionController. Chaque station est composée de:
+Dans une configuration **2 FlexiBowl® + 2 caméras**, le système comprend deux stations d'alimentation et de vision indépendantes, toutes deux contrôlées par le même VisionController. Chaque station est composée des éléments suivants&nbsp;:
 
 * 1 FlexiBowl®
 * 1 Caméra avec optique dédiée
-* 1 Hopper (optionnel, si présent)
+* 1 Trémie (optionnelle, si présente)
 
-Les deux stations communiquent avec le VisionController via un **Switch réseau**.
+Les deux stations communiquent avec le VisionController par l'intermédiaire d'un **commutateur de réseau**.
 
 ```{important}
-Le **Switch** est un composant **obligatoire** dans toutes les configurations multi-dispositif. Sans lui, il n'est pas possible de connecter simultanément plusieurs FlexiBowl® et plusieurs caméras au VisionController. Pour les spécifications techniques et les codes de commande, consulter la section [Switch](../rif_tecnico_specifiche/08_Opzioni.md#switch).
+Le **Switch** est un composant **obligatoire** dans toutes les configurations multi-appareils. Sans lui, il n'est pas possible de connecter simultanément plusieurs FlexiBowl® et plusieurs caméras au VisionController. Pour les spécifications techniques et les codes de commande, consultez la section [Switch](../rif_tecnico_specifiche/08_Opzioni.md#switch).
 ```
 
-Cette configuration prend en charge deux variantes opérationnelles, selon le nombre de robots disponibles dans l'installation:
+Cette configuration permet deux variantes de fonctionnement, en fonction du nombre de robots disponibles dans l'usine :
 | | **Variante A** | **Variante B** |
 |---|---|---|
 | **Robot** | 1 | 2 |
 | **FlexiBowl®** | 2 | 2 |
 | **Caméras** | 2 | 2 |
-| **Logique opérationnelle** | Le robot atteint les deux stations | Chaque robot est dédié à une station |
-| **Switch requis** | Oui | Oui |
+| **Logique de fonctionnement** | Le robot atteint les deux stations | Chaque robot est dédié à une station |
+| **Commutateur requis** | Oui | Oui |
 
 
 ---
 
-## Variante A — 1 Robot, 2 FlexiBowl®
+## Variante A - 1 Robot, 2 FlexiBowl®
 
-![Vue d'ensemble Système 2FB2CAM1Robot](../../../../_shared/media/images/2FB2CAM1R.png)
+![Aperçu du système 2FB2CAM1Robot](../../../../_shared/media/images/2FB2CAM1R.png)
 
-Dans cette variante, un **seul robot** opère sur les deux stations. Le robot est positionné de manière à pouvoir atteindre la zone de picking de chaque FlexiBowl®, en alternant la prise entre les deux stations sur la base des commandes reçues.
+Dans cette variante, un **seul robot** opère sur les deux stations. Le robot est positionné de manière à pouvoir atteindre la zone de prélèvement de chaque FlexiBowl®, en alternant le prélèvement entre les deux stations en fonction des commandes reçues.
 
-Chaque station gère sa propre recette indépendante. Sur chaque station, il est possible de configurer une application de type **Standard** ou **Mix**, avec des modèles de composants différents au sein de la même recette.
+Chaque station a sa propre recette indépendante. Une application **Standard** ou **Mix** peut être configurée sur chaque station, avec différents modèles de composants au sein d'une même recette.
 
 | Paramètre | Valeur |
 |---|---|
 | FlexiBowl® | 2 |
 | Caméras | 2 |
 | Robot | 1 |
-| Switch requis | **Oui** |
+| Commutateur requis | **Oui** |
 
 ```{important}
 **Recette de base et gestion des recettes**
 
-Comme pour la configuration simple, dans une configuration 2FB + 2CAM le processus part également de la création d'une **recette de base unique**, qui contient les setup hardware et la calibration de la caméra pour l'ensemble du système. Cette recette de base est ensuite **dupliquée** pour chaque station: chaque duplicata constitue la recette opérationnelle de cette station, dans laquelle sont créés les modèles des pièces (jusqu'à 8 par station).
+Comme pour la configuration simple, dans une configuration 2FB + 2CAM, le processus commence par la création d'une **recette de base unique**, qui contient la configuration matérielle et l'étalonnage de la caméra pour l'ensemble du système. Cette recette de base est ensuite **dupliquée** pour chaque station : chaque duplicata constitue la recette de fonctionnement de cette station, à l'intérieur de laquelle les modèles de pièces (jusqu'à 8 par station) sont créés.
 
-Pour cette raison, il est fondamental que l'association entre les dispositifs soit configurée correctement dès le début:
+Il est donc essentiel que l'association entre les appareils soit configurée correctement dès le départ :
 
-* **Caméra 1** → FlexiBowl® 1 (+ Hopper 1, si présent)
-* **Caméra 2** → FlexiBowl® 2 (+ Hopper 2, si présent)
+* **Caméra 1** → FlexiBowl® 1 (+ Trémie 1, si présente)
+* **Caméra 2** → FlexiBowl® 2 (+ Trémie 2, si présente)
 
-Une association incorrecte en phase de setup se répercuterait sur toutes les recettes dérivées, compromettant la reconnaissance des pièces et le bon fonctionnement de l'ensemble du système.
+Une association incorrecte lors de la configuration affecterait toutes les recettes dérivées, compromettant la reconnaissance des pièces et le bon fonctionnement de l'ensemble du système.
 ```
 ---
 
-## Variante B — 2 Robots, 2 FlexiBowl®
+## Variante B - 2 Robots, 2 FlexiBowl®
 
-![Vue d'ensemble Système 2FB2CAM2Robot](../../../../_shared/media/images/2FB2CAM2R.png)
+![Aperçu du système 2FB2CAM2Robot](../../../../_shared/media/images/2FB2CAM2R.png)
 
-Dans cette variante, chaque robot est dédié à une seule station: le **Robot 1** effectue le picking sur le FlexiBowl® 1, le **Robot 2** effectue le picking sur le FlexiBowl® 2. Les deux cellules sont indépendantes et ne se chevauchent pas.
+Dans cette variante, chaque robot est dédié à une seule station : le **Robot 1** prélève sur FlexiBowl® 1, le **Robot 2** prélève sur FlexiBowl® 2. Les deux cellules sont indépendantes et ne se chevauchent pas.
 
-Dans cette variante également, chaque station prend en charge des applications de type **Standard** et **Mix**.
+Dans cette variante également, chaque station prend en charge les applications **Standard** et **Mix**.
 
 | Paramètre | Valeur |
 |---|---|
 | FlexiBowl® | 2 |
 | Caméras | 2 |
 | Robot | 2 |
-| Switch requis | **Oui** |
+| Commutateur requis | **Oui** |
 
 ```{tip}
-Cette variante garantit une productivité maximale, avec les deux cellules qui fonctionnent en parallèle et de manière complètement autonome.
+Cette variante garantit une productivité maximale, les deux cellules fonctionnant en parallèle et de manière totalement autonome.
 ```
 
 ```{important}
 **Recette de base et gestion des recettes**
 
-Comme pour la configuration simple, dans une configuration 2FB + 2CAM le processus part également de la création d'une **recette de base unique**, qui contient les setup hardware et la calibration de la caméra pour l'ensemble du système. Cette recette de base est ensuite **dupliquée** pour chaque station: chaque duplicata constitue la recette opérationnelle de cette station, dans laquelle sont créés les modèles des pièces (jusqu'à 8 par station).
+Comme pour la configuration simple, dans une configuration 2FB + 2CAM, le processus commence par la création d'une **recette de base unique**, qui contient la configuration matérielle et l'étalonnage de la caméra pour l'ensemble du système. Cette recette de base est ensuite **dupliquée** pour chaque station : chaque duplicata constitue la recette de fonctionnement de cette station, à l'intérieur de laquelle les modèles de pièces (jusqu'à 8 par station) sont créés.
 
-Pour cette raison, il est fondamental que l'association entre les dispositifs soit configurée correctement dès le début:
+Il est donc essentiel que l'association entre les appareils soit configurée correctement dès le départ :
 
-* **Caméra 1** → FlexiBowl® 1 (+ Hopper 1, si présent)
-* **Caméra 2** → FlexiBowl® 2 (+ Hopper 2, si présent)
+* **Caméra 1** → FlexiBowl® 1 (+ Trémie 1, si présente)
+* **Caméra 2** → FlexiBowl® 2 (+ Trémie 2, si présente)
 
-Une association incorrecte en phase de setup se répercuterait sur toutes les recettes dérivées, compromettant la reconnaissance des pièces et le bon fonctionnement de l'ensemble du système.
+Une association incorrecte lors de la configuration affecterait toutes les recettes dérivées, compromettant la reconnaissance des pièces et le bon fonctionnement de l'ensemble du système.
 ```
 
 ---
 
 ## Composants nécessaires
 
-### Kit de base FlexiVision One
+### *Kit de base FlexiVision One*
 
-Le **kit de base FlexiVision One** (fourni avec le système) inclut déjà tout le nécessaire pour la **première station** (caméra, optique, câbles, grille de calibration). Il n'est pas nécessaire d'acheter un second kit complet pour la deuxième station.
+Le **kit de base FlexiVision One** (fourni avec le système) comprend déjà tout ce qui est nécessaire pour la **première station** (caméra, optique, câbles, grille d'étalonnage). Il n'est pas nécessaire d'acheter un deuxième kit complet pour la deuxième station.
 
-### Kit Caméra Supplémentaire
+### *Kit de caméra supplémentaire*
 
-Pour la deuxième station, il suffit d'acheter le **Kit Caméra Supplémentaire**, disponible dans une version spécifique pour chaque taille de FlexiBowl®. Le kit inclut:
+Pour la deuxième station, il suffit d'acheter le **kit de caméra supplémentaire**, qui est disponible dans une version spécifique pour chaque taille de FlexiBowl®. Le kit comprend :
 
 * 1 Caméra
 * 1 Optique dédiée à la taille FlexiBowl®
-* 1 Grille de calibration
-* 1 Câble alimentation caméra
+* 1 Grille d'étalonnage
+* 1 Câble d'alimentation de la caméra
 * 2 Câbles Ethernet
 
-Sélectionner le kit en fonction de la taille du **deuxième** FlexiBowl®:
+Sélectionner le kit en fonction de la taille du **deuxième** FlexiBowl® :
 
-| Taille FlexiBowl® | Code Kit Caméra Supplémentaire | Optique incluse |
+| Taille FlexiBowl® | Code Kit de caméra supplémentaire | Optique incluse |
 |---|---|---|
-| FB 200 | GM002002 | CE000881 — FlexiVision One 35mm Optic |
-| FB 350 | GM002003 | CE000881 — FlexiVision One 35mm Optic |
-| FB 500 | GM002004 | CE000880 — FlexiVision One 25mm Optic |
-| FB 650 | GM002005 | CE000879 — FlexiVision One 16mm Optic |
-| FB 800 | GM002006 | CE000879 — FlexiVision One 16mm Optic |
-| FB 1200 | GM002007 | CE000878 — FlexiVision One 12mm Optic |
+| FB 200 | GM002002 | CE000881 - FlexiVision One 35mm Optique |
+| FB 350 | GM002003 | CE000881 - FlexiVision One 35mm Optique |
+| FB 500 | GM002004 | CE000880 - FlexiVision One 25mm Optique |
+| FB 650 | GM002005 | CE000879 - FlexiVision One 16mm Optique |
+| FB 800 | GM002006 | CE000879 - FlexiVision One 16mm Optique |
+| FB 1200 | GM002007 | CE000878 - FlexiVision One 12mm Optique |
 ```{note}
-Si les deux stations utilisent des FlexiBowl® de **tailles différentes**, le Kit Caméra Supplémentaire doit être sélectionné en fonction de la taille du FlexiBowl® de la deuxième station. La première station est déjà couverte par le kit de base.
+Si les deux stations utilisent des FlexiBowl® **de tailles différentes**, le kit de caméra supplémentaire doit être sélectionné en fonction de la taille du FlexiBowl® de la deuxième station. La première station est déjà couverte par le kit de base.
 ```
 
-### Switch
+### *Switch*
 
-Le Switch est toujours nécessaire dans les configurations multi-dispositif. Pour le code, les spécifications électriques et physiques, consulter la section dédiée:
+Le Switch est toujours nécessaire dans les configurations multi-appareils. Pour le code, les spécifications électriques et physiques, voir la section dédiée :
 
 **→ [Switch](../rif_tecnico_specifiche/08_Opzioni.md#switch)**
 
@@ -133,27 +133,27 @@ Le Switch est toujours nécessaire dans les configurations multi-dispositif. Pou
 
 ## Câblage
 
-Le schéma de câblage est identique pour les deux variantes: tous les dispositifs de terrain (FlexiBowl®, caméras, robots) se connectent au **Switch**, et le Switch se connecte au **VisionController** via un seul port Ethernet. La différence entre la Variante A et la Variante B concerne exclusivement le nombre de robots connectés au Switch.
+Le schéma de câblage est identique pour les deux variantes : tous les appareils de terrain (FlexiBowl®, caméras, robots) se connectent au **Switch**, et le Switch se connecte au **VisionController** via un seul port Ethernet. La différence entre la variante A et la variante B concerne uniquement le nombre de robots connectés au Switch.
 ```{important}
-Le Switch dispose de **8 ports Ethernet**. Vérifier que le nombre total de dispositifs à connecter ne dépasse pas la capacité disponible, en tenant compte de tous les FlexiBowl®, caméras et robots présents.
+Le Switch dispose de **8 ports Ethernet**. Vérifier que le nombre total d'appareils à connecter ne dépasse pas la capacité disponible, en tenant compte de tous les FlexiBowl®, caméras et robots présents.
 ```
 
-### Schéma de connexion
+### *Schéma de connexion*
 
-| Dispositif | Connexion |
+| Appareil | Connexion |
 |---|---|
 | FlexiBowl® 1 | Port Ethernet → Switch |
 | FlexiBowl® 2 | Port Ethernet → Switch |
 | Caméra 1 | Câble Ethernet → Switch |
 | Caméra 2 | Câble Ethernet → Switch |
 | Robot 1 | Port Ethernet → Switch |
-| Robot 2 *(seulement Variante B)* | Port Ethernet → Switch |
+| Robot 2 *(Variante B uniquement)* | Port Ethernet → Switch |
 | **Switch** | **Port Ethernet → VisionController** |
 ```{tip}
-Vérifier qu'une adresse IP unique est attribuée à chaque dispositif dans le même subnet. Les ports TCP/IP utilisés par le VisionController pour les deux stations sont configurables: par défaut **FB1 → 4001**, **FB2 → 4002**. Consulter la section [Protocole de Communication Robot-Vision](../rif_tecnico_specifiche/04b_Protocolli_Comunicazione.md) pour les détails.
+Veiller à ce qu'une adresse IP unique soit attribuée à chaque appareil dans le même sous-réseau. Les ports TCP/IP utilisés par le VisionController pour les deux stations sont configurables : par défaut **FB1 → 4001**, **FB2 → 4002**. Voir la section [Protocole de communication Robot-Vision](../rif_tecnico_specifiche/04b_Protocolli_Comunicazione.md) pour plus de détails.
 ```
 
-### Ports Switch occupés par variante
+### *Ports Switch occupés par variante*
 
 | Port Switch | Variante A (1 Robot) | Variante B (2 Robots) |
 |---|---|---|
@@ -163,24 +163,24 @@ Vérifier qu'une adresse IP unique est attribuée à chaque dispositif dans le m
 | 4 | Caméra 2 | Caméra 2 |
 | 5 | Robot 1 | Robot 1 |
 | 6 | VisionController | Robot 2 |
-| 7 | — | VisionController |
-| 8 | — | — |
+| 7 | - | VisionController |
+| 8 | - | - |
 
 ```{note}
 **Câblage des composants individuels**
 
-Les procédures de connexion physique de chaque composant (FlexiBowl®, caméra, hopper, robot) sont décrites intégralement dans la section [Câblage et Connexions](../INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.md). Dans une configuration 2FB + 2CAM, les mêmes opérations doivent simplement être exécutées **deux fois** — une pour chaque station — avec pour seule différence que chaque dispositif se connecte au **Switch** au lieu d'être directement connecté au VisionController.
+Les procédures de branchement physique de chaque composant (FlexiBowl®, caméra, trémie, robot) sont décrites en détail dans la section [Câblage et connexions](../INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.md). Dans une configuration 2FB + 2CAM, il suffit d'effectuer **deux fois** les mêmes opérations - une fois pour chaque station - à la seule différence que chaque appareil se connecte au **Switch** plutôt que directement au VisionController.
 ```
 ```{important}
-**Association dispositifs dans le logiciel**
+**Association de dispositifs dans le logiciel**
 
-FlexiVision One est capable de gérer simultanément toutes les stations, mais il est fondamental que l'association entre les dispositifs soit configurée correctement dans le logiciel. S'assurer d'associer:
+FlexiVision One peut gérer toutes les stations simultanément, mais il est indispensable que l'association entre les appareils soit correctement configurée dans le logiciel. Veiller à associer :
 
-* **Caméra 1** → FlexiBowl® 1 (+ Hopper 1, si présent)
-* **Caméra 2** → FlexiBowl® 2 (+ Hopper 2, si présent)
+* **Caméra 1** → FlexiBowl® 1 (+ Trémie 1, si présente)
+* **Caméra 2** → FlexiBowl® 2 (+ Trémie 2, si présente)
 
-Une association incorrecte compromettrait la localisation des pièces et le bon fonctionnement de l'ensemble du système.
+Une association incorrecte compromettrait l'emplacement des pièces et le bon fonctionnement de l'ensemble du système.
 ```
 
-**→ [Configuration Initiale du Système](../QUICKSTART/SETUP/13_setup.md)**
+**→ [Configuration initiale du système](../QUICKSTART/SETUP/13_setup.md)**
 

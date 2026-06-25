@@ -1,239 +1,209 @@
 (protocol_setup)=
-# **Passo 7: Protocol Setup**
+# **Protocol Setup**
 
-La pagina **Protocol Setup** permette di configurare i parametri che regolano il flusso di comunicazione e lo scambio dati tra il sistema di visione FlexiVision One e il robot. Questi parametri determinano quanti oggetti vengono inviati, come vengono ordinati, e come il sistema gestisce le statistiche e gli stati operativi.
+La page **Protocol Setup** permet de configurer les paramètres régissant le flux de communication et l'échange de données entre le système de vision FlexiVision One et le robot. Ces paramètres déterminent le nombre d'objets envoyés, la manière dont ils sont triés et la façon dont le système gère les statistiques et les états opérationnels.
 
-```{note}
-**Posizionamento Protocol Setup nel workflow**
-
-Protocol Setup si configura tipicamente:
-- **Dopo**: Calibrazione robot, creazione modelli
-- **Prima**: Monitoraggio produzione continua
-
-Questo perché:
-- Richiede comprensione del comportamento robot (velocità, tipo gripper)
-- Influenza le statistiche mostrate in Dashboard
-- È l'ultimo step di configurazione prima della produzione vera
-
-Una volta configurato correttamente, raramente richiede modifiche (solo se cambia robot o modalità operativa).
-```
 ---
 
-## Accesso Protocol Setup
+## Accès à Protocol Setup
 
-1. Dal menu principale, accedere alla sezione dedicata al protocollo di comunicazione
-2. Selezionare **Protocol Setup**
-3. Si apre l'interfaccia con i parametri configurabili
+1. À partir du menu principal, accéder à la section dédiée au protocole de communication
+2. Sélectionner **Protocol Setup**
+3. L'interface s'ouvre avec les paramètres configurables
 
 
 ---
 
-## Parametri Configurabili
+## Paramètres configurables
 
-![Pagina Protocol Setup](../../../../../_shared/media/images/pagina_protocolsetup.png)
+![Page Protocol Setup](../../../../../_shared/media/images/pagina_protocolsetup.png)
 
 ```{list-table}
 :header-rows: 1
-:widths: 35 65
 
-* - **Parametro**
-  - **Descrizione e Funzione**
+* - **Paramètre**
+  - **Description et fonction**
 * - [**Max Object Count Return**](maxobject)
-  - Indica il numero **massimo** di oggetti (cioè la loro terna di coordinate) che il sistema di visione può restituire al robot in una singola run. Se la visione rileva più oggetti di questo limite, ne vengono inviati al massimo questo numero, selezionati in base al criterio di ordinamento configurato (Sorting Mode).
+  - Indique le nombre **maximum** d'objets (c'est-à-dire leur triade de coordonnées) que le système de vision peut renvoyer au robot en une seule fois. Si le système de vision détecte plus d'objets que cette limite, un maximum de ce nombre est envoyé, sélectionné en fonction des critères de tri configurés (Sorting Mode).
 * - [**Min Object Count Return**](minobject)
-  - Indica il numero **minimo** di oggetti che devono essere restituiti in una run affinché il risultato venga considerato valido. Se il numero è inferiore a questa soglia, la run viene considerata non valida.
+  - Indique le nombre **minimum** d'objets qui doivent être renvoyés lors d'une exécution pour que le résultat soit considéré comme valide. Si le nombre est inférieur à ce seuil, l'exécution est considérée comme non valide.
 * - [**Sorting Mode Results**](sortingmode)
-  - Definisce il **criterio di ordinamento** con cui viene ordinata la lista degli oggetti restituiti dalla visione.  Questo parametro  determina la priorità di prelievo e determina quali oggetti vengono inclusi nel Max Object Count Return.
+  - Définit le **critère de** tri selon lequel la liste des objets renvoyés par la vision est triée. Ce paramètre détermine la priorité du prélèvement et les objets inclus dans le Max Object Count Return.
     
-    *Opzione tipica:* per score decrescente.
+    *Option typique :* pour les scores décroissants.
 * - [**Pickable parts by the robot detected by vision in each cycle**](pickableparts)
-  - Indica il numero di prese che il robot effettua per ogni run della visione. Ad esempio, una presa doppia corrisponde a valore (. Non rappresenta il numero di oggetti rilevati dalla visione, ma il numero di prese robot per ciclo. Parametro utilizzato per il calcolo delle statistiche.
-
-* - [**Maximum processing time per part with the robot (in seconds)**](maxprocessingtime)
-  - Definisce il tempo massimo dopo il quale il sistema considera conclusa la gestione/invio delle coordinate relative a una run e passa tipicamente dallo stato RUN allo stato IDLE. Parametro utilizzato per **statistiche e gestione del flusso di lavoro**.
+  - Indique le nombre de prélèvements effectués par le robot par cycle de vision. Par exemple, une prise double correspond à la valeur 2. Ne représente pas le nombre d'objets détectés par la vision, mais le nombre de prises du robot par cycle. Paramètre utilisé pour le calcul des statistiques.
+* - **Maximum processing time per part with the robot (in seconds)**
+  - Définit le temps maximum après lequel le système considère que le traitement/l'envoi de coordonnées pour une exécution est terminé et passe généralement de l'état RUN à l'état IDLE. Paramètre utilisé pour les **statistiques et la gestion des flux de travail**.
 
     :::{attention}
-    **Non è un timeout di errore del robot**, ma un riferimento temporale per il calcolo del ciclo e per le metriche di produttività.
+    **Il ne s'agit pas d'une erreur de délai d'attente du robot** mais une référence temporelle pour le calcul du cycle et les indicateurs de productivité.
     :::
 ```
 
 ---
 
-## Configurazione Dettagliata Parametri
+## Configuration détaillée des paramètres
 
 (maxobject)=
-### Max Object Count Return
+### *Max Object Count Return*
 
 ```{list-table}
  :class: align-top
 
-* - **Funzione**: 
-  - Limita il numero massimo di coordinate che vengono inviate al robot per ogni ciclo di visione.
+* - **Fonction** :
+  - Limite le nombre maximum de coordonnées envoyées au robot par cycle de vision.
 
-* - **Valori tipici:**
+* - **Valeurs typiques :**
   - 
-    - **1-3 oggetti**: Configurazione più comune per robot con picking singolo, doppio o triplo
-    - **4-8 oggetti**: Per sistemi con buffer o robot veloci che possono gestire code
-    - **>8 oggetti**: Raramente necessario, può saturare la comunicazione
+    - **1** : Configuration la plus courante pour les robots à prélèvement unique
+    - **2** : Configuration pour les robots à double prélèvement
+    - **3** : Configuration pour les robots à triple prélèvement
+    - **4-8 objets** : Pour les systèmes à suivi circulaire
+    - **>8 objets** : Rarement nécessaire, peut saturer la communication
 
     :::{tip}
-    **Come scegliere il valore:**
-    1. Considerare la velocità del robot (tempo pick&place per pezzo)
-    (. Considerare il tempo ciclo visione + FlexiBowl
-    3. Formula approssimativa: `Max Count = (Tempo ciclo visione+FB) / (Tempo pick robot)`
+        **Comment choisir la valeur :**
+        1. Tenir compte de la vitesse du robot (temps de prélèvement et de placement par pièce).
+        2. Tenir compte du temps de cycle de vision + FlexiBowl®
+        3. Formule approximative&nbsp;: `Max Count = (Temps de cycle vision+FB) / (Temps de prélèvement robot)`
 
-    **Esempio pratico:**
-    - Ciclo visione+FlexiBowl: 3 secondi
-    - Tempo pick robot: 2 secondi/pezzo
-    - Max Count ottimale: 3/2 = 1.5 → Arrotondare a 2 oggetti
+        **Exemple pratique :**
+        - Cycle Vision+FlexiBowl® : 3 secondes
+        - Temps de prélèvement du robot : 2 secondes/pièce
+        - Max Count optimal : 3/2 = 1,5 → Arrondir à 2 objets
     :::
 ```
 
 (minobject)=
-### Min Object Count Return
+### *Min Object Count Return*
 
 ```{list-table}
-* - **Funzione**: 
-  - Limita il numero minimo di coordinate che vengono inviate al robot per ogni ciclo di visione.
+* - **Fonction :**
+  - Limite le nombre minimum de coordonnées envoyées au robot par cycle de vision.
 
-* - **Valori tipici:**
+* - **Valeurs typiques :**
   - 
-    - **1**: Configurazione più comune - anche un solo pezzo riconnosciuto è accettabile
-    - **>2**: Solo per applicazioni speciali con multi-pick obbligatorio
+    - **1**: Configuration la plus courante - même une seule pièce reconnue est acceptable
+    - **>2** : Uniquement pour les applications spéciales avec multi-pick obligatoire
 
-* - **Comportamento sistema:**
+* - **Comportement du système :**
   - 
-    - **Oggetti rilevati ≥ Min Count**: coordinata/e inviate a robot
-    - **Oggetti rilevati < Min Count**: coordinate non inviate e esecuzione della sequenza del FlexiBowl
+    - **Objets détectés ≥ Min Count** : coordonnées envoyées au robot
+    - **Objets détectés < Min Count** : coordonnées non envoyées et exécution de la séquence du FlexiBowl®
 
 
-* - **Impatto sulla produttività**
+* - **Impact sur la productivité**
   - 
-    **Min Count = 1** (più permissivo):
-    - ✓ Massima flessibilità, robot lavora anche se c'è un solo pezzo
-    - ✗ Possibili cicli con efficienza bassa 21 pezzo ogni N secondi)
+    **Min Count = 1** (le plus permissif) :
+    - ✓ Flexibilité maximale, le robot travaille même s'il n'y a qu'une seule pièce
+    - ✗ Cycles à faible rendement possible (1 pièce toutes les N secondes)
 
-    **Min Count = 3** (più restrittivo):
-    - ✓ Garantisce efficienza minima per ciclo
-    - ✗ Può causare attese se riempimento è variabile
+    **Min Count = 3** (le plus restrictif) :
+    - ✓ Garantit une efficacité minimale par cycle
+    - ✗ Peut provoquer une attente si le remplissage est variable
 ```
 
 (sortingmode)=
-### Sorting Mode Results
+### *Sorting Mode Results*
 
 
 ```{list-table}
 :header-rows: 1
 :widths: 30 70
 
-* - Modalità Sorting
-  - Descrizione e Quando Usare
-* - **By Score (Descending)**
-  - Ordina per score dal più alto al più basso. Oggetti con migliore corrispondenza al modello vengono inviati per primi.   
-    **Più comune e consigliato**: Garantisce sempre prelievo dei pezzi con riconoscimento più affidabile.
-* - **By Score (Ascending)**
-  - Ordina per score dal più basso al più alto. Oggetti con peggiore corrispondenza al modello vengono inviati per primi.     
-    **SCONSIGLIATO**: NON garantisce sempre prelievo dei pezzi con riconoscimento più affidabile.
+* - Mode Sorting
+  - Description et cas d'utilisation
+* - **By score (Descending)**
+  - Tri par score du plus élevé au plus bas. Les objets qui correspondent le mieux au modèle sont envoyés en premier.
+    **Plus fréquent et recommandé** : Il garantit toujours le prélèvement des pièces avec une reconnaissance plus fiable.
+* - **By score (Ascending)**
+  - Trie par score du plus faible au plus élevé. Les objets qui correspondent le moins bien au modèle sont envoyés en premier.
+    **NON RECOMMANDÉ** : NE garantit PAS toujours la sélection des pièces avec une reconnaissance plus fiable.
 * - **By X Coordinate (Ascending)**
-  - Ordina per coordinata X crescente. Utile se robot ha preferenza di picking sequenziale lungo un asse.
+  - Trier par coordonnée X croissante. Utile si le robot a une préférence de prélèvement séquentiel le long d'un axe.
 * - **By X Coordinate (Descending)**
-  - Ordina per coordinata X decrescente.
+  - Trier par coordonnée X décroissante.
 * - **By Y Coordinate (Ascending)**
-  - Ordina per coordinata Y crescente.
+  - Trier par coordonnée Y croissante.
 * - **By Y Coordinate (Descending)**
-  - Ordina per coordinata Y decrescente.
+  - Trier par coordonnée Y décroissante.
 * - **X Alternating**
-  - 
+  - Le système alterne la sélection du composant entre le premier et le dernier détecté sur l'axe X. Les deux composants sélectionnés étant éloignés l'un de l'autre, le risque que le prélèvement précédent ait déplacé des pièces à proximité est réduit, ce qui garantit un prélèvement plus sûr et plus fiable.
 * - **Y Alternating**
-  - 
+  - Le système alterne la sélection du composant entre le premier et le dernier détecté sur l'axe Y. Même principe que le X Alternating : la distance entre les deux points de prélèvement minimise l'interférence causée par le mouvement accidentel des pièces adjacentes.
 ```
 
 ```{tip}
-**Scelta Sorting Mode ottimale**
+**Choix optimal du Sorting Mode**
 
-**Consigliato nella maggior parte dei casi: By Score (Descending)**
+**Recommandé dans la plupart des cas : By Score (Descending)**
 
-**Vantaggi**:
-- Massima affidabilità: robot preleva sempre i pezzi riconosciuti meglio
-- Riduce rischio di picking errati
-- Indipendente dalla posizione fisica
+**Avantages** :
+  - Fiabilité maximale : le robot prélève toujours les pièces les mieux reconnues
+  - Réduction du risque de prélèvement incorrect
+  - Indépendant de la position physique
 ```
 
 ```{note}
-La modalità di sorting interagisce con Max Object Count. I primi 15 oggetti (secondo il criterio) vengono inviati.
+Le mode de tri interagit avec Max Object Count. Les 15 premiers objets (selon les critères) sont envoyés.
 ```
 (pickableparts)=
-### Pickable parts by the robot - **Prese robot per ciclo visione**
+### *Pickable parts by the robot*
 
-**Funzione**
+**Fonction**
 
-Parametro statistico che indica quanti pezzi vengono **effettivamente prelevati** dal robot per ogni ciclo di visione.
+Paramètre statistique indiquant le nombre de pièces **effectivement prélevées** par le robot par cycle de vision.
 
-**Valori tipici**
+**Valeurs typiques**
 
-- **1**: robot con gripper singolo, preleva 1 pezzo alla volta
-- **2**: robot con gripper doppio o ventosa doppia
-- **>2**: robot con gripper o ventosa multi-pick
+  - **1** : robot avec pince simple, saisit 1 pièce à la fois
+  - **2** : robot avec pince double ou ventouse double
+  - **>2** : robot avec pince ou ventouse multi-pick
 
 ```{important}
-Questo valore rappresenta le **prese fisiche**, non gli oggetti rilevati dalla visione.
+Cette valeur représente les **prises physiques**, et non pas les objets détectés par la vision.
 ```
 
-**Esempio chiarificatore**
+**Exemple de clarification**
 
-Scenario: gripper doppio, la visione rileva 5 oggetti.
+Scénario : double pince, la vision détecte 5 objets.
 
-- Se voglio inviare al robot al massimo 2 oggetti, imposto `Max Object Count = 2`.
-- Se voglio che il robot effettui il pick di almeno 2 oggetti alla volta, imposto `Min Object Count = 2`.
-- In questo caso imposto `Pickable Parts by the robot = 2`.
-- Se invece voglio consentire anche il pick di un solo oggetto, imposto `Max Object Count = 2`, `Min Object Count = 1` e `Pickable Parts by the robot = 2`.
+  - Si je veux envoyer au robot un maximum de 2 objets, je règle `Max Object Count = 2`.
+  - Si je veux que le robot prenne au moins 2 objets à la fois, je règle `Min Object Count = 2`.
+  - Dans ce cas, je règle `Pickable Parts by the robot = 2`.
+  - Si, en revanche, je souhaite également autoriser le prélèvement d'un seul objet, je règle `Max Object Count = 2`, `Min Object Count = 1` et `Pickable Parts by the robot = 2`.
 
-**Impatto su statistiche Dashboard**
+**Impact sur les statistiques Dashboard**
 
-Questo parametro e cruciale per il calcolo accurato dei **Parts Per Minute (PPM)**.
+Ce paramètre est crucial pour le calcul précis des **Parts Per Minute (PPM).**
 
-- Formula: `PPM = (Pickable parts x 60) / Tempo ciclo totale in secondi`
-- Se impostato in modo errato, il PPM visualizzato non corrisponde alla realta
-
-(maxprocessingtime)=
-### Maximum processing time per part
-
-```{list-table}
-* - **Funzione**: 
-  - Tempo di riferimento (in secondi) che il sistema usa per determinare quando un ciclo è considerato "completato" e passare da stato RUN a IDLE.
-
-* - **Valori tipici:**
-  - 
+  - Formule : `PPM = (Pickable parts x 60) / Temps de cycle total en secondes`
+  - En cas de réglage incorrect, le PPM affiché ne correspond pas à la réalité
 
 
-* - **Come calcolarlo**:
-  - 
-
-* - **Impatto tempo processing su Dashboard**
-  -  
-```
 
 ---
 
-## Salvataggio Configurazione
+## Sauvegarde de configuration
 
 ```{warning}
-**Salvataggio obbligatorio**
+**Sauvegarde obligatoire**
 
-Dopo aver configurato i parametri di Protocol Setup:
+Après avoir configuré les paramètres de Protocol Setup :
 
-1. Verificare che tutti i valori siano impostati correttamente
-(. Cliccare su Recipes > Save Recipe
-3. I parametri vengono salvati nella configurazione sistema
+1. Vérifier que toutes les valeurs sont réglées correctement
+2. Cliquer sur Recipes > Save Recipe
+3. Les paramètres sont sauvegardés dans la configuration du système
 ```
 
 ---
 
-## Prossimi Passi
+## Étapes suivantes
 
-Una volta completato Protocol Setup, il sistema è configurato completamente per l'operatività:
+Une fois le Protocol Setup terminé, le système est entièrement configuré pour fonctionner :
 
-**→ [Verifica Risultati (Dashboard)](../24_Verifica_Risultati.md)** - Monitoraggio produzione e validazione configurazione
+- [Sauvegarder la recette](ricettabase)
 
 
 

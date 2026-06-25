@@ -1,37 +1,37 @@
 (Installazione_Meccanica)=
-# **Installazione Meccanica del Sistema**
+# **Mechanische Installation des Systems**
 
-Questa sezione descrive i requisiti di montaggio e posizionamento dei componenti chiave del sistema di visione FlexiVision One.     L'installazione deve essere eseguita solo dopo aver completato l'installazione meccanica di base del FlexiBowl e dell'eventuale tramoggia.
+In diesem Abschnitt werden die Montage- und Positionierungsanforderungen für die Hauptkomponenten des FlexiVision One Bildverarbeitungssystems beschrieben. Die Installation sollte erst erfolgen, nachdem die mechanische Grundinstallation der FlexiBowl® und des Trichters, sofern vorhanden, abgeschlossen ist.
 
 ```{warning}
-**Prerequisiti obbligatori**
+**Erforderliche Voraussetzungen**
 
-Prima di procedere con l'installazione dei componenti di visione, assicurarsi che:
+Bevor Sie mit der Installation der Bildverarbeitungskomponenten fortfahren, stellen Sie sicher, dass:
 
-- Il FlexiBowl sia stato montato e fissato alla struttura portante (cellula robotica)
-- La tramoggia (Hopper) sia stata installata correttamente
-- La struttura di supporto per camera e illuminatore sia stata preparata
+- der FlexiBowl® montiert und an der Tragkonstruktion (Roboterzelle) befestigt wurde
+- Der Trichter korrekt installiert wurde
+- die Halterung für Kamera und Beleuchtung vorbereitet wurde
 
-Per l'installazione del FlexiBowl, consultare il Manuale Dedicato fornito.
+Für die Installation der FlexiBowl® lesen Sie bitte das mitgelieferte Handbuch.
 ```
 
 ```{note}
-**Competenze richieste**
+**Erforderliche Fachkenntnisse**
 
-L'installazione meccanica richiede:
-- Competenze di base in assemblaggio meccanico
-- Utilizzo di strumenti di misura (calibro, livella, metro)
-- Capacità di lettura di disegni tecnici 
+Die mechanische Installation erfordert:
+- Grundkenntnisse in der mechanischen Montage
+- Verwendung von Messwerkzeugen (Messschieber, Wasserwaage, Maßband)
+- Fähigkeit zum Lesen technischer Zeichnungen
 ```
 
 ---
 
-## Montaggio VisionController
+## Montage des VisionControllers
 
-Il VisionController (PC Industriale) gestisce l'elaborazione delle immagini e la comunicazione con il robot.   
-Essendo un componente elettronico sensibile, richiede un posizionamento attento per garantire ventilazione adeguata e protezione da contaminanti.
+Der VisionController (Industrie-PC) steuert die Bildverarbeitung und die Kommunikation mit dem Roboter.
+Da es sich um eine empfindliche elektronische Komponente handelt, erfordert sie eine sorgfältige Positionierung, um eine ausreichende Belüftung und den Schutz vor Verunreinigungen zu gewährleisten.
 
-### Specifiche tecniche 
+### *Technische Daten*
 ```{figure} ../../../../_shared/media/images/Dim_PC.png
 :alt: Dimensioni VisionController
 :align: center
@@ -41,102 +41,102 @@ Essendo un componente elettronico sensibile, richiede un posizionamento attento 
 ```{list-table}
 :header-rows: 1
 :widths: 40 60
-* - **Fori Viti**
+* - **Schraubenlöcher**
   - M5
-* - **Caratteristica**
-  - **Valore**
-* - Larghezza (totale con staffe)
-  - 245.00 mm
-* - Larghezza (corpo)
-  - 227.00 mm
-* - Larghezza pannello connettori
-  - 200.00 mm
-* - Altezza (totale con staffe)
-  - 123.00 mm
-* - Altezza (corpo)
-  - 120.00 mm
-* - Profondità
-  - 61.10 mm
+* - **Merkmal**
+  - **Wert**
+* - Breite (gesamt mit Halterungen)
+  - 245,00 mm
+* - Breite (Gehäuse)
+  - 227,00 mm
+* - Breite der Anschlussleiste
+  - 200,00 mm
+* - Höhe (gesamt mit Halterungen)
+  - 123,00 mm
+* - Höhe (Gehäuse)
+  - 120,00 mm
+* - Tiefe
+  - 61,10 mm
 ```
 
-### Requisiti di montaggio
+### *Montageanforderungen*
 
 ```{list-table}
 :header-rows: 1
 :widths: 35 65
 
-* - Requisito
-  - Specifiche
-* - **Posizione consigliata**
-  - Interno quadro elettrico o su pannello dedicato vicino alla cella robotica
-* - **Spazio di ventilazione**
-  - Minimo 50 mm su tutti i lati per circolazione aria
-* - **Fissaggio**
-  - Guida DIN 35 mm o viti M5 su pannello
-* - **Temperatura ambiente**
-  - 1°C ~ +50°C (verificare specifiche complete nella sezione [Specifiche VisionController](specifiche_VC))
-* - **Protezione**
-  - IP40 minimo (consigliato montaggio in quadro elettrico IP54)
+* - Anforderungen
+  - Spezifikationen
+* - **Empfohlener Standort**
+  - Im Schaltschrank oder auf einer dafür vorgesehenen Platte in der Nähe der Roboterzelle
+* - **Lüftungsraum**
+  - Mindestens 50 mm auf allen Seiten für die Luftzirkulation
+* - **Befestigung**
+  - 35-mm-DIN-Schiene oder M5-Schrauben auf der Platte
+* - **Umgebungstemperatur**
+  - 1°C ~ +50°C (siehe vollständige Spezifikationen im Abschnitt [Spezifikationen VisionController](specifiche_VC))
+* - **Schutzart**
+  - mindestens IP40 (Montage in Schaltschrank mit Schutzart IP54 empfohlen)
 ```
 
-### Procedura di installazione
+### *Installationsverfahren*
 
-#### Montaggio con Fori 
+#### *Montage mit Bohrungen*
 
 ```{list-table} 
    :header-rows: 1
    :widths: 35 65
 
-   * - Fase
-     - Descrizione Operativa
-   * - **1. Preparazione supporto**
-     - Praticare i fori secondo le indicazioni riportate nella scheda tecnica 
-   * - **2. Disimballaggio**
-     - Estrarre il VisionController dalla confezione prestando attenzione a non danneggiare i connettori. Verificare l'integrità del prodotto.
-   * - **3. Fissaggio**
-     - Fissare il VisionController con viti M5  
+   * - Schritt
+     - Beschreibung der Vorgehensweise
+   * - **1. Vorbereitung der Halterung**
+     - Bohren Sie die Löcher gemäß den Anweisungen im Datenblatt
+   * - **2. Auspacken**
+     - Nehmen Sie den VisionController aus der Verpackung und achten Sie dabei darauf, die Anschlüsse nicht zu beschädigen. Überprüfen Sie die Unversehrtheit des Produkts.
+   * - **3. Befestigung**
+     - Befestigen Sie den VisionController mit M5-Schrauben
 ```
 
-#### Montaggio con guida DIN
+#### *Montage mit DIN-Schiene*
 
 ```{list-table} 
    :header-rows: 1
    :widths: 35 65
 
-   * - Fase
-     - Descrizione Operativa
-   * - **1. Preparazione supporto**
-     - verificare che la guida sia pulita e fissata saldamente.
-   * - **2. Disimballaggio**
-     - Estrarre il VisionController dalla confezione prestando attenzione a non danneggiare i connettori. Verificare l'integrità del prodotto.
-   * - **3. Fissaggio**
-     - Agganciare il dispositivo facendolo scorrere sulla guida fino allo scatto.  
+   * - Schritt
+     - Beschreibung der Vorgehensweise
+   * - **1. Vorbereitung der** **Halterung**
+     - Überprüfen Sie, ob die Schiene sauber und fest befestigt ist.
+   * - **2. Auspacken**
+     - Nehmen Sie den VisionController aus der Verpackung und achten Sie dabei darauf, die Anschlüsse nicht zu beschädigen. Überprüfen Sie die Unversehrtheit des Produkts.
+   * - **3. Befestigung**
+     - Befestigen Sie das Gerät, indem Sie es auf die Schiene schieben, bis es einrastet.
 ```
 
 ```{warning}
-**Ventilazione**
+**Belüftung**
 
-Il VisionController genera calore durante il funzionamento. Garantire sempre almeno 50 mm di spazio libero attorno al dispositivo.
-Altrimenti si può avere:
-- Surriscaldamento e spegnimenti automatici
-- Riduzione delle prestazioni
-- Danneggiamento dei componenti interni
+Der VisionController erzeugt während des Betriebs Wärme. Sorgen Sie stets für mindestens 50 mm Freiraum um das Gerät herum.
+Andernfalls kann es zu folgenden Problemen kommen:
+- Überhitzung und automatische Abschaltung
+- Verminderte Leistung
+- Beschädigung interner Komponenten
 ```
 
 ---
 
-## Montaggio Camera
+## Befestigung der Kamera
 
-Il posizionamento preciso e l'allineamento della telecamera sono passaggi critici che influenzano direttamente l'accuratezza della calibrazione e le prestazioni del sistema di picking.
+Die genaue Positionierung und Ausrichtung der Kamera sind entscheidende Schritte, die sich direkt auf die Genauigkeit der Kalibrierung und die Leistung des Kommissioniersystems auswirken.
 
 
-### Distanza di lavoro ottimale
+### *Optimaler Arbeitsabstand*
 
-La telecamera deve essere montata in modo che la faccia frontale della lente sia posizionata a una distanza specifica (Working Distance) dalla superficie del piatto FlexiBowl.  
-Per il calcolo dettagliato della distanza ottimale per la vostra applicazione, consultare la sezione dedicata: [Calcolo Distanza Ottimale](distanza_lavoro)
+Die Kamera muss so montiert werden, dass die Vorderseite des Objektivs in einem bestimmten Abstand (Working Distance) zur Arbeitsfläche des FlexiBowl® positioniert ist.
+Eine detaillierte Berechnung des optimalen Abstands für Ihre Anwendung finden Sie im entsprechenden Abschnitt: [Berechnung des optimalen Arbeitsabstands](distanza_lavoro)
 
 ```{image} ../../../../_shared/media/images/working_distance.JPG
-:alt: Distanza Di Lavoro
+:alt: Arbeitsabstand
 :width: 40%
 :align: center
 ```
@@ -145,9 +145,9 @@ Per il calcolo dettagliato della distanza ottimale per la vostra applicazione, c
 :header-rows: 1
 :widths: 25 40 35
 
-* - Modello FlexiBowl
-  - Distanza di Lavoro Raccomandata (Working Distance)
-  - Lente Inclusa nel Kit (Lunghezza Focale)
+* - Modell FlexiBowl®
+  - Empfohlener Arbeitsabstand (Working Distance)
+  - Im Kit enthaltenes Objektiv (Brennweite)
 * - **FB 200**
   - 800 mm 
   - 35 mm
@@ -168,171 +168,171 @@ Per il calcolo dettagliato della distanza ottimale per la vostra applicazione, c
   - 12 mm
 ```
 
-### Posizionamento e allineamento
+### *Positionierung und Ausrichtung*
 
-Il corretto allineamento della camera è fondamentale per ottenere immagini di qualità e garantire precisione nel picking.
+Die korrekte Ausrichtung der Kamera ist entscheidend für die Aufnahme hochwertiger Bilder und die Gewährleistung der Präzision beim Picking.
 
-**Configurazioni errate.** Le immagini mostrano esempi di posizionamento non corretto della camera: il campo visivo (indicato in rosso) risulta decentrato rispetto all'area di visone, coprendo solo parzialmente l'area di lavoro o includendo zone esterne ad essa. Queste configurazioni compromettono il riconoscimento dei pezzi e il funzionamento del sistema di visione.    
+**Falsche Konfigurationen.** Die Bilder zeigen Beispiele für eine falsche Positionierung der Kamera: Das Sichtfeld (rot markiert) ist gegenüber dem Sichtbereich dezentriert, sodass es den Arbeitsbereich nur teilweise abdeckt oder Bereiche außerhalb davon einbezieht. Diese Konfigurationen beeinträchtigen die Teileerkennung und die Funktion des Bildverarbeitungssystems.
 
 ```{image} ../../../../_shared/media/images/config_sbagliata.png
-:alt: Distanza Di Lavoro
+:alt: Arbeitsabstand
 :width: 60%
 :align: center
 ```
 ```{image} ../../../../_shared/media/images/config_sbagliata2.png
-:alt: Distanza Di Lavoro
+:alt: Arbeitsabstand
 :width: 60%
 :align: center
 ```
-**Configurazione corretta.** La camera deve essere posizionata centralmente rispetto all'area di visione del FlexiBowl (zona backlight). In questo modo il campo visivo (indicato in verde) copre simmetricamente l'intera area di lavoro, garantendo il corretto funzionamento del sistema di visione.  
+**Korrekte Konfiguration.** Die Kamera muss mittig zum Sichtbereich des FlexiBowl® (Hintergrundbeleuchtung-Bereich) positioniert werden. Auf diese Weise deckt das Sichtfeld (grün markiert) den gesamten Arbeitsbereich symmetrisch ab und gewährleistet so den korrekten Betrieb des Bildverarbeitungssystems.
 
 ```{image} ../../../../_shared/media/images/config_giusta.JPG
-:alt: Distanza Di Lavoro
+:alt: Arbeitsabstand
 :width: 70%
 :align: center
 ```
 
 ```{list-table}
-* - **Centratura:**
+* - **Zentrierung:**
   - 
-    - La camera deve essere posizionata esattamente al di sopra dell'area di visione del FlexiBowl
-    - Tolleranza massima di centratura: ±5 mm
-* - **Ortogonalità:**
+    - Die Kamera muss genau über dem Sichtbereich des FlexiBowl® positioniert werden.
+    - Maximale Zentriertoleranz: ±5 mm
+* - **Rechtwinkligkeit:**
   - 
-    - La camera deve essere montata perfettamente parallela alla superficie del piatto
-    - Non sono ammesse inclinazioni laterali (tilt) o rotazioni rispetto alla verticale
-    - Tolleranza massima di inclinazione: ±1°
+    - Die Kamera muss exakt parallel zur Arbeitsfläche des FlexiBowl® montiert werden.
+    - Seitliche Neigungen (Tilt) oder Drehungen gegenüber der Vertikalen sind nicht zulässig
+    - Maximale Neigungstoleranz: ±1°
 ```
 
 ```{tip}
-Per facilitare la messa a punto e permettere aggiustamenti futuri, si raccomanda fortemente di progettare il supporto meccanico della camera con possibilità di microregolazioni:
-- **Asse Z (altezza)**: -10 mm / +30 mm (per adattamento distanza di lavoro)
-- **Asse X (sinistra-destra)**: ±10 mm (per centratura fine)
-- **Asse Y (avanti-indietro)**: ±10 mm (per centratura fine)
-Questa flessibilità è particolarmente utile durante la calibrazione iniziale e per eventuali ricalibrazione future.
+Um die Feinabstimmung zu erleichtern und spätere Anpassungen zu ermöglichen, wird dringend empfohlen, die mechanische Halterung der Kamera so zu konstruieren, dass Mikroeinstellungen möglich sind:
+- **Z-Achse (Höhe)**: -10 mm / +30 mm (zur Anpassung des Arbeitsabstands)
+- **X-Achse (links-rechts)**: ±10 mm (zur Feinzentrierung)
+- **Y-Achse (vorwärts-rückwärts)**: ±10 mm zur Feinzentrierung)
+Diese Flexibilität ist besonders bei der Erstkalibrierung und bei eventuellen zukünftigen Neukalibrierungen von Nutzen.
 ```
 
-### Dimensioni Camera 
+### *Abmessungen der Kamera*
 ```{figure} ../../../../_shared/media/images/Dimensioni_Cam.png
 :alt: Dimensioni camera CAM-CIC-5000-20G-1
 :align: center
 :width: 100%
 
-Dimensioni camera CAM-CIC-5000-20G-1 (mm)
+Abmessungen der Kamera CAM-CIC-5000-20G-1 (mm)
 ```
 ```{list-table}
 :header-rows: 1
 :widths: 40 60
 
-* - **Caratteristica**
-  - **Valore**
-* - Larghezza × Altezza (corpo)
+* - **Merkmal**
+  - **Wert**
+* - Breite × Höhe (Gehäuse)
   - 29 × 29 mm
-* - Profondità (corpo)
-  - 42.0 mm
-* - Profondità totale (incluso connettore posteriore)
-  - 48.9 mm
-* - Sporgenza frontale (attacco obiettivo)
-  - 12.60 mm
-* - Interasse fori di fissaggio laterali (M2)
-  - 20.0 × 23.7 mm
-* - Fori di fissaggio frontali
-  - 2× M2 profondità 3 mm
-* - Fori di fissaggio laterali
-  - 4× M2 profondità 3.5 mm + 3× M3 profondità 3.5 mm
-* - Peso
+* - Tiefe (Gehäuse)
+  - 42,0 mm
+* - Gesamttiefe (einschließlich rückseitigem Anschluss)
+  - 48,9 mm
+* - Frontüberstand (Objektivfassung)
+  - 12,60 mm
+* - Achsabstand der seitlichen Befestigungslöcher (M2)
+  - 20,0 × 23,7 mm
+* - Vordere Befestigungslöcher
+  - 2× M2 Tiefe 3 mm
+* - Seitliche Befestigungslöcher
+  - 4× M2 Tiefe 3,5 mm + 3× M3 Tiefe 3,5 mm
+* - Gewicht
   - 88 g
 ```
 ```{warning}
-**Fissaggio:**
-- Utilizzare i 4 fori di montaggio M3 presenti sul corpo camera
-- Viti consigliate: Viti consigliate: M3 A2 / M3 8.8
-- Coppia di serraggio: 0.5 Nm (non serrare eccessivamente per evitare deformazioni)
+**Befestigung:**
+- Verwenden Sie die 4 M3-Befestigungslöcher am Kameragehäuse
+- Empfohlene Schrauben: M3 A2 / M3 8.8
+- Anzugsdrehmoment: 0.5 Nm (nicht zu fest anziehen, um Verformungen zu vermeiden)
 ```
 ```{tip}
-**Regolazione della posizione della camera**
+**Einstellung der Kameraposition**
 
-Per permettere aggiustamenti futuri ed evitare problemi di allineamento, progettare il supporto meccanico con possibilità di microregolazione su tutti gli assi:
+Um spätere Anpassungen zu ermöglichen und Ausrichtungsprobleme zu vermeiden, sollte die mechanische Halterung so konstruiert sein, dass eine Feineinstellung in allen Achsen möglich ist:
 
-- **Asse Z (altezza)**: -10 mm / +30 mm
-- **Asse X (sinistra-destra)**: ±10 mm
-- **Asse Y (avanti-indietro)**: ±10 mm
+- **Z-Achse (Höhe)**: -10 mm / +30 mm
+- **X-Achse (links-rechts)**: ±10 mm
+- **Y-Achse (vorwärts-rückwärts)**: ±10 mm
 
-Un supporto con viti serrate definitivamente senza possibilità di regolazione rende impossibile correggere la posizione della camera dopo il montaggio iniziale.
+Eine Halterung mit fest angezogenen Schrauben ohne Einstellmöglichkeit macht es unmöglich, die Position der Kamera nach der Erstmontage zu korrigieren.
 ```
-### Verifica montaggio lente
+### *Überprüfung der Objektivbefestigung*
 
 ```{warning}
-Prima di procedere con il fissaggio definitivo:
-1. Verificare visivamente che la lente sia installata
-2. Controllare che la lunghezza focale sia corretta per il vostro modello di FlexiBowl (etichetta sulla lente o documentazione dell'ordine)
-3. Assicurarsi che la lente sia avvitata completamente (contatto metal-metal tra lente e corpo camera)
-4. NON rimuovere o allentare la lente se già montata correttamente
+Bevor Sie mit der endgültigen Befestigung fortfahren:
+1. Überprüfen Sie visuell, ob die Linse eingesetzt ist
+2. Vergewissern Sie sich, dass die Brennweite für Ihr FlexiBowl®-Modell korrekt ist (Etikett auf der Linse oder Bestellunterlagen)
+3. Stellen Sie sicher, dass das Objektiv vollständig aufgeschraubt ist (Metall-auf-Metall-Kontakt zwischen Objektiv und Kameragehäuse)
+4. Entfernen oder lösen Sie die Linse NICHT, wenn sie bereits korrekt montiert ist.
 ```
-### Installazione Camera
-Per garantire il corretto funzionamento del sistema di visione è necessario che la telecamera sia installata su un supporto rigido e stabile.
-Il sistema Flexibowl non genera vibrazioni; tuttavia, nelle linee automatizzate sono presenti altre sorgenti di vibrazione,(robot industriali,sistemi di movimentazione,altre macchine della linea)
+### *Kamera-Installation*
+Um den ordnungsgemäßen Betrieb des Bildverarbeitungssystems zu gewährleisten, muss die Kamera auf einer festen und stabilen Halterung montiert sein.
+Das FlexiBowl®-System erzeugt keine Vibrationen; in automatisierten Fertigungslinien gibt es jedoch andere Vibrationsquellen (Industrieroboter, Fördersysteme, andere Maschinen der Fertigungslinie)
 
-Se tali vibrazioni vengono trasmesse alla telecamera, l'immagine acquisita può risultare instabile e le coordinate calcolate dal sistema di visione potrebbero non essere affidabili, compromettendo la precisione del prelievo robotizzato.
+Wenn solche Vibrationen auf die Kamera übertragen werden, kann das aufgenommene Bild unruhig sein und die vom Bildverarbeitungssystem berechneten Koordinaten könnten unzuverlässig sein, was die Genauigkeit der robotergestützten Entnahme beeinträchtigt.
 
 ![Installazione Camera](../../../../_shared/media/images/installazionecamera.png)
 
 :::{tip}
-Per questo motivo si raccomanda di:
+Aus diesem Grund wird Folgendes empfohlen:
 
-- installare la telecamera su una struttura rigida e stabile
+- Die Kamera auf einer starren und stabilen Struktur montieren
 
-- evitare supporti soggetti a vibrazioni provenienti da robot o altre macchine
+- Halterungen vermeiden, die Vibrationen von Robotern oder anderen Maschinen ausgesetzt sind
 
-- utilizzare preferibilmente una struttura indipendente dalla macchina
+- Vorzugsweise eine maschinenunabhängige Struktur verwenden
 :::
 
 ```{warning}
-**Viti di fissaggio camera: prevenzione allentamento**
+**Befestigungsschrauben der Kamera: Vorbeugung gegen das Lösen**
 
-Le viti di fissaggio della camera possono allentarsi nel tempo per le seguenti cause:
+Die Befestigungsschrauben der Kamera können sich im Laufe der Zeit aus folgenden Gründen lösen:
 
-- **Coppia di serraggio eccessiva (> 0.5 Nm)**: può causare deformazioni del corpo camera e successivo allentamento. Serrare sempre con coppia massima di **0.5 Nm**.
-- **Vibrazioni trasmesse dalla linea**: utilizzare **frenafiletti medio** su tutte le viti di fissaggio.
-- **Viti non idonee**: verificare l'utilizzo di viti **M3 × 8 mm inox** come consigliato.
+- **Zu hohes Anzugsmoment (> 0,5 Nm):** Dies kann zu Verformungen des Kameragehäuses und anschließendem Lösen führen. Ziehen Sie die Schrauben immer mit einem maximalen Drehmoment von **0,5 Nm** an.
+- **Von der Anlage übertragene Vibrationen**: Verwenden Sie auf allen Befestigungsschrauben ein **mittelstarkes Schraubensicherungsmittel**.
+- **Ungeeignete Schrauben**: Vergewissern Sie sich, dass die empfohlenen **M3 × 8 mm Edelstahlschrauben** verwendet werden.
 ```
 
-### Regolazione della posizione della telecamera:
+### *Einstellung der Kameraposition:*
 
-Il supporto della telecamera deve consentire la regolazione della posizione per permettere il corretto allineamento con l’area di prelievo del Flexibowl.
+Die Kamerahalterung muss eine Positionsverstellung ermöglichen, um die korrekte Ausrichtung auf den Entnahmebereich des FlexiBowl® zu gewährleisten
 
-![Regolazioni Cmera](../../../../_shared/media/images/regolazionicamera.png)
+![Kameraeinstellungen](../../../../_shared/media/images/regolazionicamera.png)
 
 :::{note}
-Partendo da un posizionamento nominale con inclinazione, altezza e posizionamento corretto al centro dell'area retroilluminata, si raccomanda di prevedere le seguenti regolazioni:
+Ausgehend von einer nominellen Positionierung mit korrekter Neigung, Höhe und Ausrichtung in der Mitte des hintergrundbeleuchteten Bereichs wird empfohlen, folgende Einstellungen vorzunehmen:
 
-Regolazione X/Y → ± 50mm
-Regolazione Z → ± 50mm
-Rotazione θ → ± 10°
+X/Y-Einstellung → ± 50mm
+Z-Einstellung → ± 50mm
+Drehung θ → ± 10°
 :::
 
 ```{caution}
-**Camera danneggiata durante il montaggio**
+**Die Kamera wurde bei der Montage beschädigt.**
 
-Per evitare danni alla telecamera durante le operazioni di installazione e regolazione:
+Um Schäden an der Kamera während der Installation und Einstellung zu vermeiden:
 
-- **Coppia di serraggio eccessiva**: non superare **0.5 Nm** di coppia sulle viti M3. Il superamento di questo valore può deformare il corpo ottico in modo irreversibile.
-- **Manipolazione scorretta**: maneggiare sempre la camera con cura, evitando pressioni dirette sul corpo ottico e sul sensore.
-- **Urti durante l'installazione**: proteggere la camera durante eventuali lavori meccanici circostanti (foratura, fresatura, serraggio strutture).
+- **Zu hohes Anzugsmoment**: Das Drehmoment von **0,5 Nm** an den M3-Schrauben darf nicht überschritten werden. Das Überschreiten dieses Wertes kann das Optikgehäuse irreversibel verformen.
+- **Unsachgemäße Handhabung**: Behandeln Sie die Kamera stets mit Sorgfalt und vermeiden Sie direkten Druck auf das Optikgehäuse und den Sensor.
+- **Stöße während der Installation**: Schützen Sie die Kamera bei eventuellen mechanischen Arbeiten in der Umgebung (Bohren, Fräsen, Befestigen von Konstruktionen).
 ```
 ---
 
-## Montaggio Toplight
+## Toplight-Montage
 
-Se l'ordine include un Toplight (illuminatore dall'alto), questo deve essere montato sulla stessa struttura di supporto della telecamera per garantire un'illuminazione uniforme della superficie di lavoro.
+Wenn die Bestellung ein Toplight (Beleuchtung von oben) enthält, muss dieses an derselben Halterung wie die Kamera montiert werden, um eine gleichmäßige Ausleuchtung der Arbeitsfläche zu gewährleisten.
 
 :::{attention}
-Durante il montaggio, l'apparecchio deve essere spento e staccato dalla corrente.
+Während der Montage muss das Gerät ausgeschaltet und vom Stromnetz getrennt sein.
 :::
-### Dimensioni Toplight 
+### *Abmessungen des Toplights*
 ![Dimensioni Toplight](../../../../_shared/media/images/toplight_dim.JPG)
 
-| Lunghezza x Larghezza (mm) | Altezza (mm) | Altezza con piastra di fissaggio (mm) | Diametro foro centrale | Superficie utile massima [A x B] | Perimetro utile massimo |
+| Länge x Breite (mm) | Höhe (mm) | Höhe mit Befestigungsplatte (mm) | Durchmesser der zentralen Bohrung | Maximale Nutzfläche [A x B] | Maximaler Nutzumfang |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | **A x B** | **C** | **C + 10 mm** | **D** | **–** | **–** |
 | 500x300 | 45 | 55 | 65 | 0,15 m² | 1,6 m |
@@ -340,90 +340,92 @@ Durante il montaggio, l'apparecchio deve essere spento e staccato dalla corrente
 | 700x500 | 45 | 55 | 65 | 0,35 m² | 2,4 m |
 | 900x600 | 45 | 55 | 65 | 0,54 m² | 3 m |
 
-### Posizionamento Toplight 
-Il toplight deve essere posizionato centralmente rispetto alla superficie utile del pannello luminoso,
-con l'ottica della telecamera montata all'interno del foro centrale, a filo con la superficie superiore del toplight.   
-Le frecce rosse indicano le viti di fissaggio delle ghiere dell'obiettivo, una per la regolazione del fuoco e una per la regolazione del diaframma. Come mostrato nella figura, il toplight deve essere montato in modo che le due viti restino accessibili dall'alto. 
+### *Positionierung des Toplights*
+Das Toplight muss mittig zur Nutzfläche der Leuchtplatte
+positioniert werden, wobei die Kameraoptik in der zentralen Öffnung montiert sein muss, bündig mit der Oberseite des Toplights.
+Die roten Pfeile zeigen auf die Befestigungsschrauben der Objektivringe, eine für die Fokuseinstellung und eine für die Blendeneinstellung. Wie in der Abbildung gezeigt, muss das Toplight so montiert werden, dass die beiden Schrauben von oben zugänglich bleiben.
 
-![Posizione Toplight e Cam](../../../../_shared/media/images/posizione_cam_TPL_B.png)
+![Position von Toplight und Kamera](../../../../_shared/media/images/posizione_cam_TPL_B.png)
 
-Il campo visivo della telecamera e il fascio luminoso del toplight (in verde) devono essere allineati concentricamente e perpendicolarmente rispetto all'area di visione sul FlexiBowl.    
-Come mostrato nelle tre viste (frontale, dall'alto e assonometrica), il toplight deve illuminare esattamente l'area inquadrata dalla telecamera, con entrambi i componenti centrati sull'asse ottico verticale del sistema.  
+Das Sichtfeld der Kamera und der Lichtstrahl des Toplights (grün) müssen konzentrisch und senkrecht zum Sichtbereich auf dem FlexiBowl® ausgerichtet sein.
+Wie in den drei Ansichten (Vorderansicht, Draufsicht und axonometrische Ansicht) dargestellt, muss das Toplight genau den von der Kamera erfassten Bereich ausleuchten, wobei beide Komponenten auf der vertikalen optischen Achse des Systems zentriert sein müssen.
 
 ![Posizione Toplight Cam + FB](../../../../_shared/media/images/posizioneTPL_giusta.png)
 
-Un posizionamento errato si verifica quando il toplight e la telecamera non sono centrati sull'area di visione del FlexiBowl.   
-Come illustrato (in rosso), due errori tipici sono:  
-- spostarsi in avanti o indietro rispetto all'area di visione.  
-- ruotare il toplight rispetto ad essa.   
+Eine falsche Positionierung liegt vor, wenn das Toplight und die Kamera nicht auf den Sichtbereich des FlexiBowl® zentriert sind.
+Wie dargestellt (in rot), sind zwei typische Fehler:
+- eine Verschiebung nach vorne oder hinten im Verhältnis zum Sichtfeld.
+- eine Drehung des Toplights im Verhältnis dazu.
   
-In entrambi i casi, l'illuminazione risulta disassata e non perpendicolare, compromettendo la qualità dell'acquisizione.
+In beiden Fällen ist die Beleuchtung versetzt und nicht senkrecht, was die Qualität der Aufnahme beeinträchtigt.
 
-![Posizione Toplight Cam + FB Sbagliata](../../../../_shared/media/images/posizioneTPL_sbagliata.png)
+![Falsche Position von Toplight, Kamera und FB](../../../../_shared/media/images/posizioneTPL_sbagliata.png)
 
-### Procedura di installazione
+### *Installationsverfahren*
 ```{list-table}
 :header-rows: 1
 :widths: 35 65
 
-* - **Fase**
-  - **Istruzioni operative**
-* - **1. Posizionamento**
-  - Fissare il Toplight sulla struttura di supporto in posizione concentrica rispetto alla camera.
-* - **2. Distanza dalla superficie**
-  - Posizionare l'illuminatore a una distanza dalla superficie del FlexiBowl simile a quella della camera per:
+* - **Schritt**
+  - **Betriebsanleitung**
+* - **1. Positionierung**
+  - Befestigen Sie das Toplight auf der Halterung in einer konzentrischen Position im Verhältnis zur Kamera.
+* - **2. Abstand zur Oberfläche**
+  - Positionieren Sie die Beleuchtung in einem ähnlichen Abstand zur Oberfläche des FlexiBowl® wie die Kamera, um:
     
-    * Minimizzare le ombre proiettate dai pezzi
-    * Massimizzare l'uniformità luminosa
-    * Evitare riflessioni dirette verso la camera
-* - **3. Orientamento**
-  - Assicurarsi che la superficie emittente del Toplight sia parallela al piatto del FlexiBowl.
-* - **4. Angolo di illuminazione**
-  - Perpendicolare alla superficie (0° tilt).
-* - **5. Fissaggio**
-  - Secondo specifiche della modalità scelta (vedi sezione seguente).
+    * Schatten der Werkstücke zu minimieren
+    * Die Gleichmäßigkeit des Lichts zu maximieren
+    * Direkte Reflexionen in die Kamera zu vermeiden
+* - **3. Ausrichtung**
+  - Achten Sie darauf, dass die Lichtaustrittsfläche des Toplights parallel zur Arbeitsfläche der FlexiBowl® steht.
+* - **4. Beleuchtungswinkel**
+  - Senkrecht zur Oberfläche (0° Neigung).
+* - **5. Befestigung**
+  - Gemäß den Spezifikationen des gewählten Befestigungsmodus (siehe folgenden Abschnitt).
 ```
 
-### Modalità di fissaggio
+### *Befestigungsmodi*
 
-Il Toplight può essere fissato in due modalità: sull'[angolo](angolo) o sul [lato](lato).
+Das Toplight kann auf zwei Arten befestigt werden: an der [Ecke](angolo) oder an der [Seite](lato).
 
 :::{note}
-I componenti di fissaggio **non sono inclusi** nella fornitura del Toplight. Il montaggio può quindi essere personalizzato in base alle esigenze dell'installazione.
+Die Befestigungselemente **sind nicht** im Lieferumfang des Toplight **enthalten**. Die Montage kann somit an die Anforderungen der jeweiligen Installation angepasst werden.
 
-- Fissaggio sul lato (scanalatura): dadi M4 **forniti**
-- Fissaggio sull'angolo: viti CHC M4x20 **non fornite**
+- Befestigung an der Seite (Nut): M4-Muttern **im Lieferumfang enthalten**
+- Befestigung an der Ecke: CHC-Schrauben M4x20 **nicht im Lieferumfang enthalten**
 
-In entrambi i casi si raccomanda l'uso di un **frenafiletti** (non fornito) per evitare allentamenti nel tempo. La coppia di serraggio consigliata è compresa tra **0,5 e 1,5 Nm**.
+In beiden Fällen wird die Verwendung eines **Schraubensicherungsmittels** (nicht im Lieferumfang enthalten) empfohlen, um ein Lösen im Laufe der Zeit zu vermeiden. Das empfohlene Anzugsdrehmoment liegt zwischen **0,5 und 1,5 Nm.**
 :::
 
 (angolo)=
-#### 1. Fissaggio sull'angolo
+#### *1. Befestigung an der Ecke*
 
-Il fissaggio sull'angolo utilizza viti CHC M4x20 (non fornite) applicate nei fori posizionati ai quattro angoli del Toplight.
+Die Befestigung an der Ecke erfolgt mit CHC-Schrauben M4x20 (nicht im Lieferumfang enthalten), die in die Bohrungen an den vier Ecken des Toplight eingesetzt werden.
 ```{figure} ../../../../_shared/media/images/fissaggio_angolo.png
-:alt: Fissaggio del Toplight sull'angolo con vite CHC M4x20
+:alt: Befestigung des Toplights an der Ecke mit CHC-Schraube M4x20
 :align: center
 :width: 60%
 
-Fissaggio sull'angolo tramite vite CHC M4x20 (non fornita).
+Befestigung an den Ecken mit einer CHC-Schraube M4x20 (nicht im Lieferumfang enthalten).
 ```
 
 (lato)=
-#### 2. Fissaggio sul lato (scanalatura)
+#### *2. Befestigung an der Seite (Nut)*
 
-Il fissaggio sul lato utilizza 4 dadi M4 (forniti) da inserire nella scanalatura laterale del profilo del Toplight. La profondità massima di inserimento del dado nella scanalatura è di **5 mm**.
+Für die Befestigung an der Seite werden 4 M4-Muttern (im Lieferumfang enthalten) verwendet, die in die seitliche Nut des Toplight-Profils eingesetzt werden.
+   Die maximale Einstecktiefe der Mutter in die Nut beträgt **5 mm.**
+     Empfohlene Schrauben sind M4x8.
 
 ```{figure} ../../../../_shared/media/images/fissaggio_lato.JPG
-:alt: Fissaggio del Toplight sul lato tramite dadi M4 nella scanalatura
+:alt: Befestigung des Toplights an der Seite
 :align: center
 :width: 100%
 
-Fissaggio sul lato tramite 4 dadi M4 (forniti) inseriti nella scanalatura del profilo. Profondità massima: 5 mm.
+Befestigung an der Seite
 ```
-
-##### Fissaggio laterale con staffe 
-Nel caso in cui il Toplight venisse fissato con delle staffe: 
+(montaggio_staffa)=
+##### Seitliche Befestigung mit Halterungen
+Falls das Toplight mit Halterungen befestigt wird:
 
 :::{error}
 ![montaggio Laterale](../../../../_shared/media/images/errorimontaggiolaterale.png)
@@ -433,8 +435,13 @@ Nel caso in cui il Toplight venisse fissato con delle staffe:
 ![montaggio Laterale](../../../../_shared/media/images/montaggiolaterale.png)
 :::
 
+:::{card}
+  Für die seitliche Montage kann die entsprechende [Halterung](staffa) **separat** erworben werden.
+:::
 
-### Cablaggio illuminatore
+
+
+### *Verkabelung der Beleuchtungsanlage*
 
 
 ![Pin Toplight](../../../../_shared/media/images/pin_toplight.png)
@@ -443,59 +450,108 @@ Nel caso in cui il Toplight venisse fissato con delle staffe:
 :header-rows: 1
 :widths: 30 70
 
-* - Parametro
-  - Requisito / Azione
-* - **Tensione**
-  - 24V DC (±10%). Tensione minima di funzionamento: 20V DC sull'ingresso luce.
-* - **Connettore**
-  - M12 5 poli (T-coding).
-* - **Pinout connettore**
-  - Pin 1: +24V (marrone) — Pin 3: GND (blu) — Pin 4: STROBE PNP (nero)
-* - **Modalità STROBE (PNP)**
-  - Da 5V a 24V per accensione al 100%. Da 0V a 1V per spegnimento al 100%.
-* - **Modalità CONTINUA**
-  - Pin 1 (+24V) e Pin 3 (GND) collegati; Pin 4 (PNP) collegato a Pin 1.
-* - **Caduta di tensione (cavo M12, 10m)**
-  - 1.15V @ 5A — 2.3V @ 10A — 3.5V @ 15A — 4.6V @ 20A (max 20A)
-* - **Schermatura**
-  - Utilizzare cavi schermati per ridurre le interferenze elettromagnetiche (EMI).
+* - Parameter
+  - Anforderung / Aktion
+* - **Spannung**
+  - 24V DC (±10%). Minimale Betriebsspannung: 20V DC am Lichteingang.
+* - **Stecker**
+  - M12 5-polig (T-Codierung).
+* - **Steckerbelegung**
+  - Pin 1: +24V (braun) — Pin 3: GND (blau) — Pin 4: STROBE PNP (schwarz)
+* - **STROBE-Modus (PNP)**
+  - 5 V bis 24 V für 100 % Einschalten. 0V bis 1V für 100% Abschaltung.
+* - **DAUER-Betrieb**
+  - Pin 1 (+24 V) und Pin 3 (GND) verbunden; Pin 4 (PNP) mit Pin 1 verbunden.
+* - **Spannungsabfall (M12-Kabel, 10m)**
+  - 1,15V @ 5A - 2,3V @ 10A - 3,5V @ 15A - 4,6V @ 20A (max 20A)
+* - **Abschirmung**
+  - Verwenden Sie abgeschirmte Kabel, um elektromagnetische Störungen (EMI) zu reduzieren.
 ```
 ```{warning}
-**Sicurezza elettrica**
+**Elektrische Sicherheit**
 
-- Rispettare le tensioni di alimentazione e i morsetti di connessione indicati.
-- Non modificare né smontare il prodotto.
-- Non collegare o pulire l'apparecchio quando è sotto tensione.
-- Non guardare direttamente la sorgente luminosa.
+- Beachten Sie die angegebenen Versorgungsspannungen und Anschlussklemmen.
+- Verändern Sie das Produkt nicht und nehmen Sie es nicht auseinander.
+- Schließen Sie das Gerät nicht an und reinigen Sie es nicht, wenn es unter Spannung steht.
+- Schauen Sie nicht direkt in die Lichtquelle.
 ```
 ```{note}
-Per dettagli sui collegamenti elettrici, consultare la sezione [Cablaggio e Connessioni](10_Cablaggio_Connessioni.md).
+Einzelheiten zu den elektrischen Anschlüssen finden Sie im Abschnitt [Verdrahtung und Anschlüsse](10_Cablaggio_Connessioni.md).
 ```
-
 ---
 
-## Schermatura da luce ambientale
+## Vollständiges Layout
 
-La stabilità del sistema di visione dipende fortemente dalla consistenza delle condizioni di illuminazione. La luce ambientale variabile può causare rilevazioni incoerenti.
+```{raw} html
+<div style="
+    border: 2px solid #0d6efd;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    margin: 1rem 0;
+    background-color: #f0f6ff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+">
+    <div>
+        <div style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem;">📐 Flexibowl General Layout.STEP</div>
+        <div style="font-size: 0.95rem; color: #444;">CAD-Datei mit dem vollständigen Layout der Anordnung von FlexiBowl®, Toplight und Kamera. Zur mechanischen Integration des Systems.</div>
+    </div>
+    <a href="https://arsautomationsrl-my.sharepoint.com/:f:/g/personal/documentation_arsautomation_com/IgBMPLcyTzL8TbeSdjCwp6miAZlpuvrhEkqWnkK4AxLJEHU?e=gXEc2x" target="_blank" style="
+        display: inline-block;
+        padding: 0.7rem 1.4rem;
+        background-color: #0d6efd;
+        color: white !important;
+        font-weight: 600;
+        font-size: 1rem;
+        border-radius: 6px;
+        text-decoration: none !important;
+        white-space: nowrap;
+        flex-shrink: 0;
+    ">⬇ Herunterladen</a>
+</div>
+```
+---
+(luce_ambientale)=
+## Abschirmung gegen Umgebungslicht
+
+Die Stabilität des Bildverarbeitungssystems hängt stark von gleichbleibenden Lichtverhältnissen ab. Schwankendes Umgebungslicht kann zu widersprüchlichen Ergebnissen führen.
+
+Das Bildverarbeitungssystem vergleicht jedes aufgenommene Bild mit einem Referenzmuster. Wenn sich die Lichtverhältnisse von einem Scan zum nächsten ändern, kann es für das System schwierig sein, die Teile korrekt zu erkennen. Umgebungslicht – Sonnenlicht, Kunstlicht oder reflektiertes Licht –, das in die Zelle eindringt, ist die Hauptursache für Leistungsschwankungen in realen Anwendungen.
+
+![Abschirmung gegen Umgebungslicht](../../../../_shared/media/images/LIGHTSHIELDING.png)
+
+### *Typische Anzeichen für unkontrolliertes Umgebungslicht*
+
+- **Instabile Erkennung**: Das System funktioniert zu bestimmten Zeiten gut und wird zu anderen Zeiten schlechter, z. B. wenn Sonnenlicht in die Zelle fällt.
+- **Schwankende Erkennungswerte**: Teile werden von einem Zyklus zum nächsten mit sehr unterschiedlichen Werten erfasst, obwohl sie physisch identisch sind.
+- **Falsch-positive Ergebnisse**: Teile mit geringer Zuverlässigkeit werden mit hohen Werten erkannt und umgekehrt.
+
+### *Best Practices für die Installation*
+
+- Schirmen Sie die Seiten der Zelle, die unregelmäßiger Beleuchtung ausgesetzt sind, mit lichtundurchlässigen Platten ab.
+- Vermeiden Sie variable künstliche Beleuchtung (Lampen mit Dimmer, flackernde Leuchtstoffröhren) über oder in der Nähe der Zelle.
+- Bevorzugen Sie eine konstante Beleuchtung in der Umgebung der Zelle.
+- Überprüfen Sie vor der Kalibrierung und der Erstellung des Modells die Abschirmung.
 
 ```{warning}
-**Protezione da fonti luminose esterne**
+**Schutz vor externen Lichtquellen**
 
-Si raccomanda fortemente di schermare la cella robotica da:
-- Luce solare diretta o indiretta
-- Illuminazione artificiale variabile (es. lampade con dimmer)
-- Riflessi da superfici lucide circostanti
-- Flash o luci intermittenti nell'area
-
+Die Bedingungen während der Kalibrierung müssen denen des normalen Betriebs entsprechen. Es wird dringend empfohlen, die Roboterzelle abzuschirmen vor:
+- Direktem oder indirektem Sonnenlicht
+- Wechselnder künstlicher Beleuchtung (z. B. dimmbare Lampen)
+- Reflexionen von glänzenden Oberflächen in der Umgebung
+- Blitzlicht oder blinkenden Lichtern in der Umgebung
 ```
 ---
 
-## Riferimenti correlati
+## Weiterführende Literatur
 
-Per informazioni complementari all'installazione meccanica:
+Für zusätzliche Informationen zur mechanischen Installation:
 
-- **Calcolo della distanza ottimale camera**: [Calcolo Distanza Ottimale](distanza_lavoro)
-- **Specifiche tecniche complete**: [Specifiche FlexiVision One](specifiche_tecniche)
-- **Passo successivo - Collegamenti elettrici**: [Cablaggio e Connessioni](cablaggio)
-- **Calibrazione camera**: [Calibrazione della Camera](calibrazione)
+- **Berechnung des optimalen Kameraabstands**: [Berechnung des optimalen Arbeitsabstands](distanza_lavoro)
+- **Vollständige technische Daten**: [Spezifikationen FlexiVision One](specifiche_tecniche)
+- **Nächster Schritt - Elektrische Anschlüsse**: [Verdrahtung und Anschlüsse](cablaggio)
+- **Kamerakalibrierung**: [Kamerakalibrierung](calibrazione)
 

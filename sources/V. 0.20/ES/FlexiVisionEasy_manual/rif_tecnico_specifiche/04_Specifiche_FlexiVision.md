@@ -1,89 +1,89 @@
 (specifiche_tecniche)=
-# **Specifiche Dettagliate FlexiVision One**
+# **Especificaciones detalladas FlexiVision One**
 
-Questa sezione fornisce le specifiche tecniche complete del sistema FlexiVision One, inclusi dettagli su camera industriale, VisionController, griglia di calibrazione, protocolli di comunicazione e configurazioni hardware.
+Esta sección proporciona las especificaciones técnicas completas del sistema FlexiVision One, incluidos los detalles de la cámara industrial, el VisionController, la rejilla de calibración, los protocolos de comunicación y las configuraciones de hardware.
 
 ---
 (specifiche_camera)=
-## Camera 
+## Cámara 
 
-```{figure} ../../../../_shared/media/images/Camera2.png
-:alt: Camera FlexiVision One CAM-CIC-5000-20G-1
-:align: center
-:width: 50%
+```{figure} ../../../../_shared/media/images/camera_nuova.png
+  :alt: Camera FlexiVision One CAM-CIC-5000-20G-1
+  :align: center
+  :width: 70%
 ```
 
-Il sistema FlexiVision One utilizza telecamere ad alta risoluzione con interfaccia Gigabit Ethernet per garantire rapidità nell'acquisizione delle immagini e precisione nel riconoscimento dei componenti.
+El sistema FlexiVision One utiliza cámaras de alta resolución con una interfaz Gigabit Ethernet para garantizar una rápida adquisición de imágenes y un reconocimiento preciso de los componentes.
 
-### Specifiche elettriche
+### *Especificaciones eléctricas*
 ```{list-table}
 :header-rows: 1
 :widths: 40 60
 
-* - **Caratteristica**
-  - **Specifiche**
-* - Modello
+* - **Características**
+  - **Especificaciones**
+* - Modelo
   - CAM-CIC-5000-20G-1
-* - Pixel Effettivi
-  - 5 MP 12448 × 2048)
+* - Píxeles efectivos
+  - 5 MP 12448 × 2048
 * - SNR
   - \>38 dB
-* - Dynamic Range
+* - Rango dinámico
   - 70 dB
 * - GPIO
-  - Connettore Hirose 6-pin: 1 ingresso opto-isolato, 1 uscita opto-isolata, 1 I/O configurabile senza isolamento ottico
-* - Formato Immagine
+  - Conector Hirose de 6 patillas: 1 entrada optoaislada, 1 salida optoaislada, 1 I/O configurable sin aislamiento óptico
+* - Formato de imagen
   - Mono8 / 10 / 10Packed
 * - Binning 
   - Support
 * - Gain
   - X1 ~ X32
 * - Gamma
-  - Da 0 a 4, supporto LUT
-* - Tempo di Esposizione
+  - De 0 a 4, soporte LUT
+* - Tiempo de exposición
   - 34.23 μS ~ 1S
-* - Modalità Trigger
+* - Modo Trigger
   - Software / Hardware / Free run
-* - Buffer Immagine
+* - Búfer de imagen
   - 256 MB
-* - impostazioni utente 
+* - Ajustes de usuario 
   - Support two sets of user-defined configuration
-* - Alimentazione
-  - PoE / DC tramite connettore Hirose, con tensione a 12 V o 24 V
-* - Consumo Energetico
+* - Alimentación
+  - PoE / DC mediante conector Hirose, con tensión a 12 V o 24 V
+* - Consumo energético
   - 12V ≈ 3.2 W
-* - Attacco Obiettivo
+* - Montura del objetivo
   - C-mount
-* - Temperatura Operativa
+* - Temperatura operativa
   - -30°C ~ +50°C
-* - Temperatura di Stoccaggio
+* - Temperatura de almacenamiento
   - -30°C ~ +80°C
-* - Certificazioni
+* - Certificaciones
   - CE, UL, FCC, RoHS
-* - Risoluzione
+* - Resolución
   - 2448 x 2048
 * - Pixel Size
   - 3.45 × 3.45 μm
-* - Sensore
+* - Sensor
   - IMX264 CMOS Global Shutter
-* - Dimensione Sensore
+* - Tamaño del sensor
   - 2/3"
 * - Frame Rate
   - 24 fps
 * - Bit Depth
   - 12 bit
-* - Interfaccia
+* - Interfaz
   - GigE, POE
 ```
 
-### Connettore GPIO (Hirose 6-pin)
+### *Conector GPIO (Hirose 6 patillas)*
 
 ```{figure} ../../../../_shared/media/images/Pin_Cam.png
-:alt: Connettore GPIO Hirose 6-pin
+:alt: Conector GPIO Hirose 6 patillas
 :align: center
 :width: 70%
 
-Vista posteriore della camera con connettori
+Vista trasera de la cámara con conectores
 ```
 
 ```{list-table}
@@ -91,308 +91,308 @@ Vista posteriore della camera con connettori
 :widths: 10 20 70
 
 * - **Pin**
-  - **Segnale**
-  - **Descrizione**
+  - **Señal**
+  - **Descripción**
 * - 1
   - Power
-  - Ingresso alimentazione DC 12V o 24V
+  - Entrada de alimentación DC 12V o 24V
 * - 2
   - Line1
-  - Ingresso opto-isolato
+  - Entrada optoaislada
 * - 3
   - Line2
-  - GPIO 1I/O configurabile senza opto-isolamento via software)
+  - GPIO 1I/O configurable sin optoaislamiento mediante software
 * - 4
   - Line0
-  - Uscita opto-isolata
+  - Salida optoaislada
 * - 5
   - IO GND
-  - Massa opto-isolata
+  - Masa optoaislada
 * - 6
   - GND
-  - Massa
+  - Masa
 ```
 
 ```{warning}
-**Requisiti di rete obbligatori**
+**Requisitos de red obligatorios**
 
-L'interfaccia Gigabit Ethernet è obbligatoria e richiede un'infrastruttura di rete compatibile 1switch Gigabit Ethernet e cavi Ethernet almeno di categoria Cat6 o Cat7 con S/STP shielding).
+La interfaz Gigabit Ethernet es obligatoria y requiere una infraestructura de red 1switch Gigabit Ethernet compatible y cables Ethernet de categoría Cat6 o Cat7 como mínimo con blindaje S/STP.
 
-La mancata osservanza di questo requisito compromette completamente l'operatività della telecamera. Verificare che tutti i componenti di rete (cavi, switch, porte) supportino lo standard GigE.
+El incumplimiento de este requisito interrumpe por completo el funcionamiento de la cámara. Compruebe que todos los componentes de la red (cables, Switches, puertos) son compatibles con el estándar GigE.
 ```
 
-### Metodi di alimentazione
+### *Métodos de alimentación*
 
 ```{list-table}
 :header-rows: 1
 :widths: 25 40 35
 
-* - **Metodo**
-  - **Descrizione**
-  - **Requisiti**
+* - **Método**
+  - **Descripción**
+  - **Requisitos**
 * - **PoE**
-  - Alimentazione e dati su un unico cavo Ethernet. Consumo 3.2 W @ 12 Vdc.
-  - Richiede PoE Injector o Switch PoE compatibile 1IEEE 802.3af/at)
-* - **Cavo Camera Esterno Fornito nel Kit**
-  - Alimentazione DC esterna tramite connettore Hirose 6-pin 112V o 24V). Incluso nel kit.
-  - Cavo Ethernet separato necessario solo per i dati
+  - Alimentación y datos a través de un único cable Ethernet. Consumo 3.2 W a 12 Vdc.
+  - Requiere PoE Injector o Switch PoE compatible 1IEEE 802.3af/at
+* - **Cable Cámara externo suministrado en el kit**
+  - Alimentación DC externa mediante conector Hirose 6-pin 112V o 24V. Incluido en el kit.
+  - Se necesita un cable Ethernet independiente sólo para datos
 ```
 
 ```{tip}
-**Quale metodo scegliere?**
+**¿Qué método elegir?**
 
-- **PoE**: ideale per installazioni pulite con un solo cavo, ma richiede hardware di rete specifico
-- **Alimentazione esterna**: soluzione standard più flessibile, consigliata per la maggior parte delle applicazioni
+- **PoE**: ideal para instalaciones limpias de un solo cable, pero requiere hardware de red específico
+- **Fuente de alimentación externa**: solución estándar más flexible, recomendada para la mayoría de las aplicaciones
 ```
 (cavo)=
-### Cavo di Alimentazione 
+### *Cable de alimentación* 
 ```{figure} ../../../../_shared/media/images/Cavo_Specfiche.png
-:alt: Specifiche Cavo Alimentazione Camera
+:alt: Especificaciones del cable de alimentación de la cámara
 :align: center
 :width: 100%
 
-Specifiche Cavo Alimentazione Camera
+Especificaciones del cable de alimentación de la cámara
 ```
 ```{list-table}
 :widths: 30 70
 :header-rows: 1
 
-* - Parametro
-  - Valore
+* - Parámetro
+  - Valor
 
-* - **Descrizione**
-  - Cavo I/O 10 metri, connettore HRS6P
+* - **Descripción**
+  - Cable I/O 10 metros, conector HRS6P
 
-* - **Compatibilità**
-  - Telecamere CIC-series
+* - **Compatibilidad**
+  - Cámaras de la serie CIC
 
-* - **Lunghezza**
-  - 10 metri 133')
+* - **Longitud**
+  - 10 metros 133'
 
-* - **Connettore 1P1)**
-  - Push/Pull 6P RECP Shell SZ 7 Female
+* - **Conector 1P1**
+  - Push/Pull 6P RECP Shell SZ 7 Hembra
 
-* - **Sezione conduttori**
+* - **Sección del conductor**
   - 22 AWG
 
-* - **Tipo cavo**
-  - Schermato, 3 coppie twistare, flessibile
+* - **Tipo de cable**
+  - Apantallado, 3 pares trenzados, flexible
 
-* - **Colori cavi**
-  - Pin 1: Marrone, Pin 2: Verde , Pin 3: Rosa, Pin 4: Giallo, Pin 5: Grigio, Pin 6: Bianco
+* - **Colores de los cables**
+  - Pin 1: Marrón, Pin 2: Verde , Pin 3: Rosa, Pin 4: Amarillo, Pin 5: Gris, Pin 6: blanca
 
-* - **Schermatura**
-  - Shield su tutti i conduttori
+* - **Blindaje**
+  - Blindaje en todos los conductores
 
-* - **Conformità**
-  - UL/CSA e RoHS
+* - **Conformidad**
+  - UL/CSA y RoHS
 ```
 
 
 
-### Specifiche fisiche e dimensioni
-![Dimensioni Camera](../../../../_shared/media/images/Dimensioni_Cam__ab884007b7.png)
+### *Especificaciones físicas y dimensiones*
+![Dimensiones de la cámara](../../../../_shared/media/images/Dimensioni_Cam.png)
 ```{list-table}
 :header-rows: 1
 :widths: 40 60
 
-* - **Caratteristica**
-  - **Valore**
-* - Larghezza × Altezza 1corpo)
+* - **Características**
+  - **Valor**
+* - Anchura × Altura 1Cuerpo
   - 29 × 29 mm
-* - Profondità 1corpo)
+* - Profondidad 1Cuerpo
   - 42.0 mm
-* - Profondità totale 1incluso connettore posteriore)
+* - Profondidad total 1incluido el conector trasero
   - 48.9 mm
-* - Sporgenza frontale 1attacco obiettivo)
+* - Proyección frontal 1Montaje de la lente
   - 12.60 mm
-* - Interasse fori di fissaggio laterali 1M2)
+* - Distancia central de los orificios de montaje laterales 1M2
   - 20.0 × 23.7 mm
-* - Fori di fissaggio frontali
-  - 2× M2 profondità 3 mm
-* - Fori di fissaggio laterali
-  - 4× M2 profondità 3.5 mm + 3× M3 profondità 3.5 mm
+* - Orificios de montaje frontales
+  - 2× M2 profundidad 3 mm
+* - Orificios de montaje laterales
+  - 4× M2 profundidad 3,5 mm + 3× M3 profundidad 3,5 mm
 * - Peso
   - 88 g
 ```
 ---
 (specifiche_obiettivo)=
-## Obiettivo
+## Lente
 ```{figure} ../../../../_shared/media/images/Ottica_000046.png
 :alt: Camera FlexiVision One CAM-CIC-5000-20G-1
 :align: center
 :width: 50%
 ```
-```{dropdown} Obiettivo 35mm
-| Parametro | Ingrandimento di Riferimento | M.O.D. |
+```{dropdown} Objetivo 35 mm
+| Parámetro | Aumento de referencia | M.O.D. |
 |------------|-----------------------------|--------|
-| **Tipo di lente** | CCTV Lens | CCTV Lens |
-| **Posizione di fuoco** | Reference Magnification | M.O.D. |
-| **Ingrandimento** | 0.069 | 0.167 |
-| **Lunghezza focale 1mm)** | 34.97 | 34.97 |
-| **Numero F 1Fno)** | 2.00 ~ 16.00 | 2.00 ~ 16.00 |
-| **Apertura Numerica 1NA)** | - | - |
-| **Distanza di lavoro / oggetto 1mm)** | 500.0 / 507.0 | 200.0 / 207.0 |
-| **Distanza oggetto-immagine 1mm)** | 555.75 | 259.16 |
-| **Lunghezza meccanica tubo 1mm)** | 36.30 ~ 38.20 | 36.30 ~ 38.20 |
-| **Back focus lente 1mm)** | 14.75 | 18.16 |
-| **Profondità di campo 1mm)** | 35.476 | 6.336 |
-| **Risoluzione @550nm (µm)** | - | - |
-| **Posizione piano principale Ant./Post. 1mm)** | 37.60 / -22.61 | 37.60 / -22.61 |
-| **Posizione pupilla Entr./Usc. 1mm)** | 25.22 / -41.78 | 25.22 / -41.78 |
-| **Diametro pupilla Entr./Usc. 1mm)** | 17.03 / 26.36 | 17.03 / 26.36 |
-| **Angolo di campo 1°) H × V** | 13.69 × 10.34 | 12.62 × 9.76 |
-| **Distorsione TV 1%)** | -0.088 | -0.142 |
-| **Illuminazione relativa 1%)** | 44.95 | 50.20 |
-| **Peso 1g)** | 50 | 50 |
-| **Attacco 1Mount)** | C-mount | C-mount |
-| **Cerchio immagine 1mm)** | φ11 | φ11 |
-| **Camera massima compatibile** | 2/3" | 2/3" |
+| **Tipo de lente** | CCTV Lens | CCTV Lens |
+| **Posición de enfoque** | Reference Magnification | M.O.D. |
+| **Aumento** | 0.069 | 0.167 |
+| **Longitud focal (mm)** | 34.97 | 34.97 |
+| **Número F (Fno)** | 2.00 ~ 16.00 | 2.00 ~ 16.00 |
+| **Apertura numérica (NA)** | - | - |
+| **Distancia de trabajo / objeto (mm)** | 500.0 / 507.0 | 200.0 / 207.0 |
+| **Distancia objeto-imagen (mm)** | 555.75 | 259.16 |
+| **Longitud mecánica del tubo (mm)** | 36.30 ~ 38.20 | 36.30 ~ 38.20 |
+| **Back focus lente (mm)** | 14.75 | 18.16 |
+| **Profundidad de campo (mm)** | 35.476 | 6.336 |
+| **Resolución @550nm (µm)** | - | - |
+| **Posición plano principal Ant./Post. (mm)** | 37.60 / -22.61 | 37.60 / -22.61 |
+| **Posición pupila Ent./Sal. (mm)** | 25.22 / -41.78 | 25.22 / -41.78 |
+| **Diámetro pupila Ent./Sal. (mm)** | 17.03 / 26.36 | 17.03 / 26.36 |
+| **Ángulo de campo 1° H × V** | 13.69 × 10.34 | 12.62 × 9.76 |
+| **Distorsión TV 1%** | -0.088 | -0.142 |
+| **Iluminación relativa 1%** | 44.95 | 50.20 |
+| **Peso (g)** | 50 | 50 |
+| **Montura Mount** | C-mount | C-mount |
+| **Círculo de imagen (mm)** | φ11 | φ11 |
+| **Cámara máxima compatible** | 2/3" | 2/3" |
 ```
-```{dropdown} Obiettivo 25mm
-| Parametro | Ingrandimento di Riferimento | M.O.D. |
+```{dropdown} Objetivo 25 mm
+| Parámetro | Aumento de referencia | M.O.D. |
 |-----------|:----------------------------:|:------:|
-| **Tipo di lente** | CCTV Lens | CCTV Lens |
-| **Posizione di fuoco** | Reference Magnification | M.O.D. |
-| **Ingrandimento** | 0.049 | 0.152 |
-| **Lunghezza focale 1mm)** | 25.00 | 25.00 |
-| **Numero F 1Fno)** | 1.60 ~ 16.00 | 1.60 ~ 16.00 |
-| **Apertura numerica 1NA)** | - | - |
-| **Distanza di lavoro / oggetto 1mm)** | 500.0 / 510.0 | 150.0 / 160.0 |
-| **Distanza oggetto-immagine 1mm)** | 553.34 | 205.92 |
-| **Lunghezza meccanica tubo 1mm)** | 34.60 ~ 38.50 | 34.60 ~ 38.50 |
-| **Back focus lente 1mm)** | 13.75 | 16.33 |
-| **Profondità di campo @PCoC 0.04mm 1mm)** | 54.223 | 5.835 |
-| **Risoluzione @550nm (µm)** | - | - |
-| **Posizione piano principale Ant./Post. 1mm)** | 29.42 / -12.46 | 29.42 / -12.46 |
-| **Posizione pupilla Entr./Usc. 1mm)** | 18.48 / -31.94 | 18.48 / -31.94 |
-| **Diametro pupilla Entr./Usc. 1mm)** | 15.92 / 28.32 | 15.92 / 28.32 |
-| **Angolo di campo 1°) H × V** | 19.39 × 14.64 | 18.05 × 13.89 |
-| **Distorsione TV 1%)** | -0.041 | -0.271 |
-| **Illuminazione relativa 1%)** | 49.78 | 53.52 |
-| **Peso 1g)** | 50 | 50 |
-| **Attacco 1Mount)** | C-mount | C-mount |
-| **Cerchio immagine 1mm)** | φ11 | φ11 |
-| **Camera massima compatibile** | 2/3" | 2/3" |
+| **Tipo de lente** | CCTV Lens | CCTV Lens |
+| **Posición de enfoque** | Reference Magnification | M.O.D. |
+| **Aumento** | 0.049 | 0.152 |
+| **Longitud focal (mm)** | 25.00 | 25.00 |
+| **Número F (Fno)** | 1.60 ~ 16.00 | 1.60 ~ 16.00 |
+| **Apertura numérica (NA)** | - | - |
+| **Distancia de trabajo / objeto (mm)** | 500.0 / 510.0 | 150.0 / 160.0 |
+| **Distancia objeto-imagen (mm)** | 553.34 | 205.92 |
+| **Longitud mecánica del tubo (mm)** | 34.60 ~ 38.50 | 34.60 ~ 38.50 |
+| **Back focus lente (mm)** | 13.75 | 16.33 |
+| **Profundidad de campo @PCoC 0.04mm (mm)** | 54.223 | 5.835 |
+| **Resolución @550nm (µm)** | - | - |
+| **Posición plano principal Ant./Post. (mm)** | 29.42 / -12.46 | 29.42 / -12.46 |
+| **Posición pupila Ent./Sal. (mm)** | 18.48 / -31.94 | 18.48 / -31.94 |
+| **Diámetro pupila Ent./Sal. (mm)** | 15.92 / 28.32 | 15.92 / 28.32 |
+| **Ángulo de campo 1° H × V** | 19.39 × 14.64 | 18.05 × 13.89 |
+| **Distorsión TV 1%** | -0.041 | -0.271 |
+| **Iluminación relativa 1%** | 49.78 | 53.52 |
+| **Peso (g)** | 50 | 50 |
+| **Montura Mount** | C-mount | C-mount |
+| **Círculo de imagen (mm)** | φ11 | φ11 |
+| **Cámara máxima compatible** | 2/3" | 2/3" |
 ```
-```{dropdown} Obiettivo 16mm
-| Parametro | Ingrandimento di Riferimento | M.O.D. |
+```{dropdown} Objetivo 16 mm
+| Parámetro | Aumento de referencia | M.O.D. |
 |-----------|:----------------------------:|:------:|
-| **Tipo di lente** | CCTV Lens | CCTV Lens |
-| **Posizione di fuoco** | Reference Magnification | M.O.D. |
-| **Ingrandimento** | 0.031 | 0.095 |
-| **Lunghezza focale 1mm)** | 16.16 | 16.16 |
-| **Numero F 1Fno)** | 1.60 ~ 16.00 | 1.60 ~ 16.00 |
-| **Apertura numerica 1NA)** | - | - |
-| **Distanza di lavoro / oggetto 1mm)** | 500.0 / 507.0 | 150.0 / 157.0 |
-| **Distanza oggetto-immagine 1mm)** | 554.26 | 205.30 |
-| **Lunghezza meccanica tubo 1mm)** | 35.50 ~ 37.00 | 35.50 ~ 37.00 |
-| **Back focus lente 1mm)** | 12.16 | 13.20 |
-| **Profondità di campo @PCoC 0.04mm 1mm)** | 131.893 | 14.387 |
-| **Risoluzione @550nm (µm)** | - | - |
-| **Posizione piano principale Ant./Post. 1mm)** | 28.44 / -4.50 | 28.44 / -4.50 |
-| **Posizione pupilla Entr./Usc. 1mm)** | 18.85 / -28.07 | 18.85 / -28.07 |
-| **Diametro pupilla Entr./Usc. 1mm)** | 10.18 / 25.02 | 10.18 / 25.02 |
-| **Angolo di campo 1°) H × V** | 30.37 × 22.92 | 29.62 × 22.39 |
-| **Distorsione TV 1%)** | -0.472 | -0.674 |
-| **Illuminazione relativa 1%)** | 32.75 | 36.61 |
-| **Peso 1g)** | 50 | 50 |
-| **Attacco 1Mount)** | C-mount | C-mount |
-| **Cerchio immagine 1mm)** | φ11 | φ11 |
-| **Camera massima compatibile** | 2/3" | 2/3" |
+| **Tipo de lente** | CCTV Lens | CCTV Lens |
+| **Posición de enfoque** | Reference Magnification | M.O.D. |
+| **Aumento** | 0.031 | 0.095 |
+| **Longitud focal (mm)** | 16.16 | 16.16 |
+| **Número F (Fno)** | 1.60 ~ 16.00 | 1.60 ~ 16.00 |
+| **Apertura numérica (NA)** | - | - |
+| **Distancia de trabajo / objeto (mm)** | 500.0 / 507.0 | 150.0 / 157.0 |
+| **Distancia objeto-imagen (mm)** | 554.26 | 205.30 |
+| **Longitud mecánica del tubo (mm)** | 35.50 ~ 37.00 | 35.50 ~ 37.00 |
+| **Back focus lente (mm)** | 12.16 | 13.20 |
+| **Profundidad de campo @PCoC 0.04mm (mm)** | 131.893 | 14.387 |
+| **Resolución @550nm (µm)** | - | - |
+| **Posición plano principal Ant./Post. (mm)** | 28.44 / -4.50 | 28.44 / -4.50 |
+| **Posición pupila Ent./Sal. (mm)** | 18.85 / -28.07 | 18.85 / -28.07 |
+| **Diámetro pupila Ent./Sal. (mm)** | 10.18 / 25.02 | 10.18 / 25.02 |
+| **Ángulo de campo 1° H × V** | 30.37 × 22.92 | 29.62 × 22.39 |
+| **Distorsión TV 1%** | -0.472 | -0.674 |
+| **Iluminación relativa 1%** | 32.75 | 36.61 |
+| **Peso (g)** | 50 | 50 |
+| **Montura (Mount)** | C-mount | C-mount |
+| **Círculo de imagen (mm)** | φ11 | φ11 |
+| **Cámara máxima compatible** | 2/3" | 2/3" |
 ```
-```{dropdown} Obiettivo 12mm
-| Parametro | Ingrandimento di Riferimento | M.O.D. |
+```{dropdown} Objetivo 12 mm
+| Parámetro | Aumento de referencia | M.O.D. |
 |-----------|:----------------------------:|:------:|
-| **Tipo di lente** | CCTV Lens | CCTV Lens |
-| **Posizione di fuoco** | Reference Magnification | M.O.D. |
-| **Ingrandimento** | 0.023 | 0.075 |
-| **Lunghezza focale 1mm)** | 12.00 | 12.00 |
-| **Numero F 1Fno)** | 1.80 ~ 16.00 | 1.80 ~ 16.00 |
-| **Apertura numerica 1NA)** | - | - |
-| **Distanza di lavoro / oggetto 1mm)** | 500.0 / 505.6 | 150.0 / 155.0 |
-| **Distanza oggetto-immagine 1mm)** | 559.55 | 209.55 |
-| **Lunghezza meccanica tubo 1mm)** | 39.20 ~ 40.10 | 39.20 ~ 40.10 |
-| **Back focus lente 1mm)** | 12.23 | 12.84 |
-| **Profondità di campo @PCoC 0.04mm 1mm)** | 277.576 | 28.121 |
-| **Risoluzione @550nm (µm)** | - | - |
-| **Posizione piano principale Ant./Post. 1mm)** | 17.71 / -0.05 | 17.71 / -0.05 |
-| **Posizione pupilla Entr./Usc. 1mm)** | 11.68 / -12.18 | 11.68 / -12.18 |
-| **Diametro pupilla Entr./Usc. 1mm)** | 6.67 / 13.41 | 6.67 / 13.41 |
-| **Angolo di campo 1°) H × V** | 40.54 × 30.77 | 39.40 × 30.05 |
-| **Distorsione TV 1%)** | -0.983 | -0.905 |
-| **Illuminazione relativa 1%)** | 40.64 | 42.64 |
-| **Peso 1g)** | 60 | 60 |
-| **Attacco 1Mount)** | C-mount | C-mount |
-| **Cerchio immagine 1mm)** | φ11 | φ11 |
-| **Camera massima compatibile** | 2/3" | 2/3" |
+| **Tipo de lente** | CCTV Lens | CCTV Lens |
+| **Posición de enfoque** | Reference Magnification | M.O.D. |
+| **Aumento** | 0.023 | 0.075 |
+| **Longitud focal (mm)** | 12.00 | 12.00 |
+| **Número F (Fno)** | 1.80 ~ 16.00 | 1.80 ~ 16.00 |
+| **Apertura numérica (NA)** | - | - |
+| **Distancia de trabajo / objeto (mm)** | 500.0 / 505.6 | 150.0 / 155.0 |
+| **Distancia objeto-imagen (mm)** | 559.55 | 209.55 |
+| **Longitud mecánica del tubo (mm)** | 39.20 ~ 40.10 | 39.20 ~ 40.10 |
+| **Back focus lente (mm)** | 12.23 | 12.84 |
+| **Profundidad de campo @PCoC 0.04mm (mm)** | 277.576 | 28.121 |
+| **Resolución @550nm (µm)** | - | - |
+| **Posición plano principal Ant./Post. (mm)** | 17.71 / -0.05 | 17.71 / -0.05 |
+| **Posición pupila Ent./Sal. (mm)** | 11.68 / -12.18 | 11.68 / -12.18 |
+| **Diámetro pupila Ent./Sal. (mm)** | 6.67 / 13.41 | 6.67 / 13.41 |
+| **Ángulo de campo 1° H × V** | 40.54 × 30.77 | 39.40 × 30.05 |
+| **Distorsión TV 1%** | -0.983 | -0.905 |
+| **Iluminación relativa 1%** | 40.64 | 42.64 |
+| **Peso (g)** | 60 | 60 |
+| **Montura Mount** | C-mount | C-mount |
+| **Círculo de imagen (mm)** | φ11 | φ11 |
+| **Cámara máxima compatible** | 2/3" | 2/3" |
 ```
 ---
 (specifiche_VC)=
 ## VisionController
-```{figure} ../../../../_shared/media/images/PC.png
+```{figure} ../../../../_shared/media/images/VisionController.png
 :alt: VisionController FlexiVision One
 :align: center
-:width: 50%
+:width: 80%
 ```
 
-Il sistema FlexiVision One opera su un PC Industriale 1VisionController) che funge da controller principale per il software di visione. ARS fornisce il VisionController già pre-configurato e testato con il software FlexiVision One installato.
+El sistema FlexiVision One funciona en un PC industrial (VisionController) que sirve como controlador principal para el software de visión. ARS suministra el VisionController ya preconfigurado y probado con el software FlexiVision One instalado.
 
-### Specifiche elettriche
+### *Especificaciones eléctricas*
 
 ```{list-table}
 :header-rows: 1
 :widths: 40 60
 
-* - **Caratteristica**
-  - **Specifiche**
+* - **Características**
+  - **Especificaciones**
 * - CPU
-  - Intel Core i3-1115G4 1.7 14.1) GHz
-* - Memoria 1RAM)
+  - Intel Core i3-1115G4 1.7 14.1 GHz
+* - Memoria (RAM)
   - 8G DDR4 3200 MHz
-* - Archiviazione
+* - Almacenamiento
   - 256G 
 * - TPM
   - TPM 2.0
-* - Sistema Operativo
+* - Sistema operativo
   - Win11 LTSC 2024
-* - Pulsante di accensione
-  - Sì 1pannello frontale con spia luminosa)
-* - Porte Ethernet
+* - Botón de encendido
+  - Sí (panel frontal con indicador luminoso)
+* - Puertos Ethernet
   - **i3/i7:** 3× Gb LAN
-* - Porte USB
+* - Puertos USB
   -  6× USB 3.0 TypeA
-* - Uscita Video
+* - Salida vídeo
   - 2× HDMI 
 * - Audio
-  - Line Out + MIC 1Jack 2-in-1)
-* - Alimentazione 1V DC)
+  - Line Out + MIC (Jack 2-in-1)
+* - Alimentación (V DC)
   - 12 ~ 32 V DC
-* - Temperatura Operativa
+* - Temperatura operativa
   - 1°C ~ +50°C
-* - Temperatura di Stoccaggio
+* - Temperatura de almacenamiento
   - -20°C ~ +65°C
-* - Umidità
-  - &lt;90% 1senza condensa)
-* - Materiale Scocca
-  - Lega di alluminio + acciaio
-* - Grado di Protezione
+* - Humedad
+  - &lt;90% (sin condensación)
+* - Material de la carcasa
+  - Aleación de aluminio + acero
+* - Grado de protección
   - IP20
-* - Metodo di Installazione
-  - Montaggio a parete 1DIN Rail opzionale)
-* - Consumo Energetico
+* - Método de instalación
+  - Montaje en pared (DIN Rail opcional)
+* - Consumo energético
   - 25 W
-* - Dimensioni 1L × A × P)
+* - Dimensiones (L × A × P)
   - 59.8 × 200 × 119.5 mm
 * - Peso
   - 2 kg
-* - Certificazioni
+* - Certificaciones
   - CE, UL
 ```
 
-### Porte PC
+### *Puertos de PC*
 ```{figure} ../../../../_shared/media/images/Spec_Elettriche_PC.png
-:alt: Schema elettrico VisionController
+:alt: Esquema eléctrico VisionController
 :align: center
 :width: 50%
 ```
@@ -403,46 +403,46 @@ Il sistema FlexiVision One opera su un PC Industriale 1VisionController) che fun
 :widths: 10 25 65
 
 * - **Ref.**
-  - **Connettore**
-  - **Descrizione**
+  - **Conector**
+  - **Descripción**
 * - A
-  - Pulsante di accensione
-  - Accensione e spegnimento del dispositivo
+  - Botón de encendido
+  - Encendido y apagado del dispositivo
 * - B
-  - ETH 10/100/1000 Mbit – RJ45 1LAN 1)
-  - Porta Ethernet Gigabit 1
+  - ETH 10/100/1000 Mbit – RJ45 (LAN 1)
+  - Puerto Ethernet Gigabit 1
 * - C
-  - ETH 10/100/1000 Mbit – RJ45 1LAN 2)
-  - Porta Ethernet Gigabit 2
+  - ETH 10/100/1000 Mbit – RJ45 (LAN 2)
+  - Puerto Ethernet Gigabit 2
 * - D
-  - Porta Seriale 1RS232) COM1
-  - Interfaccia seriale RS232 COM1
+  - Puerto serie (RS232) COM1
+  - Interfaz serie RS232 COM1
 * - E
-  - Porta Seriale 1RS232) COM2
-  - Interfaccia seriale RS232 COM2
+  - Puerto serie (RS232) COM2
+  - Interfaz serie RS232 COM2
 * - F
-  - Connettore di ingresso alimentazione
-  - Ingresso alimentazione 12–32V DC 1terminal block 3-pin)
+  - Conector de entrada de alimentación
+  - Entrada alimentación 12–32V DC (terminal block 3-pin)
 * - G
-  - Uscita Audio + MIC 1Jack 3.5 mm)
-  - 1× uscita audio di linea + ingresso microfono 1jack 3.5 mm)
+  - Salida audio + MIC (Jack 3.5 mm)
+  - 1× salida audio de línea + entrada micrófono (jack 3.5 mm)
 * - H
   - 6× USB-A
-  - Porte USB 1USB 3.0 TypeA per versioni i3/i7)
+  - Puertos USB (USB 3.0 TypeA para versiones i3/i7)
 * - I
-  - Porta video 2
-  - **B2B12/B2B14:** HDMI 2 — **B2B15/B2B16:** DisplayPort
+  - Puerto vídeo 2
+  - **B2B12/B2B14:** HDMI 2 — **B2B15/B2B16:** MostrarPort
 * - L
-  - Porta HDMI 1
-  - Uscita video HDMI 1
+  - Puerto HDMI 1
+  - Salida de vídeo HDMI 1
 * - M
-  - ETH 10/100/1000 Mbit – RJ45 1LAN 3)
-  - Porta Ethernet Gigabit 3
+  - ETH 10/100/1000 Mbit – RJ45 1LAN 3
+  - Puerto Gigabit Ethernet 3
 ```
-### Specifiche fisiche 
+### *Especificaciones físicas*
 
 ```{figure} ../../../../_shared/media/images/dimensioni_VC.png
-:alt: Dimensioni VisionController
+:alt: Dimensiones VisionController
 :align: center
 :width: 80%
 ```
@@ -451,40 +451,40 @@ Il sistema FlexiVision One opera su un PC Industriale 1VisionController) che fun
 :header-rows: 1
 :widths: 40 60
 
-* - **Fori Viti**
+* - **Orificios tornillos**
   - M5
-* - **Caratteristica**
-  - **Valore**
-* - Larghezza 1totale con staffe)
+* - **Características**
+  - **Valor**
+* - Anchura (total con soportes)
   - 245.00 mm
-* - Larghezza 1corpo)
+* - Anchura (cuerpo)
   - 227.00 mm
-* - Larghezza pannello connettori
+* - Anchura panel conectores
   - 200.00 mm
-* - Altezza 1totale con staffe)
+* - Altura (total con soportes)
   - 123.00 mm
-* - Altezza 1corpo)
+* - Altura cuerpo
   - 120.00 mm
-* - Profondità
+* - Profundidad
   - 61.10 mm
 ```
 
 ---
 (laser)=
-## Strumento Laser per Calibrazione 
-Lo Strumento Laser è una soluzione avanzata per la calibrazione che migliora la precisione con cui viene salvato il punto di riferimento del robot.
-Il beneficio principale del laser è che non richiede un contatto fisico con la griglia di calibrazione. Funzionando come un puntatore ad alta precisione, il laser consente all'operatore di allineare il punto target in modo visivo e ripetibile sulla griglia, offrendo un grado di accuratezza molto superiore rispetto all'uso di una punta fisica. 
-Questa precisione è essenziale per il successo della calibrazione e si integra perfettamente con la ripetibilità garantita dalla Griglia di Calibrazione Dedicata ARS.
+## Herramienta Láser para Calibración 
+La Herramienta Láser es una solución de calibración avanzada que mejora la precisión con la que se guarda el punto de referencia del robot.
+La principal ventaja del láser es que no requiere contacto físico con la rejilla de calibración. Funcionando como un puntero de alta precisión, el láser permite al operador alinear el punto objetivo de forma visual y repetible en la cuadrícula, ofreciendo un grado de precisión mucho mayor que utilizando un punto físico. 
+Esta precisión es esencial para el éxito de la calibración y complementa perfectamente la repetibilidad garantizada por la rejilla de calibración dedicada ARS.
 
 
-![Laser Cal](../../../../_shared/media/images/laser.png) 
+![Láser Cal](../../../../_shared/media/images/laser.png) 
 
-|Caratteristica	|Strumento Laser 1Laser Tool)|	Strumento a Punta 1Tip Tool) Standard |
+|Característica	|Herramienta Láser|	Herramienta de punta estándar |
 |--|--|--|
-|Metodo di Riferimento	|Non a contatto 1puntatore visivo)	|A contatto 1punta meccanica/fisica)|
-|Precisione del Riferimento	|Massima precisione; l'operatore allinea visivamente il punto con accuratezza.	|Media, subordinata alla vista dell’operatore|
-|Facilità d'Uso	|Semplifica la procedura di allineamento visivo.	|Richiede maggiore attenzione nel posizionamento e nell'evitare l'inclinazione.|
-|Vantaggio Chiave	|Consente di salvare il punto di riferimento robot con la massima fedeltà possibile, essenziale per l'accuratezza finale del picking.|	Metodo base, ma meno preciso del laser.|
+|Método de referencia	|Puntero visual sin contacto|	Punta mecánica/física de contacto|
+|Precisión de la referencia	|Máxima precisión; el operario alinea visualmente el punto con exactitud.	|Medio, subordinado a la visión del operador|
+|Facilidad de uso	|Simplifica el procedimiento de alineación visual.	|Requiere más cuidado en la colocación y evitar la inclinación.|
+|Ventaja clave	|Permite guardar el punto de referencia del robot con la mayor fidelidad posible, lo que es esencial para la precisión final del picking.|	Método básico, pero menos preciso que el láser.|
 
 
 ```{image} ../../../../_shared/media/images/laserscomp.png
@@ -498,125 +498,122 @@ Questa precisione è essenziale per il successo della calibrazione e si integra 
     <thead>
       <tr style="background: #d0d0d0;">
         <th style="padding: 6px 16px; text-align: left;">POS.</th>
-        <th style="padding: 6px 16px; text-align: left;">DESCRIZIONE</th>
+        <th style="padding: 6px 16px; text-align: left;">DESCRIPCIÓN</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td style="padding: 5px 16px;">1</td><td style="padding: 5px 16px;">TAPPO DI CHIUSURA SUPERIORE</td></tr>
-      <tr><td style="padding: 5px 16px;">2</td><td style="padding: 5px 16px;">CONTENITORE BATTERIE CR2032 3V A BOTTONE</td></tr>
-      <tr><td style="padding: 5px 16px;">3</td><td style="padding: 5px 16px;">FLANGIA DI ACCOPPIAMENTO</td></tr>
-      <tr><td style="padding: 5px 16px;">4</td><td style="padding: 5px 16px;">MORSETTO</td></tr>
-      <tr><td style="padding: 5px 16px;">5</td><td style="padding: 5px 16px;">CORPO UTENSILE</td></tr>
-      <tr><td style="padding: 5px 16px;">6</td><td style="padding: 5px 16px;">PUNTATORE LASER</td></tr>
-      <tr><td style="padding: 5px 16px;">7</td><td style="padding: 5px 16px;">AMMORTIZZATORE A MOLLA</td></tr>
-      <tr><td style="padding: 5px 16px;">8</td><td style="padding: 5px 16px;">SUPPORTO DISTANZIALE</td></tr>
+      <tr><td style="padding: 5px 16px;">1</td><td style="padding: 5px 16px;">TAPA DE CIERRE SUPERIOR</td></tr>
+      <tr><td style="padding: 5px 16px;">2</td><td style="padding: 5px 16px;">PORTAPILAS CR2032 3V BOTÓN</td></tr>
+      <tr><td style="padding: 5px 16px;">3</td><td style="padding: 5px 16px;">BRIDA DE ACOPLAMIENTO</td></tr>
+      <tr><td style="padding: 5px 16px;">4</td><td style="padding: 5px 16px;">ABRAZADERA</td></tr>
+      <tr><td style="padding: 5px 16px;">5</td><td style="padding: 5px 16px;">CUERPO DE LA HERRAMIENTA</td></tr>
+      <tr><td style="padding: 5px 16px;">6</td><td style="padding: 5px 16px;">PUNTERO LÁSER</td></tr>
+      <tr><td style="padding: 5px 16px;">7</td><td style="padding: 5px 16px;">AMORTIGUADOR DE MUELLE</td></tr>
+      <tr><td style="padding: 5px 16px;">8</td><td style="padding: 5px 16px;">SOPORTE DISTANCIADOR</td></tr>
     </tbody>
   </table>
 </div>
 ```
 :::{important}
-Per cambiarle le DUE batterie dello strumento laser, seguire questi passaggi:
-
-
-
+El soporte para montar la Herramienta Láser en lugar de la herramienta del robot **NO** se suministra, ya que varía para cada robot y debe personalizarse.
 :::
 
-:::{admonition} Suggerimento 
+:::{admonition} Consejo 
 :class: tip 
-L'utilizzo dello Strumento Laser in combinazione con la Griglia di Calibrazione Dedicata ARS costituisce la metodologia più robusta e precisa per l'installazione del sistema FlexiVision One
+El uso de la Herramienta Láser en combinación con la Rejilla de Calibración Dedicada ARS es la metodología más robusta y precisa para instalar FlexiVision One
 :::
 ---
 (specifiche_griglia)=
-## Griglia di calibrazione
+## Rejilla de calibración
 
-```{figure} ../../../../_shared/media/images/Calib_Grid.png
-:alt: Griglia di Calibrazione
+```{figure} ../../../../_shared/media/images/griglia800.JPG
+:alt: Rejilla de calibración
 :align: center
 :width: 50%
 ```
 
 
-Una calibrazione eccellente è il requisito fondamentale per l'accuratezza del sistema FlexiVision One. Solo una calibrazione ad alta precisione garantisce che le coordinate rilevate dalla telecamera 1pixel) vengano convertite in modo accurato nelle coordinate reali del robot 1millimetri), assicurando così il successo dell'applicazione di picking.
+Una calibración excelente es el requisito básico para la precisión del sistema FlexiVision One. Sólo una calibración de alta precisión garantiza que las coordenadas detectadas por la cámara (píxeles) se conviertan con exactitud en las coordenadas reales del robot (milímetros), garantizando así el éxito de la aplicación de picking.
 
-### Specifiche tecniche griglia
+### *Especificaciones de la rejilla*
 
-```{dropdown} Griglia per FlexiBowl 200 
-![Griglia 200](../../../../_shared/media/images/griglia200.JPG)
+```{dropdown} Rejilla para FlexiBowl® 200 
+![Cuadrícula 200](../../../../_shared/media/images/griglia200.JPG)
 
 ```
 
-```{dropdown} Griglia per FlexiBowl 350 
-![Griglia 350](../../../../_shared/media/images/griglia350.JPG)
+```{dropdown} Rejilla para FlexiBowl® 350 
+![Cuadrícula 350](../../../../_shared/media/images/griglia350.JPG)
 ```
 
-```{dropdown} Griglia per FlexiBowl 500 
-![Griglia 500](../../../../_shared/media/images/griglia500.JPG)
+```{dropdown} Rejilla para FlexiBowl® 500 
+![Cuadrícula 500](../../../../_shared/media/images/griglia500.JPG)
 ```
 
-```{dropdown} Griglia per FlexiBowl 650 
-![Griglia 650](../../../../_shared/media/images/griglia650.JPG)
+```{dropdown} Rejilla para FlexiBowl® 650 
+![Cuadrícula 650](../../../../_shared/media/images/griglia650.JPG)
 ```
 
-```{dropdown} Griglia per FlexiBowl 800 
-![Griglia 800](../../../../_shared/media/images/griglia800.JPG)
+```{dropdown} Rejilla para FlexiBowl® 800 
+![Rejilla 800](../../../../_shared/media/images/griglia800.JPG)
 ```
 
-```{dropdown} Griglia per FlexiBowl 1200 
-![Griglia 1200](../../../../_shared/media/images/griglia1200.JPG)
+```{dropdown} Rejilla para FlexiBowl® 1200 
+![Cuadrícula 1200](../../../../_shared/media/images/griglia1200.JPG)
 ```
 
 
-Per informazioni dettagliate sulle procedure di calibrazione, consultare la sezione [Calibrazione della Camera](../QUICKSTART/SETUP/14_calibrazione_camera.md).
+Para obtener información detallada sobre los procedimientos de calibración, consulte la sección [Calibración de la cámara](../QUICKSTART/SETUP/14_calibrazione_camera.md).
 
 ---
-## Panoramica collegamenti
+## Resumen de conexiones
 
-![Panoramica Collegamenti](../../../../_shared/media/images/panoramicacollegamenti.png)
+![Enlaces generales](../../../../_shared/media/images/panoramicacollegamenti.png)
 
-*Schema di collegamento completo del sistema FlexiVision One con robot e FlexiBowl*
+*Esquema completo de conexión del sistema FlexiVision One con robot y FlexiBowl®*
 
 ```{list-table}
 :widths: 25 25 50
 :header-rows: 1
 
-* - **Da**
+* - **De**
   - **A**
-  - **Collegamento**
+  - **Enlace**
 
-* - Rete elettrica
-  - FlexiBowl
-  - Alimentazione 110/230 Vac
+* - Red eléctrica
+  - FlexiBowl®
+  - Alimentación 110/230 Vac
 
-* - Rete elettrica
+* - Red eléctrica
   - Robot
-  - Alimentazione secondo le specifiche del robot in vostro possesso
+  - Fuente de alimentación según las especificaciones del robot que posea
 
-* - Rete elettrica
+* - Red eléctrica
   - Camera
-  - Alimentazione 24 Vdc
+  - Alimentación 24 Vdc
 
-* - Rete elettrica
-  - Illuminatore 1luce)
-  - Alimentazione 24 Vdc
+* - Red eléctrica
+  - Iluminador 1 luz
+  - Alimentación 24 Vdc
 
-* - Rete elettrica
-  - Controller Tramoggia
-  - Alimentazione 110/230 Vac
+* - Red eléctrica
+  - Controlador de tolva
+  - Alimentación 110/230 Vac
 
-* - Controller Tramoggia
-  - Tramoggia
-  - Alimentazione e segnale
+* - Controlador de tolva
+  - Tolva
+  - Alimentación y señal
 
 * - Robot
-  - Controller Tramoggia
-  - I/O Digitali
+  - Controlador de tolva
+  - I/O digitales
 
 * - VisionController
-  - Camera
+  - Cámara
   - Ethernet TCP
 
 * - VisionController
-  - FlexiBowl
+  - FlexiBowl®
   - Ethernet TCP
 
 * - VisionController
@@ -624,15 +621,15 @@ Per informazioni dettagliate sulle procedure di calibrazione, consultare la sezi
   - Ethernet TCP
 ```
 
-Per schemi elettrici dettagliati, consultare la sezione [Cablaggio e Connessioni](cablaggio).
+Para obtener diagramas de cableado detallados, consulte la sección [Cableado y conexiones](cablaggio).
 
 
 ---
 
 
-## Componenti opzionali 
+## Componentes opcionales 
 
-Componenti aggiuntivi disponibili separatamente:
+Componentes adicionales disponibles por separado:
 
 
 :::{card} Toplight
@@ -641,7 +638,7 @@ Componenti aggiuntivi disponibili separatamente:
 :class-card: shadow
 :::
 
-:::{card} Cavo Alimentazione Toplight
+:::{card} Cable de alimentación Toplight
 :link: cavoalimtoplight
 :link-type: ref
 :class-card: shadow
@@ -659,7 +656,7 @@ Componenti aggiuntivi disponibili separatamente:
 :class-card: shadow
 :::
 
-:::{card} Display
+:::{card} Mostrar
 :link: display
 :link-type: ref
 :class-card: shadow

@@ -481,8 +481,8 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>In Run</strong></p></td>
-<td><p>Status indicator showing whether the system is currently running.
-<strong>Green</strong> 🟢: System on and operational.
+<td><p>Status indicator showing whether the system is currently running.<br />
+<strong>Green</strong> 🟢: System on and operational.<br />
 <strong>Red</strong> 🔴: System stopped or paused.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>In Run Time</strong></p></td>
@@ -614,13 +614,13 @@ Id 0 = component with the highest score (best match to the model if sorted with 
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>FlexiBowl®</strong></p></td>
-<td><p>Status of the hardware connection between the VisionController (PC) and FlexiBowl®.
-<strong>Green</strong>: Connected and communicating.
+<td><p>Status of the hardware connection between the VisionController (PC) and FlexiBowl®.<br />
+<strong>Green</strong>: Connected and communicating.<br />
 <strong>Red</strong>: Disconnected or communication error.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Robot</strong></p></td>
-<td><p>Status of communication with the robot.
-<strong>Green</strong>: TCP/IP connection established.
+<td><p>Status of communication with the robot.<br />
+<strong>Green</strong>: TCP/IP connection established.<br />
 <strong>Red</strong>: Disconnected or communication timeout.</p></td>
 </tr>
 </tbody>
@@ -746,18 +746,18 @@ Id 0 = component with the highest score (best match to the model if sorted with 
 <caption><span class="caption-text"><strong>PPM Interpretation</strong></span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
 <tbody>
 <tr class="row-odd"><td><p><strong>Constant and stable PPM</strong>:</p></td>
-<td><p>✓ System configured properly
-✓ Optimised parameters
+<td><p>✓ System configured properly<br />
+✓ Optimised parameters<br />
 ✓ No critical bottlenecks</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>PPM progressively decreasing</strong>:</p></td>
-<td><p>⚠️ Possible component wear (FlexiBowl® grip surface)
-⚠️ Hopper emptying
+<td><p>⚠️ Possible component wear (FlexiBowl® grip surface)<br />
+⚠️ Hopper emptying<br />
 ⚠️ Dirt buildup on camera/lighting</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>PPM with large fluctuations</strong>:</p></td>
-<td><p>⚠️ Instability in the process
-⚠️ Intermittent identification problems
+<td><p>⚠️ Instability in the process<br />
+⚠️ Intermittent identification problems<br />
 ⚠️ External interference (vibrations, variable light)</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Corrective actions</strong>:</p></td>
@@ -804,23 +804,23 @@ Id 0 = component with the highest score (best match to the model if sorted with 
 <caption><span class="caption-text"><strong>Fill Hopper Pattern Analysis</strong></span><a class="headerlink" href="#id3" title="Link to this table">#</a></caption>
 <tbody>
 <tr class="row-odd"><td><p><strong>Regular and constant activations</strong>:</p></td>
-<td><p>✓ Optimal Hopper Configuration
-✓ Stable and foreseeable flow of parts
+<td><p>✓ Optimal Hopper Configuration<br />
+✓ Stable and foreseeable flow of parts<br />
 ✓ Calculated autonomy (e.g. activation every 10 minutes)</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Ever more frequent activations</strong>:</p></td>
-<td><p>⚠️ Hopper is emptying (fewer parts = more activations to maintain level)
-⚠️ Insufficient unloading time due to reduced volume
+<td><p>⚠️ Hopper is emptying (fewer parts = more activations to maintain level)<br />
+⚠️ Insufficient unloading time due to reduced volume<br />
 <strong>Action</strong>: Plan Hopper recharge soon</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>No activation for a long time</strong>:</p></td>
-<td><p>⚠️ Robot stopped or slowed down (parts not consumed)
-⚠️ Possible system problem that does not require parts
+<td><p>⚠️ Robot stopped or slowed down (parts not consumed)<br />
+⚠️ Possible system problem that does not require parts<br />
 <strong>Action</strong>: Check production status</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Very close activations (bursts)</strong>:</p></td>
-<td><p>⚠️ Hopper threshold not configured properly (too high)
-⚠️ Insufficient steps (parts do not arrive on time)
+<td><p>⚠️ Hopper threshold not configured properly (too high)<br />
+⚠️ Insufficient steps (parts do not arrive on time)<br />
 <strong>Action</strong>: Review Hopper Config</p></td>
 </tr>
 </tbody>
@@ -863,9 +863,9 @@ Id 0 = component with the highest score (best match to the model if sorted with 
 </td>
 </tr>
 <tr class="row-odd"><td><p><strong>Gradually decreasing scores</strong>:</p></td>
-<td><p>⚠️ Real parts different from training (production variations)
-⚠️ Lighting changed (weaker backlight, dirt)
-⚠️ Camera no longer focused (vibration, blows)
+<td><p>⚠️ Real parts different from training (production variations)<br />
+⚠️ Lighting changed (weaker backlight, dirt)<br />
+⚠️ Camera no longer focused (vibration, blows)<br />
 ⚠️ FlexiBowl® surface dirty (interfering pattern)</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Corrective Actions</strong>:</p></td>

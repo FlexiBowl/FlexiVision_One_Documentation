@@ -1,7 +1,7 @@
 (protocollo)=
-# **Kommunikationsprotokoll Roboter-Bildverarbeitung**
+# **Kommunikationsprotokoll zwischen Roboter und Bildverarbeitungssystem**
 
-FlexiVision One kommuniziert mit dem Roboter über das **TCP/IP**-Protokoll in einem Ethernet-Netzwerk. 
+FlexiVision One kommuniziert mit dem Roboter über das TCP/IP-Protokoll im Ethernet-Netzwerk.
 
 ## Protokollspezifikationen
 
@@ -15,10 +15,10 @@ FlexiVision One kommuniziert mit dem Roboter über das **TCP/IP**-Protokoll in e
   - TCP/IP
 * - Port
   - Konfigurierbar (Standard: FB1 → 4001 ; FB2 → 4002 ; FB3 → 4003)
-* - Abschlusszeichen
+* - Terminierungszeichen
   - CHR(13) - Carriage Return
 * - Datenformat
-  - ASCII-Zeichenkette
+  - ASCII-String
 * - Timeout
   - Konfigurierbar (Standard: 5000 ms)
 * - Encoding
@@ -27,9 +27,9 @@ FlexiVision One kommuniziert mit dem Roboter über das **TCP/IP**-Protokoll in e
 
 ## Verfügbare Befehle
 
-Das System unterstützt die folgenden Befehle über Textzeichenketten, die über die TCP/IP-Verbindung gesendet werden:
+Das System unterstützt die folgenden Befehle über Textstrings, die über die TCP/IP-Verbindung gesendet werden:
 
-### Rezeptverwaltung
+### *Rezeptverwaltung*
 
 ```{list-table}
 :header-rows: 1
@@ -39,14 +39,14 @@ Das System unterstützt die folgenden Befehle über Textzeichenketten, die über
   - Aktion
   - Rückgabewert
 * - `set_Recipe=nome_ricetta`
-  - Lädt die Rezeptur, die dem angegebenen "nome_ricetta" entspricht
-  - Keiner
+  - Lädt das Rezept, das dem angegebenen „nome_ricetta“ entspricht
+  - Keine
 * - `get_Recipe`
-  - Gibt den Namen der aktuell geladenen Rezeptur zurück
+  - Gibt den Namen des aktuell geladenen Rezepts zurück
   - `nome_ricetta`
 ```
 
-### Lokalisierungsbefehle
+### *Befehle zur Lokalisierung*
 
 ```{list-table}
 :header-rows: 1
@@ -56,23 +56,23 @@ Das System unterstützt die folgenden Befehle über Textzeichenketten, die über
   - Aktion
   - Rückgabewert
 * - `start_Locator`
-  - Startet den Prozess zur Lokalisierung der Teile. Wenn keine entnehmbaren Teile vorhanden sind, wird automatisch die FlexiBowl-Bewegungsroutine aufgerufen.
+  - Startet den Prozess zur Lokalisierung der Teile. Wenn keine aufnehmbaren Teile vorhanden sind, ruft automatisch die Bewegungsroutine des FlexiBowl® auf.
   - `Pattern_n;x;y;r` / `Hopper;signalnumber;time`
 * - `stop_Locator`
   - Stoppt den Lokalisierungsprozess
-  - Keiner
+  - Keine
 * - `turn_Locator`
-  - Wenn kein Teil entnommen wurde, dreht er den FlexiBowl und startet die Suche erneut
+  - Wenn keine Teile aufgenommen wurden dreht der FlexiBowl® und startet die Suche neu
   - `Pattern_n;x;y;r`
 * - `test_Locator`
-  - Startet die Lokalisierung ohne Aktivierung des FlexiBowl (nur Bildaufnahme)
-  - `Pattern_n;x;y;r`/ Keiner
+  - Startet die Lokalisierung ohne Aktivierung des FlexiBowl® (nur Bildaufnahme)
+  - `Pattern_n;x;y;r`/ Keine
 * - `state_Locator`
-  - Gibt den Diagnosestatus des Locators zurück
+  - Gibt den Diagnosestatus des Lokalisierers zurück
   - `Locator is Running` / `Locator is in Error` / `Locator is not Running`
 ```
 
-### FlexiBowl-Befehle
+### *FlexiBowl®-Befehle*
 
 ```{list-table}
 :header-rows: 1
@@ -82,22 +82,22 @@ Das System unterstützt die folgenden Befehle über Textzeichenketten, die über
   - Aktion
   - Rückgabewert
 * - `start_Empty`
-  - Startet die Schnellleerungssequenz (Quick-Emptying) des FlexiBowl
+  - Startet die Schnellentleerungssequenz (Quick-Emptying) des FlexiBowl®
   - `start_Empty ended`
 ```
 
 
-### Optionale Hopper-Signale
+### *Signale des optionalen Trichters*
 
 ```{note}
-Wenn der Hopper aktiviert werden muss, erhalten wir die Zeichenkette: `"Hopper;signalnumber;time"`
+Wenn der Trichter aktiviert werden soll, erhalten wir die Zeichenfolge: `"Hopper;signalnumber;time"`
 
 ```
 
 
 
-Für detaillierte Informationen zur physischen Installation und zu den elektrischen Anschlüssen fahren Sie mit den folgenden Abschnitten fort:
-- [Berechnung des optimalen Kameraabstands](05_Calcolo_distanza_ottimale.md)
+Ausführliche Informationen zur Installation und zum elektrischen Anschluss finden Sie in den folgenden Abschnitten:
+- [Berechnung des optimalen Arbeitsabstands der Kamera](05_Calcolo_distanza_ottimale.md)
 - [Mechanische Installation](../INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.md)
 - [Verkabelung und Anschlüsse](../INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.md)
 
