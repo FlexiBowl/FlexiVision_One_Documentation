@@ -23,7 +23,7 @@ Il sistema FlexiVision One utilizza telecamere ad alta risoluzione con interfacc
 * - **Caratteristica**
   - **Specifiche**
 * - Modello
-  - CAM-CIC-5000-20G-1
+  - GM002035
 * - Pixel Effettivi
   - 5 MP 12448 × 2048
 * - SNR

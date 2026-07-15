@@ -23,7 +23,7 @@ The FlexiVision One system uses high-resolution cameras with a Gigabit Ethernet 
 * - **Feature**
   - **Specifications**
 * - Model
-  - CAM-CIC-5000-20G-1
+  - GM002035
 * - Effective Pixels
   - 5 MP 12448 × 2048
 * - SNR

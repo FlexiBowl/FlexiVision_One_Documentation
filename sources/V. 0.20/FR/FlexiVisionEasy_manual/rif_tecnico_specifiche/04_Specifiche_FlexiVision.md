@@ -23,7 +23,7 @@ Le système FlexiVision One utilise des caméras à haute résolution avec une i
 * - **Caractéristique**
   - **Spécifications**
 * - Modèle
-  - CAM-CIC-5000-20G-1
+  - GM002035
 * - Pixels effectifs
   - 5 MP 12448 × 2048
 * - SNR

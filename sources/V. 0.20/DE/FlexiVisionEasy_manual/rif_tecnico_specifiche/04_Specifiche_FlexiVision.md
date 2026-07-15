@@ -23,7 +23,7 @@ Das FlexiVision One-System verwendet hochauflösende Kameras mit Gigabit-Etherne
 * - **Merkmal**
   - **Spezifikationen**
 * - Modell
-  - CAM-CIC-5000-20G-1
+  - GM002035
 * - Effektive Pixel
   - 5 MP 12448 × 2048
 * - SNR
