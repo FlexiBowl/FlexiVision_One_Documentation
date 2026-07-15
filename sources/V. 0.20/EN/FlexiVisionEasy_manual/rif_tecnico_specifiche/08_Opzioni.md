@@ -1336,38 +1336,20 @@ Calibration, when using an ARS calibration grid, must be performed using the bac
 
 ### *When to use each colour*
 
-````{list-table}
-   :widths: 20 50 30
-   :header-rows: 1
+```{list-table}
+:widths: 30 70
+:header-rows: 1
 
 * - Colour / Wavelength
   - Recommended use
-  - Examples
 * - **White**
   - Used with transparent components. The cell needs to be shielded against any external light source and sunlight.
-  - ```{image} ../../../../_shared/media/images/WHITELIGHT1.png
-      :width: 120px
-    ```
-    ```{figure} ../../../../_shared/media/images/WHITELIGHT2.png
-      :width: 120px
-    ```
 * - **Red (630 nm)**
   - Used for special metal components. Wavelength: 630 nm. The cell needs to be shielded against any external light source and sunlight.
-  - ```{image} ../../../../_shared/media/images/REDLIGHT1.png
-      :width: 120px
-    ```
-    ```{figure} ../../../../_shared/media/images/REDLIGHT2.png
-      :width: 120px
-    ```
 * - **Infrared (850 nm)**
   - Preferred for most types of applications. It is not visible to the human eye. Wavelength: 850 nm. We recommend shielding the cell to avoid interference with sunlight.
-  - ```{image} ../../../../_shared/media/images/INFRARED1.png
-      :width: 120px
-    ```
-    ```{figure} ../../../../_shared/media/images/INFRARED2.png
-      :width: 120px
-    ```
-````
+```
+
 For more information on Ambient Light Shielding, visit the [Ambient Light Shielding](luce_ambientale) section.
 
 

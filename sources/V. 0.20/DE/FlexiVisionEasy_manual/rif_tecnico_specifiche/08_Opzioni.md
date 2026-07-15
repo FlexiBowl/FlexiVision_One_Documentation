@@ -1336,38 +1336,20 @@ Bei Verwendung eines Kalibrierungsgitters von ARS muss die Kalibrierung mit dem 
 
 ### *Wann wird welche Farbe verwendet?*
 
-````{list-table}
-   :widths: 20 50 30
-   :header-rows: 1
+```{list-table}
+:widths: 30 70
+:header-rows: 1
 
 * - Farbe / Wellenlänge
   - Empfohlene Verwendung
-  - Beispiele
 * - **Weiß**
   - Wird bei transparenten Teilen verwendet. Die Zelle muss vor jeglicher externen Lichtquelle und vor Sonnenlicht abgeschirmt werden.
-  - ```{image} ../../../../_shared/media/images/WHITELIGHT1.png
-      :width: 120px
-    ```
-    ```{figure} ../../../../_shared/media/images/WHITELIGHT2.png
-      :width: 120px
-    ```
 * - **Rot (630 nm)**
   - Wird für spezielle Metallteile verwendet. Wellenlänge: 630 nm. Die Zelle muss vor jeglicher externen Lichtquelle und vor Sonnenlicht abgeschirmt werden.
-  - ```{image} ../../../../_shared/media/images/REDLIGHT1.png
-      :width: 120px
-    ```
-    ```{figure} ../../../../_shared/media/images/REDLIGHT2.png
-      :width: 120px
-    ```
 * - **Infrarot (850 nm)**
   - Wird für die meisten Anwendungsarten bevorzugt. Für das menschliche Auge nicht sichtbar. Wellenlänge: 850 nm. Es wird empfohlen, die Zelle abzuschirmen, um Störungen durch Sonnenlicht zu vermeiden.
-  - ```{image} ../../../../_shared/media/images/INFRARED1.png
-      :width: 120px
-    ```
-    ```{figure} ../../../../_shared/media/images/INFRARED2.png
-      :width: 120px
-    ```
-````
+```
+
 Weitere Informationen zur Abschirmung von Umgebungslicht finden Sie im Abschnitt [Abschirmung gegen Umgebungslicht](luce_ambientale).
 
 

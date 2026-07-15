@@ -86,7 +86,7 @@
 (cablaggio_illuminatore)=
 ## Cableado del iluminador
 
-![Pin Toplight](../../../../_shared/media/images/pin_toplight.png)
+![Pin Toplight](../../../../_shared/media/images/pin_toplight1.png)
 
 ```{list-table} 
 :header-rows: 1

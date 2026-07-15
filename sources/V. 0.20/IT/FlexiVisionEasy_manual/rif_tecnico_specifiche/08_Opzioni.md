@@ -1336,38 +1336,19 @@ La calibrazione, quando si utilizza una griglia di calibrazione ARS, dev'essere 
 
 ### *Quando usare ciascun colore*
 
-````{list-table}
-   :widths: 20 50 30
-   :header-rows: 1
+```{list-table}
+:widths: 30 70
+:header-rows: 1
 
 * - Colore / Lunghezza d'onda
   - Utilizzo consigliato
-  - Esempi
 * - **Bianco**
   - Utilizzato con componenti trasparenti. È necessario schermare la cella da qualsiasi fonte di luce esterna e dalla luce solare.
-  - ```{image} ../../../../_shared/media/images/WHITELIGHT1.png
-      :width: 120px
-    ```
-    ```{figure} ../../../../_shared/media/images/WHITELIGHT2.png
-      :width: 120px
-    ```
 * - **Rosso (630 nm)**
   - Utilizzato per componenti metallici speciali. Lunghezza d'onda: 630 nm. È necessario schermare la cella da qualsiasi fonte di luce esterna e dalla luce solare.
-  - ```{image} ../../../../_shared/media/images/REDLIGHT1.png
-      :width: 120px
-    ```
-    ```{figure} ../../../../_shared/media/images/REDLIGHT2.png
-      :width: 120px
-    ```
 * - **Infrarosso (850 nm)**
   - Preferito per la maggior parte dei tipi di applicazioni. Non è visibile all'occhio umano. Lunghezza d'onda: 850 nm. Si consiglia di schermare la cella per evitare interferenze con la luce solare.
-  - ```{image} ../../../../_shared/media/images/INFRARED1.png
-      :width: 120px
-    ```
-    ```{figure} ../../../../_shared/media/images/INFRARED2.png
-      :width: 120px
-    ```
-````
+```
 Per maggiori Informazioni sulla Schermatura della Luce Ambientale visitare la sezione [Schermatura Luce Ambientale](luce_ambientale).
 
 

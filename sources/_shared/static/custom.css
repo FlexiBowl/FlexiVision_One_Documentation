@@ -261,4 +261,48 @@ html[data-theme="dark"] .only-light { display: none !important; }
     }
 }
 
+/* Stile base condiviso da tutte le lingue */
+[class*="plugin-card-"] {
+  cursor: help;
+  position: relative;
+}
 
+[class*="plugin-card-"]:hover::after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  z-index: 10;
+  margin-bottom: 6px;
+}
+
+/* Italiano */
+.plugin-card-it:hover::after {
+  content: "Per ottenere questo plugin, contatta service@arsautomation.com";
+}
+
+/* English */
+.plugin-card-en:hover::after {
+  content: "To get this plugin, please contact service@arsautomation.com";
+}
+
+/* Deutsch */
+.plugin-card-de:hover::after {
+  content: "Um dieses Plugin zu erhalten, kontaktieren Sie service@arsautomation.com";
+}
+
+/* Español */
+.plugin-card-es:hover::after {
+  content: "Para obtener este plugin, contacte a service@arsautomation.com";
+}
+
+/* Français */
+.plugin-card-fr:hover::after {
+  content: "Pour obtenir ce plugin, contactez service@arsautomation.com";
+}

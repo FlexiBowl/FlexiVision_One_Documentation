@@ -1336,38 +1336,20 @@ L'étalonnage, lors de l'utilisation d'une grille d'étalonnage ARS, doit être 
 
 ### *Quand utiliser chaque couleur*
 
-````{list-table}
-   :widths: 20 50 30
-   :header-rows: 1
+```{list-table}
+:widths: 30 70
+:header-rows: 1
 
 * - Couleur / Longueur d'onde
   - Utilisation recommandée
-  - Exemples
 * - **Blanc**
   - Utilisé avec des composants transparents. Il est nécessaire de protéger la cellule de toute source de lumière extérieure et de la lumière du soleil.
-  - ```{image} ../../../../_shared/media/images/WHITELIGHT1.png
-      :width: 120px
-    ```
-    ```{figure} ../../../../_shared/media/images/WHITELIGHT2.png
-      :width: 120px
-    ```
 * - **Rouge (630 nm)**
   - Utilisé pour les composants métalliques spéciaux. Longueur d'onde : 630 nm. Il est nécessaire de protéger la cellule de toute source de lumière extérieure et de la lumière du soleil.
-  - ```{image} ../../../../_shared/media/images/REDLIGHT1.png
-      :width: 120px
-    ```
-    ```{figure} ../../../../_shared/media/images/REDLIGHT2.png
-      :width: 120px
-    ```
 * - **Infrarouge (850 nm)**
   - Préféré pour la plupart des types d'applications. Il n'est pas visible à l'œil nu. Longueur d'onde : 850 nm. Nous recommandons de protéger la cellule pour éviter les interférences avec la lumière du soleil.
-  - ```{image} ../../../../_shared/media/images/INFRARED1.png
-      :width: 120px
-    ```
-    ```{figure} ../../../../_shared/media/images/INFRARED2.png
-      :width: 120px
-    ```
-````
+
+```
 Pour plus d'informations sur la protection contre la lumière ambiante, consultez la section [Blindage contre la lumière ambiante](luce_ambientale).
 
 

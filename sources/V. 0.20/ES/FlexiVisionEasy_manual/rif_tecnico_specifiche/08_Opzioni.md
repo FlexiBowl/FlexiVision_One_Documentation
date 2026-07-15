@@ -1336,38 +1336,20 @@ La calibración, cuando se utiliza una rejilla de calibración ARS, debe realiza
 
 ### *Cuándo utilizar cada color*
 
-````{list-table}
-   :widths: 20 50 30
-   :header-rows: 1
+```{list-table}
+:widths: 30 70
+:header-rows: 1
 
 * - Color / Longitud de onda
   - Uso recomendado
-  - Ejemplos
 * - **Blanco**
   - Se utiliza con componentes transparentes. Es necesario proteger la célula de cualquier fuente de luz externa y de la luz solar.
-  - ```{image} ../../../../_shared/media/images/WHITELIGHT1.png
-      :width: 120px
-    ```
-    ```{figure} ../../../../_shared/media/images/WHITELIGHT2.png
-      :width: 120px
-    ```
 * - **Rojo (630 nm)**
   - Se utiliza para componentes metálicos especiales. Longitud de onda: 630 nm. Es necesario proteger la célula de cualquier fuente de luz externa y de la luz solar.
-  - ```{image} ../../../../_shared/media/images/REDLIGHT1.png
-      :width: 120px
-    ```
-    ```{figure} ../../../../_shared/media/images/REDLIGHT2.png
-      :width: 120px
-    ```
 * - **Infrarrojo (850 nm)**
   - Preferido para la mayoría de los tipos de aplicaciones. No es visible para el ojo humano. Longitud de onda: 850 nm. Recomendamos apantallar la célula para evitar interferencias con la luz solar.
-  - ```{image} ../../../../_shared/media/images/INFRARED1.png
-      :width: 120px
-    ```
-    ```{figure} ../../../../_shared/media/images/INFRARED2.png
-      :width: 120px
-    ```
-````
+
+```
 Para más información sobre el apantallamiento de la luz ambiente, visite la sección [Apantallamiento de la luz ambiente](luce_ambientale).
 
 
