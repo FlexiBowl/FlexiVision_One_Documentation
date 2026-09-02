@@ -25,6 +25,7 @@ PRINT_FULL_MANUAL_HTML_NAME = "print_full_manual.html"
 OFFLINE_MANUAL_ZIP_NAME = "Offline manual.zip"
 LEGACY_OFFLINE_MANUAL_ZIP_NAME = "client_site_bundle.zip"
 SHARED_BUILD_MEDIA_ROOT = Path("_shared") / "media"
+MANUAL_COVERAGE_FILE = Path("_data") / "manual_coverage.json"
 VIDEO_FILE_EXTENSIONS = {".mp4", ".mov", ".webm", ".m4v", ".ogv"}
 VIDEO_RECOMPRESSION_CRF = 30
 VIDEO_RECOMPRESSION_PRESET = "slow"
@@ -709,6 +710,105 @@ def language_display_name(code: str) -> str:
     return labels.get(normalized, normalized)
 
 
+def first_string_field(payload: dict[object, object], keys: tuple[str, ...], context: str) -> str:
+    for key in keys:
+        if key not in payload:
+            continue
+        value = payload[key]
+        if value is None:
+            continue
+        if not isinstance(value, str):
+            raise ValueError(f"Invalid {key} for {context}: expected a string.")
+        value = value.strip()
+        if value:
+            return value
+    return ""
+
+
+def first_present_field(payload: dict[object, object], keys: tuple[str, ...]) -> object:
+    for key in keys:
+        if key in payload:
+            return payload[key]
+    return []
+
+
+def normalize_coverage_versions(raw_versions: object, version: str) -> list[dict[str, str]]:
+    if raw_versions is None:
+        values = []
+    elif isinstance(raw_versions, (str, dict)):
+        values = [raw_versions]
+    elif isinstance(raw_versions, list):
+        values = raw_versions
+    else:
+        raise ValueError(f"Invalid coverage entry for '{version}': expected a string, object, or list.")
+
+    normalized_versions = []
+    for value in values:
+        if isinstance(value, str):
+            label = value.strip()
+            publication_date = ""
+            href = ""
+        elif isinstance(value, dict):
+            context = f"coverage entry for '{version}'"
+            label = first_string_field(value, ("version", "label", "name"), context)
+            publication_date = first_string_field(value, ("publication_date", "published", "date"), context)
+            href = first_string_field(value, ("href", "url", "link"), context)
+        else:
+            raise ValueError(f"Invalid coverage entry for '{version}': expected only string or object values.")
+
+        if label:
+            normalized_versions.append(
+                {
+                    "version": label,
+                    "publication_date": publication_date,
+                    "href": href,
+                }
+            )
+    return normalized_versions
+
+
+def normalize_manual_coverage_entry(raw_entry: object, version: str) -> dict[str, object]:
+    if isinstance(raw_entry, dict):
+        context = f"manual version '{version}'"
+        publication_date = first_string_field(raw_entry, ("publication_date", "published", "date"), context)
+        href = first_string_field(raw_entry, ("href", "url", "link"), context)
+        raw_versions = first_present_field(
+            raw_entry,
+            ("flexivision_versions", "flexivision_one_versions", "covered_versions", "coverage", "versions"),
+        )
+    else:
+        publication_date = ""
+        href = ""
+        raw_versions = raw_entry
+
+    return {
+        "publication_date": publication_date,
+        "href": href,
+        "covered_versions": normalize_coverage_versions(raw_versions, version),
+    }
+
+
+def load_manual_coverage(source_root: Path) -> dict[str, dict[str, object]]:
+    coverage_path = source_root / MANUAL_COVERAGE_FILE
+    if not coverage_path.exists():
+        return {}
+
+    payload = json.loads(coverage_path.read_text(encoding="utf-8"))
+    if not isinstance(payload, dict):
+        raise ValueError(f"{coverage_path} must contain a JSON object.")
+
+    entries = payload.get("versions", payload)
+    if not isinstance(entries, dict):
+        raise ValueError(f"{coverage_path} must contain a 'versions' object.")
+
+    coverage_by_version = {}
+    for version, raw_versions in entries.items():
+        if not isinstance(version, str):
+            raise ValueError(f"{coverage_path} contains a non-string manual version key.")
+        coverage_by_version[version] = normalize_manual_coverage_entry(raw_versions, version)
+    return coverage_by_version
+
+
 def build_catalog(build_root: Path) -> list[tuple[str, list[str]]]:
     versions = sorted(
         [path.name for path in build_root.iterdir() if path.is_dir() and not path.name.startswith("_")],
@@ -747,10 +847,12 @@ def create_root_landing_page(build_root: Path, source_root: Path) -> None:
     catalog = build_catalog(build_root)
     if not catalog:
         return
+    coverage_by_version = load_manual_coverage(source_root)
 
     latest_version, latest_languages = catalog[0]
     default_language = "EN" if "EN" in latest_languages else latest_languages[0]
-    latest_href = f"./{quote(latest_version)}/{quote(default_language)}/index.html"
+    latest_metadata = coverage_by_version.get(latest_version, {})
+    latest_href = str(latest_metadata.get("href") or f"./{quote(latest_version)}/{quote(default_language)}/index.html")
 
     asset_dir = build_root / "_assets" / "landing"
     asset_dir.mkdir(parents=True, exist_ok=True)
@@ -790,6 +892,58 @@ def create_root_landing_page(build_root: Path, source_root: Path) -> None:
     for index, (version, languages) in enumerate(catalog):
         is_latest = index == 0
         badge = '<span class="version-badge">Latest release</span>' if is_latest else ""
+        metadata = coverage_by_version.get(version, {})
+        version_publication_date = str(metadata.get("publication_date") or "")
+        version_default_language = "EN" if "EN" in languages else languages[0]
+        version_href = str(metadata.get("href") or f"./{quote(version)}/{quote(version_default_language)}/index.html")
+        version_title = (
+            f'<a class="version-title-link" href="{escape(version_href, quote=True)}">'
+            f"{escape(version)}</a>"
+        )
+        publication_line = (
+            f'      <p class="version-date">Published: <span>{escape(version_publication_date)}</span></p>'
+            if version_publication_date
+            else ""
+        )
+        covered_versions = metadata.get("covered_versions", [])
+        coverage_panel = ""
+        if covered_versions:
+            coverage_chips = []
+            for covered_version in covered_versions:
+                if not isinstance(covered_version, dict):
+                    continue
+                covered_label = str(covered_version.get("version") or "")
+                if not covered_label:
+                    continue
+                covered_publication_date = str(covered_version.get("publication_date") or "")
+                covered_href = str(covered_version.get("href") or version_href)
+                covered_content = [f'      <span class="coverage-chip-version">{escape(covered_label)}</span>']
+                if covered_publication_date:
+                    covered_content.append(
+                        f'      <span class="coverage-chip-date">Published: {escape(covered_publication_date)}</span>'
+                    )
+                coverage_tag = "a" if covered_href else "span"
+                href_attribute = f' href="{escape(covered_href, quote=True)}"' if covered_href else ""
+                coverage_chips.append(
+                    "\n".join(
+                        [
+                            f'    <{coverage_tag} class="coverage-chip"{href_attribute}>',
+                            *covered_content,
+                            f"    </{coverage_tag}>",
+                        ]
+                    )
+                )
+            coverage_chip_markup = "\n".join(coverage_chips)
+            coverage_panel = "\n".join(
+                [
+                    '  <div class="coverage-panel">',
+                    '    <p class="coverage-label">FlexiVision One versions covered</p>',
+                    '    <div class="coverage-list">',
+                    coverage_chip_markup,
+                    '    </div>',
+                    '  </div>',
+                ]
+            )
         language_links = []
         for language in languages:
             href = f"./{quote(version)}/{quote(language)}/index.html"
@@ -812,11 +966,13 @@ def create_root_landing_page(build_root: Path, source_root: Path) -> None:
                     '  <div class="version-top">',
                     '    <div>',
                     f'      <p class="version-kicker">Documentation release</p>',
-                    f'      <h2>{escape(version)}</h2>',
+                    f"      <h2>{version_title}</h2>",
+                    publication_line,
                     '    </div>',
                     f'    {badge}' if badge else "",
                     '  </div>',
                     f'  <p class="version-copy">{len(languages)} language{"s" if len(languages) != 1 else ""} available for this release.</p>',
+                    coverage_panel,
                     '  <div class="language-grid">',
                     *language_links,
                     '  </div>',
@@ -1083,6 +1239,30 @@ def create_root_landing_page(build_root: Path, source_root: Path) -> None:
             "      font-size: 2rem;",
             "      letter-spacing: -0.04em;",
             "    }",
+            "    .version-title-link {",
+            "      color: inherit;",
+            "      text-decoration: none;",
+            "      border-bottom: 2px solid rgba(57, 54, 212, 0.22);",
+            "      overflow-wrap: anywhere;",
+            "      transition: color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;",
+            "    }",
+            "    .version-title-link:hover {",
+            "      color: var(--ars-blue);",
+            "      border-bottom-color: currentColor;",
+            "    }",
+            "    .version-card.latest .version-title-link {",
+            "      border-bottom-color: rgba(255, 255, 255, 0.28);",
+            "    }",
+            "    .version-card.latest .version-title-link:hover {",
+            "      color: var(--ars-white);",
+            "      opacity: 0.82;",
+            "    }",
+            "    .version-date {",
+            "      margin: 8px 0 0;",
+            "      font-size: 0.9rem;",
+            "      color: inherit;",
+            "      opacity: 0.74;",
+            "    }",
             "    .version-badge {",
             "      padding: 8px 12px;",
             "      border-radius: 999px;",
@@ -1099,6 +1279,60 @@ def create_root_landing_page(build_root: Path, source_root: Path) -> None:
             "      line-height: 1.6;",
             "      color: inherit;",
             "      opacity: 0.82;",
+            "    }",
+            "    .coverage-panel {",
+            "      padding: 12px 14px;",
+            "      border-radius: 16px;",
+            "      border: 1px solid rgba(17, 13, 68, 0.1);",
+            "      background: rgba(246, 248, 255, 0.72);",
+            "    }",
+            "    .version-card.latest .coverage-panel {",
+            "      border-color: rgba(255, 255, 255, 0.16);",
+            "      background: rgba(255, 255, 255, 0.08);",
+            "    }",
+            "    .coverage-label {",
+            "      margin: 0 0 8px;",
+            "      font-size: 0.78rem;",
+            "      font-weight: 800;",
+            "      letter-spacing: 0.08em;",
+            "      text-transform: uppercase;",
+            "      opacity: 0.72;",
+            "    }",
+            "    .coverage-list {",
+            "      display: flex;",
+            "      flex-wrap: wrap;",
+            "      gap: 8px;",
+            "    }",
+            "    .coverage-chip {",
+            "      display: inline-flex;",
+            "      align-items: center;",
+            "      gap: 8px;",
+            "      flex-wrap: wrap;",
+            "      min-height: 28px;",
+            "      padding: 5px 10px;",
+            "      border-radius: 999px;",
+            "      background: rgba(57, 54, 212, 0.1);",
+            "      color: var(--ars-steel);",
+            "      font-size: 0.84rem;",
+            "      font-weight: 700;",
+            "      text-decoration: none;",
+            "      transition: transform 0.2s ease, background 0.2s ease;",
+            "    }",
+            "    a.coverage-chip:hover {",
+            "      transform: translateY(-1px);",
+            "      background: rgba(57, 54, 212, 0.16);",
+            "    }",
+            "    .version-card.latest .coverage-chip {",
+            "      background: rgba(255, 255, 255, 0.14);",
+            "      color: var(--ars-white);",
+            "    }",
+            "    .version-card.latest a.coverage-chip:hover {",
+            "      background: rgba(255, 255, 255, 0.22);",
+            "    }",
+            "    .coverage-chip-date {",
+            "      opacity: 0.68;",
+            "      font-size: 0.78rem;",
+            "      font-weight: 600;",
             "    }",
             "    .language-grid {",
             "      display: flex;",
@@ -1183,7 +1417,7 @@ def create_root_landing_page(build_root: Path, source_root: Path) -> None:
             "        <h1>Choose your version and language.</h1>",
             "        <p>Browse the FlexiVision One documentation by release and language from a single landing page. The newest versions are always listed first, and every destination opens directly to the manual home page.</p>",
             '        <div class="hero-actions">',
-            f'          <a class="primary-cta" href="{latest_href}">Open latest release</a>',
+            f'          <a class="primary-cta" href="{escape(latest_href, quote=True)}">Open latest release</a>',
             '          <a class="secondary-cta" href="#versions">Browse all versions</a>',
             "        </div>",
             '        <div class="stat-ribbon">',
@@ -1204,7 +1438,7 @@ def create_root_landing_page(build_root: Path, source_root: Path) -> None:
             '      <div class="section-header">',
             "        <div>",
             "          <h2>Available releases</h2>",
-            "          <p>Select a documentation release, then choose the language you want to open. Newer versions are shown first.</p>",
+            "          <p>Select a documentation release, check which FlexiVision One versions it covers, then choose the language you want to open.</p>",
             "        </div>",
             "      </div>",
             '      <div class="version-grid">',
