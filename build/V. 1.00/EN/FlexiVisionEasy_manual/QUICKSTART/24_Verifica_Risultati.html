@@ -1,0 +1,1764 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Application Monitoring: Dashboard &#8212; FlexiVision One Manual</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_shared/static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../_shared/static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/custom.css?v=35b65340" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../../_shared/static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_shared/static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../_shared/static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../../_shared/static/documentation_options.js?v=a681ed88"></script>
+    <script src="../../../../_shared/static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../../_shared/static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../../_shared/static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_shared/static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_shared/static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../../../../_shared/static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'FlexiVisionEasy_manual/QUICKSTART/24_Verifica_Risultati';</script>
+    <script src="../../../../_shared/static/custom.js?v=2acd42a9"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="What it is and When it is needed" href="../EXPERT/32_Expert.html" />
+    <link rel="prev" title="Robot Pick Calibration" href="Nuovo_Modello/21_RobotPick.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../../../_shared/static/logo.png" class="logo__image only-light" alt="FlexiVision One Manual - Home"/>
+    <img src="../../../../_shared/static/logo_dark.png" class="logo__image only-dark pst-js-only" alt="FlexiVision One Manual - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">BEFORE STARTING</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01_informazioni_preliminari.html"><strong>Preliminary Information</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02_informazioni_sicurezza.html"><strong>Safety Information</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03_Unboxing_Contenuto.html"><strong>Unboxing and Contents of the Box</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../27_Support.html"><strong>Support and Contacts</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../27b_Glossario.html"><strong>Glossary</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TECHNICAL REFERENCE AND SPECIFICATIONS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rif_tecnico_specifiche/04_Specifiche_FlexiVision.html"><strong>FlexiVision One Detailed Specifications</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rif_tecnico_specifiche/04b_Protocolli_Comunicazione.html"><strong>Robot-Vision Communication Protocol</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rif_tecnico_specifiche/05_Calcolo_distanza_ottimale.html"><strong>Optimal Working Distance Calculation</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rif_tecnico_specifiche/integrazione_software/06_PlugIn.html"><strong>PlugIn</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rif_tecnico_specifiche/integrazione_software/07_Backup_management.html"><strong>Backup Management</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rif_tecnico_specifiche/08_Opzioni.html"><strong>Options</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SYSTEM INSTALLATION</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.html"><strong>Mechanical System Installation</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.html"><strong>Wiring and Connections</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">INTERFACE OVERVIEW</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../PANORAMICA_INTERFACCIA/12a_Home.html"><strong>Home Page</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../PANORAMICA_INTERFACCIA/12c_Dashboard.html"><strong>Dashboard Page</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../PANORAMICA_INTERFACCIA/12b_Recipes.html"><strong>Recipes Page</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../PANORAMICA_INTERFACCIA/12d_Setup.html"><strong>Setup Page</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../PANORAMICA_INTERFACCIA/12e_TastiInfo.html"><strong>INFO buttons</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">QUICKSTART</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="SETUP/13_setup.html"><strong>Initial System Configuration</strong></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="SETUP/13d_Camera_Setup.html"><strong>Camera Setup</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="SETUP/14_calibrazione_camera.html"><strong>Camera and Robot Calibration</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="SETUP/13a_FB_Setup.html"><strong>FlexiBowl® Setup</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="SETUP/13b_Hopper_Setup.html"><strong>Hopper Setup</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="SETUP/13c_Robot_Setup.html"><strong>Robot Setup</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="SETUP/15_Protocol_Setup.html"><strong>Protocol Setup</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="SETUP/15b_SaveRecipe.html"><strong>Save the recipe</strong></a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Nuovo_Modello/16_Nuovo_modello.html"><strong>Creating Recipes and Models - Overview</strong></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Nuovo_Modello/17_NuovaRicetta.html"><strong>Creating a New Recipe</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Nuovo_Modello/18_NuovoModello.html"><strong>Creating a New Model</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Nuovo_Modello/19_ROI_TEST.html"><strong>ROI Definition and Tolerances</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="Nuovo_Modello/20_Istogrammi.html"><strong>Clearances</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Nuovo_Modello/21_RobotPick.html"><strong>Robot Pick Calibration</strong></a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Application Monitoring: Dashboard</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">EXPERT</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../EXPERT/32_Expert.html"><strong>What it is and When it is needed</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">MIX APPLICATIONS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../APPLICAZIONI_MIX/28_Panoramica_Mix.html"><strong>Mix Application Overview</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../APPLICAZIONI_MIX/29_Comandi_Mix.html"><strong>Mix Application Commands</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">MULTI-DEVICE CONFIGURATIONS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../CONFIGURAZIONI_MULTI-DISPOSITIVO/30_2FB2CAM.html"><strong>2 FlexiBowl® and 2 Cameras</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../CONFIGURAZIONI_MULTI-DISPOSITIVO/31_3FB3CAM.html"><strong>3 FlexiBowl® and 3 Cameras</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">WARRANTY</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../25_Garanzia.html"><strong>Warranty</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TROUBLESHOOTING</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../TROUBLESHOOTING/26_trb_shooting_guide.html"><strong>Troubleshooting</strong></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26b_Installazione_Mecc.html"><strong>Mechanical Installation</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26c_Cablaggio_Connessioni.html"><strong>Wiring and Connections</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26d_Conf_Iniziale.html"><strong>Initial Setup</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26g_Creazione_Ricette_Modelli.html"><strong>Creating Recipes and models</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26h_FlexiBowl_Wizard.html"><strong>FlexiBowl Wizard</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26i_Conf_Tramoggia.html"><strong>Hopper Configuration</strong></a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">APPENDICI</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../APPENDICI/Release_Notes.html">Release Notes</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/FlexiVisionEasy_manual/QUICKSTART/24_Verifica_Risultati.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Application Monitoring: Dashboard</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interface-overview">Interface Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operational-control-commands-and-execution-status">Operational Control - Commands and execution status</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vision-analysis">Vision Analysis</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#detected-vision-parts"><em>Detected Vision Parts</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#detected-models-table"><em>Detected Models Table</em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-and-performance-indicators">State and Performance Indicators</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connectivity"><em>Connectivity</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-analysis"><em>Time Analysis</em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphical-analysis">Graphical Analysis</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parts-per-minute-ppm"><em>1. Parts Per Minute (PPM)</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fill-hopper"><em>2. Fill Hopper</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vision-flexibowl-robot-comparative-chart"><em>3. Vision - FlexiBowl® - Robot (Comparative Chart)</em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quality-monitoring-critical-indicators-to-be-monitored">Quality Monitoring - Critical Indicators to be monitored</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#production-monitoring-best-practices">Production Monitoring Best Practices</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#daily-checks"><em>Daily checks</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-report"><em>Performance report</em></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="application-monitoring-dashboard">
+<span id="dashboard"></span><h1><strong>Application Monitoring: Dashboard</strong><a class="headerlink" href="#application-monitoring-dashboard" title="Link to this heading">#</a></h1>
+<p>The <strong>Dashboard</strong> is the main interface for real-time monitoring of the FlexiVision One system. On this page you can check process efficiency, analyse cycle times, validate component identification and identify any bottlenecks in the system.</p>
+<hr class="docutils" />
+<section id="interface-overview">
+<h2>Interface Overview<a class="headerlink" href="#interface-overview" title="Link to this heading">#</a></h2>
+<p>The Dashboard interface is divided into four main sections:
+<img alt="Dashboard Page" src="../../../../_shared/media/images/pagina_dashboard.png" /></p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#controllooperativo"><span class="std std-ref"><strong>Operational Control</strong></span></a>: Execution commands and status</p></li>
+<li><p><a class="reference internal" href="#analisivisione"><span class="std std-ref"><strong>Vision Analysis</strong></span></a>: Display of detected parts and details</p></li>
+<li><p><a class="reference internal" href="#indicatoriperformance"><span class="std std-ref"><strong>Performance Indicators</strong></span></a>: Connectivity and cycle times</p></li>
+<li><p><a class="reference internal" href="#analisigrafica"><span class="std std-ref"><strong>Graphical Analysis</strong></span></a>: Productivity and time log charts</p></li>
+</ol>
+<hr class="docutils" />
+</section>
+<section id="operational-control-commands-and-execution-status">
+<span id="controllooperativo"></span><h2>Operational Control - Commands and execution status<a class="headerlink" href="#operational-control-commands-and-execution-status" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Element</p></th>
+<th class="head"><p>Description and Function</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>In Run</strong></p></td>
+<td><p>Status indicator showing whether the system is currently running.<br />
+<strong>Green</strong> 🟢: System on and operational.<br />
+<strong>Red</strong> 🔴: System stopped or paused.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>In Run Time</strong></p></td>
+<td><p>This displays the total system uptime since application start-up.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>FlexiBowl® selection</strong></p></td>
+<td><p>Drop-down menu to select the specific FlexiBowl® to be monitored.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Test Locator</strong></p></td>
+<td><p>It takes a picture of the vision area and starts the identification of the components present.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Test Locator</strong>
+Useful to:</p>
+<ul class="simple">
+<li><p>Verify that the components are actually identified by the vision system</p></li>
+<li><p>If there is a collision between robot and component and I want to check the reliability of the clearances</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+</section>
+<section id="vision-analysis">
+<span id="analisivisione"></span><h2>Vision Analysis<a class="headerlink" href="#vision-analysis" title="Link to this heading">#</a></h2>
+<p>The data for the components identified by the vision system are displayed in the centre of the dashboard.</p>
+<section id="detected-vision-parts">
+<h3><em>Detected Vision Parts</em><a class="headerlink" href="#detected-vision-parts" title="Link to this heading">#</a></h3>
+<p><strong>Detected Vision Parts</strong> shows:</p>
+<ul class="simple">
+<li><p>Image captured in real time by the camera</p></li>
+<li><p>A <strong>log chart</strong> of detections over the last 30 seconds showing the trend in the number of parts identified per capture.</p></li>
+</ul>
+</section>
+<section id="detected-models-table">
+<h3><em>Detected Models Table</em><a class="headerlink" href="#detected-models-table" title="Link to this heading">#</a></h3>
+<p><strong>Detail of identified components</strong></p>
+<p>The table below the image lists all components in the pick area with the following parameters:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 20.0%" />
+<col style="width: 65.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Data Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Id</strong></p></td>
+<td><p>Integer</p></td>
+<td><p>Progressive unambiguous component identifier (0, 1, 2, …).
+Id 0 = component with the highest score (best match to the model if sorted with Score Descending as recommended).</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>X</strong></p></td>
+<td><p>Millimetres</p></td>
+<td><p>X coordinate of the component.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Y</strong></p></td>
+<td><p>Millimetres</p></td>
+<td><p>Y coordinate of the component.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Rot (Rotation)</strong></p></td>
+<td><p>Degrees</p></td>
+<td><p>Angle of rotation of the component.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Score</strong></p></td>
+<td><p>Percentage</p></td>
+<td><p>Percentage value (0.00-1.00 or 0%-100%) expressing the degree of identification reliability. It represents closeness/fidelity to the reference model. Higher score = better match.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pst-scrollable-table-container"><table class="table" id="id1">
+<caption><span class="caption-text"><strong>Score Interpretation</strong></span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><strong>Score &gt; 0.90 (90%)</strong>:</p></td>
+<td><ul class="simple">
+<li><p>Excellent match to model</p></li>
+<li><p>High confidence picking</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Score 0.80-0.90 (80-90%)</strong>:</p></td>
+<td><ul class="simple">
+<li><p>Good match</p></li>
+<li><p>Safe picking if Accept Threshold is configured appropriately</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Score 0.70-0.80 (70-80%)</strong>:</p></td>
+<td><ul class="simple">
+<li><p>Acceptable match</p></li>
+<li><p>Check consistency over time</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Score &lt; 0.70 (&lt; 70%)</strong>:</p></td>
+<td><ul class="simple">
+<li><p>Poor match</p></li>
+<li><p>If recurring, review model or Accept Threshold.</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+</section>
+</section>
+<section id="state-and-performance-indicators">
+<span id="indicatoriperformance"></span><h2>State and Performance Indicators<a class="headerlink" href="#state-and-performance-indicators" title="Link to this heading">#</a></h2>
+<section id="connectivity">
+<h3><em>Connectivity</em><a class="headerlink" href="#connectivity" title="Link to this heading">#</a></h3>
+<p>Communication with external devices status indicators:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Indicator</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>FlexiBowl®</strong></p></td>
+<td><p>Status of the hardware connection between the VisionController (PC) and FlexiBowl®.<br />
+<strong>Green</strong>: Connected and communicating.<br />
+<strong>Red</strong>: Disconnected or communication error.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Robot</strong></p></td>
+<td><p>Status of communication with the robot.<br />
+<strong>Green</strong>: TCP/IP connection established.<br />
+<strong>Red</strong>: Disconnected or communication timeout.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Actions in case of disconnection</strong></p>
+<p><strong>FlexiBowl® red</strong>:</p>
+<ul class="simple">
+<li><p>Check Ethernet cable FlexiBowl® → VisionController</p></li>
+<li><p>Check FlexiBowl® power supply</p></li>
+<li><p>Check FlexiBowl® IP in FlexiBowl® Setup</p></li>
+<li><p>Try reconnect or software reboot</p></li>
+</ul>
+<p><strong>Robot red</strong>:</p>
+<ul class="simple">
+<li><p>Check Ethernet cable Robot → VisionController</p></li>
+<li><p>Check that robot has open TCP/IP connection</p></li>
+<li><p>Check TCP/IP port in Robot Setup</p></li>
+<li><p>Check robot program (IP address of VisionController and Port inserted correctly in robot setup section )</p></li>
+</ul>
+<p>In production, both indicators must always be green.</p>
+</div>
+</section>
+<section id="time-analysis">
+<h3><em>Time Analysis</em><a class="headerlink" href="#time-analysis" title="Link to this heading">#</a></h3>
+<p>The system provides a detailed breakdown of cycle times to identify possible bottlenecks and optimise the process.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 35.0%" />
+<col style="width: 65.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Time Entry</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Camera Processing Time</strong></p></td>
+<td><p>Time taken to capture the image from the camera sensor. This includes exposure time and data transfer.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Locator Processing Time</strong></p></td>
+<td><p>Time required by the vision algorithm to locate and identify components in the captured image. It depends on: number of active models, complexity of models, number of clearances.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Total Vision Processing</strong></p></td>
+<td><p>Sum of Camera and Locator times. It represents the total time it takes for the vision system to process an image and send the co-ordinate(s).</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Total FlexiBowl® Time</strong></p></td>
+<td><p>Time taken by the FlexiBowl® to perform a complete handling sequence.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Total Robot Time</strong></p></td>
+<td><p>Estimated or detected time for the complete Pick &amp; Place operation of the robot. It includes: approach → pick → place → return.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Total Processing Time</strong></p></td>
+<td><p>Total time of complete cycle (Vision + FlexiBowl® + Robot). It represents the time from the start of one cycle to the start of the next one. It determines the theoretical maximum productivity (PPM).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Time interpretation for optimisation</strong></p>
+<p>The time chart allows the <strong>bottleneck</strong> of the system to be identified:</p>
+<p><strong>If Total Vision Processing is the highest</strong>:</p>
+<ul class="simple">
+<li><p>Too many active models → Disable unnecessary models</p></li>
+<li><p>Models too complex → Simplify with higher Score Threshold</p></li>
+<li><p>Too many clearances → Reduce number or size of clearances</p></li>
+<li><p>Camera Processing high → Reduce exposure time</p></li>
+</ul>
+<p><strong>If Total FlexiBowl® Time is the highest</strong>:</p>
+<ul class="simple">
+<li><p>Too many pauses → Optimise Flip/Move synchronisation and reduce stabilisation pause (Pause X ms)</p></li>
+<li><p>Movement sequence too slow → Increase speed in Config FlexiBowl®</p></li>
+<li><p>Excessive rotation angle → Reduce Move Angle</p></li>
+<li><p>Shake too long → Increase SHAKE speed and reduce SHAKE cycles</p></li>
+</ul>
+<p><strong>If Total Robot Time is the highest</strong>:</p>
+<ul class="simple">
+<li><p>Robot path not optimised → Optimise robot path planning</p></li>
+<li><p>Robot speed too low → Increase movement speed (if safe)</p></li>
+<li><p>Place distance too long → Reposition place point closer</p></li>
+<li><p>Pick times too long → Optimise gripper opening/closing</p></li>
+</ul>
+<p><strong>Optimisation target</strong>: Balance the three times to reduce overall Total Processing Time.</p>
+</div>
+<hr class="docutils" />
+</section>
+</section>
+<section id="graphical-analysis">
+<span id="analisigrafica"></span><h2>Graphical Analysis<a class="headerlink" href="#graphical-analysis" title="Link to this heading">#</a></h2>
+<p>The charts at the bottom of the dashboard provide a predictive and diagnostic analysis of system performance over time.</p>
+<section id="parts-per-minute-ppm">
+<h3><em>1. Parts Per Minute (PPM)</em><a class="headerlink" href="#parts-per-minute-ppm" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>Productivity chart</strong></p></td>
+<td><p>Shows the average productivity of the system expressed in <strong>components picked per minute</strong> (Parts Per Minute).</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Features</strong>:</p></td>
+<td><ul class="simple">
+<li><p>X-axis: Time</p></li>
+<li><p>Y-axis: PPM (parts per minute)</p></li>
+<li><p>Trend line: Mobile mean to identify trends</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Use</strong>:</p></td>
+<td><ul class="simple">
+<li><p>Monitor productivity stability over time</p></li>
+<li><p>Identify performance degradations</p></li>
+<li><p>Calculate actual vs. theoretical throughput</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id2">
+<caption><span class="caption-text"><strong>PPM Interpretation</strong></span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><strong>Constant and stable PPM</strong>:</p></td>
+<td><p>✓ System configured properly<br />
+✓ Optimised parameters<br />
+✓ No critical bottlenecks</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>PPM progressively decreasing</strong>:</p></td>
+<td><p>⚠️ Possible component wear (FlexiBowl® grip surface)<br />
+⚠️ Hopper emptying<br />
+⚠️ Dirt buildup on camera/lighting</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>PPM with large fluctuations</strong>:</p></td>
+<td><p>⚠️ Instability in the process<br />
+⚠️ Intermittent identification problems<br />
+⚠️ External interference (vibrations, variable light)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Corrective actions</strong>:</p></td>
+<td><ul class="simple">
+<li><p>Analyse correlation with time charts</p></li>
+<li><p>Identify which component (Vision/FlexiBowl®/Robot) causes variations</p></li>
+<li><p>Intervene on specific parameters</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="fill-hopper">
+<h3><em>2. Fill Hopper</em><a class="headerlink" href="#fill-hopper" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>Hopper activation chart</strong></p></td>
+<td><p>Represents the log of the unloading pulses sent to the hopper.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Features</strong>:</p></td>
+<td><ul class="simple">
+<li><p>X-axis: Time</p></li>
+<li><p>Y-axis: Hopper Activations (events)</p></li>
+<li><p>Peaks: Each peak represents an unload activation</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Use</strong>:</p></td>
+<td><ul class="simple">
+<li><p>Check effectiveness of Hopper configuration</p></li>
+<li><p>Identify anomalies in unloading behaviour</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id3">
+<caption><span class="caption-text"><strong>Fill Hopper Pattern Analysis</strong></span><a class="headerlink" href="#id3" title="Link to this table">#</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><strong>Regular and constant activations</strong>:</p></td>
+<td><p>✓ Optimal Hopper Configuration<br />
+✓ Stable and foreseeable flow of parts<br />
+✓ Calculated autonomy (e.g. activation every 10 minutes)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Ever more frequent activations</strong>:</p></td>
+<td><p>⚠️ Hopper is emptying (fewer parts = more activations to maintain level)<br />
+⚠️ Insufficient unloading time due to reduced volume<br />
+<strong>Action</strong>: Plan Hopper recharge soon</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>No activation for a long time</strong>:</p></td>
+<td><p>⚠️ Robot stopped or slowed down (parts not consumed)<br />
+⚠️ Possible system problem that does not require parts<br />
+<strong>Action</strong>: Check production status</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Very close activations (bursts)</strong>:</p></td>
+<td><p>⚠️ Hopper threshold not configured properly (too high)<br />
+⚠️ Insufficient steps (parts do not arrive on time)<br />
+<strong>Action</strong>: Review Hopper Config</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="vision-flexibowl-robot-comparative-chart">
+<h3><em>3. Vision - FlexiBowl® - Robot (Comparative Chart)</em><a class="headerlink" href="#vision-flexibowl-robot-comparative-chart" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>Overlapping time chart</strong></p></td>
+<td><p>A three-line comparison graph that overlaps the timing of individual processes over time.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Use</strong>:</p></td>
+<td><ul class="simple">
+<li><p>Instantly identify which process most affects the total cycle time and how it changes over time.</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="quality-monitoring-critical-indicators-to-be-monitored">
+<h2>Quality Monitoring - Critical Indicators to be monitored<a class="headerlink" href="#quality-monitoring-critical-indicators-to-be-monitored" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>Component Score</strong></p></td>
+<td><p>Make sure that the <strong>Score</strong> of the detected components is constantly above the tolerance threshold (Accept Threshold) set during model configuration.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Score Monitoring</strong>:</p></td>
+<td><ul class="simple">
+<li><p>Periodically check Detected Models table</p></li>
+<li><p>Check that typical scores are 0.85-0.95</p></li>
+<li><p>Investigate if scores regularly drop below 0.80</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Gradually decreasing scores</strong>:</p></td>
+<td><p>⚠️ Real parts different from training (production variations)<br />
+⚠️ Lighting changed (weaker backlight, dirt)<br />
+⚠️ Camera no longer focused (vibration, blows)<br />
+⚠️ FlexiBowl® surface dirty (interfering pattern)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Corrective Actions</strong>:</p></td>
+<td><ul class="simple">
+<li><p>Clean camera, lighting, FlexiBowl® surface</p></li>
+<li><p>Check camera focus</p></li>
+<li><p>Consider re-training model if parts have changed</p></li>
+<li><p>Reduce Accept Threshold if scores are still reliable but lower</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="production-monitoring-best-practices">
+<h2>Production Monitoring Best Practices<a class="headerlink" href="#production-monitoring-best-practices" title="Link to this heading">#</a></h2>
+<section id="daily-checks">
+<h3><em>Daily checks</em><a class="headerlink" href="#daily-checks" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>At the start of production</strong> (5 minutes):</p></td>
+<td><ul class="simple">
+<li><p>Check FlexiBowl® and Robot connectivity indicators (green)</p></li>
+<li><p>Check that the initial cycles show normal scores (&gt;0.85)</p></li>
+<li><p>Observe that PPM stabilises at the expected value</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>During production</strong> (check every 1-2 hours):</p></td>
+<td><ul class="simple">
+<li><p>Take a look at PPM to check stability</p></li>
+<li><p>Check Fill Hopper to predict necessary refill</p></li>
+<li><p>Check the log for errors or warnings</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>At end of shift</strong> (2 minutes):</p></td>
+<td><ul class="simple">
+<li><p>Take note of average PPM of the shift</p></li>
+<li><p>Check number of times Hopper activated</p></li>
+<li><p>Check for any anomalies or events</p></li>
+<li><p>Compare with previous day’s data</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This minimum routine ensures quick identification of problems and maintains performance traceability.</p>
+</section>
+<section id="performance-report">
+<h3><em>Performance report</em><a class="headerlink" href="#performance-report" title="Link to this heading">#</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Key metrics to be tracked</strong>
+To evaluate performance over time, track:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>Daily</strong>:</p></td>
+<td><ul class="simple">
+<li><p>Average PPM of the shift</p></li>
+<li><p>Total number of parts picked</p></li>
+<li><p>Number of Hopper activations</p></li>
+<li><p>Total downtime (and causes)</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Weekly</strong>:</p></td>
+<td><ul class="simple">
+<li><p>PPM trend (increasing/decreasing?)</p></li>
+<li><p>Theoretical vs. real PPM comparison</p></li>
+<li><p>Average score of detected components</p></li>
+<li><p>Any configuration changes and their impact</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Monthly</strong>:</p></td>
+<td><ul class="simple">
+<li><p>Overall Equipment Effectiveness (OEE)</p></li>
+<li><p>Analysis of main bottlenecks</p></li>
+<li><p>Need for predictive maintenance</p></li>
+<li><p>ROI of the system</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This data enables continuous optimisation and justifies investment in improvements.</p>
+</div>
+<hr class="docutils" />
+<div style="border: 2px solid #0d6efd; border-radius: 12px; padding: 2rem; margin: 1.5rem 0; background-color: #f0f6ff; display: flex; align-items: flex-start; gap: 2rem;">
+  <div style="flex: 1; min-width: 0;">
+    <div style="font-size: 1.2rem; font-weight: 700; color: #0d6efd; margin-bottom: 0.5rem;"> The system is now operational!</div>
+    <div style="font-size: 0.95rem; color: #444; line-height: 1.6;">Congratulations! The FlexiVision One system is now fully configured, optimised and validated for production.</div>
+  </div>
+  <div style="flex: 1.4; background: white; border-radius: 8px; padding: 1.2rem 1.5rem; border: 1px solid #d0e4ff; font-size: 0.88rem; color: #333; line-height: 1.8;">
+    <div style="font-weight: 600; margin-bottom: 0.5rem;">Summary of completed process:</div>
+    <div>✓ Hardware setup (FlexiBowl®, Robot, Camera)</div>
+    <div>✓ Complete calibration (Camera, Robot)</div>
+    <div>✓ FlexiBowl® configured for optimal handling</div>
+    <div>✓ Hopper configured for automatic feeding (if present)</div>
+    <div>✓ Part models created and optimised</div>
+    <div>✓ Validated system with Dashboard monitoring</div>
+    <div>✓ Verified and stable performance</div>
+    <div style="margin-top: 0.8rem; font-style: italic; color: #555;">The system is ready to operate in production with minimal supervision.</div>
+  </div>
+  <div style="flex: 0.7; display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.9rem;">
+    <div style="color: #555; font-weight: 600;">Latest useful tools:</div>
+    <a href="../TROUBLESHOOTING/26_trb_shooting_guide.html" style="display: block; padding: 0.6rem 1rem; background: #0d6efd; color: white; border-radius: 6px; text-decoration: none; font-weight: 500;"> Troubleshooting</a>
+    <div style="font-size: 0.82rem; color: #555; margin-top: -0.4rem; padding-left: 0.3rem;">Troubleshooting guide for common problems</div>
+    <a href="../27_Support.html" style="display: block; padding: 0.6rem 1rem; background: #0d6efd; color: white; border-radius: 6px; text-decoration: none; font-weight: 500;"> Support</a>
+    <div style="font-size: 0.82rem; color: #555; margin-top: -0.4rem; padding-left: 0.3rem;">Technical support contacts</div>
+  </div>
+</div><br>
+<!-- Versions and languages set-up -->
+<style>
+  .fixed-bar {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(240, 240, 240, 0.85);
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    border-radius: 6px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
+    color: #222;
+    display: flex;
+    gap: 12px;
+    padding: 6px 12px;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: saturate(180%) blur(10px);
+  }
+
+  @media print {
+    .fixed-bar {
+      display: none !important;
+    }
+  }
+
+  .fixed-bar .dropdown {
+    position: relative;
+    user-select: none;
+  }
+
+  .fixed-bar .dropdown-toggle {
+    background-color: rgba(200, 200, 200, 0.4);
+    color: #222;
+    padding: 6px 10px;
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+  }
+
+  .fixed-bar .dropdown-toggle::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .fixed-bar .dropdown-toggle:hover {
+    background-color: rgba(100, 150, 220, 0.2);
+    color: #1a3e72;
+    border-color: rgba(26, 62, 114, 0.6);
+  }
+
+  .fixed-bar .dropdown-toggle .fa {
+    font-size: 0.9rem;
+  }
+
+  .fixed-bar .dropdown-menu {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background-color: rgba(250, 250, 250, 0.95);
+    border: 1px solid rgba(150, 150, 150, 0.3);
+    border-radius: 4px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    min-width: 140px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    flex-direction: column;
+    z-index: 10000;
+    backdrop-filter: saturate(180%) blur(8px);
+  }
+
+  .fixed-bar .dropdown-menu.show {
+    display: flex;
+  }
+
+  .fixed-bar .dropdown-menu a {
+    padding: 8px 12px;
+    color: #1a3e72;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+    white-space: nowrap;
+    transition: background-color 0.25s ease;
+  }
+
+  .fixed-bar .dropdown-menu a:last-child {
+    border-bottom: none;
+  }
+
+  .fixed-bar .dropdown-menu a:hover {
+    background-color: rgba(100, 150, 220, 0.15);
+  }
+
+  .dropdown-download-buttons .btn__icon-container svg {
+    width: 1em;
+    height: 1em;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vertical-align: middle;
+  }
+
+  a.headerlink.manual-heading-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.2em;
+    text-decoration: none;
+    color: #7b8493;
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+
+  a.headerlink.manual-heading-action svg {
+    width: 0.8em;
+    height: 0.8em;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vertical-align: middle;
+  }
+
+  a.headerlink.manual-feedback-link:hover,
+  a.headerlink.manual-feedback-link:focus-visible {
+    color: #2563eb;
+  }
+
+  a.headerlink.manual-service-link:hover,
+  a.headerlink.manual-service-link:focus-visible {
+    color: #d97706;
+  }
+</style>
+<div class="fixed-bar" role="region" aria-label="Version and language selector">
+  <div class="dropdown" data-selector="version">
+    <div class="dropdown-toggle" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
+      Version: <span class="current-value">V. 1.00</span>
+      <span class="caret-icon" aria-hidden="true">&#9662;</span>
+    </div>
+    <div class="dropdown-menu" role="listbox">
+      	<a href="#" role="option">V. 1.00</a>
+				<a href="#" role="option">V. 1.01</a>
+    </div>
+  </div>
+  <div class="dropdown" data-selector="language">
+    <div class="dropdown-toggle" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
+      Language: <span class="current-value">EN</span>
+      <span class="caret-icon" aria-hidden="true">&#9662;</span>
+    </div>
+    <div class="dropdown-menu" role="listbox">
+      	<a href="#" role="option">DE</a>
+				<a href="#" role="option">EN</a>
+				<a href="#" role="option">ES</a>
+				<a href="#" role="option">FR</a>
+				<a href="#" role="option">IT</a>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    const bar = document.querySelector('.fixed-bar');
+    if (!bar) {
+      return;
+    }
+
+    const inlineVersions = ["V. 1.00", "V. 1.01"];
+    const inlineLanguages = ["DE", "EN", "ES", "FR", "IT"];
+    const manifest = window.FV_VERSIONING || null;
+    const versions = Array.isArray(manifest && manifest.versions) && manifest.versions.length
+      ? manifest.versions
+      : inlineVersions;
+    const offlineZipEnabled = false;
+    const offlineZipFileName = 'Offline manual.zip';
+    const americanRegions = new Set([
+      'AG', 'AR', 'AW', 'BB', 'BL', 'BM', 'BO', 'BQ', 'BR', 'BS', 'BZ', 'CA', 'CL', 'CO', 'CR',
+      'CU', 'CW', 'DM', 'DO', 'EC', 'FK', 'GD', 'GF', 'GL', 'GP', 'GT', 'GY', 'HN', 'HT', 'JM',
+      'KN', 'KY', 'LC', 'MF', 'MQ', 'MS', 'MX', 'NI', 'PA', 'PE', 'PM', 'PR', 'PY', 'SR', 'SV',
+      'SX', 'TC', 'TT', 'US', 'UY', 'VC', 'VE', 'VG', 'VI', '419'
+    ]);
+    const additionalAmericanTimeZones = new Set([
+      'Atlantic/Bermuda',
+      'Pacific/Easter',
+      'Pacific/Galapagos',
+      'Pacific/Honolulu',
+      'Pacific/Pitcairn'
+    ]);
+
+    function setCaret(toggle, isOpen) {
+      const caret = toggle.querySelector('.caret-icon');
+      if (caret) {
+        caret.innerHTML = isOpen ? '&#9652;' : '&#9662;';
+      }
+    }
+
+    function closeAllMenus() {
+      bar.querySelectorAll('.dropdown').forEach(dropdown => {
+        const menu = dropdown.querySelector('.dropdown-menu');
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        menu.classList.remove('show');
+        toggle.setAttribute('aria-expanded', 'false');
+        setCaret(toggle, false);
+      });
+    }
+
+    function getLanguagesForVersion(version) {
+      const manifestLanguages = manifest &&
+        manifest.languagesByVersion &&
+        Array.isArray(manifest.languagesByVersion[version]) &&
+        manifest.languagesByVersion[version].length
+          ? manifest.languagesByVersion[version]
+          : null;
+
+      if (manifestLanguages) {
+        return manifestLanguages;
+      }
+
+      return inlineLanguages;
+    }
+
+    function getDefaultLanguageForVersion(version) {
+      const manifestDefault = manifest &&
+        manifest.defaultLanguageByVersion &&
+        typeof manifest.defaultLanguageByVersion[version] === 'string'
+          ? manifest.defaultLanguageByVersion[version]
+          : '';
+
+      if (manifestDefault) {
+        return manifestDefault;
+      }
+
+      const availableLanguages = getLanguagesForVersion(version);
+      return availableLanguages.length ? availableLanguages[0] : (inlineLanguages[0] || '');
+    }
+
+    function populateSelectorMenu(selector, values) {
+      const menu = bar.querySelector(`[data-selector="${selector}"] .dropdown-menu`);
+      if (!menu) {
+        return;
+      }
+
+      menu.innerHTML = '';
+      values.forEach(value => {
+        const link = document.createElement('a');
+        link.href = '#';
+        link.setAttribute('role', 'option');
+        link.textContent = value;
+        menu.appendChild(link);
+      });
+    }
+
+    function getNavigationContext() {
+      const currentUrl = new URL(window.location.href);
+      const rawSegments = currentUrl.pathname.split('/').filter(Boolean);
+      const decodedSegments = rawSegments.map(segment => decodeURIComponent(segment));
+      const currentVersionLabel = bar.querySelector('[data-selector="version"] .current-value');
+      const currentLanguageLabel = bar.querySelector('[data-selector="language"] .current-value');
+      const fallbackVersion = currentVersionLabel ? currentVersionLabel.textContent.trim() : '';
+      const versionIndex = decodedSegments.findIndex(segment => versions.includes(segment));
+      const currentVersion = versionIndex !== -1 ? decodedSegments[versionIndex] : fallbackVersion;
+      const availableLanguages = getLanguagesForVersion(currentVersion);
+      const fallbackLanguage = currentLanguageLabel ? currentLanguageLabel.textContent.trim() : '';
+      const languageIndex = decodedSegments.findIndex(
+        (segment, index) => index > versionIndex && availableLanguages.includes(segment)
+      );
+
+      return {
+        currentUrl: currentUrl,
+        rawSegments: rawSegments,
+        versionIndex: versionIndex,
+        currentVersion: currentVersion,
+        currentLanguage: languageIndex !== -1 ? decodedSegments[languageIndex] : fallbackLanguage
+      };
+    }
+
+    function refreshNavigationMenus() {
+      const context = getNavigationContext();
+      const resolvedVersion = versions.includes(context.currentVersion) ? context.currentVersion : (versions[0] || context.currentVersion);
+      const availableLanguages = getLanguagesForVersion(resolvedVersion);
+      const resolvedLanguage = availableLanguages.includes(context.currentLanguage)
+        ? context.currentLanguage
+        : (getDefaultLanguageForVersion(resolvedVersion) || context.currentLanguage);
+
+      populateSelectorMenu('version', versions);
+      populateSelectorMenu('language', availableLanguages);
+
+      const versionLabel = bar.querySelector('[data-selector="version"] .current-value');
+      const languageLabel = bar.querySelector('[data-selector="language"] .current-value');
+      if (versionLabel) {
+        versionLabel.textContent = resolvedVersion;
+      }
+      if (languageLabel) {
+        languageLabel.textContent = resolvedLanguage;
+      }
+    }
+
+    function buildScopedUrl(targetVersion, targetLanguage, pageName) {
+      const context = getNavigationContext();
+      const rootSegments = context.versionIndex !== -1 ? context.rawSegments.slice(0, context.versionIndex) : [];
+      const targetPath = '/' + rootSegments.concat([
+        encodeURIComponent(targetVersion),
+        encodeURIComponent(targetLanguage),
+        encodeURIComponent(pageName)
+      ]).join('/');
+
+      if (context.currentUrl.protocol === 'file:') {
+        return 'file://' + targetPath;
+      }
+
+      return context.currentUrl.origin + targetPath;
+    }
+
+    function buildTargetUrl(targetVersion, targetLanguage) {
+      return buildScopedUrl(targetVersion, targetLanguage, 'index.html');
+    }
+
+    function buildSiteRootAssetUrl(fileName) {
+      const context = getNavigationContext();
+      const rootSegments = context.versionIndex !== -1 ? context.rawSegments.slice(0, context.versionIndex) : [];
+      const targetPath = '/' + rootSegments.concat([encodeURIComponent(fileName)]).join('/');
+
+      if (context.currentUrl.protocol === 'file:') {
+        return 'file://' + targetPath;
+      }
+
+      return context.currentUrl.origin + targetPath;
+    }
+
+    function buildClientSiteZipUrl() {
+      return buildSiteRootAssetUrl(offlineZipFileName);
+    }
+
+    function getHeadingText(heading) {
+      const clone = heading.cloneNode(true);
+      clone.querySelectorAll('a.headerlink').forEach(link => link.remove());
+      return clone.textContent.replace(/\s+/g, ' ').trim();
+    }
+
+    function normalizeMailText(text) {
+      return String(text || '').replace(/\u00AE/g, '');
+    }
+
+    function getTimeZoneAmericaDecision() {
+      try {
+        const timeZone = String(Intl.DateTimeFormat().resolvedOptions().timeZone || '').trim();
+        if (!timeZone) {
+          return null;
+        }
+        return timeZone.startsWith('America/') || additionalAmericanTimeZones.has(timeZone);
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function isCoordinateInAmericas(latitude, longitude) {
+      if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) {
+        return null;
+      }
+
+      return latitude >= -60 && latitude <= 85 && longitude >= -170 && longitude <= -25;
+    }
+
+    function getCurrentPosition(options) {
+      return new Promise((resolve, reject) => {
+        if (!navigator.geolocation || typeof navigator.geolocation.getCurrentPosition !== 'function') {
+          reject(new Error('Geolocation unavailable'));
+          return;
+        }
+
+        navigator.geolocation.getCurrentPosition(resolve, reject, options);
+      });
+    }
+
+    async function resolveServiceAddress() {
+      const timeZoneDecision = getTimeZoneAmericaDecision();
+      if (timeZoneDecision === false) {
+        return 'service@arsautomation.com';
+      }
+
+      const canTryGeolocation = Boolean(
+        navigator.onLine &&
+        window.isSecureContext &&
+        navigator.geolocation &&
+        typeof navigator.geolocation.getCurrentPosition === 'function'
+      );
+
+      if (canTryGeolocation) {
+        try {
+          const position = await getCurrentPosition({
+            enableHighAccuracy: false,
+            timeout: 4000,
+            maximumAge: 300000
+          });
+          const inAmericas = isCoordinateInAmericas(position.coords.latitude, position.coords.longitude);
+          if (inAmericas !== null) {
+            return inAmericas ? 'us.service@arsautomation.com' : 'service@arsautomation.com';
+          }
+        } catch (error) {
+        }
+      }
+
+      if (timeZoneDecision === true) {
+        return 'us.service@arsautomation.com';
+      }
+
+      return 'service@arsautomation.com';
+    }
+
+    function buildMailtoUrl(address, subject, body) {
+      return 'mailto:' + address +
+        '?subject=' + encodeURIComponent(normalizeMailText(subject)) +
+        '&body=' + encodeURIComponent(normalizeMailText(body));
+    }
+
+    function createHeadingActionLink(className, title, mailtoUrl, svgMarkup) {
+      const link = document.createElement('a');
+      link.className = 'headerlink manual-heading-action ' + className;
+      link.href = mailtoUrl;
+      link.title = title;
+      link.setAttribute('aria-label', title);
+      link.innerHTML = svgMarkup;
+      return link;
+    }
+
+    function addHeadingActions() {
+      const feedbackIcon = [
+        '<svg viewBox="0 0 16 16" aria-hidden="true">',
+        '<path d="M3 3.5h10v6.5H7.5L4.5 13v-3H3z"></path>',
+        '<path d="M6 6.2h4"></path>',
+        '<path d="M6 8.2h3"></path>',
+        '</svg>'
+      ].join('');
+
+        const serviceIcon = [
+          '<svg viewBox="0 0 16 16" aria-hidden="true">',
+          '<circle cx="8" cy="8" r="5.2"></circle>',
+          '<path d="M6.4 6.1A1.9 1.9 0 0 1 8 5.2c1.1 0 1.9.7 1.9 1.7 0 .8-.4 1.3-1.2 1.8-.6.4-.9.8-.9 1.5"></path>',
+          '<circle cx="8" cy="11.7" r="0.45" style="fill:currentColor;stroke:none"></circle>',
+          '</svg>'
+        ].join('');
+
+      document.querySelectorAll('h1 > a.headerlink, h2 > a.headerlink, h3 > a.headerlink, h4 > a.headerlink, h5 > a.headerlink, h6 > a.headerlink').forEach(link => {
+        const heading = link.parentElement;
+        if (!heading || heading.querySelector('.manual-feedback-link') || heading.querySelector('.manual-service-link')) {
+          return;
+        }
+
+        const sectionTitle = getHeadingText(heading);
+        const sectionUrl = new URL(link.getAttribute('href'), window.location.href).href;
+        const pageUrl = window.location.href.split('#')[0];
+        const feedbackBody = [
+          'Hello Documentation Team,',
+          '',
+          'I would like to suggest an improvement for this section of the manual.',
+          '',
+          'Section: ' + sectionTitle,
+          'Page: ' + pageUrl,
+          'Section link: ' + sectionUrl,
+          '',
+          'Suggestion:',
+          ''
+        ].join('\n');
+          const serviceBody = [
+            'Hello Service Team,',
+            '',
+            'I need support related to this section of the manual.',
+            '',
+            'Section: ' + sectionTitle,
+            'Page: ' + pageUrl,
+            'Section link: ' + sectionUrl,
+            '',
+            'FlexiBowl serial number:',
+            '',
+            'Photos or videos of the issue attached:',
+            '',
+            'Issue description:',
+            ''
+          ].join('\n');
+
+        const feedbackLink = createHeadingActionLink(
+          'manual-feedback-link',
+          'Suggest an improvement for this section',
+          buildMailtoUrl('documentation@arsautomation.com', 'Documentation suggestion: ' + sectionTitle, feedbackBody),
+          feedbackIcon
+        );
+          const serviceLink = createHeadingActionLink(
+            'manual-service-link',
+            'Contact service about this section',
+            '#',
+            serviceIcon
+          );
+          serviceLink.addEventListener('click', async event => {
+            event.preventDefault();
+            const serviceAddress = await resolveServiceAddress();
+            window.location.href = buildMailtoUrl(serviceAddress, 'Service request: ' + sectionTitle, serviceBody);
+          });
+
+          heading.appendChild(feedbackLink);
+          heading.appendChild(serviceLink);
+        });
+    }
+
+    function enhancePrintMenu() {
+      const dropdown = document.querySelector('.dropdown-download-buttons');
+      if (!dropdown || dropdown.dataset.printMenuEnhanced === 'true') {
+        return;
+      }
+
+      dropdown.dataset.printMenuEnhanced = 'true';
+
+      const toggleButton = dropdown.querySelector('.dropdown-toggle');
+      const hasReleaseDownloads = offlineZipEnabled;
+
+      if (toggleButton) {
+        const toggleLabel = hasReleaseDownloads ? 'Export options' : 'Print options';
+        toggleButton.setAttribute('aria-label', toggleLabel);
+        toggleButton.setAttribute('title', toggleLabel);
+        toggleButton.setAttribute('data-bs-original-title', toggleLabel);
+        const toggleIcon = toggleButton.querySelector('i');
+        if (toggleIcon) {
+          toggleIcon.className = hasReleaseDownloads ? 'fas fa-download' : 'fas fa-print';
+        }
+      }
+
+      dropdown.querySelectorAll('.btn-download-source-button').forEach(sourceButton => {
+        const sourceItem = sourceButton.closest('li');
+        if (sourceItem) {
+          sourceItem.remove();
+        }
+      });
+
+      const pagePrintButton = dropdown.querySelector('.btn-download-pdf-button');
+      if (pagePrintButton) {
+        pagePrintButton.setAttribute('title', 'Print this page');
+        pagePrintButton.setAttribute('aria-label', 'Print this page');
+        pagePrintButton.setAttribute('data-bs-original-title', 'Print this page');
+        const textContainer = pagePrintButton.querySelector('.btn__text-container');
+        if (textContainer) {
+          textContainer.textContent = 'Print this page';
+        }
+      }
+
+      const menu = dropdown.querySelector('.dropdown-menu');
+      if (!menu) {
+        return;
+      }
+
+      menu.querySelectorAll('.btn-download-client-site-zip-button').forEach(button => {
+        const item = button.closest('li');
+        if (item) {
+          item.remove();
+        }
+      });
+
+      if (offlineZipEnabled) {
+        const siteZipItem = document.createElement('li');
+        const siteZipLink = document.createElement('a');
+        siteZipLink.className = 'btn btn-sm dropdown-item btn-download-client-site-zip-button';
+        siteZipLink.title = 'Download offline manual';
+        siteZipLink.setAttribute('aria-label', 'Download offline manual');
+        siteZipLink.setAttribute('download', offlineZipFileName);
+        siteZipLink.href = buildClientSiteZipUrl();
+        siteZipLink.innerHTML = [
+          '<span class="btn__icon-container">',
+          '<svg viewBox="0 0 16 16" aria-hidden="true">',
+          '<path d="M4 3.5h8v2.5H4z"></path>',
+          '<path d="M4 6h8v6.5H4z"></path>',
+          '<path d="M8 3.5v9"></path>',
+          '<path d="M6.3 9.2L8 10.9l1.7-1.7"></path>',
+          '</svg>',
+          '</span>',
+          '<span class="btn__text-container">Download offline manual</span>'
+        ].join('');
+        siteZipItem.appendChild(siteZipLink);
+        menu.appendChild(siteZipItem);
+      }
+    }
+
+    refreshNavigationMenus();
+
+    bar.querySelectorAll('.dropdown').forEach(dropdown => {
+      const toggle = dropdown.querySelector('.dropdown-toggle');
+      const menu = dropdown.querySelector('.dropdown-menu');
+      const selector = dropdown.getAttribute('data-selector');
+
+      toggle.addEventListener('click', event => {
+        event.stopPropagation();
+        const willOpen = toggle.getAttribute('aria-expanded') !== 'true';
+        closeAllMenus();
+
+        if (willOpen) {
+          menu.classList.add('show');
+          toggle.setAttribute('aria-expanded', 'true');
+          setCaret(toggle, true);
+        }
+      });
+
+      menu.addEventListener('click', event => {
+        const link = event.target.closest('a');
+        if (!link) {
+          return;
+        }
+
+        event.preventDefault();
+        const selectedValue = link.textContent.trim();
+        const context = getNavigationContext();
+        if (!selectedValue) {
+          return;
+        }
+
+        if (selector === 'version') {
+          const targetVersion = selectedValue;
+          const availableLanguages = getLanguagesForVersion(targetVersion);
+          const targetLanguage = availableLanguages.includes(context.currentLanguage)
+            ? context.currentLanguage
+            : getDefaultLanguageForVersion(targetVersion);
+          if (targetLanguage) {
+            window.location.href = buildTargetUrl(targetVersion, targetLanguage);
+          }
+          return;
+        }
+
+        window.location.href = buildTargetUrl(context.currentVersion, selectedValue);
+      });
+    });
+
+    window.addEventListener('click', closeAllMenus);
+    window.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        closeAllMenus();
+      }
+    });
+
+    addHeadingActions();
+    enhancePrintMenu();
+  })();
+</script>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Nuovo_Modello/21_RobotPick.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>Robot Pick Calibration</strong></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../EXPERT/32_Expert.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>What it is and When it is needed</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interface-overview">Interface Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operational-control-commands-and-execution-status">Operational Control - Commands and execution status</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vision-analysis">Vision Analysis</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#detected-vision-parts"><em>Detected Vision Parts</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#detected-models-table"><em>Detected Models Table</em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-and-performance-indicators">State and Performance Indicators</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connectivity"><em>Connectivity</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-analysis"><em>Time Analysis</em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphical-analysis">Graphical Analysis</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parts-per-minute-ppm"><em>1. Parts Per Minute (PPM)</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fill-hopper"><em>2. Fill Hopper</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vision-flexibowl-robot-comparative-chart"><em>3. Vision - FlexiBowl® - Robot (Comparative Chart)</em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quality-monitoring-critical-indicators-to-be-monitored">Quality Monitoring - Critical Indicators to be monitored</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#production-monitoring-best-practices">Production Monitoring Best Practices</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#daily-checks"><em>Daily checks</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-report"><em>Performance report</em></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By ARS Automation
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, ARS Automation.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../_shared/static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../_shared/static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

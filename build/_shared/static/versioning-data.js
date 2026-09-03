@@ -1,9 +1,17 @@
 window.FV_VERSIONING = {
   "versions": [
-    "V. 0.20"
+    "V. 1.01",
+    "V. 1.00"
   ],
   "languagesByVersion": {
-    "V. 0.20": [
+    "V. 1.01": [
+      "EN",
+      "IT",
+      "FR",
+      "DE",
+      "ES"
+    ],
+    "V. 1.00": [
       "EN",
       "IT",
       "FR",
@@ -12,6 +20,7 @@ window.FV_VERSIONING = {
     ]
   },
   "defaultLanguageByVersion": {
-    "V. 0.20": "IT"
+    "V. 1.01": "IT",
+    "V. 1.00": "IT"
   }
 };

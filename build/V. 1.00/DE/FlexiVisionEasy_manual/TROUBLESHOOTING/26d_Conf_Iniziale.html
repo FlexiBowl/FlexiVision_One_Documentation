@@ -1,0 +1,1805 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Ersteinrichtung &#8212; FlexiVision One Manual</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_shared/static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../_shared/static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/custom.css?v=35b65340" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../../_shared/static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_shared/static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../_shared/static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../../_shared/static/documentation_options.js?v=a681ed88"></script>
+    <script src="../../../../_shared/static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../../_shared/static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../../_shared/static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_shared/static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_shared/static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../../../../_shared/static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'FlexiVisionEasy_manual/TROUBLESHOOTING/26d_Conf_Iniziale';</script>
+    <script src="../../../../_shared/static/custom.js?v=2acd42a9"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Erstellen von Rezepten und Vorlagen" href="26g_Creazione_Ricette_Modelli.html" />
+    <link rel="prev" title="Verkabelung und Anschlüsse" href="26c_Cablaggio_Connessioni.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../../../_shared/static/logo.png" class="logo__image only-light" alt="FlexiVision One Manual - Home"/>
+    <img src="../../../../_shared/static/logo_dark.png" class="logo__image only-dark pst-js-only" alt="FlexiVision One Manual - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">BEVOR SIE ANFANGEN</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01_informazioni_preliminari.html"><strong>Einleitende Informationen</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02_informazioni_sicurezza.html"><strong>Sicherheitshinweise</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03_Unboxing_Contenuto.html"><strong>Auspacken und Inhalt der Box</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../27_Support.html"><strong>Support und Kontakt</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../27b_Glossario.html"><strong>Glossar</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TECHNISCHE HINWEISE UND SPEZIFIKATIONEN</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rif_tecnico_specifiche/04_Specifiche_FlexiVision.html"><strong>Detaillierte technische Daten zum FlexiVision One</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rif_tecnico_specifiche/04b_Protocolli_Comunicazione.html"><strong>Kommunikationsprotokoll zwischen Roboter und Bildverarbeitungssystem</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rif_tecnico_specifiche/05_Calcolo_distanza_ottimale.html"><strong>Berechnung des optimalen Arbeitsabstands</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rif_tecnico_specifiche/integrazione_software/06_PlugIn.html"><strong>PlugIn</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rif_tecnico_specifiche/integrazione_software/07_Backup_management.html"><strong>BackUp Management</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rif_tecnico_specifiche/08_Opzioni.html"><strong>Optionen</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SYSTEMINSTALLATION</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.html"><strong>Mechanische Installation des Systems</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.html"><strong>Verdrahtung und Anschlüsse</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ÜBERSICHT ÜBER DIE BENUTZEROBERFLÄCHE</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../PANORAMICA_INTERFACCIA/12a_Home.html"><strong>Startseite</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../PANORAMICA_INTERFACCIA/12c_Dashboard.html"><strong>DashBoard Seite</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../PANORAMICA_INTERFACCIA/12b_Recipes.html"><strong>Seite Recipes (Rezepte)</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../PANORAMICA_INTERFACCIA/12d_Setup.html"><strong>Setup-Seite</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../PANORAMICA_INTERFACCIA/12e_TastiInfo.html"><strong>INFO-Schaltflächen</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">QUICKSTART</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QUICKSTART/SETUP/13_setup.html"><strong>Erstkonfiguration des Systems</strong></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/SETUP/13d_Camera_Setup.html"><strong>Kamera Setup</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/SETUP/14_calibrazione_camera.html"><strong>Kalibrierung von Kamera und Roboter</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/SETUP/13a_FB_Setup.html"><strong>FlexiBowl® Setup</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/SETUP/13b_Hopper_Setup.html"><strong>Hopper Setup</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/SETUP/13c_Robot_Setup.html"><strong>Roboter Setup</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/SETUP/15_Protocol_Setup.html"><strong>Protocol Setup</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/SETUP/15b_SaveRecipe.html"><strong>Rezept speichern</strong></a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QUICKSTART/Nuovo_Modello/16_Nuovo_modello.html"><strong>Erstellen von Rezepten und Modellen - Überbsicht</strong></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/Nuovo_Modello/17_NuovaRicetta.html"><strong>Ein Neues Rezept erstellen</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/Nuovo_Modello/18_NuovoModello.html"><strong>Ein Neues Modell erstellen</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/Nuovo_Modello/19_ROI_TEST.html"><strong>Definition von ROI und Toleranzen</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/Nuovo_Modello/20_Istogrammi.html"><strong>Die Clearances</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/Nuovo_Modello/21_RobotPick.html"><strong>Robot-Pick-Kalibrierung</strong></a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../QUICKSTART/24_Verifica_Risultati.html"><strong>Anwendungsüberwachung: Dashboard</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">EXPERT</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../EXPERT/32_Expert.html"><strong>Worum es sich handelt und wann es benötigt wird</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">MIX-ANWENDUNGEN</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../APPLICAZIONI_MIX/28_Panoramica_Mix.html"><strong>Überblick über die Mix-Anwendung</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../APPLICAZIONI_MIX/29_Comandi_Mix.html"><strong>Steuerungen Mix-Anwendung</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">MULTI-GERÄTE-KONFIGURATIONEN</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../CONFIGURAZIONI_MULTI-DISPOSITIVO/30_2FB2CAM.html"><strong>2 FlexiBowl® und 2 Kameras</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../CONFIGURAZIONI_MULTI-DISPOSITIVO/31_3FB3CAM.html"><strong>3 FlexiBowl® und 3 Kameras</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FEHLERSUCHE</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="26_trb_shooting_guide.html"><strong>Fehlerbehebung</strong></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="26b_Installazione_Mecc.html"><strong>Mechanische Installation</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="26c_Cablaggio_Connessioni.html"><strong>Verkabelung und Anschlüsse</strong></a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Ersteinrichtung</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="26g_Creazione_Ricette_Modelli.html"><strong>Erstellen von Rezepten und Vorlagen</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="26h_FlexiBowl_Wizard.html"><strong>FlexiBowl Wizard</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="26i_Conf_Tramoggia.html"><strong>Trichter-Konfiguration</strong></a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">APPENDICI</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../APPENDICI/Release_Notes.html">Versionshinweise</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/FlexiVisionEasy_manual/TROUBLESHOOTING/26d_Conf_Iniziale.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ersteinrichtung</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fehlerbehebung-fur-den-abschnitt-kameraeinrichtung">Fehlerbehebung für den Abschnitt Kameraeinrichtung</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konfigurationsverfahren"><em>Konfigurationsverfahren</em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#latency-level-latenzstufe"><em>Latency Level (Latenzstufe)</em></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#packet-size-paketgrosze"><em>Packet Size (Paketgröße)</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kamera-kalibrierung">Kamera-Kalibrierung</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#muster-nicht-erkannt"><em>Muster nicht erkannt</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kalibrierung-immer-bad-oder-acceptable"><em>Kalibrierung immer „Bad“ oder „Acceptable“</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fehler-nach-wechsel-der-beleuchtung"><em>Fehler nach Wechsel der Beleuchtung</em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fehlersuche-fur-den-abschnitt-flexibowl-setup">Fehlersuche für den Abschnitt FlexiBowl® Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fehlersuche-fur-den-abschnitt-trichter-setup">Fehlersuche für den Abschnitt Trichter-Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fehlerbehebung-fur-den-abschnitt-robot-setup">Fehlerbehebung für den Abschnitt Robot Setup</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="ersteinrichtung">
+<h1><strong>Ersteinrichtung</strong><a class="headerlink" href="#ersteinrichtung" title="Link to this heading">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Nicht erreichbare Komponenten</strong></p>
+<p>Wenn FlexiBowl®, Roboter oder Kamera nicht erreichbar sind:</p>
+<ol class="arabic simple">
+<li><p>Überprüfen Sie, ob alle Ethernet-Kabel korrekt angeschlossen sind</p></li>
+<li><p>Überprüfen Sie, ob Switch/Router eingeschaltet sind</p></li>
+<li><p>Überprüfen Sie die IP-Adressen aller Geräte:</p>
+<ul class="simple">
+<li><p>Sie müssen sich im selben Subnetz befinden (z. B.: 192.168.1.x)</p></li>
+<li><p>Es dürfen keine IP-Konflikte vorliegen (zwei Geräte mit derselben IP)</p></li>
+</ul>
+</li>
+<li><p>Verwenden Sie den Befehl <code class="docutils literal notranslate"><span class="pre">ping</span></code> im Terminal, um die Erreichbarkeit zu testen</p></li>
+<li><p>Deaktivieren Sie vorübergehend die Windows-Firewall für den Port/Adapter, der für die GigE-Kameras verwendet wird</p></li>
+</ol>
+<p>Einzelheiten zur Netzwerkkonfiguration finden Sie unter <a class="reference internal" href="../INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.html#cablaggio"><span class="std std-ref">Verkabelung und Anschlüsse</span></a>.</p>
+</div>
+<section id="fehlerbehebung-fur-den-abschnitt-kameraeinrichtung">
+<span id="troubleshooting-cam-setup"></span><h2>Fehlerbehebung für den Abschnitt Kameraeinrichtung<a class="headerlink" href="#fehlerbehebung-fur-den-abschnitt-kameraeinrichtung" title="Link to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Fokussierungsprobleme</strong></p>
+<p>Wenn das Bild unscharf erscheint:</p>
+<ol class="arabic simple">
+<li><p>Prüfen Sie, ob sich die Kamera im richtigen Arbeitsabstand befindet (<a class="reference internal" href="../rif_tecnico_specifiche/05_Calcolo_distanza_ottimale.html"><span class="std std-doc">Calcolo Distanza Ottimale</span></a>)</p></li>
+<li><p>Überprüfen Sie, ob das Objektiv vollständig festgeschraubt ist</p></li>
+<li><p>Vergewissern Sie sich, dass sich kein Schmutz oder Fingerabdrücke auf dem Objektiv befinden</p></li>
+<li><p>Stellen Sie sicher, dass die Kamera genau parallel zur FlexiBowl®-Arbeitsfläche montiert ist</p></li>
+</ol>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Probleme mit der Helligkeit</strong></p>
+<p>Wenn das aufgenommene Bild zu dunkel oder zu hell ist:</p>
+<p><strong>Zu dunkel</strong>:</p>
+<ul class="simple">
+<li><p>Überprüfen Sie, ob Backlight/Toplight eingeschaltet ist (Konfig FlexiBowl®)</p></li>
+<li><p>Erhöhen Sie die Belichtungszeit (Parameter Cam Exposure in [Camera FLB])</p></li>
+</ul>
+<p><strong>Zu hell (überbelichtet)</strong>:</p>
+<ul>
+<li><p>Verringern Sie die Belichtungszeit (Parameter Cam Exposure in [Camera FLB])</p></li>
+<li><p>Vergewissern Sie sich, dass kein übermäßiges Umgebungslicht vorhanden ist</p></li>
+<li><p>Passen Sie die Blendenöffnung im Objektivgehäuse der Kamera an</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Seien Sie beim Umgang mit der Kamera besonders vorsichtig, da bereits eine kleine Verschiebung der Kamera die Zuverlässigkeit der Kalibrierung beeinträchtigen kann, wenn diese bereits durchgeführt wurde</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Aufnahmeleistung</strong></p>
+<p>Wenn die Bildaufnahme langsam ist:</p>
+<ul class="simple">
+<li><p>Überprüfen Sie, ob das Ethernet-Kabel ein Gigabit-Kabel ist (ab Cat6 )</p></li>
+<li><p>Überprüfen Sie, ob der Netzwerk-Switch ein Gigabit-Ethernet-Switch ist (kein Fast-Ethernet-Switch mit 100 Mbit/s)</p></li>
+<li><p>Ändern Sie die Latenzstufe, wenn es keine Probleme mit blauen Bildschirmen gibt</p></li>
+<li><p>Reduzieren Sie die Paketgröße auf 1500-2000</p></li>
+</ul>
+<p>Die maximale Bildrate der Kamera beträgt 24 fps (Bilder pro Sekunde), was für alle standardmäßigen Picking-Anwendungen ausreichend ist.</p>
+</div>
+<section id="konfigurationsverfahren">
+<span id="scelta-camera"></span><h3><em>Konfigurationsverfahren</em><a class="headerlink" href="#konfigurationsverfahren" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>Zugriff auf die Konfiguration</strong></p></td>
+<td><ol class="arabic simple">
+<li><p>Klicken Sie auf die Schaltfläche <strong>Config Camera X</strong> (wobei X die Nummer der Kamera ist)</p></li>
+<li><p>Es öffnet sich die erste Seite des Kalibrierungsassistenten, auf der Sie den Parameter „<strong>Cam Exposure</strong>“ ändern können</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Aktivierung des erweiterten Modus</strong></p></td>
+<td><ol class="arabic simple" start="3">
+<li><p>Klicken Sie auf die Schaltfläche <strong>Expert</strong> (unten rechts)</p></li>
+<li><p>Dieser Modus bietet Zugriff auf alle erweiterten Kameraeinstellungen, die für die Erstkonfiguration erforderlich sind</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Konfiguration des Bildaufnahmegeräts</strong></p></td>
+<td><ol class="arabic simple" start="5">
+<li><p>Klicken Sie im Fenster <strong>Expert</strong> unter <strong>Settings</strong> auf den Abschnitt <strong>Image Acquisition</strong></p></li>
+<li><p>Klicken Sie auf <strong>Image Acquisition Device</strong></p></li>
+<li><p>Es öffnet sich ein Menü zur Auswahl der verfügbaren Aufnahmegeräte</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Spezifische Kamera-Identifikation</strong></p></td>
+<td><ol class="arabic simple" start="8">
+<li><p>Wählen Sie im Gerätemenü die gewünschte Kamera aus</p>
+<ul class="simple">
+<li><p>Suchen Sie in der Liste nach der Seriennummer oder dem Modell der Kamera</p></li>
+<li><p>Beispiel: „CAM-CIC-5000-20G-XXXXX” (wobei XXXXX die Seriennummer ist)</p></li>
+</ul>
+</li>
+<li><p>Klicken Sie auf die Kamera, um sie auszuwählen</p></li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div  class="sphinx-contrib-video-container align-center"><video controls="True" preload="auto" width="100%"><source src="../../../../_shared/media/videos/Step2_calib.mp4" type="video/mp4"></video></div><div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Ermittlung der richtigen Seriennummer</strong></p>
+<p>Wenn mehrere Kameras oder Geräte aufgelistet sind:</p>
+<ul class="simple">
+<li><p>Die Seriennummer befindet sich auf einem Etikett an der Kamera</p></li>
+<li><p>Vergleichen Sie die letzte Zeichengruppe der Seriennummer, um die richtige Kamera zu identifizieren</p></li>
+<li><p>Trennen Sie im Zweifelsfall andere Kameras ab, um die verwendete Kamera zu identifizieren</p></li>
+</ul>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>Auswahl des Videoformats</strong></p></td>
+<td><ol class="arabic simple" start="11">
+<li><p>Klicken Sie auf <strong>Video Formats</strong></p></li>
+<li><p>Wählen Sie aus der Liste der verfügbaren Formate aus <strong>Generic GigEVision</strong></p></li>
+<li><p>Wählen Sie <strong>Mono</strong> (monochrom) als Sensortyp</p></li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Korrektes Format erforderlich</strong></p>
+<p>Wählen Sie unbedingt <strong>Generic GigEVision Mono</strong>:</p>
+<ul class="simple">
+<li><p>Andere Formate funktionieren möglicherweise nicht oder verursachen Fehler</p></li>
+<li><p>Farbformate sind mit dieser Kamera nicht kompatibel</p></li>
+<li><p>Wenn das Format nicht verfügbar ist, fehlen möglicherweise Treiber oder Systemkonfigurationen</p></li>
+</ul>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>Erfassungssystem aktivieren</strong></p></td>
+<td><ol class="arabic simple" start="14">
+<li><p>Nachdem Sie das richtige Format ausgewählt haben, klicken Sie auf „<strong>Initialize Acquisition</strong>“.</p></li>
+<li><p>Warten Sie, bis die Initialisierung abgeschlossen ist (einige Sekunden)</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Funktionsprüfung der Datenerfassung</strong></p></td>
+<td><ol class="arabic simple" start="16">
+<li><p>Suchen Sie die Schaltfläche <strong>Run</strong> oben links in der Benutzeroberfläche (Symbol „Play“)</p></li>
+<li><p>Klicken Sie 5 bis 10 Mal hintereinander auf „<strong>Run</strong>“, um Testbilder aufzunehmen</p></li>
+<li><p>Beachten Sie den Bildanzeigebereich:</p>
+<ul class="simple">
+<li><p>Es sollte die Kameraansicht auf dem FlexiBowl® angezeigt werden</p></li>
+<li><p>Das Bild sollte bei jedem Klick auf „Run“ aktualisiert werden</p></li>
+</ul>
+</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition warning" id="schermo-blu">
+<p class="admonition-title">Warning</p>
+<p><strong>Diagnose vollständig blauer Bildschirm</strong></p>
+<p>Wenn das aufgenommene Bild während des Tests mindestens einmal <strong>komplett blau</strong> erscheint:</p>
+<p><strong>Ursache</strong>: GigE-Kommunikationsproblem (Netzwerklatenz oder suboptimale Paketgröße)</p>
+<p><strong>Lösung</strong>:</p>
+<ol class="arabic simple">
+<li><p>Wählen Sie im oberen Menü <strong>GigE</strong> (oder <strong>GigE Vision Settings</strong>)</p></li>
+<li><p>Ändern Sie die folgenden Parameter:</p>
+<ul class="simple">
+<li><p><strong>Latency Level</strong> (Latenzstufe)</p></li>
+<li><p><strong>Packet Size</strong> (Paketgröße)</p></li>
+</ul>
+</li>
+</ol>
+<p>Fahren Sie mit den folgenden Schritten fort, um diese Parameter optimal zu konfigurieren.</p>
+</div>
+<hr class="docutils" />
+<section id="latency-level-latenzstufe">
+<h4><em>Latency Level (Latenzstufe)</em><a class="headerlink" href="#latency-level-latenzstufe" title="Link to this heading">#</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Einstellung der Latency</strong></p>
+<p>Der Parameter <strong>Latency Level</strong> steuert den Kommunikationspuffer zwischen der Kamera und VisionController.</p>
+<p><strong>Typische Werte</strong>:</p>
+<ul class="simple">
+<li><p>Standardwert: 0</p></li>
+<li><p>Verfügbarer Bereich: 0-3</p></li>
+</ul>
+<p><strong>So nehmen Sie die Einstellung vor:</strong></p>
+<ol class="arabic simple">
+<li><p>Erhöhen Sie den Wert schrittweise</p></li>
+<li><p>Testen Sie nach jeder Änderung die Erfassung (Schaltfläche Run) 5-10 Mal</p></li>
+<li><p>Wenn keine blauen Bildschirme mehr erscheinen, ist der Wert korrekt</p></li>
+<li><p>Wenn weiterhin blaue Bildschirme angezeigt werden, erhöhen Sie den Wert weiter oder versuchen Sie, den Parameter Packet Size zu ändern</p></li>
+</ol>
+</div>
+</section>
+<section id="packet-size-paketgrosze">
+<h4><em>Packet Size (Paketgröße)</em><a class="headerlink" href="#packet-size-paketgrosze" title="Link to this heading">#</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Einstellung des Packet Size</strong></p>
+<p>Der Parameter <strong>Packet Size</strong> definiert die Größe der über das Ethernet-Netzwerk übertragenen Datenpakete.</p>
+<p><strong>Typische Werte</strong>:</p>
+<ul class="simple">
+<li><p>Standardwert: 8164 Bytes</p></li>
+</ul>
+<p><strong>So nehmen Sie die Einstellung vor:</strong></p>
+<ol class="arabic simple">
+<li><p>Schrittweise auf 8000, 7000 usw. verringern.</p></li>
+<li><p>Testen Sie nach jeder Änderung die Erfassung (Schaltfläche Run) 5-10 Mal</p></li>
+<li><p>Wenn keine blauen Bildschirme mehr erscheinen, ist der Wert korrekt</p></li>
+<li><p>Wenn weiterhin blaue Bildschirme angezeigt werden, verringern Sie den Wert weiter oder versuchen Sie, den Parameter Latency Level zu ändern</p></li>
+</ol>
+</div>
+<hr class="docutils" />
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>Abschließende Überprüfung und Speichern</strong></p></td>
+<td><ol class="arabic simple" start="19">
+<li><p>Klicken Sie mindestens 2–3 Mal hintereinander auf „<strong>Run</strong>“</p></li>
+<li><p>Bitte überprüfen Sie Folgendes:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Kein Bild erscheint vollständig blau oder schwarz</p></li>
+<li><p>Die Bilder werden regelmäßig aktualisiert</p></li>
+<li><p>Die Oberfläche der FlexiBowl® ist deutlich sichtbar</p></li>
+<li><p>Die Beleuchtung ist gleichmäßig</p></li>
+</ul>
+<ol class="arabic simple" start="21">
+<li><p>Wenn alle Tests positiv ausfallen, ist die Konfiguration korrekt</p></li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</section>
+<section id="kamera-kalibrierung">
+<span id="troubleshooting-calib-cam"></span><h2>Kamera-Kalibrierung<a class="headerlink" href="#kamera-kalibrierung" title="Link to this heading">#</a></h2>
+<section id="muster-nicht-erkannt">
+<h3><em>Muster nicht erkannt</em><a class="headerlink" href="#muster-nicht-erkannt" title="Link to this heading">#</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Fehler: „Unable to detect calibration pattern“</strong></p>
+<p>Ursache: Die Software kann das Gittermuster nicht erkennen.</p>
+<p><strong>Lösungen</strong>:</p>
+<ul class="simple">
+<li><p>Erhöhen Sie den Kontrast (passen Sie die Belichtung oder Beleuchtung an)</p></li>
+<li><p>Stellen Sie sicher, dass das gesamte Gitter im Bild sichtbar ist</p></li>
+<li><p>Verbessern Sie die Schärfe</p></li>
+<li><p>Reinigen Sie die Oberfläche des Gitters (Staub oder Fingerabdrücke können stören)</p></li>
+<li><p>Überprüfen Sie, dass es sich um das richtige Gitter handelt (Quadrate, keine Kreise oder andere Muster)</p></li>
+</ul>
+</div>
+</section>
+<section id="kalibrierung-immer-bad-oder-acceptable">
+<h3><em>Kalibrierung immer „Bad“ oder „Acceptable“</em><a class="headerlink" href="#kalibrierung-immer-bad-oder-acceptable" title="Link to this heading">#</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Unzureichende Kalibrierungsqualität</strong></p>
+<p>Wenn die Kalibrierung trotz Anpassungen unter „Excellent“ bleibt:</p>
+<ol class="arabic simple">
+<li><p>Überprüfen Sie den Arbeitsabstand zwischen Kamera und FlexiBowl® (er muss dem berechneten Wert entsprechen)</p></li>
+<li><p>Stellen Sie sicher, dass die Kamera parallel zur Ebene des FlexiBowl® ausgerichtet ist (sie muss perfekt horizontal sein)</p></li>
+<li><p>Stellen Sie sicher, dass die Kamera stabil ist (keine Vibrationen während der Aufnahme)</p></li>
+<li><p>Überprüfen Sie, ob das Objektiv vollständig festgeschraubt ist</p></li>
+</ol>
+<p>Wenn das Problem weiterhin besteht, liegt möglicherweise ein mechanisches Problem bei der Montage vor. Siehe <a class="reference internal" href="#09_Installazione_Meccanica.md"><span class="xref myst">Mechanische Installation</span></a> zur Überprüfung.</p>
+</div>
+</section>
+<section id="fehler-nach-wechsel-der-beleuchtung">
+<h3><em>Fehler nach Wechsel der Beleuchtung</em><a class="headerlink" href="#fehler-nach-wechsel-der-beleuchtung" title="Link to this heading">#</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Neukalibrierung nach Änderung von Backlight/Toplight</strong></p>
+<p>Wenn Sie von Backlight zu Toplight (oder umgekehrt) wechseln:</p>
+<ol class="arabic simple">
+<li><p>Die geometrische Kalibrierung bleibt gültig (sie muss nicht erneut durchgeführt werden)</p></li>
+<li><p>Es ist lediglich erforderlich, die Belichtung der Kamera an die neue Beleuchtungsart anzupassen</p></li>
+<li><p>Nehmen Sie ein Testbild auf, um zu prüfen, ob das Muster noch deutlich sichtbar ist</p></li>
+</ol>
+<p>Generell ist es ratsam, sich von Anfang an für eine Beleuchtungsart zu entscheiden und diese Konfiguration beizubehalten.</p>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 35.0%" />
+<col style="width: 35.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Problem</p></th>
+<th class="head"><p>Mögliche Ursachen</p></th>
+<th class="head"><p>Lösungen</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Kalibrierung schlägt fehl (Softwarefehler)</strong></p></td>
+<td><p>• Kalibrierungsgitter nicht korrekt erkannt</p>
+<p>• Unzureichende/übermäßige Beleuchtung</p>
+<p>• Beschädigtes oder verschmutztes Kalibriergitter</p>
+</td>
+<td><p>• Zielobjekt flach und gut sichtbar positionieren</p>
+<p>• Belichtung der Kamera anpassen, um das Zielobjekt gut darzustellen</p>
+<p>• Sauberes und unbeschädigtes Kalibriergitter verwenden</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Kalibrierungsfehler zu hoch</strong></p></td>
+<td><p>• Kamera nicht perfekt senkrecht zur Oberfläche</p>
+<p>• Kalibriergitter nicht flach</p>
+<p>• Übermäßige optische Verzerrung</p>
+</td>
+<td><p>• Senkrechte Ausrichtung der Kamera mit Wasserwaage überprüfen (Toleranz ±1°)</p>
+<p>• Platzieren Sie das Zielobjekt auf einer festen und ebenen Oberfläche</p>
+<p>• Qualität der optischen Linse prüfen, reinigen oder ersetzen</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Tatsächliche Koordinaten stimmen nicht mit den gemessenen Koordinaten überein</strong></p></td>
+<td><p>• Falscher Skalierungsfaktor (falsche Tile Size)</p>
+<p>• Kamera nach Kalibrierung verschoben</p>
+</td>
+<td><p>• Kalibrierung vollständig wiederholen</p>
+<p>• Kamera fest fixieren, um Verschiebungen zu vermeiden</p>
+<p>• Überprüfen Sie die Abmessungen des Kalibrierungsziels gemäß der Dokumentation</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Kalibrierung nur in der Bildmitte gültig</strong></p></td>
+<td><p>• Periphere optische Verzerrung</p>
+<p>• Kalibrierung mit zu wenigen Punkten</p>
+</td>
+<td><p>• Verwenden Sie ein hochwertiges Objektiv mit geringer Verzerrung</p>
+<p>• Prüfen Sie, ob der Arbeitsabstand korrekt ist</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="fehlersuche-fur-den-abschnitt-flexibowl-setup">
+<span id="troubleshooting-fb-setup"></span><h2>Fehlersuche für den Abschnitt FlexiBowl® Setup<a class="headerlink" href="#fehlersuche-fur-den-abschnitt-flexibowl-setup" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 35.0%" />
+<col style="width: 35.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Problem</p></th>
+<th class="head"><p>Mögliche Ursachen</p></th>
+<th class="head"><p>Lösungen</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>FlexiBowl® reagiert nicht auf Softwarebefehle</strong></p></td>
+<td><p>• IP-Adresse nicht konfiguriert oder falsch</p>
+<p>• FlexiBowl® nicht mit dem Netzwerk verbunden</p>
+<p>• Firewall blockiert die Kommunikation</p>
+<p>• FlexiBowl® nicht eingeschaltet</p>
+</td>
+<td><p>• IP-Adresse im FlexiBowl® Setup überprüfen und korrekt konfigurieren</p>
+<p>• Verbindung mit einem Ping vom VisionController aus testen</p>
+<p>• Firewall zu Testzwecken vorübergehend deaktivieren</p>
+<p>• Überprüfen, ob die LED READY am FlexiBowl® leuchtet</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>FlexiBowl®-Konfiguration kann nicht gespeichert werden</strong></p></td>
+<td><p>• Festplatte voll</p></td>
+<td><p>• Speicherplatz auf der Festplatte freigeben</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>FlexiBowl®-Parameter werden nicht übernommen</strong></p></td>
+<td><p>• Schaltfläche „Synchronize Parameters“ wurde nicht gedrückt</p>
+<p>• Verbindung zu FlexiBowl® unterbrochen</p>
+<p>• FlexiBowl®-Fehler</p>
+</td>
+<td><p>• Nach Änderungen immer auf „Synchronize Parameters“ klicken</p>
+<p>• Stabilität der Ethernet-Verbindung prüfen</p>
+<p>• FlexiBowl® neu starten</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Wizard FlexiBowl® berechnet falsche Parameter</strong></p></td>
+<td><p>• Falsche Komponentencharakterisierung (Geometrie/Verhalten)</p>
+<p>• Falsches FlexiBowl®-Modell ausgewählt</p>
+<p>• Drehrichtung falsch eingestellt</p>
+</td>
+<td><p>• Auswahl der Geometrie überprüfen (FLAT/CYLINDRICAL/COMPLEX)</p>
+<p>• Größe des installierten FlexiBowl® mit der ausgewählten Größe vergleichen</p>
+<p>• Physische Drehrichtung überprüfen und mit der Einstellung vergleichen</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="fehlersuche-fur-den-abschnitt-trichter-setup">
+<span id="troubleshooting-hopper-setup"></span><h2>Fehlersuche für den Abschnitt Trichter-Setup<a class="headerlink" href="#fehlersuche-fur-den-abschnitt-trichter-setup" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 35.0%" />
+<col style="width: 35.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Problem</p></th>
+<th class="head"><p>Mögliche Ursachen</p></th>
+<th class="head"><p>Lösungen</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Hopper wird nie automatisch aktiviert</strong></p></td>
+<td><p>• Hopper in der Software nicht aktiviert
+• Falsches Signal-Feld
+• Kontrollbereich nicht definiert</p>
+<p>• Schwellenwerte nicht kalibriert</p>
+<p>• Trichter nicht elektrisch angeschlossen</p>
+</td>
+<td><p>• Kontrollkästchen „Enable Hopper X“ aktivieren
+• Überprüfen, ob die <strong>Signal</strong>-Nummer mit dem physisch angeschlossenen DO übereinstimmt
+• Kontrollbereich in „Define Area Check“ definieren</p>
+<p>• Schwellenwertkalibrierung mit leerem/vollem CAPTURE durchführen</p>
+<p>• Elektrische Anschlüsse überprüfen</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Trichter wird kontinuierlich aktiviert</strong></p></td>
+<td><p>• Schwellenwerte falsch kalibriert</p>
+<p>• Unzureichende Vibrationszeit (entlädt zu wenige Teile)</p>
+<p>• Falscher Parameter „Steps“</p>
+</td>
+<td><p>• Kalibrierung wiederholen, indem ALLE Teile für CAPTURE leer entfernt werden</p>
+<p>• Parameter „Time“ erhöhen (z. B. von 500 ms auf 700 ms)</p>
+<p>• „Steps“ neu berechnen, indem die tatsächlichen Zyklen gezählt werden</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Hopper-Test immer rot (aktiviert sich nicht)</strong></p></td>
+<td><p>• Zu viele Komponenten im Bereich während der Kalibrierung</p>
+<p>• Beleuchtung zwischen Kalibrierung und Test verändert</p>
+<p>• Reflexionen/Schatten im Kontrollbereich</p>
+</td>
+<td><p>• Kalibrierung mit der korrekten Mindestanzahl an Teilen wiederholen</p>
+<p>• Kalibrierung und Test bei stabiler Beleuchtung durchführen</p>
+<p>• Bereich neu positionieren und Zonen mit Reflexionen ausschließen</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Hopper-Test immer grün (wird immer aktiviert)</strong></p></td>
+<td><p>• Kontrollbereich umfasst irrelevante Bereiche</p>
+<p>• Kalibrierung im leeren Zustand mit vorhandenen Teilen durchgeführt</p>
+<p>• Expression Builder nicht korrekt berechnet</p>
+</td>
+<td><p>• Kontrollbereich enger definieren</p>
+<p>• CAPTURE im leeren Zustand wiederholen und sicherstellen, dass der Bereich vollständig sauber ist</p>
+<p>• Erneut auf AUTO klicken, um Mean und Std Dev neu zu berechnen</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Ungleichmäßiger Komponentenstrom</strong></p></td>
+<td><p>• Falsche Berechnung der Vibrationszeit</p>
+<p>• Zu hohe Anfangsbeladung, die die Payload überschreitet</p>
+</td>
+<td><p>• Überprüfen Sie die Vibrationsberechnung auf Basis der Anfangsbeladung</p>
+<p>• Stellen Sie sicher, dass die Beladung die Payload des Trichters nicht überschreitet</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="fehlerbehebung-fur-den-abschnitt-robot-setup">
+<span id="troubleshooting-robot-setup"></span><h2>Fehlerbehebung für den Abschnitt Robot Setup<a class="headerlink" href="#fehlerbehebung-fur-den-abschnitt-robot-setup" title="Link to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Verbindungsdiagnose fehlgeschlagen</strong></p>
+<p>Wenn der Roboter keine Verbindung herstellen kann:</p>
+<p><strong>Grundlegende Überprüfungen</strong>:</p>
+<ol class="arabic simple">
+<li><p>FlexiVision One Server online (grüne Anzeige)</p></li>
+<li><p>Korrekte IP-Adresse im Roboterprogramm</p></li>
+<li><p>Korrekter Port im Roboterprogramm (entspricht dem von FlexiVision One)</p></li>
+<li><p>Ethernet-Kabel korrekt angeschlossen</p></li>
+</ol>
+<p><strong>Netzwerküberprüfungen</strong>:</p>
+<ol class="arabic simple">
+<li><p>Ping vom VisionController zum Roboter:</p>
+<ul class="simple">
+<li><p>Öffnen Sie die Eingabeaufforderung auf VisionController</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">&lt;IP_ROBOT&gt;</span></code> (z. B.: <code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">192.168.1.10</span></code>)</p></li>
+<li><p>Falls fehlgeschlagen: Problem mit dem physischen Netzwerk/der IP-Konfiguration</p></li>
+</ul>
+</li>
+<li><p>Ping vom Roboter zum VisionController (sofern die Ping-Funktion auf dem Roboter verfügbar ist)</p></li>
+<li><p>Überprüfen Sie, ob sich Roboter und VisionController im selben Subnetz befinden</p></li>
+</ol>
+<p><strong>Firewall-Prüfungen</strong>:</p>
+<ol class="arabic simple">
+<li><p>Windows-Firewall vorübergehend für Testzwecke deaktivieren</p></li>
+<li><p>Falls dies funktioniert: Firewall-Problem → Ausnahme konfigurieren</p></li>
+</ol>
+<p><strong>Roboterüberprüfungen</strong>:</p>
+<ol class="arabic simple">
+<li><p>Richtige Syntax des TCP/IP-Verbindungsbefehls überprüfen (siehe Roboterhandbuch)</p></li>
+<li><p>Verbindungs-Timeout prüfen (ggf. erhöhen)</p></li>
+<li><p>Netzwerkberechtigungen auf der Robotersteuerung überprüfen</p></li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Verbindungsstabilisierung</strong></p>
+<p>Falls die Verbindung häufig unterbrochen wird:</p>
+<ol class="arabic simple">
+<li><p>Überprüfen Sie die Qualität des Ethernet-Kabels (verwenden Sie mindestens Cat6)</p></li>
+<li><p>Vermeiden Sie zu lange Kabel</p></li>
+<li><p>Stellen Sie sicher, dass kein übermäßiger Netzwerkverkehr im selben Subnetz vorliegt; dazu können Sie Programme wie Wireshark oder TCP Dump verwenden</p></li>
+<li><p>Stellen Sie eine stabile Stromversorgung des VisionControllers sicher</p></li>
+<li><p>Überprüfen Sie die Windows-Protokolle auf Netzwerkfehler</p></li>
+</ol>
+<p>Wenn das Problem weiterhin besteht, wenden Sie sich für eine eingehende Analyse an den technischen Support.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Falsche Befehlssyntax</strong></p>
+<p>Wenn FlexiVision One mit „Invalid command“ antwortet:</p>
+<ol class="arabic simple">
+<li><p>Überprüfen Sie die genaue Syntax des Befehls (Groß-/Kleinschreibung, Unterstriche usw.)</p></li>
+<li><p>Achten Sie darauf, nach jedem Befehl das Abschlusszeichen CHR(13) zu senden</p></li>
+<li><p>Fügen Sie keine zusätzlichen Leerzeichen am Anfang oder Ende des Befehls ein</p></li>
+<li><p>Überprüfen Sie im Meldungsprotokoll des Abschnitts „Robot Setup“ den Befehl, den FlexiVision One empfangen hat</p></li>
+</ol>
+<p>Richtige vs. falsche Beispiele:</p>
+<ul class="simple">
+<li><p>✅ <code class="docutils literal notranslate"><span class="pre">start_Locator</span></code> (mit Unterstrich, Kleinbuchstaben)</p></li>
+<li><p>❌ <code class="docutils literal notranslate"><span class="pre">Start_Locator</span></code> (falsche Großbuchstaben)</p></li>
+<li><p>❌ <code class="docutils literal notranslate"><span class="pre">start</span> <span class="pre">Locator</span></code> (Leerzeichen statt Unterstrich)</p></li>
+<li><p>❌ <code class="docutils literal notranslate"><span class="pre">startLocator</span></code> (Unterstrich fehlt)</p></li>
+</ul>
+<p>Eine vollständige und korrekte Liste der Befehle finden Sie unter <a class="reference internal" href="../rif_tecnico_specifiche/04b_Protocolli_Comunicazione.html#protocollo"><span class="std std-ref">Protocollo TCP/IP</span></a>.</p>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 35.0%" />
+<col style="width: 35.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Problem</p></th>
+<th class="head"><p>Mögliche Ursachen</p></th>
+<th class="head"><p>Lösungen</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Roboter verbindet sich nicht mit FlexiVision One</strong></p></td>
+<td><p>• IP-Adresse des Roboters befindet sich nicht im selben Subnetz wie der VisionController</p>
+<p>• TCP/IP-Port nicht konfiguriert</p>
+<p>• Firewall des VisionControllers blockiert die Kommunikation</p>
+</td>
+<td><p>• Richtiges Subnetz in „Robot Setup“ überprüfen und konfigurieren</p>
+<p>• TCP/IP-Port konfigurieren (typischerweise 5000 oder je nach Roboter)</p>
+<p>• Firewall für Testzwecke deaktivieren</p>
+<p>• Im <a class="reference internal" href="../QUICKSTART/SETUP/15_Protocol_Setup.html"><span class="std std-doc">Protocol Setup</span></a> ein mit dem Roboter kompatibles Protokoll auswählen</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Roboter fährt zu falschen Positionen</strong></p></td>
+<td><p>• Roboterkalibrierung nicht oder nicht korrekt durchgeführt</p>
+<p>• Falscher Roboter-Frame/Tool</p>
+<p>• Falscher Greifer-Offset</p>
+<p>• Falsche Koordinaten beim Modell-Setup gespeichert</p>
+</td>
+<td><p>• Vollständige Roboterkalibrierung durchführen</p>
+<p>• Ausgewählten Frame und Tool am Roboter überprüfen</p>
+<p>• Wiederholen Sie die Kalibrierung des Pick-Roboters mit den korrekten Koordinaten</p>
+<p>• Führen Sie das Modelltraining erneut durch und speichern Sie dabei die genauen Koordinaten</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Verbindung zum Roboter nicht möglich</strong></p></td>
+<td><p>• Roboter ausgeschaltet</p>
+<p>• Ethernet-Kabel nicht angeschlossen</p>
+<p>• Roboter und VisionController in unterschiedlichen Subnetzen</p>
+</td>
+<td><p>• Roboter einschalten und in den Automatikmodus versetzen</p>
+<p>• Physische Ethernet-Verbindung zwischen Roboter und VisionController überprüfen</p>
+<p>• Roboter und VisionController im selben Netzwerk konfigurieren</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<!-- Versions and languages set-up -->
+<style>
+  .fixed-bar {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(240, 240, 240, 0.85);
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    border-radius: 6px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
+    color: #222;
+    display: flex;
+    gap: 12px;
+    padding: 6px 12px;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: saturate(180%) blur(10px);
+  }
+
+  @media print {
+    .fixed-bar {
+      display: none !important;
+    }
+  }
+
+  .fixed-bar .dropdown {
+    position: relative;
+    user-select: none;
+  }
+
+  .fixed-bar .dropdown-toggle {
+    background-color: rgba(200, 200, 200, 0.4);
+    color: #222;
+    padding: 6px 10px;
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+  }
+
+  .fixed-bar .dropdown-toggle::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .fixed-bar .dropdown-toggle:hover {
+    background-color: rgba(100, 150, 220, 0.2);
+    color: #1a3e72;
+    border-color: rgba(26, 62, 114, 0.6);
+  }
+
+  .fixed-bar .dropdown-toggle .fa {
+    font-size: 0.9rem;
+  }
+
+  .fixed-bar .dropdown-menu {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background-color: rgba(250, 250, 250, 0.95);
+    border: 1px solid rgba(150, 150, 150, 0.3);
+    border-radius: 4px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    min-width: 140px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    flex-direction: column;
+    z-index: 10000;
+    backdrop-filter: saturate(180%) blur(8px);
+  }
+
+  .fixed-bar .dropdown-menu.show {
+    display: flex;
+  }
+
+  .fixed-bar .dropdown-menu a {
+    padding: 8px 12px;
+    color: #1a3e72;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+    white-space: nowrap;
+    transition: background-color 0.25s ease;
+  }
+
+  .fixed-bar .dropdown-menu a:last-child {
+    border-bottom: none;
+  }
+
+  .fixed-bar .dropdown-menu a:hover {
+    background-color: rgba(100, 150, 220, 0.15);
+  }
+
+  .dropdown-download-buttons .btn__icon-container svg {
+    width: 1em;
+    height: 1em;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vertical-align: middle;
+  }
+
+  a.headerlink.manual-heading-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.2em;
+    text-decoration: none;
+    color: #7b8493;
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+
+  a.headerlink.manual-heading-action svg {
+    width: 0.8em;
+    height: 0.8em;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vertical-align: middle;
+  }
+
+  a.headerlink.manual-feedback-link:hover,
+  a.headerlink.manual-feedback-link:focus-visible {
+    color: #2563eb;
+  }
+
+  a.headerlink.manual-service-link:hover,
+  a.headerlink.manual-service-link:focus-visible {
+    color: #d97706;
+  }
+</style>
+<div class="fixed-bar" role="region" aria-label="Version and language selector">
+  <div class="dropdown" data-selector="version">
+    <div class="dropdown-toggle" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
+      Version: <span class="current-value">V. 1.00</span>
+      <span class="caret-icon" aria-hidden="true">&#9662;</span>
+    </div>
+    <div class="dropdown-menu" role="listbox">
+      	<a href="#" role="option">V. 1.00</a>
+				<a href="#" role="option">V. 1.01</a>
+    </div>
+  </div>
+  <div class="dropdown" data-selector="language">
+    <div class="dropdown-toggle" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
+      Language: <span class="current-value">DE</span>
+      <span class="caret-icon" aria-hidden="true">&#9662;</span>
+    </div>
+    <div class="dropdown-menu" role="listbox">
+      	<a href="#" role="option">DE</a>
+				<a href="#" role="option">EN</a>
+				<a href="#" role="option">ES</a>
+				<a href="#" role="option">FR</a>
+				<a href="#" role="option">IT</a>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    const bar = document.querySelector('.fixed-bar');
+    if (!bar) {
+      return;
+    }
+
+    const inlineVersions = ["V. 1.00", "V. 1.01"];
+    const inlineLanguages = ["DE", "EN", "ES", "FR", "IT"];
+    const manifest = window.FV_VERSIONING || null;
+    const versions = Array.isArray(manifest && manifest.versions) && manifest.versions.length
+      ? manifest.versions
+      : inlineVersions;
+    const offlineZipEnabled = false;
+    const offlineZipFileName = 'Offline manual.zip';
+    const americanRegions = new Set([
+      'AG', 'AR', 'AW', 'BB', 'BL', 'BM', 'BO', 'BQ', 'BR', 'BS', 'BZ', 'CA', 'CL', 'CO', 'CR',
+      'CU', 'CW', 'DM', 'DO', 'EC', 'FK', 'GD', 'GF', 'GL', 'GP', 'GT', 'GY', 'HN', 'HT', 'JM',
+      'KN', 'KY', 'LC', 'MF', 'MQ', 'MS', 'MX', 'NI', 'PA', 'PE', 'PM', 'PR', 'PY', 'SR', 'SV',
+      'SX', 'TC', 'TT', 'US', 'UY', 'VC', 'VE', 'VG', 'VI', '419'
+    ]);
+    const additionalAmericanTimeZones = new Set([
+      'Atlantic/Bermuda',
+      'Pacific/Easter',
+      'Pacific/Galapagos',
+      'Pacific/Honolulu',
+      'Pacific/Pitcairn'
+    ]);
+
+    function setCaret(toggle, isOpen) {
+      const caret = toggle.querySelector('.caret-icon');
+      if (caret) {
+        caret.innerHTML = isOpen ? '&#9652;' : '&#9662;';
+      }
+    }
+
+    function closeAllMenus() {
+      bar.querySelectorAll('.dropdown').forEach(dropdown => {
+        const menu = dropdown.querySelector('.dropdown-menu');
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        menu.classList.remove('show');
+        toggle.setAttribute('aria-expanded', 'false');
+        setCaret(toggle, false);
+      });
+    }
+
+    function getLanguagesForVersion(version) {
+      const manifestLanguages = manifest &&
+        manifest.languagesByVersion &&
+        Array.isArray(manifest.languagesByVersion[version]) &&
+        manifest.languagesByVersion[version].length
+          ? manifest.languagesByVersion[version]
+          : null;
+
+      if (manifestLanguages) {
+        return manifestLanguages;
+      }
+
+      return inlineLanguages;
+    }
+
+    function getDefaultLanguageForVersion(version) {
+      const manifestDefault = manifest &&
+        manifest.defaultLanguageByVersion &&
+        typeof manifest.defaultLanguageByVersion[version] === 'string'
+          ? manifest.defaultLanguageByVersion[version]
+          : '';
+
+      if (manifestDefault) {
+        return manifestDefault;
+      }
+
+      const availableLanguages = getLanguagesForVersion(version);
+      return availableLanguages.length ? availableLanguages[0] : (inlineLanguages[0] || '');
+    }
+
+    function populateSelectorMenu(selector, values) {
+      const menu = bar.querySelector(`[data-selector="${selector}"] .dropdown-menu`);
+      if (!menu) {
+        return;
+      }
+
+      menu.innerHTML = '';
+      values.forEach(value => {
+        const link = document.createElement('a');
+        link.href = '#';
+        link.setAttribute('role', 'option');
+        link.textContent = value;
+        menu.appendChild(link);
+      });
+    }
+
+    function getNavigationContext() {
+      const currentUrl = new URL(window.location.href);
+      const rawSegments = currentUrl.pathname.split('/').filter(Boolean);
+      const decodedSegments = rawSegments.map(segment => decodeURIComponent(segment));
+      const currentVersionLabel = bar.querySelector('[data-selector="version"] .current-value');
+      const currentLanguageLabel = bar.querySelector('[data-selector="language"] .current-value');
+      const fallbackVersion = currentVersionLabel ? currentVersionLabel.textContent.trim() : '';
+      const versionIndex = decodedSegments.findIndex(segment => versions.includes(segment));
+      const currentVersion = versionIndex !== -1 ? decodedSegments[versionIndex] : fallbackVersion;
+      const availableLanguages = getLanguagesForVersion(currentVersion);
+      const fallbackLanguage = currentLanguageLabel ? currentLanguageLabel.textContent.trim() : '';
+      const languageIndex = decodedSegments.findIndex(
+        (segment, index) => index > versionIndex && availableLanguages.includes(segment)
+      );
+
+      return {
+        currentUrl: currentUrl,
+        rawSegments: rawSegments,
+        versionIndex: versionIndex,
+        currentVersion: currentVersion,
+        currentLanguage: languageIndex !== -1 ? decodedSegments[languageIndex] : fallbackLanguage
+      };
+    }
+
+    function refreshNavigationMenus() {
+      const context = getNavigationContext();
+      const resolvedVersion = versions.includes(context.currentVersion) ? context.currentVersion : (versions[0] || context.currentVersion);
+      const availableLanguages = getLanguagesForVersion(resolvedVersion);
+      const resolvedLanguage = availableLanguages.includes(context.currentLanguage)
+        ? context.currentLanguage
+        : (getDefaultLanguageForVersion(resolvedVersion) || context.currentLanguage);
+
+      populateSelectorMenu('version', versions);
+      populateSelectorMenu('language', availableLanguages);
+
+      const versionLabel = bar.querySelector('[data-selector="version"] .current-value');
+      const languageLabel = bar.querySelector('[data-selector="language"] .current-value');
+      if (versionLabel) {
+        versionLabel.textContent = resolvedVersion;
+      }
+      if (languageLabel) {
+        languageLabel.textContent = resolvedLanguage;
+      }
+    }
+
+    function buildScopedUrl(targetVersion, targetLanguage, pageName) {
+      const context = getNavigationContext();
+      const rootSegments = context.versionIndex !== -1 ? context.rawSegments.slice(0, context.versionIndex) : [];
+      const targetPath = '/' + rootSegments.concat([
+        encodeURIComponent(targetVersion),
+        encodeURIComponent(targetLanguage),
+        encodeURIComponent(pageName)
+      ]).join('/');
+
+      if (context.currentUrl.protocol === 'file:') {
+        return 'file://' + targetPath;
+      }
+
+      return context.currentUrl.origin + targetPath;
+    }
+
+    function buildTargetUrl(targetVersion, targetLanguage) {
+      return buildScopedUrl(targetVersion, targetLanguage, 'index.html');
+    }
+
+    function buildSiteRootAssetUrl(fileName) {
+      const context = getNavigationContext();
+      const rootSegments = context.versionIndex !== -1 ? context.rawSegments.slice(0, context.versionIndex) : [];
+      const targetPath = '/' + rootSegments.concat([encodeURIComponent(fileName)]).join('/');
+
+      if (context.currentUrl.protocol === 'file:') {
+        return 'file://' + targetPath;
+      }
+
+      return context.currentUrl.origin + targetPath;
+    }
+
+    function buildClientSiteZipUrl() {
+      return buildSiteRootAssetUrl(offlineZipFileName);
+    }
+
+    function getHeadingText(heading) {
+      const clone = heading.cloneNode(true);
+      clone.querySelectorAll('a.headerlink').forEach(link => link.remove());
+      return clone.textContent.replace(/\s+/g, ' ').trim();
+    }
+
+    function normalizeMailText(text) {
+      return String(text || '').replace(/\u00AE/g, '');
+    }
+
+    function getTimeZoneAmericaDecision() {
+      try {
+        const timeZone = String(Intl.DateTimeFormat().resolvedOptions().timeZone || '').trim();
+        if (!timeZone) {
+          return null;
+        }
+        return timeZone.startsWith('America/') || additionalAmericanTimeZones.has(timeZone);
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function isCoordinateInAmericas(latitude, longitude) {
+      if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) {
+        return null;
+      }
+
+      return latitude >= -60 && latitude <= 85 && longitude >= -170 && longitude <= -25;
+    }
+
+    function getCurrentPosition(options) {
+      return new Promise((resolve, reject) => {
+        if (!navigator.geolocation || typeof navigator.geolocation.getCurrentPosition !== 'function') {
+          reject(new Error('Geolocation unavailable'));
+          return;
+        }
+
+        navigator.geolocation.getCurrentPosition(resolve, reject, options);
+      });
+    }
+
+    async function resolveServiceAddress() {
+      const timeZoneDecision = getTimeZoneAmericaDecision();
+      if (timeZoneDecision === false) {
+        return 'service@arsautomation.com';
+      }
+
+      const canTryGeolocation = Boolean(
+        navigator.onLine &&
+        window.isSecureContext &&
+        navigator.geolocation &&
+        typeof navigator.geolocation.getCurrentPosition === 'function'
+      );
+
+      if (canTryGeolocation) {
+        try {
+          const position = await getCurrentPosition({
+            enableHighAccuracy: false,
+            timeout: 4000,
+            maximumAge: 300000
+          });
+          const inAmericas = isCoordinateInAmericas(position.coords.latitude, position.coords.longitude);
+          if (inAmericas !== null) {
+            return inAmericas ? 'us.service@arsautomation.com' : 'service@arsautomation.com';
+          }
+        } catch (error) {
+        }
+      }
+
+      if (timeZoneDecision === true) {
+        return 'us.service@arsautomation.com';
+      }
+
+      return 'service@arsautomation.com';
+    }
+
+    function buildMailtoUrl(address, subject, body) {
+      return 'mailto:' + address +
+        '?subject=' + encodeURIComponent(normalizeMailText(subject)) +
+        '&body=' + encodeURIComponent(normalizeMailText(body));
+    }
+
+    function createHeadingActionLink(className, title, mailtoUrl, svgMarkup) {
+      const link = document.createElement('a');
+      link.className = 'headerlink manual-heading-action ' + className;
+      link.href = mailtoUrl;
+      link.title = title;
+      link.setAttribute('aria-label', title);
+      link.innerHTML = svgMarkup;
+      return link;
+    }
+
+    function addHeadingActions() {
+      const feedbackIcon = [
+        '<svg viewBox="0 0 16 16" aria-hidden="true">',
+        '<path d="M3 3.5h10v6.5H7.5L4.5 13v-3H3z"></path>',
+        '<path d="M6 6.2h4"></path>',
+        '<path d="M6 8.2h3"></path>',
+        '</svg>'
+      ].join('');
+
+        const serviceIcon = [
+          '<svg viewBox="0 0 16 16" aria-hidden="true">',
+          '<circle cx="8" cy="8" r="5.2"></circle>',
+          '<path d="M6.4 6.1A1.9 1.9 0 0 1 8 5.2c1.1 0 1.9.7 1.9 1.7 0 .8-.4 1.3-1.2 1.8-.6.4-.9.8-.9 1.5"></path>',
+          '<circle cx="8" cy="11.7" r="0.45" style="fill:currentColor;stroke:none"></circle>',
+          '</svg>'
+        ].join('');
+
+      document.querySelectorAll('h1 > a.headerlink, h2 > a.headerlink, h3 > a.headerlink, h4 > a.headerlink, h5 > a.headerlink, h6 > a.headerlink').forEach(link => {
+        const heading = link.parentElement;
+        if (!heading || heading.querySelector('.manual-feedback-link') || heading.querySelector('.manual-service-link')) {
+          return;
+        }
+
+        const sectionTitle = getHeadingText(heading);
+        const sectionUrl = new URL(link.getAttribute('href'), window.location.href).href;
+        const pageUrl = window.location.href.split('#')[0];
+        const feedbackBody = [
+          'Hello Documentation Team,',
+          '',
+          'I would like to suggest an improvement for this section of the manual.',
+          '',
+          'Section: ' + sectionTitle,
+          'Page: ' + pageUrl,
+          'Section link: ' + sectionUrl,
+          '',
+          'Suggestion:',
+          ''
+        ].join('\n');
+          const serviceBody = [
+            'Hello Service Team,',
+            '',
+            'I need support related to this section of the manual.',
+            '',
+            'Section: ' + sectionTitle,
+            'Page: ' + pageUrl,
+            'Section link: ' + sectionUrl,
+            '',
+            'FlexiBowl serial number:',
+            '',
+            'Photos or videos of the issue attached:',
+            '',
+            'Issue description:',
+            ''
+          ].join('\n');
+
+        const feedbackLink = createHeadingActionLink(
+          'manual-feedback-link',
+          'Suggest an improvement for this section',
+          buildMailtoUrl('documentation@arsautomation.com', 'Documentation suggestion: ' + sectionTitle, feedbackBody),
+          feedbackIcon
+        );
+          const serviceLink = createHeadingActionLink(
+            'manual-service-link',
+            'Contact service about this section',
+            '#',
+            serviceIcon
+          );
+          serviceLink.addEventListener('click', async event => {
+            event.preventDefault();
+            const serviceAddress = await resolveServiceAddress();
+            window.location.href = buildMailtoUrl(serviceAddress, 'Service request: ' + sectionTitle, serviceBody);
+          });
+
+          heading.appendChild(feedbackLink);
+          heading.appendChild(serviceLink);
+        });
+    }
+
+    function enhancePrintMenu() {
+      const dropdown = document.querySelector('.dropdown-download-buttons');
+      if (!dropdown || dropdown.dataset.printMenuEnhanced === 'true') {
+        return;
+      }
+
+      dropdown.dataset.printMenuEnhanced = 'true';
+
+      const toggleButton = dropdown.querySelector('.dropdown-toggle');
+      const hasReleaseDownloads = offlineZipEnabled;
+
+      if (toggleButton) {
+        const toggleLabel = hasReleaseDownloads ? 'Export options' : 'Print options';
+        toggleButton.setAttribute('aria-label', toggleLabel);
+        toggleButton.setAttribute('title', toggleLabel);
+        toggleButton.setAttribute('data-bs-original-title', toggleLabel);
+        const toggleIcon = toggleButton.querySelector('i');
+        if (toggleIcon) {
+          toggleIcon.className = hasReleaseDownloads ? 'fas fa-download' : 'fas fa-print';
+        }
+      }
+
+      dropdown.querySelectorAll('.btn-download-source-button').forEach(sourceButton => {
+        const sourceItem = sourceButton.closest('li');
+        if (sourceItem) {
+          sourceItem.remove();
+        }
+      });
+
+      const pagePrintButton = dropdown.querySelector('.btn-download-pdf-button');
+      if (pagePrintButton) {
+        pagePrintButton.setAttribute('title', 'Print this page');
+        pagePrintButton.setAttribute('aria-label', 'Print this page');
+        pagePrintButton.setAttribute('data-bs-original-title', 'Print this page');
+        const textContainer = pagePrintButton.querySelector('.btn__text-container');
+        if (textContainer) {
+          textContainer.textContent = 'Print this page';
+        }
+      }
+
+      const menu = dropdown.querySelector('.dropdown-menu');
+      if (!menu) {
+        return;
+      }
+
+      menu.querySelectorAll('.btn-download-client-site-zip-button').forEach(button => {
+        const item = button.closest('li');
+        if (item) {
+          item.remove();
+        }
+      });
+
+      if (offlineZipEnabled) {
+        const siteZipItem = document.createElement('li');
+        const siteZipLink = document.createElement('a');
+        siteZipLink.className = 'btn btn-sm dropdown-item btn-download-client-site-zip-button';
+        siteZipLink.title = 'Download offline manual';
+        siteZipLink.setAttribute('aria-label', 'Download offline manual');
+        siteZipLink.setAttribute('download', offlineZipFileName);
+        siteZipLink.href = buildClientSiteZipUrl();
+        siteZipLink.innerHTML = [
+          '<span class="btn__icon-container">',
+          '<svg viewBox="0 0 16 16" aria-hidden="true">',
+          '<path d="M4 3.5h8v2.5H4z"></path>',
+          '<path d="M4 6h8v6.5H4z"></path>',
+          '<path d="M8 3.5v9"></path>',
+          '<path d="M6.3 9.2L8 10.9l1.7-1.7"></path>',
+          '</svg>',
+          '</span>',
+          '<span class="btn__text-container">Download offline manual</span>'
+        ].join('');
+        siteZipItem.appendChild(siteZipLink);
+        menu.appendChild(siteZipItem);
+      }
+    }
+
+    refreshNavigationMenus();
+
+    bar.querySelectorAll('.dropdown').forEach(dropdown => {
+      const toggle = dropdown.querySelector('.dropdown-toggle');
+      const menu = dropdown.querySelector('.dropdown-menu');
+      const selector = dropdown.getAttribute('data-selector');
+
+      toggle.addEventListener('click', event => {
+        event.stopPropagation();
+        const willOpen = toggle.getAttribute('aria-expanded') !== 'true';
+        closeAllMenus();
+
+        if (willOpen) {
+          menu.classList.add('show');
+          toggle.setAttribute('aria-expanded', 'true');
+          setCaret(toggle, true);
+        }
+      });
+
+      menu.addEventListener('click', event => {
+        const link = event.target.closest('a');
+        if (!link) {
+          return;
+        }
+
+        event.preventDefault();
+        const selectedValue = link.textContent.trim();
+        const context = getNavigationContext();
+        if (!selectedValue) {
+          return;
+        }
+
+        if (selector === 'version') {
+          const targetVersion = selectedValue;
+          const availableLanguages = getLanguagesForVersion(targetVersion);
+          const targetLanguage = availableLanguages.includes(context.currentLanguage)
+            ? context.currentLanguage
+            : getDefaultLanguageForVersion(targetVersion);
+          if (targetLanguage) {
+            window.location.href = buildTargetUrl(targetVersion, targetLanguage);
+          }
+          return;
+        }
+
+        window.location.href = buildTargetUrl(context.currentVersion, selectedValue);
+      });
+    });
+
+    window.addEventListener('click', closeAllMenus);
+    window.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        closeAllMenus();
+      }
+    });
+
+    addHeadingActions();
+    enhancePrintMenu();
+  })();
+</script>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="26c_Cablaggio_Connessioni.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>Verkabelung und Anschlüsse</strong></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="26g_Creazione_Ricette_Modelli.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Erstellen von Rezepten und Vorlagen</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fehlerbehebung-fur-den-abschnitt-kameraeinrichtung">Fehlerbehebung für den Abschnitt Kameraeinrichtung</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konfigurationsverfahren"><em>Konfigurationsverfahren</em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#latency-level-latenzstufe"><em>Latency Level (Latenzstufe)</em></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#packet-size-paketgrosze"><em>Packet Size (Paketgröße)</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kamera-kalibrierung">Kamera-Kalibrierung</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#muster-nicht-erkannt"><em>Muster nicht erkannt</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kalibrierung-immer-bad-oder-acceptable"><em>Kalibrierung immer „Bad“ oder „Acceptable“</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fehler-nach-wechsel-der-beleuchtung"><em>Fehler nach Wechsel der Beleuchtung</em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fehlersuche-fur-den-abschnitt-flexibowl-setup">Fehlersuche für den Abschnitt FlexiBowl® Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fehlersuche-fur-den-abschnitt-trichter-setup">Fehlersuche für den Abschnitt Trichter-Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fehlerbehebung-fur-den-abschnitt-robot-setup">Fehlerbehebung für den Abschnitt Robot Setup</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By ARS Automation
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, ARS Automation.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../_shared/static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../_shared/static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

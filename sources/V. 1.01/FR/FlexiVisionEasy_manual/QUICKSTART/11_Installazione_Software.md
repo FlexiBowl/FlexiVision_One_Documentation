@@ -1,0 +1,7 @@
+---
+orphan: true
+---
+
+# 11. Installation du logiciel
+
+EST-CE NÉCESSAIRE AUSSI POUR LES PC FOURNIS PAR ARS ? QUELS PASSAGES DOIVENT QUAND MÊME ÊTRE EFFECTUÉS&nbsp;?
