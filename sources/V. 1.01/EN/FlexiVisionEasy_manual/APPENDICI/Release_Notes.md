@@ -1,60 +1,49 @@
 # Release Notes
 
-This page gathers information about the published versions of the FlexiVision One manual. Select a version to go directly to the corresponding manual.
+This page provides information about the released versions of the FlexiVision One software. Select a version for more information.
 
 ## Latest Version
 
-::::{grid} 1
-:gutter: 2
+```{raw} html
+<a href="V.0.22.html" style="display:block; background-color:#14213d; color:#ffffff; padding:1.5rem 1.75rem; border-radius:0.5rem; text-decoration:none; box-shadow:0 1px 4px rgba(0,0,0,0.25);">
+  <span style="display:inline-block; background:rgba(255,255,255,0.15); color:#ffffff; font-size:0.75rem; font-weight:600; letter-spacing:0.02em; padding:0.2rem 0.7rem; border-radius:999px; margin-bottom:0.75rem;">LATEST VERSION COMPATIBLE WITH V.1.01 OF THIS MANUAL</span>
+  <h3 style="margin:0 0 0.4rem 0; color:#ffffff; font-size:1.6rem;">V. 0.22</h3>
+  <p style="margin:0; color:#ffffff; opacity:0.85;">Published on: 04/09/2026</p>
+</a>
+```
 
-:::{grid-item-card}  V. 0.22 
-:link: https://docs.flexibowl.com/V.%200.22/EN/index.html
-:link-type: url
-:class-header: sd-bg-primary sd-text-white
-
-**Published on:** _[DD/MM/YYYY]_
-
-**Key highlights:**
-
-- _[highlight 1 — replace with actual changelog]_
-- _[highlight 2]_
-- _[highlight 3]_
-
-+++
-Open the full manual →
-:::
-
-::::
+```{tip}
+Always install the latest available version of the FlexiVision One software to take advantage of the latest updates and new features.
+```
 
 ```{important}
-We recommend always referring to the latest available version of the manual for the most up-to-date information on features, safety, and procedures.
+Always refer to the version of the manual that is compatible with your software version to access the most up-to-date information on features, security, and procedures.
 ```
 
 ## Previous Versions
 
-::::{grid} 1 2 2 2
-:gutter: 3
 
-:::{grid-item-card} V. 0.21
-:link: https://docs.flexibowl.com/V.%200.21/EN/index.html
-:link-type: url
-
-**Published on:** _[DD/MM/YYYY]_
-
-_[brief description of the changes introduced in this version — replace with actual changelog]_
-:::
-
-:::{grid-item-card} V. 0.20
-:link: https://docs.flexibowl.com/V.%200.20/EN/index.html
-:link-type: url
-
-**Published on:** _[DD/MM/YYYY]_
-
-_[brief description — first published version of the FlexiVision One manual]_
-:::
-
-::::
+```{raw} html
+<a href="V.0.21.html" style="display:block; background-color:#e0f2fe; color:#334155; padding:1.5rem 1.75rem; border-radius:0.5rem; text-decoration:none; box-shadow:0 1px 4px rgba(0,0,0,0.1);">
+  <span style="display:inline-block; background:rgba(0,0,0,0.08); color:#334155; font-size:0.75rem; font-weight:600; letter-spacing:0.02em; padding:0.2rem 0.7rem; border-radius:999px; margin-bottom:0.75rem;">  VERSION COMPATIBLE WITH V.1.01 OF THIS MANUAL</span>
+  <h3 style="margin:0 0 0.4rem 0; color:#334155; font-size:1.6rem;">V. 0.21</h3>
+  <p style="margin:0; color:#334155; opacity:0.8;">Published on: 20/08/2026</p>
+</a>
+<br>
+<a href="V.0.20.html" style="display:block; background-color:#e0f2fe; color:#334155; padding:1.5rem 1.75rem; border-radius:0.5rem; text-decoration:none; box-shadow:0 1px 4px rgba(0,0,0,0.1);">
+  <span style="display:inline-block; background:rgba(0,0,0,0.08); color:#334155; font-size:0.75rem; font-weight:600; letter-spacing:0.02em; padding:0.2rem 0.7rem; border-radius:999px; margin-bottom:0.75rem;">  VERSION COMPATIBLE WITH V.1.01 OF THIS MANUAL</span>
+  <h3 style="margin:0 0 0.4rem 0; color:#334155; font-size:1.6rem;">V. 0.20</h3>
+  <p style="margin:0; color:#334155; opacity:0.8;">Published on: 01/08/2026</p>
+</a>
+```
 
 ```{note}
-Previous versions remain available for reference, but may not reflect the features and changes introduced in more recent releases.
+Information about previous versions remains available for reference, but it may not reflect the features and changes introduced in the most recent releases.
 ```
+
+:::{toctree}
+:hidden: 
+V.0.20.md
+V.0.21.md
+V.0.22.md
+:::
