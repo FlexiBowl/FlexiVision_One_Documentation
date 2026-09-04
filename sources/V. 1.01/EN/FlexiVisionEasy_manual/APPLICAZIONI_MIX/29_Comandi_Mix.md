@@ -17,6 +17,9 @@ This variation allows the vision system to activate the **multi-component** iden
 ```{important}
 The return value of Mix commands always includes the recognised pattern identifier (`Pattern_n`). The robot program must be set up to manage the different response types and adopt the appropriate picking logic according to the identified model.
 ```
+:::{tip}
+The new version allows you to manage the `mix_Locator_n` commands for robots 1, 2, and 3 in a combined manner.
+:::
 
 ---
 
@@ -62,6 +65,9 @@ This means that to request the coordinates of a different model, the specific co
 ```{tip}
 The maximum number of models that can be managed within a single Mix recipe is **8**, corresponding to the commands `mix_Locator_1` … `mix_Locator_8`. The robot program can request the models in any order and combination, depending on the application logic.
 ```
+:::{tip}
+The new version allows you to create `mix_Locator` commands that span multiple models—that is, commands that call multiple models simultaneously. For example, the `mix_Locator12` command calls models 1 and 2.
+:::
 
 ### *FlexiBowl® Commands*
 

@@ -71,6 +71,9 @@ Il sistema supporta i seguenti comandi tramite stringhe di testo inviate sulla c
   - Restituisce lo stato diagnostico del localizzatore
   - `Locator is Running` / `Locator is in Error` / `Locator is not Running`
 ```
+:::{note}
+Altri separatori di stringa disponibili, oltre `;`, sono: `,`, `|`, `:`, `&`, `$`, `@`, `#`. 
+:::
 
 ### *Comandi FlexiBowl®*
 

@@ -198,6 +198,10 @@ Sur la page de liste de toutes les clearances, cliquer sur **TEST** pour voir to
   - Zone occupée, prélèvement impossible
   - ![](../../../../../_shared/media/images/redclearances.png)
 ````
+:::{note}
+Les dimensions des Clearances, exprimées en mm, sont indiquées dans les encadrés correspondants.
+:::
+
 
 ### *Que signifie « Triggered » ?*
 

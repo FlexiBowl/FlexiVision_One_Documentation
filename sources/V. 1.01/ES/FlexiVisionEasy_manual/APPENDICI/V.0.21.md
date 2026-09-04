@@ -1,7 +1,7 @@
 # V. 0.21
 
 ```{note}
-Esta página corresponde a la versión **1.01** del presente manual, compatible con **FlexiVision Studio v0.21** y **v0.22**.
+Esta página corresponde a la versión **1.00** del presente manual, compatible con **FlexiVision Studio v0.21** y **v0.22**.
 ```
 
 ## **Nuevas funciones**

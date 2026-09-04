@@ -41,6 +41,10 @@ The **Protocol Setup** page allows you to configure the parameters governing the
     :::{attention}
     **It is not a robot error timeout**, but a time reference for cycle calculation and productivity metrics.
     :::
+
+* - **Robot String Separator**
+  - Specifies the string separator used by the selected robot and allows you to choose from all other available separators.       
+    ![Separatori stringa](../../../../../_shared/media/images/separatoristringa.jpg)
 ```
 
 ---

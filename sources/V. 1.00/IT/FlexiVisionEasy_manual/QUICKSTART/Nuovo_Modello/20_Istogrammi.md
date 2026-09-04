@@ -198,6 +198,9 @@ Nella pagina di elenco di tutte le clearance, cliccare su **TEST** per visualizz
   - Area occupata, prelievo non possibile
   - ![](../../../../../_shared/media/images/redclearances.png)
 ````
+:::{note}
+Nei riquadri delle Clearances vengono riportate le loro dimensioni in mm. 
+:::
 
 ### *Cosa Significa "Triggered"?*
 

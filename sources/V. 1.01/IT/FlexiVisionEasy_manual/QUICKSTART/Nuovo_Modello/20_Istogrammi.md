@@ -102,9 +102,19 @@ Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** pre
     :width: 100%
     :align: center
 :::
+
+:::{tip}
+La nuova versione introduce anche la scelta della tipologia di regione (Rectangle, Annulus Section, Circle).  
+![Scelta Forma](../../../../../_shared/media/images/clearances.png)
+:::
+
 ````{list-table}
 * - **8**
-  - Cliccare su **Enable Clearance** per attivare la clearance 
+  - Scegliere la forma da assegnare alla Clearance e cliccare su **Enable Clearance** per attivare la clearance .  
+    :::{image} ../../../../../_shared/media/images/shapes.png
+    :width: 30%
+    :::
+    
 * - **9**
   - Spostare il **riquadro** della Clearance nell'area che deve rimanere libera
       - Tipicamente: area di presa della pinza (una clearance per ogni area di presa della pinza)
@@ -198,6 +208,9 @@ Nella pagina di elenco di tutte le clearance, cliccare su **TEST** per visualizz
   - Area occupata, prelievo non possibile
   - ![](../../../../../_shared/media/images/redclearances.png)
 ````
+:::{note}
+Nei riquadri delle Clearances vengono riportate le loro dimensioni in mm. 
+:::
 
 ### *Cosa Significa "Triggered"?*
 

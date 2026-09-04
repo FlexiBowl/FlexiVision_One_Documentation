@@ -270,13 +270,14 @@ FlexiVisionEasy_manual/25_Garanzia.md
 FlexiVisionEasy_manual/TROUBLESHOOTING/26_trb_shooting_guide.md
 ```
 
-
 ```{toctree}  
 :hidden:
 :caption: APPENDICI
 
 FlexiVisionEasy_manual/APPENDICI/Release_Notes.md
 ```
+
+
 
 
 

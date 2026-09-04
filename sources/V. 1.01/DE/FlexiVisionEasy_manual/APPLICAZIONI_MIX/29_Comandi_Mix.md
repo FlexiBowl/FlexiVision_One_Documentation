@@ -17,6 +17,9 @@ Diese Änderung ermöglicht es dem Bildverarbeitungssystem, die **Mehrkomponente
 ```{important}
 Der Rückgabewert der Mix-Befehle enthält immer die Kennung des erkannten Musters (`Pattern_n`). Das Roboterprogramm muss so ausgelegt sein, dass es die verschiedenen Antworttypen verarbeiten und je nach identifiziertem Modell die entsprechende Entnahmestrategie anwenden kann.
 ```
+:::{tip}
+Die neue Version ermöglicht die kombinierte Steuerung der Befehle `mix_Locator_n` für die Roboter 1, 2 und 3.
+:::
 
 ---
 
@@ -62,6 +65,9 @@ Das bedeutet, dass zur Abfrage der Koordinaten eines anderen Modells der für di
 ```{tip}
 Die maximale Anzahl der Modelle, die innerhalb eines einzelnen Mix-Rezepts verwaltet werden können, beträgt **8**, entsprechend den Befehlen `mix_Locator_1` … `mix_Locator_8`. Das Roboterprogramm kann die Modelle je nach Anwendungslogik in beliebiger Reihenfolge und Kombination anfordern.
 ```
+:::{tip}
+Die neue Version ermöglicht die Erstellung von Befehlen vom Typ `mix_Locator`, die mehrere Modelle gleichzeitig aufrufen. So ruft beispielsweise der Befehl `mix_Locator12` die Modelle 1 und 2 auf.
+:::
 
 ### *FlexiBowl®-Befehle*
 

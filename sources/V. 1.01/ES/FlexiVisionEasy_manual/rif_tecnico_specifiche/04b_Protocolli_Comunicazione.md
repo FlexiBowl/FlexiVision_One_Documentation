@@ -71,6 +71,9 @@ El sistema admite los siguientes comandos mediante cadenas de texto enviadas a t
   - Devuelve el estado de diagnóstico del localizador
   - `El localizador está en ejecución` / `El localizador está en error` / `El localizador no está en ejecución`
 ```
+:::{note}
+Otros separadores de cadena disponibles, además de `;`, son: `,`, `|`, `:`, `&`, `$`, `@`, `#`. 
+:::
 
 ### *Comandos FlexiBowl®*
 

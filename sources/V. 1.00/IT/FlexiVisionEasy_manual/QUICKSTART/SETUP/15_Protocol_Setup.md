@@ -41,6 +41,10 @@ La pagina **Protocol Setup** permette di configurare i parametri che regolano il
     :::{attention}
     **Non è un timeout di errore del robot**, ma un riferimento temporale per il calcolo del ciclo e per le metriche di produttività.
     :::
+
+* - **Robot String Separator**
+  - Indica il separatore di stringa per il robot che è stato selezionato e permette di scegliere fra tutti gli altri disponibili.     
+    ![Separatori stringa](../../../../../_shared/media/images/separatoristringa.jpg)
 ```
 
 ---

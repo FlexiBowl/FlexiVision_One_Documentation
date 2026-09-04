@@ -41,6 +41,10 @@ Auf der Seite **Protocol Setup** können Sie die Parameter konfigurieren, die de
     :::{attention}
     **Es handelt sich nicht um ein Zeitlimit für einen Roboterfehler**, sondern um einen Zeitbezugspunkt für die Zyklusberechnung und für Produktivitätskennzahlen.
     :::
+
+* - **Robot String Separator**
+  - Legt das vom ausgewählten Roboter verwendete Trennzeichen fest und ermöglicht es Ihnen, aus allen anderen verfügbaren Trennzeichen auszuwählen.      
+    ![Separatori stringa](../../../../../_shared/media/images/separatoristringa.jpg)
 ```
 
 ---

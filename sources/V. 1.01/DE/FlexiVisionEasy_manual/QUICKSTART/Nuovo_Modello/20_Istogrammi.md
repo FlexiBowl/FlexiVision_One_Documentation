@@ -102,9 +102,19 @@ Bei Fragen während der Konfiguration klicken Sie bitte auf die Schaltfläche �
     :width: 100%
     :align: center
 :::
+
+:::{tip}
+Die neue Version bietet außerdem die Möglichkeit, die Art der Region auszuwählen (Rectangle, Annulus Section, Circle).  
+![Scelta Forma](../../../../../_shared/media/images/clearances.png)
+:::
+
 ````{list-table}
 * - **8**
-  - Klicken Sie auf „**Enable Clearance**“, um den Freiraum zu aktivieren
+  - Wählen Sie die Form für die Freigabe aus und klicken Sie auf **Enable Clearance**, um die Freigabe zu aktivieren. 
+    :::{image} ../../../../../_shared/media/images/shapes.png
+    :width: 30%
+    :::
+    
 * - **9**
   - Verschieben Sie den Clearance-**Rahmen** in den Bereich, der frei bleiben muss
       - Typischerweise: Greiferbereich (ein Freiraum pro Greiferbereich)
@@ -198,6 +208,9 @@ Klicken Sie auf der Seite mit der Liste aller Clearances auf „**TEST**“, um 
   - Bereich belegt, Aufnahme nicht möglich
   - ![](../../../../../_shared/media/images/redclearances.png)
 ````
+:::{note}
+In den Feldern „Clearances“ sind deren Abmessungen in mm angegeben.
+:::
 
 ### *Was bedeutet „Triggered“?*
 

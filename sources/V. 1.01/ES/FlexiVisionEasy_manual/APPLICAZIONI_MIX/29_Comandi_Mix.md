@@ -17,6 +17,9 @@ Esta variación permite al sistema de visión activar la lógica de reconocimien
 ```{important}
 El valor de retorno de los comandos Mix incluye siempre el identificativo del patrón reconocido (`Pattern_n`). El programa del robot debe estar preparado para gestionar las distintas tipologías de respuesta y adoptar la lógica de recogida adecuada en función del modelo identificado.
 ```
+:::{tip}
+La nueva versión permite gestionar de forma combinada los comandos `mix_Locator_n` para los robots 1, 2 y 3.
+:::
 
 ---
 
@@ -62,6 +65,9 @@ Esto significa que, para solicitar las coordenadas de un modelo diferente, es ne
 ```{tip}
 El número máximo de modelos gestionables dentro de una única receta Mix es **8**, correspondientes a los comandos `mix_Locator_1` … `mix_Locator_8`. El programa del robot puede solicitar los modelos en cualquier orden y combinación, según la lógica aplicativa.
 ```
+:::{tip}
+La nueva versión permite crear comandos de tipo `mix_Locator` multimodelo, es decir, que activan más de un modelo a la vez. Por ejemplo, el comando `mix_Locator12` activa los modelos 1 y 2.
+:::
 
 ### *Comandos FlexiBowl®*
 

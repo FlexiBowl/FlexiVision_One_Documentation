@@ -198,6 +198,9 @@ On the list page of all clearances, click **TEST** to view all clearances at onc
   - Area engaged, picking not possible
   - ![](../../../../../_shared/media/images/redclearances.png)
 ````
+:::{note}
+The Clearances boxes list their dimensions in mm.
+:::
 
 ### *What does "Triggered" mean?*
 

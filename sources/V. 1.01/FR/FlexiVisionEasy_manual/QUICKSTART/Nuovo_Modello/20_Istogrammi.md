@@ -102,9 +102,19 @@ En cas de doutes lors de la configuration, veuillez consulter le bouton **INFO**
     :width: 100%
     :align: center
 :::
+
+:::{tip}
+La nouvelle version permet également de choisir le type de région (Rectangle, Annulus Section, Circle).  
+![Scelta Forma](../../../../../_shared/media/images/clearances.png)
+:::
+
 ````{list-table}
 * - **8**
-  - Cliquer sur **Enable Clearance** pour activer la clearance 
+  - Choisissez le type de clearance à attribuer, puis cliquez sur **Enable Clearance** pour l'activer. 
+    :::{image} ../../../../../_shared/media/images/shapes.png
+    :width: 30%
+    :::
+    
 * - **9**
   - Déplacer le **cadre** de la Clearance sur la zone qui doit rester dégagée
       - Typiquement : zone de préhension de la pince (une clearance par zone de préhension de la pince)
@@ -198,6 +208,10 @@ Sur la page de liste de toutes les clearances, cliquer sur **TEST** pour voir to
   - Zone occupée, prélèvement impossible
   - ![](../../../../../_shared/media/images/redclearances.png)
 ````
+:::{note}
+Les dimensions des Clearances, exprimées en mm, sont indiquées dans les encadrés correspondants.
+:::
+
 
 ### *Que signifie « Triggered » ?*
 

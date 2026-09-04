@@ -41,6 +41,10 @@ La página **Protocol Setup** permite configurar los parámetros que rigen el fl
     :::{attention}
     **No es un timeout de error del robot**, sino una referencia temporal para el cálculo del ciclo y las métricas de productividad.
     :::
+
+* - **Robot String Separator**
+  - Especifica el separador de cadenas que utiliza el robot seleccionado y te permite elegir entre todos los demás separadores disponibles.       
+    ![Separatori stringa](../../../../../_shared/media/images/separatoristringa.jpg)
 ```
 
 ---

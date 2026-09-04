@@ -71,6 +71,9 @@ Le système prend en charge les commandes suivantes par le biais de chaînes de 
   - Renvoie l'état de diagnostic du localisateur
   - `Locator is Running` / `Locator is in Error` / `Locator is not Running`
 ```
+:::{note}
+Outre ` ; ` , les autres séparateurs de chaîne disponibles sont : `,`, `|`, `:`, `&`, `$`, `@`, `#`.
+:::
 
 ### *Commandes du FlexiBowl®*
 

@@ -198,6 +198,9 @@ Klicken Sie auf der Seite mit der Liste aller Clearances auf „**TEST**“, um 
   - Bereich belegt, Aufnahme nicht möglich
   - ![](../../../../../_shared/media/images/redclearances.png)
 ````
+:::{note}
+In den Feldern „Clearances“ sind deren Abmessungen in mm angegeben.
+:::
 
 ### *Was bedeutet „Triggered“?*
 

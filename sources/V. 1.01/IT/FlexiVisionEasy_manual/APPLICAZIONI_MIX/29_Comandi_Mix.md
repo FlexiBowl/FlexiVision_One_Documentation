@@ -17,7 +17,9 @@ Questa variazione consente al sistema di visione di attivare la logica di ricono
 ```{important}
 Il valore di ritorno dei comandi Mix include sempre l'identificativo del pattern riconosciuto (`Pattern_n`). Il programma robot deve essere predisposto per gestire le diverse tipologie di risposta e adottare la logica di prelievo appropriata in base al modello identificato.
 ```
-
+:::{tip}
+La nuova verisone permette di gestire in modo combinato i comandi `mix_Locator_n` per i robot 1, 2 e 3. 
+:::
 ---
 
 ## Comandi disponibili in modalità Mix
@@ -47,6 +49,7 @@ Ogni comando `mix_Locator_n` cerca **esclusivamente** il modello corrispondente 
 Questo significa che per richiedere le coordinate di un modello diverso è necessario utilizzare il comando specifico per quel modello (es. `mix_Locator_2` per il Modello 2, `mix_Locator_3` per il Modello 3, e così via).
 ```
 
+
 | Comando | Azione | Valore di Ritorno |
 |---|---|---|
 | `mix_Locator_1` | Avvia la ricerca del **Modello 1**. Se non trovato, aziona il FlexiBowl® e ripete la ricerca automaticamente fino al ritrovamento o a `stop_Locator`. Attiva la tramoggia se necessario. | `Pattern_1;x;y;r` / `Hopper;signalnumber;time` |
@@ -62,6 +65,9 @@ Questo significa che per richiedere le coordinate di un modello diverso è neces
 ```{tip}
 Il numero massimo di modelli gestibili all'interno di una singola ricetta Mix è **8**, corrispondenti ai comandi `mix_Locator_1` … `mix_Locator_8`. Il programma robot può richiedere i modelli in qualsiasi ordine e combinazione, a seconda della logica applicativa.
 ```
+:::{tip}
+La nuova versione rende disponibile la costruzione di comandi di tipo `mix_Locator ` multi-modello, quindi che richiamano più di un modello contemporaneamente. Ad esempio, il comando  `mix_Locator12 ` richiama i modelli 1 e 2. 
+:::
 
 ### *Comandi FlexiBowl®*
 

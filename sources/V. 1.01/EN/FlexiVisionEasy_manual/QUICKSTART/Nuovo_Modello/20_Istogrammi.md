@@ -102,9 +102,19 @@ If you have any doubts during configuration, please consult the **INFO** key on 
     :width: 100%
     :align: center
 :::
+
+:::{tip}
+The new version also allows you to select the type of region (Rectangle, Annulus Section, Circle).  
+![Scelta Forma](../../../../../_shared/media/images/clearances.png)
+:::
+
 ````{list-table}
 * - **8**
-  - Click **Enable Clearance** to activate the clearance
+  - Select the type of clearance and click **Enable Clearance** to activate the clearance. 
+    :::{image} ../../../../../_shared/media/images/shapes.png
+    :width: 30%
+    :::
+    
 * - **9**
   - Move the **frame** of the Clearance to the area that is to remain clear
       - Typically: gripper picking area (one clearance per gripper picking area)
@@ -198,6 +208,9 @@ On the list page of all clearances, click **TEST** to view all clearances at onc
   - Area engaged, picking not possible
   - ![](../../../../../_shared/media/images/redclearances.png)
 ````
+:::{note}
+The Clearances boxes list their dimensions in mm.
+:::
 
 ### *What does "Triggered" mean?*
 

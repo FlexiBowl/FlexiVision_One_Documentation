@@ -462,6 +462,10 @@
 <p class="admonition-title">Important</p>
 <p>La valeur de retour des commandes Mix comprend toujours l’identifiant du modèle reconnu (<code class="docutils literal notranslate"><span class="pre">Pattern_n</span></code>). Le programme du robot doit être configuré pour gérer les différents types de réponse et adopter la logique de prélèvement appropriée en fonction du modèle identifié.</p>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>La nouvelle version permet de gérer de manière combinée les commandes <code class="docutils literal notranslate"><span class="pre">mix_Locator_n</span></code> pour les robots 1, 2 et 3.</p>
+</div>
 </section>
 <hr class="docutils" />
 <section id="commandes-disponibles-en-mode-mix">
@@ -557,6 +561,10 @@ Cela signifie que pour demander les coordonnées d’un modèle différent, il f
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Le nombre maximal de modèles pouvant être gérés dans une seule recette Mix est de <strong>8</strong>, correspondant aux commandes <code class="docutils literal notranslate"><span class="pre">mix_Locator_1</span></code> … <code class="docutils literal notranslate"><span class="pre">mix_Locator_8</span></code>. Le programme du robot peut demander les modèles dans n’importe quel ordre et combinaison, en fonction de la logique de l’application.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>La nouvelle version permet de créer des commandes de type <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code> multi-modèles, c’est-à-dire qui font appel à plusieurs modèles simultanément. Par exemple, la commande <code class="docutils literal notranslate"><span class="pre">mix_Locator12</span></code> fait appel aux modèles 1 et 2.</p>
 </div>
 </section>
 <section id="commandes-flexibowl">

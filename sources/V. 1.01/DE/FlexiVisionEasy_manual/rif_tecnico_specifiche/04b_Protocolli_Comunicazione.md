@@ -72,6 +72,10 @@ Das System unterstützt die folgenden Befehle über Textstrings, die über die T
   - `Locator is Running` / `Locator is in Error` / `Locator is not Running`
 ```
 
+:::{note}
+Neben `;` stehen folgende weitere Trennzeichen zur Verfügung: `,`, `|`, `:`, `&`, `$`, `@`, `#`.
+:::
+
 ### *FlexiBowl®-Befehle*
 
 ```{list-table}

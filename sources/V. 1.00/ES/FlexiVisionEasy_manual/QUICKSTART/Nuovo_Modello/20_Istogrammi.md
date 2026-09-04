@@ -198,6 +198,10 @@ En la página de lista de todas las Clearances, haga clic en **TEST** para ver t
   - Zona ocupada, recogida no posible
   - ![](../../../../../_shared/media/images/redclearances.png)
 ````
+:::{note}
+En los recuadros de las «Clearances» se indican sus dimensiones en mm.
+:::
+
 
 ### *¿Qué significa "Triggered"?*
 

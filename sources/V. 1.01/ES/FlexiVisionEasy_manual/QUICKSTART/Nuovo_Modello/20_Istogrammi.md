@@ -102,9 +102,19 @@ Si tiene alguna duda durante la configuración, consulte el botón **INFO** de l
     :width: 100%
     :align: center
 :::
+
+:::{tip}
+La nueva versión también permite seleccionar el tipo de región (Rectangle, Annulus Section, Circle).  
+![Scelta Forma](../../../../../_shared/media/images/clearances.png)
+:::
+
 ````{list-table}
 * - **8**
-  - Haga clic en **Enable Clearance** para activar la Clearance 
+  - Elige el tipo de autorización que deseas asignar y haz clic en **Enable Clearance** para activarla.  
+    :::{image} ../../../../../_shared/media/images/shapes.png
+    :width: 30%
+    :::
+    
 * - **9**
   - Desplace el **cuadro** de la Clearance hasta la zona que debe quedar libre
       - Normalmente: zona de agarre de la pinza (una Clearance por zona de agarre de la pinza)
@@ -198,6 +208,10 @@ En la página de lista de todas las Clearances, haga clic en **TEST** para ver t
   - Zona ocupada, recogida no posible
   - ![](../../../../../_shared/media/images/redclearances.png)
 ````
+:::{note}
+En los recuadros de las «Clearances» se indican sus dimensiones en mm.
+:::
+
 
 ### *¿Qué significa "Triggered"?*
 

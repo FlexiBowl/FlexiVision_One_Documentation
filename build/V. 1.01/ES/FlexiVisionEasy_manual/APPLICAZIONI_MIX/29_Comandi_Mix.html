@@ -461,6 +461,10 @@
 <p class="admonition-title">Important</p>
 <p>El valor de retorno de los comandos Mix incluye siempre el identificativo del patrón reconocido (<code class="docutils literal notranslate"><span class="pre">Pattern_n</span></code>). El programa del robot debe estar preparado para gestionar las distintas tipologías de respuesta y adoptar la lógica de recogida adecuada en función del modelo identificado.</p>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>La nueva versión permite gestionar de forma combinada los comandos <code class="docutils literal notranslate"><span class="pre">mix_Locator_n</span></code> para los robots 1, 2 y 3.</p>
+</div>
 </section>
 <hr class="docutils" />
 <section id="comandos-disponibles-en-modo-mix">
@@ -556,6 +560,10 @@ Esto significa que, para solicitar las coordenadas de un modelo diferente, es ne
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>El número máximo de modelos gestionables dentro de una única receta Mix es <strong>8</strong>, correspondientes a los comandos <code class="docutils literal notranslate"><span class="pre">mix_Locator_1</span></code> … <code class="docutils literal notranslate"><span class="pre">mix_Locator_8</span></code>. El programa del robot puede solicitar los modelos en cualquier orden y combinación, según la lógica aplicativa.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>La nueva versión permite crear comandos de tipo <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code> multimodelo, es decir, que activan más de un modelo a la vez. Por ejemplo, el comando <code class="docutils literal notranslate"><span class="pre">mix_Locator12</span></code> activa los modelos 1 y 2.</p>
 </div>
 </section>
 <section id="comandos-flexibowl">

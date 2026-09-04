@@ -458,6 +458,10 @@
 <p class="admonition-title">Important</p>
 <p>Der Rückgabewert der Mix-Befehle enthält immer die Kennung des erkannten Musters (<code class="docutils literal notranslate"><span class="pre">Pattern_n</span></code>). Das Roboterprogramm muss so ausgelegt sein, dass es die verschiedenen Antworttypen verarbeiten und je nach identifiziertem Modell die entsprechende Entnahmestrategie anwenden kann.</p>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Die neue Version ermöglicht die kombinierte Steuerung der Befehle <code class="docutils literal notranslate"><span class="pre">mix_Locator_n</span></code> für die Roboter 1, 2 und 3.</p>
+</div>
 </section>
 <hr class="docutils" />
 <section id="im-mix-modus-verfugbare-befehle">
@@ -553,6 +557,10 @@ Das bedeutet, dass zur Abfrage der Koordinaten eines anderen Modells der für di
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Die maximale Anzahl der Modelle, die innerhalb eines einzelnen Mix-Rezepts verwaltet werden können, beträgt <strong>8</strong>, entsprechend den Befehlen <code class="docutils literal notranslate"><span class="pre">mix_Locator_1</span></code> … <code class="docutils literal notranslate"><span class="pre">mix_Locator_8</span></code>. Das Roboterprogramm kann die Modelle je nach Anwendungslogik in beliebiger Reihenfolge und Kombination anfordern.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Die neue Version ermöglicht die Erstellung von Befehlen vom Typ <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code>, die mehrere Modelle gleichzeitig aufrufen. So ruft beispielsweise der Befehl <code class="docutils literal notranslate"><span class="pre">mix_Locator12</span></code> die Modelle 1 und 2 auf.</p>
 </div>
 </section>
 <section id="flexibowl-befehle">

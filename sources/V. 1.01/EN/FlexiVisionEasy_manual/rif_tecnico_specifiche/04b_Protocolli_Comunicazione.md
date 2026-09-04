@@ -71,6 +71,9 @@ The system supports the following commands via text strings sent over the TCP/IP
   - It returns the diagnostic status of the locator
   - `Locator is Running` / `Locator is in Error` / `Locator is not Running`
 ```
+:::{note}
+Other string separators available, in addition to `;`, are: `,`, `|`, `:`, `&`, `$`, `@`, `#`.
+:::
 
 ### *FlexiBowl® Commands*
 

@@ -17,7 +17,9 @@ Cette variation permet au système de vision d'activer la logique de reconnaissa
 ```{important}
 La valeur de retour des commandes Mix comprend toujours l'identifiant du modèle reconnu (`Pattern_n`). Le programme du robot doit être configuré pour gérer les différents types de réponse et adopter la logique de prélèvement appropriée en fonction du modèle identifié.
 ```
-
+:::{tip}
+La nouvelle version permet de gérer de manière combinée les commandes `mix_Locator_n` pour les robots 1, 2 et 3.
+:::
 ---
 
 ## Commandes disponibles en mode Mix
@@ -62,6 +64,9 @@ Cela signifie que pour demander les coordonnées d'un modèle différent, il fau
 ```{tip}
 Le nombre maximal de modèles pouvant être gérés dans une seule recette Mix est de **8**, correspondant aux commandes `mix_Locator_1` … `mix_Locator_8`. Le programme du robot peut demander les modèles dans n'importe quel ordre et combinaison, en fonction de la logique de l'application.
 ```
+:::{tip}
+La nouvelle version permet de créer des commandes de type `mix_Locator` multi-modèles, c'est-à-dire qui font appel à plusieurs modèles simultanément. Par exemple, la commande `mix_Locator12` fait appel aux modèles 1 et 2.
+:::
 
 ### *Commandes FlexiBowl®*
 

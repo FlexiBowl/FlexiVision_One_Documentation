@@ -462,6 +462,10 @@
 <p class="admonition-title">Important</p>
 <p>The return value of Mix commands always includes the recognised pattern identifier (<code class="docutils literal notranslate"><span class="pre">Pattern_n</span></code>). The robot program must be set up to manage the different response types and adopt the appropriate picking logic according to the identified model.</p>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The new version allows you to manage the <code class="docutils literal notranslate"><span class="pre">mix_Locator_n</span></code> commands for robots 1, 2, and 3 in a combined manner.</p>
+</div>
 </section>
 <hr class="docutils" />
 <section id="commands-available-in-mix-mode">
@@ -557,6 +561,10 @@ This means that to request the coordinates of a different model, the specific co
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>The maximum number of models that can be managed within a single Mix recipe is <strong>8</strong>, corresponding to the commands <code class="docutils literal notranslate"><span class="pre">mix_Locator_1</span></code> … <code class="docutils literal notranslate"><span class="pre">mix_Locator_8</span></code>. The robot program can request the models in any order and combination, depending on the application logic.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The new version allows you to create <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code> commands that span multiple models—that is, commands that call multiple models simultaneously. For example, the <code class="docutils literal notranslate"><span class="pre">mix_Locator12</span></code> command calls models 1 and 2.</p>
 </div>
 </section>
 <section id="flexibowl-commands">
