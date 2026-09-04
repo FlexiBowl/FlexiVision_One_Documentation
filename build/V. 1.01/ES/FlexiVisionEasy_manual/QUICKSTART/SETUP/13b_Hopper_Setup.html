@@ -237,6 +237,7 @@
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../24_Verifica_Risultati.html"><strong>Monitorización de aplicaciones: Cuadro de mandos</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../25_CheckBelt.html"><strong>Monitorización de la Cinta: Check Belt</strong></a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EXPERTO</span></p>
 <ul class="nav bd-sidenav">
@@ -426,19 +427,21 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Hopper Setup</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparacion-de-la-configuracion-fisica">Preparación de la configuración física</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acceso-a-la-configuracion-hopper">Acceso a la configuración Hopper</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vision-general-de-la-interfaz-hopper-setup">Visión general de la interfaz Hopper Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acceso-a-la-configuracion-del-hopper">Acceso a la configuración del Hopper</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#descripcion-general-de-la-interfaz-hopper-setup">Descripción general de la interfaz Hopper Setup</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#configuracion-de-la-tolva-hopper"><strong>Configuración de la tolva (Hopper)</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paso-1-acceso-a-la-configuracion">Paso 1: Acceso a la configuración</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paso-2-definicion-del-area-de-control">Paso 2: Definición del área de control</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paso-3-definicion-de-valores-umbral">Paso 3: Definición de valores umbral</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paso-4-parametros-operativos">Paso 4: Parámetros operativos</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcular-el-parametro-steps"><em>Calcular el parámetro Steps</em></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#configuracion-de-la-tolva-hopper"><strong>Configuración de la Tolva (Hopper)</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paso-1-acceso-a-la-configuracion">Paso 1: Acceso a la Configuración</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paso-2-definicion-del-area-de-control">Paso 2: Definición del Área de Control</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paso-3-definicion-de-los-valores-umbral">Paso 3: Definición de los Valores Umbral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paso-4-parametros-operativos">Paso 4: Parámetros Operativos</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wizard-steps-calculo-guiado-del-parametro-steps"><em>Wizard Steps: Cálculo Guiado del Parámetro Steps</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcular-el-parametro-steps"><em>Calcular el Parámetro Steps</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wizard-time-calculo-guiado-de-los-parametros-de-activacion"><em>Wizard Time: Cálculo Guiado de los Parámetros de Activación</em></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guardar-configuracion">Guardar configuración</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guardado-de-la-configuracion">Guardado de la Configuración</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proximos-pasos">Próximos pasos</a></li>
 </ul>
 </li>
@@ -456,20 +459,20 @@
                   
   <section id="hopper-setup">
 <span id="hoppersetup"></span><h1><strong>Hopper Setup</strong><a class="headerlink" href="#hopper-setup" title="Link to this heading">#</a></h1>
-<p>Esta sección describe el procedimiento para configurar la tolva (Hopper). La Hopper es el componente que alimenta automáticamente piezas en el FlexiBowl® cuando el nivel desciende por debajo de un umbral mínimo.</p>
+<p>Esta sección describe el procedimiento para configurar la tolva (Hopper). El Hopper es el componente que alimenta automáticamente piezas en el FlexiBowl® cuando el nivel desciende por debajo de un umbral mínimo.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Lógica de funcionamiento</strong></p>
-<p>FlexiVision gestiona la lógica de activación de la tolva. De hecho, enviará la cadena <code class="docutils literal notranslate"><span class="pre">Hopper;signalnumber;time</span></code> cuando considere necesaria la activación.</p>
+<p>FlexiVision gestiona la lógica de activación de la tolva. Enviará la cadena <code class="docutils literal notranslate"><span class="pre">Hopper;signalnumber;time</span></code> cuando considere necesaria la activación.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Requisitos previos</strong></p>
 <p>Antes de continuar, asegúrese de que:</p>
 <ul class="simple">
-<li><p>La Hopper se ha instalado mecánicamente</p></li>
-<li><p>Se han completado las conexiones eléctricas (señales de control y alimentación)</p></li>
-<li><p>El FlexiBowl® ya está conectado</p></li>
+<li><p>El Hopper se haya instalado mecánicamente</p></li>
+<li><p>Las conexiones eléctricas se hayan completado (señales de control y alimentación)</p></li>
+<li><p>El FlexiBowl® ya esté conectado</p></li>
 </ul>
 </div>
 <hr class="docutils" />
@@ -478,11 +481,11 @@
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><strong>0</strong></p></td>
-<td><p>Retire la rejilla de calibración y restablezca la disposición inicial:</p>
+<td><p>Desmontar la rejilla de calibración y restablecer la disposición inicial:</p>
 <ul class="simple">
-<li><p>Vuelva a colocar la superficie</p></li>
-<li><p>vuelva a colocar la brida central</p></li>
-<li><p>fije la brida central con sus cuatro tornillos</p></li>
+<li><p>Reposicionar la superficie</p></li>
+<li><p>reposicionar la brida central</p></li>
+<li><p>fijar la brida central con sus cuatro tornillos</p></li>
 </ul>
 </td>
 </tr>
@@ -491,34 +494,14 @@
 </div>
 </section>
 <hr class="docutils" />
-<section id="acceso-a-la-configuracion-hopper">
-<h2>Acceso a la configuración Hopper<a class="headerlink" href="#acceso-a-la-configuracion-hopper" title="Link to this heading">#</a></h2>
-<div class="pst-scrollable-table-container"><table class="table">
-<tbody>
-<tr class="row-odd"><td><p><strong>1</strong></p></td>
-<td><p>Desde la página principal del software, haga clic en <img alt="../../../_images/tasto_setup1.png" class="inline-icon" src="../../../../../_shared/media/images/tasto_setup1.png" /></p></td>
-</tr>
-<tr class="row-even"><td><p><strong>2</strong></p></td>
-<td><p>En la página SETUP, identifique y haga clic en el icono <strong>Hopper Setup</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Página de configuración</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><img alt="Página de configuración" src="../../../../../_shared/media/images/pagina_setup1.png" /></p>
-</div>
-</details></td>
-</tr>
-<tr class="row-odd"><td><p><strong>3</strong></p></td>
-<td><p>Se abre la página de configuración de la Hopper</p></td>
-</tr>
-</tbody>
-</table>
-</div>
+<section id="acceso-a-la-configuracion-del-hopper">
+<h2>Acceso a la configuración del Hopper<a class="headerlink" href="#acceso-a-la-configuracion-del-hopper" title="Link to this heading">#</a></h2>
 </section>
 <hr class="docutils" />
-<section id="vision-general-de-la-interfaz-hopper-setup">
-<h2>Visión general de la interfaz Hopper Setup<a class="headerlink" href="#vision-general-de-la-interfaz-hopper-setup" title="Link to this heading">#</a></h2>
-<p>La página Hopper Setup presenta varias secciones para configurar los parámetros de funcionamiento de las distintas tolvas:</p>
-<p><img alt="Página de configuración de la tolva" src="../../../../../_shared/media/images/pagina_hoppersetup.png" /></p>
+<section id="descripcion-general-de-la-interfaz-hopper-setup">
+<h2>Descripción general de la interfaz Hopper Setup<a class="headerlink" href="#descripcion-general-de-la-interfaz-hopper-setup" title="Link to this heading">#</a></h2>
+<p>La página Hopper Setup presenta varias secciones para la configuración de los parámetros operativos de las distintas tolvas:</p>
+<p><img alt="Página Hopper Setup" src="../../../../../_shared/media/images/pagina_hoppersetup.png" /></p>
 <div class="pst-scrollable-table-container"><table class="table">
 <colgroup>
 <col style="width: 30.0%" />
@@ -531,19 +514,25 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>Enable Hopper</strong></p></td>
-<td><p>Interruptor para habilitar/deshabilitar el uso de la Hopper en el sistema</p></td>
+<td><p>Interruptor para habilitar/deshabilitar el uso del Hopper en el sistema</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Steps</strong></p></td>
-<td><p>Número de secuencias necesarias con las que la sección del disco que está actualmente en el área de visión llega bajo la zona de descarga de la tolva</p></td>
+<td><p>Número de secuencias necesarias con las que la sección del disco que se encuentra actualmente en el área de visión llega bajo el área de descarga de la tolva</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Time</strong></p></td>
+<tr class="row-even"><td><p><strong>Wizard Steps</strong></p></td>
+<td><p>Inicia el procedimiento guiado para el cálculo automático del parámetro Steps (véase <a class="reference internal" href="#wizardsteps"><span class="std std-ref">Wizard Steps</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Time</strong></p></td>
 <td><p>Duración de la activación de la tolva en milisegundos</p></td>
 </tr>
+<tr class="row-even"><td><p><strong>Wizard Time</strong></p></td>
+<td><p>Inicia el procedimiento guiado para el cálculo automático de los parámetros de activación de la tolva (véase <a class="reference internal" href="#wizardtime"><span class="std std-ref">Wizard Time</span></a>)</p></td>
+</tr>
 <tr class="row-odd"><td><p><strong>Signal</strong></p></td>
-<td><p>Número de la señal digital utilizada para controlar la Hopper</p></td>
+<td><p>Número de la señal digital utilizada para controlar el Hopper</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Config Hopper</strong></p></td>
-<td><p>Botón para configurar la tolva (se utilizará más adelante)</p></td>
+<td><p>Botón para configurar la tolva (para usar a continuación)</p></td>
 </tr>
 </tbody>
 </table>
@@ -552,31 +541,31 @@
 </section>
 </section>
 <section id="configuracion-de-la-tolva-hopper">
-<span id="confighopper"></span><h1><strong>Configuración de la tolva (Hopper)</strong><a class="headerlink" href="#configuracion-de-la-tolva-hopper" title="Link to this heading">#</a></h1>
-<p>La configuración de la tolva permite la reposición automática de componentes en el disco FlexiBowl®. El sistema utiliza la visión para determinar cuándo el nivel de llenado es insuficiente y activar la tolva.</p>
+<span id="confighopper"></span><h1><strong>Configuración de la Tolva (Hopper)</strong><a class="headerlink" href="#configuracion-de-la-tolva-hopper" title="Link to this heading">#</a></h1>
+<p>La configuración de la tolva permite gestionar el reabastecimiento automático de los componentes en el disco del FlexiBowl®. El sistema utiliza la visión para determinar cuándo el nivel de llenado es insuficiente y activar la tolva.</p>
 <section id="paso-1-acceso-a-la-configuracion">
-<h2>Paso 1: Acceso a la configuración<a class="headerlink" href="#paso-1-acceso-a-la-configuracion" title="Link to this heading">#</a></h2>
+<h2>Paso 1: Acceso a la Configuración<a class="headerlink" href="#paso-1-acceso-a-la-configuracion" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><strong>1</strong></p></td>
 <td><p>Haga clic en <img alt="../../../_images/tasto_setup1.png" class="inline-icon" src="../../../../../_shared/media/images/tasto_setup1.png" />.<br />
-Desde la sección <strong>Hopper Setup</strong>, puede ver y gestionar las unidades de carga conectadas.</p>
+Desde la sección <strong>Hopper Setup</strong>, es posible visualizar y gestionar las unidades de carga conectadas.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Página de configuración de la tolva</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><img alt="Página de configuración de la tolva" src="../../../../../_shared/media/images/pagina_hoppersetup.png" /></p>
+<span class="sd-summary-text">Página Hopper Setup</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><img alt="Página Hopper Setup" src="../../../../../_shared/media/images/pagina_hoppersetup.png" /></p>
 </div>
 </details></td>
 </tr>
 <tr class="row-even"><td><p><strong>2</strong></p></td>
-<td><p>En el campo <strong>Signal</strong>, introduzca el número de la señal digital (DO - Digital Output) utilizada para controlar la Hopper</p>
+<td><p>En el campo <strong>Signal</strong>, introduzca el número de la señal digital (DO - Digital Output) utilizada para controlar el Hopper</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Es esencial introducir el número de señal correcto:</p>
+<p>Es fundamental introducir el número de señal correcto:</p>
 <ul class="simple">
-<li><p>Un número incorrecto activará la señal equivocada (potencialmente peligrosa)</p></li>
+<li><p>Un número erróneo activará la señal equivocada (potencialmente peligroso)</p></li>
 <li><p>Consulte el esquema eléctrico realizado durante la instalación</p></li>
-<li><p>En caso de duda, contacte con quien efectuó el cableado</p></li>
+<li><p>En caso de duda, contacte con quien haya realizado el cableado</p></li>
 </ul>
 </div>
 </td>
@@ -585,39 +574,39 @@ Desde la sección <strong>Hopper Setup</strong>, puede ver y gestionar las unida
 <td><p>Seleccione la casilla <strong>Enable Hopper X</strong> para activar la tolva correspondiente.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Habilite la Hopper solo si el dispositivo está correctamente instalado</p>
+<p>Habilite el Hopper solo si el dispositivo está correctamente instalado</p>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p><strong>4</strong></p></td>
-<td><p>Pulse el botón <strong>Config Hopper X</strong> para acceder a la configuración específica</p></td>
+<td><p>Haga clic en el botón <strong>Config Hopper X</strong> para acceder a la configuración específica</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
 <section id="paso-2-definicion-del-area-de-control">
-<h2>Paso 2: Definición del área de control<a class="headerlink" href="#paso-2-definicion-del-area-de-control" title="Link to this heading">#</a></h2>
-<div  class="sphinx-contrib-video-container align-center"><video controls="True" preload="auto" width="100%"><source src="../../../../../_shared/media/videos/TastoInfo_AreaHopper_1280x720.mp4" type="video/mp4"></video></div><p>En esta fase se define la parte del disco que la cámara debe vigilar para la descarga.</p>
+<h2>Paso 2: Definición del Área de Control<a class="headerlink" href="#paso-2-definicion-del-area-de-control" title="Link to this heading">#</a></h2>
+<div  class="sphinx-contrib-video-container align-center"><video controls="True" preload="auto" width="100%"><source src="../../../../../_shared/media/videos/TastoInfo_AreaHopper_1280x720.mp4" type="video/mp4"></video></div><p>En esta fase se define la porción del disco que la cámara debe monitorizar para la descarga.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><strong>5</strong></p></td>
-<td><p>Cambie el marco azul de la pantalla para encuadrar la zona en la que se detectarán los componentes.</p></td>
+<td><p>Modifique el recuadro azul en pantalla para encuadrar el área en la que se detectarán los componentes.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Si tiene alguna duda durante la configuración, consulte el botón <strong>INFO</strong> de la página actual.</p>
+<p>Para cualquier duda durante la configuración, consulte el botón <strong>INFO</strong> presente en la página actual.</p>
 </div>
 </section>
-<section id="paso-3-definicion-de-valores-umbral">
-<h2>Paso 3: Definición de valores umbral<a class="headerlink" href="#paso-3-definicion-de-valores-umbral" title="Link to this heading">#</a></h2>
+<section id="paso-3-definicion-de-los-valores-umbral">
+<h2>Paso 3: Definición de los Valores Umbral<a class="headerlink" href="#paso-3-definicion-de-los-valores-umbral" title="Link to this heading">#</a></h2>
 <div  class="sphinx-contrib-video-container align-center"><video controls="True" preload="auto" width="100%"><source src="../../../../../_shared/media/videos/TastoInfo_Hopper_1280x720.mp4" type="video/mp4"></video></div><div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><strong>6</strong></p></td>
-<td><p>Haga clic en <img alt="../../../_images/tasto_next.png" class="inline-icon icon-small" src="../../../../../_shared/media/images/tasto_next.png" /> para acceder a la página <strong>Define Value Hopper Cam</strong>, donde se indica al sistema que distinga entre un disco vacío y uno lleno.</p>
+<td><p>Haga clic en <img alt="../../../_images/tasto_next.png" class="inline-icon icon-small" src="../../../../../_shared/media/images/tasto_next.png" /> para acceder a la página <strong>Define Value Hopper Cam</strong>, donde se instruye al sistema para distinguir entre disco vacío y disco lleno.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Página Define Value Hopper Cam</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -629,35 +618,35 @@ Desde la sección <strong>Hopper Setup</strong>, puede ver y gestionar las unida
 <td><p>Retire todos los componentes del área de visión y haga clic en el primer botón <strong>CAPTURE</strong>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>8</strong></p></td>
-<td><p>Coloque el número mínimo de componentes que desee conservar en el área de visión. Si el número cae por debajo de este umbral, se activará la tolva.</p></td>
+<td><p>Coloque el número mínimo de componentes que desea mantener en el área de visión. Si el número desciende por debajo de este umbral, la tolva se activará.</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>9</strong></p></td>
 <td><p>Haga clic en el segundo botón <strong>CAPTURE</strong>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>10</strong></p></td>
-<td><p>Haciendo clic en <img alt="../../../_images/tasto_AUTO.png" class="inline-icon" src="../../../../../_shared/media/images/tasto_AUTO.png" /> en Expression Builder, el sistema calcula automáticamente los valores de <strong>Mean</strong> (Media) y <strong>Standard Deviation</strong>.</p></td>
+<td><p>Al hacer clic en <img alt="../../../_images/tasto_AUTO.png" class="inline-icon" src="../../../../../_shared/media/images/tasto_AUTO.png" /> en el Expression Builder, el sistema calcula automáticamente los valores de <strong>Mean</strong> (Media) y <strong>Standard Deviation</strong> (Desviación estándar).</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>11</strong></p></td>
 <td><p>Retire algunas piezas y haga clic en <img alt="../../../_images/tasto_TEST.png" class="inline-icon" src="../../../../../_shared/media/images/tasto_TEST.png" />.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>12</strong></p></td>
-<td><p>Observe el indicador de resultados:</p>
+<td><p>Observe el indicador de resultado:</p>
 <ul>
-<li><p><strong>Verde</strong> 🟢: Nivel insuficiente, la Hopper se activa (descarga necesaria)</p></li>
-<li><p><strong>Rojo</strong> 🔴: Nivel suficiente, la Hopper NO se ACTIVA (OK)</p>
+<li><p><strong>Verde</strong> 🟢: Nivel insuficiente, el Hopper se activa (descarga necesaria)</p></li>
+<li><p><strong>Rojo</strong> 🔴: Nivel suficiente, el Hopper NO se activa (OK)</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>Calibración insuficiente</strong></p>
-<p>Si el sistema no detecta el nivel correctamente:</p>
-<p><strong>Problema: Siempre verde (siempre activa la Hopper)</strong><br />
-→ Umbral demasiado bajo o interferencias en la zona<br />
-→ Solución: Aumentar el número de piezas en la segunda adquisición, comprobar la limpieza de la zona</p>
-<p><strong>Problema: Siempre rojo (nunca activa la Hopper)</strong><br />
+<p>Si el sistema no detecta correctamente el nivel:</p>
+<p><strong>Problema: Siempre verde (activa siempre el Hopper)</strong><br />
+→ Umbral demasiado bajo o interferencias en el área<br />
+→ Solución: Aumentar el número de piezas en la segunda adquisición, verificar la limpieza del área</p>
+<p><strong>Problema: Siempre rojo (no activa nunca el Hopper)</strong><br />
 → Umbral demasiado alto o área de monitorización no representativa<br />
 → Solución: Reducir el número de piezas en la segunda adquisición CAPTURE, repetir AUTO</p>
-<p><strong>Problema: Comportamiento incorrecto (alternancia verde/rojo aleatoria)</strong><br />
-→ Iluminación inestable o zona demasiado pequeña<br />
-→ Solución: Comprobar la estabilidad de la retroiluminación, ampliar el área de supervisión, repetir la calibración</p>
+<p><strong>Problema: Comportamiento erróneo (alterna verde/rojo aleatoriamente)</strong><br />
+→ Iluminación inestable o área demasiado pequeña<br />
+→ Solución: Verificar que el backlight sea estable, ampliar el área de monitorización, repetir la calibración</p>
 </div>
 </li>
 </ul>
@@ -670,86 +659,181 @@ Desde la sección <strong>Hopper Setup</strong>, puede ver y gestionar las unida
 <p class="admonition-title">Note</p>
 <p><strong>Hopper Fill Threshold</strong></p>
 <p>El parámetro <strong>Hopper Fill Threshold</strong> define el umbral porcentual de llenado del área de visión por debajo del cual la tolva se activa automáticamente.</p>
-<p>El valor del 100% corresponde a la cantidad de piezas adquiridas durante la segunda CAPTURE (área completa). Por consiguiente, un umbral del 50% corresponde a la mitad de esa cantidad.</p>
-<p>El sistema ajusta automáticamente el valor inicial al <strong>70%</strong>, lo que supone un buen equilibrio para la mayoría de las aplicaciones.</p>
-<p><strong>Modificación en curso</strong></p>
+<p>El valor del 100% corresponde a la cantidad de piezas adquirida durante la segunda CAPTURE (área llena). Por consiguiente, un umbral del 50% corresponde a la mitad de dicha cantidad.</p>
+<p>El sistema establece automáticamente el valor inicial en <strong>70%</strong>, que representa un buen equilibrio para la mayoría de las aplicaciones.</p>
+<p><strong>Modificación sobre la marcha</strong></p>
 <p>Es posible ajustar el umbral sin repetir el procedimiento de adquisición:</p>
 <ul class="simple">
-<li><p>Para descargar <strong>menos piezas</strong> → reduzca el porcentaje (por ejemplo, 50%) y haga clic en <strong>AUTO</strong></p></li>
-<li><p>Para descargar <strong>más piezas</strong> → aumente el porcentaje (por ejemplo, 85%) y haga clic en <strong>AUTO</strong></p></li>
+<li><p>Para descargar <strong>menos piezas</strong> → reducir el porcentaje (p. ej. 50%) y hacer clic en <strong>AUTO</strong></p></li>
+<li><p>Para descargar <strong>más piezas</strong> → aumentar el porcentaje (p. ej. 85%) y hacer clic en <strong>AUTO</strong></p></li>
 </ul>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Si tiene alguna duda durante la configuración, consulte el botón <strong>INFO</strong> de la página actual.</p>
+<p>Para cualquier duda durante la configuración, consulte el botón <strong>INFO</strong> presente en la página actual.</p>
 </div>
 </section>
 <section id="paso-4-parametros-operativos">
-<h2>Paso 4: Parámetros operativos<a class="headerlink" href="#paso-4-parametros-operativos" title="Link to this heading">#</a></h2>
+<h2>Paso 4: Parámetros Operativos<a class="headerlink" href="#paso-4-parametros-operativos" title="Link to this heading">#</a></h2>
 <p>Vuelva a la pantalla principal de Hopper Setup para definir el comportamiento mecánico.
-<img alt="Página de configuración de la tolva" src="../../../../../_shared/media/images/pagina_hoppersetup.png" /></p>
+<img alt="Página Hopper Setup" src="../../../../../_shared/media/images/pagina_hoppersetup.png" /></p>
 <div class="pst-scrollable-table-container"><table class="table" id="id1">
-<caption><span class="caption-text">Parámetros de funcionamiento</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<caption><span class="caption-text">Parámetros de Funcionamiento</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 20.0%" />
 <col style="width: 80.0%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Parámetro</strong></p></th>
-<th class="head"><p><strong>Descripción y procedimiento</strong></p></th>
+<th class="head"><p><strong>Descripción y Procedimiento</strong></p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>Steps</strong></p></td>
-<td><p>Número de avances del FlexiBowl® (secuencias) necesarios para llevar las piezas del área de visión a la zona de descarga de la tolva.</p></td>
+<td><p>Número de avances del FlexiBowl® (secuencias) necesarios para llevar las piezas desde el área de visión hasta el área de descarga de la tolva. Puede configurarse manualmente o calcularse mediante el <a class="reference internal" href="#wizardsteps"><span class="std std-ref">Wizard Steps</span></a>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Time</strong></p></td>
-<td><p>Milisegundos de activación de la tolva.   Valor recomendado: <strong>100 – 1000 ms</strong> (Media: <strong>500 ms</strong>). Ajustar en ±50 ms según el caudal deseado.</p></td>
+<td><p>Milisegundos de activación de la tolva. Valor recomendado: <strong>100 – 1000 ms</strong> (Media: <strong>500 ms</strong>). Ajustar en ±50 ms en función del flujo deseado. Puede configurarse manualmente o calcularse mediante el <a class="reference internal" href="#wizardtime"><span class="std std-ref">Wizard Time</span></a>.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>El tiempo de activación depende no solo del valor ajustado, sino también del volumen de componentes que haya en ese momento en el depósito de la tolva. Es esencial mantener una carga constante para obtener un caudal uniforme.</p>
+<p>El tiempo de activación depende no solo del valor establecido, sino también del volumen de componentes presentes actualmente en el depósito de la tolva. Es esencial mantener una carga constante para un flujo uniforme.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>El valor Time está estrechamente relacionado con el volumen de carga de la tolva:</p>
 <ul class="simple">
-<li><p>Con la tolva llena habrá más piezas en la zona de descarga</p></li>
-<li><p>Con la tolva medio llena habrá menos piezas en la zona de descarga</p></li>
+<li><p>Con la tolva llena habrá un mayor número de piezas en el área de descarga</p></li>
+<li><p>Con la tolva medio llena habrá un menor número de piezas en el área de descarga</p></li>
 </ul>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>En general, es importante no superar nunca la carga máxima de la tolva utilizada.</p>
 </div>
-<section id="calcular-el-parametro-steps">
-<h3><em>Calcular el parámetro Steps</em><a class="headerlink" href="#calcular-el-parametro-steps" title="Link to this heading">#</a></h3>
-<p><img alt="Pasos de portada" src="../../../../../_shared/media/images/Steps1.png" />
-<img alt="Pasos de la segunda página" src="../../../../../_shared/media/images/Steps2.png" />
-<img alt="Pasos de la tercera página" src="../../../../../_shared/media/images/Steps3.png" />
-<img alt="Pasos de la Cuarta Página" src="../../../../../_shared/media/images/Steps4.png" /></p>
-</section>
-</section>
-<section id="guardar-configuracion">
-<h2>Guardar configuración<a class="headerlink" href="#guardar-configuracion" title="Link to this heading">#</a></h2>
+<hr class="docutils" />
+<section id="wizard-steps-calculo-guiado-del-parametro-steps">
+<span id="wizardsteps"></span><h3><em>Wizard Steps: Cálculo Guiado del Parámetro Steps</em><a class="headerlink" href="#wizard-steps-calculo-guiado-del-parametro-steps" title="Link to this heading">#</a></h3>
+<p>El <strong>Wizard Steps</strong> guía al operador en el cálculo del número de secuencias necesarias para que una pieza, colocada en el centro del área de visión, alcance el área de descarga de la tolva.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hopper Step Setup Cam X</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><img alt="Hopper Step Setup" src="../../../../../_shared/media/images/pagina_hopperstepwizard.png" /></p>
+</div>
+</details><div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>1</strong></p></td>
+<td><p>Coloque una única pieza en el centro del área de visión.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Asegúrese de que la secuencia actualmente cargada en el FlexiBowl® sea la definitiva, es decir, la misma que se utilizará en producción. Un cambio de secuencia posterior invalidaría el valor calculado.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>2</strong></p></td>
+<td><p>Haga clic en <strong>Reset Steps</strong> para poner a cero el contador e iniciar el procedimiento de calibración.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3</strong></p></td>
+<td><p>Haga clic en <strong>Test Sequence</strong> para ejecutar una única secuencia del FlexiBowl®.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Espere a que finalice la secuencia antes de ejecutar otra.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>4</strong></p></td>
+<td><p>Repita el clic en <strong>Test Sequence</strong> hasta que la pieza alcance el área de la tolva. El <strong>Current Step Count</strong> se actualiza automáticamente después de cada secuencia ejecutada.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>5</strong></p></td>
+<td><p>Cuando la pieza alcance el área de la tolva, haga clic en <strong>Save Hopper Step</strong> para guardar el valor actual como parámetro Steps.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><strong>Guardado de receta obligatorio</strong></p>
-<p>Al final de la configuración de la Hopper:</p>
+<p>El valor calculado con el Wizard Steps <strong>no se conserva tras reiniciar</strong> el software si la receta no se guarda. Recuerde guardar la receta al finalizar el procedimiento (véase <a class="reference internal" href="#salvataggio-configurazione"><span class="xref myst">Guardado de la Configuración</span></a>).</p>
+</div>
+<p>El indicador <strong>Calibration Active</strong> muestra el estado de la calibración en curso:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Color</p></th>
+<th class="head"><p>Estado</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>🔴 Rojo</p></td>
+<td><p>Calibración no activa / aún no iniciada</p></td>
+</tr>
+<tr class="row-odd"><td><p>🟢 Verde</p></td>
+<td><p>Calibración en curso / completada</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="calcular-el-parametro-steps">
+<h3><em>Calcular el Parámetro Steps</em><a class="headerlink" href="#calcular-el-parametro-steps" title="Link to this heading">#</a></h3>
+<p><img alt="Primera Página Steps" src="../../../../../_shared/media/images/Steps1.png" />
+<img alt="Segunda Página Steps" src="../../../../../_shared/media/images/Steps2.png" />
+<img alt="Tercera Página Steps" src="../../../../../_shared/media/images/Steps3.png" />
+<img alt="Cuarta Página Steps" src="../../../../../_shared/media/images/Steps4.png" /></p>
+<hr class="docutils" />
+</section>
+<section id="wizard-time-calculo-guiado-de-los-parametros-de-activacion">
+<span id="wizardtime"></span><h3><em>Wizard Time: Cálculo Guiado de los Parámetros de Activación</em><a class="headerlink" href="#wizard-time-calculo-guiado-de-los-parametros-de-activacion" title="Link to this heading">#</a></h3>
+<p>El <strong>Wizard Time</strong> guía al operador en el ajuste de los parámetros de activación de la tolva (amplitud, frecuencia y tiempo de activación), verificando su efecto mediante una prueba directa sobre el flujo de las piezas.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">FlexiBowl® X Hopper – Time and Parameter Setup</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><img alt="Hopper Time Setup" src="../../../../../_shared/media/images/pagina_hoppertimewizard.png" /></p>
+</div>
+</details><div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>1</strong></p></td>
+<td><p>Llene la tolva con una cantidad de piezas suficiente para simular las condiciones normales de funcionamiento.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>2</strong></p></td>
+<td><p>Verifique que las piezas estén correctamente colocadas y puedan moverse libremente hacia la salida de la tolva.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3</strong></p></td>
+<td><p>Establezca los valores de <strong>Amplitude (V)</strong>, <strong>Frequency (Hz)</strong> y <strong>Activation Time (ms)</strong> mediante los controles deslizantes correspondientes o introduciendo el valor directamente en el campo numérico.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>4</strong></p></td>
+<td><p>Haga clic en <strong>Test Hopper</strong> para activar la tolva con los parámetros establecidos y verificar el flujo de piezas.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>5</strong></p></td>
+<td><p>Ajuste los valores y repita la prueba hasta obtener el comportamiento de alimentación deseado.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Proceda con la configuración de la siguiente sección (Hopper Step) solo una vez que el flujo de piezas resulte satisfactorio.</p>
+</div>
+</section>
+</section>
+<section id="guardado-de-la-configuracion">
+<h2>Guardado de la Configuración<a class="headerlink" href="#guardado-de-la-configuracion" title="Link to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Guardado de la receta obligatorio</strong></p>
+<p>Al finalizar la configuración del Hopper:</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><ol class="arabic simple">
 <li></li>
 </ol>
 </td>
-<td><p>Verifique que todos los parámetros estén configurados correctamente:</p>
+<td><p>Verificar que todos los parámetros estén configurados correctamente:</p>
 <ul class="simple">
 <li><p>Área de monitorización posicionada</p></li>
 <li><p>Umbrales calibrados (TEST funcionando)</p></li>
-<li><p>Steps y Time configurados</p></li>
+<li><p>Steps y Time establecidos</p></li>
 </ul>
 </td>
 </tr>
@@ -757,35 +841,35 @@ Desde la sección <strong>Hopper Setup</strong>, puede ver y gestionar las unida
 <li></li>
 </ol>
 </td>
-<td><p>Vuelva a la página principal <img alt="../../../_images/tasto_recipes.png" class="inline-icon icon-small" src="../../../../../_shared/media/images/tasto_recipes.png" /></p></td>
+<td><p>Volver a la página principal <img alt="../../../_images/tasto_recipes.png" class="inline-icon icon-small" src="../../../../../_shared/media/images/tasto_recipes.png" /></p></td>
 </tr>
 <tr class="row-odd"><td><ol class="arabic simple" start="3">
 <li></li>
 </ol>
 </td>
-<td><p>Haga clic en <img alt="../../../_images/tasto_save_recipes.png" class="inline-icon icon-small" src="../../../../../_shared/media/images/tasto_save_recipes.png" /></p></td>
+<td><p>Hacer clic en <img alt="../../../_images/tasto_save_recipes.png" class="inline-icon icon-small" src="../../../../../_shared/media/images/tasto_save_recipes.png" /></p></td>
 </tr>
 <tr class="row-even"><td><ol class="arabic simple" start="4">
 <li></li>
 </ol>
 </td>
-<td><p>Confirme el guardado</p></td>
+<td><p>Confirmar el guardado</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p><strong>IMPORTANTE</strong>: Cada cambio realizado se memoriza <strong>SOLO</strong> si la receta se guarda correctamente antes de salir o cambiar de página.</p>
-<p>Si no se guarda, todas las configuraciones de la Hopper se perderán al cerrar FlexiVision One.</p>
+<p><strong>IMPORTANTE</strong>: Cada variación realizada se guarda <strong>SOLO</strong> si la receta se guarda correctamente antes de salir o cambiar de página.</p>
+<p>Sin guardar, ¡todas las configuraciones del Hopper se perderán al cerrar FlexiVision One!</p>
 </div>
 </section>
 <hr class="docutils" />
 <section id="proximos-pasos">
 <h2>Próximos pasos<a class="headerlink" href="#proximos-pasos" title="Link to this heading">#</a></h2>
-<p>Una vez completada la configuración de la Hopper (o omitida si no está presente), proceda con:</p>
+<p>Una vez completada la configuración del Hopper (u omitida si no está presente), proceda con:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="13c_Robot_Setup.html"><span class="std std-doc">Robot Setup</span></a></p></li>
 <li><p><a class="reference internal" href="15_Protocol_Setup.html#protocol-setup"><span class="std std-ref">Protocol Setup</span></a></p></li>
-<li><p><a class="reference internal" href="15b_SaveRecipe.html#ricettabase"><span class="std std-ref">Guardar la receta</span></a></p></li>
+<li><p><a class="reference internal" href="15b_SaveRecipe.html#ricettabase"><span class="std std-ref">Guardar la Receta</span></a></p></li>
 </ul>
 <br>
 <!-- Versions and languages set-up -->
@@ -1485,19 +1569,21 @@ Desde la sección <strong>Hopper Setup</strong>, puede ver y gestionar las unida
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Hopper Setup</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparacion-de-la-configuracion-fisica">Preparación de la configuración física</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acceso-a-la-configuracion-hopper">Acceso a la configuración Hopper</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vision-general-de-la-interfaz-hopper-setup">Visión general de la interfaz Hopper Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acceso-a-la-configuracion-del-hopper">Acceso a la configuración del Hopper</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#descripcion-general-de-la-interfaz-hopper-setup">Descripción general de la interfaz Hopper Setup</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#configuracion-de-la-tolva-hopper"><strong>Configuración de la tolva (Hopper)</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paso-1-acceso-a-la-configuracion">Paso 1: Acceso a la configuración</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paso-2-definicion-del-area-de-control">Paso 2: Definición del área de control</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paso-3-definicion-de-valores-umbral">Paso 3: Definición de valores umbral</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paso-4-parametros-operativos">Paso 4: Parámetros operativos</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcular-el-parametro-steps"><em>Calcular el parámetro Steps</em></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#configuracion-de-la-tolva-hopper"><strong>Configuración de la Tolva (Hopper)</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paso-1-acceso-a-la-configuracion">Paso 1: Acceso a la Configuración</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paso-2-definicion-del-area-de-control">Paso 2: Definición del Área de Control</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paso-3-definicion-de-los-valores-umbral">Paso 3: Definición de los Valores Umbral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paso-4-parametros-operativos">Paso 4: Parámetros Operativos</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wizard-steps-calculo-guiado-del-parametro-steps"><em>Wizard Steps: Cálculo Guiado del Parámetro Steps</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcular-el-parametro-steps"><em>Calcular el Parámetro Steps</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wizard-time-calculo-guiado-de-los-parametros-de-activacion"><em>Wizard Time: Cálculo Guiado de los Parámetros de Activación</em></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guardar-configuracion">Guardar configuración</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guardado-de-la-configuracion">Guardado de la Configuración</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proximos-pasos">Próximos pasos</a></li>
 </ul>
 </li>

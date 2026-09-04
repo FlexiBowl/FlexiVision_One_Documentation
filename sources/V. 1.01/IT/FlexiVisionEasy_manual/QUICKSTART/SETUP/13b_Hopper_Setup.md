@@ -58,14 +58,17 @@ La pagina Hopper Setup presenta diverse sezioni per la configurazione dei parame
   - Interruttore per abilitare/disabilitare l'utilizzo dell'Hopper nel sistema
 * - **Steps**
   - Numero di sequenze necessarie con cui la sezione del disco che attualmente si trova nell'area di visione, arriva sotto l'area di scarico della tramoggia
+* - **Wizard Steps**
+  - Avvia la procedura guidata per il calcolo automatico del parametro Steps (vedi [Wizard Steps](wizardsteps))
 * - **Time**
   - Durata dell'attivazione della tramoggia in millisecondi
+* - **Wizard Time**
+  - Avvia la procedura guidata per il calcolo automatico dei parametri di attivazione della tramoggia (vedi [Wizard Time](wizardtime))
 * - **Signal**
   - Numero del segnale digitale utilizzato per controllare l'Hopper
 * - **Config Hopper**
   - Pulsante per configurare la tramoggia (da utilizzare in seguito)
 ```
-
 
 ---
 (confighopper)=
@@ -185,6 +188,7 @@ Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** pre
 
 Tornare alla schermata principale di Hopper Setup per definire il comportamento meccanico.
 ![Pagina Hopper Setup](../../../../../_shared/media/images/pagina_hoppersetup.png)
+
 ```{list-table} Parametri di Funzionamento
 :widths: 20 80
 :header-rows: 1
@@ -192,9 +196,9 @@ Tornare alla schermata principale di Hopper Setup per definire il comportamento 
 * - **Parametro**
   - **Descrizione e Procedura**
 * - **Steps**
-  - Numero di avanzamenti del FlexiBowl® (sequenze) necessari per portare i pezzi dall'area di visione all'area di scarico della tramoggia.
+  - Numero di avanzamenti del FlexiBowl® (sequenze) necessari per portare i pezzi dall'area di visione all'area di scarico della tramoggia. Può essere impostato manualmente oppure calcolato tramite il [Wizard Steps](wizardsteps).
 * - **Time**
-  - Millisecondi di attivazione della tramoggia.   Valore consigliato: **100 – 1000 ms** (Media: **500 ms**). Regolare di ±50 ms in base al flusso desiderato.
+  - Millisecondi di attivazione della tramoggia. Valore consigliato: **100 – 1000 ms** (Media: **500 ms**). Regolare di ±50 ms in base al flusso desiderato. Può essere impostato manualmente oppure calcolato tramite il [Wizard Time](wizardtime).
 ```
 ```{tip}
    Il tempo di attivazione dipende non solo dal valore impostato, ma anche dal volume di componenti attualmente presenti nella vasca della tramoggia. È essenziale mantenere un carico costante per un flusso uniforme.
@@ -209,12 +213,82 @@ Il valore Time è strettamente connesso al volume di carico della tramoggia:
 In generale, è importante non superare mai il carico massimo della tramoggia utilizzata. 
 :::
 
+---
+
+(wizardsteps)=
+### *Wizard Steps: Calcolo Guidato del Parametro Steps*
+
+Il **Wizard Steps** guida l'operatore nel calcolo del numero di sequenze necessarie affinché un pezzo, posizionato al centro dell'area di visione, raggiunga l'area di scarico della tramoggia.
+
+:::{dropdown} Hopper Step Setup Cam X
+![Hopper Step Setup](../../../../../_shared/media/images/pagina_hopperstepwizard.png)
+:::
+
+```{list-table}
+* - **1**
+  - Posizionare un singolo pezzo al centro dell'area di visione.
+    :::{important}
+    Assicurarsi che la sequenza attualmente caricata sul FlexiBowl® sia quella definitiva, ovvero la stessa che verrà utilizzata in produzione. Un cambio di sequenza successivo invaliderebbe il valore calcolato.
+    :::
+* - **2**
+  - Cliccare su **Reset Steps** per azzerare il conteggio e avviare la procedura di calibrazione.
+* - **3**
+  - Cliccare su **Test Sequence** per eseguire una singola sequenza del FlexiBowl®.
+    :::{tip}
+    Attendere il completamento della sequenza prima di eseguirne un'altra.
+    :::
+* - **4**
+  - Ripetere il click su **Test Sequence** finché il pezzo non raggiunge l'area della tramoggia. Il **Current Step Count** si aggiorna automaticamente dopo ogni sequenza eseguita.
+* - **5**
+  - Quando il pezzo raggiunge l'area della tramoggia, cliccare su **Save Hopper Step** per salvare il valore corrente come parametro Steps.
+```
+
+:::{warning}
+Il valore calcolato con il Wizard Steps **non viene mantenuto dopo un riavvio** del software se la ricetta non viene salvata. Ricordarsi di salvare la ricetta al termine della procedura (vedi [Salvataggio Configurazione](#salvataggio-configurazione)).
+:::
+
+L'indicatore **Calibration Active** mostra lo stato della calibrazione in corso:
+
+| Colore | Stato |
+| --- | --- |
+| 🔴 Rosso | Calibrazione non attiva / non ancora avviata |
+| 🟢 Verde | Calibrazione in corso / completata |
+
+
 ### *Calcolare il Parametro Steps*
 
 ![Prima Pagina Steps](../../../../../_shared/media/images/Steps1.png)
 ![Seconda Pagina Steps](../../../../../_shared/media/images/Steps2.png)
 ![Terza Pagina Steps](../../../../../_shared/media/images/Steps3.png)
 ![Quarta Pagina Steps](../../../../../_shared/media/images/Steps4.png)
+
+---
+
+(wizardtime)=
+### *Wizard Time: Calcolo Guidato dei Parametri di Attivazione*
+
+Il **Wizard Time** guida l'operatore nella regolazione dei parametri di attivazione della tramoggia (ampiezza, frequenza e tempo di attivazione), verificandone l'effetto tramite un test diretto sul flusso dei pezzi.
+
+:::{dropdown} FlexiBowl® X Hopper – Time and Parameter Setup
+![Hopper Time Setup](../../../../../_shared/media/images/pagina_hoppertimewizard.png)
+:::
+
+```{list-table}
+* - **1**
+  - Riempire la tramoggia con una quantità di pezzi sufficiente a simulare le normali condizioni operative.
+* - **2**
+  - Verificare che i pezzi siano correttamente posizionati e possano muoversi liberamente verso l'uscita della tramoggia.
+* - **3**
+  - Impostare i valori di **Amplitude (V)**, **Frequency (Hz)** e **Activation Time (ms)** tramite gli appositi slider o inserendo il valore direttamente nel campo numerico.
+* - **4**
+  - Cliccare su **Test Hopper** per attivare la tramoggia con i parametri impostati e verificare il flusso dei pezzi.
+* - **5**
+  - Regolare i valori e ripetere il test finché non si ottiene il comportamento di alimentazione desiderato.
+```
+
+:::{tip}
+Procedere con la configurazione della sezione successiva (Hopper Step) solo una volta che il flusso dei pezzi risulta soddisfacente.
+:::
 
 ## Salvataggio Configurazione
 ```{warning}

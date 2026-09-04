@@ -237,6 +237,7 @@
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../24_Verifica_Risultati.html"><strong>Monitoraggio Applicazione: Dashboard</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../25_CheckBelt.html"><strong>Monitoraggio Disco: Check Belt</strong></a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EXPERT</span></p>
 <ul class="nav bd-sidenav">
@@ -436,7 +437,9 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-definizione-dellarea-di-controllo">Step 2: Definizione dell’Area di Controllo</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-definizione-dei-valori-di-soglia">Step 3: Definizione dei Valori di Soglia</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-parametri-operativi">Step 4: Parametri Operativi</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wizard-steps-calcolo-guidato-del-parametro-steps"><em>Wizard Steps: Calcolo Guidato del Parametro Steps</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcolare-il-parametro-steps"><em>Calcolare il Parametro Steps</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wizard-time-calcolo-guidato-dei-parametri-di-attivazione"><em>Wizard Time: Calcolo Guidato dei Parametri di Attivazione</em></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#salvataggio-configurazione">Salvataggio Configurazione</a></li>
@@ -537,8 +540,14 @@
 <tr class="row-odd"><td><p><strong>Steps</strong></p></td>
 <td><p>Numero di sequenze necessarie con cui la sezione del disco che attualmente si trova nell’area di visione, arriva sotto l’area di scarico della tramoggia</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Time</strong></p></td>
+<tr class="row-even"><td><p><strong>Wizard Steps</strong></p></td>
+<td><p>Avvia la procedura guidata per il calcolo automatico del parametro Steps (vedi <a class="reference internal" href="#wizardsteps"><span class="std std-ref">Wizard Steps</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Time</strong></p></td>
 <td><p>Durata dell’attivazione della tramoggia in millisecondi</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Wizard Time</strong></p></td>
+<td><p>Avvia la procedura guidata per il calcolo automatico dei parametri di attivazione della tramoggia (vedi <a class="reference internal" href="#wizardtime"><span class="std std-ref">Wizard Time</span></a>)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Signal</strong></p></td>
 <td><p>Numero del segnale digitale utilizzato per controllare l’Hopper</p></td>
@@ -702,10 +711,10 @@ Dalla sezione <strong>Hopper Setup</strong>, è possibile visualizzare e gestire
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>Steps</strong></p></td>
-<td><p>Numero di avanzamenti del FlexiBowl® (sequenze) necessari per portare i pezzi dall’area di visione all’area di scarico della tramoggia.</p></td>
+<td><p>Numero di avanzamenti del FlexiBowl® (sequenze) necessari per portare i pezzi dall’area di visione all’area di scarico della tramoggia. Può essere impostato manualmente oppure calcolato tramite il <a class="reference internal" href="#wizardsteps"><span class="std std-ref">Wizard Steps</span></a>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Time</strong></p></td>
-<td><p>Millisecondi di attivazione della tramoggia.   Valore consigliato: <strong>100 – 1000 ms</strong> (Media: <strong>500 ms</strong>). Regolare di ±50 ms in base al flusso desiderato.</p></td>
+<td><p>Millisecondi di attivazione della tramoggia. Valore consigliato: <strong>100 – 1000 ms</strong> (Media: <strong>500 ms</strong>). Regolare di ±50 ms in base al flusso desiderato. Può essere impostato manualmente oppure calcolato tramite il <a class="reference internal" href="#wizardtime"><span class="std std-ref">Wizard Time</span></a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -726,12 +735,107 @@ Dalla sezione <strong>Hopper Setup</strong>, è possibile visualizzare e gestire
 <p class="admonition-title">Important</p>
 <p>In generale, è importante non superare mai il carico massimo della tramoggia utilizzata.</p>
 </div>
+<hr class="docutils" />
+<section id="wizard-steps-calcolo-guidato-del-parametro-steps">
+<span id="wizardsteps"></span><h3><em>Wizard Steps: Calcolo Guidato del Parametro Steps</em><a class="headerlink" href="#wizard-steps-calcolo-guidato-del-parametro-steps" title="Link to this heading">#</a></h3>
+<p>Il <strong>Wizard Steps</strong> guida l’operatore nel calcolo del numero di sequenze necessarie affinché un pezzo, posizionato al centro dell’area di visione, raggiunga l’area di scarico della tramoggia.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hopper Step Setup Cam X</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><img alt="Hopper Step Setup" src="../../../../../_shared/media/images/pagina_hopperstepwizard.png" /></p>
+</div>
+</details><div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>1</strong></p></td>
+<td><p>Posizionare un singolo pezzo al centro dell’area di visione.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Assicurarsi che la sequenza attualmente caricata sul FlexiBowl® sia quella definitiva, ovvero la stessa che verrà utilizzata in produzione. Un cambio di sequenza successivo invaliderebbe il valore calcolato.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>2</strong></p></td>
+<td><p>Cliccare su <strong>Reset Steps</strong> per azzerare il conteggio e avviare la procedura di calibrazione.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3</strong></p></td>
+<td><p>Cliccare su <strong>Test Sequence</strong> per eseguire una singola sequenza del FlexiBowl®.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Attendere il completamento della sequenza prima di eseguirne un’altra.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>4</strong></p></td>
+<td><p>Ripetere il click su <strong>Test Sequence</strong> finché il pezzo non raggiunge l’area della tramoggia. Il <strong>Current Step Count</strong> si aggiorna automaticamente dopo ogni sequenza eseguita.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>5</strong></p></td>
+<td><p>Quando il pezzo raggiunge l’area della tramoggia, cliccare su <strong>Save Hopper Step</strong> per salvare il valore corrente come parametro Steps.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Il valore calcolato con il Wizard Steps <strong>non viene mantenuto dopo un riavvio</strong> del software se la ricetta non viene salvata. Ricordarsi di salvare la ricetta al termine della procedura (vedi <a class="reference internal" href="#salvataggio-configurazione"><span class="xref myst">Salvataggio Configurazione</span></a>).</p>
+</div>
+<p>L’indicatore <strong>Calibration Active</strong> mostra lo stato della calibrazione in corso:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Colore</p></th>
+<th class="head"><p>Stato</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>🔴 Rosso</p></td>
+<td><p>Calibrazione non attiva / non ancora avviata</p></td>
+</tr>
+<tr class="row-odd"><td><p>🟢 Verde</p></td>
+<td><p>Calibrazione in corso / completata</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
 <section id="calcolare-il-parametro-steps">
 <h3><em>Calcolare il Parametro Steps</em><a class="headerlink" href="#calcolare-il-parametro-steps" title="Link to this heading">#</a></h3>
 <p><img alt="Prima Pagina Steps" src="../../../../../_shared/media/images/Steps1.png" />
 <img alt="Seconda Pagina Steps" src="../../../../../_shared/media/images/Steps2.png" />
 <img alt="Terza Pagina Steps" src="../../../../../_shared/media/images/Steps3.png" />
 <img alt="Quarta Pagina Steps" src="../../../../../_shared/media/images/Steps4.png" /></p>
+<hr class="docutils" />
+</section>
+<section id="wizard-time-calcolo-guidato-dei-parametri-di-attivazione">
+<span id="wizardtime"></span><h3><em>Wizard Time: Calcolo Guidato dei Parametri di Attivazione</em><a class="headerlink" href="#wizard-time-calcolo-guidato-dei-parametri-di-attivazione" title="Link to this heading">#</a></h3>
+<p>Il <strong>Wizard Time</strong> guida l’operatore nella regolazione dei parametri di attivazione della tramoggia (ampiezza, frequenza e tempo di attivazione), verificandone l’effetto tramite un test diretto sul flusso dei pezzi.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">FlexiBowl® X Hopper – Time and Parameter Setup</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><img alt="Hopper Time Setup" src="../../../../../_shared/media/images/pagina_hoppertimewizard.png" /></p>
+</div>
+</details><div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>1</strong></p></td>
+<td><p>Riempire la tramoggia con una quantità di pezzi sufficiente a simulare le normali condizioni operative.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>2</strong></p></td>
+<td><p>Verificare che i pezzi siano correttamente posizionati e possano muoversi liberamente verso l’uscita della tramoggia.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3</strong></p></td>
+<td><p>Impostare i valori di <strong>Amplitude (V)</strong>, <strong>Frequency (Hz)</strong> e <strong>Activation Time (ms)</strong> tramite gli appositi slider o inserendo il valore direttamente nel campo numerico.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>4</strong></p></td>
+<td><p>Cliccare su <strong>Test Hopper</strong> per attivare la tramoggia con i parametri impostati e verificare il flusso dei pezzi.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>5</strong></p></td>
+<td><p>Regolare i valori e ripetere il test finché non si ottiene il comportamento di alimentazione desiderato.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Procedere con la configurazione della sezione successiva (Hopper Step) solo una volta che il flusso dei pezzi risulta soddisfacente.</p>
+</div>
 </section>
 </section>
 <section id="salvataggio-configurazione">
@@ -1495,7 +1599,9 @@ Dalla sezione <strong>Hopper Setup</strong>, è possibile visualizzare e gestire
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-definizione-dellarea-di-controllo">Step 2: Definizione dell’Area di Controllo</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-definizione-dei-valori-di-soglia">Step 3: Definizione dei Valori di Soglia</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-parametri-operativi">Step 4: Parametri Operativi</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wizard-steps-calcolo-guidato-del-parametro-steps"><em>Wizard Steps: Calcolo Guidato del Parametro Steps</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcolare-il-parametro-steps"><em>Calcolare il Parametro Steps</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wizard-time-calcolo-guidato-dei-parametri-di-attivazione"><em>Wizard Time: Calcolo Guidato dei Parametri di Attivazione</em></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#salvataggio-configurazione">Salvataggio Configurazione</a></li>

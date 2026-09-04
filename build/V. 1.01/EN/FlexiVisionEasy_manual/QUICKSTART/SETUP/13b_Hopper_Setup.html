@@ -237,6 +237,7 @@
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../24_Verifica_Risultati.html"><strong>Application Monitoring: Dashboard</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../25_CheckBelt.html"><strong>Disk Monitoring: Check Belt</strong></a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EXPERT</span></p>
 <ul class="nav bd-sidenav">
@@ -426,20 +427,22 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Hopper Setup</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-physical-setup">Preparing the Physical Setup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-hopper-configuration">Accessing Hopper configuration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hopper-setup-interface-overview">Hopper Setup Interface Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physical-setup-preparation">Physical Setup Preparation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-the-hopper-configuration">Accessing the Hopper configuration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hopper-setup-interface-overview">Hopper Setup interface overview</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hopper-configuration"><strong>Hopper configuration</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hopper-configuration"><strong>Hopper Configuration</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-accessing-the-configuration">Step 1: Accessing the Configuration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-defining-the-control-area">Step 2: Defining the Control Area</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-definition-of-threshold-values">Step 3: Definition of Threshold Values</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-operational-parameters">Step 4: Operational Parameters</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-the-steps-parameter"><em>Calculate the Steps Parameter</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-defining-the-threshold-values">Step 3: Defining the Threshold Values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-operating-parameters">Step 4: Operating Parameters</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wizard-steps-guided-calculation-of-the-steps-parameter"><em>Wizard Steps: Guided Calculation of the Steps Parameter</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-steps-parameter"><em>Calculating the Steps Parameter</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wizard-time-guided-calculation-of-the-activation-parameters"><em>Wizard Time: Guided Calculation of the Activation Parameters</em></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-configuration">Saving Configuration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-the-configuration">Saving the Configuration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps">Next steps</a></li>
 </ul>
 </li>
@@ -457,11 +460,11 @@
                   
   <section id="hopper-setup">
 <span id="hoppersetup"></span><h1><strong>Hopper Setup</strong><a class="headerlink" href="#hopper-setup" title="Link to this heading">#</a></h1>
-<p>This section describes the procedure for configuring the hopper. The Hopper is the component that automatically feeds parts to the FlexiBowl® when the level drops below a minimum threshold.</p>
+<p>This section describes the procedure for configuring the Hopper. The Hopper is the component that automatically feeds parts onto the FlexiBowl® when the level drops below a minimum threshold.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Operating logic</strong></p>
-<p>FlexiVision manages the hopper activation logic. It will in fact send the string <code class="docutils literal notranslate"><span class="pre">Hopper;signalnumber;time</span></code> when it considers activation necessary.</p>
+<p>FlexiVision manages the hopper activation logic. It will send the string <code class="docutils literal notranslate"><span class="pre">Hopper;signalnumber;time</span></code> when it determines activation is necessary.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -469,21 +472,21 @@
 <p>Before proceeding, make sure that:</p>
 <ul class="simple">
 <li><p>The Hopper has been mechanically installed</p></li>
-<li><p>The electrical connections have been made (control and power signals)</p></li>
+<li><p>The electrical connections have been completed (control signals and power supply)</p></li>
 <li><p>The FlexiBowl® is already connected</p></li>
 </ul>
 </div>
 <hr class="docutils" />
-<section id="preparing-the-physical-setup">
-<h2>Preparing the Physical Setup<a class="headerlink" href="#preparing-the-physical-setup" title="Link to this heading">#</a></h2>
+<section id="physical-setup-preparation">
+<h2>Physical Setup Preparation<a class="headerlink" href="#physical-setup-preparation" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><strong>0</strong></p></td>
 <td><p>Remove the calibration grid and restore the initial layout:</p>
 <ul class="simple">
 <li><p>Reposition the surface</p></li>
-<li><p>Reposition the central flange</p></li>
-<li><p>Fix the central flange with its four screws</p></li>
+<li><p>reposition the central flange</p></li>
+<li><p>fasten the central flange with its four screws</p></li>
 </ul>
 </td>
 </tr>
@@ -492,12 +495,12 @@
 </div>
 </section>
 <hr class="docutils" />
-<section id="accessing-hopper-configuration">
-<h2>Accessing Hopper configuration<a class="headerlink" href="#accessing-hopper-configuration" title="Link to this heading">#</a></h2>
+<section id="accessing-the-hopper-configuration">
+<h2>Accessing the Hopper configuration<a class="headerlink" href="#accessing-the-hopper-configuration" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><strong>1</strong></p></td>
-<td><p>From the software main page, click <img alt="../../../_images/tasto_setup1.png" class="inline-icon" src="../../../../../_shared/media/images/tasto_setup1.png" /></p></td>
+<td><p>From the software’s main page, click on <img alt="../../../_images/tasto_setup1.png" class="inline-icon" src="../../../../../_shared/media/images/tasto_setup1.png" /></p></td>
 </tr>
 <tr class="row-even"><td><p><strong>2</strong></p></td>
 <td><p>On the SETUP page, locate and click the <strong>Hopper Setup</strong> icon</p>
@@ -517,8 +520,8 @@
 </section>
 <hr class="docutils" />
 <section id="hopper-setup-interface-overview">
-<h2>Hopper Setup Interface Overview<a class="headerlink" href="#hopper-setup-interface-overview" title="Link to this heading">#</a></h2>
-<p>The Hopper Setup page has several sections for configuring the operating parameters of the various hoppers:</p>
+<h2>Hopper Setup interface overview<a class="headerlink" href="#hopper-setup-interface-overview" title="Link to this heading">#</a></h2>
+<p>The Hopper Setup page presents several sections for configuring the operating parameters of the various hoppers:</p>
 <p><img alt="Hopper Setup Page" src="../../../../../_shared/media/images/pagina_hoppersetup.png" /></p>
 <div class="pst-scrollable-table-container"><table class="table">
 <colgroup>
@@ -532,19 +535,25 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>Enable Hopper</strong></p></td>
-<td><p>Switch to enable/disable the use of the Hopper in the system</p></td>
+<td><p>Switch to enable/disable use of the Hopper in the system</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Steps</strong></p></td>
-<td><p>Number of required sequences with which the section of the disc that is currently in the vision area arrives below the hopper unloading area</p></td>
+<td><p>Number of sequences required for the disc section currently in the vision area to arrive under the hopper’s discharge area</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Time</strong></p></td>
+<tr class="row-even"><td><p><strong>Wizard Steps</strong></p></td>
+<td><p>Starts the guided procedure for the automatic calculation of the Steps parameter (see <a class="reference internal" href="#wizardsteps"><span class="std std-ref">Wizard Steps</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Time</strong></p></td>
 <td><p>Duration of hopper activation in milliseconds</p></td>
 </tr>
+<tr class="row-even"><td><p><strong>Wizard Time</strong></p></td>
+<td><p>Starts the guided procedure for the automatic calculation of the hopper activation parameters (see <a class="reference internal" href="#wizardtime"><span class="std std-ref">Wizard Time</span></a>)</p></td>
+</tr>
 <tr class="row-odd"><td><p><strong>Signal</strong></p></td>
-<td><p>Number of the digital signal used to control the Hopper</p></td>
+<td><p>Digital signal number used to control the Hopper</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Config Hopper</strong></p></td>
-<td><p>Button to configure the hopper (to be used later)</p></td>
+<td><p>Button to configure the hopper (to be used next)</p></td>
 </tr>
 </tbody>
 </table>
@@ -553,14 +562,14 @@
 </section>
 </section>
 <section id="hopper-configuration">
-<span id="confighopper"></span><h1><strong>Hopper configuration</strong><a class="headerlink" href="#hopper-configuration" title="Link to this heading">#</a></h1>
-<p>The hopper configuration allows you to manage the automatic filling of components on the FlexiBowl® disc. The system uses the vision to determine when the filling level is insufficient and to activate the hopper.</p>
+<span id="confighopper"></span><h1><strong>Hopper Configuration</strong><a class="headerlink" href="#hopper-configuration" title="Link to this heading">#</a></h1>
+<p>Hopper configuration allows the automatic replenishment of components on the FlexiBowl® disc to be managed. The system uses vision to determine when the fill level is insufficient and to activate the hopper.</p>
 <section id="step-1-accessing-the-configuration">
 <h2>Step 1: Accessing the Configuration<a class="headerlink" href="#step-1-accessing-the-configuration" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><strong>1</strong></p></td>
-<td><p>Click <img alt="../../../_images/tasto_setup1.png" class="inline-icon" src="../../../../../_shared/media/images/tasto_setup1.png" />.
+<td><p>Click on <img alt="../../../_images/tasto_setup1.png" class="inline-icon" src="../../../../../_shared/media/images/tasto_setup1.png" />.<br />
 From the <strong>Hopper Setup</strong> section, you can view and manage the connected load units.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -570,20 +579,20 @@ From the <strong>Hopper Setup</strong> section, you can view and manage the conn
 </details></td>
 </tr>
 <tr class="row-even"><td><p><strong>2</strong></p></td>
-<td><p>In the <strong>Signal</strong> field, enter the number of the digital signal (DO - Digital Output) used to control the Hopper</p>
+<td><p>In the <strong>Signal</strong> field, enter the digital signal number (DO - Digital Output) used to control the Hopper</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>It is essential to enter the correct signal number:</p>
 <ul class="simple">
 <li><p>An incorrect number will activate the wrong signal (potentially dangerous)</p></li>
-<li><p>See the wiring diagram made during installation</p></li>
-<li><p>If in doubt, contact the person who did the wiring</p></li>
+<li><p>Consult the electrical diagram produced during installation</p></li>
+<li><p>If in doubt, contact whoever carried out the wiring</p></li>
 </ul>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p><strong>3</strong></p></td>
-<td><p>Tick the <strong>Enable Hopper X</strong> box to activate the corresponding hopper.</p>
+<td><p>Select the <strong>Enable Hopper X</strong> checkbox to activate the corresponding hopper.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Only enable the Hopper if the device is correctly installed</p>
@@ -599,26 +608,26 @@ From the <strong>Hopper Setup</strong> section, you can view and manage the conn
 </section>
 <section id="step-2-defining-the-control-area">
 <h2>Step 2: Defining the Control Area<a class="headerlink" href="#step-2-defining-the-control-area" title="Link to this heading">#</a></h2>
-<div  class="sphinx-contrib-video-container align-center"><video controls="True" preload="auto" width="100%"><source src="../../../../../_shared/media/videos/TastoInfo_AreaHopper_1280x720.mp4" type="video/mp4"></video></div><p>In this step, the portion of the disc that the camera needs to monitor for unloading is defined.</p>
+<div  class="sphinx-contrib-video-container align-center"><video controls="True" preload="auto" width="100%"><source src="../../../../../_shared/media/videos/TastoInfo_AreaHopper_1280x720.mp4" type="video/mp4"></video></div><p>In this phase, the portion of the disc that the camera must monitor for discharge is defined.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><strong>5</strong></p></td>
-<td><p>Change the blue box on the screen to frame the area where the components will be detected.</p></td>
+<td><p>Adjust the blue box on screen to frame the area in which components will be detected.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>If you have any doubts during configuration, please consult the <strong>INFO</strong> key on the current page.</p>
+<p>For any questions during configuration, refer to the <strong>INFO</strong> button on the current page.</p>
 </div>
 </section>
-<section id="step-3-definition-of-threshold-values">
-<h2>Step 3: Definition of Threshold Values<a class="headerlink" href="#step-3-definition-of-threshold-values" title="Link to this heading">#</a></h2>
+<section id="step-3-defining-the-threshold-values">
+<h2>Step 3: Defining the Threshold Values<a class="headerlink" href="#step-3-defining-the-threshold-values" title="Link to this heading">#</a></h2>
 <div  class="sphinx-contrib-video-container align-center"><video controls="True" preload="auto" width="100%"><source src="../../../../../_shared/media/videos/TastoInfo_Hopper_1280x720.mp4" type="video/mp4"></video></div><div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><strong>6</strong></p></td>
-<td><p>Click <img alt="../../../_images/tasto_next.png" class="inline-icon icon-small" src="../../../../../_shared/media/images/tasto_next.png" /> to access the <strong>Define Value Hopper Cam</strong> page, where the system learns how to distinguish between an empty and a full disk.</p>
+<td><p>Click <img alt="../../../_images/tasto_next.png" class="inline-icon icon-small" src="../../../../../_shared/media/images/tasto_next.png" /> to access the <strong>Define Value Hopper Cam</strong> page, where the system is taught to distinguish between an empty and a full disc.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Define Value Hopper Cam Page</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -630,7 +639,7 @@ From the <strong>Hopper Setup</strong> section, you can view and manage the conn
 <td><p>Remove all components from the vision area and click the first <strong>CAPTURE</strong> button.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>8</strong></p></td>
-<td><p>Position the minimum number of components you wish to keep in the vision area. If the number drops below this threshold, the hopper will be activated.</p></td>
+<td><p>Place the minimum number of components you want to keep in the vision area. If the number drops below this threshold, the hopper will activate.</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>9</strong></p></td>
 <td><p>Click the second <strong>CAPTURE</strong> button.</p></td>
@@ -639,26 +648,26 @@ From the <strong>Hopper Setup</strong> section, you can view and manage the conn
 <td><p>By clicking <img alt="../../../_images/tasto_AUTO.png" class="inline-icon" src="../../../../../_shared/media/images/tasto_AUTO.png" /> in the Expression Builder, the system automatically calculates the <strong>Mean</strong> and <strong>Standard Deviation</strong> values.</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>11</strong></p></td>
-<td><p>Remove some pieces and click <img alt="../../../_images/tasto_TEST.png" class="inline-icon" src="../../../../../_shared/media/images/tasto_TEST.png" />.</p></td>
+<td><p>Remove a few pieces and click <img alt="../../../_images/tasto_TEST.png" class="inline-icon" src="../../../../../_shared/media/images/tasto_TEST.png" />.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>12</strong></p></td>
-<td><p>Look at the result indicator:</p>
+<td><p>Observe the result indicator:</p>
 <ul>
-<li><p><strong>Green</strong> 🟢: Insufficient level, Hopper is activated (unloading necessary)</p></li>
-<li><p><strong>Red</strong> 🔴: Sufficient level, Hopper is NOT ACTIVATED (OK)</p>
+<li><p><strong>Green</strong> 🟢: Insufficient level, Hopper activates (discharge needed)</p></li>
+<li><p><strong>Red</strong> 🔴: Sufficient level, Hopper does NOT activate (OK)</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>Insufficient calibration</strong></p>
-<p>If the system does not detect the level correctly:</p>
-<p><strong>Problem: Always green (always activates Hopper)</strong>
-→ Threshold too low or interference in the area
-→ Solution: Increase number of pieces in second capture, check that area is clean</p>
-<p><strong>Problem: Always red (never activates Hopper)</strong>
-→ Threshold too high or monitoring area not representative
-→ Solution: Reduce number of pieces in second CAPTURE, repeat AUTO</p>
-<p><strong>Problem: Incorrect behaviour (green/red toggle randomly)</strong>
-→ Unstable lighting or area too small
-→ Solution: Check stable backlight, enlarge monitoring area, repeat calibration</p>
+<p>If the system does not correctly detect the level:</p>
+<p><strong>Problem: Always green (always activates Hopper)</strong><br />
+→ Threshold too low or interference in the area<br />
+→ Solution: Increase the number of pieces in the second capture, check that the area is clean</p>
+<p><strong>Problem: Always red (never activates Hopper)</strong><br />
+→ Threshold too high or monitoring area not representative<br />
+→ Solution: Reduce the number of pieces in the second CAPTURE, repeat AUTO</p>
+<p><strong>Problem: Erratic behavior (randomly alternates green/red)</strong><br />
+→ Unstable lighting or area too small<br />
+→ Solution: Check that the backlight is stable, enlarge the monitoring area, repeat calibration</p>
 </div>
 </li>
 </ul>
@@ -670,24 +679,24 @@ From the <strong>Hopper Setup</strong> section, you can view and manage the conn
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Hopper Fill Threshold</strong></p>
-<p>The <strong>Hopper Fill Threshold</strong> parameter defines the filling percentage threshold of the vision area below which the hopper is automatically activated.</p>
-<p>The value of 100% corresponds to the amount of pieces acquired during the second CAPTURE (full area). Consequently, a 50% threshold corresponds to half of that amount.</p>
-<p>The system automatically sets the initial value to <strong>70%</strong>, which is a good balance for most applications.</p>
-<p><strong>Ongoing modification</strong></p>
-<p>It is possible to adjust the threshold without repeating the capture procedure:</p>
+<p>The <strong>Hopper Fill Threshold</strong> parameter defines the percentage fill threshold of the vision area below which the hopper automatically activates.</p>
+<p>The value of 100% corresponds to the quantity of pieces acquired during the second CAPTURE (full area). Consequently, a threshold of 50% corresponds to half that quantity.</p>
+<p>The system automatically sets the initial value to <strong>70%</strong>, which represents a good balance for most applications.</p>
+<p><strong>Adjusting on the fly</strong></p>
+<p>You can adjust the threshold without repeating the acquisition procedure:</p>
 <ul class="simple">
-<li><p>To unload <strong>fewer pieces</strong> → reduce the percentage (e.g. 50%) and click <strong>AUTO</strong></p></li>
-<li><p>To unload <strong>more pieces</strong> → increase the percentage (e.g. 85%) and click <strong>AUTO</strong></p></li>
+<li><p>To discharge <strong>fewer pieces</strong> → reduce the percentage (e.g. 50%) and click <strong>AUTO</strong></p></li>
+<li><p>To discharge <strong>more pieces</strong> → increase the percentage (e.g. 85%) and click <strong>AUTO</strong></p></li>
 </ul>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>If you have any doubts during configuration, please consult the <strong>INFO</strong> key on the current page.</p>
+<p>For any questions during configuration, refer to the <strong>INFO</strong> button on the current page.</p>
 </div>
 </section>
-<section id="step-4-operational-parameters">
-<h2>Step 4: Operational Parameters<a class="headerlink" href="#step-4-operational-parameters" title="Link to this heading">#</a></h2>
-<p>Return to the main Hopper Setup screen to define the mechanical behaviour.
+<section id="step-4-operating-parameters">
+<h2>Step 4: Operating Parameters<a class="headerlink" href="#step-4-operating-parameters" title="Link to this heading">#</a></h2>
+<p>Return to the main Hopper Setup screen to define the mechanical behavior.
 <img alt="Hopper Setup Page" src="../../../../../_shared/media/images/pagina_hoppersetup.png" /></p>
 <div class="pst-scrollable-table-container"><table class="table" id="id1">
 <caption><span class="caption-text">Operating Parameters</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
@@ -702,43 +711,138 @@ From the <strong>Hopper Setup</strong> section, you can view and manage the conn
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>Steps</strong></p></td>
-<td><p>Number of FlexiBowl® feeds (sequences) required to bring parts from the vision area to the hopper unloading area.</p></td>
+<td><p>Number of FlexiBowl® advances (sequences) required to bring the pieces from the vision area to the hopper’s discharge area. Can be set manually or calculated via the <a class="reference internal" href="#wizardsteps"><span class="std std-ref">Wizard Steps</span></a>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Time</strong></p></td>
-<td><p>Milliseconds of hopper activation.   Recommended value: <strong>100 – 1000 ms</strong> (Average: <strong>500 ms</strong>). Adjust by ±50 ms according to the desired flow.</p></td>
+<td><p>Hopper activation time in milliseconds. Recommended value: <strong>100 – 1000 ms</strong> (Average: <strong>500 ms</strong>). Adjust by ±50 ms depending on the desired flow. Can be set manually or calculated via the <a class="reference internal" href="#wizardtime"><span class="std std-ref">Wizard Time</span></a>.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>The activation time depends not only on the set value, but also on the volume of components currently in the hopper tank. It is essential to maintain a constant load for an even flow.</p>
+<p>The activation time depends not only on the value set, but also on the current volume of components present in the hopper tank. It is essential to maintain a constant load for a uniform flow.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>The Time value is closely related to the hopper loading volume:</p>
+<p>The Time value is closely linked to the hopper’s load volume:</p>
 <ul class="simple">
-<li><p>With the hopper full, there will be more parts in the unloading area</p></li>
-<li><p>With the hopper half-full, there will be fewer parts in the unloading area</p></li>
+<li><p>With a full hopper there will be a greater number of pieces in the discharge area</p></li>
+<li><p>With a half-full hopper there will be a smaller number of pieces in the discharge area</p></li>
 </ul>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>In general, it is important never to exceed the maximum load of the hopper used.</p>
 </div>
-<section id="calculate-the-steps-parameter">
-<h3><em>Calculate the Steps Parameter</em><a class="headerlink" href="#calculate-the-steps-parameter" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
+<section id="wizard-steps-guided-calculation-of-the-steps-parameter">
+<span id="wizardsteps"></span><h3><em>Wizard Steps: Guided Calculation of the Steps Parameter</em><a class="headerlink" href="#wizard-steps-guided-calculation-of-the-steps-parameter" title="Link to this heading">#</a></h3>
+<p>The <strong>Wizard Steps</strong> guides the operator in calculating the number of sequences required for a piece, positioned in the center of the vision area, to reach the hopper’s discharge area.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hopper Step Setup Cam X</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><img alt="Hopper Step Setup" src="../../../../../_shared/media/images/pagina_hopperstepwizard.png" /></p>
+</div>
+</details><div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>1</strong></p></td>
+<td><p>Place a single piece in the center of the vision area.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Make sure that the sequence currently loaded on the FlexiBowl® is the final one, i.e. the same one that will be used in production. A subsequent sequence change would invalidate the calculated value.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>2</strong></p></td>
+<td><p>Click <strong>Reset Steps</strong> to reset the count and start the calibration procedure.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3</strong></p></td>
+<td><p>Click <strong>Test Sequence</strong> to run a single FlexiBowl® sequence.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Wait for the sequence to complete before running another one.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>4</strong></p></td>
+<td><p>Repeat the click on <strong>Test Sequence</strong> until the piece reaches the hopper area. The <strong>Current Step Count</strong> updates automatically after each sequence executed.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>5</strong></p></td>
+<td><p>When the piece reaches the hopper area, click <strong>Save Hopper Step</strong> to save the current value as the Steps parameter.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The value calculated with the Wizard Steps <strong>is not retained after a software restart</strong> if the recipe is not saved. Remember to save the recipe at the end of the procedure (see <a class="reference internal" href="#salvataggio-configurazione"><span class="xref myst">Saving the Configuration</span></a>).</p>
+</div>
+<p>The <strong>Calibration Active</strong> indicator shows the status of the calibration in progress:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Color</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>🔴 Red</p></td>
+<td><p>Calibration not active / not yet started</p></td>
+</tr>
+<tr class="row-odd"><td><p>🟢 Green</p></td>
+<td><p>Calibration in progress / completed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="calculating-the-steps-parameter">
+<h3><em>Calculating the Steps Parameter</em><a class="headerlink" href="#calculating-the-steps-parameter" title="Link to this heading">#</a></h3>
 <p><img alt="First Steps Page" src="../../../../../_shared/media/images/Steps1.png" />
 <img alt="Second Steps Page" src="../../../../../_shared/media/images/Steps2.png" />
 <img alt="Third Steps Page" src="../../../../../_shared/media/images/Steps3.png" />
 <img alt="Fourth Steps Page" src="../../../../../_shared/media/images/Steps4.png" /></p>
+<hr class="docutils" />
+</section>
+<section id="wizard-time-guided-calculation-of-the-activation-parameters">
+<span id="wizardtime"></span><h3><em>Wizard Time: Guided Calculation of the Activation Parameters</em><a class="headerlink" href="#wizard-time-guided-calculation-of-the-activation-parameters" title="Link to this heading">#</a></h3>
+<p>The <strong>Wizard Time</strong> guides the operator in adjusting the hopper activation parameters (amplitude, frequency and activation time), checking their effect through a direct test on the flow of pieces.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">FlexiBowl® X Hopper – Time and Parameter Setup</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><img alt="Hopper Time Setup" src="../../../../../_shared/media/images/pagina_hoppertimewizard.png" /></p>
+</div>
+</details><div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>1</strong></p></td>
+<td><p>Fill the hopper with a sufficient quantity of pieces to simulate normal operating conditions.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>2</strong></p></td>
+<td><p>Check that the pieces are correctly positioned and can move freely toward the hopper outlet.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3</strong></p></td>
+<td><p>Set the <strong>Amplitude (V)</strong>, <strong>Frequency (Hz)</strong> and <strong>Activation Time (ms)</strong> values using the relevant sliders or by entering the value directly in the numeric field.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>4</strong></p></td>
+<td><p>Click <strong>Test Hopper</strong> to activate the hopper with the set parameters and check the flow of pieces.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>5</strong></p></td>
+<td><p>Adjust the values and repeat the test until the desired feeding behavior is achieved.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Proceed with the configuration of the next section (Hopper Step) only once the flow of pieces is satisfactory.</p>
+</div>
 </section>
 </section>
-<section id="saving-configuration">
-<h2>Saving Configuration<a class="headerlink" href="#saving-configuration" title="Link to this heading">#</a></h2>
+<section id="saving-the-configuration">
+<h2>Saving the Configuration<a class="headerlink" href="#saving-the-configuration" title="Link to this heading">#</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><strong>Saving recipe mandatory</strong></p>
+<p><strong>Recipe saving mandatory</strong></p>
 <p>At the end of the Hopper configuration:</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -746,7 +850,7 @@ From the <strong>Hopper Setup</strong> section, you can view and manage the conn
 <li></li>
 </ol>
 </td>
-<td><p>Verify that all parameters are configured correctly:</p>
+<td><p>Check that all parameters are configured correctly:</p>
 <ul class="simple">
 <li><p>Monitoring area positioned</p></li>
 <li><p>Thresholds calibrated (TEST working)</p></li>
@@ -764,19 +868,19 @@ From the <strong>Hopper Setup</strong> section, you can view and manage the conn
 <li></li>
 </ol>
 </td>
-<td><p>Click <img alt="../../../_images/tasto_save_recipes.png" class="inline-icon icon-small" src="../../../../../_shared/media/images/tasto_save_recipes.png" /></p></td>
+<td><p>Click on <img alt="../../../_images/tasto_save_recipes.png" class="inline-icon icon-small" src="../../../../../_shared/media/images/tasto_save_recipes.png" /></p></td>
 </tr>
 <tr class="row-even"><td><ol class="arabic simple" start="4">
 <li></li>
 </ol>
 </td>
-<td><p>Confirm saving</p></td>
+<td><p>Confirm the save</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p><strong>IMPORTANT</strong>: Any changes made are stored <strong>ONLY</strong> if the recipe is saved correctly before exiting or changing page.</p>
-<p>Without saving, all Hopper setups will be lost when FlexiVision One is closed!</p>
+<p><strong>IMPORTANT</strong>: Any change made is stored <strong>ONLY</strong> if the recipe is saved correctly before exiting or changing page.</p>
+<p>Without saving, all Hopper configurations will be lost when FlexiVision One is closed!</p>
 </div>
 </section>
 <hr class="docutils" />
@@ -786,7 +890,7 @@ From the <strong>Hopper Setup</strong> section, you can view and manage the conn
 <ul class="simple">
 <li><p><a class="reference internal" href="13c_Robot_Setup.html"><span class="std std-doc">Robot Setup</span></a></p></li>
 <li><p><a class="reference internal" href="15_Protocol_Setup.html#protocol-setup"><span class="std std-ref">Protocol Setup</span></a></p></li>
-<li><p><a class="reference internal" href="15b_SaveRecipe.html#ricettabase"><span class="std std-ref">Save Recipe</span></a></p></li>
+<li><p><a class="reference internal" href="15b_SaveRecipe.html#ricettabase"><span class="std std-ref">Saving the Recipe</span></a></p></li>
 </ul>
 <br>
 <!-- Versions and languages set-up -->
@@ -1485,20 +1589,22 @@ From the <strong>Hopper Setup</strong> section, you can view and manage the conn
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Hopper Setup</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-physical-setup">Preparing the Physical Setup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-hopper-configuration">Accessing Hopper configuration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hopper-setup-interface-overview">Hopper Setup Interface Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physical-setup-preparation">Physical Setup Preparation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-the-hopper-configuration">Accessing the Hopper configuration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hopper-setup-interface-overview">Hopper Setup interface overview</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hopper-configuration"><strong>Hopper configuration</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hopper-configuration"><strong>Hopper Configuration</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-accessing-the-configuration">Step 1: Accessing the Configuration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-defining-the-control-area">Step 2: Defining the Control Area</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-definition-of-threshold-values">Step 3: Definition of Threshold Values</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-operational-parameters">Step 4: Operational Parameters</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-the-steps-parameter"><em>Calculate the Steps Parameter</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-defining-the-threshold-values">Step 3: Defining the Threshold Values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-operating-parameters">Step 4: Operating Parameters</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wizard-steps-guided-calculation-of-the-steps-parameter"><em>Wizard Steps: Guided Calculation of the Steps Parameter</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-steps-parameter"><em>Calculating the Steps Parameter</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wizard-time-guided-calculation-of-the-activation-parameters"><em>Wizard Time: Guided Calculation of the Activation Parameters</em></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-configuration">Saving Configuration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-the-configuration">Saving the Configuration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps">Next steps</a></li>
 </ul>
 </li>

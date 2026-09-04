@@ -231,6 +231,7 @@ FlexiVisionEasy_manual/QUICKSTART/Nuovo_Modello/16_Nuovo_modello.md
 ```{toctree}
 :hidden:
 FlexiVisionEasy_manual/QUICKSTART/24_Verifica_Risultati.md
+FlexiVisionEasy_manual/QUICKSTART/25_CheckBelt.md
 ```
 
 ```{toctree}

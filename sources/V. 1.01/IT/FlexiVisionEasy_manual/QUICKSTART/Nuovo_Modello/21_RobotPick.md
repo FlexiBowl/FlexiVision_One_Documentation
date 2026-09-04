@@ -97,6 +97,7 @@ Il sistema confronta:
 
 Calcola la differenza e la memorizza come **offset**. Questo offset verrà applicato a tutti i componenti rilevati in futuro, garantendo che il robot prelevi sempre nella posizione corretta.
 ```
+
 :::{tip}
 Per qualsiasi dubbio durante la configurazione, consultare il tasto **INFO** presente nella pagina corrente.
 :::

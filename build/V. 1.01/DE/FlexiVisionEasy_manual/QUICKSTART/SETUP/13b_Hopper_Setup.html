@@ -237,6 +237,7 @@
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../24_Verifica_Risultati.html"><strong>Anwendungsüberwachung: Dashboard</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../25_CheckBelt.html"><strong>Bandüberwachung: Check Belt</strong></a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EXPERT</span></p>
 <ul class="nav bd-sidenav">
@@ -422,17 +423,19 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Hopper Setup</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vorbereitung-der-physischen-einrichtung">Vorbereitung der physischen Einrichtung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vorbereitung-des-physischen-setups">Vorbereitung des physischen Setups</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zugriff-auf-die-hopper-konfiguration">Zugriff auf die Hopper-Konfiguration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ubersicht-uber-die-benutzeroberflache-hopper-setup">Übersicht über die Benutzeroberfläche Hopper Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ubersicht-der-hopper-setup-oberflache">Übersicht der Hopper-Setup-Oberfläche</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#konfiguration-des-trichters-hopper"><strong>Konfiguration des Trichters (Hopper)</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#konfiguration-des-hoppers"><strong>Konfiguration des Hoppers</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schritt-1-zugriff-auf-die-konfiguration">Schritt 1: Zugriff auf die Konfiguration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schritt-2-festlegen-des-uberwachungsbereichs">Schritt 2: Festlegen des Überwachungsbereichs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schritt-3-festlegung-der-schwellenwerte">Schritt 3: Festlegung der Schwellenwerte</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schritt-2-definition-des-kontrollbereichs">Schritt 2: Definition des Kontrollbereichs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schritt-3-definition-der-schwellenwerte">Schritt 3: Definition der Schwellenwerte</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schritt-4-betriebsparameter">Schritt 4: Betriebsparameter</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#berechnung-des-parameters-schritte"><em>Berechnung des Parameters Schritte</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wizard-steps-gefuhrte-berechnung-des-parameters-steps"><em>Wizard Steps: Geführte Berechnung des Parameters Steps</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#berechnung-des-parameters-steps"><em>Berechnung des Parameters Steps</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wizard-time-gefuhrte-berechnung-der-aktivierungsparameter"><em>Wizard Time: Geführte Berechnung der Aktivierungsparameter</em></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#speichern-der-konfiguration">Speichern der Konfiguration</a></li>
@@ -453,33 +456,33 @@
                   
   <section id="hopper-setup">
 <span id="hoppersetup"></span><h1><strong>Hopper Setup</strong><a class="headerlink" href="#hopper-setup" title="Link to this heading">#</a></h1>
-<p>In diesem Abschnitt wird die Vorgehensweise zur Konfiguration des Trichters (Hopper) beschrieben. Der Trichter ist die Komponente, die automatisch Teile in den FlexiBowl® befördert, sobald der Füllstand unter einen Mindestwert fällt.</p>
+<p>Dieser Abschnitt beschreibt das Verfahren zur Konfiguration des Hoppers (Trichter). Der Hopper ist die Komponente, die automatisch Teile auf den FlexiBowl® nachfüllt, wenn der Füllstand unter einen Mindestwert sinkt.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p><strong>Betriebslogik</strong></p>
-<p>FlexiVision steuert die Aktivierungslogik des Trichters. Er sendet die Zeichenfolge <code class="docutils literal notranslate"><span class="pre">Hopper;signalnumber;time</span></code>, wenn er die Aktivierung für notwendig erachtet.</p>
+<p><strong>Funktionslogik</strong></p>
+<p>FlexiVision steuert die Aktivierungslogik des Hoppers. Es sendet die Zeichenfolge <code class="docutils literal notranslate"><span class="pre">Hopper;signalnumber;time</span></code>, wenn eine Aktivierung als notwendig erachtet wird.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Voraussetzungen</strong></p>
-<p>Stellen Sie vor dem Fortfahren Folgendes sicher:</p>
+<p>Bevor Sie fortfahren, stellen Sie sicher, dass:</p>
 <ul class="simple">
-<li><p>Der Trichter wurde mechanisch installiert</p></li>
-<li><p>Die elektrischen Anschlüsse sind hergestellt (Steuersignale und Stromversorgung)</p></li>
-<li><p>Die FlexiBowl® ist bereits angeschlossen</p></li>
+<li><p>der Hopper mechanisch installiert wurde</p></li>
+<li><p>die elektrischen Anschlüsse abgeschlossen sind (Steuersignale und Stromversorgung)</p></li>
+<li><p>der FlexiBowl® bereits angeschlossen ist</p></li>
 </ul>
 </div>
 <hr class="docutils" />
-<section id="vorbereitung-der-physischen-einrichtung">
-<h2>Vorbereitung der physischen Einrichtung<a class="headerlink" href="#vorbereitung-der-physischen-einrichtung" title="Link to this heading">#</a></h2>
+<section id="vorbereitung-des-physischen-setups">
+<h2>Vorbereitung des physischen Setups<a class="headerlink" href="#vorbereitung-des-physischen-setups" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><strong>0</strong></p></td>
-<td><p>Demontieren Sie das Kalibrierungsgitter und stellen Sie das ursprüngliche Layout wieder her:</p>
+<td><p>Das Kalibriergitter demontieren und das ursprüngliche Layout wiederherstellen:</p>
 <ul class="simple">
-<li><p>Setzen Sie die Oberfläche wieder ein</p></li>
-<li><p>Setzen Sie den Mittelflansch wieder ein</p></li>
-<li><p>Befestigen Sie den Mittelflansch mit den vier Schrauben</p></li>
+<li><p>Die Oberfläche neu positionieren</p></li>
+<li><p>den mittleren Flansch neu positionieren</p></li>
+<li><p>den mittleren Flansch mit seinen vier Schrauben befestigen</p></li>
 </ul>
 </td>
 </tr>
@@ -490,31 +493,11 @@
 <hr class="docutils" />
 <section id="zugriff-auf-die-hopper-konfiguration">
 <h2>Zugriff auf die Hopper-Konfiguration<a class="headerlink" href="#zugriff-auf-die-hopper-konfiguration" title="Link to this heading">#</a></h2>
-<div class="pst-scrollable-table-container"><table class="table">
-<tbody>
-<tr class="row-odd"><td><p><strong>1</strong></p></td>
-<td><p>Klicken Sie auf der Hauptseite der Software auf <img alt="../../../_images/tasto_setup1.png" class="inline-icon" src="../../../../../_shared/media/images/tasto_setup1.png" /></p></td>
-</tr>
-<tr class="row-even"><td><p><strong>2</strong></p></td>
-<td><p>Suchen Sie auf der SETUP-Seite das Symbol <strong>Hopper Setup</strong> und klicken Sie darauf</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Setup-Seite</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><img alt="Setup-Seite" src="../../../../../_shared/media/images/pagina_setup1.png" /></p>
-</div>
-</details></td>
-</tr>
-<tr class="row-odd"><td><p><strong>3</strong></p></td>
-<td><p>Die Seite zur Konfiguration des Trichters wird geöffnet</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 </section>
 <hr class="docutils" />
-<section id="ubersicht-uber-die-benutzeroberflache-hopper-setup">
-<h2>Übersicht über die Benutzeroberfläche Hopper Setup<a class="headerlink" href="#ubersicht-uber-die-benutzeroberflache-hopper-setup" title="Link to this heading">#</a></h2>
-<p>Die Seite Hopper Setup enthält verschiedene Abschnitte zur Konfiguration der Betriebsparameter der verschiedenen Trichter:</p>
+<section id="ubersicht-der-hopper-setup-oberflache">
+<h2>Übersicht der Hopper-Setup-Oberfläche<a class="headerlink" href="#ubersicht-der-hopper-setup-oberflache" title="Link to this heading">#</a></h2>
+<p>Die Seite Hopper Setup enthält mehrere Bereiche zur Konfiguration der Betriebsparameter der verschiedenen Hopper:</p>
 <p><img alt="Seite Hopper Setup" src="../../../../../_shared/media/images/pagina_hoppersetup.png" /></p>
 <div class="pst-scrollable-table-container"><table class="table">
 <colgroup>
@@ -522,25 +505,31 @@
 <col style="width: 70.0%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>Abschnitt</p></th>
+<tr class="row-odd"><th class="head"><p>Bereich</p></th>
 <th class="head"><p>Beschreibung</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>Enable Hopper</strong></p></td>
-<td><p>Schalter zum Aktivieren/Deaktivieren der Verwendung des Trichters im System</p></td>
+<td><p>Schalter zum Aktivieren/Deaktivieren der Verwendung des Hoppers im System</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Steps</strong></p></td>
-<td><p>Anzahl der erforderlichen Sequenzen, in denen der Teil der Scheibe, der sich gerade im Sichtbereich befindet, unter den Auslaufbereich des Trichters gelangt</p></td>
+<td><p>Anzahl der erforderlichen Sequenzen, mit denen der aktuell im Sichtbereich befindliche Abschnitt der Scheibe unter den Entladebereich des Hoppers gelangt</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Time</strong></p></td>
-<td><p>Dauer der Trichteraktivierung in Millisekunden</p></td>
+<tr class="row-even"><td><p><strong>Wizard Steps</strong></p></td>
+<td><p>Startet den geführten Vorgang zur automatischen Berechnung des Parameters Steps (siehe <a class="reference internal" href="#wizardsteps"><span class="std std-ref">Wizard Steps</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Time</strong></p></td>
+<td><p>Dauer der Hopper-Aktivierung in Millisekunden</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Wizard Time</strong></p></td>
+<td><p>Startet den geführten Vorgang zur automatischen Berechnung der Aktivierungsparameter des Hoppers (siehe <a class="reference internal" href="#wizardtime"><span class="std std-ref">Wizard Time</span></a>)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Signal</strong></p></td>
-<td><p>Nummer des digitalen Signals, das zur Steuerung des Trichters verwendet wird</p></td>
+<td><p>Nummer des Digitalsignals, mit dem der Hopper gesteuert wird</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Config Hopper</strong></p></td>
-<td><p>Schaltfläche zum Konfigurieren des Trichters (für die spätere Verwendung)</p></td>
+<td><p>Schaltfläche zur Konfiguration des Hoppers (im Folgenden zu verwenden)</p></td>
 </tr>
 </tbody>
 </table>
@@ -548,73 +537,73 @@
 <hr class="docutils" />
 </section>
 </section>
-<section id="konfiguration-des-trichters-hopper">
-<span id="confighopper"></span><h1><strong>Konfiguration des Trichters (Hopper)</strong><a class="headerlink" href="#konfiguration-des-trichters-hopper" title="Link to this heading">#</a></h1>
-<p>Die Konfiguration des Trichters ermöglicht die Steuerung der automatischen Zuführung von Komponenten auf die Scheibe des FlexiBowl®. Das System erkennt mit Hilfe von Bildverarbeitung, wann der Füllstand zu niedrig ist und aktiviert den Trichter.</p>
+<section id="konfiguration-des-hoppers">
+<span id="confighopper"></span><h1><strong>Konfiguration des Hoppers</strong><a class="headerlink" href="#konfiguration-des-hoppers" title="Link to this heading">#</a></h1>
+<p>Die Konfiguration des Hoppers ermöglicht die Verwaltung der automatischen Nachfüllung der Komponenten auf der Scheibe des FlexiBowl®. Das System nutzt die Bildverarbeitung, um zu bestimmen, wann der Füllstand unzureichend ist, und aktiviert den Hopper.</p>
 <section id="schritt-1-zugriff-auf-die-konfiguration">
 <h2>Schritt 1: Zugriff auf die Konfiguration<a class="headerlink" href="#schritt-1-zugriff-auf-die-konfiguration" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><strong>1</strong></p></td>
 <td><p>Klicken Sie auf <img alt="../../../_images/tasto_setup1.png" class="inline-icon" src="../../../../../_shared/media/images/tasto_setup1.png" />.<br />
-Im Abschnitt <strong>Hopper Setup</strong> können Sie die angeschlossenen Ladeeinheiten anzeigen und verwalten.</p>
+Im Bereich <strong>Hopper Setup</strong> können Sie die angeschlossenen Ladeeinheiten anzeigen und verwalten.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Seite Hopper Setup</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><img alt="Seite Hooper Setup" src="../../../../../_shared/media/images/pagina_hoppersetup.png" /></p>
+<p class="sd-card-text"><img alt="Seite Hopper Setup" src="../../../../../_shared/media/images/pagina_hoppersetup.png" /></p>
 </div>
 </details></td>
 </tr>
 <tr class="row-even"><td><p><strong>2</strong></p></td>
-<td><p>Geben Sie im Feld <strong>Signal</strong> die Nummer des digitalen Signals (DO - Digital Output) ein, das zur Steuerung des Trichters verwendet wird</p>
+<td><p>Geben Sie im Feld <strong>Signal</strong> die Nummer des Digitalsignals (DO - Digital Output) ein, mit dem der Hopper gesteuert wird</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Es ist äußerst wichtig, die richtige Signalnummer einzugeben:</p>
+<p>Es ist unbedingt erforderlich, die richtige Signalnummer einzugeben:</p>
 <ul class="simple">
-<li><p>Eine falsche Nummer aktiviert das falsche (potenziell gefährliche) Signal</p></li>
-<li><p>Beachten Sie den bei der Installation erstellten Schaltplan</p></li>
-<li><p>Wenden Sie sich im Zweifelsfall an denjenigen, der die Verkabelung vorgenommen hat</p></li>
+<li><p>Eine falsche Nummer aktiviert das falsche Signal (potenziell gefährlich)</p></li>
+<li><p>Konsultieren Sie den während der Installation erstellten Schaltplan</p></li>
+<li><p>Wenden Sie sich im Zweifelsfall an die Person, die die Verkabelung durchgeführt hat</p></li>
 </ul>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p><strong>3</strong></p></td>
-<td><p>Aktivieren Sie das Kästchen <strong>Enable Hopper X</strong>, um den entsprechenden Hopper zu aktivieren.</p>
+<td><p>Aktivieren Sie das Kontrollkästchen <strong>Enable Hopper X</strong>, um den entsprechenden Hopper zu aktivieren.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Aktivieren Sie den Trichter nur, wenn das Gerät korrekt installiert ist</p>
+<p>Aktivieren Sie den Hopper nur, wenn das Gerät korrekt installiert ist</p>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p><strong>4</strong></p></td>
-<td><p>Klicken Sie auf die Schaltfläche <strong>Config Hopper X</strong>, um die spezifische Konfiguration aufzurufen</p></td>
+<td><p>Klicken Sie auf die Schaltfläche <strong>Config Hopper X</strong>, um auf die spezifische Konfiguration zuzugreifen</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-<section id="schritt-2-festlegen-des-uberwachungsbereichs">
-<h2>Schritt 2: Festlegen des Überwachungsbereichs<a class="headerlink" href="#schritt-2-festlegen-des-uberwachungsbereichs" title="Link to this heading">#</a></h2>
-<div  class="sphinx-contrib-video-container align-center"><video controls="True" preload="auto" width="100%"><source src="../../../../../_shared/media/videos/TastoInfo_AreaHopper_1280x720.mp4" type="video/mp4"></video></div><p>In diesem Schritt legen Sie den Bereich der Scheibe fest, den die Kamera für die Entleerung überwachen soll.</p>
+<section id="schritt-2-definition-des-kontrollbereichs">
+<h2>Schritt 2: Definition des Kontrollbereichs<a class="headerlink" href="#schritt-2-definition-des-kontrollbereichs" title="Link to this heading">#</a></h2>
+<div  class="sphinx-contrib-video-container align-center"><video controls="True" preload="auto" width="100%"><source src="../../../../../_shared/media/videos/TastoInfo_AreaHopper_1280x720.mp4" type="video/mp4"></video></div><p>In dieser Phase wird der Teil der Scheibe definiert, den die Kamera für die Entladung überwachen muss.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><strong>5</strong></p></td>
-<td><p>Passen Sie den blauen Rahmen auf dem Bildschirm an, um den Bereich einzurahmen, in dem die Komponenten erfasst werden sollen.</p></td>
+<td><p>Passen Sie den blauen Rahmen auf dem Bildschirm an, um den Bereich einzurahmen, in dem Komponenten erkannt werden.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Wenn Sie während der Konfiguration Zweifel haben, konsultieren Sie bitte die <strong>INFO</strong>-Taste auf der aktuellen Seite.</p>
+<p>Bei Fragen während der Konfiguration konsultieren Sie die Schaltfläche <strong>INFO</strong> auf der aktuellen Seite.</p>
 </div>
 </section>
-<section id="schritt-3-festlegung-der-schwellenwerte">
-<h2>Schritt 3: Festlegung der Schwellenwerte<a class="headerlink" href="#schritt-3-festlegung-der-schwellenwerte" title="Link to this heading">#</a></h2>
+<section id="schritt-3-definition-der-schwellenwerte">
+<h2>Schritt 3: Definition der Schwellenwerte<a class="headerlink" href="#schritt-3-definition-der-schwellenwerte" title="Link to this heading">#</a></h2>
 <div  class="sphinx-contrib-video-container align-center"><video controls="True" preload="auto" width="100%"><source src="../../../../../_shared/media/videos/TastoInfo_Hopper_1280x720.mp4" type="video/mp4"></video></div><div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><strong>6</strong></p></td>
-<td><p>Klicken Sie auf <img alt="../../../_images/tasto_next.png" class="inline-icon icon-small" src="../../../../../_shared/media/images/tasto_next.png" />, um die Seite <strong>Define Value Hopper Cam</strong> aufzurufen, auf der Sie das System anweisen, zwischen einer leeren und einer vollen Scheibe zu unterscheiden.</p>
+<td><p>Klicken Sie auf <img alt="../../../_images/tasto_next.png" class="inline-icon icon-small" src="../../../../../_shared/media/images/tasto_next.png" />, um auf die Seite <strong>Define Value Hopper Cam</strong> zuzugreifen, auf der das System darauf trainiert wird, zwischen leerer und voller Scheibe zu unterscheiden.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Seite Define Value Hopper Cam</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -626,7 +615,7 @@ Im Abschnitt <strong>Hopper Setup</strong> können Sie die angeschlossenen Ladee
 <td><p>Entfernen Sie alle Komponenten aus dem Sichtbereich und klicken Sie auf die erste Schaltfläche <strong>CAPTURE</strong>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>8</strong></p></td>
-<td><p>Legen Sie die Mindestanzahl an Komponenten fest, die im Sichtbereich verbleiben sollen. Fällt die Zahl unter diesen Schwellenwert, wird der Trichter aktiviert.</p></td>
+<td><p>Platzieren Sie die Mindestanzahl der Komponenten, die Sie im Sichtbereich behalten möchten. Sinkt die Anzahl unter diesen Schwellenwert, wird der Hopper aktiviert.</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>9</strong></p></td>
 <td><p>Klicken Sie auf die zweite Schaltfläche <strong>CAPTURE</strong>.</p></td>
@@ -640,21 +629,21 @@ Im Abschnitt <strong>Hopper Setup</strong> können Sie die angeschlossenen Ladee
 <tr class="row-odd"><td><p><strong>12</strong></p></td>
 <td><p>Beobachten Sie die Ergebnisanzeige:</p>
 <ul>
-<li><p><strong>Grün</strong> 🟢: Füllstand unzureichend, der Trichter wird aktiviert (Entleerung erforderlich)</p></li>
-<li><p><strong>Rot</strong> 🔴: Füllstand ausreichend, der Trichter wird NICHT aktiviert (OK)</p>
+<li><p><strong>Grün</strong> 🟢: Füllstand unzureichend, Hopper aktiviert sich (Entladung erforderlich)</p></li>
+<li><p><strong>Rot</strong> 🔴: Füllstand ausreichend, Hopper aktiviert sich NICHT (OK)</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>Unzureichende Kalibrierung</strong></p>
 <p>Wenn das System den Füllstand nicht korrekt erkennt:</p>
-<p><strong>Problem: Immer grün (Trichter immer aktiv)</strong><br />
+<p><strong>Problem: Immer grün (Hopper wird immer aktiviert)</strong><br />
 → Schwellenwert zu niedrig oder Störungen im Bereich<br />
-→ Lösung: Anzahl der Teile bei der zweiten Erfassung erhöhen, Sauberkeit des Bereichs überprüfen</p>
-<p><strong>Problem: Immer rot (Trichter wird nie aktiviert)</strong><br />
+→ Lösung: Anzahl der Teile bei der zweiten Erfassung erhöhen, Sauberkeit des Bereichs prüfen</p>
+<p><strong>Problem: Immer rot (Hopper wird nie aktiviert)</strong><br />
 → Schwellenwert zu hoch oder Überwachungsbereich nicht repräsentativ<br />
-→ Lösung: Reduzieren Sie die Anzahl der Teile in der zweiten CAPTURE-Erfassung, wiederholen Sie AUTO</p>
-<p><strong>Problem: Fehlerhaftes Verhalten (wechselt zufällig zwischen grün und rot)</strong><br />
-→ Instabile Beleuchtung oder zu kleiner Bereich<br />
-→ Lösung: Stabile Hintergrundbeleuchtung prüfen, Überwachungsbereich vergrößern, Kalibrierung wiederholen</p>
+→ Lösung: Anzahl der Teile bei der zweiten Erfassung CAPTURE reduzieren, AUTO wiederholen</p>
+<p><strong>Problem: Fehlerhaftes Verhalten (wechselt zufällig zwischen grün/rot)</strong><br />
+→ Instabile Beleuchtung oder Bereich zu klein<br />
+→ Lösung: Stabiles Backlight prüfen, Überwachungsbereich vergrößern, Kalibrierung wiederholen</p>
 </div>
 </li>
 </ul>
@@ -666,19 +655,19 @@ Im Abschnitt <strong>Hopper Setup</strong> können Sie die angeschlossenen Ladee
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Hopper Fill Threshold</strong></p>
-<p>Der Parameter <strong>Hopper Fill Threshold</strong> definiert den prozentualen Schwellenwert des Sichtfelds, bei dessen Unterschreitung der Hopper automatisch aktiviert wird.</p>
-<p>Der Wert 100 % entspricht der während des zweiten CAPTURE erfassten Stückzahl (voller Bereich). Ein Schwellenwert von 50 % entspricht also der Hälfte dieser Menge.</p>
+<p>Der Parameter <strong>Hopper Fill Threshold</strong> definiert den prozentualen Füllstand-Schwellenwert des Sichtbereichs, unterhalb dessen sich der Hopper automatisch aktiviert.</p>
+<p>Der Wert 100 % entspricht der während der zweiten Erfassung (CAPTURE) erfassten Teilemenge (voller Bereich). Folglich entspricht ein Schwellenwert von 50 % der Hälfte dieser Menge.</p>
 <p>Das System setzt den Anfangswert automatisch auf <strong>70 %</strong>, was für die meisten Anwendungen ein gutes Gleichgewicht darstellt.</p>
-<p><strong>Änderung während des Betriebs</strong></p>
+<p><strong>Nachträgliche Anpassung</strong></p>
 <p>Der Schwellenwert kann angepasst werden, ohne den Erfassungsvorgang zu wiederholen:</p>
 <ul class="simple">
-<li><p>Um <strong>weniger Teile</strong> zu entladen → den Prozentsatz verringern (z. B. 50 %) und auf <strong>AUTO</strong> klicken</p></li>
-<li><p>Um <strong>mehr Teile</strong> zu entladen → den Prozentsatz erhöhen (z. B. 85 %) und auf <strong>AUTO</strong> klicken</p></li>
+<li><p>Um <strong>weniger Teile</strong> zu entladen → Prozentsatz verringern (z. B. 50 %) und auf <strong>AUTO</strong> klicken</p></li>
+<li><p>Um <strong>mehr Teile</strong> zu entladen → Prozentsatz erhöhen (z. B. 85 %) und auf <strong>AUTO</strong> klicken</p></li>
 </ul>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Wenn Sie während der Konfiguration Zweifel haben, konsultieren Sie bitte die <strong>INFO</strong>-Taste auf der aktuellen Seite.</p>
+<p>Bei Fragen während der Konfiguration konsultieren Sie die Schaltfläche <strong>INFO</strong> auf der aktuellen Seite.</p>
 </div>
 </section>
 <section id="schritt-4-betriebsparameter">
@@ -698,44 +687,139 @@ Im Abschnitt <strong>Hopper Setup</strong> können Sie die angeschlossenen Ladee
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>Steps</strong></p></td>
-<td><p>Anzahl der erforderlichen FlexiBowl®-Vorschübe (Sequenzen), um die Teile vom Sichtbereich zum Entladebereich des Trichters zu befördern.</p></td>
+<td><p>Anzahl der Vorschübe (Sequenzen) des FlexiBowl®, die erforderlich sind, um die Teile vom Sichtbereich zum Entladebereich des Hoppers zu bringen. Kann manuell eingestellt oder über den <a class="reference internal" href="#wizardsteps"><span class="std std-ref">Wizard Steps</span></a> berechnet werden.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Time</strong></p></td>
-<td><p>Millisekunden der Trichteraktivierung.   Empfohlener Wert: <strong>100 – 1000 ms</strong> (Durchschnitt: <strong>500 ms</strong>). Passen Sie den Wert je nach gewünschtem Durchsatz um ±50 ms an.</p></td>
+<td><p>Aktivierungszeit des Hoppers in Millisekunden. Empfohlener Wert: <strong>100 – 1000 ms</strong> (Durchschnitt: <strong>500 ms</strong>). Je nach gewünschtem Durchfluss um ±50 ms anpassen. Kann manuell eingestellt oder über den <a class="reference internal" href="#wizardtime"><span class="std std-ref">Wizard Time</span></a> berechnet werden.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Die Aktivierungszeit hängt nicht nur vom eingestellten Wert ab, sondern auch vom Volumen der derzeit im Trichterbehälter vorhandenen Teile. Für einen gleichmäßigen Durchsatz ist es unerlässlich, eine konstante Beladung aufrechtzuerhalten.</p>
+<p>Die Aktivierungszeit hängt nicht nur vom eingestellten Wert ab, sondern auch von der aktuell im Hopper-Behälter vorhandenen Menge an Komponenten. Es ist wichtig, eine konstante Füllmenge für einen gleichmäßigen Durchfluss aufrechtzuerhalten.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Der Zeitwert steht in engem Zusammenhang mit dem Ladevolumen des Trichters:</p>
+<p>Der Wert Time hängt eng mit der Füllmenge des Hoppers zusammen:</p>
 <ul class="simple">
-<li><p>Bei einem vollen Trichter befinden sich mehr Teile im Auslaufbereich</p></li>
-<li><p>Bei einem halbvollen Trichter befinden sich weniger Teile im Auslaufbereich</p></li>
+<li><p>Bei vollem Hopper befinden sich mehr Teile im Entladebereich</p></li>
+<li><p>Bei halbvollem Hopper befinden sich weniger Teile im Entladebereich</p></li>
 </ul>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Generell ist es wichtig, die maximale Beladung des verwendeten Trichters niemals zu überschreiten.</p>
+<p>Generell ist es wichtig, die maximale Füllmenge des verwendeten Hoppers niemals zu überschreiten.</p>
 </div>
-<section id="berechnung-des-parameters-schritte">
-<h3><em>Berechnung des Parameters Schritte</em><a class="headerlink" href="#berechnung-des-parameters-schritte" title="Link to this heading">#</a></h3>
-<p><img alt="Erste Seite Schritte" src="../../../../../_shared/media/images/Steps1.png" />
-<img alt="Zweite Seite Schritte" src="../../../../../_shared/media/images/Steps2.png" />
-<img alt="Dritte Seite Schritte" src="../../../../../_shared/media/images/Steps3.png" />
-<img alt="Vierte Seite Schritte" src="../../../../../_shared/media/images/Steps4.png" /></p>
+<hr class="docutils" />
+<section id="wizard-steps-gefuhrte-berechnung-des-parameters-steps">
+<span id="wizardsteps"></span><h3><em>Wizard Steps: Geführte Berechnung des Parameters Steps</em><a class="headerlink" href="#wizard-steps-gefuhrte-berechnung-des-parameters-steps" title="Link to this heading">#</a></h3>
+<p>Der <strong>Wizard Steps</strong> unterstützt den Bediener bei der Berechnung der Anzahl der Sequenzen, die erforderlich sind, damit ein Teil, das in der Mitte des Sichtbereichs platziert wird, den Entladebereich des Hoppers erreicht.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hopper Step Setup Cam X</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><img alt="Hopper Step Setup" src="../../../../../_shared/media/images/pagina_hopperstepwizard.png" /></p>
+</div>
+</details><div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>1</strong></p></td>
+<td><p>Platzieren Sie ein einzelnes Teil in der Mitte des Sichtbereichs.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Stellen Sie sicher, dass die aktuell auf dem FlexiBowl® geladene Sequenz die endgültige ist, also dieselbe, die in der Produktion verwendet wird. Ein späterer Sequenzwechsel würde den berechneten Wert ungültig machen.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>2</strong></p></td>
+<td><p>Klicken Sie auf <strong>Reset Steps</strong>, um den Zähler zurückzusetzen und den Kalibrierungsvorgang zu starten.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3</strong></p></td>
+<td><p>Klicken Sie auf <strong>Test Sequence</strong>, um eine einzelne Sequenz des FlexiBowl® auszuführen.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Warten Sie, bis die Sequenz abgeschlossen ist, bevor Sie eine weitere ausführen.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>4</strong></p></td>
+<td><p>Klicken Sie wiederholt auf <strong>Test Sequence</strong>, bis das Teil den Hopper-Bereich erreicht. Der <strong>Current Step Count</strong> wird nach jeder ausgeführten Sequenz automatisch aktualisiert.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>5</strong></p></td>
+<td><p>Wenn das Teil den Hopper-Bereich erreicht, klicken Sie auf <strong>Save Hopper Step</strong>, um den aktuellen Wert als Parameter Steps zu speichern.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Der mit dem Wizard Steps berechnete Wert <strong>bleibt nach einem Neustart der Software nicht erhalten</strong>, wenn das Rezept nicht gespeichert wird. Denken Sie daran, das Rezept am Ende des Vorgangs zu speichern (siehe <a class="reference internal" href="#salvataggio-configurazione"><span class="xref myst">Speichern der Konfiguration</span></a>).</p>
+</div>
+<p>Die Anzeige <strong>Calibration Active</strong> zeigt den Status der laufenden Kalibrierung an:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Farbe</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>🔴 Rot</p></td>
+<td><p>Kalibrierung nicht aktiv / noch nicht gestartet</p></td>
+</tr>
+<tr class="row-odd"><td><p>🟢 Grün</p></td>
+<td><p>Kalibrierung läuft / abgeschlossen</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="berechnung-des-parameters-steps">
+<h3><em>Berechnung des Parameters Steps</em><a class="headerlink" href="#berechnung-des-parameters-steps" title="Link to this heading">#</a></h3>
+<p><img alt="Erste Seite Steps" src="../../../../../_shared/media/images/Steps1.png" />
+<img alt="Zweite Seite Steps" src="../../../../../_shared/media/images/Steps2.png" />
+<img alt="Dritte Seite Steps" src="../../../../../_shared/media/images/Steps3.png" />
+<img alt="Vierte Seite Steps" src="../../../../../_shared/media/images/Steps4.png" /></p>
+<hr class="docutils" />
+</section>
+<section id="wizard-time-gefuhrte-berechnung-der-aktivierungsparameter">
+<span id="wizardtime"></span><h3><em>Wizard Time: Geführte Berechnung der Aktivierungsparameter</em><a class="headerlink" href="#wizard-time-gefuhrte-berechnung-der-aktivierungsparameter" title="Link to this heading">#</a></h3>
+<p>Der <strong>Wizard Time</strong> unterstützt den Bediener bei der Einstellung der Aktivierungsparameter des Hoppers (Amplitude, Frequenz und Aktivierungszeit) und überprüft deren Wirkung durch einen direkten Test des Teileflusses.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">FlexiBowl® X Hopper – Time and Parameter Setup</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><img alt="Hopper Time Setup" src="../../../../../_shared/media/images/pagina_hoppertimewizard.png" /></p>
+</div>
+</details><div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>1</strong></p></td>
+<td><p>Füllen Sie den Hopper mit einer ausreichenden Menge an Teilen, um die normalen Betriebsbedingungen zu simulieren.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>2</strong></p></td>
+<td><p>Überprüfen Sie, ob die Teile korrekt positioniert sind und sich frei zum Hopper-Auslass bewegen können.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3</strong></p></td>
+<td><p>Stellen Sie die Werte für <strong>Amplitude (V)</strong>, <strong>Frequency (Hz)</strong> und <strong>Activation Time (ms)</strong> über die entsprechenden Schieberegler oder durch direkte Eingabe des Werts im Zahlenfeld ein.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>4</strong></p></td>
+<td><p>Klicken Sie auf <strong>Test Hopper</strong>, um den Hopper mit den eingestellten Parametern zu aktivieren und den Teilefluss zu überprüfen.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>5</strong></p></td>
+<td><p>Passen Sie die Werte an und wiederholen Sie den Test, bis das gewünschte Zuführverhalten erreicht ist.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Fahren Sie mit der Konfiguration des nächsten Abschnitts (Hopper Step) erst fort, wenn der Teilefluss zufriedenstellend ist.</p>
+</div>
 </section>
 </section>
 <section id="speichern-der-konfiguration">
 <h2>Speichern der Konfiguration<a class="headerlink" href="#speichern-der-konfiguration" title="Link to this heading">#</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><strong>Obligatorische Rezeptspeicherung</strong></p>
-<p>Am Ende der Hopper-Konfiguration:</p>
+<p><strong>Speichern des Rezepts obligatorisch</strong></p>
+<p>Nach Abschluss der Hopper-Konfiguration:</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><ol class="arabic simple">
@@ -766,23 +850,23 @@ Im Abschnitt <strong>Hopper Setup</strong> können Sie die angeschlossenen Ladee
 <li></li>
 </ol>
 </td>
-<td><p>Bestätigen Sie die Speicherung</p></td>
+<td><p>Bestätigen Sie das Speichern</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p><strong>WICHTIG</strong>: Jede vorgenommene Änderung wird <strong>NUR</strong> gespeichert, wenn das Rezept vor dem Verlassen oder Wechseln der Seite ordnungsgemäß gespeichert wurde.</p>
-<p>Ohne Speichern gehen alle Trichterkonfigurationen beim Schließen von FlexiVision One verloren!</p>
+<p><strong>WICHTIG</strong>: Jede vorgenommene Änderung wird <strong>NUR</strong> gespeichert, wenn das Rezept korrekt gespeichert wird, bevor Sie die Seite verlassen oder wechseln.</p>
+<p>Ohne Speichern gehen beim Schließen von FlexiVision One alle Hopper-Konfigurationen verloren!</p>
 </div>
 </section>
 <hr class="docutils" />
 <section id="nachste-schritte">
 <h2>Nächste Schritte<a class="headerlink" href="#nachste-schritte" title="Link to this heading">#</a></h2>
-<p>Nach Abschluss des Trichter-Setups (oder Überspringen, falls nicht vorhanden) fahren Sie fort mit:</p>
+<p>Sobald das Hopper Setup abgeschlossen ist (oder übersprungen wurde, falls nicht vorhanden), fahren Sie fort mit:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="13c_Robot_Setup.html"><span class="std std-doc">Roboter-Setup</span></a></p></li>
+<li><p><a class="reference internal" href="13c_Robot_Setup.html"><span class="std std-doc">Robot Setup</span></a></p></li>
 <li><p><a class="reference internal" href="15_Protocol_Setup.html#protocol-setup"><span class="std std-ref">Protocol Setup</span></a></p></li>
-<li><p><a class="reference internal" href="15b_SaveRecipe.html#ricettabase"><span class="std std-ref">Rezept speichern</span></a></p></li>
+<li><p><a class="reference internal" href="15b_SaveRecipe.html#ricettabase"><span class="std std-ref">Speichern des Rezepts</span></a></p></li>
 </ul>
 <br>
 <!-- Versions and languages set-up -->
@@ -1481,17 +1565,19 @@ Im Abschnitt <strong>Hopper Setup</strong> können Sie die angeschlossenen Ladee
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Hopper Setup</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vorbereitung-der-physischen-einrichtung">Vorbereitung der physischen Einrichtung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vorbereitung-des-physischen-setups">Vorbereitung des physischen Setups</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zugriff-auf-die-hopper-konfiguration">Zugriff auf die Hopper-Konfiguration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ubersicht-uber-die-benutzeroberflache-hopper-setup">Übersicht über die Benutzeroberfläche Hopper Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ubersicht-der-hopper-setup-oberflache">Übersicht der Hopper-Setup-Oberfläche</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#konfiguration-des-trichters-hopper"><strong>Konfiguration des Trichters (Hopper)</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#konfiguration-des-hoppers"><strong>Konfiguration des Hoppers</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schritt-1-zugriff-auf-die-konfiguration">Schritt 1: Zugriff auf die Konfiguration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schritt-2-festlegen-des-uberwachungsbereichs">Schritt 2: Festlegen des Überwachungsbereichs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schritt-3-festlegung-der-schwellenwerte">Schritt 3: Festlegung der Schwellenwerte</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schritt-2-definition-des-kontrollbereichs">Schritt 2: Definition des Kontrollbereichs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schritt-3-definition-der-schwellenwerte">Schritt 3: Definition der Schwellenwerte</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schritt-4-betriebsparameter">Schritt 4: Betriebsparameter</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#berechnung-des-parameters-schritte"><em>Berechnung des Parameters Schritte</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wizard-steps-gefuhrte-berechnung-des-parameters-steps"><em>Wizard Steps: Geführte Berechnung des Parameters Steps</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#berechnung-des-parameters-steps"><em>Berechnung des Parameters Steps</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wizard-time-gefuhrte-berechnung-der-aktivierungsparameter"><em>Wizard Time: Geführte Berechnung der Aktivierungsparameter</em></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#speichern-der-konfiguration">Speichern der Konfiguration</a></li>

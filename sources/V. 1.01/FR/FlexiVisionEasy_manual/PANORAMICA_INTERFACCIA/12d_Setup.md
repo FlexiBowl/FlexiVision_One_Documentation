@@ -3,8 +3,8 @@ L'interface du FlexiVision One est structurée en sections fonctionnelles qui gu
 Chaque page fournit des informations en temps réel sur l'état de la machine, les connexions, les performances et les paramètres du processus, avec un accès direct aux fonctions clés.
 La navigation est conçue pour garantir la simplicité d'utilisation, le contrôle immédiat des opérations et la surveillance continue des performances de vision, d'alimentation et de robot.
 
-<img src="../../../../_shared/media/images/pagina_setupW.png" class="only-light" style="width: 20%; height: auto;">
-<img src="../../../../_shared/media/images/pagina_setupB.png" class="only-dark" style="width: 20%; height: auto;">
+<img src="../../../../_shared/media/images/pagina_setup.png" class="only-light" style="width: 20%; height: auto;">
+<img src="../../../../_shared/media/images/pagina_setup_B.png" class="only-dark" style="width: 20%; height: auto;">
 
 
 ```{list-table} Description de la Page Setup

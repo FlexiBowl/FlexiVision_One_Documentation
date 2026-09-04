@@ -3,8 +3,8 @@ Die Benutzeroberfläche von FlexiVision One ist in Funktionsbereiche unterteilt,
 Jede Seite liefert Echtzeitinformationen zu Maschinenstatus, Verbindungen, Leistung und Prozessparametern und bietet direkten Zugriff auf die wichtigsten Funktionen.
 Die Navigation ist so konzipiert, dass sie eine einfache Bedienung, eine sofortige Kontrolle der Abläufe und eine kontinuierliche Überwachung der Leistung der Bildverarbeitung, der Zuführung und des Roboters gewährleistet.
 
-<img src="../../../../_shared/media/images/pagina_setupW.png" class="only-light" style="width: 20%; height: auto;">
-<img src="../../../../_shared/media/images/pagina_setupB.png" class="only-dark" style="width: 20%; height: auto;">
+<img src="../../../../_shared/media/images/pagina_setup.png" class="only-light" style="width: 20%; height: auto;">
+<img src="../../../../_shared/media/images/pagina_setup_B.png" class="only-dark" style="width: 20%; height: auto;">
 
 
 ```{list-table} Beschreibung der Setup-Seite
