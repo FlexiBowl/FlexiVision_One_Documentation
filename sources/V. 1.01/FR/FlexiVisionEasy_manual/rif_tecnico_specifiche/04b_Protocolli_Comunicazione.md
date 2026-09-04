@@ -57,6 +57,9 @@ Le système prend en charge les commandes suivantes par le biais de chaînes de 
   - Valeur de retour
 * - `start_Locator`
   - Lance le processus de localisation des pièces. Si aucune pièce ne peut être prélevée, il appelle automatiquement la routine de manutention du FlexiBowl®.
+     :::{important}
+    Se al momento del comando non risulta selezionato/abilitato alcun modello, il sistema restituisce un messaggio di errore e il Locator non viene avviato.
+    :::
   - `Pattern_n;x;y;r` / `Hopper;signalnumber;time`
 * - `stop_Locator`
   - Arrête le processus de localisation

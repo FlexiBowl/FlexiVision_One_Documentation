@@ -57,6 +57,9 @@ The system supports the following commands via text strings sent over the TCP/IP
   - Return Value
 * - `start_Locator`
   - It starts the part tracking process. If there are no parts that can be picked up, it automatically retrieves the FlexiBowl® movement routine.
+    :::{important}
+    Se al momento del comando non risulta selezionato/abilitato alcun modello, il sistema restituisce un messaggio di errore e il Locator non viene avviato.
+    :::
   - `Pattern_n;x;y;r` / `Hopper;signalnumber;time`
 * - `stop_Locator`
   - It stops the tracking process

@@ -110,6 +110,9 @@ Once the connection is established, proceed to set the operating parameters.
 * - **13**
   - Go back to the main SETUP page to proceed with the next setup 
 ```
+:::{important}
+I parametri possono essere regolati tramite slider oppure inseriti manualmente da tastiera nel relativo campo numerico.
+:::
 
 ```{warning}
 **Do not skip the synchronisation**
@@ -291,6 +294,9 @@ Use the **Test Sequence** function to check that the cycle meets the following e
 
 :::{warning}
 Always click **Synchronize Parameters** after any manual change to activate the changes in the controller.
+:::
+:::{important}
+Nel caso in cui i parametri venissero modificati ma non sincronizzati, apparirà un messaggio di avviso. 
 :::
 
 ## Overview of FlexiBowl® Parameters

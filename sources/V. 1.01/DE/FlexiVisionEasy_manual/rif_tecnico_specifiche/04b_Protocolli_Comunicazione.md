@@ -57,6 +57,9 @@ Das System unterstützt die folgenden Befehle über Textstrings, die über die T
   - Rückgabewert
 * - `start_Locator`
   - Startet den Prozess zur Lokalisierung der Teile. Wenn keine aufnehmbaren Teile vorhanden sind, ruft automatisch die Bewegungsroutine des FlexiBowl® auf.
+    :::{important}
+    Se al momento del comando non risulta selezionato/abilitato alcun modello, il sistema restituisce un messaggio di errore e il Locator non viene avviato.
+    :::
   - `Pattern_n;x;y;r` / `Hopper;signalnumber;time`
 * - `stop_Locator`
   - Stoppt den Lokalisierungsprozess

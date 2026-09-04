@@ -529,7 +529,12 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">start_Locator</span></code></p></td>
-<td><p>Avvia il processo di localizzazione dei pezzi. Se non sono presenti pezzi prelevabili, richiama automaticamente la routine di movimentazione del FlexiBowl®.</p></td>
+<td><p>Avvia il processo di localizzazione dei pezzi. Se non sono presenti pezzi prelevabili, richiama automaticamente la routine di movimentazione del FlexiBowl®.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Se al momento del comando non risulta selezionato/abilitato alcun modello, il sistema restituisce un messaggio di errore e il Locator non viene avviato.</p>
+</div>
+</td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Pattern_n;x;y;r</span></code> / <code class="docutils literal notranslate"><span class="pre">Hopper;signalnumber;time</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">stop_Locator</span></code></p></td>

@@ -57,6 +57,9 @@ El sistema admite los siguientes comandos mediante cadenas de texto enviadas a t
   - Valor de retorno
 * - `start_Locator`
   - Inicia el proceso de localización de piezas. Si no hay piezas que puedan recogerse, invoca automáticamente la rutina de manipulación del FlexiBowl®.
+    :::{important}
+    Se al momento del comando non risulta selezionato/abilitato alcun modello, il sistema restituisce un messaggio di errore e il Locator non viene avviato.
+    :::
   - `Pattern_n;x;y;r` / `Hopper;signalnumber;time`
 * - `stop_Locator`
   - Detiene el proceso de localización

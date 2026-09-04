@@ -98,8 +98,11 @@ Una volta stabilita la connessione, procedere con la configurazione dei parametr
   - Cliccare sul pulsante <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl" >
 * - **10**
   - Si apre una finestra con i parametri configurabili del FlexiBowl®
+    ![Pagina Parametri]()
 ```
-
+:::{important}
+I parametri possono essere regolati tramite slider oppure inseriti manualmente da tastiera nel relativo campo numerico.
+:::
 
 ### *Step 4: Sincronizzazione parametri*
 
@@ -291,6 +294,10 @@ Utilizzare la funzione **Test Sequence** per verificare che il ciclo rispetti i 
 
 :::{warning}
 Cliccare sempre su **Synchronize Parameters** dopo ogni modifica manuale per rendere attive le variazioni nel controller.
+:::
+
+:::{important}
+Nel caso in cui i parametri venissero modificati ma non sincronizzati, apparirà un messaggio di avviso. 
 :::
 
 ## Panoramica Parametri FlexiBowl®

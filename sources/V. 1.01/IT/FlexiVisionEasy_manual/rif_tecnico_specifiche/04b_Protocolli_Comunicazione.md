@@ -57,6 +57,9 @@ Il sistema supporta i seguenti comandi tramite stringhe di testo inviate sulla c
   - Valore di Ritorno
 * - `start_Locator`
   - Avvia il processo di localizzazione dei pezzi. Se non sono presenti pezzi prelevabili, richiama automaticamente la routine di movimentazione del FlexiBowl®.
+    :::{important}
+    Se al momento del comando non risulta selezionato/abilitato alcun modello, il sistema restituisce un messaggio di errore e il Locator non viene avviato.
+    :::
   - `Pattern_n;x;y;r` / `Hopper;signalnumber;time`
 * - `stop_Locator`
   - Ferma il processo di localizzazione

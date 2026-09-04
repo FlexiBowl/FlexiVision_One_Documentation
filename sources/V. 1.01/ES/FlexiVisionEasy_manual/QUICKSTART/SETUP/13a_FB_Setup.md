@@ -110,6 +110,9 @@ Una vez establecida la conexión, proceda a configurar los parámetros de funcio
 * - **13**
   - Vuelva a la página SETUP principal para continuar con la siguiente configuración 
 ```
+:::{important}
+I parametri possono essere regolati tramite slider oppure inseriti manualmente da tastiera nel relativo campo numerico.
+:::
 
 ```{warning}
 **No omitir la sincronización**
@@ -291,6 +294,9 @@ Utilice la función **Test Sequence** para comprobar que el ciclo cumple los sig
 
 :::{warning}
 Haga clic siempre en **Synchronize Parameters** después de cada modificación manual para activar los cambios en el controlador.
+:::
+:::{important}
+Nel caso in cui i parametri venissero modificati ma non sincronizzati, apparirà un messaggio di avviso. 
 :::
 
 ## Descripción Parámetros FlexiBowl

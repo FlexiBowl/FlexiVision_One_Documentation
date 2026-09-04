@@ -68,7 +68,9 @@ FlexiVision One supporta profili utente multipli con diversi livelli di permessi
 - **Technician**
 - **Operator**
 ```
-
+:::{important}
+Se l'utente corrente non dispone del livello di accesso necessario per una funzione, il sistema mostra una message box che ne segnala l'impossibilità di esecuzione.
+:::
 ---
 
 ### *Accendere il Backlight se presente*

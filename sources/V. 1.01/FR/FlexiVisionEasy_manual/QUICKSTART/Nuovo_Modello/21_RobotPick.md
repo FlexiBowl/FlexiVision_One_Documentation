@@ -119,7 +119,9 @@ En cas de doutes lors de la configuration, veuillez consulter le bouton **INFO**
       - ✓ Calibrage du robot (Gripper Offset)
       :::
 ```
-
+:::{warning}
+Se il Robot Pick Offset è stato abilitato ma il relativo valore non è stato calcolato correttamente, il sistema mostra una message box e impedisce di proseguire con Next.
+:::
 ---
 
 ## Modèles multiples - Ajouter d'autres modèles
