@@ -98,6 +98,7 @@ Sobald die Verbindung hergestellt ist, fahren Sie mit der Konfiguration der Betr
   - Klicken Sie auf die Schaltfläche <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl" >
 * - **10**
   - Es öffnet sich ein Fenster mit den konfigurierbaren Parametern des FlexiBowl®.
+    ![Pagina Parametri](../../../../../_shared/media/images/config_FB.png)
 ```
 
 
@@ -146,7 +147,7 @@ So starten Sie den Vorgang:
   - Klicken Sie auf die Schaltfläche <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl">. Es öffnet sich eine Seite mit allen für den ausgewählten FlexiBowl verfügbaren Bewegungsabläufen
 
     :::{dropdown} Seite Konfiguration FlexiBowl®  
-    ![Seite FlexiBowl® Konfig](../../../../../_shared/media/images/pagina_FBsetup.png)
+    ![Pagina Parametri](../../../../../_shared/media/images/config_FB.png)
     :::
 
 * - **4**

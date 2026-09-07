@@ -36,6 +36,9 @@ Tras hacer clic en "Siguiente" en la página de Clearances, se abre la página *
 | **Buscar objeto** | Detectar el componente y mostrar las coordenadas |
 | **Desplazamiento de selección** | Calcula el desplazamiento para la recogida correcta |
 
+:::{note}
+El formato de visualización de los desplazamientos de Robot Pick en las páginas de recetas utiliza el punto (`.`) como separador decimal, independientemente de la configuración regional del sistema.
+:::
 ---
 
 ## Paso 1: Activación y detección de componentes
@@ -120,7 +123,7 @@ Si tiene alguna duda durante la configuración, consulte el botón **INFO** de l
       :::
 ```
 :::{warning}
-Se il Robot Pick Offset è stato abilitato ma il relativo valore non è stato calcolato correttamente, il sistema mostra una message box e impedisce di proseguire con Next.
+Si se ha activado el «Robot Pick Offset», pero su valor no se ha calculado correctamente, el sistema muestra un cuadro de mensaje e impide continuar con «Siguiente».
 :::
 ---
 

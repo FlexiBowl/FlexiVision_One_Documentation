@@ -36,6 +36,9 @@ Après avoir cliqué sur « Next » à la page Clearance, la page **Robot Model 
 | **Find Object** | Détecte le composant et affiche les coordonnées de vision |
 | **Picking Offset** | Calcule le décalage pour un prélèvement correct |
 
+:::{note}
+Le format d'affichage des décalages « Robot Pick » dans les pages de recette utilise le point (`.`) comme séparateur décimal, quels que soient les paramètres régionaux du système.
+:::
 ---
 
 ## Étape 1 : Activation et détection du composant
@@ -120,7 +123,7 @@ En cas de doutes lors de la configuration, veuillez consulter le bouton **INFO**
       :::
 ```
 :::{warning}
-Se il Robot Pick Offset è stato abilitato ma il relativo valore non è stato calcolato correttamente, il sistema mostra una message box e impedisce di proseguire con Next.
+Si le « Robot Pick Offset » a été activé mais que sa valeur n'a pas été calculée correctement, le système affiche une boîte de message et empêche de passer à l'étape suivante.
 :::
 ---
 

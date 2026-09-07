@@ -49,4 +49,7 @@ La navegación está diseñada para facilitar el uso, el control inmediato de la
 
 * - 11
   - **Licence software**: página para la activación de la licencia de software.
+
+* - 12 
+  - **Check Belt**: página que permite supervisar a lo largo del tiempo el nivel de suciedad o desgaste de la cinta, detectando a tiempo la necesidad de mantenimiento.
 ```

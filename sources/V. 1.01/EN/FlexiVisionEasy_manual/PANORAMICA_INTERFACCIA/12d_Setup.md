@@ -49,4 +49,7 @@ Navigation is designed to be easy to use, having immediate control over operatio
 
 * - 11
   - **Licence software**: page for activating software licence.
+
+* - 12 
+  - **Check Belt**: page that allows you to monitor the level of dirt or wear on the belt over time, enabling you to identify the need for maintenance early on.
 ```

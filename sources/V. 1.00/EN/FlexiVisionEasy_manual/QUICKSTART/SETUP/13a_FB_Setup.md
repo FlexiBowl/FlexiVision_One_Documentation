@@ -98,6 +98,7 @@ Once the connection is established, proceed to set the operating parameters.
   - Click the button <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl" >
 * - **10**
   - A window opens with the configurable parameters of the FlexiBowl®
+    ![Pagina Parametri](../../../../../_shared/media/images/config_FB.png)
 ```
 
 
@@ -146,7 +147,7 @@ To start the procedure:
   - Click the button <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl"> to open a page with all available movements for the selected FlexiBowl
 
     :::{dropdown} FlexiBowl® Configuration Page  
-    ![FlexiBowl® Config page](../../../../../_shared/media/images/pagina_FBsetup.png)
+    ![Pagina Parametri](../../../../../_shared/media/images/config_FB.png)
     :::
 
 * - **4**

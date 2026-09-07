@@ -429,9 +429,15 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#protocol-specifications">Protocol specifications</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#available-commands">Available commands</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recipe-management"><em>Recipe management</em></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tracking-commands"><em>Tracking commands</em></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flexibowl-commands"><em>FlexiBowl® Commands</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#locator-commands"><em>Locator commands</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flexibowl-commands-emptying"><em>FlexiBowl® commands – Emptying</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-hopper-signals"><em>Optional hopper signals</em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-errors">General errors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-service-commands">Advanced / Service Commands</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flexibowl-connection"><em>FlexiBowl® connection</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#laser-commands"><em>Laser commands</em></a></li>
 </ul>
 </li>
 </ul>
@@ -447,7 +453,7 @@
                   
   <section id="robot-vision-communication-protocol">
 <span id="protocollo"></span><h1><strong>Robot-Vision Communication Protocol</strong><a class="headerlink" href="#robot-vision-communication-protocol" title="Link to this heading">#</a></h1>
-<p>FlexiVision One dialogues with the robot via <strong>TCP/IP</strong> protocol over an Ethernet network.</p>
+<p>FlexiVision One communicates with the robot via <strong>TCP/IP</strong> protocol over an Ethernet network.</p>
 <section id="protocol-specifications">
 <h2>Protocol specifications<a class="headerlink" href="#protocol-specifications" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -485,7 +491,7 @@
 </section>
 <section id="available-commands">
 <h2>Available commands<a class="headerlink" href="#available-commands" title="Link to this heading">#</a></h2>
-<p>The system supports the following commands via text strings sent over the TCP/IP connection:</p>
+<p>The system supports the following commands via text strings sent over the TCP/IP connection.</p>
 <section id="recipe-management">
 <h3><em>Recipe management</em><a class="headerlink" href="#recipe-management" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -501,20 +507,29 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">set_Recipe=nome_ricetta</span></code></p></td>
-<td><p>Uploads the recipe matching the specified “recipe_name”</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">set_recipe=&lt;name&gt;</span></code></p></td>
+<td><p>Loads the specified recipe and starts synchronization of the connected FlexiBowl® units.</p></td>
 <td><p>None</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">get_Recipe</span></code></p></td>
-<td><p>Returns the name of the currently uploaded recipe</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">nome_ricetta</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">get_recipe</span></code></p></td>
+<td><p>Returns the name of the currently loaded recipe.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;recipe_name&gt;</span></code></p></td>
 </tr>
 </tbody>
 </table>
 </div>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_recipe</span><span class="o">=</span><span class="n">MyRecipe</span>
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>get_recipe
+→ MyRecipe
+</pre></div>
+</div>
 </section>
-<section id="tracking-commands">
-<h3><em>Tracking commands</em><a class="headerlink" href="#tracking-commands" title="Link to this heading">#</a></h3>
+<section id="locator-commands">
+<h3><em>Locator commands</em><a class="headerlink" href="#locator-commands" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <colgroup>
 <col style="width: 30.0%" />
@@ -529,40 +544,53 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">start_Locator</span></code></p></td>
-<td><p>It starts the part tracking process. If there are no parts that can be picked up, it automatically retrieves the FlexiBowl® movement routine.</p>
+<td><p>Starts the part-locating process. If no pickable parts are present, it automatically calls the FlexiBowl® movement routine. If the Locator is already active, the command is ignored and the process is not restarted.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Se al momento del comando non risulta selezionato/abilitato alcun modello, il sistema restituisce un messaggio di errore e il Locator non viene avviato.</p>
+<p>If no model is selected/enabled at the time the command is issued, the system returns an error message and the Locator does not start.</p>
 </div>
 </td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Pattern_n;x;y;r</span></code> / <code class="docutils literal notranslate"><span class="pre">Hopper;signalnumber;time</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">stop_Locator</span></code></p></td>
-<td><p>It stops the tracking process</p></td>
+<td><p>Stops the locating process.</p></td>
 <td><p>None</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">turn_Locator</span></code></p></td>
-<td><p>If no parts have been picked up, it rotates the FlexiBowl® and restarts the search</p></td>
+<td><p>If no part has been picked, it requests a new FlexiBowl® movement and restarts the search process.</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Pattern_n;x;y;r</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">test_Locator</span></code></p></td>
-<td><p>It starts tracking without activating the FlexiBowl® (image acquisition only)</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Pattern_n;x;y;r</span></code>/ None</p></td>
+<td><p>Starts the locating process without activating the FlexiBowl®; only image acquisition and search are performed.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Pattern_n;x;y;r</span></code> / None</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">state_Locator</span></code></p></td>
-<td><p>It returns the diagnostic status of the locator</p></td>
+<td><p>Returns the diagnostic status of the locating process.</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Locator</span> <span class="pre">is</span> <span class="pre">Running</span></code> / <code class="docutils literal notranslate"><span class="pre">Locator</span> <span class="pre">is</span> <span class="pre">in</span> <span class="pre">Error</span></code> / <code class="docutils literal notranslate"><span class="pre">Locator</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">Running</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mix_Locator_&lt;models&gt;</span></code></p></td>
+<td><p>Dynamically selects one or more models and starts the Locator. Previously selected models are first disabled. Available numbers range from 1 to 8 (e.g. <code class="docutils literal notranslate"><span class="pre">mix_Locator_12</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_248</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_12345678</span></code>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the Locator is already running, the command is ignored and the current selection is not changed.</p>
+</div>
+</td>
+<td><p>Normal Locator result / <code class="docutils literal notranslate"><span class="pre">#Error_mix_locator_not_valid</span></code> (if no valid model is found)</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Other string separators available, in addition to <code class="docutils literal notranslate"><span class="pre">;</span></code>, are: <code class="docutils literal notranslate"><span class="pre">,</span></code>, <code class="docutils literal notranslate"><span class="pre">|</span></code>, <code class="docutils literal notranslate"><span class="pre">:</span></code>, <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>, <code class="docutils literal notranslate"><span class="pre">$</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>, <code class="docutils literal notranslate"><span class="pre">#</span></code>.</p>
+<p>Other available string separators, besides <code class="docutils literal notranslate"><span class="pre">;</span></code>, are: <code class="docutils literal notranslate"><span class="pre">,</span></code>, <code class="docutils literal notranslate"><span class="pre">|</span></code>, <code class="docutils literal notranslate"><span class="pre">:</span></code>, <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>, <code class="docutils literal notranslate"><span class="pre">$</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>, <code class="docutils literal notranslate"><span class="pre">#</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">start_Locator</span></code> and <code class="docutils literal notranslate"><span class="pre">mix_Locator_&lt;models&gt;</span></code>, when the Locator is already running, no response is sent to the robot.</p>
 </div>
 </section>
-<section id="flexibowl-commands">
-<h3><em>FlexiBowl® Commands</em><a class="headerlink" href="#flexibowl-commands" title="Link to this heading">#</a></h3>
+<section id="flexibowl-commands-emptying">
+<h3><em>FlexiBowl® commands – Emptying</em><a class="headerlink" href="#flexibowl-commands-emptying" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <colgroup>
 <col style="width: 30.0%" />
@@ -577,8 +605,16 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">start_Empty</span></code></p></td>
-<td><p>It starts the FlexiBowl® Quick-Emptying sequence</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">start_Empty</span> <span class="pre">ended</span></code></p></td>
+<td><p>Starts the FlexiBowl® Quick-Emptying sequence. The command cannot be executed while the Locator is active.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Start_Empty</span> <span class="pre">Started</span></code> / <code class="docutils literal notranslate"><span class="pre">Locator</span> <span class="pre">is</span> <span class="pre">Running</span></code> / <code class="docutils literal notranslate"><span class="pre">#Error_flexibowl_not_connect</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">stop_Empty</span></code></p></td>
+<td><p>Stops the FlexiBowl® emptying sequence.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Stop_Empty</span> <span class="pre">Command</span> <span class="pre">Sent</span></code> / <code class="docutils literal notranslate"><span class="pre">#Error_flexibowl_not_connect</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">state_Empty</span></code></p></td>
+<td><p>Returns the current status of the emptying sequence.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Emptying</span> <span class="pre">Running</span></code> / <code class="docutils literal notranslate"><span class="pre">Emptying</span> <span class="pre">Stopped</span></code> / <code class="docutils literal notranslate"><span class="pre">#Error_flexibowl_not_connect</span></code> / <code class="docutils literal notranslate"><span class="pre">#Error_invalid_emptying_state</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -588,11 +624,75 @@
 <h3><em>Optional hopper signals</em><a class="headerlink" href="#optional-hopper-signals" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If the hopper needs to be switched on, we will receive the string: <code class="docutils literal notranslate"><span class="pre">&quot;Hopper;signalnumber;time&quot;</span></code></p>
+<p>If the hopper needs to be activated, the following string will be received: <code class="docutils literal notranslate"><span class="pre">&quot;Hopper;signalnumber;time&quot;</span></code></p>
 </div>
-<p>For detailed information on physical installation and electrical connections, go to the following sections:</p>
+</section>
+</section>
+<section id="general-errors">
+<h2>General errors<a class="headerlink" href="#general-errors" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>FlexiVision license</strong>: if the software license is not active, robot commands are rejected and the following is returned:
+<code class="docutils literal notranslate"><span class="pre">#Error_License_not_active</span></code></p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="advanced-service-commands">
+<h2>Advanced / Service Commands<a class="headerlink" href="#advanced-service-commands" title="Link to this heading">#</a></h2>
+<p>The following commands are reserved for technical personnel and are not part of the standard customer documentation.</p>
+<section id="flexibowl-connection">
+<h3><em>FlexiBowl® connection</em><a class="headerlink" href="#flexibowl-connection" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 40.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Action</p></th>
+<th class="head"><p>Return Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">connect_flb</span></code></p></td>
+<td><p>Requests connection to the FlexiBowl®. If not connected, the related connection task is started.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#Flb1_connected</span></code> / <code class="docutils literal notranslate"><span class="pre">#Flb1_Not_connected</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="laser-commands">
+<h3><em>Laser commands</em><a class="headerlink" href="#laser-commands" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 40.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Action</p></th>
+<th class="head"><p>Return Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">runlaser</span></code></p></td>
+<td><p>Starts the acquisition/locating task associated with the laser.</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">stoplaser</span></code></p></td>
+<td><p>Requests the laser task to stop.</p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<p>For detailed information on physical installation and electrical connections, proceed to the following sections:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="05_Calcolo_distanza_ottimale.html"><span class="std std-doc">Ideal Camera Distance Calculation</span></a></p></li>
+<li><p><a class="reference internal" href="05_Calcolo_distanza_ottimale.html"><span class="std std-doc">Optimal Camera Distance Calculation</span></a></p></li>
 <li><p><a class="reference internal" href="../INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.html"><span class="std std-doc">Mechanical Installation</span></a></p></li>
 <li><p><a class="reference internal" href="../INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.html"><span class="std std-doc">Wiring and Connections</span></a></p></li>
 </ul>
@@ -1296,9 +1396,15 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#protocol-specifications">Protocol specifications</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#available-commands">Available commands</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recipe-management"><em>Recipe management</em></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tracking-commands"><em>Tracking commands</em></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flexibowl-commands"><em>FlexiBowl® Commands</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#locator-commands"><em>Locator commands</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flexibowl-commands-emptying"><em>FlexiBowl® commands – Emptying</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-hopper-signals"><em>Optional hopper signals</em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-errors">General errors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-service-commands">Advanced / Service Commands</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flexibowl-connection"><em>FlexiBowl® connection</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#laser-commands"><em>Laser commands</em></a></li>
 </ul>
 </li>
 </ul>

@@ -69,7 +69,7 @@ FlexiVision One supporte plusieurs profils d'utilisateurs avec différents nivea
 - **Operator**
 ```
 :::{important}
-Se l'utente corrente non dispone del livello di accesso necessario per una funzione, il sistema mostra una message box che ne segnala l'impossibilità di esecuzione.
+Si l'utilisateur actuel ne dispose pas du niveau d'accès requis pour une fonction, le système affiche une boîte de message indiquant que celle-ci ne peut pas être exécutée.
 :::
 ---
 

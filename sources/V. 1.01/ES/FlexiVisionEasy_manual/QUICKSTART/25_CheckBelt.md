@@ -18,8 +18,9 @@ Antes de continuar, asegúrese de que:
 
 ## Acceso a la página Check Belt
 
-| **1** | Desde la página principal del software, hacer clic en **Setup** |
+| Paso | Descripción |
 | ----- | ------------------------------------------------------------ |
+| **1** | Desde la página principal del software, hacer clic en **Setup** |
 | **2** | En la página SETUP, localizar y hacer clic en el icono **Check Belt** |
 | **3** | Se abre la página de control de la cinta, con un bloque para cada FlexiBowl® gestionado por el sistema |
 
@@ -53,6 +54,8 @@ La página se divide en un bloque para cada FlexiBowl® conectado, cada uno comp
 Realizar este paso **solo con la cinta realmente limpia**. La precisión de todos los controles futuros depende de la calidad de esta imagen de referencia.
 :::
 
+| Paso | Descripción |
+| ----- | ------------------------------------------------------------ |
 | **1** | Asegurarse de que la cinta esté limpia y libre de componentes o residuos en el área encuadrada |
 | **2** | Hacer clic en **Save Clean Reference** |
 | **3** | La imagen se captura y se guarda como referencia; aparecerá en la miniatura de la izquierda |
@@ -63,6 +66,8 @@ Si la cinta se sustituye o se limpia a fondo, repetir este paso para actualizar 
 
 ### Paso 2: Ejecución del Belt Check
 
+| Paso | Descripción |
+| ----- | ------------------------------------------------------------ |
 | **4** | Hacer clic en **Run Belt Check** |
 | **5** | El sistema captura la imagen actual de la cinta (visible en la miniatura de la derecha) y la compara con la referencia guardada |
 | **6** | El resultado se muestra en el panel **Belt Health Result** |

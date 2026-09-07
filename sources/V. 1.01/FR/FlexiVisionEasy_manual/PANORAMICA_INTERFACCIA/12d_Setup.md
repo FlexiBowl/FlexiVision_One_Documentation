@@ -49,4 +49,7 @@ La navigation est conçue pour garantir la simplicité d'utilisation, le contrô
 
 * - 11
   - **Licence software** : page d'activation de la licence logicielle.
+
+* - 12 
+  - **Check Belt**: page permettant de surveiller au fil du temps le niveau d'encrassement ou d'usure de la bande, afin d'identifier à temps les besoins d'entretien.
 ```

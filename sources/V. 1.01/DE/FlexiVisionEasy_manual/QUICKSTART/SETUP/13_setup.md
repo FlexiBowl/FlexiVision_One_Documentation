@@ -69,7 +69,7 @@ FlexiVision One unterstützt mehrere Benutzerprofile mit unterschiedlichen Berec
 - **Operator**
 ```
 :::{important}
-Se l'utente corrente non dispone del livello di accesso necessario per una funzione, il sistema mostra una message box che ne segnala l'impossibilità di esecuzione.
+Verfügt der aktuelle Benutzer nicht über die für eine Funktion erforderliche Zugriffsberechtigung, zeigt das System ein Meldungsfenster an, in dem darauf hingewiesen wird, dass die Funktion nicht ausgeführt werden kann.
 :::
 ---
 

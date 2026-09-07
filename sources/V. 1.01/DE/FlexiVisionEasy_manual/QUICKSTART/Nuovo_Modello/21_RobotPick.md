@@ -36,6 +36,9 @@ Nachdem Sie auf der Seite Clearances auf Next geklickt haben, öffnet sich die S
 | **Find Object**| Erkennt das Teil und zeigt die Bildverarbeitungskoordinaten an
 | **Picking Offset**| Berechnet den Offset für die korrekte Aufnahme
 
+:::{note}
+Das Anzeigeformat für die „Robot Pick“-Offsets auf den Rezeptseiten verwendet unabhängig von den regionalen Systemeinstellungen den Punkt (`.`) als Dezimaltrennzeichen.
+:::
 ---
 
 ## Schritt 1: Aktivierung und Erkennung des Bauteils
@@ -120,7 +123,7 @@ Wenn Sie während der Konfiguration Zweifel haben, konsultieren Sie bitte die **
       :::
 ```
 :::{warning}
-Se il Robot Pick Offset è stato abilitato ma il relativo valore non è stato calcolato correttamente, il sistema mostra una message box e impedisce di proseguire con Next.
+Wenn der „Robot Pick Offset“ aktiviert wurde, der entsprechende Wert jedoch nicht korrekt berechnet wurde, zeigt das System eine Meldung an und verhindert, dass mit „Next“ fortgefahren werden kann.
 :::
 ---
 

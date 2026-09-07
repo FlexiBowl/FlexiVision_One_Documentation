@@ -153,6 +153,15 @@ La mancata osservanza di questo requisito compromette completamente l'operativit
 
 Specifiche Cavo Alimentazione Camera
 ```
+| Pin | Designation             |
+|-----|-------------------------|
+| 1   | +12 VDC Camera Power    |
+| 2   | I/O Input 1             |
+| 3   | Not Connected           |
+| 4   | I/O Out 1               |
+| 5   | I/O Ground              |
+| 6   | DC Camera Power Ground  |
+
 ```{list-table}
 :widths: 30 70
 :header-rows: 1

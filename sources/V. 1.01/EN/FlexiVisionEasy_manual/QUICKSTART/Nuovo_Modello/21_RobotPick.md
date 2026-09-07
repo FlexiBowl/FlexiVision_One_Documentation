@@ -36,6 +36,9 @@ After clicking 'Next' on the Clearances page, the **Robot Model Pick** page open
 | **Find Object** | Detects the component and shows vision coordinates |
 | **Picking Offset** | Calculates the offset for the correct picking |
 
+:::{note}
+The display format for Robot Pick offsets on recipe pages uses a period (`.`) as the decimal separator, regardless of the system's regional settings.
+:::
 ---
 
 ## Step 1: Component Activation and Detection
@@ -120,7 +123,7 @@ If you have any doubts during configuration, please consult the **INFO** key on 
       :::
 ```
 :::{warning}
-Se il Robot Pick Offset è stato abilitato ma il relativo valore non è stato calcolato correttamente, il sistema mostra una message box e impedisce di proseguire con Next.
+If the Robot Pick Offset has been enabled but its value has not been calculated correctly, the system displays a message box and prevents you from proceeding to “Next.”
 :::
 ---
 

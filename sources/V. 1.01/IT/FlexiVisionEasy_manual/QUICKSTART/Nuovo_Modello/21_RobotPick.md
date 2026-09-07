@@ -36,6 +36,10 @@ Dopo aver cliccato "Next" nella pagina Clearances, si apre la pagina **Robot Mod
 | **Find Object** | Rileva il componente e mostra coordinate visione |
 | **Picking Offset** | Calcola l'offset per il prelievo corretto |
 
+:::{note}
+Il formato di visualizzazione degli offset Robot Pick nelle pagine ricetta utilizza il punto (`.`) come separatore decimale, indipendentemente dalle impostazioni regionali del sistema.
+:::
+
 ---
 
 ## Step 1: Attivazione e Rilevamento Componente

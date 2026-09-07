@@ -69,7 +69,7 @@ FlexiVision One admite varios perfiles de usuario con distintos niveles de permi
 - **Operator**
 ```
 :::{important}
-Se l'utente corrente non dispone del livello di accesso necessario per una funzione, il sistema mostra una message box che ne segnala l'impossibilità di esecuzione.
+Si el usuario actual no dispone del nivel de acceso necesario para una función, el sistema muestra un cuadro de mensaje en el que se indica que no es posible ejecutarla.
 :::
 ---
 

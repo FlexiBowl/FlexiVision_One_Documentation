@@ -155,6 +155,16 @@ Failure to comply with this requirement completely jeopardises the camera's oper
 
 Camera Power Cable Specifications
 ```
+
+| Pin | Designation             |
+|-----|-------------------------|
+| 1   | +12 VDC Camera Power    |
+| 2   | I/O Input 1             |
+| 3   | Not Connected           |
+| 4   | I/O Out 1               |
+| 5   | I/O Ground              |
+| 6   | DC Camera Power Ground  |
+
 ```{list-table}
 :widths: 30 70
 :header-rows: 1

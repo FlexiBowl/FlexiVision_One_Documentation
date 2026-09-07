@@ -18,8 +18,9 @@ Stellen Sie vor dem Fortfahren sicher, dass:
 
 ## Zugriff auf die Seite Check Belt
 
-| **1** | Klicken Sie auf der Hauptseite der Software auf **Setup** |
+| Schritt | Beschreibung |
 | ----- | ------------------------------------------------------------ |
+| **1** | Klicken Sie auf der Hauptseite der Software auf **Setup** |
 | **2** | Suchen und klicken Sie auf der Seite SETUP auf das Symbol **Check Belt** |
 | **3** | Die Seite zur Bandkontrolle wird geöffnet, mit einem Block für jedes vom System verwaltete FlexiBowl® |
 
@@ -53,6 +54,8 @@ Die Seite ist in einen Block für jedes verbundene FlexiBowl® unterteilt, der j
 Führen Sie diesen Schritt **nur bei tatsächlich sauberem Band** durch. Die Genauigkeit aller zukünftigen Kontrollen hängt von der Qualität dieses Referenzbilds ab.
 :::
 
+| Schritt | Beschreibung |
+| ----- | ------------------------------------------------------------ |
 | **1** | Stellen Sie sicher, dass das Band sauber und frei von Bauteilen oder Rückständen im erfassten Bereich ist |
 | **2** | Klicken Sie auf **Save Clean Reference** |
 | **3** | Das Bild wird erfasst und als Referenz gespeichert; es erscheint in der linken Miniaturansicht |
@@ -63,6 +66,8 @@ Wenn das Band ausgetauscht oder gründlich gereinigt wird, wiederholen Sie diese
 
 ### Schritt 2: Durchführung des Belt Check
 
+| Schritt | Beschreibung |
+| ----- | ------------------------------------------------------------ |
 | **4** | Klicken Sie auf **Run Belt Check** |
 | **5** | Das System erfasst das aktuelle Bild des Bands (sichtbar in der rechten Miniaturansicht) und vergleicht es mit der gespeicherten Referenz |
 | **6** | Das Ergebnis wird im Panel **Belt Health Result** angezeigt |

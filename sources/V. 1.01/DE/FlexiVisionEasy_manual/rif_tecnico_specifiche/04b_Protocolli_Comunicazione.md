@@ -1,7 +1,7 @@
 (protocollo)=
 # **Kommunikationsprotokoll zwischen Roboter und Bildverarbeitungssystem**
 
-FlexiVision One kommuniziert mit dem Roboter über das TCP/IP-Protokoll im Ethernet-Netzwerk.
+FlexiVision One kommuniziert mit dem Roboter über das **TCP/IP**-Protokoll in einem Ethernet-Netzwerk.
 
 ## Protokollspezifikationen
 
@@ -15,10 +15,10 @@ FlexiVision One kommuniziert mit dem Roboter über das TCP/IP-Protokoll im Ether
   - TCP/IP
 * - Port
   - Konfigurierbar (Standard: FB1 → 4001 ; FB2 → 4002 ; FB3 → 4003)
-* - Terminierungszeichen
+* - Abschlusszeichen
   - CHR(13) - Carriage Return
 * - Datenformat
-  - ASCII-String
+  - ASCII-Zeichenfolge
 * - Timeout
   - Konfigurierbar (Standard: 5000 ms)
 * - Encoding
@@ -27,7 +27,7 @@ FlexiVision One kommuniziert mit dem Roboter über das TCP/IP-Protokoll im Ether
 
 ## Verfügbare Befehle
 
-Das System unterstützt die folgenden Befehle über Textstrings, die über die TCP/IP-Verbindung gesendet werden:
+Das System unterstützt die folgenden Befehle über Textzeichenfolgen, die über die TCP/IP-Verbindung gesendet werden.
 
 ### *Rezeptverwaltung*
 
@@ -38,15 +38,28 @@ Das System unterstützt die folgenden Befehle über Textstrings, die über die T
 * - Befehl
   - Aktion
   - Rückgabewert
-* - `set_Recipe=nome_ricetta`
-  - Lädt das Rezept, das dem angegebenen „nome_ricetta“ entspricht
-  - Keine
-* - `get_Recipe`
-  - Gibt den Namen des aktuell geladenen Rezepts zurück
-  - `nome_ricetta`
+* - `set_recipe=<Name>`
+  - Lädt das angegebene Rezept und startet die Synchronisierung der verbundenen FlexiBowl®-Einheiten.
+  - Keiner
+* - `get_recipe`
+  - Gibt den Namen des aktuell geladenen Rezepts zurück.
+  - `<Rezeptname>`
 ```
 
-### *Befehle zur Lokalisierung*
+Beispiel:
+
+```
+set_recipe=MyRecipe
+```
+
+oder:
+
+```
+get_recipe
+→ MyRecipe
+```
+
+### *Locator-Befehle*
 
 ```{list-table}
 :header-rows: 1
@@ -56,30 +69,40 @@ Das System unterstützt die folgenden Befehle über Textstrings, die über die T
   - Aktion
   - Rückgabewert
 * - `start_Locator`
-  - Startet den Prozess zur Lokalisierung der Teile. Wenn keine aufnehmbaren Teile vorhanden sind, ruft automatisch die Bewegungsroutine des FlexiBowl® auf.
+  - Startet den Prozess zur Teilelokalisierung. Sind keine greifbaren Teile vorhanden, wird automatisch die Bewegungsroutine des FlexiBowl® aufgerufen. Ist der Locator bereits aktiv, wird der Befehl ignoriert und der Prozess nicht neu gestartet.
     :::{important}
-    Se al momento del comando non risulta selezionato/abilitato alcun modello, il sistema restituisce un messaggio di errore e il Locator non viene avviato.
+    Ist zum Zeitpunkt des Befehls kein Modell ausgewählt/aktiviert, gibt das System eine Fehlermeldung zurück und der Locator wird nicht gestartet.
     :::
   - `Pattern_n;x;y;r` / `Hopper;signalnumber;time`
 * - `stop_Locator`
-  - Stoppt den Lokalisierungsprozess
-  - Keine
+  - Stoppt den Lokalisierungsprozess.
+  - Keiner
 * - `turn_Locator`
-  - Wenn keine Teile aufgenommen wurden dreht der FlexiBowl® und startet die Suche neu
+  - Wurde kein Teil aufgenommen, fordert der Befehl eine neue FlexiBowl®-Bewegung an und startet den Suchprozess neu.
   - `Pattern_n;x;y;r`
 * - `test_Locator`
-  - Startet die Lokalisierung ohne Aktivierung des FlexiBowl® (nur Bildaufnahme)
-  - `Pattern_n;x;y;r`/ Keine
+  - Startet die Lokalisierung ohne Aktivierung des FlexiBowl®; es werden nur die Bildaufnahme und die Bildsuche durchgeführt.
+  - `Pattern_n;x;y;r` / Keiner
 * - `state_Locator`
-  - Gibt den Diagnosestatus des Lokalisierers zurück
+  - Gibt den Diagnosestatus des Lokalisierungsprozesses zurück.
   - `Locator is Running` / `Locator is in Error` / `Locator is not Running`
+* - `mix_Locator_<Modelle>`
+  - Wählt dynamisch ein oder mehrere Modelle aus und startet den Locator. Zuvor ausgewählte Modelle werden zuerst deaktiviert. Verfügbare Zahlen sind 1 bis 8 (z. B. `mix_Locator_12`, `mix_Locator_248`, `mix_Locator_12345678`).
+    :::{note}
+    Läuft der Locator bereits, wird der Befehl ignoriert und die aktuelle Auswahl bleibt unverändert.
+    :::
+  - Normales Locator-Ergebnis / `#Error_mix_locator_not_valid` (wenn kein gültiges Modell gefunden wird)
 ```
 
 :::{note}
-Neben `;` stehen folgende weitere Trennzeichen zur Verfügung: `,`, `|`, `:`, `&`, `$`, `@`, `#`.
+Weitere verfügbare Trennzeichen neben `;` sind: `,`, `|`, `:`, `&`, `$`, `@`, `#`.
 :::
 
-### *FlexiBowl®-Befehle*
+:::{note}
+Bei `start_Locator` und `mix_Locator_<Modelle>` wird, wenn der Locator bereits läuft, keine Antwort an den Roboter gesendet.
+:::
+
+### *FlexiBowl®-Befehle – Emptying*
 
 ```{list-table}
 :header-rows: 1
@@ -89,22 +112,69 @@ Neben `;` stehen folgende weitere Trennzeichen zur Verfügung: `,`, `|`, `:`, `&
   - Aktion
   - Rückgabewert
 * - `start_Empty`
-  - Startet die Schnellentleerungssequenz (Quick-Emptying) des FlexiBowl®
-  - `start_Empty ended`
+  - Startet die Schnellentleerungssequenz (Quick-Emptying) des FlexiBowl®. Der Befehl kann nicht ausgeführt werden, während der Locator aktiv ist.
+  - `Start_Empty Started` / `Locator is Running` / `#Error_flexibowl_not_connect`
+* - `stop_Empty`
+  - Stoppt die Entleerungssequenz des FlexiBowl®.
+  - `Stop_Empty Command Sent` / `#Error_flexibowl_not_connect`
+* - `state_Empty`
+  - Gibt den aktuellen Status der Entleerungssequenz zurück.
+  - `Emptying Running` / `Emptying Stopped` / `#Error_flexibowl_not_connect` / `#Error_invalid_emptying_state`
 ```
 
-
-### *Signale des optionalen Trichters*
+### *Optionale Hopper-Signale*
 
 ```{note}
-Wenn der Trichter aktiviert werden soll, erhalten wir die Zeichenfolge: `"Hopper;signalnumber;time"`
-
+Muss der Hopper aktiviert werden, wird folgende Zeichenfolge empfangen: `"Hopper;signalnumber;time"`
 ```
 
+## Allgemeine Fehler
 
+```{note}
+**FlexiVision-Lizenz**: Ist die Softwarelizenz nicht aktiv, werden Roboterbefehle abgelehnt und es wird Folgendes zurückgegeben:
+`#Error_License_not_active`
+```
 
-Ausführliche Informationen zur Installation und zum elektrischen Anschluss finden Sie in den folgenden Abschnitten:
-- [Berechnung des optimalen Arbeitsabstands der Kamera](05_Calcolo_distanza_ottimale.md)
+---
+
+## Erweiterte Befehle / Service-Befehle
+
+Die folgenden Befehle sind ausschließlich für technisches Personal bestimmt und sind nicht Teil der Standarddokumentation für den Kunden.
+
+### *FlexiBowl®-Verbindung*
+
+```{list-table}
+:header-rows: 1
+:widths: 30 40 30
+
+* - Befehl
+  - Aktion
+  - Rückgabewert
+* - `connect_flb`
+  - Fordert die Verbindung zum FlexiBowl® an. Besteht keine Verbindung, wird die entsprechende Verbindungsaufgabe gestartet.
+  - `#Flb1_connected` / `#Flb1_Not_connected`
+```
+
+### *Laser-Befehle*
+
+```{list-table}
+:header-rows: 1
+:widths: 30 40 30
+
+* - Befehl
+  - Aktion
+  - Rückgabewert
+* - `runlaser`
+  - Startet die dem Laser zugeordnete Erfassungs-/Lokalisierungsaufgabe.
+  - Keiner
+* - `stoplaser`
+  - Fordert den Stopp der Laseraufgabe an.
+  - Keiner
+```
+
+---
+
+Für detaillierte Informationen zur physischen Installation und den elektrischen Anschlüssen fahren Sie mit den folgenden Abschnitten fort:
+- [Berechnung des optimalen Kameraabstands](05_Calcolo_distanza_ottimale.md)
 - [Mechanische Installation](../INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.md)
 - [Verkabelung und Anschlüsse](../INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.md)
-

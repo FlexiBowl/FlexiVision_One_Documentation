@@ -69,7 +69,7 @@ FlexiVision One supports multiple user profiles with different permission levels
 - **Operator**
 ```
 :::{important}
-Se l'utente corrente non dispone del livello di accesso necessario per una funzione, il sistema mostra una message box che ne segnala l'impossibilità di esecuzione.
+If the current user does not have the required access level for a function, the system displays a message box indicating that the function cannot be executed.
 :::
 ---
 

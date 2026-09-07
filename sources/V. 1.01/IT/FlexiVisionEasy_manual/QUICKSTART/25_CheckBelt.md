@@ -18,7 +18,8 @@ Prima di procedere, assicurarsi che:
 
 ## Accesso alla pagina Check Belt
 
-|||
+| Passo | Descrizione |
+|-------|-------------|
 | **1** | Dalla pagina principale del software, cliccare su **Setup** |
 | **2** | Nella pagina SETUP, identificare e cliccare sull'icona **Check Belt** |
 | **3** | Si apre la pagina di controllo del nastro, con un blocco per ciascun FlexiBowl® gestito dal sistema |
@@ -53,7 +54,7 @@ La pagina è suddivisa in un blocco per ogni FlexiBowl® connesso, ciascuno comp
 Eseguire questo step **solo con il nastro effettivamente pulito**. L'accuratezza di tutti i controlli futuri dipende dalla qualità di questa immagine di riferimento.
 :::
 
-|||
+| Passo | Descrizione |
 | ----- | ------------------------------------------------------------ |
 | **1** | Assicurarsi che il nastro sia pulito e privo di componenti o residui nell'area inquadrata |
 | **2** | Cliccare su **Save Clean Reference** |
@@ -65,7 +66,7 @@ Se il nastro viene sostituito o pulito a fondo, ripetere questo step per aggiorn
 
 ### Step 2: Esecuzione del Belt Check
 
-|||
+| Passo | Descrizione |
 | ----- | ------------------------------------------------------------ |
 | **4** | Cliccare su **Run Belt Check** |
 | **5** | Il sistema acquisisce l'immagine attuale del nastro (visibile nella miniatura di destra) e la confronta con il riferimento salvato |

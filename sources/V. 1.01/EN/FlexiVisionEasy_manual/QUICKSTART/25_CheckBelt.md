@@ -18,8 +18,9 @@ Before proceeding, make sure that:
 
 ## Accessing the Check Belt page
 
-| **1** | From the main page of the software, click on **Setup** |
+| Step | Description |
 | ----- | ------------------------------------------------------------ |
+| **1** | From the main page of the software, click on **Setup** |
 | **2** | On the SETUP page, locate and click on the **Check Belt** icon |
 | **3** | The belt check page opens, with one block for each FlexiBowl® managed by the system |
 
@@ -53,6 +54,8 @@ The page is divided into one block for each connected FlexiBowl®, each consisti
 Perform this step **only with the belt actually clean**. The accuracy of all future checks depends on the quality of this reference image.
 :::
 
+| Step | Description |
+| ----- | ------------------------------------------------------------ |
 | **1** | Make sure the belt is clean and free of components or debris in the framed area |
 | **2** | Click on **Save Clean Reference** |
 | **3** | The image is captured and saved as a reference; it will appear in the left-hand thumbnail |
@@ -63,6 +66,8 @@ If the belt is replaced or thoroughly cleaned, repeat this step to update the re
 
 ### Step 2: Running the Belt Check
 
+| Step | Description |
+| ----- | ------------------------------------------------------------ |
 | **4** | Click on **Run Belt Check** |
 | **5** | The system captures the current image of the belt (visible in the right-hand thumbnail) and compares it with the saved reference |
 | **6** | The result is displayed in the **Belt Health Result** panel |

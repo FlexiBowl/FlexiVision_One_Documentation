@@ -49,4 +49,7 @@ Die Navigation ist so konzipiert, dass sie eine einfache Bedienung, eine soforti
 
 * - 11
   - **Softwarelizenz**: Seite zur Aktivierung der Softwarelizenz.
+
+* - 12 
+  - **Check Belt**: Seite, auf der sich der Verschmutzungs- oder Verschleißgrad des Bandes im Zeitverlauf überwachen lässt, sodass der Wartungsbedarf rechtzeitig erkannt wird.
 ```

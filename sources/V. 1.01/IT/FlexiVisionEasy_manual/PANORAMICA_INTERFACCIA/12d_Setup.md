@@ -49,4 +49,7 @@ La navigazione è progettata per garantire semplicità d’uso, controllo immedi
 
 * - 11
   - **Licence software**: pagina per l'attivazione della licenza software.
+
+* - 12 
+  - **Check Belt**: pagina che permette di monitorare nel tempo il livello di sporco o usura del nastro, individuando per tempo la necessità di manutenzione.
 ```

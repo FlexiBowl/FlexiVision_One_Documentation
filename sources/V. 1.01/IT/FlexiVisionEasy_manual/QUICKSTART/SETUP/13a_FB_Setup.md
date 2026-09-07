@@ -98,7 +98,7 @@ Una volta stabilita la connessione, procedere con la configurazione dei parametr
   - Cliccare sul pulsante <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl" >
 * - **10**
   - Si apre una finestra con i parametri configurabili del FlexiBowl®
-    ![Pagina Parametri]()
+    ![Pagina Parametri](../../../../../_shared/media/images/config_FB.png)
 ```
 :::{important}
 I parametri possono essere regolati tramite slider oppure inseriti manualmente da tastiera nel relativo campo numerico.
@@ -149,7 +149,7 @@ Per avviare la procedura:
   - Cliccare sul pulsante <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl">, si aprirà una pagina con tutte le movimentazioni disponibili per il FlexiBowl selezionato
 
     :::{dropdown} Pagina Configurazione FlexiBowl®  
-    ![Pagina FlexiBowl® Config](../../../../../_shared/media/images/pagina_FBsetup.png)
+    ![Pagina Parametri](../../../../../_shared/media/images/config_FB.png)
     :::
 
 * - **4**

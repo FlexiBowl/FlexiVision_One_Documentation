@@ -98,6 +98,7 @@ Una vez establecida la conexión, proceda a configurar los parámetros de funcio
   - Haga clic en el botón <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl" >
 * - **10**
   - Se abre una ventana con los parámetros configurables del FlexiBowl®
+    ![Pagina Parametri](../../../../../_shared/media/images/config_FB.png)
 ```
 
 
@@ -111,7 +112,7 @@ Una vez establecida la conexión, proceda a configurar los parámetros de funcio
   - Vuelva a la página SETUP principal para continuar con la siguiente configuración 
 ```
 :::{important}
-I parametri possono essere regolati tramite slider oppure inseriti manualmente da tastiera nel relativo campo numerico.
+Los parámetros se pueden ajustar mediante controles deslizantes o introducir manualmente con el teclado en el campo numérico correspondiente.
 :::
 
 ```{warning}
@@ -149,7 +150,7 @@ Para iniciar el procedimiento:
   - Haga clic en el botón <img src="../../../../../_shared/media/images/FB_config1.png" class="inline-icon icon-xl">; se abrirá una página con todos los movimientos disponibles para el FlexiBowl seleccionado
 
     :::{dropdown} Página de configuración de FlexiBowl®  
-    ![FlexiBowl® Config página](../../../../../_shared/media/images/pagina_FBsetup.png)
+    ![Pagina Parametri](../../../../../_shared/media/images/config_FB.png)
     :::
 
 * - **4**
@@ -296,7 +297,7 @@ Utilice la función **Test Sequence** para comprobar que el ciclo cumple los sig
 Haga clic siempre en **Synchronize Parameters** después de cada modificación manual para activar los cambios en el controlador.
 :::
 :::{important}
-Nel caso in cui i parametri venissero modificati ma non sincronizzati, apparirà un messaggio di avviso. 
+En caso de que se modifiquen los parámetros pero no se sincronicen, aparecerá un mensaje de aviso.
 :::
 
 ## Descripción Parámetros FlexiBowl
