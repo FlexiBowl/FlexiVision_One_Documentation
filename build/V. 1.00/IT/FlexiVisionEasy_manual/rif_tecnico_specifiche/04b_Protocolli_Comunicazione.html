@@ -429,8 +429,14 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-disponibili">Comandi disponibili</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gestione-ricette"><em>Gestione ricette</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-di-localizzazione"><em>Comandi di localizzazione</em></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-flexibowl"><em>Comandi FlexiBowl®</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-flexibowl-emptying"><em>Comandi FlexiBowl® – Emptying</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#segnali-hopper-opzionale"><em>Segnali hopper opzionale</em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#errori-generali">Errori generali</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-avanzati-service">Comandi Avanzati / Service</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connessione-flexibowl"><em>Connessione FlexiBowl®</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-laser"><em>Comandi Laser</em></a></li>
 </ul>
 </li>
 </ul>
@@ -484,7 +490,7 @@
 </section>
 <section id="comandi-disponibili">
 <h2>Comandi disponibili<a class="headerlink" href="#comandi-disponibili" title="Link to this heading">#</a></h2>
-<p>Il sistema supporta i seguenti comandi tramite stringhe di testo inviate sulla connessione TCP/IP:</p>
+<p>Il sistema supporta i seguenti comandi tramite stringhe di testo inviate sulla connessione TCP/IP.</p>
 <section id="gestione-ricette">
 <h3><em>Gestione ricette</em><a class="headerlink" href="#gestione-ricette" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -500,16 +506,25 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">set_Recipe=nome_ricetta</span></code></p></td>
-<td><p>Carica la ricetta corrispondente al “nome_ricetta” specificato</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">set_recipe=&lt;nome&gt;</span></code></p></td>
+<td><p>Carica la ricetta indicata e avvia la sincronizzazione dei FlexiBowl® collegati.</p></td>
 <td><p>Nessuno</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">get_Recipe</span></code></p></td>
-<td><p>Restituisce il nome della ricetta attualmente caricata</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">nome_ricetta</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">get_recipe</span></code></p></td>
+<td><p>Restituisce il nome della ricetta attualmente caricata.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;nome_ricetta&gt;</span></code></p></td>
 </tr>
 </tbody>
 </table>
+</div>
+<p>Esempio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_recipe</span><span class="o">=</span><span class="n">MyRecipe</span>
+</pre></div>
+</div>
+<p>oppure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>get_recipe
+→ MyRecipe
+</pre></div>
 </div>
 </section>
 <section id="comandi-di-localizzazione">
@@ -528,24 +543,38 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">start_Locator</span></code></p></td>
-<td><p>Avvia il processo di localizzazione dei pezzi. Se non sono presenti pezzi prelevabili, richiama automaticamente la routine di movimentazione del FlexiBowl®.</p></td>
+<td><p>Avvia il processo di localizzazione dei pezzi. Se non sono presenti pezzi prelevabili, richiama automaticamente la routine di movimentazione del FlexiBowl®. Se il Locator è già attivo, il comando viene ignorato senza riavviare il processo.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Se al momento del comando non risulta selezionato/abilitato alcun modello, il sistema restituisce un messaggio di errore e il Locator non viene avviato.</p>
+</div>
+</td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Pattern_n;x;y;r</span></code> / <code class="docutils literal notranslate"><span class="pre">Hopper;signalnumber;time</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">stop_Locator</span></code></p></td>
-<td><p>Ferma il processo di localizzazione</p></td>
+<td><p>Ferma il processo di localizzazione.</p></td>
 <td><p>Nessuno</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">turn_Locator</span></code></p></td>
-<td><p>Se nessun pezzo è stato prelevato, fa ruotare il FlexiBowl® e riavvia la ricerca</p></td>
+<td><p>Se nessun pezzo è stato prelevato, richiede una nuova movimentazione del FlexiBowl® e riavvia il processo di ricerca.</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Pattern_n;x;y;r</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">test_Locator</span></code></p></td>
-<td><p>Avvia la localizzazione senza attivare il FlexiBowl® (solo acquisizione immagine)</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Pattern_n;x;y;r</span></code>/ Nessuno</p></td>
+<td><p>Avvia la localizzazione senza attivare il FlexiBowl®; viene eseguita solamente l’acquisizione e la ricerca sull’immagine.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Pattern_n;x;y;r</span></code> / Nessuno</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">state_Locator</span></code></p></td>
-<td><p>Restituisce lo stato diagnostico del localizzatore</p></td>
+<td><p>Restituisce lo stato diagnostico del processo di localizzazione.</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Locator</span> <span class="pre">is</span> <span class="pre">Running</span></code> / <code class="docutils literal notranslate"><span class="pre">Locator</span> <span class="pre">is</span> <span class="pre">in</span> <span class="pre">Error</span></code> / <code class="docutils literal notranslate"><span class="pre">Locator</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">Running</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mix_Locator_&lt;modelli&gt;</span></code></p></td>
+<td><p>Seleziona dinamicamente uno o più modelli e avvia il Locator. I modelli precedentemente selezionati vengono prima disabilitati. I numeri disponibili sono da 1 a 8 (es. <code class="docutils literal notranslate"><span class="pre">mix_Locator_12</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_248</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_12345678</span></code>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Se il Locator è già in esecuzione, il comando viene ignorato e la selezione corrente non viene modificata.</p>
+</div>
+</td>
+<td><p>Normale risultato del Locator / <code class="docutils literal notranslate"><span class="pre">#Error_mix_locator_not_valid</span></code> (se non viene individuato alcun modello valido)</p></td>
 </tr>
 </tbody>
 </table>
@@ -554,9 +583,13 @@
 <p class="admonition-title">Note</p>
 <p>Altri separatori di stringa disponibili, oltre <code class="docutils literal notranslate"><span class="pre">;</span></code>, sono: <code class="docutils literal notranslate"><span class="pre">,</span></code>, <code class="docutils literal notranslate"><span class="pre">|</span></code>, <code class="docutils literal notranslate"><span class="pre">:</span></code>, <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>, <code class="docutils literal notranslate"><span class="pre">$</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>, <code class="docutils literal notranslate"><span class="pre">#</span></code>.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Per <code class="docutils literal notranslate"><span class="pre">start_Locator</span></code> e <code class="docutils literal notranslate"><span class="pre">mix_Locator_&lt;modelli&gt;</span></code>, quando il Locator è già in esecuzione, al robot non viene inviata alcuna risposta.</p>
+</div>
 </section>
-<section id="comandi-flexibowl">
-<h3><em>Comandi FlexiBowl®</em><a class="headerlink" href="#comandi-flexibowl" title="Link to this heading">#</a></h3>
+<section id="comandi-flexibowl-emptying">
+<h3><em>Comandi FlexiBowl® – Emptying</em><a class="headerlink" href="#comandi-flexibowl-emptying" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <colgroup>
 <col style="width: 30.0%" />
@@ -571,8 +604,16 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">start_Empty</span></code></p></td>
-<td><p>Avvia la sequenza di svuotamento rapido (Quick-Emptying) del FlexiBowl®</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">start_Empty</span> <span class="pre">ended</span></code></p></td>
+<td><p>Avvia la sequenza di svuotamento rapido (Quick-Emptying) del FlexiBowl®. Il comando non può essere eseguito mentre il Locator è attivo.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Start_Empty</span> <span class="pre">Started</span></code> / <code class="docutils literal notranslate"><span class="pre">Locator</span> <span class="pre">is</span> <span class="pre">Running</span></code> / <code class="docutils literal notranslate"><span class="pre">#Error_flexibowl_not_connect</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">stop_Empty</span></code></p></td>
+<td><p>Arresta la sequenza di svuotamento del FlexiBowl®.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Stop_Empty</span> <span class="pre">Command</span> <span class="pre">Sent</span></code> / <code class="docutils literal notranslate"><span class="pre">#Error_flexibowl_not_connect</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">state_Empty</span></code></p></td>
+<td><p>Restituisce lo stato corrente della sequenza di svuotamento.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Emptying</span> <span class="pre">Running</span></code> / <code class="docutils literal notranslate"><span class="pre">Emptying</span> <span class="pre">Stopped</span></code> / <code class="docutils literal notranslate"><span class="pre">#Error_flexibowl_not_connect</span></code> / <code class="docutils literal notranslate"><span class="pre">#Error_invalid_emptying_state</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -584,6 +625,70 @@
 <p class="admonition-title">Note</p>
 <p>Se la tramoggia deve essere attivata, riceveremo la stringa: <code class="docutils literal notranslate"><span class="pre">&quot;Hopper;signalnumber;time&quot;</span></code></p>
 </div>
+</section>
+</section>
+<section id="errori-generali">
+<h2>Errori generali<a class="headerlink" href="#errori-generali" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Licenza FlexiVision</strong>: se la licenza software non è attiva, i comandi robot vengono rifiutati e viene restituito:
+<code class="docutils literal notranslate"><span class="pre">#Error_License_not_active</span></code></p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="comandi-avanzati-service">
+<h2>Comandi Avanzati / Service<a class="headerlink" href="#comandi-avanzati-service" title="Link to this heading">#</a></h2>
+<p>I comandi seguenti sono riservati a personale tecnico e non fanno parte della documentazione standard per il cliente.</p>
+<section id="connessione-flexibowl">
+<h3><em>Connessione FlexiBowl®</em><a class="headerlink" href="#connessione-flexibowl" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 40.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Comando</p></th>
+<th class="head"><p>Azione</p></th>
+<th class="head"><p>Valore di Ritorno</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">connect_flb</span></code></p></td>
+<td><p>Richiede la connessione al FlexiBowl®. Se non è connesso, viene avviato il relativo task di connessione.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#Flb1_connected</span></code> / <code class="docutils literal notranslate"><span class="pre">#Flb1_Not_connected</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="comandi-laser">
+<h3><em>Comandi Laser</em><a class="headerlink" href="#comandi-laser" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 40.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Comando</p></th>
+<th class="head"><p>Azione</p></th>
+<th class="head"><p>Valore di Ritorno</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">runlaser</span></code></p></td>
+<td><p>Avvia il task di acquisizione/localizzazione associato al laser.</p></td>
+<td><p>Nessuno</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">stoplaser</span></code></p></td>
+<td><p>Richiede l’arresto del task laser.</p></td>
+<td><p>Nessuno</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
 <p>Per informazioni dettagliate sull’installazione fisica e i collegamenti elettrici, procedere con le sezioni successive:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="05_Calcolo_distanza_ottimale.html"><span class="std std-doc">Calcolo Distanza Ottimale Camera</span></a></p></li>
@@ -1291,8 +1396,14 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-disponibili">Comandi disponibili</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gestione-ricette"><em>Gestione ricette</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-di-localizzazione"><em>Comandi di localizzazione</em></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-flexibowl"><em>Comandi FlexiBowl®</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-flexibowl-emptying"><em>Comandi FlexiBowl® – Emptying</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#segnali-hopper-opzionale"><em>Segnali hopper opzionale</em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#errori-generali">Errori generali</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-avanzati-service">Comandi Avanzati / Service</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connessione-flexibowl"><em>Connessione FlexiBowl®</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-laser"><em>Comandi Laser</em></a></li>
 </ul>
 </li>
 </ul>
