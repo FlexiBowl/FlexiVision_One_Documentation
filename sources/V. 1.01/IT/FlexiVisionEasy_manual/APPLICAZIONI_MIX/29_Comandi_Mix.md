@@ -1,4 +1,5 @@
-﻿# **Comandi Applicazione Mix**
+﻿(mix)=
+# **Comandi Applicazione Mix**
 ```{note}
 **Prerequisiti**
 
@@ -65,9 +66,22 @@ Questo significa che per richiedere le coordinate di un modello diverso è neces
 ```{tip}
 Il numero massimo di modelli gestibili all'interno di una singola ricetta Mix è **8**, corrispondenti ai comandi `mix_Locator_1` … `mix_Locator_8`. Il programma robot può richiedere i modelli in qualsiasi ordine e combinazione, a seconda della logica applicativa.
 ```
-:::{tip}
-La nuova versione rende disponibile la costruzione di comandi di tipo `mix_Locator ` multi-modello, quindi che richiamano più di un modello contemporaneamente. Ad esempio, il comando  `mix_Locator12 ` richiama i modelli 1 e 2. 
+#### Comandi Multi-modello  
+
+La nuova versione rende disponibile la costruzione di comandi di tipo `mix_Locator_<modelli>` multi-modello, quindi che richiamano più di un modello contemporaneamente.  Seleziona dinamicamente uno o più modelli e avvia il Locator.  I modelli precedentemente selezionati vengono prima disabilitati.  I numeri disponibili sono da 1 a 8. 
+  
+:::{note}
+Se il Locator è già in esecuzione, il comando viene ignorato e la selezione corrente non viene modificata.
 :::
+
+Ad esempio:
+
+| Comando                  | Modelli richiamati       |
+|---------------------------|---------------------------|
+| `mix_Locator_12`          | 1, 2                       |
+| `mix_Locator_248`         | 2, 4, 8                    |
+| `mix_Locator_12345678`    | 1, 2, 3, 4, 5, 6, 7, 8      |
+
 
 ### *Comandi FlexiBowl®*
 

@@ -87,6 +87,9 @@ get_recipe
   - Gibt den Diagnosestatus des Lokalisierungsprozesses zurück.
   - `Locator is Running` / `Locator is in Error` / `Locator is not Running`
 * - `mix_Locator_<Modelle>`
+    :::{tip}
+    Weitere Informationen finden Sie im [Abschnitt zu den Mix-Befehlen](mix)
+    :::
   - Wählt dynamisch ein oder mehrere Modelle aus und startet den Locator. Zuvor ausgewählte Modelle werden zuerst deaktiviert. Verfügbare Zahlen sind 1 bis 8 (z. B. `mix_Locator_12`, `mix_Locator_248`, `mix_Locator_12345678`).
     :::{note}
     Läuft der Locator bereits, wird der Befehl ignoriert und die aktuelle Auswahl bleibt unverändert.
@@ -139,7 +142,7 @@ Muss der Hopper aktiviert werden, wird folgende Zeichenfolge empfangen: `"Hopper
 
 ## Erweiterte Befehle / Service-Befehle
 
-Die folgenden Befehle sind ausschließlich für technisches Personal bestimmt und sind nicht Teil der Standarddokumentation für den Kunden.
+Die folgenden Befehle sind ausschließlich für technisches Personal.
 
 ### *FlexiBowl®-Verbindung*
 
@@ -155,22 +158,7 @@ Die folgenden Befehle sind ausschließlich für technisches Personal bestimmt un
   - `#Flb1_connected` / `#Flb1_Not_connected`
 ```
 
-### *Laser-Befehle*
 
-```{list-table}
-:header-rows: 1
-:widths: 30 40 30
-
-* - Befehl
-  - Aktion
-  - Rückgabewert
-* - `runlaser`
-  - Startet die dem Laser zugeordnete Erfassungs-/Lokalisierungsaufgabe.
-  - Keiner
-* - `stoplaser`
-  - Fordert den Stopp der Laseraufgabe an.
-  - Keiner
-```
 
 ---
 

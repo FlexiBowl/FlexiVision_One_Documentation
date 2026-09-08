@@ -87,6 +87,9 @@ get_recipe
   - Returns the diagnostic status of the locating process.
   - `Locator is Running` / `Locator is in Error` / `Locator is not Running`
 * - `mix_Locator_<models>`
+    :::{tip}
+    Weitere Informationen finden Sie im [Abschnitt zu den Mix-Befehlen](mix)
+    :::
   - Dynamically selects one or more models and starts the Locator. Previously selected models are first disabled. Available numbers range from 1 to 8 (e.g. `mix_Locator_12`, `mix_Locator_248`, `mix_Locator_12345678`).
     :::{note}
     If the Locator is already running, the command is ignored and the current selection is not changed.
@@ -139,7 +142,7 @@ If the hopper needs to be activated, the following string will be received: `"Ho
 
 ## Advanced / Service Commands
 
-The following commands are reserved for technical personnel and are not part of the standard customer documentation.
+The following commands are reserved for technical personnel.
 
 ### *FlexiBowl® connection*
 
@@ -155,22 +158,6 @@ The following commands are reserved for technical personnel and are not part of 
   - `#Flb1_connected` / `#Flb1_Not_connected`
 ```
 
-### *Laser commands*
-
-```{list-table}
-:header-rows: 1
-:widths: 30 40 30
-
-* - Command
-  - Action
-  - Return Value
-* - `runlaser`
-  - Starts the acquisition/locating task associated with the laser.
-  - None
-* - `stoplaser`
-  - Requests the laser task to stop.
-  - None
-```
 
 ---
 

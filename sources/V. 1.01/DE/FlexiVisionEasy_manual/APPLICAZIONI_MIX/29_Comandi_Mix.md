@@ -1,3 +1,4 @@
+(mix)=
 # **Steuerungen Mix-Anwendung**
 ```{note}
 **Voraussetzungen**
@@ -65,9 +66,21 @@ Das bedeutet, dass zur Abfrage der Koordinaten eines anderen Modells der für di
 ```{tip}
 Die maximale Anzahl der Modelle, die innerhalb eines einzelnen Mix-Rezepts verwaltet werden können, beträgt **8**, entsprechend den Befehlen `mix_Locator_1` … `mix_Locator_8`. Das Roboterprogramm kann die Modelle je nach Anwendungslogik in beliebiger Reihenfolge und Kombination anfordern.
 ```
-:::{tip}
-Die neue Version ermöglicht die Erstellung von Befehlen vom Typ `mix_Locator`, die mehrere Modelle gleichzeitig aufrufen. So ruft beispielsweise der Befehl `mix_Locator12` die Modelle 1 und 2 auf.
+#### Multimodell-Befehle  
+
+Die neue Version ermöglicht die Erstellung von Multimodell-Befehlen des Typs `mix_Locator_<Modelle>`, also Befehlen, die mehr als ein Modell gleichzeitig aufrufen. Sie wählt dynamisch ein oder mehrere Modelle aus und startet den Locator. Zuvor ausgewählte Modelle werden zuerst deaktiviert. Die verfügbaren Nummern reichen von 1 bis 8.
+
+:::{note}
+Wenn der Locator bereits läuft, wird der Befehl ignoriert und die aktuelle Auswahl bleibt unverändert.
 :::
+
+Zum Beispiel:
+
+| Befehl                    | Aufgerufene Modelle        |
+|---------------------------|---------------------------|
+| `mix_Locator_12`          | 1, 2                       |
+| `mix_Locator_248`         | 2, 4, 8                    |
+| `mix_Locator_12345678`    | 1, 2, 3, 4, 5, 6, 7, 8      |
 
 ### *FlexiBowl®-Befehle*
 

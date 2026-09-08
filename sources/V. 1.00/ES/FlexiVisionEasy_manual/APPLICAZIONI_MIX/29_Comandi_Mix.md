@@ -1,3 +1,4 @@
+(mix)=
 # **Comandos Aplicación Mix**
 ```{note}
 **Requisitos previos**

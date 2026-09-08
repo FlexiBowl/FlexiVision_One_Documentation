@@ -9,9 +9,9 @@ Diese Seite bezieht sich auf die Version **1.01** dieses Handbuchs, die mit **Fl
 
 ### Mix-Anwendungen
 
-- Kombinierte Verwaltung der Befehle `mix_locator` für Roboter 1, Roboter 2 und Roboter 3 hinzugefügt: Es ist nun möglich, mehrere Modelle gleichzeitig innerhalb einer einzigen Zeichenfolge aufzurufen (z. B. `mix_locator_12`, `mix_locator_248`, `mix_locator_12345678`).
-- Eine Gültigkeitsprüfung für die Befehle `mix_locator` wurde hinzugefügt: Wenn die übergebene Zeichenfolge keine gültigen Modelle (von 1 bis 8) enthält, gibt das System einen entsprechenden Fehler zurück.
-- Es wurde eine Schutzfunktion für die Befehle `start_locator` und `mix_locator` hinzugefügt: Wenn ein Locator bereits ausgeführt wird, wird der Befehl ignoriert, wodurch ungewollte Neustarts der Aufgabe und unerwartete Änderungen an den aktiven Vorlagen vermieden werden.
+- Kombinierte Verwaltung der Befehle `mix_Locator` für Roboter 1, Roboter 2 und Roboter 3 hinzugefügt: Es ist nun möglich, mehrere Modelle gleichzeitig innerhalb einer einzigen Zeichenfolge aufzurufen (z. B. `mix_Locator_12`, `mix_Locator_248`, `mix_Locator_12345678`).
+- Eine Gültigkeitsprüfung für die Befehle `mix_Locator` wurde hinzugefügt: Wenn die übergebene Zeichenfolge keine gültigen Modelle (von 1 bis 8) enthält, gibt das System einen entsprechenden Fehler zurück.
+- Es wurde eine Schutzfunktion für die Befehle `start_Locator` und `mix_Locator` hinzugefügt: Wenn ein Locator bereits ausgeführt wird, wird der Befehl ignoriert, wodurch ungewollte Neustarts der Aufgabe und unerwartete Änderungen an den aktiven Vorlagen vermieden werden.
 
 ### Clearances (Histogramme)
 

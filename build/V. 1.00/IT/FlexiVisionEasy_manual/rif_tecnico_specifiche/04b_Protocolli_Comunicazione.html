@@ -436,7 +436,6 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#errori-generali">Errori generali</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-avanzati-service">Comandi Avanzati / Service</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connessione-flexibowl"><em>Connessione FlexiBowl®</em></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-laser"><em>Comandi Laser</em></a></li>
 </ul>
 </li>
 </ul>
@@ -567,7 +566,12 @@
 <td><p>Restituisce lo stato diagnostico del processo di localizzazione.</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Locator</span> <span class="pre">is</span> <span class="pre">Running</span></code> / <code class="docutils literal notranslate"><span class="pre">Locator</span> <span class="pre">is</span> <span class="pre">in</span> <span class="pre">Error</span></code> / <code class="docutils literal notranslate"><span class="pre">Locator</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">Running</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mix_Locator_&lt;modelli&gt;</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mix_Locator_&lt;modelli&gt;</span></code></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Per maggiori informazioni, consultare la <a class="reference internal" href="../APPLICAZIONI_MIX/29_Comandi_Mix.html#mix"><span class="std std-ref">sezione dedicata ai comandi mix</span></a></p>
+</div>
+</td>
 <td><p>Seleziona dinamicamente uno o più modelli e avvia il Locator. I modelli precedentemente selezionati vengono prima disabilitati. I numeri disponibili sono da 1 a 8 (es. <code class="docutils literal notranslate"><span class="pre">mix_Locator_12</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_248</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_12345678</span></code>).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -638,7 +642,7 @@
 <hr class="docutils" />
 <section id="comandi-avanzati-service">
 <h2>Comandi Avanzati / Service<a class="headerlink" href="#comandi-avanzati-service" title="Link to this heading">#</a></h2>
-<p>I comandi seguenti sono riservati a personale tecnico e non fanno parte della documentazione standard per il cliente.</p>
+<p>I comandi seguenti sono riservati a personale tecnico.</p>
 <section id="connessione-flexibowl">
 <h3><em>Connessione FlexiBowl®</em><a class="headerlink" href="#connessione-flexibowl" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -657,33 +661,6 @@
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">connect_flb</span></code></p></td>
 <td><p>Richiede la connessione al FlexiBowl®. Se non è connesso, viene avviato il relativo task di connessione.</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">#Flb1_connected</span></code> / <code class="docutils literal notranslate"><span class="pre">#Flb1_Not_connected</span></code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="comandi-laser">
-<h3><em>Comandi Laser</em><a class="headerlink" href="#comandi-laser" title="Link to this heading">#</a></h3>
-<div class="pst-scrollable-table-container"><table class="table">
-<colgroup>
-<col style="width: 30.0%" />
-<col style="width: 40.0%" />
-<col style="width: 30.0%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Comando</p></th>
-<th class="head"><p>Azione</p></th>
-<th class="head"><p>Valore di Ritorno</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">runlaser</span></code></p></td>
-<td><p>Avvia il task di acquisizione/localizzazione associato al laser.</p></td>
-<td><p>Nessuno</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">stoplaser</span></code></p></td>
-<td><p>Richiede l’arresto del task laser.</p></td>
-<td><p>Nessuno</p></td>
 </tr>
 </tbody>
 </table>
@@ -1403,7 +1380,6 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#errori-generali">Errori generali</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-avanzati-service">Comandi Avanzati / Service</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connessione-flexibowl"><em>Connessione FlexiBowl®</em></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comandi-laser"><em>Comandi Laser</em></a></li>
 </ul>
 </li>
 </ul>

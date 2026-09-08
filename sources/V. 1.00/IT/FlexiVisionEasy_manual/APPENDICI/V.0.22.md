@@ -9,9 +9,9 @@ Questa pagina si riferisce alla versione **1.01** del presente manuale, compatib
 
 ### Applicazioni Mix
 
-- Aggiunta la gestione combinata dei comandi `mix_locator` per Robot 1, Robot 2 e Robot 3: è ora possibile richiamare più modelli contemporaneamente all'interno di un'unica stringa (ad es. `mix_locator_12`, `mix_locator_248`, `mix_locator_12345678`).
-- Aggiunto un controllo di validità sui comandi `mix_locator`: se la stringa ricevuta non contiene modelli validi (da 1 a 8), il sistema restituisce un errore dedicato.
-- Aggiunta una protezione sui comandi `start_locator` e `mix_locator`: se un Locator è già in esecuzione, il comando viene ignorato, evitando riavvii indesiderati del task e modifiche impreviste ai modelli attivi.
+- Aggiunta la gestione combinata dei comandi `mix_Locator` per Robot 1, Robot 2 e Robot 3: è ora possibile richiamare più modelli contemporaneamente all'interno di un'unica stringa (ad es. `mix_Locator_12`, `mix_Locator_248`, `mix_Locator_12345678`).
+- Aggiunto un controllo di validità sui comandi `mix_Locator`: se la stringa ricevuta non contiene modelli validi (da 1 a 8), il sistema restituisce un errore dedicato.
+- Aggiunta una protezione sui comandi `start_Locator` e `mix_Locator`: se un Locator è già in esecuzione, il comando viene ignorato, evitando riavvii indesiderati del task e modifiche impreviste ai modelli attivi.
 
 ### Clearances (Istogrammi)
 

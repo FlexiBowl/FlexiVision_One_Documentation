@@ -87,6 +87,9 @@ get_recipe
   - Renvoie l'état de diagnostic du processus de localisation.
   - `Locator is Running` / `Locator is in Error` / `Locator is not Running`
 * - `mix_Locator_<modèles>`
+    :::{tip}
+    Pour plus d'informations, consultez la [section consacrée aux commandes de mixage](mix)
+    :::
   - Sélectionne dynamiquement un ou plusieurs modèles et démarre le Locator. Les modèles précédemment sélectionnés sont d'abord désactivés. Les numéros disponibles vont de 1 à 8 (ex. `mix_Locator_12`, `mix_Locator_248`, `mix_Locator_12345678`).
     :::{note}
     Si le Locator est déjà en cours d'exécution, la commande est ignorée et la sélection actuelle n'est pas modifiée.
@@ -139,7 +142,7 @@ Si la trémie doit être activée, la chaîne suivante sera reçue : `"Hopper;si
 
 ## Commandes Avancées / Service
 
-Les commandes suivantes sont réservées au personnel technique et ne font pas partie de la documentation standard destinée au client.
+Les commandes suivantes sont réservées au personnel technique.
 
 ### *Connexion FlexiBowl®*
 
@@ -153,23 +156,6 @@ Les commandes suivantes sont réservées au personnel technique et ne font pas p
 * - `connect_flb`
   - Demande la connexion au FlexiBowl®. S'il n'est pas connecté, la tâche de connexion correspondante est démarrée.
   - `#Flb1_connected` / `#Flb1_Not_connected`
-```
-
-### *Commandes Laser*
-
-```{list-table}
-:header-rows: 1
-:widths: 30 40 30
-
-* - Commande
-  - Action
-  - Valeur de retour
-* - `runlaser`
-  - Démarre la tâche d'acquisition/localisation associée au laser.
-  - Aucune
-* - `stoplaser`
-  - Demande l'arrêt de la tâche laser.
-  - Aucune
 ```
 
 ---

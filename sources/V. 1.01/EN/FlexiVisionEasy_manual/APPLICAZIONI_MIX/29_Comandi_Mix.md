@@ -1,3 +1,4 @@
+(mix)=
 # **Mix Application Commands**
 ```{note}
 **Prerequisites**
@@ -65,9 +66,21 @@ This means that to request the coordinates of a different model, the specific co
 ```{tip}
 The maximum number of models that can be managed within a single Mix recipe is **8**, corresponding to the commands `mix_Locator_1` … `mix_Locator_8`. The robot program can request the models in any order and combination, depending on the application logic.
 ```
-:::{tip}
-The new version allows you to create `mix_Locator` commands that span multiple models—that is, commands that call multiple models simultaneously. For example, the `mix_Locator12` command calls models 1 and 2.
+#### Multi-model Commands  
+
+The new version makes it possible to build multi-model `mix_Locator_<models>` commands, i.e. commands that call more than one model at the same time. It dynamically selects one or more models and starts the Locator. Previously selected models are disabled first. The available numbers range from 1 to 8.
+
+:::{note}
+If the Locator is already running, the command is ignored and the current selection is not changed.
 :::
+
+For example:
+
+| Command                  | Models called             |
+|---------------------------|---------------------------|
+| `mix_Locator_12`          | 1, 2                       |
+| `mix_Locator_248`         | 2, 4, 8                    |
+| `mix_Locator_12345678`    | 1, 2, 3, 4, 5, 6, 7, 8      |
 
 ### *FlexiBowl® Commands*
 

@@ -1,3 +1,4 @@
+(mix)=
 # **Commandes de l'Application Mix**
 ```{note}
 **Conditions préalables**

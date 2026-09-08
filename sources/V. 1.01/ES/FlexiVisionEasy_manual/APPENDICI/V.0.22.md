@@ -9,9 +9,9 @@ Esta página corresponde a la versión **1.01** del presente manual, compatible 
 
 ### Aplicaciones Mix
 
-- Se ha añadido la gestión combinada de los comandos `mix_locator` para el Robot 1, el Robot 2 y el Robot 3: ahora es posible invocar varios modelos a la vez dentro de una misma cadena (por ejemplo, `mix_locator_12`, `mix_locator_248`, `mix_locator_12345678`).
-- Se ha añadido una comprobación de validez para los comandos `mix_locator`: si la cadena recibida no contiene modelos válidos (del 1 al 8), el sistema devuelve un error específico.
-- Se ha añadido una protección a los comandos `start_locator` y `mix_locator`: si un Locator ya se está ejecutando, el comando se ignora, lo que evita reinicios no deseados de la tarea y modificaciones imprevistas en los modelos activos.
+- Se ha añadido la gestión combinada de los comandos `mix_Locator` para el Robot 1, el Robot 2 y el Robot 3: ahora es posible invocar varios modelos a la vez dentro de una misma cadena (por ejemplo, `mix_Locator_12`, `mix_Locator_248`, `mix_Locator_12345678`).
+- Se ha añadido una comprobación de validez para los comandos `mix_Locator`: si la cadena recibida no contiene modelos válidos (del 1 al 8), el sistema devuelve un error específico.
+- Se ha añadido una protección a los comandos `start_Locator` y `mix_Locator`: si un Locator ya se está ejecutando, el comando se ignora, lo que evita reinicios no deseados de la tarea y modificaciones imprevistas en los modelos activos.
 
 ### Clearances (Histogramas)
 

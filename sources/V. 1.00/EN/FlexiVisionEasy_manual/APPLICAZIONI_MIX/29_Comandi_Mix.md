@@ -1,3 +1,4 @@
+(mix)=
 # **Mix Application Commands**
 ```{note}
 **Prerequisites**

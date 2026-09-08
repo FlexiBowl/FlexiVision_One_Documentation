@@ -9,9 +9,9 @@ This page refers to version **1.01** of this manual, which is compatible with **
 
 ### Mix Applications
 
-- Added combined handling of `mix_locator` commands for Robot 1, Robot 2, and Robot 3: it is now possible to call multiple models simultaneously within a single string (e.g., `mix_locator_12`, `mix_locator_248`, `mix_locator_12345678`).
-- Added a validity check for `mix_locator` commands: if the received string does not contain valid models (1 through 8), the system returns a specific error.
-- Added protection for the `start_locator` and `mix_locator` commands: if a Locator is already running, the command is ignored, preventing unwanted task restarts and unexpected changes to active models.
+- Added combined handling of `mix_Locator` commands for Robot 1, Robot 2, and Robot 3: it is now possible to call multiple models simultaneously within a single string (e.g., `mix_Locator_12`, `mix_Locator_248`, `mix_Locator_12345678`).
+- Added a validity check for `mix_Locator` commands: if the received string does not contain valid models (1 through 8), the system returns a specific error.
+- Added protection for the `start_Locator` and `mix_Locator` commands: if a Locator is already running, the command is ignored, preventing unwanted task restarts and unexpected changes to active models.
 
 ### Clearances (Histograms)
 
