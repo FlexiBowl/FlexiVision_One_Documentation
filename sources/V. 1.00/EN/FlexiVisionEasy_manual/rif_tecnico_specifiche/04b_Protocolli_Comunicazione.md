@@ -88,7 +88,7 @@ get_recipe
   - `Locator is Running` / `Locator is in Error` / `Locator is not Running`
 * - `mix_Locator_<models>`
     :::{tip}
-    Weitere Informationen finden Sie im [Abschnitt zu den Mix-Befehlen](mix)
+    For more information, see the [section on mix commands](mix)
     :::
   - Dynamically selects one or more models and starts the Locator. Previously selected models are first disabled. Available numbers range from 1 to 8 (e.g. `mix_Locator_12`, `mix_Locator_248`, `mix_Locator_12345678`).
     :::{note}
