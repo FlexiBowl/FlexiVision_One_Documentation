@@ -15,3 +15,6 @@ venv/
 
 # Local-only setup guide — never commit (contains internal infra details)
 DEPLOY_SETUP.md
+
+# Publisher scratch dirs — survive crashed/interrupted builds, must never be committed
+.tmp_manual_build_*/

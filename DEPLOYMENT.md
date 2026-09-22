@@ -9,7 +9,9 @@ Pushes to `main` trigger GitHub Actions. Media (`build/_shared/`,\
 fronted by **CloudFront**. HTML is baked into a tiny nginx Docker image\
 pushed to **GHCR** (`ghcr.io/<owner>/flexivision-docs:latest`). A webhook\
 notifies the Makai Labs deployment server to pull the new image and\
-restart. Live site: `docs.flexibowl.com`.
+restart. Live site: `flexivision-docs.flexibowl.com`.\
+(The historic hostname `docs.flexibowl.com` now redirects here — see
+"Where things live" below.)
 
 ## Everyday workflow
 
@@ -24,10 +26,25 @@ restart. Live site: `docs.flexibowl.com`.
 | Build pipeline                        | `.github/workflows/deploy.yml`                       |
 | Size guard (blocks big non-LFS files) | `.github/workflows/size-check.yml`                   |
 | Docker image                          | `ghcr.io/<owner>/flexivision-docs`                   |
-| Media & big files                     | AWS S3 bucket `flexivision-docs` (eu-south-1, Milan) |
-| CDN in front of S3                    | AWS CloudFront distribution (URL in `CDN_BASE_URL` secret) |
+| Media & big files                     | AWS S3 bucket `flexivision-docs` (eu-south-1, Milan) — **shared with FlexiBowl**, see below |
+| CDN in front of S3                    | AWS CloudFront distribution (URL in `CDN_BASE_URL` secret) — **shared with FlexiBowl**, see below |
 | Runtime                               | Makai Labs deployment server                         |
 | AWS + deploy credentials              | GitHub → Settings → Secrets (7 entries)              |
+
+### The bucket and CDN are shared with FlexiBowl
+
+The sibling manual, `FlexiBowl_Documentation`, does not have its own S3 bucket or
+CloudFront distribution — it reuses this repo's existing stack instead of a second one
+being provisioned. This works because the two sites write to disjoint key prefixes:
+
+- FlexiVision's objects sit at the **bucket root**: `_shared/…`, `_assets/…`.
+- FlexiBowl's objects sit under the **`flexibowl/` prefix**: `flexibowl/_shared/…`,
+  `flexibowl/_assets/…`, etc.
+
+If FlexiBowl's media disappears or 404s, suspect a misconfigured sync in *its* repo
+first — a missing or doubled `flexibowl/` prefix in its `deploy.yml`, or a
+`CDN_BASE_URL` value that doesn't match. This repo's own sync targets are unprefixed and
+unaffected by that repo's changes, and vice versa.
 
 ## Check deploy status
 
@@ -64,22 +81,23 @@ old files stay where they are.
 
 ### Adding new downloads (zips, large PDFs, archives, etc.)
 
-Drop the file under `build/_shared/` (a subdirectory like\
-`build/_shared/downloads/` is fine) and link to it from your HTML with\
-a normal relative path:
-
-```html
-<a href="../../_shared/downloads/MyManual_v2.zip">Download</a>
-```
-
-Commit and push as usual — that's it. CI takes care of the rest:
+Drop the file under `sources/_shared/media/` (a subdirectory like\
+`sources/_shared/media/downloads/` is fine) and link to it from your\
+**Markdown source** with a normal relative path. The next `build_manual.bat`\
+run copies it into `build/_shared/`, and CI takes care of the rest:
 
 - the file is uploaded to the CDN (not into the docs site image), so it\
   stays fast even when it's very large;
 - the link in your HTML is rewritten to point at the CDN automatically.
 
-**Don't** drop new big files at the root of `build/` — those bloat the\
-docs site image and bypass the CDN.
+**Don't** drop the file directly under `build/_shared/` — `build/` is\
+regenerated on every run of `build_manual.bat`, and the publisher's\
+`mirror_directory()` step deletes anything under `build/` that isn't also\
+present in the staged source tree. A file hand-placed in `build/` survives\
+only until the next build, then the link 404s.
+
+**Don't** drop new big files at the root of `build/` either — those bloat\
+the docs site image and bypass the CDN.
 
 #### Special case: `build/Offline manual.zip`
 

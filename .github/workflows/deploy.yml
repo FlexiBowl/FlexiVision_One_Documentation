@@ -82,10 +82,12 @@ jobs:
       contents: read
       packages: write
     steps:
-      - name: Checkout (with LFS)
+      # No LFS here: .dockerignore excludes every LFS-tracked path, so pulling
+      # ~425 MB of video per deploy only burns the LFS bandwidth quota.
+      - name: Checkout (without LFS)
         uses: actions/checkout@v4
         with:
-          lfs: true
+          lfs: false
 
       - name: Rewrite HTML asset URLs to CDN
         run: |
