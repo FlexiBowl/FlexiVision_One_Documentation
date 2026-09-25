@@ -105,6 +105,61 @@ Altri separatori di stringa disponibili, oltre `;`, sono: `,`, `|`, `:`, `&`, `$
 Per `start_Locator` e `mix_Locator_<modelli>`, quando il Locator è già in esecuzione, al robot non viene inviata alcuna risposta.
 :::
 
+### *Come usare correttamente i comandi Start e Mix*
+
+FlexiVision One supporta due modalità applicative distinte, a seconda che sul FlexiBowl® venga caricato un solo tipo di componente oppure più componenti diversi contemporaneamente. Il comando da utilizzare dipende dalla configurazione dell'applicazione: `start_Locator` e `mix_Locator_<modelli>` **non vanno mai usati in modo intercambiabile all'interno della stessa ricetta**.
+
+**Applicazione standard – un solo componente**
+
+In un'applicazione standard è caricato sul FlexiBowl® un solo tipo di componente. I diversi modelli vengono usati per riconoscere le diverse facce di presa dello stesso componente, ad esempio:
+
+- Modello 1 = Prodotto, faccia di presa 1
+- Modello 2 = stesso Prodotto, faccia di presa 2
+- Modello 3 = stesso Prodotto, faccia di presa 3
+
+In questa configurazione si utilizza esclusivamente `start_Locator`: il comando avvia automaticamente la ricerca sequenziale tra tutti i modelli creati (prima il Modello 1, poi il Modello 2, il Modello 3 e così via). Se non viene trovata alcuna istanza valida, il FlexiBowl® ruota e il ciclo di ricerca riparte.
+
+```{important}
+In un'applicazione standard **non vanno mai inviati comandi mix** (`mix_Locator_<modelli>`). La ricerca tra le diverse facce dello stesso componente è già gestita automaticamente da `start_Locator`.
+```
+
+**Applicazione mix – componenti diversi**
+
+In un'applicazione mix sono caricati sul FlexiBowl® più componenti diversi contemporaneamente. Ogni modello è associato a un componente specifico e/o a una sua faccia di presa, ad esempio:
+
+- Modello 1 = Componente 1
+- Modello 2 = Componente 2
+
+I comandi corrispondenti sono:
+
+- `mix_Locator_1` → cerca solo il Componente 1 (Modello 1)
+- `mix_Locator_2` → cerca solo il Componente 2 (Modello 2)
+
+A differenza di `start_Locator`, un comando mix cerca **esclusivamente** i modelli indicati nel numero del comando. Per cercare più modelli contemporaneamente — che siano facce diverse dello stesso componente o componenti differenti — basta concatenare i relativi numeri, ad esempio:
+
+- Modello 1 = Componente 1, faccia di presa 1
+- Modello 2 = Componente 1, faccia di presa 2
+- Modello 3 = Componente 2, faccia di presa 1
+- Modello 4 = Componente 2, faccia di presa 2
+
+In questo caso:
+
+- `mix_Locator_12` → cerca contemporaneamente i Modelli 1 e 2 (entrambe le facce del Componente 1)
+- `mix_Locator_34` → cerca contemporaneamente i Modelli 3 e 4 (entrambe le facce del Componente 2)
+
+Ogni comando mix cerca quindi solo ed esclusivamente i modelli associati a quel comando, senza estendere la ricerca agli altri modelli presenti nella ricetta.
+
+**Riepilogo**
+
+| Configurazione applicazione | Comando da usare |
+| --- | --- |
+| Un solo componente, con una o più facce di presa | `start_Locator` |
+| Più componenti diversi caricati insieme | `mix_Locator_<modelli>` |
+
+```{note}
+I due comandi non sono intercambiabili: `mix_Locator_12` **non** si comporta come `start_Locator` e non esegue una ricerca sequenziale automatica tra tutti i modelli — cerca solo i modelli 1 e 2.
+```
+
 ### *Comandi FlexiBowl® – Emptying*
 
 ```{list-table}
