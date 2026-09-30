@@ -113,9 +113,9 @@ FlexiVision One supporta due modalità applicative distinte, a seconda che sul F
 
 In un'applicazione standard è caricato sul FlexiBowl® un solo tipo di componente. I diversi modelli vengono usati per riconoscere le diverse facce di presa dello stesso componente, ad esempio:
 
-- Modello 1 = Prodotto, faccia di presa 1
-- Modello 2 = stesso Prodotto, faccia di presa 2
-- Modello 3 = stesso Prodotto, faccia di presa 3
+- Modello 1 = Componente, faccia di presa 1
+- Modello 2 = stesso componente, faccia di presa 2
+- Modello 3 = stesso componente, faccia di presa 3
 
 In questa configurazione si utilizza esclusivamente `start_Locator`: il comando avvia automaticamente la ricerca sequenziale tra tutti i modelli creati (prima il Modello 1, poi il Modello 2, il Modello 3 e così via). Se non viene trovata alcuna istanza valida, il FlexiBowl® ruota e il ciclo di ricerca riparte.
 
