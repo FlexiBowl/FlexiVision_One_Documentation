@@ -104,6 +104,60 @@ Weitere verfügbare Trennzeichen neben `;` sind: `,`, `|`, `:`, `&`, `$`, `@`, `
 :::{note}
 Bei `start_Locator` und `mix_Locator_<Modelle>` wird, wenn der Locator bereits läuft, keine Antwort an den Roboter gesendet.
 :::
+### *So verwenden Sie die Befehle Start und Mix richtig*
+
+FlexiVision One unterstützt zwei unterschiedliche Anwendungsmodi, je nachdem, ob auf dem FlexiBowl® nur ein Komponententyp oder mehrere verschiedene Komponenten gleichzeitig geladen sind. Welcher Befehl zu verwenden ist, hängt von der Konfiguration der Anwendung ab: `start_Locator` und `mix_Locator_<Modelle>` **dürfen innerhalb desselben Rezepts niemals austauschbar verwendet werden**.
+
+**Standardanwendung – eine einzelne Komponente**
+
+In einer Standardanwendung ist auf dem FlexiBowl® nur ein Komponententyp geladen. Die verschiedenen Modelle dienen dazu, die unterschiedlichen Greifseiten derselben Komponente zu erkennen, zum Beispiel:
+
+- Modell 1 = Komponente, Greifseite 1
+- Modell 2 = dasselbe Komponente, Greifseite 2
+- Modell 3 = dasselbe Komponente, Greifseite 3
+
+In dieser Konfiguration wird ausschließlich `start_Locator` verwendet: Der Befehl startet automatisch die sequenzielle Suche über alle erstellten Modelle (zuerst Modell 1, dann Modell 2, Modell 3 usw.). Wird keine gültige Instanz gefunden, dreht sich der FlexiBowl® und der Suchzyklus beginnt von neuem.
+
+```{important}
+In einer Standardanwendung **dürfen niemals Mix-Befehle gesendet werden** (`mix_Locator_<Modelle>`). Die Suche über die verschiedenen Seiten derselben Komponente wird bereits automatisch von `start_Locator` übernommen.
+```
+
+**Mix-Anwendung – verschiedene Komponenten**
+
+In einer Mix-Anwendung sind mehrere verschiedene Komponenten gleichzeitig auf dem FlexiBowl® geladen. Jedes Modell ist einer bestimmten Komponente und/oder einer ihrer Greifseiten zugeordnet, zum Beispiel:
+
+- Modell 1 = Komponente 1
+- Modell 2 = Komponente 2
+
+Die entsprechenden Befehle lauten:
+
+- `mix_Locator_1` → sucht nur Komponente 1 (Modell 1)
+- `mix_Locator_2` → sucht nur Komponente 2 (Modell 2)
+
+Im Gegensatz zu `start_Locator` sucht ein Mix-Befehl **ausschließlich** die Modelle, die in der Befehlsnummer angegeben sind. Um mehrere Modelle gleichzeitig zu suchen – seien es verschiedene Seiten derselben Komponente oder unterschiedliche Komponenten –, genügt es, die jeweiligen Nummern aneinanderzureihen, zum Beispiel:
+
+- Modell 1 = Komponente 1, Greifseite 1
+- Modell 2 = Komponente 1, Greifseite 2
+- Modell 3 = Komponente 2, Greifseite 1
+- Modell 4 = Komponente 2, Greifseite 2
+
+In diesem Fall gilt:
+
+- `mix_Locator_12` → sucht gleichzeitig die Modelle 1 und 2 (beide Seiten von Komponente 1)
+- `mix_Locator_34` → sucht gleichzeitig die Modelle 3 und 4 (beide Seiten von Komponente 2)
+
+Jeder Mix-Befehl sucht somit nur und ausschließlich die diesem Befehl zugeordneten Modelle, ohne die Suche auf die übrigen Modelle im Rezept auszudehnen.
+
+**Zusammenfassung**
+
+| Anwendungskonfiguration | Zu verwendender Befehl |
+| --- | --- |
+| Eine einzelne Komponente, mit einer oder mehreren Greifseiten | `start_Locator` |
+| Mehrere verschiedene Komponenten gemeinsam geladen | `mix_Locator_<Modelle>` |
+
+```{note}
+Die beiden Befehle sind nicht austauschbar: `mix_Locator_12` verhält sich **nicht** wie `start_Locator` und führt keine automatische sequenzielle Suche über alle Modelle durch – es sucht nur die Modelle 1 und 2.
+```
 
 ### *FlexiBowl®-Befehle – Emptying*
 

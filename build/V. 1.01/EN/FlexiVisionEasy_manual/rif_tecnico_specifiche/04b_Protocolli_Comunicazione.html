@@ -430,6 +430,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#available-commands">Available commands</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recipe-management"><em>Recipe management</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#locator-commands"><em>Locator commands</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-correctly-use-the-start-and-mix-commands"><em>How to correctly use the Start and Mix commands</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flexibowl-commands-emptying"><em>FlexiBowl® commands – Emptying</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-hopper-signals"><em>Optional hopper signals</em></a></li>
 </ul>
@@ -591,6 +592,67 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For <code class="docutils literal notranslate"><span class="pre">start_Locator</span></code> and <code class="docutils literal notranslate"><span class="pre">mix_Locator_&lt;models&gt;</span></code>, when the Locator is already running, no response is sent to the robot.</p>
+</div>
+</section>
+<section id="how-to-correctly-use-the-start-and-mix-commands">
+<h3><em>How to correctly use the Start and Mix commands</em><a class="headerlink" href="#how-to-correctly-use-the-start-and-mix-commands" title="Link to this heading">#</a></h3>
+<p>FlexiVision One supports two distinct application modes, depending on whether the FlexiBowl® is loaded with a single type of component or with several different components at the same time. The command to use depends on the application configuration: <code class="docutils literal notranslate"><span class="pre">start_Locator</span></code> and <code class="docutils literal notranslate"><span class="pre">mix_Locator_&lt;models&gt;</span></code> <strong>must never be used interchangeably within the same recipe</strong>.</p>
+<p><strong>Standard application – single component</strong></p>
+<p>In a standard application, only one type of component is loaded on the FlexiBowl®. The different models are used to recognize the different gripping faces of the same component, for example:</p>
+<ul class="simple">
+<li><p>Model 1 = Component, gripping face 1</p></li>
+<li><p>Model 2 = same Component, gripping face 2</p></li>
+<li><p>Model 3 = same Component, gripping face 3</p></li>
+</ul>
+<p>In this configuration, only <code class="docutils literal notranslate"><span class="pre">start_Locator</span></code> is used: the command automatically starts a sequential search across all the models created (first Model 1, then Model 2, Model 3, and so on). If no valid instance is found, the FlexiBowl® rotates and the search cycle restarts.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>In a standard application, <strong>mix commands</strong> (<code class="docutils literal notranslate"><span class="pre">mix_Locator_&lt;models&gt;</span></code>) <strong>must never be sent</strong>. The search across the different faces of the same component is already handled automatically by <code class="docutils literal notranslate"><span class="pre">start_Locator</span></code>.</p>
+</div>
+<p><strong>Mix application – different components</strong></p>
+<p>In a mix application, several different components are loaded on the FlexiBowl® at the same time. Each model is associated with a specific component and/or one of its gripping faces, for example:</p>
+<ul class="simple">
+<li><p>Model 1 = Component 1</p></li>
+<li><p>Model 2 = Component 2</p></li>
+</ul>
+<p>The corresponding commands are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mix_Locator_1</span></code> → searches only for Component 1 (Model 1)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mix_Locator_2</span></code> → searches only for Component 2 (Model 2)</p></li>
+</ul>
+<p>Unlike <code class="docutils literal notranslate"><span class="pre">start_Locator</span></code>, a mix command searches <strong>exclusively</strong> for the models indicated in the command number. To search for several models at the same time — whether they are different faces of the same component or different components — simply concatenate the relevant numbers, for example:</p>
+<ul class="simple">
+<li><p>Model 1 = Component 1, gripping face 1</p></li>
+<li><p>Model 2 = Component 1, gripping face 2</p></li>
+<li><p>Model 3 = Component 2, gripping face 1</p></li>
+<li><p>Model 4 = Component 2, gripping face 2</p></li>
+</ul>
+<p>In this case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mix_Locator_12</span></code> → searches for Models 1 and 2 at the same time (both faces of Component 1)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mix_Locator_34</span></code> → searches for Models 3 and 4 at the same time (both faces of Component 2)</p></li>
+</ul>
+<p>Each mix command therefore searches only and exclusively for the models associated with that command, without extending the search to the other models in the recipe.</p>
+<p><strong>Summary</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Application configuration</p></th>
+<th class="head"><p>Command to use</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Single component, with one or more gripping faces</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">start_Locator</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Several different components loaded together</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">mix_Locator_&lt;models&gt;</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The two commands are not interchangeable: <code class="docutils literal notranslate"><span class="pre">mix_Locator_12</span></code> does <strong>not</strong> behave like <code class="docutils literal notranslate"><span class="pre">start_Locator</span></code> and does not perform an automatic sequential search across all models — it only searches for models 1 and 2.</p>
 </div>
 </section>
 <section id="flexibowl-commands-emptying">
@@ -1374,6 +1436,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#available-commands">Available commands</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recipe-management"><em>Recipe management</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#locator-commands"><em>Locator commands</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-correctly-use-the-start-and-mix-commands"><em>How to correctly use the Start and Mix commands</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flexibowl-commands-emptying"><em>FlexiBowl® commands – Emptying</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-hopper-signals"><em>Optional hopper signals</em></a></li>
 </ul>
