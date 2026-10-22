@@ -357,7 +357,7 @@ Il sistema FlexiVision One opera su un PC Industriale (VisionController) che fun
 * - **Caratteristica**
   - **Specifiche**
 * - CPU
-  - Intel Core i3-1115G4 1.7 14.1 GHz
+  - Intel Core i3-1115G4 1.7 4.1 GHz
 * - Memoria (RAM)
   - 8G DDR4 3200 MHz
 * - Archiviazione
