@@ -1,21 +1,17 @@
 # V. 0.20
 
-```{note}
-Diese Seite bezieht sich auf die Version **1.00** dieses Handbuchs, die mit **FlexiVision Studio v0.20** kompatibel ist.
-```
-
 ## **Verbesserungen**
 
 ### Lizenzverwaltung
 
-- Es wurde eine roboterseitige Überprüfung der aktiven Lizenz hinzugefügt, um sicherzustellen, dass die Entnahmefunktionen nur bei Vorhandensein einer gültigen Lizenz aktiviert sind.
+- Es wurde eine Prüfung der aktiven Lizenz auf Roboterseite hinzugefügt, damit die Pick-Funktionen nur bei gültiger Lizenz freigegeben sind.
 
-## **Gelöste Probleme**
+## **Behobene Probleme**
 
 ### Rezepte
 
-- Es wurde ein Problem behoben, das das korrekte Speichern des Parameters **Enable Picking Robot** auf der Seite „Application“ verhinderte.
-- Es wurde ein Problem behoben, das das korrekte Speichern des Modellnamens innerhalb des Rezepts verhinderte.
+- Ein Problem wurde behoben, das das korrekte Speichern des Parameters **Enable Picking Robot** auf der Seite Application verhinderte.
+- Ein Problem wurde behoben, das das korrekte Speichern des Modellnamens im Rezept verhinderte.
 
 ### PlugIn
 

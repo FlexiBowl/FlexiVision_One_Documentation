@@ -1,57 +1,53 @@
 # V. 0.22
 
 
-```{note}
-Esta página corresponde a la versión **1.01** del presente manual, compatible con **FlexiVision Studio v0.21** y **v0.22**.
-```
-
-## **Nuevas funciones**
+## **Nuevas funcionalidades**
 
 ### Aplicaciones Mix
 
-- Se ha añadido la gestión combinada de los comandos `mix_Locator` para el Robot 1, el Robot 2 y el Robot 3: ahora es posible invocar varios modelos a la vez dentro de una misma cadena (por ejemplo, `mix_Locator_12`, `mix_Locator_248`, `mix_Locator_12345678`).
-- Se ha añadido una comprobación de validez para los comandos `mix_Locator`: si la cadena recibida no contiene modelos válidos (del 1 al 8), el sistema devuelve un error específico.
-- Se ha añadido una protección a los comandos `start_Locator` y `mix_Locator`: si un Locator ya se está ejecutando, el comando se ignora, lo que evita reinicios no deseados de la tarea y modificaciones imprevistas en los modelos activos.
+- Añadida la gestión combinada de los comandos `mix_Locator` para Robot 1, Robot 2 y Robot 3: ahora es posible llamar varios modelos simultáneamente dentro de una única cadena (p. ej. `mix_Locator_12`, `mix_Locator_248`, `mix_Locator_12345678`).
+- Añadido un control de validez en los comandos `mix_Locator`: si la cadena recibida no contiene modelos válidos (del 1 al 8), el sistema devuelve un error específico.
+- Añadida una protección en los comandos `start_Locator` y `mix_Locator`: si un Locator ya está en ejecución, el comando se ignora, evitando reinicios no deseados de la tarea y modificaciones imprevistas de los modelos activos.
 
 ### Clearances (Histogramas)
 
-- Se ha añadido compatibilidad con tres tipos de regiones para las herramientas de histograma — **Rectángulo**, **Sector anular** y **Círculo** — que se pueden seleccionar a través de un menú específico en la página de recetas, para todos los modelos e histogramas disponibles.
-- Se ha actualizado la página «Prueba de histograma» para mostrar correctamente los nuevos tipos de región, que se representan en verde o rojo según el resultado de la comprobación.
-- Se ha añadido la visualización gráfica del índice del histograma y de las medidas principales de la región seleccionada.
+- Añadido el soporte para tres tipos de región para las herramientas Histogram — **Rectángulo**, **Sector anular** y **Círculo** — seleccionables mediante un menú específico en la página de la receta, para todos los modelos e histogramas disponibles.
+- Actualizada la página Test Histogram para mostrar correctamente los nuevos tipos de región, dibujados en verde o rojo según el resultado del control.
+- Añadida la visualización gráfica del índice Histogram y de las medidas principales de la región seleccionada.
 
 ### FlexiBowl®
 
-- Se ha añadido la función **Belt Check** para comprobar el estado de desgaste y limpieza de la cinta:
-  - captura de una imagen de referencia de la cinta limpia mediante el botón **Save Clean Reference**;
-  - comparación automática, mediante un histograma, entre la imagen de referencia y la imagen actual de la cinta;
-  - Clasificación automática de la cinta en **Light**, **Dark** o **Medium** en función de la luminosidad de la imagen de referencia;
-  - Visualización del estado de la cinta con un valor porcentual, un color y una indicación textual (**Good**, **Warning**, **Poor**);
-  - Visualización de la fecha de la última comprobación Belt Check para cada FlexiBowl®.
-- Se ha añadido el asistente **Hopper Step Setup** para calcular el número de secuencias necesarias para llegar a la zona de la tolva, con las funciones **Reset Steps**, **Test Sequence** y **Save Hopper Step**, y la correspondiente indicación del estado de calibración.
-- Se ha añadido la posibilidad de introducir manualmente desde el teclado los parámetros de los FlexiBowl®, como alternativa al ajuste mediante el control deslizante.
-- Se ha añadido un mensaje de aviso no modal cuando se modifican los parámetros de un FlexiBowl® pero aún no se han sincronizado con el dispositivo real.
-- Se ha añadido el **Auto Reset FlexiBowl**: si al iniciar un comando de movimiento ya existe un error, el sistema realiza automáticamente el reinicio antes de ejecutar el comando.
+- Añadida la función **Belt Check** para controlar el estado de desgaste y limpieza de la cinta:
+  - adquisición de una imagen de referencia de la cinta limpia mediante el botón **Save Clean Reference**;
+  - comparación automática, mediante Histogram, entre la imagen de referencia y la imagen actual de la cinta;
+  - clasificación automática de la cinta en **Light**, **Dark** o **Medium** según el brillo de la referencia;
+  - visualización del estado de la cinta con valor porcentual, color e indicación textual (**Good**, **Warning**, **Poor**);
+  - visualización de la fecha del último Belt Check de cada FlexiBowl®.
+- Añadido el procedimiento guiado **Hopper Step Setup** para calcular el número de secuencias necesarias para alcanzar la zona de la tolva, con las funciones **Reset Steps**, **Test Sequence** y **Save Hopper Step**, y la correspondiente indicación del estado de calibración.
+- Añadida la posibilidad de introducir manualmente desde el teclado los parámetros de los FlexiBowl®, como alternativa al ajuste mediante slider.
+- Añadido un mensaje de aviso no modal cuando los parámetros de un FlexiBowl® se modifican pero aún no están sincronizados con el dispositivo real.
+- Añadido el **Auto Reset FlexiBowl**: si al iniciar un comando de movimiento ya hay un error, el sistema realiza automáticamente el reset antes de iniciar el comando.
 
 ### Seguridad y accesos
 
-- Se ha añadido el control del nivel de acceso en los botones comunes de la interfaz: las funciones protegidas comprueban el nivel de usuario actual antes de ejecutarse y muestran un mensaje en caso de permisos insuficientes.
+- Añadido el control del nivel de acceso en los botones comunes de la interfaz: las funciones protegidas verifican el nivel de usuario actual antes de ejecutarse y muestran un mensaje en caso de permisos insuficientes.
 
 ## **Mejoras**
 
 ### Asistente de creación de recetas
 
-- Se ha añadido un control sobre el desplazamiento de selección (Picking Offset) al botón **NEXT**: si el desplazamiento está habilitado, debe calcularse y ser válido antes de poder continuar en el asistente.
+- Añadido un control sobre el Picking Offset en el botón **NEXT**: si el offset está habilitado, debe estar calculado y ser válido antes de poder continuar en el asistente.
 
-### Interfaz de recetas
+### Interfaz de la receta
 
-- Se ha corregido el formato de visualización de los desplazamientos del robot de recogida en las páginas de recetas, estableciendo el punto como separador decimal en lugar de la coma.
+- Corregido el formato de visualización de los offsets Robot Pick en las páginas de la receta, forzando el punto como separador decimal en lugar de la coma.
 
 ## **Problemas resueltos**
 
-### Gestión de copias de seguridad
+### Gestión de copias de seguridad (BackUp)
 
-- Se ha corregido un error en la creación de la copia de seguridad que se producía cuando la ruta en el ordenador contenía espacios.
+- Corregido un error en la creación de la copia de seguridad que se producía cuando la ruta en el PC contenía espacios.
 
 ### Secuencias
 
-- Se ha solucionado un problema de visualización que podía hacer que aparecieran comandos aparentemente duplicados en la lista de secuencias.
+- Resuelto un problema de visualización que podía mostrar comandos aparentemente duplicados en la lista de secuencias.

@@ -53,6 +53,7 @@
     <script src="../../../../_shared/static/custom.js?v=2acd42a9"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Notas de la versión – Manual" href="Release_Notes_Manuale.html" />
     <link rel="prev" title="V. 0.21" href="V.0.21.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -274,9 +275,13 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">APPENDICI</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Release_Notes.html">Notas de la versión</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="V.0.20.html">V. 0.20</a></li>
-<li class="toctree-l2"><a class="reference internal" href="V.0.21.html">V. 0.21</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">V. 0.22</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="Release_Notes_Software.html">Notas de la versión – Software</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="V.0.20.html">V. 0.20</a></li>
+<li class="toctree-l3"><a class="reference internal" href="V.0.21.html">V. 0.21</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">V. 0.22</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="Release_Notes_Manuale.html">Notas de la versión – Manual</a></li>
 </ul>
 </details></li>
 </ul>
@@ -424,7 +429,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nuevas-funciones"><strong>Nuevas funciones</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nuevas-funcionalidades"><strong>Nuevas funcionalidades</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplicaciones-mix">Aplicaciones Mix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clearances-histogramas">Clearances (Histogramas)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flexibowl">FlexiBowl®</a></li>
@@ -433,11 +438,11 @@
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mejoras"><strong>Mejoras</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asistente-de-creacion-de-recetas">Asistente de creación de recetas</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interfaz-de-recetas">Interfaz de recetas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interfaz-de-la-receta">Interfaz de la receta</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problemas-resueltos"><strong>Problemas resueltos</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gestion-de-copias-de-seguridad">Gestión de copias de seguridad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gestion-de-copias-de-seguridad-backup">Gestión de copias de seguridad (BackUp)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#secuencias">Secuencias</a></li>
 </ul>
 </li>
@@ -454,50 +459,46 @@
                   
   <section id="v-0-22">
 <h1>V. 0.22<a class="headerlink" href="#v-0-22" title="Link to this heading">#</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Esta página corresponde a la versión <strong>1.01</strong> del presente manual, compatible con <strong>FlexiVision Studio v0.21</strong> y <strong>v0.22</strong>.</p>
-</div>
-<section id="nuevas-funciones">
-<h2><strong>Nuevas funciones</strong><a class="headerlink" href="#nuevas-funciones" title="Link to this heading">#</a></h2>
+<section id="nuevas-funcionalidades">
+<h2><strong>Nuevas funcionalidades</strong><a class="headerlink" href="#nuevas-funcionalidades" title="Link to this heading">#</a></h2>
 <section id="aplicaciones-mix">
 <h3>Aplicaciones Mix<a class="headerlink" href="#aplicaciones-mix" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Se ha añadido la gestión combinada de los comandos <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code> para el Robot 1, el Robot 2 y el Robot 3: ahora es posible invocar varios modelos a la vez dentro de una misma cadena (por ejemplo, <code class="docutils literal notranslate"><span class="pre">mix_Locator_12</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_248</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_12345678</span></code>).</p></li>
-<li><p>Se ha añadido una comprobación de validez para los comandos <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code>: si la cadena recibida no contiene modelos válidos (del 1 al 8), el sistema devuelve un error específico.</p></li>
-<li><p>Se ha añadido una protección a los comandos <code class="docutils literal notranslate"><span class="pre">start_Locator</span></code> y <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code>: si un Locator ya se está ejecutando, el comando se ignora, lo que evita reinicios no deseados de la tarea y modificaciones imprevistas en los modelos activos.</p></li>
+<li><p>Añadida la gestión combinada de los comandos <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code> para Robot 1, Robot 2 y Robot 3: ahora es posible llamar varios modelos simultáneamente dentro de una única cadena (p. ej. <code class="docutils literal notranslate"><span class="pre">mix_Locator_12</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_248</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_12345678</span></code>).</p></li>
+<li><p>Añadido un control de validez en los comandos <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code>: si la cadena recibida no contiene modelos válidos (del 1 al 8), el sistema devuelve un error específico.</p></li>
+<li><p>Añadida una protección en los comandos <code class="docutils literal notranslate"><span class="pre">start_Locator</span></code> y <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code>: si un Locator ya está en ejecución, el comando se ignora, evitando reinicios no deseados de la tarea y modificaciones imprevistas de los modelos activos.</p></li>
 </ul>
 </section>
 <section id="clearances-histogramas">
 <h3>Clearances (Histogramas)<a class="headerlink" href="#clearances-histogramas" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Se ha añadido compatibilidad con tres tipos de regiones para las herramientas de histograma — <strong>Rectángulo</strong>, <strong>Sector anular</strong> y <strong>Círculo</strong> — que se pueden seleccionar a través de un menú específico en la página de recetas, para todos los modelos e histogramas disponibles.</p></li>
-<li><p>Se ha actualizado la página «Prueba de histograma» para mostrar correctamente los nuevos tipos de región, que se representan en verde o rojo según el resultado de la comprobación.</p></li>
-<li><p>Se ha añadido la visualización gráfica del índice del histograma y de las medidas principales de la región seleccionada.</p></li>
+<li><p>Añadido el soporte para tres tipos de región para las herramientas Histogram — <strong>Rectángulo</strong>, <strong>Sector anular</strong> y <strong>Círculo</strong> — seleccionables mediante un menú específico en la página de la receta, para todos los modelos e histogramas disponibles.</p></li>
+<li><p>Actualizada la página Test Histogram para mostrar correctamente los nuevos tipos de región, dibujados en verde o rojo según el resultado del control.</p></li>
+<li><p>Añadida la visualización gráfica del índice Histogram y de las medidas principales de la región seleccionada.</p></li>
 </ul>
 </section>
 <section id="flexibowl">
 <h3>FlexiBowl®<a class="headerlink" href="#flexibowl" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Se ha añadido la función <strong>Belt Check</strong> para comprobar el estado de desgaste y limpieza de la cinta:</p>
+<li><p>Añadida la función <strong>Belt Check</strong> para controlar el estado de desgaste y limpieza de la cinta:</p>
 <ul>
-<li><p>captura de una imagen de referencia de la cinta limpia mediante el botón <strong>Save Clean Reference</strong>;</p></li>
-<li><p>comparación automática, mediante un histograma, entre la imagen de referencia y la imagen actual de la cinta;</p></li>
-<li><p>Clasificación automática de la cinta en <strong>Light</strong>, <strong>Dark</strong> o <strong>Medium</strong> en función de la luminosidad de la imagen de referencia;</p></li>
-<li><p>Visualización del estado de la cinta con un valor porcentual, un color y una indicación textual (<strong>Good</strong>, <strong>Warning</strong>, <strong>Poor</strong>);</p></li>
-<li><p>Visualización de la fecha de la última comprobación Belt Check para cada FlexiBowl®.</p></li>
+<li><p>adquisición de una imagen de referencia de la cinta limpia mediante el botón <strong>Save Clean Reference</strong>;</p></li>
+<li><p>comparación automática, mediante Histogram, entre la imagen de referencia y la imagen actual de la cinta;</p></li>
+<li><p>clasificación automática de la cinta en <strong>Light</strong>, <strong>Dark</strong> o <strong>Medium</strong> según el brillo de la referencia;</p></li>
+<li><p>visualización del estado de la cinta con valor porcentual, color e indicación textual (<strong>Good</strong>, <strong>Warning</strong>, <strong>Poor</strong>);</p></li>
+<li><p>visualización de la fecha del último Belt Check de cada FlexiBowl®.</p></li>
 </ul>
 </li>
-<li><p>Se ha añadido el asistente <strong>Hopper Step Setup</strong> para calcular el número de secuencias necesarias para llegar a la zona de la tolva, con las funciones <strong>Reset Steps</strong>, <strong>Test Sequence</strong> y <strong>Save Hopper Step</strong>, y la correspondiente indicación del estado de calibración.</p></li>
-<li><p>Se ha añadido la posibilidad de introducir manualmente desde el teclado los parámetros de los FlexiBowl®, como alternativa al ajuste mediante el control deslizante.</p></li>
-<li><p>Se ha añadido un mensaje de aviso no modal cuando se modifican los parámetros de un FlexiBowl® pero aún no se han sincronizado con el dispositivo real.</p></li>
-<li><p>Se ha añadido el <strong>Auto Reset FlexiBowl</strong>: si al iniciar un comando de movimiento ya existe un error, el sistema realiza automáticamente el reinicio antes de ejecutar el comando.</p></li>
+<li><p>Añadido el procedimiento guiado <strong>Hopper Step Setup</strong> para calcular el número de secuencias necesarias para alcanzar la zona de la tolva, con las funciones <strong>Reset Steps</strong>, <strong>Test Sequence</strong> y <strong>Save Hopper Step</strong>, y la correspondiente indicación del estado de calibración.</p></li>
+<li><p>Añadida la posibilidad de introducir manualmente desde el teclado los parámetros de los FlexiBowl®, como alternativa al ajuste mediante slider.</p></li>
+<li><p>Añadido un mensaje de aviso no modal cuando los parámetros de un FlexiBowl® se modifican pero aún no están sincronizados con el dispositivo real.</p></li>
+<li><p>Añadido el <strong>Auto Reset FlexiBowl</strong>: si al iniciar un comando de movimiento ya hay un error, el sistema realiza automáticamente el reset antes de iniciar el comando.</p></li>
 </ul>
 </section>
 <section id="seguridad-y-accesos">
 <h3>Seguridad y accesos<a class="headerlink" href="#seguridad-y-accesos" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Se ha añadido el control del nivel de acceso en los botones comunes de la interfaz: las funciones protegidas comprueban el nivel de usuario actual antes de ejecutarse y muestran un mensaje en caso de permisos insuficientes.</p></li>
+<li><p>Añadido el control del nivel de acceso en los botones comunes de la interfaz: las funciones protegidas verifican el nivel de usuario actual antes de ejecutarse y muestran un mensaje en caso de permisos insuficientes.</p></li>
 </ul>
 </section>
 </section>
@@ -506,28 +507,28 @@
 <section id="asistente-de-creacion-de-recetas">
 <h3>Asistente de creación de recetas<a class="headerlink" href="#asistente-de-creacion-de-recetas" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Se ha añadido un control sobre el desplazamiento de selección (Picking Offset) al botón <strong>NEXT</strong>: si el desplazamiento está habilitado, debe calcularse y ser válido antes de poder continuar en el asistente.</p></li>
+<li><p>Añadido un control sobre el Picking Offset en el botón <strong>NEXT</strong>: si el offset está habilitado, debe estar calculado y ser válido antes de poder continuar en el asistente.</p></li>
 </ul>
 </section>
-<section id="interfaz-de-recetas">
-<h3>Interfaz de recetas<a class="headerlink" href="#interfaz-de-recetas" title="Link to this heading">#</a></h3>
+<section id="interfaz-de-la-receta">
+<h3>Interfaz de la receta<a class="headerlink" href="#interfaz-de-la-receta" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Se ha corregido el formato de visualización de los desplazamientos del robot de recogida en las páginas de recetas, estableciendo el punto como separador decimal en lugar de la coma.</p></li>
+<li><p>Corregido el formato de visualización de los offsets Robot Pick en las páginas de la receta, forzando el punto como separador decimal en lugar de la coma.</p></li>
 </ul>
 </section>
 </section>
 <section id="problemas-resueltos">
 <h2><strong>Problemas resueltos</strong><a class="headerlink" href="#problemas-resueltos" title="Link to this heading">#</a></h2>
-<section id="gestion-de-copias-de-seguridad">
-<h3>Gestión de copias de seguridad<a class="headerlink" href="#gestion-de-copias-de-seguridad" title="Link to this heading">#</a></h3>
+<section id="gestion-de-copias-de-seguridad-backup">
+<h3>Gestión de copias de seguridad (BackUp)<a class="headerlink" href="#gestion-de-copias-de-seguridad-backup" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Se ha corregido un error en la creación de la copia de seguridad que se producía cuando la ruta en el ordenador contenía espacios.</p></li>
+<li><p>Corregido un error en la creación de la copia de seguridad que se producía cuando la ruta en el PC contenía espacios.</p></li>
 </ul>
 </section>
 <section id="secuencias">
 <h3>Secuencias<a class="headerlink" href="#secuencias" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Se ha solucionado un problema de visualización que podía hacer que aparecieran comandos aparentemente duplicados en la lista de secuencias.</p></li>
+<li><p>Resuelto un problema de visualización que podía mostrar comandos aparentemente duplicados en la lista de secuencias.</p></li>
 </ul>
 <br>
 <!-- Versions and languages set-up -->
@@ -1199,6 +1200,15 @@
         <p class="prev-next-title">V. 0.21</p>
       </div>
     </a>
+    <a class="right-next"
+       href="Release_Notes_Manuale.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Notas de la versión – Manual</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -1217,7 +1227,7 @@
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nuevas-funciones"><strong>Nuevas funciones</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nuevas-funcionalidades"><strong>Nuevas funcionalidades</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplicaciones-mix">Aplicaciones Mix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clearances-histogramas">Clearances (Histogramas)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flexibowl">FlexiBowl®</a></li>
@@ -1226,11 +1236,11 @@
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mejoras"><strong>Mejoras</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asistente-de-creacion-de-recetas">Asistente de creación de recetas</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interfaz-de-recetas">Interfaz de recetas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interfaz-de-la-receta">Interfaz de la receta</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problemas-resueltos"><strong>Problemas resueltos</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gestion-de-copias-de-seguridad">Gestión de copias de seguridad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gestion-de-copias-de-seguridad-backup">Gestión de copias de seguridad (BackUp)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#secuencias">Secuencias</a></li>
 </ul>
 </li>

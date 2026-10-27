@@ -1,57 +1,53 @@
 # V. 0.22
 
 
-```{note}
-Diese Seite bezieht sich auf die Version **1.01** dieses Handbuchs, die mit **FlexiVision Studio v0.21** und **v0.22** kompatibel ist.
-```
-
 ## **Neue Funktionen**
 
 ### Mix-Anwendungen
 
-- Kombinierte Verwaltung der Befehle `mix_Locator` für Roboter 1, Roboter 2 und Roboter 3 hinzugefügt: Es ist nun möglich, mehrere Modelle gleichzeitig innerhalb einer einzigen Zeichenfolge aufzurufen (z. B. `mix_Locator_12`, `mix_Locator_248`, `mix_Locator_12345678`).
-- Eine Gültigkeitsprüfung für die Befehle `mix_Locator` wurde hinzugefügt: Wenn die übergebene Zeichenfolge keine gültigen Modelle (von 1 bis 8) enthält, gibt das System einen entsprechenden Fehler zurück.
-- Es wurde eine Schutzfunktion für die Befehle `start_Locator` und `mix_Locator` hinzugefügt: Wenn ein Locator bereits ausgeführt wird, wird der Befehl ignoriert, wodurch ungewollte Neustarts der Aufgabe und unerwartete Änderungen an den aktiven Vorlagen vermieden werden.
+- Die kombinierte Verwaltung der `mix_Locator`-Befehle für Roboter 1, Roboter 2 und Roboter 3 wurde hinzugefügt: Es können nun mehrere Modelle gleichzeitig innerhalb einer einzigen Zeichenfolge aufgerufen werden (z. B. `mix_Locator_12`, `mix_Locator_248`, `mix_Locator_12345678`).
+- Eine Gültigkeitsprüfung für `mix_Locator`-Befehle wurde hinzugefügt: Enthält die empfangene Zeichenfolge keine gültigen Modelle (von 1 bis 8), gibt das System einen eigenen Fehler zurück.
+- Für die Befehle `start_Locator` und `mix_Locator` wurde ein Schutz hinzugefügt: Läuft bereits ein Locator, wird der Befehl ignoriert. Dadurch werden unerwünschte Neustarts des Tasks und unerwartete Änderungen an den aktiven Modellen vermieden.
 
 ### Clearances (Histogramme)
 
-- Es wurde die Unterstützung für drei Arten von Bereichen für die Histogramm-Werkzeuge hinzugefügt – **Rechteck**, **Ringsektor** und **Kreis** –, die über ein spezielles Menü auf der Rezeptseite für alle verfügbaren Modelle und Histogramme ausgewählt werden können.
-- Die Seite „Histogramm-Test“ wurde aktualisiert, um die neuen Bereichstypen korrekt anzuzeigen, die je nach Prüfergebnis in Grün oder Rot dargestellt werden.
-- Es wurde eine grafische Darstellung des Histogramm-Index und der wichtigsten Messwerte des ausgewählten Bereichs hinzugefügt.
+- Es wurde die Unterstützung von drei Regionstypen für die Histogram-Tools hinzugefügt — **Rechteck**, **Kreisringsegment** und **Kreis** —, die über ein eigenes Menü auf der Rezeptseite für alle verfügbaren Modelle und Histogramme ausgewählt werden können.
+- Die Seite Test Histogram wurde aktualisiert, um die neuen Regionstypen korrekt darzustellen; sie werden je nach Ergebnis der Prüfung grün oder rot gezeichnet.
+- Die grafische Anzeige des Histogram-Index und der wichtigsten Messwerte der ausgewählten Region wurde hinzugefügt.
 
 ### FlexiBowl®
 
-- Die Funktion **Belt Check** zur Überprüfung des Verschleißzustands und der Sauberkeit des Bandes wurde hinzugefügt:
+- Die Funktion **Belt Check** zur Kontrolle von Verschleiß- und Sauberkeitszustand des Bandes wurde hinzugefügt:
   - Aufnahme eines Referenzbildes des sauberen Bandes über die Schaltfläche **Save Clean Reference**;
-  - automatischer Vergleich des Referenzbildes mit dem aktuellen Bild des Bandes mittels Histogramm;
-  - Automatische Einstufung des Bandes in **Light**, **Dark** oder **Medium** je nach Helligkeit des Referenzbildes;
+  - automatischer Vergleich zwischen Referenzbild und aktuellem Bild des Bandes mittels Histogram;
+  - automatische Klassifizierung des Bandes in **Light**, **Dark** oder **Medium** anhand der Helligkeit der Referenz;
   - Anzeige des Bandzustands mit Prozentwert, Farbe und Textangabe (**Good**, **Warning**, **Poor**);
-  - Anzeige des Datums der letzten Belt-Check-Prüfung für jeden FlexiBowl®.
-- Der Assistent **Hopper Step Setup** wurde hinzugefügt, um die Anzahl der erforderlichen Sequenzen bis zum Erreichen des Trichterbereichs zu berechnen, mit den Funktionen **Reset Steps**, **Test Sequence** und **Save Hopper Step** sowie einer entsprechenden Anzeige des Kalibrierungsstatus.
-- Es wurde die Möglichkeit hinzugefügt, die Parameter der FlexiBowl®-Geräte manuell über die Tastatur einzugeben, als Alternative zur Einstellung über Schieberegler.
-- Es wurde eine nicht-modale Warnmeldung hinzugefügt, wenn die Parameter eines FlexiBowl®-Geräts geändert werden, aber noch nicht mit dem tatsächlichen Gerät synchronisiert sind.
-- **Auto Reset FlexiBowl** hinzugefügt: Liegt beim Start eines Bewegungsbefehls bereits ein Fehler vor, führt das System automatisch einen Reset durch, bevor der Befehl gestartet wird.
+  - Anzeige des Datums des letzten Belt Check für jeden FlexiBowl®.
+- Der geführte Ablauf **Hopper Step Setup** wurde hinzugefügt, um die Anzahl der Sequenzen zu berechnen, die zum Erreichen des Trichterbereichs erforderlich sind, mit den Funktionen **Reset Steps**, **Test Sequence** und **Save Hopper Step** sowie der zugehörigen Anzeige des Kalibrierungsstatus.
+- Es wurde die Möglichkeit hinzugefügt, die Parameter der FlexiBowl® manuell über die Tastatur einzugeben, als Alternative zur Einstellung per Slider.
+- Eine nicht modale Warnmeldung wurde hinzugefügt, wenn die Parameter eines FlexiBowl® geändert, aber noch nicht mit dem realen Gerät synchronisiert wurden.
+- **Auto Reset FlexiBowl** wurde hinzugefügt: Liegt beim Start eines Bewegungsbefehls bereits ein Fehler vor, führt das System automatisch den Reset durch, bevor der Befehl gestartet wird.
 
-### Sicherheit und Zugriffsrechte
+### Sicherheit und Zugriffe
 
-- Es wurde eine Überprüfung der Zugriffsebene für die allgemeinen Schaltflächen der Benutzeroberfläche hinzugefügt: Geschützte Funktionen überprüfen vor der Ausführung die aktuelle Benutzerebene und zeigen bei unzureichenden Berechtigungen eine Meldung an.
+- Für die allgemeinen Schaltflächen der Oberfläche wurde die Prüfung der Zugriffsebene hinzugefügt: Geschützte Funktionen prüfen vor der Ausführung die aktuelle Benutzerebene und zeigen bei unzureichenden Berechtigungen eine Meldung an.
 
 ## **Verbesserungen**
 
-### Rezept-Assistent
+### Assistent zur Rezepterstellung
 
-- Der Schaltfläche **NEXT** wurde eine Überprüfung des Picking-Offsets hinzugefügt: Wenn der Offset aktiviert ist, muss er berechnet und gültig sein, bevor im Assistenten fortgefahren werden kann.
+- Der Schaltfläche **NEXT** wurde eine Prüfung des Picking Offset hinzugefügt: Ist der Offset aktiviert, muss er berechnet und gültig sein, bevor im Assistenten fortgefahren werden kann.
 
-### Rezept-Oberfläche
+### Rezeptoberfläche
 
-- Das Anzeigeformat der Robot-Pick-Offsets auf den Rezeptseiten wurde korrigiert, sodass nun der Punkt anstelle des Kommas als Dezimaltrennzeichen verwendet wird.
+- Das Anzeigeformat der Robot-Pick-Offsets auf den Rezeptseiten wurde korrigiert; als Dezimaltrennzeichen wird nun der Punkt anstelle des Kommas erzwungen.
 
-## **Gelöste Probleme**
+## **Behobene Probleme**
 
 ### Backup-Verwaltung
 
-- Ein Fehler bei der Erstellung des Backups wurde behoben, der auftrat, wenn der Pfad auf dem PC Leerzeichen enthielt.
+- Ein Fehler bei der Backup-Erstellung wurde behoben, der auftrat, wenn der Pfad auf dem PC Leerzeichen enthielt.
 
 ### Sequenzen
 
-- Ein Darstellungsfehler wurde behoben, durch den Befehle in der Liste der Sequenzen scheinbar doppelt angezeigt werden konnten.
+- Ein Anzeigeproblem wurde behoben, durch das in der Sequenzliste scheinbar doppelte Befehle angezeigt werden konnten.

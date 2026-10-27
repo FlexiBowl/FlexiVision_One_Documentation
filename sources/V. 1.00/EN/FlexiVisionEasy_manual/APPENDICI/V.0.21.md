@@ -1,23 +1,19 @@
 # V. 0.21
 
-```{note}
-This page refers to version **1.00** of this manual, which is compatible with **FlexiVision Studio v0.21** and **v0.22**.
-```
-
 ## **New Features**
 
-### Histogram Test
+### Test Histogram
 
-- Added the display of measurements in millimeters on the Histogram Test page to make it easier to read the values while configuring models.
+- Added the display of measurements in millimeters in the Test Histogram page, to make values easier to read when configuring models.
 
 ## **Improvements**
 
 ### Robot Integration
 
-- Added a dedicated delimiter for strings sent to the robot to support more reliable communication.
+- Added a dedicated separator for the strings sent to the robot, to support more reliable communication.
 
-## **Resolved Issues**
+## **Fixed Issues**
 
 ### License Management
 
-- Fixed an issue with the license check performed when the application starts.
+- Fixed an issue in the license check performed at application startup.

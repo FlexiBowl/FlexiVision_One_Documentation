@@ -53,6 +53,7 @@
     <script src="../../../../_shared/static/custom.js?v=2acd42a9"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Notes de version – Manuel" href="Release_Notes_Manuale.html" />
     <link rel="prev" title="V. 0.21" href="V.0.21.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -274,10 +275,14 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">APPENDICI</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="Release_Notes.html">Notes de mise à jour</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="V.0.20.html">V. 0.20</a></li>
-<li class="toctree-l2"><a class="reference internal" href="V.0.21.html">V. 0.21</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">V. 0.22</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Release_Notes.html">Notes de version</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="Release_Notes_Software.html">Notes de version – Logiciel</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="V.0.20.html">V. 0.20</a></li>
+<li class="toctree-l3"><a class="reference internal" href="V.0.21.html">V. 0.21</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">V. 0.22</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="Release_Notes_Manuale.html">Notes de version – Manuel</a></li>
 </ul>
 </details></li>
 </ul>
@@ -434,11 +439,11 @@
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ameliorations"><strong>Améliorations</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assistant-de-creation-de-recette">Assistant de création de recette</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interface-de-recette">Interface de recette</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interface-recette">Interface recette</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problemes-resolus"><strong>Problèmes résolus</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gestion-des-sauvegardes">Gestion des sauvegardes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gestion-des-sauvegardes-backup">Gestion des sauvegardes (BackUp)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequences">Séquences</a></li>
 </ul>
 </li>
@@ -455,50 +460,46 @@
                   
   <section id="v-0-22">
 <h1>V. 0.22<a class="headerlink" href="#v-0-22" title="Link to this heading">#</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Cette page concerne la version <strong>1.01</strong> du présent manuel, compatible avec <strong>FlexiVision Studio v0.21</strong> et <strong>v0.22</strong>.</p>
-</div>
 <section id="nouvelles-fonctionnalites">
 <h2><strong>Nouvelles fonctionnalités</strong><a class="headerlink" href="#nouvelles-fonctionnalites" title="Link to this heading">#</a></h2>
 <section id="applications-mix">
 <h3>Applications Mix<a class="headerlink" href="#applications-mix" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Ajout de la gestion combinée des commandes <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code> pour Robot 1, Robot 2 et Robot 3 : il est désormais possible d’appeler plusieurs modèles simultanément au sein d’une même chaîne de caractères (par exemple <code class="docutils literal notranslate"><span class="pre">mix_Locator_12</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_248</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_12345678</span></code>).</p></li>
-<li><p>Ajout d’un contrôle de validité sur les commandes <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code> : si la chaîne reçue ne contient pas de modèles valides (de 1 à 8), le système renvoie une erreur spécifique.</p></li>
+<li><p>Ajout de la gestion combinée des commandes <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code> pour le Robot 1, le Robot 2 et le Robot 3 : il est désormais possible d’appeler plusieurs modèles simultanément au sein d’une seule chaîne (par ex. <code class="docutils literal notranslate"><span class="pre">mix_Locator_12</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_248</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_12345678</span></code>).</p></li>
+<li><p>Ajout d’un contrôle de validité sur les commandes <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code> : si la chaîne reçue ne contient aucun modèle valide (de 1 à 8), le système renvoie une erreur dédiée.</p></li>
 <li><p>Ajout d’une protection sur les commandes <code class="docutils literal notranslate"><span class="pre">start_Locator</span></code> et <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code> : si un Locator est déjà en cours d’exécution, la commande est ignorée, ce qui évite les redémarrages indésirables de la tâche et les modifications imprévues des modèles actifs.</p></li>
 </ul>
 </section>
 <section id="clearances-histogrammes">
 <h3>Clearances (Histogrammes)<a class="headerlink" href="#clearances-histogrammes" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Ajout de la prise en charge de trois types de régions pour les outils Histogramme — <strong>Rectangle</strong>, <strong>Secteur annulaire</strong> et <strong>Cercle</strong> — sélectionnables via un menu dédié sur la page de recette, pour tous les modèles et histogrammes disponibles.</p></li>
-<li><p>Mise à jour de la page « Test d’histogramme » pour afficher correctement les nouveaux types de zones, représentées en vert ou en rouge selon le résultat du contrôle.</p></li>
-<li><p>Ajout d’un affichage graphique de l’indice d’histogramme et des mesures principales de la zone sélectionnée.</p></li>
+<li><p>Ajout de la prise en charge de trois types de région pour les outils Histogram — <strong>Rectangle</strong>, <strong>Secteur annulaire</strong> et <strong>Cercle</strong> — sélectionnables via un menu dédié dans la page recette, pour tous les modèles et histogrammes disponibles.</p></li>
+<li><p>Mise à jour de la page Test Histogram pour afficher correctement les nouveaux types de région, dessinés en vert ou en rouge selon le résultat du contrôle.</p></li>
+<li><p>Ajout de l’affichage graphique de l’indice Histogram et des principales mesures de la région sélectionnée.</p></li>
 </ul>
 </section>
 <section id="flexibowl">
 <h3>FlexiBowl®<a class="headerlink" href="#flexibowl" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Ajout de la fonction <strong>Belt Check</strong> pour contrôler l’état d’usure et de propreté de la bande :</p>
+<li><p>Ajout de la fonction <strong>Belt Check</strong> pour le contrôle de l’état d’usure et de propreté de la bande :</p>
 <ul>
-<li><p>acquisition d’une image de référence de la bande propre à l’aide du bouton <strong>Save Clean Reference</strong> ;</p></li>
-<li><p>comparaison automatique, à l’aide d’un histogramme, entre l’image de référence et l’image actuelle de la bande ;</p></li>
-<li><p>classification automatique de la bande en <strong>Light</strong>, <strong>Dark</strong> ou <strong>Medium</strong> en fonction de la luminosité de l’image de référence ;</p></li>
-<li><p>affichage de l’état de la bande avec une valeur en pourcentage, une couleur et une indication textuelle (<strong>Good</strong>, <strong>Warning</strong>, <strong>Poor</strong>) ;</p></li>
-<li><p>affichage de la date du dernier contrôle Belt Check pour chaque FlexiBowl®.</p></li>
+<li><p>acquisition d’une image de référence de la bande propre via le bouton <strong>Save Clean Reference</strong> ;</p></li>
+<li><p>comparaison automatique, via Histogram, entre l’image de référence et l’image actuelle de la bande ;</p></li>
+<li><p>classification automatique de la bande en <strong>Light</strong>, <strong>Dark</strong> ou <strong>Medium</strong> selon la luminosité de la référence ;</p></li>
+<li><p>affichage de l’état de la bande avec valeur en pourcentage, couleur et indication textuelle (<strong>Good</strong>, <strong>Warning</strong>, <strong>Poor</strong>) ;</p></li>
+<li><p>affichage de la date du dernier Belt Check pour chaque FlexiBowl®.</p></li>
 </ul>
 </li>
-<li><p>Ajout de l’assistant <strong>Hopper Step Setup</strong> pour calculer le nombre de séquences nécessaires pour atteindre la zone de la trémie, avec les fonctions <strong>Reset Steps</strong>, <strong>Test Sequence</strong> et <strong>Save Hopper Step</strong>, ainsi que l’indication correspondante de l’état d’étalonnage.</p></li>
-<li><p>Ajout de la possibilité de saisir manuellement les paramètres des FlexiBowl® à l’aide du clavier, en alternative au réglage via le curseur.</p></li>
-<li><p>Ajout d’un message d’avertissement non modal lorsque les paramètres d’un FlexiBowl® sont modifiés mais ne sont pas encore synchronisés avec l’appareil réel.</p></li>
-<li><p>Ajout de la fonction <strong>Réinitialisation automatique FlexiBowl</strong> : si une erreur est déjà présente au lancement d’une commande de mouvement, le système effectue automatiquement la réinitialisation avant de lancer la commande.</p></li>
+<li><p>Ajout de la procédure guidée <strong>Hopper Step Setup</strong> pour calculer le nombre de séquences nécessaires pour atteindre la zone de la trémie, avec les fonctions <strong>Reset Steps</strong>, <strong>Test Sequence</strong> et <strong>Save Hopper Step</strong>, et l’indication correspondante de l’état d’étalonnage.</p></li>
+<li><p>Ajout de la possibilité de saisir manuellement au clavier les paramètres des FlexiBowl®, comme alternative au réglage par curseur.</p></li>
+<li><p>Ajout d’un message d’avertissement non modal lorsque les paramètres d’un FlexiBowl® sont modifiés mais pas encore synchronisés avec le dispositif réel.</p></li>
+<li><p>Ajout de l’<strong>Auto Reset FlexiBowl</strong> : si une erreur est déjà présente au démarrage d’une commande de mouvement, le système effectue automatiquement la réinitialisation avant de lancer la commande.</p></li>
 </ul>
 </section>
 <section id="securite-et-acces">
 <h3>Sécurité et accès<a class="headerlink" href="#securite-et-acces" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Ajout d’un contrôle du niveau d’accès sur les boutons communs de l’interface : les fonctions protégées vérifient le niveau d’utilisateur actuel avant leur exécution et affichent un message en cas d’autorisations insuffisantes.</p></li>
+<li><p>Ajout du contrôle du niveau d’accès sur les boutons communs de l’interface : les fonctions protégées vérifient le niveau utilisateur actuel avant l’exécution et affichent un message en cas de droits insuffisants.</p></li>
 </ul>
 </section>
 </section>
@@ -507,28 +508,28 @@
 <section id="assistant-de-creation-de-recette">
 <h3>Assistant de création de recette<a class="headerlink" href="#assistant-de-creation-de-recette" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Ajout d’une vérification du décalage de prélèvement (Picking Offset) au bouton <strong>NEXT</strong> : si le décalage est activé, il doit être calculé et valide avant de pouvoir poursuivre dans l’assistant.</p></li>
+<li><p>Ajout d’un contrôle sur le Picking Offset au bouton <strong>NEXT</strong> : si l’offset est activé, il doit être calculé et valide avant de pouvoir poursuivre dans l’assistant.</p></li>
 </ul>
 </section>
-<section id="interface-de-recette">
-<h3>Interface de recette<a class="headerlink" href="#interface-de-recette" title="Link to this heading">#</a></h3>
+<section id="interface-recette">
+<h3>Interface recette<a class="headerlink" href="#interface-recette" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Correction du format d’affichage des décalages « Robot Pick » dans les pages de recette, en imposant le point comme séparateur décimal à la place de la virgule.</p></li>
+<li><p>Correction du format d’affichage des offsets Robot Pick dans les pages recette, en forçant le point comme séparateur décimal à la place de la virgule.</p></li>
 </ul>
 </section>
 </section>
 <section id="problemes-resolus">
 <h2><strong>Problèmes résolus</strong><a class="headerlink" href="#problemes-resolus" title="Link to this heading">#</a></h2>
-<section id="gestion-des-sauvegardes">
-<h3>Gestion des sauvegardes<a class="headerlink" href="#gestion-des-sauvegardes" title="Link to this heading">#</a></h3>
+<section id="gestion-des-sauvegardes-backup">
+<h3>Gestion des sauvegardes (BackUp)<a class="headerlink" href="#gestion-des-sauvegardes-backup" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Correction d’une erreur survenant lors de la création d’une sauvegarde lorsque le chemin d’accès sur le PC contenait des espaces.</p></li>
+<li><p>Correction d’une erreur lors de la création de la sauvegarde qui se produisait lorsque le chemin sur le PC contenait des espaces.</p></li>
 </ul>
 </section>
 <section id="sequences">
 <h3>Séquences<a class="headerlink" href="#sequences" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Correction d’un problème d’affichage qui pouvait faire apparaître des commandes apparemment en double dans la liste des séquences.</p></li>
+<li><p>Résolution d’un problème d’affichage qui pouvait montrer des commandes apparemment en double dans la liste des séquences.</p></li>
 </ul>
 <br>
 <!-- Versions and languages set-up -->
@@ -1200,6 +1201,15 @@
         <p class="prev-next-title">V. 0.21</p>
       </div>
     </a>
+    <a class="right-next"
+       href="Release_Notes_Manuale.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Notes de version – Manuel</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -1227,11 +1237,11 @@
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ameliorations"><strong>Améliorations</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assistant-de-creation-de-recette">Assistant de création de recette</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interface-de-recette">Interface de recette</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interface-recette">Interface recette</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problemes-resolus"><strong>Problèmes résolus</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gestion-des-sauvegardes">Gestion des sauvegardes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gestion-des-sauvegardes-backup">Gestion des sauvegardes (BackUp)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequences">Séquences</a></li>
 </ul>
 </li>

@@ -1,22 +1,18 @@
 # V. 0.20
 
-```{note}
-Questa pagina si riferisce alla versione **1.00** del presente manuale, compatibile con **FlexiVision Studio v0.20**.
-```
-
 ## **Améliorations**
 
-### Gestione Licenze
+### Gestion des licences
 
-- Aggiunto un controllo della licenza attiva lato robot, per garantire che le funzioni di prelievo siano abilitate solo in presenza di una licenza valida.
+- Ajout d'un contrôle de la licence active côté robot, afin de garantir que les fonctions de prélèvement ne sont activées qu'en présence d'une licence valide.
 
 ## **Problèmes résolus**
 
 ### Recettes
 
-- Correction d'un problème qui empêchait l'enregistrement correct du paramètre **Enable Picking Robot** sur la page Application.
+- Correction d'un problème qui empêchait l'enregistrement correct du paramètre **Enable Picking Robot** dans la page Application.
 - Correction d'un problème qui empêchait l'enregistrement correct du nom du modèle dans la recette.
 
 ### PlugIn
 
-- Corretto un problema riscontrato a livello di plugin in caso di cancellazione del nome del modello.
+- Correction d'un problème rencontré au niveau du plugin lors de la suppression du nom du modèle.

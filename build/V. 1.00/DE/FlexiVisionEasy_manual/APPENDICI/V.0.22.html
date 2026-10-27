@@ -53,6 +53,7 @@
     <script src="../../../../_shared/static/custom.js?v=2acd42a9"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Versionshinweise – Handbuch" href="Release_Notes_Manuale.html" />
     <link rel="prev" title="V. 0.21" href="V.0.21.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -270,9 +271,13 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">APPENDICI</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Release_Notes.html">Versionshinweise</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="V.0.20.html">V. 0.20</a></li>
-<li class="toctree-l2"><a class="reference internal" href="V.0.21.html">V. 0.21</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">V. 0.22</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="Release_Notes_Software.html">Versionshinweise – Software</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="V.0.20.html">V. 0.20</a></li>
+<li class="toctree-l3"><a class="reference internal" href="V.0.21.html">V. 0.21</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">V. 0.22</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="Release_Notes_Manuale.html">Versionshinweise – Handbuch</a></li>
 </ul>
 </details></li>
 </ul>
@@ -424,15 +429,15 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mix-anwendungen">Mix-Anwendungen</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clearances-histogramme">Clearances (Histogramme)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flexibowl">FlexiBowl®</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sicherheit-und-zugriffsrechte">Sicherheit und Zugriffsrechte</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sicherheit-und-zugriffe">Sicherheit und Zugriffe</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verbesserungen"><strong>Verbesserungen</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rezept-assistent">Rezept-Assistent</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rezept-oberflache">Rezept-Oberfläche</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assistent-zur-rezepterstellung">Assistent zur Rezepterstellung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rezeptoberflache">Rezeptoberfläche</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geloste-probleme"><strong>Gelöste Probleme</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#behobene-probleme"><strong>Behobene Probleme</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#backup-verwaltung">Backup-Verwaltung</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequenzen">Sequenzen</a></li>
 </ul>
@@ -450,80 +455,76 @@
                   
   <section id="v-0-22">
 <h1>V. 0.22<a class="headerlink" href="#v-0-22" title="Link to this heading">#</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Diese Seite bezieht sich auf die Version <strong>1.01</strong> dieses Handbuchs, die mit <strong>FlexiVision Studio v0.21</strong> und <strong>v0.22</strong> kompatibel ist.</p>
-</div>
 <section id="neue-funktionen">
 <h2><strong>Neue Funktionen</strong><a class="headerlink" href="#neue-funktionen" title="Link to this heading">#</a></h2>
 <section id="mix-anwendungen">
 <h3>Mix-Anwendungen<a class="headerlink" href="#mix-anwendungen" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Kombinierte Verwaltung der Befehle <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code> für Roboter 1, Roboter 2 und Roboter 3 hinzugefügt: Es ist nun möglich, mehrere Modelle gleichzeitig innerhalb einer einzigen Zeichenfolge aufzurufen (z. B. <code class="docutils literal notranslate"><span class="pre">mix_Locator_12</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_248</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_12345678</span></code>).</p></li>
-<li><p>Eine Gültigkeitsprüfung für die Befehle <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code> wurde hinzugefügt: Wenn die übergebene Zeichenfolge keine gültigen Modelle (von 1 bis 8) enthält, gibt das System einen entsprechenden Fehler zurück.</p></li>
-<li><p>Es wurde eine Schutzfunktion für die Befehle <code class="docutils literal notranslate"><span class="pre">start_Locator</span></code> und <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code> hinzugefügt: Wenn ein Locator bereits ausgeführt wird, wird der Befehl ignoriert, wodurch ungewollte Neustarts der Aufgabe und unerwartete Änderungen an den aktiven Vorlagen vermieden werden.</p></li>
+<li><p>Die kombinierte Verwaltung der <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code>-Befehle für Roboter 1, Roboter 2 und Roboter 3 wurde hinzugefügt: Es können nun mehrere Modelle gleichzeitig innerhalb einer einzigen Zeichenfolge aufgerufen werden (z. B. <code class="docutils literal notranslate"><span class="pre">mix_Locator_12</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_248</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_12345678</span></code>).</p></li>
+<li><p>Eine Gültigkeitsprüfung für <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code>-Befehle wurde hinzugefügt: Enthält die empfangene Zeichenfolge keine gültigen Modelle (von 1 bis 8), gibt das System einen eigenen Fehler zurück.</p></li>
+<li><p>Für die Befehle <code class="docutils literal notranslate"><span class="pre">start_Locator</span></code> und <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code> wurde ein Schutz hinzugefügt: Läuft bereits ein Locator, wird der Befehl ignoriert. Dadurch werden unerwünschte Neustarts des Tasks und unerwartete Änderungen an den aktiven Modellen vermieden.</p></li>
 </ul>
 </section>
 <section id="clearances-histogramme">
 <h3>Clearances (Histogramme)<a class="headerlink" href="#clearances-histogramme" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Es wurde die Unterstützung für drei Arten von Bereichen für die Histogramm-Werkzeuge hinzugefügt – <strong>Rechteck</strong>, <strong>Ringsektor</strong> und <strong>Kreis</strong> –, die über ein spezielles Menü auf der Rezeptseite für alle verfügbaren Modelle und Histogramme ausgewählt werden können.</p></li>
-<li><p>Die Seite „Histogramm-Test“ wurde aktualisiert, um die neuen Bereichstypen korrekt anzuzeigen, die je nach Prüfergebnis in Grün oder Rot dargestellt werden.</p></li>
-<li><p>Es wurde eine grafische Darstellung des Histogramm-Index und der wichtigsten Messwerte des ausgewählten Bereichs hinzugefügt.</p></li>
+<li><p>Es wurde die Unterstützung von drei Regionstypen für die Histogram-Tools hinzugefügt — <strong>Rechteck</strong>, <strong>Kreisringsegment</strong> und <strong>Kreis</strong> —, die über ein eigenes Menü auf der Rezeptseite für alle verfügbaren Modelle und Histogramme ausgewählt werden können.</p></li>
+<li><p>Die Seite Test Histogram wurde aktualisiert, um die neuen Regionstypen korrekt darzustellen; sie werden je nach Ergebnis der Prüfung grün oder rot gezeichnet.</p></li>
+<li><p>Die grafische Anzeige des Histogram-Index und der wichtigsten Messwerte der ausgewählten Region wurde hinzugefügt.</p></li>
 </ul>
 </section>
 <section id="flexibowl">
 <h3>FlexiBowl®<a class="headerlink" href="#flexibowl" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Die Funktion <strong>Belt Check</strong> zur Überprüfung des Verschleißzustands und der Sauberkeit des Bandes wurde hinzugefügt:</p>
+<li><p>Die Funktion <strong>Belt Check</strong> zur Kontrolle von Verschleiß- und Sauberkeitszustand des Bandes wurde hinzugefügt:</p>
 <ul>
 <li><p>Aufnahme eines Referenzbildes des sauberen Bandes über die Schaltfläche <strong>Save Clean Reference</strong>;</p></li>
-<li><p>automatischer Vergleich des Referenzbildes mit dem aktuellen Bild des Bandes mittels Histogramm;</p></li>
-<li><p>Automatische Einstufung des Bandes in <strong>Light</strong>, <strong>Dark</strong> oder <strong>Medium</strong> je nach Helligkeit des Referenzbildes;</p></li>
+<li><p>automatischer Vergleich zwischen Referenzbild und aktuellem Bild des Bandes mittels Histogram;</p></li>
+<li><p>automatische Klassifizierung des Bandes in <strong>Light</strong>, <strong>Dark</strong> oder <strong>Medium</strong> anhand der Helligkeit der Referenz;</p></li>
 <li><p>Anzeige des Bandzustands mit Prozentwert, Farbe und Textangabe (<strong>Good</strong>, <strong>Warning</strong>, <strong>Poor</strong>);</p></li>
-<li><p>Anzeige des Datums der letzten Belt-Check-Prüfung für jeden FlexiBowl®.</p></li>
+<li><p>Anzeige des Datums des letzten Belt Check für jeden FlexiBowl®.</p></li>
 </ul>
 </li>
-<li><p>Der Assistent <strong>Hopper Step Setup</strong> wurde hinzugefügt, um die Anzahl der erforderlichen Sequenzen bis zum Erreichen des Trichterbereichs zu berechnen, mit den Funktionen <strong>Reset Steps</strong>, <strong>Test Sequence</strong> und <strong>Save Hopper Step</strong> sowie einer entsprechenden Anzeige des Kalibrierungsstatus.</p></li>
-<li><p>Es wurde die Möglichkeit hinzugefügt, die Parameter der FlexiBowl®-Geräte manuell über die Tastatur einzugeben, als Alternative zur Einstellung über Schieberegler.</p></li>
-<li><p>Es wurde eine nicht-modale Warnmeldung hinzugefügt, wenn die Parameter eines FlexiBowl®-Geräts geändert werden, aber noch nicht mit dem tatsächlichen Gerät synchronisiert sind.</p></li>
-<li><p><strong>Auto Reset FlexiBowl</strong> hinzugefügt: Liegt beim Start eines Bewegungsbefehls bereits ein Fehler vor, führt das System automatisch einen Reset durch, bevor der Befehl gestartet wird.</p></li>
+<li><p>Der geführte Ablauf <strong>Hopper Step Setup</strong> wurde hinzugefügt, um die Anzahl der Sequenzen zu berechnen, die zum Erreichen des Trichterbereichs erforderlich sind, mit den Funktionen <strong>Reset Steps</strong>, <strong>Test Sequence</strong> und <strong>Save Hopper Step</strong> sowie der zugehörigen Anzeige des Kalibrierungsstatus.</p></li>
+<li><p>Es wurde die Möglichkeit hinzugefügt, die Parameter der FlexiBowl® manuell über die Tastatur einzugeben, als Alternative zur Einstellung per Slider.</p></li>
+<li><p>Eine nicht modale Warnmeldung wurde hinzugefügt, wenn die Parameter eines FlexiBowl® geändert, aber noch nicht mit dem realen Gerät synchronisiert wurden.</p></li>
+<li><p><strong>Auto Reset FlexiBowl</strong> wurde hinzugefügt: Liegt beim Start eines Bewegungsbefehls bereits ein Fehler vor, führt das System automatisch den Reset durch, bevor der Befehl gestartet wird.</p></li>
 </ul>
 </section>
-<section id="sicherheit-und-zugriffsrechte">
-<h3>Sicherheit und Zugriffsrechte<a class="headerlink" href="#sicherheit-und-zugriffsrechte" title="Link to this heading">#</a></h3>
+<section id="sicherheit-und-zugriffe">
+<h3>Sicherheit und Zugriffe<a class="headerlink" href="#sicherheit-und-zugriffe" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Es wurde eine Überprüfung der Zugriffsebene für die allgemeinen Schaltflächen der Benutzeroberfläche hinzugefügt: Geschützte Funktionen überprüfen vor der Ausführung die aktuelle Benutzerebene und zeigen bei unzureichenden Berechtigungen eine Meldung an.</p></li>
+<li><p>Für die allgemeinen Schaltflächen der Oberfläche wurde die Prüfung der Zugriffsebene hinzugefügt: Geschützte Funktionen prüfen vor der Ausführung die aktuelle Benutzerebene und zeigen bei unzureichenden Berechtigungen eine Meldung an.</p></li>
 </ul>
 </section>
 </section>
 <section id="verbesserungen">
 <h2><strong>Verbesserungen</strong><a class="headerlink" href="#verbesserungen" title="Link to this heading">#</a></h2>
-<section id="rezept-assistent">
-<h3>Rezept-Assistent<a class="headerlink" href="#rezept-assistent" title="Link to this heading">#</a></h3>
+<section id="assistent-zur-rezepterstellung">
+<h3>Assistent zur Rezepterstellung<a class="headerlink" href="#assistent-zur-rezepterstellung" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Der Schaltfläche <strong>NEXT</strong> wurde eine Überprüfung des Picking-Offsets hinzugefügt: Wenn der Offset aktiviert ist, muss er berechnet und gültig sein, bevor im Assistenten fortgefahren werden kann.</p></li>
+<li><p>Der Schaltfläche <strong>NEXT</strong> wurde eine Prüfung des Picking Offset hinzugefügt: Ist der Offset aktiviert, muss er berechnet und gültig sein, bevor im Assistenten fortgefahren werden kann.</p></li>
 </ul>
 </section>
-<section id="rezept-oberflache">
-<h3>Rezept-Oberfläche<a class="headerlink" href="#rezept-oberflache" title="Link to this heading">#</a></h3>
+<section id="rezeptoberflache">
+<h3>Rezeptoberfläche<a class="headerlink" href="#rezeptoberflache" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Das Anzeigeformat der Robot-Pick-Offsets auf den Rezeptseiten wurde korrigiert, sodass nun der Punkt anstelle des Kommas als Dezimaltrennzeichen verwendet wird.</p></li>
+<li><p>Das Anzeigeformat der Robot-Pick-Offsets auf den Rezeptseiten wurde korrigiert; als Dezimaltrennzeichen wird nun der Punkt anstelle des Kommas erzwungen.</p></li>
 </ul>
 </section>
 </section>
-<section id="geloste-probleme">
-<h2><strong>Gelöste Probleme</strong><a class="headerlink" href="#geloste-probleme" title="Link to this heading">#</a></h2>
+<section id="behobene-probleme">
+<h2><strong>Behobene Probleme</strong><a class="headerlink" href="#behobene-probleme" title="Link to this heading">#</a></h2>
 <section id="backup-verwaltung">
 <h3>Backup-Verwaltung<a class="headerlink" href="#backup-verwaltung" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Ein Fehler bei der Erstellung des Backups wurde behoben, der auftrat, wenn der Pfad auf dem PC Leerzeichen enthielt.</p></li>
+<li><p>Ein Fehler bei der Backup-Erstellung wurde behoben, der auftrat, wenn der Pfad auf dem PC Leerzeichen enthielt.</p></li>
 </ul>
 </section>
 <section id="sequenzen">
 <h3>Sequenzen<a class="headerlink" href="#sequenzen" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Ein Darstellungsfehler wurde behoben, durch den Befehle in der Liste der Sequenzen scheinbar doppelt angezeigt werden konnten.</p></li>
+<li><p>Ein Anzeigeproblem wurde behoben, durch das in der Sequenzliste scheinbar doppelte Befehle angezeigt werden konnten.</p></li>
 </ul>
 <br>
 <!-- Versions and languages set-up -->
@@ -1195,6 +1196,15 @@
         <p class="prev-next-title">V. 0.21</p>
       </div>
     </a>
+    <a class="right-next"
+       href="Release_Notes_Manuale.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Versionshinweise – Handbuch</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -1217,15 +1227,15 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mix-anwendungen">Mix-Anwendungen</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clearances-histogramme">Clearances (Histogramme)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flexibowl">FlexiBowl®</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sicherheit-und-zugriffsrechte">Sicherheit und Zugriffsrechte</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sicherheit-und-zugriffe">Sicherheit und Zugriffe</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verbesserungen"><strong>Verbesserungen</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rezept-assistent">Rezept-Assistent</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rezept-oberflache">Rezept-Oberfläche</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assistent-zur-rezepterstellung">Assistent zur Rezepterstellung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rezeptoberflache">Rezeptoberfläche</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geloste-probleme"><strong>Gelöste Probleme</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#behobene-probleme"><strong>Behobene Probleme</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#backup-verwaltung">Backup-Verwaltung</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequenzen">Sequenzen</a></li>
 </ul>

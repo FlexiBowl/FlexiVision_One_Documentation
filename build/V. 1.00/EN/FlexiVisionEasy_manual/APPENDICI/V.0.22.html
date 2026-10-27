@@ -53,6 +53,7 @@
     <script src="../../../../_shared/static/custom.js?v=2acd42a9"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Release Notes – Manual" href="Release_Notes_Manuale.html" />
     <link rel="prev" title="V. 0.21" href="V.0.21.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -274,9 +275,13 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">APPENDICI</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Release_Notes.html">Release Notes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="V.0.20.html">V. 0.20</a></li>
-<li class="toctree-l2"><a class="reference internal" href="V.0.21.html">V. 0.21</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">V. 0.22</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="Release_Notes_Software.html">Release Notes – Software</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="V.0.20.html">V. 0.20</a></li>
+<li class="toctree-l3"><a class="reference internal" href="V.0.21.html">V. 0.21</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">V. 0.22</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="Release_Notes_Manuale.html">Release Notes – Manual</a></li>
 </ul>
 </details></li>
 </ul>
@@ -436,8 +441,8 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recipe-interface">Recipe Interface</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resolved-issues"><strong>Resolved Issues</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#backup-management">Backup Management</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed-issues"><strong>Fixed Issues</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#backup-management">BackUp Management</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequences">Sequences</a></li>
 </ul>
 </li>
@@ -454,50 +459,46 @@
                   
   <section id="v-0-22">
 <h1>V. 0.22<a class="headerlink" href="#v-0-22" title="Link to this heading">#</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This page refers to version <strong>1.01</strong> of this manual, which is compatible with <strong>FlexiVision Studio v0.21</strong> and <strong>v0.22</strong>.</p>
-</div>
 <section id="new-features">
 <h2><strong>New Features</strong><a class="headerlink" href="#new-features" title="Link to this heading">#</a></h2>
 <section id="mix-applications">
 <h3>Mix Applications<a class="headerlink" href="#mix-applications" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Added combined handling of <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code> commands for Robot 1, Robot 2, and Robot 3: it is now possible to call multiple models simultaneously within a single string (e.g., <code class="docutils literal notranslate"><span class="pre">mix_Locator_12</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_248</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_12345678</span></code>).</p></li>
-<li><p>Added a validity check for <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code> commands: if the received string does not contain valid models (1 through 8), the system returns a specific error.</p></li>
-<li><p>Added protection for the <code class="docutils literal notranslate"><span class="pre">start_Locator</span></code> and <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code> commands: if a Locator is already running, the command is ignored, preventing unwanted task restarts and unexpected changes to active models.</p></li>
+<li><p>Added combined management of the <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code> commands for Robot 1, Robot 2 and Robot 3: it is now possible to call multiple models at the same time within a single string (e.g. <code class="docutils literal notranslate"><span class="pre">mix_Locator_12</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_248</span></code>, <code class="docutils literal notranslate"><span class="pre">mix_Locator_12345678</span></code>).</p></li>
+<li><p>Added a validity check on <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code> commands: if the received string does not contain valid models (from 1 to 8), the system returns a dedicated error.</p></li>
+<li><p>Added a protection on the <code class="docutils literal notranslate"><span class="pre">start_Locator</span></code> and <code class="docutils literal notranslate"><span class="pre">mix_Locator</span></code> commands: if a Locator is already running, the command is ignored, avoiding unwanted task restarts and unexpected changes to the active models.</p></li>
 </ul>
 </section>
 <section id="clearances-histograms">
 <h3>Clearances (Histograms)<a class="headerlink" href="#clearances-histograms" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Added support for three region types for the Histogram tools—<strong>Rectangle</strong>, <strong>Annular Sector</strong>, and <strong>Circle</strong>—selectable via a dedicated menu on the recipe page, for all available models and histograms.</p></li>
-<li><p>Updated the Histogram Test page to correctly display the new region types, shown in green or red depending on the test result.</p></li>
-<li><p>Added a graphical display of the Histogram index and the key metrics for the selected region.</p></li>
+<li><p>Added support for three region types for the Histogram tools — <strong>Rectangle</strong>, <strong>Annular Sector</strong> and <strong>Circle</strong> — selectable through a dedicated menu in the recipe page, for all available models and histograms.</p></li>
+<li><p>Updated the Test Histogram page to correctly display the new region types, drawn in green or red depending on the outcome of the check.</p></li>
+<li><p>Added the graphical display of the Histogram index and of the main measurements of the selected region.</p></li>
 </ul>
 </section>
 <section id="flexibowl">
 <h3>FlexiBowl®<a class="headerlink" href="#flexibowl" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Added the <strong>Belt Check</strong> function to check the belt’s wear and cleanliness:</p>
+<li><p>Added the <strong>Belt Check</strong> function to check the wear and cleanliness status of the belt:</p>
 <ul>
-<li><p>capture a reference image of the clean belt using the <strong>Save Clean Reference</strong> button;</p></li>
-<li><p>automatic comparison, using a histogram, between the reference image and the current image of the belt;</p></li>
-<li><p>Automatic classification of the belt as <strong>Light</strong>, <strong>Dark</strong>, or <strong>Medium</strong> based on the brightness of the reference image;</p></li>
-<li><p>Display of the belt’s condition with a percentage value, color, and text label (<strong>Good</strong>, <strong>Warning</strong>, <strong>Poor</strong>);</p></li>
-<li><p>Display of the date of the last Belt Check for each FlexiBowl®.</p></li>
+<li><p>acquisition of a reference image of the clean belt through the <strong>Save Clean Reference</strong> button;</p></li>
+<li><p>automatic comparison, through Histogram, between the reference image and the current image of the belt;</p></li>
+<li><p>automatic classification of the belt as <strong>Light</strong>, <strong>Dark</strong> or <strong>Medium</strong> based on the brightness of the reference;</p></li>
+<li><p>display of the belt status with percentage value, color and text indication (<strong>Good</strong>, <strong>Warning</strong>, <strong>Poor</strong>);</p></li>
+<li><p>display of the date of the last Belt Check for each FlexiBowl®.</p></li>
 </ul>
 </li>
-<li><p>Added the <strong>Hopper Step Setup</strong> wizard to calculate the number of sequences needed to reach the hopper zone, with the <strong>Reset Steps</strong>, <strong>Test Sequence</strong>, and <strong>Save Hopper Step</strong> functions, and a corresponding calibration status indicator.</p></li>
-<li><p>Added the ability to manually enter FlexiBowl® parameters via the keyboard, as an alternative to adjusting them using sliders.</p></li>
-<li><p>Added a non-modal warning message when FlexiBowl® parameters are modified but have not yet been synchronized with the actual device.</p></li>
-<li><p><strong>Auto Reset FlexiBowl</strong> has been added: if an error is already present when a motion command is initiated, the system automatically performs a reset before executing the command.</p></li>
+<li><p>Added the <strong>Hopper Step Setup</strong> guided procedure to calculate the number of sequences required to reach the hopper area, with the <strong>Reset Steps</strong>, <strong>Test Sequence</strong> and <strong>Save Hopper Step</strong> functions, and the related calibration status indication.</p></li>
+<li><p>Added the possibility to enter FlexiBowl® parameters manually from the keyboard, as an alternative to adjustment via slider.</p></li>
+<li><p>Added a non-modal warning message when the parameters of a FlexiBowl® are modified but not yet synchronized with the real device.</p></li>
+<li><p>Added <strong>Auto Reset FlexiBowl</strong>: if an error is already present when a movement command is started, the system automatically performs the reset before starting the command.</p></li>
 </ul>
 </section>
 <section id="security-and-access">
 <h3>Security and Access<a class="headerlink" href="#security-and-access" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Added access level checks for common interface buttons: protected functions verify the current user level before execution and display a message if permissions are insufficient.</p></li>
+<li><p>Added the access level check on the common interface buttons: protected functions verify the current user level before execution, showing a message in case of insufficient permissions.</p></li>
 </ul>
 </section>
 </section>
@@ -506,28 +507,28 @@
 <section id="recipe-creation-wizard">
 <h3>Recipe Creation Wizard<a class="headerlink" href="#recipe-creation-wizard" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Added a check for the Picking Offset to the <strong>NEXT</strong> button: if the offset is enabled, it must be calculated and valid before you can proceed in the wizard.</p></li>
+<li><p>Added a check on the Picking Offset to the <strong>NEXT</strong> button: if the offset is enabled, it must be calculated and valid before proceeding in the wizard.</p></li>
 </ul>
 </section>
 <section id="recipe-interface">
 <h3>Recipe Interface<a class="headerlink" href="#recipe-interface" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Fixed the display format for Robot Pick offsets on the recipe pages, forcing the use of a period as the decimal separator instead of a comma.</p></li>
+<li><p>Corrected the display format of the Robot Pick offsets in the recipe pages, forcing the dot as decimal separator instead of the comma.</p></li>
 </ul>
 </section>
 </section>
-<section id="resolved-issues">
-<h2><strong>Resolved Issues</strong><a class="headerlink" href="#resolved-issues" title="Link to this heading">#</a></h2>
+<section id="fixed-issues">
+<h2><strong>Fixed Issues</strong><a class="headerlink" href="#fixed-issues" title="Link to this heading">#</a></h2>
 <section id="backup-management">
-<h3>Backup Management<a class="headerlink" href="#backup-management" title="Link to this heading">#</a></h3>
+<h3>BackUp Management<a class="headerlink" href="#backup-management" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Fixed an error that occurred during backup creation when the path on the PC contained spaces.</p></li>
+<li><p>Fixed an error in backup creation that occurred when the path on the PC contained spaces.</p></li>
 </ul>
 </section>
 <section id="sequences">
 <h3>Sequences<a class="headerlink" href="#sequences" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Fixed a display issue that could cause commands to appear duplicated in the list of sequences.</p></li>
+<li><p>Fixed a display issue that could show apparently duplicated commands in the sequence list.</p></li>
 </ul>
 <br>
 <!-- Versions and languages set-up -->
@@ -1199,6 +1200,15 @@
         <p class="prev-next-title">V. 0.21</p>
       </div>
     </a>
+    <a class="right-next"
+       href="Release_Notes_Manuale.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Release Notes – Manual</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -1229,8 +1239,8 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recipe-interface">Recipe Interface</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resolved-issues"><strong>Resolved Issues</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#backup-management">Backup Management</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed-issues"><strong>Fixed Issues</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#backup-management">BackUp Management</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequences">Sequences</a></li>
 </ul>
 </li>

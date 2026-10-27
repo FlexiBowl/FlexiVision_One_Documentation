@@ -1,9 +1,5 @@
 # V. 0.20
 
-```{note}
-Questa pagina si riferisce alla versione **1.00** del presente manuale, compatibile con **FlexiVision Studio v0.20**.
-```
-
 ## **Miglioramenti**
 
 ### Gestione Licenze

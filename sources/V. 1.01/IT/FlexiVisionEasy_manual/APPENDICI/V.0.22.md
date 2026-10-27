@@ -1,10 +1,5 @@
 # V. 0.22
 
-
-```{note}
-Questa pagina si riferisce alla versione **1.01** del presente manuale, compatibile con **FlexiVision Studio v0.21** e **v0.22**.
-```
-
 ## **Nuove Funzionalità**
 
 ### Applicazioni Mix

@@ -1,49 +1,21 @@
 # Versionshinweise
 
-Auf dieser Seite finden Sie Informationen zu den veröffentlichten Versionen der Software FlexiVision One. Wählen Sie eine Version aus, um weitere Informationen zu erhalten.
-
-## Aktuelle Version
+Dieser Bereich enthält die Versionshinweise zur Software **FlexiVision One** und zu diesem Handbuch. Wählen Sie den gewünschten Bereich aus.
 
 ```{raw} html
-<a href="V.0.22.html" style="display:block; background-color:#14213d; color:#ffffff; padding:1.5rem 1.75rem; border-radius:0.5rem; text-decoration:none; box-shadow:0 1px 4px rgba(0,0,0,0.25);">
-  <span style="display:inline-block; background:rgba(255,255,255,0.15); color:#ffffff; font-size:0.75rem; font-weight:600; letter-spacing:0.02em; padding:0.2rem 0.7rem; border-radius:999px; margin-bottom:0.75rem;">NEUESTE VERSION, KOMPATIBEL MIT VERSION 1.01 DIESES HANDBUCHS</span>
-  <h3 style="margin:0 0 0.4rem 0; color:#ffffff; font-size:1.6rem;">V. 0.22</h3>
-  <p style="margin:0; color:#ffffff; opacity:0.85;">Veröffentlicht am: 04/09/2026</p>
-</a>
-```
-
-```{tip}
-Installare sempre l'ultima versione disponibile del software FlexiVision One per poter beneficiare degli ultimi aggionramenti e novità.
-```
-
-```{important}
-Consultare sempre la versione del manuale compatibile con la verisone del software per accedere alle informazioni più aggiornate su funzionalità, sicurezza e procedure.
-```
-
-## Versioni Precedenti
-
-
-```{raw} html
-<a href="V.0.21.html" style="display:block; background-color:#e0f2fe; color:#334155; padding:1.5rem 1.75rem; border-radius:0.5rem; text-decoration:none; box-shadow:0 1px 4px rgba(0,0,0,0.1);">
-  <span style="display:inline-block; background:rgba(0,0,0,0.08); color:#334155; font-size:0.75rem; font-weight:600; letter-spacing:0.02em; padding:0.2rem 0.7rem; border-radius:999px; margin-bottom:0.75rem;"> VERSION, DIE MIT VERSION 1.01 DIESES HANDBUCHS KOMPATIBEL IST</span>
-  <h3 style="margin:0 0 0.4rem 0; color:#334155; font-size:1.6rem;">V. 0.21</h3>
-  <p style="margin:0; color:#334155; opacity:0.8;">Veröffentlicht am: 20/08/2026</p>
+<a href="Release_Notes_Software.html" style="display:block; background-color:#14213d; color:#ffffff; padding:1.5rem 1.75rem; border-radius:0.5rem; text-decoration:none; box-shadow:0 1px 4px rgba(0,0,0,0.25);">
+  <h3 style="margin:0 0 0.4rem 0; color:#ffffff; font-size:1.6rem;">Software FlexiVision One</h3>
+  <p style="margin:0; color:#ffffff; opacity:0.85;">Neue Funktionen, Verbesserungen und behobene Probleme jeder Softwareversion.</p>
 </a>
 <br>
-<a href="V.0.20.html" style="display:block; background-color:#e0f2fe; color:#334155; padding:1.5rem 1.75rem; border-radius:0.5rem; text-decoration:none; box-shadow:0 1px 4px rgba(0,0,0,0.1);">
-  <span style="display:inline-block; background:rgba(0,0,0,0.08); color:#334155; font-size:0.75rem; font-weight:600; letter-spacing:0.02em; padding:0.2rem 0.7rem; border-radius:999px; margin-bottom:0.75rem;"> VERSION, DIE MIT VERSION 1.01 DIESES HANDBUCHS KOMPATIBEL IST</span>
-  <h3 style="margin:0 0 0.4rem 0; color:#334155; font-size:1.6rem;">V. 0.20</h3>
-  <p style="margin:0; color:#334155; opacity:0.8;">Veröffentlicht am: 01/08/2026</p>
+<a href="Release_Notes_Manuale.html" style="display:block; background-color:#e0f2fe; color:#334155; padding:1.5rem 1.75rem; border-radius:0.5rem; text-decoration:none; box-shadow:0 1px 4px rgba(0,0,0,0.1);">
+  <h3 style="margin:0 0 0.4rem 0; color:#334155; font-size:1.6rem;">Handbuch</h3>
+  <p style="margin:0; color:#334155; opacity:0.8;">Revisionen des Handbuchs und Kompatibilität mit den Softwareversionen.</p>
 </a>
-```
-
-```{note}
-Die Informationen zu früheren Versionen stehen weiterhin zur Einsicht zur Verfügung, spiegeln jedoch möglicherweise nicht die Funktionen und Änderungen wider, die in den neuesten Versionen eingeführt wurden.
 ```
 
 :::{toctree}
-:hidden: 
-V.0.20.md
-V.0.21.md
-V.0.22.md
+:hidden:
+Release_Notes_Software.md
+Release_Notes_Manuale.md
 :::

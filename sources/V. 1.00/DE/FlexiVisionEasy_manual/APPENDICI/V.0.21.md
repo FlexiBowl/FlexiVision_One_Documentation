@@ -1,22 +1,18 @@
 # V. 0.21
 
-```{note}
-Diese Seite bezieht sich auf die Version **1.00** dieses Handbuchs, die mit **FlexiVision Studio v0.21** und **v0.22** kompatibel ist.
-```
-
 ## **Neue Funktionen**
 
-### Test-Histogramm
+### Test Histogram
 
-- Auf der Seite „Test-Histogramm“ wurde die Anzeige der Maße in Millimetern hinzugefügt, um das Ablesen der Werte bei der Konfiguration der Modelle zu erleichtern.
+- Auf der Seite Test Histogram wurde die Anzeige der Messwerte in Millimetern hinzugefügt, um das Ablesen der Werte bei der Konfiguration der Modelle zu erleichtern.
 
 ## **Verbesserungen**
 
-### Roboter-Integration
+### Roboterintegration
 
-- Es wurde ein spezielles Trennzeichen für die an den Roboter gesendeten Zeichenfolgen hinzugefügt, um eine zuverlässigere Kommunikation zu gewährleisten.
+- Für die an den Roboter gesendeten Zeichenfolgen wurde ein eigenes Trennzeichen hinzugefügt, um eine zuverlässigere Kommunikation zu unterstützen.
 
-## **Gelöste Probleme**
+## **Behobene Probleme**
 
 ### Lizenzverwaltung
 
