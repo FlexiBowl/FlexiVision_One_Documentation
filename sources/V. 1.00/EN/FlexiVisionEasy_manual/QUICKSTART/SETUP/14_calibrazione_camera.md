@@ -88,11 +88,26 @@ Correct positioning of the ARS calibration grid on the FlexiBowl®
 :::{attention} 
  The calibration grid must be positioned **at the same height as the object** used in the application.
  
-   For this reason, it is supplied with **spacers** to be inserted into the grid pegs before installing it on the FlexiBowl®.
+  
+   For this reason, it is supplied with **magnetic spacers** to be applied onto the magnets already present on the underside of the grid before installing it on the FlexiBowl®.
    The spacers **raise the grid** to the level of the part height, ensuring accurate calibration.
   ![Spacers](../../../../../_shared/media/images/distanziali_griglia.JPG)
   
   ```{figure} ../../../../../_shared/media/images/altezzacalibrazione.png
+    :width: 100%
+    :align: center
+  ```
+  On FlexiBowl sizes 500, 650 and 800, if the grid is raised by more than 35 mm, the extension must be fitted onto the centering pin and tightened with two 7 mm wrenches.
+  ```{figure} ../../../../../_shared/media/images/prolunga.JPG
+    :width: 100%
+    :align: center
+  ```
+:::
+
+:::{warning}
+Pay particular attention when fitting the magnetic spacers: bring them close slowly and guide them with your fingers, preventing them from snapping together abruptly, to avoid breakage or damage.   
+To separate them after fitting, slide one spacer sideways relative to the other, rather than pulling them directly apart along their axis. 
+  ```{figure} ../../../../../_shared/media/images/distanziali.JPG
     :width: 100%
     :align: center
   ```

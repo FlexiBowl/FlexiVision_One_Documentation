@@ -86,13 +86,26 @@ Das spezielle ARS-Kalibrierungsgitter muss auf dem FlexiBowl® gelegt werden:
 Korrekte Positionierung des ARS-Kalibrierungsgitters auf der FlexiBowl®
 ```
 :::{attention} 
- Das Kalibrierungsgitter muss auf **derselben Höhe wie das in der Anwendung verwendete Objekt** positioniert werden.
- 
-   Aus diesem Grund wird es mit **Abstandshaltern** geliefert, die vor der Installation auf dem FlexiBowl® in die Stifte des Gitters eingesetzt werden müssen.
-   Die Abstandshalter dienen dazu, das **Gitter** auf die Höhe des Teils **anzuheben** und so eine genaue Kalibrierung zu gewährleisten.
-  ![Abstandshalter](../../../../../_shared/media/images/distanziali_griglia.JPG)
+ Das Kalibrierungsgitter muss auf **derselben Höhe wie das in der Anwendung verwendete Objekt** positioniert werden.  
+  Aus diesem Grund wird sie mit **magnetischen Distanzstücken** geliefert, die vor der Installation auf dem FlexiBowl® auf die bereits an der Unterseite des Gitters vorhandenen Magnete aufgesetzt werden.
+   Die Distanzstücke **heben das Gitter an**, bis es die Höhe des Teils erreicht, und gewährleisten so eine genaue Kalibrierung.
+  ![Distanzstücke](../../../../../_shared/media/images/distanziali_griglia.JPG)
   
   ```{figure} ../../../../../_shared/media/images/altezzacalibrazione.png
+    :width: 100%
+    :align: center
+  ```
+  Bei den FlexiBowl-Größen 500, 650 und 800 muss die Verlängerung, wenn das Gitter um mehr als 35 mm angehoben wird, am Zentrierstift montiert und mit zwei 7-mm-Schraubenschlüsseln festgezogen werden.
+  ```{figure} ../../../../../_shared/media/images/prolunga.JPG
+    :width: 100%
+    :align: center
+  ```
+:::
+
+:::{warning}
+Beim Montieren der magnetischen Distanzstücke ist besondere Vorsicht geboten: Die Distanzstücke langsam annähern und mit den Fingern führen, damit sie sich nicht abrupt anziehen, um Brüche oder Beschädigungen zu vermeiden.   
+Um sie nach der Montage zu trennen, ein Distanzstück seitlich gegenüber dem anderen verschieben, anstatt sie direkt entlang ihrer Achse auseinanderzuziehen. 
+  ```{figure} ../../../../../_shared/media/images/distanziali.JPG
     :width: 100%
     :align: center
   ```

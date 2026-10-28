@@ -86,13 +86,26 @@ La grille d'étalonnage ARS doit être placée sur le FlexiBowl® :
 Positionnement correct de la grille d'étalonnage ARS sur le FlexiBowl®
 ```
 :::{attention} 
- La grille d'étalonnage doit être positionnée **à la même hauteur que l'objet** utilisé dans l'application.
- 
-   Pour cette raison, il est fourni avec des **entretoises** à insérer dans les chevilles de la grille avant de l'installer sur le FlexiBowl®.
-   Les entretoises ont pour fonction de **soulever la grille** au niveau de la hauteur de la pièce, garantissant ainsi un étalonnage précis.
+ La grille d'étalonnage doit être positionnée **à la même hauteur que l'objet** utilisé dans l'application.  
+   C'est pourquoi elle est fournie avec des **entretoises magnétiques** à appliquer sur les aimants déjà présents sur la face inférieure de la grille avant de l'installer sur le FlexiBowl®.
+   Les entretoises **surélèvent la grille** jusqu'au niveau de la hauteur de la pièce, garantissant un étalonnage précis.
   ![Entretoises](../../../../../_shared/media/images/distanziali_griglia.JPG)
   
   ```{figure} ../../../../../_shared/media/images/altezzacalibrazione.png
+    :width: 100%
+    :align: center
+  ```
+  Pour les tailles FlexiBowl 500, 650 et 800, si la grille est surélevée de plus de 35 mm, il faut monter la rallonge sur la goupille de centrage et la serrer avec deux clés de 7 mm.
+  ```{figure} ../../../../../_shared/media/images/prolunga.JPG
+    :width: 100%
+    :align: center
+  ```
+:::
+
+:::{warning}
+Faire particulièrement attention lors du montage des entretoises magnétiques : les approcher lentement et les accompagner avec les doigts, en évitant qu'elles ne s'attirent brusquement, afin de prévenir toute rupture ou tout dommage.   
+Pour les séparer après le montage, faire glisser une entretoise latéralement par rapport à l'autre, plutôt que de les tirer directement l'une loin de l'autre dans le sens de leur axe. 
+  ```{figure} ../../../../../_shared/media/images/distanziali.JPG
     :width: 100%
     :align: center
   ```

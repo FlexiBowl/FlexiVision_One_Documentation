@@ -87,12 +87,113 @@ Colocación correcta de la rejilla de calibración ARS en el FlexiBowl®
 ```
 :::{attention} 
  La rejilla de calibración debe colocarse **a la misma altura que el objeto** utilizado en la aplicación.
- 
-   Por esta razón, se suministra con **separadores** que deben insertarse en las clavijas de la rejilla antes de instalarla en el FlexiBowl®.
-   Los separadores tienen la función de **elevar la rejilla** hasta el nivel de la altura de la pieza, garantizando una calibración precisa.
+ Por este motivo, se suministra con **separadores magnéticos** que se colocan sobre los imanes ya presentes en la parte inferior de la rejilla antes de instalarla en el FlexiBowl®.
+   Los separadores **elevan la rejilla** hasta el nivel de la altura de la pieza, garantizando una calibración precisa.
   ![Separadores](../../../../../_shared/media/images/distanziali_griglia.JPG)
   
   ```{figure} ../../../../../_shared/media/images/altezzacalibrazione.png
+    :width: 100%
+    :align: center
+  ```
+  En los tamaños FlexiBowl 500, 650 y 800, si se eleva la rejilla más de 35 mm, es necesario montar la prolongación en el perno de centrado y apretarla con dos llaves de 7 mm.
+  ```{figure} ../../../../../_shared/media/images/prolunga.JPG
+    :width: 100%
+    :align: center
+  ```
+:::
+
+:::{warning}
+Prestar especial atención durante el montaje de los separadores magnéticos: acercarlos lentamente y acompañarlos con los dedos, evitando que se atraigan bruscamente entre sí, para prevenir roturas o daños.   
+Para separarlos después del montaje, deslizar un separador lateralmente respecto al otro, evitando tirar de ellos directamente alejándolos entre sí a lo largo de su eje. 
+  ```{figure} ../../../../../_shared/media/images/distanziali.JPG
+    :width: 100%
+    :align: center
+  ```
+:::Por este motivo, se suministra con **separadores magnéticos** que se colocan sobre los imanes ya presentes en la parte inferior de la rejilla antes de instalarla en el FlexiBowl®.
+   Los separadores **elevan la rejilla** hasta el nivel de la altura de la pieza, garantizando una calibración precisa.
+  ![Separadores](../../../../../_shared/media/images/distanziali_griglia.JPG)
+  
+  ```{figure} ../../../../../_shared/media/images/altezzacalibrazione.png
+    :width: 100%
+    :align: center
+  ```
+  En los tamaños FlexiBowl 500, 650 y 800, si se eleva la rejilla más de 35 mm, es necesario montar la prolongación en el perno de centrado y apretarla con dos llaves de 7 mm.
+  ```{figure} ../../../../../_shared/media/images/prolunga.JPG
+    :width: 100%
+    :align: center
+  ```
+:::
+
+:::{warning}
+Prestar especial atención durante el montaje de los separadores magnéticos: acercarlos lentamente y acompañarlos con los dedos, evitando que se atraigan bruscamente entre sí, para prevenir roturas o daños.   
+Para separarlos después del montaje, deslizar un separador lateralmente respecto al otro, evitando tirar de ellos directamente alejándolos entre sí a lo largo de su eje. 
+  ```{figure} ../../../../../_shared/media/images/distanziali.JPG
+    :width: 100%
+    :align: center
+  ```
+:::Por este motivo, se suministra con **separadores magnéticos** que se colocan sobre los imanes ya presentes en la parte inferior de la rejilla antes de instalarla en el FlexiBowl®.
+   Los separadores **elevan la rejilla** hasta el nivel de la altura de la pieza, garantizando una calibración precisa.
+  ![Separadores](../../../../../_shared/media/images/distanziali_griglia.JPG)
+  
+  ```{figure} ../../../../../_shared/media/images/altezzacalibrazione.png
+    :width: 100%
+    :align: center
+  ```
+  En los tamaños FlexiBowl 500, 650 y 800, si se eleva la rejilla más de 35 mm, es necesario montar la prolongación en el perno de centrado y apretarla con dos llaves de 7 mm.
+  ```{figure} ../../../../../_shared/media/images/prolunga.JPG
+    :width: 100%
+    :align: center
+  ```
+:::
+
+:::{warning}
+Prestar especial atención durante el montaje de los separadores magnéticos: acercarlos lentamente y acompañarlos con los dedos, evitando que se atraigan bruscamente entre sí, para prevenir roturas o daños.   
+Para separarlos después del montaje, deslizar un separador lateralmente respecto al otro, evitando tirar de ellos directamente alejándolos entre sí a lo largo de su eje. 
+  ```{figure} ../../../../../_shared/media/images/distanziali.JPG
+    :width: 100%
+    :align: center
+  ```
+:::Por este motivo, se suministra con **separadores magnéticos** que se colocan sobre los imanes ya presentes en la parte inferior de la rejilla antes de instalarla en el FlexiBowl®.
+   Los separadores **elevan la rejilla** hasta el nivel de la altura de la pieza, garantizando una calibración precisa.
+  ![Separadores](../../../../../_shared/media/images/distanziali_griglia.JPG)
+  
+  ```{figure} ../../../../../_shared/media/images/altezzacalibrazione.png
+    :width: 100%
+    :align: center
+  ```
+  En los tamaños FlexiBowl 500, 650 y 800, si se eleva la rejilla más de 35 mm, es necesario montar la prolongación en el perno de centrado y apretarla con dos llaves de 7 mm.
+  ```{figure} ../../../../../_shared/media/images/prolunga.JPG
+    :width: 100%
+    :align: center
+  ```
+:::
+
+:::{warning}
+Prestar especial atención durante el montaje de los separadores magnéticos: acercarlos lentamente y acompañarlos con los dedos, evitando que se atraigan bruscamente entre sí, para prevenir roturas o daños.   
+Para separarlos después del montaje, deslizar un separador lateralmente respecto al otro, evitando tirar de ellos directamente alejándolos entre sí a lo largo de su eje. 
+  ```{figure} ../../../../../_shared/media/images/distanziali.JPG
+    :width: 100%
+    :align: center
+  ```
+:::Por este motivo, se suministra con **separadores magnéticos** que se colocan sobre los imanes ya presentes en la parte inferior de la rejilla antes de instalarla en el FlexiBowl®.
+   Los separadores **elevan la rejilla** hasta el nivel de la altura de la pieza, garantizando una calibración precisa.
+  ![Separadores](../../../../../_shared/media/images/distanziali_griglia.JPG)
+  
+  ```{figure} ../../../../../_shared/media/images/altezzacalibrazione.png
+    :width: 100%
+    :align: center
+  ```
+  En los tamaños FlexiBowl 500, 650 y 800, si se eleva la rejilla más de 35 mm, es necesario montar la prolongación en el perno de centrado y apretarla con dos llaves de 7 mm.
+  ```{figure} ../../../../../_shared/media/images/prolunga.JPG
+    :width: 100%
+    :align: center
+  ```
+:::
+
+:::{warning}
+Prestar especial atención durante el montaje de los separadores magnéticos: acercarlos lentamente y acompañarlos con los dedos, evitando que se atraigan bruscamente entre sí, para prevenir roturas o daños.   
+Para separarlos después del montaje, deslizar un separador lateralmente respecto al otro, evitando tirar de ellos directamente alejándolos entre sí a lo largo de su eje. 
+  ```{figure} ../../../../../_shared/media/images/distanziali.JPG
     :width: 100%
     :align: center
   ```

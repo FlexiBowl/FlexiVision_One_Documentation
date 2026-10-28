@@ -88,7 +88,7 @@ Corretto posizionamento della griglia di calibrazione ARS sul FlexiBowl®
 :::{attention} 
  La griglia di calibrazione deve essere posizionata **alla stessa altezza dell'oggetto** utilizzato nell'applicazione.
  
-   Per questo motivo, viene fornita con dei **distanziali** da inserire nei pioli della griglia prima di installarla sul FlexiBowl®.
+   Per questo motivo, viene fornita con dei **distanziali magnetici** da applicare sui magneti già presenti sul lato inferiore della griglia prima di installarla sul FlexiBowl®.
    I distanziali hanno la funzione di **sollevare la griglia** fino al livello dell'altezza del pezzo, garantendo una calibrazione accurata.
   ![Distanziali](../../../../../_shared/media/images/distanziali_griglia.JPG)
   
@@ -96,8 +96,21 @@ Corretto posizionamento della griglia di calibrazione ARS sul FlexiBowl®
     :width: 100%
     :align: center
   ```
+  Nelle taglie di FlexiBowl 500, 650 e 800, se si rialza la griglia più di 35mm, è necessario montare la prolunga nel perno di centraggio serrandola con due chiavi inglesi da 7mm. 
+  ```{figure} ../../../../../_shared/media/images/prolunga.JPG
+    :width: 100%
+    :align: center
+  ```
 :::
 
+:::{warning}
+Prestare particolare attenzione durante il montaggio dei distanziali magnetici, avvicinare i distanziali magnetici lentamente e accompagnarli con le dita, evitando che si attraggano bruscamente tra loro, per prevenire rotture o danneggiamenti.   
+Per separarli dopo il montaggio, far scorrere un distanziale lateralmente rispetto all'altro, evitando di tirarli direttamente allontanandoli l'uno dall'altrop lungo il loro asse. 
+  ```{figure} ../../../../../_shared/media/images/distanziali.JPG
+    :width: 100%
+    :align: center
+  ```
+:::
 ## Step 2: Regolazioni fondamentali
 
 ```{list-table}
