@@ -1,4 +1,4 @@
-# Notes de version – Manuel
+# Manuel FlexiVision One
 
 Cette page rassemble l'historique des révisions du présent manuel et indique avec quelles versions du logiciel FlexiVision One chaque révision est compatible.
 

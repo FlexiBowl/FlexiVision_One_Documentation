@@ -1,4 +1,4 @@
-# Notes de version – Logiciel
+# Logiciel FlexiVision One
 
 Cette page rassemble les informations sur les versions publiées du logiciel FlexiVision One. Sélectionnez une version pour en savoir plus.
 

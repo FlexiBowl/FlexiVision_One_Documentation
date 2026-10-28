@@ -9,7 +9,7 @@ Questa sezione raccoglie le note di rilascio relative al software **FlexiVision 
 </a>
 <br>
 <a href="Release_Notes_Manuale.html" style="display:block; background-color:#e0f2fe; color:#334155; padding:1.5rem 1.75rem; border-radius:0.5rem; text-decoration:none; box-shadow:0 1px 4px rgba(0,0,0,0.1);">
-  <h3 style="margin:0 0 0.4rem 0; color:#334155; font-size:1.6rem;">Manuale</h3>
+  <h3 style="margin:0 0 0.4rem 0; color:#334155; font-size:1.6rem;">Manuale FlexiVision One</h3>
   <p style="margin:0; color:#334155; opacity:0.8;">Revisioni del manuale e compatibilità con le versioni del software.</p>
 </a>
 ```
