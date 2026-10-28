@@ -548,7 +548,6 @@ The use of the Laser Tool in combination with the ARS Dedicated Calibration Grid
 :width: 50%
 ```
 
-
 Excellent calibration is the basic requirement for the accuracy of the FlexiVision One system. Only high-precision calibration ensures that the coordinates detected by the camera (pixels) are accurately converted into the actual robot coordinates (millimetres), thus ensuring the success of the picking application.
 
 ### *Grid technical specifications*
