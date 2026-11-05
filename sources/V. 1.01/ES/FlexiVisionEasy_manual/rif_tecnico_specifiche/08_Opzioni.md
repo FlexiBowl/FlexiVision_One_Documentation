@@ -5,7 +5,7 @@ El Toplight es un sistema de iluminación desde arriba que ilumina la superficie
 
 Los Toplight disponibles son: 
 
-```{dropdown} TopLight 500x300 - Blanco 
+```{dropdown} White Toplight 200/350/500
 Este tamaño de Toplight es adecuado para los modelos: FlexiBowl® 200, FlexiBowl® 350, FlexiBowl® 500
 ![Toplight](../../../../_shared/media/images/toplight_CM002316.JPG)
 
@@ -101,7 +101,7 @@ Este tamaño de Toplight es adecuado para los modelos: FlexiBowl® 200, FlexiBow
 :::
 
 ```
-```{dropdown} TopLight 500x300 - Red  
+```{dropdown} Red Toplight 200/350/500 
 Este tamaño de Toplight es adecuado para los modelos: FlexiBowl® 200, FlexiBowl® 350, FlexiBowl® 500
 ![Toplight](../../../../_shared/media/images/toplight_CM002316.JPG)
 
@@ -199,7 +199,7 @@ Este tamaño de Toplight es adecuado para los modelos: FlexiBowl® 200, FlexiBow
 
 ```
 
-```{dropdown} TopLight 500x300 - Infrarrojos
+```{dropdown} IR Toplight 200/350/500
 Este tamaño de Toplight es adecuado para los modelos: FlexiBowl® 200, FlexiBowl® 350, FlexiBowl® 500
 ![Toplight](../../../../_shared/media/images/toplight_CM002316.JPG)
 
@@ -296,7 +296,7 @@ Este tamaño de Toplight es adecuado para los modelos: FlexiBowl® 200, FlexiBow
 
 ```
 
-```{dropdown} TopLight 700x300 - Blanco
+```{dropdown} White Toplight 650/800
 Este tamaño de Toplight es adecuado para los modelos: FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002317.JPG)
 
@@ -392,7 +392,7 @@ Este tamaño de Toplight es adecuado para los modelos: FlexiBowl® 650, FlexiBow
 :::
 ```
 
-```{dropdown} TopLight 700x300 - Red
+```{dropdown} Red Toplight 650/800
 Este tamaño de Toplight es adecuado para los modelos: FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002317.JPG)
 
@@ -488,7 +488,7 @@ Este tamaño de Toplight es adecuado para los modelos: FlexiBowl® 650, FlexiBow
 :::
 ```
 
-```{dropdown} TopLight 700x300 - Infrarrojos
+```{dropdown} IR Toplight 650/800
 Este tamaño de Toplight es adecuado para los modelos: FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002317.JPG)
 
@@ -584,7 +584,7 @@ Este tamaño de Toplight es adecuado para los modelos: FlexiBowl® 650, FlexiBow
 :::
 ```
 
-```{dropdown} TopLight 700x500 - Blanco
+```{dropdown} White Toplight 650/800 XXL
 Este tamaño de Toplight es adecuado para los modelos: FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002318.JPG)
 
@@ -680,7 +680,7 @@ Este tamaño de Toplight es adecuado para los modelos: FlexiBowl® 650, FlexiBow
 :::
 ```
 
-```{dropdown} TopLight 700x500 - Red
+```{dropdown} Red Toplight 650/800 XXL
 Este tamaño de Toplight es adecuado para los modelos: FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002318.JPG)
 
@@ -776,7 +776,7 @@ Este tamaño de Toplight es adecuado para los modelos: FlexiBowl® 650, FlexiBow
 :::
 ```
 
-```{dropdown} TopLight 700x500 - Infrarrojos
+```{dropdown} IR Toplight 650/800 XXL
 Este tamaño de Toplight es adecuado para los modelos: FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002318.JPG)
 
@@ -872,7 +872,7 @@ Este tamaño de Toplight es adecuado para los modelos: FlexiBowl® 650, FlexiBow
 :::
 ```
 
-```{dropdown} TopLight 900x600 - Blanco
+```{dropdown} White Toplight 1200
 Este tamaño de Toplight es adecuado para los modelos FlexiBowl® 1200
 ![Toplight](../../../../_shared/media/images/toplight_dim.JPG)
 
@@ -967,7 +967,7 @@ Este tamaño de Toplight es adecuado para los modelos FlexiBowl® 1200
   - RoHS-CE-DEEE, UL
 :::
 ```
-```{dropdown} TopLight 900x600 - Red
+```{dropdown} Red Toplight 1200
 Este tamaño de Toplight es adecuado para los modelos FlexiBowl® 1200
 ![Toplight](../../../../_shared/media/images/toplight_dim.JPG)
 
@@ -1063,7 +1063,7 @@ Este tamaño de Toplight es adecuado para los modelos FlexiBowl® 1200
 :::
 ```
 
-```{dropdown} TopLight 900x600 - Infrarrojos
+```{dropdown} IR Toplight 1200
 Este tamaño de Toplight es adecuado para los modelos FlexiBowl® 1200
 ![Toplight](../../../../_shared/media/images/toplight_dim.JPG)
 

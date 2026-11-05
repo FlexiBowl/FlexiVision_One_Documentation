@@ -406,8 +406,6 @@ Le système FlexiVision One fonctionne sur un PC industriel (VisionController) q
 :align: center
 :width: 50%
 ```
-
-
 ```{list-table}
 :header-rows: 1
 :widths: 10 25 65
@@ -417,13 +415,13 @@ Le système FlexiVision One fonctionne sur un PC industriel (VisionController) q
   - **Description**
 * - A
   - Bouton d'alimentation
-  - Allumage et extinction de l'appareil
+  - Mise sous tension et hors tension du dispositif
 * - B
   - ETH 10/100/1000 Mbit – RJ45 (LAN 1)
-  - Port Gigabit Ethernet 1
+  - Port Ethernet Gigabit 1
 * - C
   - ETH 10/100/1000 Mbit – RJ45 (LAN 2)
-  - Port Gigabit Ethernet 2
+  - Port Ethernet Gigabit 2
 * - D
   - Port série (RS232) COM1
   - Interface série RS232 COM1
@@ -432,23 +430,28 @@ Le système FlexiVision One fonctionne sur un PC industriel (VisionController) q
   - Interface série RS232 COM2
 * - F
   - Connecteur d'entrée d'alimentation
-  - Entrée d'alimentation 12-32V DC (bloc terminal à 3 broches)
+  - Entrée d'alimentation 12–32V DC (bornier à 3 broches)
 * - G
-  - Sortie audio + MIC (Jack 3.5 mm)
+  - Sortie audio + MIC (jack 3,5 mm)
   - 1× sortie audio ligne + entrée microphone (jack 3,5 mm)
 * - H
   - 6× USB-A
-  - Ports USB (USB 3.0 TypeA pour les versions i3/i7)
+  - Ports USB (USB 3.0 Type-A pour les versions i3/i7)
 * - I
   - Port vidéo 2
-  - **B2B12/B2B14:** HDMI 2 — **B2B15/B2B16:** DisplayPort
+  - **B2B12/B2B14 :** HDMI 2 — **B2B15/B2B16 :** DisplayPort
 * - L
   - Port HDMI 1
   - Sortie vidéo HDMI 1
 * - M
-  - ETH 10/100/1000 Mbit – RJ45 1LAN 3
-  - Port Ethernet Gigabit 3
+  - ETH 10/100/1000 Mbit – RJ45 (LAN 3)
+  - Port Ethernet Gigabit 3 — **ce n'est pas un port PoE**
 ```
+
+:::{important}
+Les ports Ethernet du VisionController, y compris le LAN 3 (M), **ne sont pas des ports PoE** et n'alimentent pas la caméra. La caméra doit être alimentée exclusivement par le câble que nous fournissons : ne pas la connecter au port Ethernet du PC sans ce câble.
+:::
+
 ### *Spécifications physiques*
 
 ```{figure} ../../../../_shared/media/images/dimensioni_VC.png

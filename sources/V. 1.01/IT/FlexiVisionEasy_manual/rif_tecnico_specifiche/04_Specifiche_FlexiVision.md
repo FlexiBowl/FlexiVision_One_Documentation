@@ -407,7 +407,6 @@ Il sistema FlexiVision One opera su un PC Industriale (VisionController) che fun
 :width: 50%
 ```
 
-
 ```{list-table}
 :header-rows: 1
 :widths: 10 25 65
@@ -446,9 +445,15 @@ Il sistema FlexiVision One opera su un PC Industriale (VisionController) che fun
   - Porta HDMI 1
   - Uscita video HDMI 1
 * - M
-  - ETH 10/100/1000 Mbit – RJ45 1LAN 3
-  - Porta Ethernet Gigabit 3
+  - ETH 10/100/1000 Mbit – RJ45 (LAN 3)
+  - Porta Ethernet Gigabit 3 — **non è una porta PoE**
 ```
+
+:::{important}
+Le porte Ethernet del VisionController, compresa la LAN 3 (M), **non sono porte PoE** e non alimentano la camera. La camera deve essere alimentata esclusivamente tramite il cavo fornito da noi: non collegarla alla porta Ethernet del PC senza di esso.
+:::
+
+
 ### *Specifiche fisiche*
 
 ```{figure} ../../../../_shared/media/images/dimensioni_VC.png

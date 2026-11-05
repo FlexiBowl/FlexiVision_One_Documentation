@@ -432,23 +432,28 @@ El sistema FlexiVision One funciona en un PC industrial (VisionController) que s
   - Interfaz serie RS232 COM2
 * - F
   - Conector de entrada de alimentación
-  - Entrada alimentación 12–32V DC (terminal block 3-pin)
+  - Entrada de alimentación 12–32V DC (bornero de 3 pines)
 * - G
-  - Salida audio + MIC (Jack 3.5 mm)
-  - 1× salida audio de línea + entrada micrófono (jack 3.5 mm)
+  - Salida de audio + MIC (jack 3,5 mm)
+  - 1× salida de audio de línea + entrada de micrófono (jack 3,5 mm)
 * - H
   - 6× USB-A
-  - Puertos USB (USB 3.0 TypeA para versiones i3/i7)
+  - Puertos USB (USB 3.0 Tipo A para las versiones i3/i7)
 * - I
-  - Puerto vídeo 2
-  - **B2B12/B2B14:** HDMI 2 — **B2B15/B2B16:** MostrarPort
+  - Puerto de vídeo 2
+  - **B2B12/B2B14:** HDMI 2 — **B2B15/B2B16:** DisplayPort
 * - L
   - Puerto HDMI 1
   - Salida de vídeo HDMI 1
 * - M
-  - ETH 10/100/1000 Mbit – RJ45 1LAN 3
-  - Puerto Gigabit Ethernet 3
+  - ETH 10/100/1000 Mbit – RJ45 (LAN 3)
+  - Puerto Ethernet Gigabit 3 — **no es un puerto PoE**
 ```
+
+:::{important}
+Los puertos Ethernet del VisionController, incluido el LAN 3 (M), **no son puertos PoE** y no alimentan la cámara. La cámara debe alimentarse exclusivamente mediante el cable que suministramos: no conectarla al puerto Ethernet del PC sin él.
+:::
+
 ### *Especificaciones físicas*
 
 ```{figure} ../../../../_shared/media/images/dimensioni_VC.png

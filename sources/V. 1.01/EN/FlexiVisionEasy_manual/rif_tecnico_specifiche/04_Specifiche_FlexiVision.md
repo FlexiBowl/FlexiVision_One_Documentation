@@ -410,10 +410,8 @@ The FlexiVision One system operates on an Industrial PC (VisionController) that 
 :align: center
 :width: 50%
 ```
-
 ```{list-table}
 :header-rows: 1
-
 :widths: 10 25 65
 
 * - **Ref.**
@@ -421,38 +419,42 @@ The FlexiVision One system operates on an Industrial PC (VisionController) that 
   - **Description**
 * - A
   - Power button
-  - Switching the device on and off
+  - Switches the device on and off
 * - B
-  - ETH 10/100/1000 Mbit - RJ45 (LAN 1)
-  - Gigabit Ethernet Port 1
+  - ETH 10/100/1000 Mbit – RJ45 (LAN 1)
+  - Gigabit Ethernet port 1
 * - C
-  - ETH 10/100/1000 Mbit - RJ45 (LAN 2)
-  - Gigabit Ethernet Port 2
+  - ETH 10/100/1000 Mbit – RJ45 (LAN 2)
+  - Gigabit Ethernet port 2
 * - D
-  - Serial Port (RS232) COM1
-  - RS232 Serial Interface COM1
+  - Serial port (RS232) COM1
+  - RS232 serial interface COM1
 * - E
-  - Serial Port (RS232) COM2
-  - Serial Interface RS232 COM2
+  - Serial port (RS232) COM2
+  - RS232 serial interface COM2
 * - F
-  - Power Input Connector
-  - 12-32V DC Power Input (3-pin terminal block)
+  - Power input connector
+  - 12–32V DC power input (3-pin terminal block)
 * - G
-  - Audio Output + MIC (3.5 mm jack)
+  - Audio output + MIC (3.5 mm jack)
   - 1× line audio output + microphone input (3.5 mm jack)
 * - H
   - 6× USB-A
-  - USB ports (USB 3.0 TypeA for i3/i7 versions)
+  - USB ports (USB 3.0 Type-A for i3/i7 versions)
 * - I
   - Video port 2
-  - **B2B12/B2B14:** HDMI 2 - **B2B15/B2B16:** DisplayPort
+  - **B2B12/B2B14:** HDMI 2 — **B2B15/B2B16:** DisplayPort
 * - L
   - HDMI port 1
-  - HDMI video output 1
+  - HDMI 1 video output
 * - M
-  - ETH 10/100/1000 Mbit - RJ45 1LAN 3
-  - Gigabit Ethernet port 3
+  - ETH 10/100/1000 Mbit – RJ45 (LAN 3)
+  - Gigabit Ethernet port 3 — **not a PoE port**
 ```
+
+:::{important}
+The VisionController Ethernet ports, including LAN 3 (M), **are not PoE ports** and do not power the camera. The camera must be powered exclusively through the cable we supply: do not connect it to the PC Ethernet port without it.
+:::
 
 ### *Physical specifications*
 

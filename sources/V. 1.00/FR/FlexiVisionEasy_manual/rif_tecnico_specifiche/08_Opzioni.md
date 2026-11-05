@@ -5,7 +5,7 @@ Le Toplight est un système d'éclairage par le haut qui illumine la surface de 
 
 Les Toplights disponibles sont : 
 
-```{dropdown} TopLight 500x300 - Blanc 
+```{dropdown} White Toplight 200/350/500
 Cette taille de Toplight convient aux modèles : FlexiBowl® 200, FlexiBowl® 350, FlexiBowl® 500
 ![Toplight](../../../../_shared/media/images/toplight_CM002316.JPG)
 
@@ -101,7 +101,7 @@ Cette taille de Toplight convient aux modèles : FlexiBowl® 200, FlexiBowl® 35
 :::
 
 ```
-```{dropdown} TopLight 500x300 - Rouge  
+```{dropdown} Red Toplight 200/350/500  
 Cette taille de Toplight convient aux modèles : FlexiBowl® 200, FlexiBowl® 350, FlexiBowl® 500
 ![Toplight](../../../../_shared/media/images/toplight_CM002316.JPG)
 
@@ -199,7 +199,7 @@ Cette taille de Toplight convient aux modèles : FlexiBowl® 200, FlexiBowl® 35
 
 ```
 
-```{dropdown} TopLight 500x300 - Infrarouge
+```{dropdown} IR Toplight 200/350/500
 Cette taille de Toplight convient aux modèles : FlexiBowl® 200, FlexiBowl® 350, FlexiBowl® 500
 ![Toplight](../../../../_shared/media/images/toplight_CM002316.JPG)
 
@@ -296,7 +296,7 @@ Cette taille de Toplight convient aux modèles : FlexiBowl® 200, FlexiBowl® 35
 
 ```
 
-```{dropdown} TopLight 700x300 - White
+```{dropdown} White Toplight 650/800
 Cette taille de Toplight convient aux modèles : FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002317.JPG)
 
@@ -392,7 +392,7 @@ Cette taille de Toplight convient aux modèles : FlexiBowl® 650, FlexiBowl® 80
 :::
 ```
 
-```{dropdown} TopLight 700x300 - Red
+```{dropdown} Red Toplight 650/800
 Cette taille de Toplight convient aux modèles : FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002317.JPG)
 
@@ -488,7 +488,7 @@ Cette taille de Toplight convient aux modèles : FlexiBowl® 650, FlexiBowl® 80
 :::
 ```
 
-```{dropdown} TopLight 700x300 - Infrared
+```{dropdown} IR Toplight 650/800
 Cette taille de Toplight convient aux modèles : FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002317.JPG)
 
@@ -584,7 +584,7 @@ Cette taille de Toplight convient aux modèles : FlexiBowl® 650, FlexiBowl® 80
 :::
 ```
 
-```{dropdown} TopLight 700x500 - Blanc
+```{dropdown} White Toplight 650/800 XXL
 Cette taille de Toplight convient aux modèles : FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002318.JPG)
 
@@ -680,7 +680,7 @@ Cette taille de Toplight convient aux modèles : FlexiBowl® 650, FlexiBowl® 80
 :::
 ```
 
-```{dropdown} TopLight 700x500 - Rouge
+```{dropdown} Red Toplight 650/800 XXL
 Cette taille de Toplight convient aux modèles : FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002318.JPG)
 
@@ -776,7 +776,7 @@ Cette taille de Toplight convient aux modèles : FlexiBowl® 650, FlexiBowl® 80
 :::
 ```
 
-```{dropdown} TopLight 700x500 - Infrarouge
+```{dropdown} IR Toplight 650/800 XXL
 Cette taille de Toplight convient aux modèles : FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002318.JPG)
 
@@ -872,7 +872,7 @@ Cette taille de Toplight convient aux modèles : FlexiBowl® 650, FlexiBowl® 80
 :::
 ```
 
-```{dropdown} TopLight 900x600 - Blanc
+```{dropdown} White Toplight 1200
 Cette taille de Toplight convient au modèle FlexiBowl® 1200
 ![Toplight](../../../../_shared/media/images/toplight_dim.JPG)
 
@@ -967,7 +967,7 @@ Cette taille de Toplight convient au modèle FlexiBowl® 1200
   - RoHS-CE-DEEE, UL
 :::
 ```
-```{dropdown} TopLight 900x600 - Rouge
+```{dropdown} Red Toplight 1200
 Cette taille de Toplight convient au modèle FlexiBowl® 1200
 ![Toplight](../../../../_shared/media/images/toplight_dim.JPG)
 
@@ -1063,7 +1063,7 @@ Cette taille de Toplight convient au modèle FlexiBowl® 1200
 :::
 ```
 
-```{dropdown} TopLight 900x600 - Infrarouge
+```{dropdown} IR Toplight 1200
 Cette taille de Toplight convient au modèle FlexiBowl® 1200
 ![Toplight](../../../../_shared/media/images/toplight_dim.JPG)
 

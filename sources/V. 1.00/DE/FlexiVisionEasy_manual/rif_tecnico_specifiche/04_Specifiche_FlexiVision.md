@@ -412,43 +412,48 @@ Das FlexiVision One-System läuft auf einem Industrie-PC (VisionController), der
 :header-rows: 1
 :widths: 10 25 65
 
-* - **Ref.**
+* - **Pos.**
   - **Anschluss**
-  - Beschreibung
+  - **Beschreibung**
 * - A
-  - Einschaltknopf
+  - Einschalttaste
   - Ein- und Ausschalten des Geräts
 * - B
   - ETH 10/100/1000 Mbit – RJ45 (LAN 1)
-  - Gigabit-Ethernet-Anschluss 1
+  - Gigabit-Ethernet-Port 1
 * - C
   - ETH 10/100/1000 Mbit – RJ45 (LAN 2)
-  - Gigabit-Ethernet-Anschluss 2
+  - Gigabit-Ethernet-Port 2
 * - D
-  - Serieller Anschluss (RS232) COM1
+  - Serielle Schnittstelle (RS232) COM1
   - Serielle Schnittstelle RS232 COM1
 * - E
-  - Serieller Anschluss (RS232) COM2
+  - Serielle Schnittstelle (RS232) COM2
   - Serielle Schnittstelle RS232 COM2
 * - F
   - Stromversorgungsanschluss
-  - Stromversorgungseingang 12–32 V DC (3-polige Klemmleiste)
+  - Spannungseingang 12–32V DC (3-polige Klemmleiste)
 * - G
-  - Audioausgang + MIC (3,5-mm-Klinkenstecker)
-  - 1× Line-Audioausgang + Mikrofoneingang (3,5-mm-Klinkenstecker)
+  - Audioausgang + MIC (3,5-mm-Klinke)
+  - 1× Line-Audioausgang + Mikrofoneingang (3,5-mm-Klinke)
 * - H
   - 6× USB-A
-  - USB-Anschlüsse (USB 3.0 Typ A für i3/i7-Versionen)
+  - USB-Anschlüsse (USB 3.0 Typ A bei den Versionen i3/i7)
 * - I
   - Videoanschluss 2
   - **B2B12/B2B14:** HDMI 2 — **B2B15/B2B16:** DisplayPort
 * - L
   - HDMI-Anschluss 1
-  - HDMI-Videoausgang 1
+  - HDMI-1-Videoausgang
 * - M
-  - ETH 10/100/1000 Mbit - RJ45 1LAN 3
-  - Gigabit-Ethernet-Anschluss 3
+  - ETH 10/100/1000 Mbit – RJ45 (LAN 3)
+  - Gigabit-Ethernet-Port 3 — **kein PoE-Port**
 ```
+
+:::{important}
+Die Ethernet-Ports des VisionControllers, einschließlich LAN 3 (M), **sind keine PoE-Ports** und versorgen die Kamera nicht mit Strom. Die Kamera muss ausschließlich über das von uns gelieferte Kabel versorgt werden: Ohne dieses Kabel nicht an den Ethernet-Port des PCs anschließen.
+:::
+
 ### *Physikalische Spezifikationen*
 
 ```{figure} ../../../../_shared/media/images/dimensioni_VC.png

@@ -5,7 +5,7 @@ Il Toplight è un sistema di illuminazione dall'alto che illumina la superficie 
 
 I Toplight disponibli sono: 
 
-```{dropdown} TopLight 500x300 - White 
+```{dropdown} White Toplight 200/350/500 
 Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 200, FlexiBowl® 350, FlexiBowl® 500
 ![Toplight](../../../../_shared/media/images/toplight_CM002316.JPG)
 
@@ -101,7 +101,7 @@ Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 200, FlexiB
 :::
 
 ```
-```{dropdown} TopLight 500x300 - Red  
+```{dropdown} Red Toplight 200/350/500  
 Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 200, FlexiBowl® 350, FlexiBowl® 500
 ![Toplight](../../../../_shared/media/images/toplight_CM002316.JPG)
 
@@ -199,7 +199,7 @@ Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 200, FlexiB
 
 ```
 
-```{dropdown} TopLight 500x300 - Infrared
+```{dropdown} IR Toplight 200/350/500
 Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 200, FlexiBowl® 350, FlexiBowl® 500
 ![Toplight](../../../../_shared/media/images/toplight_CM002316.JPG)
 
@@ -296,7 +296,7 @@ Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 200, FlexiB
 
 ```
 
-```{dropdown} TopLight 700x300 - White
+```{dropdown} White Toplight 650/800
 Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002317.JPG)
 
@@ -392,7 +392,7 @@ Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 650, FlexiB
 :::
 ```
 
-```{dropdown} TopLight 700x300 - Red
+```{dropdown} Red Toplight 650/800
 Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002317.JPG)
 
@@ -488,7 +488,7 @@ Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 650, FlexiB
 :::
 ```
 
-```{dropdown} TopLight 700x300 - Infrared
+```{dropdown} IR Toplight 650/800
 Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002317.JPG)
 
@@ -584,7 +584,7 @@ Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 650, FlexiB
 :::
 ```
 
-```{dropdown} TopLight 700x500 - White
+```{dropdown} White Toplight 650/800 XXL
 Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002318.JPG)
 
@@ -680,7 +680,7 @@ Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 650, FlexiB
 :::
 ```
 
-```{dropdown} TopLight 700x500 - Red
+```{dropdown} Red Toplight 650/800 XXL
 Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002318.JPG)
 
@@ -776,7 +776,7 @@ Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 650, FlexiB
 :::
 ```
 
-```{dropdown} TopLight 700x500 - Infrared
+```{dropdown} IR Toplight 650/800 XXL
 Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 650, FlexiBowl® 800
 ![Toplight](../../../../_shared/media/images/toplight_CM002318.JPG)
 
@@ -872,7 +872,7 @@ Questa dimensione di Toplight è indicata per i modelli: FlexiBowl® 650, FlexiB
 :::
 ```
 
-```{dropdown} TopLight 900x600 - White
+```{dropdown} White Toplight 1200
 Questa dimensione di Toplight è indicata per il modelli FlexiBowl® 1200
 ![Toplight](../../../../_shared/media/images/toplight_dim.JPG)
 
@@ -967,7 +967,7 @@ Questa dimensione di Toplight è indicata per il modelli FlexiBowl® 1200
   - RoHS-CE-DEEE, UL
 :::
 ```
-```{dropdown} TopLight 900x600 - Red
+```{dropdown} Red Toplight 1200
 Questa dimensione di Toplight è indicata per il modelli FlexiBowl® 1200
 ![Toplight](../../../../_shared/media/images/toplight_dim.JPG)
 
@@ -1063,7 +1063,7 @@ Questa dimensione di Toplight è indicata per il modelli FlexiBowl® 1200
 :::
 ```
 
-```{dropdown} TopLight 900x600 - Infrared
+```{dropdown} IR Toplight 1200
 Questa dimensione di Toplight è indicata per il modelli FlexiBowl® 1200
 ![Toplight](../../../../_shared/media/images/toplight_dim.JPG)
 
