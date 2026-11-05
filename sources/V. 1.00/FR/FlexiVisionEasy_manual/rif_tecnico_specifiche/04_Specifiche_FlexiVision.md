@@ -418,10 +418,10 @@ Le système FlexiVision One fonctionne sur un PC industriel (VisionController) q
   - Mise sous tension et hors tension du dispositif
 * - B
   - ETH 10/100/1000 Mbit – RJ45 (LAN 1)
-  - Port Ethernet Gigabit 1
+  - Port Ethernet Gigabit 1 — **ce n'est pas un port PoE**
 * - C
   - ETH 10/100/1000 Mbit – RJ45 (LAN 2)
-  - Port Ethernet Gigabit 2
+  - Port Ethernet Gigabit 2 — **ce n'est pas un port PoE**
 * - D
   - Port série (RS232) COM1
   - Interface série RS232 COM1

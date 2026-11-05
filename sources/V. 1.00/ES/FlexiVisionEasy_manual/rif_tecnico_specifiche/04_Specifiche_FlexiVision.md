@@ -419,10 +419,10 @@ El sistema FlexiVision One funciona en un PC industrial (VisionController) que s
   - Encendido y apagado del dispositivo
 * - B
   - ETH 10/100/1000 Mbit – RJ45 (LAN 1)
-  - Puerto Ethernet Gigabit 1
+  - Puerto Ethernet Gigabit 1 — **no es un puerto PoE**
 * - C
   - ETH 10/100/1000 Mbit – RJ45 (LAN 2)
-  - Puerto Ethernet Gigabit 2
+  - Puerto Ethernet Gigabit 2 — **no es un puerto PoE**
 * - D
   - Puerto serie (RS232) COM1
   - Interfaz serie RS232 COM1

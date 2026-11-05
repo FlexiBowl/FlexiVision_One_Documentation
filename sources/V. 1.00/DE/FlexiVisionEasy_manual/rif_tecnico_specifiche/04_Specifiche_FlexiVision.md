@@ -420,10 +420,10 @@ Das FlexiVision One-System läuft auf einem Industrie-PC (VisionController), der
   - Ein- und Ausschalten des Geräts
 * - B
   - ETH 10/100/1000 Mbit – RJ45 (LAN 1)
-  - Gigabit-Ethernet-Port 1
+  - Gigabit-Ethernet-Port 1 — **kein PoE-Port**
 * - C
   - ETH 10/100/1000 Mbit – RJ45 (LAN 2)
-  - Gigabit-Ethernet-Port 2
+  - Gigabit-Ethernet-Port 2 — **kein PoE-Port**
 * - D
   - Serielle Schnittstelle (RS232) COM1
   - Serielle Schnittstelle RS232 COM1
