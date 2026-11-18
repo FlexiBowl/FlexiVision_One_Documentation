@@ -183,14 +183,14 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="rif_tecnico_specifiche/08_Opzioni.html"><strong>Options</strong></a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">INSTALLAZIONE DEL SISTEMA</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">INSTALLATION DU SYSTÈME</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.html"><strong>Installation mécanique du système</strong></a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.html"><strong>Câblage et connexions</strong></a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">PANORAMICA DELL'INTERFACCIA</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">APERÇU DE L'INTERFACE</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="PANORAMICA_INTERFACCIA/12a_Home.html"><strong>Page d’accueil</strong></a></li>
 </ul>
@@ -250,6 +250,16 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="APPLICAZIONI_MIX/29_Comandi_Mix.html"><strong>Commandes de l’Application Mix</strong></a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CAMÉRAS DE CONTRÔLE</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="TELECAMERE_CONTROLLO/33_Telecamere_Controllo.html"><strong>Caméras de contrôle</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="TELECAMERE_CONTROLLO/34_Comando_start_control.html"><strong>Commande <code class="docutils literal notranslate"><span class="pre">start_control_</span></code></strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="TELECAMERE_CONTROLLO/35_Script_VisionPro.html"><strong>Script VisionPro</strong></a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CONFIGURATIONS MULTI-APPAREILS</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="CONFIGURAZIONI_MULTI-DISPOSITIVO/30_2FB2CAM.html"><strong>2 FlexiBowl® et 2 Caméras</strong></a></li>
@@ -270,6 +280,7 @@
 <li class="toctree-l2"><a class="reference internal" href="TROUBLESHOOTING/26g_Creazione_Ricette_Modelli.html"><strong>Création de recettes et de modèles</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="TROUBLESHOOTING/26h_FlexiBowl_Wizard.html"><strong>FlexiBowl Wizard</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="TROUBLESHOOTING/26i_Conf_Tramoggia.html"><strong>Configuration de la trémie</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="TROUBLESHOOTING/26j_Telecamere_Controllo.html"><strong>Caméras de contrôle</strong></a></li>
 </ul>
 </details></li>
 </ul>
@@ -468,53 +479,59 @@
 <tr class="row-even"><td><p><strong>CAPTURE</strong></p></td>
 <td><p>Commande logicielle permettant d’acquérir des images de référence du disque vide et du disque plein, nécessaires au calcul automatique des seuils de la trémie.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>COMPLEX / FLAT / CYLINDRICAL</strong></p></td>
+<tr class="row-odd"><td><p><strong>CogRecord</strong></p></td>
+<td><p>Objet graphique VisionPro (enregistrement) contenant une image et les graphiques de résultat associés. Pour les caméras de contrôle, c’est le type de la sortie <code class="docutils literal notranslate"><span class="pre">Output_Image</span></code>, affichée dans la HMI.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>COMPLEX / FLAT / CYLINDRICAL</strong></p></td>
 <td><p>Catégories géométriques de composants dans l’assistant FlexiBowl®. <em>FLAT</em> : formes plates (rondelles, joints). <em>CYLINDRICAL</em> : formes cylindriques (broches, vis). <em>COMPLEX</em> : géométries irrégulières ou asymétriques.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Distance de travail</strong></p></td>
+<tr class="row-odd"><td><p><strong>Distance de travail</strong></p></td>
 <td><p>Distance optimale entre l’objectif et la surface du disque. Typiquement 950-1000 mm dans les configurations standards.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Distorsion optique</strong></p></td>
+<tr class="row-even"><td><p><strong>Distorsion optique</strong></p></td>
 <td><p>Déformation géométrique de l’image due à l’objectif. Compensation automatique lors de l’étalonnage de la caméra.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Exposition</strong></p></td>
+<tr class="row-odd"><td><p><strong>Exposition</strong></p></td>
 <td><p>Temps de collecte de la lumière par le capteur de la caméra. Mesuré en μs ou en ms ; influe directement sur la qualité de l’image en production.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Feature Threshold</strong></p></td>
+<tr class="row-even"><td><p><strong>Feature Threshold</strong></p></td>
 <td><p>Seuil d’extraction des caractéristiques (arêtes, lignes) lors du training du modèle. Valeurs typiques : 0.3–0.8.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>FlexiBowl®</strong></p></td>
+<tr class="row-odd"><td><p><strong>FlexiBowl®</strong></p></td>
 <td><p>Système d’alimentation par disque rotatif vibrant pour le positionnement et l’orientation aléatoire des composants pour le prélèvement robotisé.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>FlexiBowl® Wizard</strong></p></td>
+<tr class="row-even"><td><p><strong>FlexiBowl® Wizard</strong></p></td>
 <td><p>Assistant pour le calcul automatique des paramètres optimaux de FlexiBowl® en fonction de la géométrie et du comportement des composants.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Flip</strong></p></td>
+<tr class="row-odd"><td><p><strong>Flip</strong></p></td>
 <td><p>Impulsion pneumatique sous le disque pour repositionner les composants. Configurable par le biais du <em>Flip Count</em> (nombre d’impulsions) et du <em>Flip Delay</em> (intervalle en ms entre les impulsions).</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Grab Train Image</strong></p></td>
+<tr class="row-even"><td><p><strong>Grab Train Image</strong></p></td>
 <td><p>Commande logicielle permettant d’acquérir l’image à utiliser au cours du training d’un nouveau modèle.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Gripper Offset</strong></p></td>
+<tr class="row-odd"><td><p><strong>Gripper Offset</strong></p></td>
 <td><p>Vecteur de correction (ΔX, ΔY, ΔRZ) qui compense le décalage entre le centre optique du système de vision et le TCP de la pince.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Hotspot</strong></p></td>
+<tr class="row-even"><td><p><strong>Hotspot</strong></p></td>
 <td><p>Zone de réflexion directe de la lumière dans l’image. Elle apparaît comme une zone surexposée et peut compromettre la reconnaissance.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Objectif</strong></p></td>
+<tr class="row-odd"><td><p><strong>Objectif</strong></p></td>
 <td><p>Composant optique de la caméra. Il doit être vissé dans un contact métal sur métal ; la longueur focale (par exemple 16 mm, 25 mm) détermine le champ de vision à la distance de travail.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Model (Modèle)</strong></p></td>
+<tr class="row-even"><td><p><strong>Model (Modèle)</strong></p></td>
 <td><p>Modèle géométrique du composant créé lors de la phase de training. Chaque recette prend en charge jusqu’à 8 modèles par FlexiBowl®.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Origine du modèle</strong></p></td>
+<tr class="row-odd"><td><p><strong>Origine du modèle</strong></p></td>
 <td><p>Point de référence sur le composant utilisé comme centre du sistema di coordinate per il calcolo delle posizioni. Corrisponde generalmente al TCP di presa.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Orthogonalité</strong></p></td>
+<tr class="row-even"><td><p><strong>Orthogonalité</strong></p></td>
 <td><p>Perpendicularité de la chambre par rapport au disque (tolérance ±1°). Vérifiable à l’aide d’un niveau de précision.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Pattern matching</strong></p></td>
+<tr class="row-odd"><td><p><strong>Pattern matching</strong></p></td>
 <td><p>Algorithme qui localise les composants de l’image en les comparant au modèle de référence enregistré pendant le training.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>PMRedLine</strong></p></td>
+<td><p>Outil de localisation Cognex (<code class="docutils literal notranslate"><span class="pre">CogPMRedLineTool</span></code>) utilisé par le script VisionPro d’exemple des caméras de contrôle pour reconnaître l’objet et en renvoyer la position et la rotation.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Protocol (Protocole)</strong></p></td>
 <td><p>Format de communication entre le VisionController et le robot. Définit la structure des messages, l’ordre des coordonnées et les unités de mesure.</p></td>
@@ -546,11 +563,17 @@
 <tr class="row-even"><td><p><strong>Synchronize Parameters</strong></p></td>
 <td><p>Commande logicielle qui transfère les paramètres au FlexiBowl®. Obligatoire après chaque modification pour que les configurations soient effectives.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Timeout</strong></p></td>
+<tr class="row-odd"><td><p><strong>Caméra de contrôle</strong></p></td>
+<td><p>Caméra supplémentaire, associée à FLB1, FLB2 ou FLB3 (jusqu’à 3), utilisée pour effectuer des inspections visuelles à la demande du robot via la commande <code class="docutils literal notranslate"><span class="pre">start_control_</span></code>. Disponible à partir de la v0.24.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Timeout</strong></p></td>
 <td><p>Temps d’attente maximum pour une réponse de communication. Une erreur est générée en cas de dépassement.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Tilt</strong></p></td>
+<tr class="row-odd"><td><p><strong>Tilt</strong></p></td>
 <td><p>Inclinaison de la caméra par rapport au plan horizontal. Valeur autorisée : 0° ± 1°.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>ToolBlock</strong></p></td>
+<td><p>Conteneur VisionPro qui regroupe les outils de vision et en expose les entrées et sorties (<code class="docutils literal notranslate"><span class="pre">Image</span></code>, <code class="docutils literal notranslate"><span class="pre">Input_Control</span></code>, <code class="docutils literal notranslate"><span class="pre">Output_String</span></code>, <code class="docutils literal notranslate"><span class="pre">Output_Image</span></code>). Héberge le script C# des caméras de contrôle.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Toplight</strong></p></td>
 <td><p>Éclairage LED positionné au-dessus du disque pour un éclairage homogène par le haut. Alimentation électrique : 24V DC.</p></td>
@@ -564,7 +587,10 @@
 <tr class="row-even"><td><p><strong>Vision Result</strong></p></td>
 <td><p>Sortie du sistema di visione: coordinate (X, Y, RZ) e score del componente rilevato, trasmessi al robot per il prelievo.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>VisionController</strong></p></td>
+<tr class="row-odd"><td><p><strong>VisionPro</strong></p></td>
+<td><p>Logiciel Cognex de développement d’applications de vision, utilisé par FlexiVision One pour les scripts des caméras de contrôle.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>VisionController</strong></p></td>
 <td><p>Ordinateur industriel qui fait fonctionner FlexiVision One, gère les caméras, traite les images et communique avec FlexiBowl® et les robots.</p></td>
 </tr>
 </tbody>

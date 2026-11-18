@@ -1,0 +1,1971 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>VisionPro Script &#8212; FlexiVision One Manual</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_shared/static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../_shared/static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../../_shared/static/custom.css?v=35b65340" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../../_shared/static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_shared/static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../_shared/static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../../_shared/static/documentation_options.js?v=a681ed88"></script>
+    <script src="../../../../_shared/static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../../_shared/static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../../_shared/static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_shared/static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_shared/static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../../../../_shared/static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'FlexiVisionEasy_manual/TELECAMERE_CONTROLLO/35_Script_VisionPro';</script>
+    <script src="../../../../_shared/static/custom.js?v=2acd42a9"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2 FlexiBowl® and 2 Cameras" href="../CONFIGURAZIONI_MULTI-DISPOSITIVO/30_2FB2CAM.html" />
+    <link rel="prev" title="start_control_ command" href="34_Comando_start_control.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../../../_shared/static/logo.png" class="logo__image only-light" alt="FlexiVision One Manual - Home"/>
+    <img src="../../../../_shared/static/logo_dark.png" class="logo__image only-dark pst-js-only" alt="FlexiVision One Manual - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">BEFORE STARTING</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01_informazioni_preliminari.html"><strong>Preliminary Information</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02_informazioni_sicurezza.html"><strong>Safety Information</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03_Unboxing_Contenuto.html"><strong>Unboxing and Contents of the Box</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../27_Support.html"><strong>Support and Contacts</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../27b_Glossario.html"><strong>Glossary</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TECHNICAL REFERENCE AND SPECIFICATIONS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rif_tecnico_specifiche/04_Specifiche_FlexiVision.html"><strong>FlexiVision One Detailed Specifications</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rif_tecnico_specifiche/04b_Protocolli_Comunicazione.html"><strong>Robot-Vision Communication Protocol</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rif_tecnico_specifiche/05_Calcolo_distanza_ottimale.html"><strong>Optimal Working Distance Calculation</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rif_tecnico_specifiche/integrazione_software/06_PlugIn.html"><strong>PlugIn</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rif_tecnico_specifiche/integrazione_software/07_Backup_management.html"><strong>Backup Management</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rif_tecnico_specifiche/08_Opzioni.html"><strong>Options</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SYSTEM INSTALLATION</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.html"><strong>Mechanical System Installation</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.html"><strong>Wiring and Connections</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">INTERFACE OVERVIEW</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../PANORAMICA_INTERFACCIA/12a_Home.html"><strong>Home Page</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../PANORAMICA_INTERFACCIA/12c_Dashboard.html"><strong>Dashboard Page</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../PANORAMICA_INTERFACCIA/12b_Recipes.html"><strong>Recipes Page</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../PANORAMICA_INTERFACCIA/12d_Setup.html"><strong>Setup Page</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../PANORAMICA_INTERFACCIA/12e_TastiInfo.html"><strong>INFO buttons</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">QUICKSTART</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QUICKSTART/SETUP/13_setup.html"><strong>Initial System Configuration</strong></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/SETUP/13d_Camera_Setup.html"><strong>Camera Setup</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/SETUP/14_calibrazione_camera.html"><strong>Camera and Robot Calibration</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/SETUP/13a_FB_Setup.html"><strong>FlexiBowl® Setup</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/SETUP/13b_Hopper_Setup.html"><strong>Hopper Setup</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/SETUP/13c_Robot_Setup.html"><strong>Robot Setup</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/SETUP/15_Protocol_Setup.html"><strong>Protocol Setup</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/SETUP/15b_SaveRecipe.html"><strong>Save the recipe</strong></a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QUICKSTART/Nuovo_Modello/16_Nuovo_modello.html"><strong>Creating Recipes and Models - Overview</strong></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/Nuovo_Modello/17_NuovaRicetta.html"><strong>Creating a New Recipe</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/Nuovo_Modello/18_NuovoModello.html"><strong>Creating a New Model</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/Nuovo_Modello/19_ROI_TEST.html"><strong>ROI Definition and Tolerances</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/Nuovo_Modello/20_Istogrammi.html"><strong>Clearances</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QUICKSTART/Nuovo_Modello/21_RobotPick.html"><strong>Robot Pick Calibration</strong></a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../QUICKSTART/24_Verifica_Risultati.html"><strong>Application Monitoring: Dashboard</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QUICKSTART/25_CheckBelt.html"><strong>Disk Monitoring: Check Belt</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">EXPERT</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../EXPERT/32_Expert.html"><strong>What it is and When it is needed</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">MIX APPLICATIONS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../APPLICAZIONI_MIX/28_Panoramica_Mix.html"><strong>Mix Application Overview</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../APPLICAZIONI_MIX/29_Comandi_Mix.html"><strong>Mix Application Commands</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CONTROL CAMERAS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="33_Telecamere_Controllo.html"><strong>Control Cameras</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="34_Comando_start_control.html"><strong><code class="docutils literal notranslate"><span class="pre">start_control_</span></code> command</strong></a></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>VisionPro Script</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">MULTI-DEVICE CONFIGURATIONS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../CONFIGURAZIONI_MULTI-DISPOSITIVO/30_2FB2CAM.html"><strong>2 FlexiBowl® and 2 Cameras</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../CONFIGURAZIONI_MULTI-DISPOSITIVO/31_3FB3CAM.html"><strong>3 FlexiBowl® and 3 Cameras</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">WARRANTY</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../25_Garanzia.html"><strong>Warranty</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TROUBLESHOOTING</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../TROUBLESHOOTING/26_trb_shooting_guide.html"><strong>Troubleshooting</strong></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26b_Installazione_Mecc.html"><strong>Mechanical Installation</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26c_Cablaggio_Connessioni.html"><strong>Wiring and Connections</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26d_Conf_Iniziale.html"><strong>Initial Setup</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26g_Creazione_Ricette_Modelli.html"><strong>Creating Recipes and models</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26h_FlexiBowl_Wizard.html"><strong>FlexiBowl Wizard</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26i_Conf_Tramoggia.html"><strong>Hopper Configuration</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26j_Telecamere_Controllo.html"><strong>Control Cameras</strong></a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">APPENDICI</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../APPENDICI/Release_Notes.html">Release Notes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../APPENDICI/Release_Notes_Software.html">Software FlexiVision One</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../APPENDICI/V.0.20.html">V. 0.20</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../APPENDICI/V.0.21.html">V. 0.21</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../APPENDICI/V.0.22.html">V. 0.22</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../APPENDICI/V.0.23.html">V. 0.23</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../APPENDICI/V.0.24.html">V. 0.24</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../APPENDICI/Release_Notes_Manuale.html">Manual FlexiVision One</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/FlexiVisionEasy_manual/TELECAMERE_CONTROLLO/35_Script_VisionPro.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>VisionPro Script</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-flow">Data flow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toolblock-inputs-and-outputs">ToolBlock inputs and outputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-script-interprets-the-command">How the script interprets the command</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#output-string-text-response">Output_String: text response</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#output-image-image-with-graphic-results">Output_Image: image with graphic results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#execution-sequence-grouprun">Execution sequence (GroupRun)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customizing-the-script">Customizing the script</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-can-be-customized-and-what-must-be-preserved">What can be customized and what must be preserved</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-a-complete-visionpro-script">Appendix A – Complete VisionPro script</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="visionpro-script">
+<span id="script-visionpro"></span><h1><strong>VisionPro Script</strong><a class="headerlink" href="#visionpro-script" title="Link to this heading">#</a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Expert function</strong></p>
+<p>Control Camera management is an <strong>Expert</strong> function: it requires knowledge of Cognex VisionPro and C# scripts, and is intended for experienced users. For information on Expert mode, see <a class="reference internal" href="../EXPERT/32_Expert.html"><span class="std std-doc">What it is and When it is needed</span></a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Prerequisites</strong></p>
+<p>Before modifying the script, see <a class="reference internal" href="33_Telecamere_Controllo.html"><span class="std std-doc">Control Cameras</span></a> and <a class="reference internal" href="34_Comando_start_control.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">start_control_</span></code> command</span></a>. Available from software version v0.24.</p>
+</div>
+<p>The VisionPro <strong>ToolBlock</strong> of the control cameras provides a complete C# example, based on two Cognex <code class="docutils literal notranslate"><span class="pre">CogPMRedLineTool</span></code> tools. The command received from the robot determines which tools are run; the script builds a text response and selects the image record to be shown on the FlexiVision Runtime page.</p>
+<p>The customer works <strong>on the VisionPro ToolBlock</strong>, without having to configure or modify the expressions of the HMI page: the input and output names must remain those exposed by the ToolBlock.</p>
+<section id="data-flow">
+<h2>Data flow<a class="headerlink" href="#data-flow" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Input / processing</p></th>
+<th class="head"><p>Result</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Robot</strong> → <code class="docutils literal notranslate"><span class="pre">start_control_&lt;parameter&gt;</span></code></p></td>
+<td><p>The text following the prefix becomes <code class="docutils literal notranslate"><span class="pre">Input_Control</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Input_Control</strong> → tool selection</p></td>
+<td><p>Runs PMRedLine 1, PMRedLine 2 or both.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Results[0].GetPose()</strong></p></td>
+<td><p>Reads X, Y and rotation of the first available result.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Output_String</strong></p></td>
+<td><p>Returns coordinates, <code class="docutils literal notranslate"><span class="pre">Not_Found</span></code> or a <code class="docutils literal notranslate"><span class="pre">#Error_Control_</span></code> error.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Output_Image</strong></p></td>
+<td><p>Returns a <code class="docutils literal notranslate"><span class="pre">CogRecord</span></code> that can be displayed in the HMI with the available graphics.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="toolblock-inputs-and-outputs">
+<h2>ToolBlock inputs and outputs<a class="headerlink" href="#toolblock-inputs-and-outputs" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 20.0%" />
+<col style="width: 55.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Function</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Image</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ICogImage</span></code></p></td>
+<td><p>Image acquired by the camera, connected to the vision tools.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Input_Control</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
+<td><p>Optional text parameter received after <code class="docutils literal notranslate"><span class="pre">start_control_</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Output_String</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
+<td><p>Text returned to FlexiVision (for example coordinates or <code class="docutils literal notranslate"><span class="pre">Not_Found</span></code>).</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Output_Image</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">CogRecord</span></code></p></td>
+<td><p>Graphic record intended for the Runtime display.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The names of the two outputs must remain <strong><code class="docutils literal notranslate"><span class="pre">Output_String</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">Output_Image</span></code></strong> in order to keep the links already set up with the HMI. The structure of the HMI must not be modified.</p>
+</div>
+</section>
+<section id="how-the-script-interprets-the-command">
+<h2>How the script interprets the command<a class="headerlink" href="#how-the-script-interprets-the-command" title="Link to this heading">#</a></h2>
+<p>The sample code checks <code class="docutils literal notranslate"><span class="pre">Input_Control</span></code>: empty value = both PMRedLines; <code class="docutils literal notranslate"><span class="pre">&quot;1&quot;</span></code> = first tool; <code class="docutils literal notranslate"><span class="pre">&quot;2&quot;</span></code> = second tool. Unexpected values produce an error. This part is <strong>customizable</strong> to handle custom commands.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">string</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="n">mToolBlock</span><span class="p">.</span><span class="n">Inputs</span><span class="p">[</span><span class="s">&quot;Input_Control&quot;</span><span class="p">].</span><span class="n">Value</span><span class="p">).</span><span class="n">Trim</span><span class="p">();</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">run1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">;</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">run2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 35.0%" />
+<col style="width: 25.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Robot command</p></th>
+<th class="head"><p>Tools run</p></th>
+<th class="head"><p>Text / image</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">start_control_</span></code></p></td>
+<td><p>1 and 2</p></td>
+<td><p>Responses of both; image of tool 1.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">start_control_1</span></code></p></td>
+<td><p>Tool 1 only</p></td>
+<td><p>Response and image of tool 1.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">start_control_2</span></code></p></td>
+<td><p>Tool 2 only</p></td>
+<td><p>Response and image of tool 2.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">start_control_ABC_123</span></code></p></td>
+<td><p>None, in the example</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Output_String</span></code> = <code class="docutils literal notranslate"><span class="pre">#Error_Control_INVALID_CONTROL</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The sample script supports <strong>exactly three choices</strong>. The parameter is free at protocol level, but the default C# logic must be extended to accept custom values such as <code class="docutils literal notranslate"><span class="pre">ABC_123</span></code>.</p>
+</section>
+<section id="output-string-text-response">
+<h2>Output_String: text response<a class="headerlink" href="#output-string-text-response" title="Link to this heading">#</a></h2>
+<p>For each tool that is run, the script reads the first object recognized (<code class="docutils literal notranslate"><span class="pre">Results[0]</span></code>), derives X and Y from it, converts the rotation from radians to degrees (<code class="docutils literal notranslate"><span class="pre">Rz</span> <span class="pre">=</span> <span class="pre">Rotation</span> <span class="pre">×</span> <span class="pre">180</span> <span class="pre">/</span> <span class="pre">π</span></code>) and builds a string with three decimal places (<code class="docutils literal notranslate"><span class="pre">F3</span></code> format). The dot is always used as the decimal separator through <code class="docutils literal notranslate"><span class="pre">CultureInfo.InvariantCulture</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">GetLocatorResult()</span></code> function receives a <code class="docutils literal notranslate"><span class="pre">CogPMRedLineTool</span></code> that has already been run and returns a string: if <code class="docutils literal notranslate"><span class="pre">Results</span></code> is null it reports <code class="docutils literal notranslate"><span class="pre">#Error_Control_TOOL_RUN</span></code>; if <code class="docutils literal notranslate"><span class="pre">Results.Count</span></code> is zero it returns <code class="docutils literal notranslate"><span class="pre">Not_Found</span></code>; otherwise it reads <code class="docutils literal notranslate"><span class="pre">Results[0].GetPose()</span></code>, where <code class="docutils literal notranslate"><span class="pre">TranslationX</span></code> and <code class="docutils literal notranslate"><span class="pre">TranslationY</span></code> provide the coordinates.</p>
+<p>The formulas and response formats are described in <a class="reference internal" href="34_Comando_start_control.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">start_control_</span></code> command</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The X and Y coordinates belong to the reference system configured in the VisionPro tool and are not automatically millimeters. The format shown is an example and can be adapted to the protocol required by the robot.</p>
+</div>
+</section>
+<section id="output-image-image-with-graphic-results">
+<h2>Output_Image: image with graphic results<a class="headerlink" href="#output-image-image-with-graphic-results" title="Link to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">Output_Image</span></code> output is of type <strong><code class="docutils literal notranslate"><span class="pre">CogRecord</span></code></strong>, not an image file, and does not require saving to disk. In the example, the script retrieves the <code class="docutils literal notranslate"><span class="pre">LastRunRecord</span></code> of the selected PMRedLine, extracts the <code class="docutils literal notranslate"><span class="pre">InputImage</span></code> subrecord and assigns it to the graphic output displayed in the HMI.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">CogRecord</span><span class="w"> </span><span class="n">lastRecord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">displayTool</span><span class="p">.</span><span class="n">CreateLastRunRecord</span><span class="p">()</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">CogRecord</span><span class="p">;</span>
+<span class="n">CogRecord</span><span class="w"> </span><span class="n">imageRecord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lastRecord</span><span class="p">.</span><span class="n">SubRecords</span><span class="p">[</span><span class="s">&quot;InputImage&quot;</span><span class="p">]</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">CogRecord</span><span class="p">;</span>
+<span class="n">mToolBlock</span><span class="p">.</span><span class="n">Outputs</span><span class="p">[</span><span class="s">&quot;Output_Image&quot;</span><span class="p">].</span><span class="n">Value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">imageRecord</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The subrecord must contain a valid image (<code class="docutils literal notranslate"><span class="pre">ICogImage</span></code>); the graphics displayed depend on the results and on the recording settings of the VisionPro tool, and may include the PMRedLine graphic overlays.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Display selection</strong></p>
+<p>With <code class="docutils literal notranslate"><span class="pre">Input_Control</span> <span class="pre">=</span> <span class="pre">&quot;2&quot;</span></code> the record of PMRedLine 2 is shown. With <code class="docutils literal notranslate"><span class="pre">&quot;1&quot;</span></code> or an empty parameter, the record of PMRedLine 1 is shown. When both tools are run, the text output includes both results, but the image comes from the <strong>first tool</strong>. The graphics of the two tools are not combined automatically: to show Tool 2 or another subrecord, modify the section <em>“6 - Select tool for image output”</em> of the script.</p>
+</div>
+</section>
+<section id="execution-sequence-grouprun">
+<h2>Execution sequence (GroupRun)<a class="headerlink" href="#execution-sequence-grouprun" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 35.0%" />
+<col style="width: 65.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Phase</p></th>
+<th class="head"><p>Code behavior</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>1 – Reset outputs</strong></p></td>
+<td><p>Clears <code class="docutils literal notranslate"><span class="pre">Output_Image</span></code> and <code class="docutils literal notranslate"><span class="pre">Output_String</span></code> before the inspection.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>2 – Read Input_Control</strong></p></td>
+<td><p>Reads the parameter and accepts the values empty, <code class="docutils literal notranslate"><span class="pre">&quot;1&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;2&quot;</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>3 – Get tool references</strong></p></td>
+<td><p>Retrieves <code class="docutils literal notranslate"><span class="pre">CogPMRedLineTool1</span></code> and <code class="docutils literal notranslate"><span class="pre">CogPMRedLineTool2</span></code> by name.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>4 – Execute locators</strong></p></td>
+<td><p>Runs only the requested locators through <code class="docutils literal notranslate"><span class="pre">RunTool()</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>5 – Generate Output_String</strong></p></td>
+<td><p>Builds the response, giving priority to execution errors.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>6 – Select display tool</strong></p></td>
+<td><p>Chooses which tool provides the graphic record to be shown.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>7 – Get LastRunRecord</strong></p></td>
+<td><p>Reads the record of the last run of the selected tool.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>8 – Extract InputImage</strong></p></td>
+<td><p>Extracts the <code class="docutils literal notranslate"><span class="pre">InputImage</span></code> subrecord and checks that it contains <code class="docutils literal notranslate"><span class="pre">ICogImage</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>9 – Export Output_Image</strong></p></td>
+<td><p>Assigns the validated <code class="docutils literal notranslate"><span class="pre">CogRecord</span></code> to the HMI graphic output.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="customizing-the-script">
+<h2>Customizing the script<a class="headerlink" href="#customizing-the-script" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Tool selection</strong>: modify the reading of <code class="docutils literal notranslate"><span class="pre">Input_Control</span></code> to start the desired tools.</p></li>
+<li><p><strong>Result formatting</strong>: adapt <code class="docutils literal notranslate"><span class="pre">GetLocatorResult()</span></code> and the composition of <code class="docutils literal notranslate"><span class="pre">Output_String</span></code> to the robot or check required.</p></li>
+<li><p><strong>Image selection</strong>: choose which <code class="docutils literal notranslate"><span class="pre">LastRunRecord</span></code> and which subrecord to display through <code class="docutils literal notranslate"><span class="pre">Output_Image</span></code>.</p></li>
+<li><p><strong>Verification</strong>: save the script and try the commands from test mode or from the robot, checking text and image.</p></li>
+</ol>
+<section id="what-can-be-customized-and-what-must-be-preserved">
+<h3>What can be customized and what must be preserved<a class="headerlink" href="#what-can-be-customized-and-what-must-be-preserved" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Can be customized</p></th>
+<th class="head"><p>To be kept consistent</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Tool selection criteria for new parameters.</p></td>
+<td><p>Reading of the <code class="docutils literal notranslate"><span class="pre">Input_Control</span></code> input.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Vision tools and names of the tools run.</p></td>
+<td><p>References matching the tools actually present.</p></td>
+</tr>
+<tr class="row-even"><td><p>Format and content of <code class="docutils literal notranslate"><span class="pre">Output_String</span></code>, score, multiple objects.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#Error_Control_</span></code> prefix for errors.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Record or subrecord assigned to <code class="docutils literal notranslate"><span class="pre">Output_Image</span></code>.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Output_Image</span></code> must remain a compatible <code class="docutils literal notranslate"><span class="pre">CogRecord</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>Calibrations, coordinates and units of measurement.</p></td>
+<td><p>Check of the format the robot expects.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Before loading a modified script, run a test with an empty parameter, one test for each locator and at least one error test. Check in the HMI that <code class="docutils literal notranslate"><span class="pre">Output_String</span></code> and <code class="docutils literal notranslate"><span class="pre">Output_Image</span></code> are updated and that the robot receives only the agreed format.</p>
+</div>
+</section>
+</section>
+<section id="appendix-a-complete-visionpro-script">
+<h2>Appendix A – Complete VisionPro script<a class="headerlink" href="#appendix-a-complete-visionpro-script" title="Link to this heading">#</a></h2>
+<p>The sample script supplied with FlexiVision One v0.24 is reproduced in full below. The comments in the source are in English; the sections are numbered to make modifications easier. The code shows how to define the response logic and how to select the image with the graphics to be displayed.</p>
+<p><strong>CogToolBlockAdvancedScript – C# example</strong></p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="cp">#region namespace imports</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Globalization</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Cognex.VisionPro</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Cognex.VisionPro.ToolBlock</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Cognex.VisionPro.Implementation</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Cognex.VisionPro.PMRedLine</span><span class="p">;</span>
+<span class="cp">#endregion</span>
+
+<span class="c1">// ============================================================================</span>
+<span class="c1">// FLEXIVISION - CUSTOM VISIONPRO SCRIPT EXAMPLE</span>
+<span class="c1">// ============================================================================</span>
+<span class="c1">//</span>
+<span class="c1">// DESCRIPTION</span>
+<span class="c1">// -----------</span>
+<span class="c1">// This script demonstrates how to execute Cognex VisionPro inspection tools,</span>
+<span class="c1">// retrieve object positions, generate custom result strings, and export</span>
+<span class="c1">// graphical inspection records to the FlexiVision HMI.</span>
+<span class="c1">//</span>
+<span class="c1">// The example uses two CogPMRedLineTools. Customers can customize this script</span>
+<span class="c1">// to implement their own inspection logic using other VisionPro tools.</span>
+<span class="c1">//</span>
+<span class="c1">// ROBOT COMMAND FORMAT</span>
+<span class="c1">// --------------------</span>
+<span class="c1">// FlexiVision receives the following commands from the robot:</span>
+<span class="c1">//</span>
+<span class="c1">// start_control_       -&gt; Input_Control = &quot;&quot;</span>
+<span class="c1">// start_control_1       -&gt; Input_Control = &quot;1&quot;</span>
+<span class="c1">// start_control_2       -&gt; Input_Control = &quot;2&quot;</span>
+<span class="c1">// start_control_ABC_123 -&gt; Input_Control = &quot;ABC_123&quot;</span>
+<span class="c1">//</span>
+<span class="c1">// The parameter following &quot;start_control_&quot; is forwarded to VisionPro.</span>
+<span class="c1">// The customer script determines how to interpret the received parameter.</span>
+<span class="c1">//</span>
+<span class="c1">// INPUTS</span>
+<span class="c1">// ------</span>
+<span class="c1">// Image         : Camera image connected to the inspection tools.</span>
+<span class="c1">// Input_Control : Optional parameter received from the robot.</span>
+<span class="c1">//</span>
+<span class="c1">// OUTPUTS</span>
+<span class="c1">// -------</span>
+<span class="c1">// Output_String : Inspection results or error information.</span>
+<span class="c1">// Output_Image : CogRecord containing the selected image and graphical data.</span>
+<span class="c1">//</span>
+<span class="c1">// RESULT FORMAT</span>
+<span class="c1">// -------------</span>
+<span class="c1">// Object found:</span>
+<span class="c1">// X=125.450;Y=78.320;Rz=45.000</span>
+<span class="c1">//</span>
+<span class="c1">// Object not found:</span>
+<span class="c1">// Not_Found</span>
+<span class="c1">//</span>
+<span class="c1">// Both tools executed:</span>
+<span class="c1">// 1:X=125.450;Y=78.320;Rz=45.000|2:Not_Found</span>
+<span class="c1">//</span>
+<span class="c1">// ERROR HANDLING</span>
+<span class="c1">// --------------</span>
+<span class="c1">// All execution errors must start with the following prefix:</span>
+<span class="c1">//</span>
+<span class="c1">// #Error_Control_</span>
+<span class="c1">//</span>
+
+<span class="c1">// Examples:</span>
+<span class="c1">// #Error_Control_INVALID_CONTROL</span>
+<span class="c1">// #Error_Control_TOOL_NOT_FOUND</span>
+<span class="c1">// #Error_Control_TOOL_RUN</span>
+<span class="c1">// #Error_Control_LAST_RECORD_NULL</span>
+<span class="c1">// #Error_Control_INPUT_IMAGE_RECORD_NULL</span>
+<span class="c1">// #Error_Control_RECORD_WITHOUT_IMAGE</span>
+<span class="c1">//</span>
+<span class="c1">// IMPORTANT</span>
+<span class="c1">// ---------</span>
+<span class="c1">// - Only the first detected object is returned for each locator.</span>
+<span class="c1">// - X and Y use the coordinate system configured in VisionPro.</span>
+<span class="c1">// - Rz is expressed in degrees.</span>
+<span class="c1">// - Not_Found is an inspection result, not an execution error.</span>
+<span class="c1">// - Output_Image is permanently linked to the FlexiVision HMI.</span>
+<span class="c1">// - Customers can customize the script without modifying the HMI.</span>
+<span class="c1">//</span>
+<span class="c1">// ============================================================================</span>
+
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">CogToolBlockAdvancedScript</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">CogToolBlockAdvancedScriptBase</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// ========================================================================</span>
+<span class="w">    </span><span class="c1">// PRIVATE VARIABLES</span>
+<span class="w">    </span><span class="c1">// ========================================================================</span>
+
+<span class="w">    </span><span class="c1">// Reference to the VisionPro ToolBlock hosting this script.</span>
+<span class="w">    </span><span class="c1">// Provides access to inputs, outputs, and inspection tools.</span>
+
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">CogToolBlock</span><span class="w"> </span><span class="n">mToolBlock</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// ========================================================================</span>
+<span class="w">    </span><span class="c1">// FUNCTION - GET LOCATOR RESULT</span>
+<span class="w">    </span><span class="c1">// ========================================================================</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// Extracts the position and rotation of the first detected object.</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// RETURN VALUES</span>
+<span class="w">    </span><span class="c1">// -------------</span>
+<span class="w">    </span><span class="c1">// Object found : X=125.450;Y=78.320;Rz=45.000</span>
+<span class="w">    </span><span class="c1">// Object missing : Not_Found</span>
+<span class="w">    </span><span class="c1">// Results invalid: #Error_Control_TOOL_RUN</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// CUSTOMIZATION</span>
+<span class="w">    </span><span class="c1">// -------------</span>
+<span class="w">    </span><span class="c1">// Customers can modify this function to:</span>
+<span class="w">    </span><span class="c1">// - Change the result string format.</span>
+<span class="w">    </span><span class="c1">// - Include additional information such as matching score.</span>
+<span class="w">    </span><span class="c1">// - Return multiple detected objects.</span>
+<span class="w">    </span><span class="c1">// - Apply custom coordinate transformations.</span>
+<span class="w">    </span><span class="c1">// - Adapt the output to their robot communication protocol.</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// ========================================================================</span>
+
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetLocatorResult</span><span class="p">(</span><span class="n">CogPMRedLineTool</span><span class="w"> </span><span class="n">tool</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// --------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// STEP 1 - CHECK RESULT AVAILABILITY</span>
+<span class="w">        </span><span class="c1">// --------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// A null results collection indicates that inspection results</span>
+<span class="w">        </span><span class="c1">// are not available.</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tool</span><span class="p">.</span><span class="n">Results</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;#Error_Control_TOOL_RUN&quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// --------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// STEP 2 - CHECK OBJECT DETECTION</span>
+<span class="w">        </span><span class="c1">// --------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// Return Not_Found when no objects are detected.</span>
+<span class="w">        </span><span class="c1">// This is a valid inspection result, not an execution error.</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tool</span><span class="p">.</span><span class="n">Results</span><span class="p">.</span><span class="n">Count</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Not_Found&quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// --------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// STEP 3 - GET THE FIRST DETECTED OBJECT</span>
+<span class="w">        </span><span class="c1">// --------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// Results[0] contains the first result returned by the locator.</span>
+<span class="w">        </span><span class="c1">// GetPose() provides the object&#39;s position and orientation.</span>
+
+<span class="w">        </span><span class="n">CogTransform2DLinear</span><span class="w"> </span><span class="n">pose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tool</span><span class="p">.</span><span class="n">Results</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">GetPose</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// --------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// STEP 4 - EXTRACT POSITION AND ROTATION</span>
+<span class="w">        </span><span class="c1">// --------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// X and Y use the coordinate system configured in VisionPro.</span>
+<span class="w">        </span><span class="c1">// Rotation is converted from radians to degrees.</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pose</span><span class="p">.</span><span class="n">TranslationX</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pose</span><span class="p">.</span><span class="n">TranslationY</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">rz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pose</span><span class="p">.</span><span class="n">Rotation</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">180.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// --------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// STEP 5 - FORMAT RESULT STRING</span>
+<span class="w">        </span><span class="c1">// --------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// F3 specifies three decimal places.</span>
+<span class="w">        </span><span class="c1">// InvariantCulture ensures that the decimal separator is always a dot.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// CUSTOMIZATION:</span>
+<span class="w">        </span><span class="c1">// Modify the format according to the required robot protocol.</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;X=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="s">&quot;F3&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">CultureInfo</span><span class="p">.</span><span class="n">InvariantCulture</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s">&quot;;Y=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="s">&quot;F3&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">CultureInfo</span><span class="p">.</span><span class="n">InvariantCulture</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s">&quot;;Rz=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rz</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="s">&quot;F3&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">CultureInfo</span><span class="p">.</span><span class="n">InvariantCulture</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// ========================================================================</span>
+<span class="w">    </span><span class="c1">// MAIN FUNCTION - GROUP RUN</span>
+<span class="w">    </span><span class="c1">// ========================================================================</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// EXECUTION SEQUENCE</span>
+<span class="w">    </span><span class="c1">// ------------------</span>
+<span class="w">    </span><span class="c1">// 1. Reset outputs.</span>
+<span class="w">    </span><span class="c1">// 2. Read Input_Control.</span>
+<span class="w">    </span><span class="c1">// 3. Retrieve inspection tools.</span>
+<span class="w">    </span><span class="c1">// 4. Execute selected locators.</span>
+<span class="w">    </span><span class="c1">// 5. Generate Output_String.</span>
+<span class="w">    </span><span class="c1">// 6. Select the tool for image visualization.</span>
+<span class="w">    </span><span class="c1">// 7. Retrieve its LastRunRecord.</span>
+<span class="w">    </span><span class="c1">// 8. Extract the image record.</span>
+<span class="w">    </span><span class="c1">// 9. Export the record to the FlexiVision HMI.</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// ========================================================================</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">GroupRun</span><span class="p">(</span><span class="k">ref</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="k">ref</span><span class="w"> </span><span class="n">CogToolResultConstants</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// ====================================================================</span>
+<span class="w">        </span><span class="c1">// 1 - RESET OUTPUTS</span>
+<span class="w">        </span><span class="c1">// ====================================================================</span>
+<span class="w">        </span><span class="c1">// Clear previous results to prevent outdated information</span>
+<span class="w">        </span><span class="c1">// from being displayed during a new inspection cycle.</span>
+
+<span class="w">        </span><span class="n">mToolBlock</span><span class="p">.</span><span class="n">Outputs</span><span class="p">[</span><span class="s">&quot;Output_Image&quot;</span><span class="p">].</span><span class="n">Value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span>
+<span class="w">        </span><span class="n">mToolBlock</span><span class="p">.</span><span class="n">Outputs</span><span class="p">[</span><span class="s">&quot;Output_String&quot;</span><span class="p">].</span><span class="n">Value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// ====================================================================</span>
+<span class="w">        </span><span class="c1">// 2 - READ ROBOT CONTROL PARAMETER</span>
+<span class="w">        </span><span class="c1">// ====================================================================</span>
+<span class="w">        </span><span class="c1">// FlexiVision receives the command from the robot and forwards</span>
+<span class="w">        </span><span class="c1">// the optional parameter to the VisionPro script.</span>
+
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// Robot command              VisionPro Input_Control</span>
+<span class="w">        </span><span class="c1">// ------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// start_control_        &quot;&quot;</span>
+<span class="w">        </span><span class="c1">// start_control_1       &quot;1&quot;</span>
+<span class="w">        </span><span class="c1">// start_control_2       &quot;2&quot;</span>
+<span class="w">        </span><span class="c1">// start_control_ABC     &quot;ABC&quot;</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// In this example:</span>
+<span class="w">        </span><span class="c1">// Empty -&gt; Run both inspection tools.</span>
+<span class="w">        </span><span class="c1">// &quot;1&quot; -&gt; Run PMRedLine Tool 1.</span>
+<span class="w">        </span><span class="c1">// &quot;2&quot; -&gt; Run PMRedLine Tool 2.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// CUSTOMIZATION:</span>
+<span class="w">        </span><span class="c1">// Customers can implement additional control parameters.</span>
+
+<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="n">mToolBlock</span><span class="p">.</span><span class="n">Inputs</span><span class="p">[</span><span class="s">&quot;Input_Control&quot;</span><span class="p">].</span><span class="n">Value</span><span class="p">).</span><span class="n">Trim</span><span class="p">();</span>
+
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">run1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">run2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Reject unsupported control parameters.</span>
+<span class="w">        </span><span class="c1">// All error messages must begin with #Error_Control_.</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">run1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">run2</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">mToolBlock</span><span class="p">.</span><span class="n">Outputs</span><span class="p">[</span><span class="s">&quot;Output_String&quot;</span><span class="p">].</span><span class="n">Value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#Error_Control_INVALID_CONTROL&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// ====================================================================</span>
+<span class="w">        </span><span class="c1">// 3 - GET INSPECTION TOOL REFERENCES</span>
+<span class="w">        </span><span class="c1">// ====================================================================</span>
+<span class="w">        </span><span class="c1">// Retrieve the PMRedLine tools from the current ToolBlock.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// IMPORTANT:</span>
+<span class="w">        </span><span class="c1">// Tool names must match those configured in VisionPro.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// CUSTOMIZATION:</span>
+<span class="w">        </span><span class="c1">// Customers can replace these references with other VisionPro tools.</span>
+
+<span class="w">        </span><span class="n">CogPMRedLineTool</span><span class="w"> </span><span class="n">tool1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mToolBlock</span><span class="p">.</span><span class="n">Tools</span><span class="p">[</span><span class="s">&quot;CogPMRedLineTool1&quot;</span><span class="p">]</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">CogPMRedLineTool</span><span class="p">;</span>
+<span class="w">        </span><span class="n">CogPMRedLineTool</span><span class="w"> </span><span class="n">tool2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mToolBlock</span><span class="p">.</span><span class="n">Tools</span><span class="p">[</span><span class="s">&quot;CogPMRedLineTool2&quot;</span><span class="p">]</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">CogPMRedLineTool</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Verify that the required tools are available.</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tool1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">tool2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">mToolBlock</span><span class="p">.</span><span class="n">Outputs</span><span class="p">[</span><span class="s">&quot;Output_String&quot;</span><span class="p">].</span><span class="n">Value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#Error_Control_TOOL_NOT_FOUND&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// ====================================================================</span>
+<span class="w">        </span><span class="c1">// 4 - EXECUTE SELECTED LOCATORS</span>
+<span class="w">        </span><span class="c1">// ====================================================================</span>
+<span class="w">        </span><span class="c1">// Execute only the tools enabled by Input_Control.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// RunTool() executes the selected VisionPro inspection tool.</span>
+<span class="w">        </span><span class="c1">// GetLocatorResult() extracts and formats the detected object&#39;s pose.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// If no object is found, the result is Not_Found.</span>
+
+<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">result1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">result2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// --------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// EXECUTE PMREDLINE TOOL 1</span>
+<span class="w">        </span><span class="c1">// --------------------------------------------------------------------</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">run1</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">mToolBlock</span><span class="p">.</span><span class="n">RunTool</span><span class="p">(</span><span class="n">tool1</span><span class="p">,</span><span class="w"> </span><span class="k">ref</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="k">ref</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
+<span class="w">            </span><span class="n">result1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetLocatorResult</span><span class="p">(</span><span class="n">tool1</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// --------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// EXECUTE PMREDLINE TOOL 2</span>
+<span class="w">        </span><span class="c1">// --------------------------------------------------------------------</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">run2</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">mToolBlock</span><span class="p">.</span><span class="n">RunTool</span><span class="p">(</span><span class="n">tool2</span><span class="p">,</span><span class="w"> </span><span class="k">ref</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="k">ref</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
+<span class="w">            </span><span class="n">result2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetLocatorResult</span><span class="p">(</span><span class="n">tool2</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// ====================================================================</span>
+<span class="w">        </span><span class="c1">// 5 - GENERATE OUTPUT STRING</span>
+<span class="w">        </span><span class="c1">// ====================================================================</span>
+<span class="w">        </span><span class="c1">// Create the inspection result string sent to FlexiVision.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// When both tools are executed, their results are separated by &quot;|&quot;.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// Examples:</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// Tool 1:</span>
+<span class="w">        </span><span class="c1">// X=125.450;Y=78.320;Rz=45.000</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// Tool 2:</span>
+<span class="w">        </span><span class="c1">// X=210.100;Y=90.500;Rz=-30.000</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// Both tools:</span>
+<span class="w">        </span><span class="c1">// 1:X=125.450;Y=78.320;Rz=45.000|2:Not_Found</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// ERROR HANDLING:</span>
+<span class="w">        </span><span class="c1">// An execution error takes priority over successful inspection</span>
+<span class="w">        </span><span class="c1">// results and must appear at the beginning of Output_String.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// CUSTOMIZATION:</span>
+<span class="w">        </span><span class="c1">// Customers can modify the result format for their robot protocol.</span>
+
+<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">outputString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">run1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">result1</span><span class="p">.</span><span class="n">StartsWith</span><span class="p">(</span><span class="s">&quot;#Error_Control_&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">StringComparison</span><span class="p">.</span><span class="n">Ordinal</span><span class="p">))</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">outputString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;;Tool=1&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="nf">if</span><span class="w"> </span><span class="p">(</span><span class="n">run2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">result2</span><span class="p">.</span><span class="n">StartsWith</span><span class="p">(</span><span class="s">&quot;#Error_Control_&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">StringComparison</span><span class="p">.</span><span class="n">Ordinal</span><span class="p">))</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">outputString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;;Tool=2&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="nf">if</span><span class="w"> </span><span class="p">(</span><span class="n">run1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">run2</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">outputString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">result1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;|2:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">result2</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="nf">if</span><span class="w"> </span><span class="p">(</span><span class="n">run1</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">outputString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="nf">if</span><span class="w"> </span><span class="p">(</span><span class="n">run2</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">outputString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result2</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Export the result string to FlexiVision.</span>
+
+<span class="w">        </span><span class="n">mToolBlock</span><span class="p">.</span><span class="n">Outputs</span><span class="p">[</span><span class="s">&quot;Output_String&quot;</span><span class="p">].</span><span class="n">Value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">outputString</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// ====================================================================</span>
+<span class="w">        </span><span class="c1">// 6 - SELECT TOOL FOR IMAGE OUTPUT</span>
+<span class="w">        </span><span class="c1">// ====================================================================</span>
+<span class="w">        </span><span class="c1">// Select which inspection tool provides the graphical image record</span>
+<span class="w">        </span><span class="c1">// displayed in the FlexiVision HMI.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// DEFAULT BEHAVIOR</span>
+<span class="w">        </span><span class="c1">// ----------------</span>
+<span class="w">        </span><span class="c1">// Input_Control = &quot;&quot; -&gt; Display Tool 1.</span>
+<span class="w">        </span><span class="c1">// Input_Control = &quot;1&quot; -&gt; Display Tool 1.</span>
+<span class="w">        </span><span class="c1">// Input_Control = &quot;2&quot; -&gt; Display Tool 2.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// IMPORTANT:</span>
+<span class="w">        </span><span class="c1">// When both tools execute, only Tool 1 is selected for visualization.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// CUSTOMIZATION:</span>
+<span class="w">        </span><span class="c1">// Customers can select another VisionPro tool&#39;s graphical record.</span>
+
+<span class="w">        </span><span class="n">CogPMRedLineTool</span><span class="w"> </span><span class="n">displayTool</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">control</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">displayTool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tool2</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">displayTool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tool1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// ====================================================================</span>
+<span class="w">        </span><span class="c1">// 7 - GET LAST RUN RECORD</span>
+<span class="w">        </span><span class="c1">// ====================================================================</span>
+<span class="w">        </span><span class="c1">// Retrieve the LastRunRecord from the selected inspection tool.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// The LastRunRecord contains information from the most recent</span>
+<span class="w">        </span><span class="c1">// inspection, including image and graphical subrecords when available.</span>
+
+<span class="w">        </span><span class="n">CogRecord</span><span class="w"> </span><span class="n">lastRecord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">displayTool</span><span class="p">.</span><span class="n">CreateLastRunRecord</span><span class="p">()</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">CogRecord</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Verify that the selected tool provides a valid record.</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lastRecord</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">mToolBlock</span><span class="p">.</span><span class="n">Outputs</span><span class="p">[</span><span class="s">&quot;Output_String&quot;</span><span class="p">].</span><span class="n">Value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#Error_Control_LAST_RECORD_NULL&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// ====================================================================</span>
+<span class="w">        </span><span class="c1">// 8 - EXTRACT IMAGE RECORD</span>
+<span class="w">        </span><span class="c1">// ====================================================================</span>
+<span class="w">        </span><span class="c1">// Extract the &quot;InputImage&quot; subrecord from the LastRunRecord.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// This subrecord contains the image used by the inspection tool.</span>
+<span class="w">        </span><span class="c1">// Associated graphical information may also be included.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// IMPORTANT:</span>
+<span class="w">        </span><span class="c1">// The record key must match the selected VisionPro tool&#39;s</span>
+<span class="w">        </span><span class="c1">// LastRunRecord structure.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// CUSTOMIZATION:</span>
+<span class="w">        </span><span class="c1">// Customers can select a different subrecord when using</span>
+<span class="w">        </span><span class="c1">// other VisionPro inspection tools.</span>
+
+<span class="w">        </span><span class="n">CogRecord</span><span class="w"> </span><span class="n">imageRecord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">try</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">imageRecord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lastRecord</span><span class="p">.</span><span class="n">SubRecords</span><span class="p">[</span><span class="s">&quot;InputImage&quot;</span><span class="p">]</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">CogRecord</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="p">)</span>
+
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">imageRecord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Verify that the image record exists.</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">imageRecord</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">mToolBlock</span><span class="p">.</span><span class="n">Outputs</span><span class="p">[</span><span class="s">&quot;Output_String&quot;</span><span class="p">].</span><span class="n">Value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#Error_Control_INPUT_IMAGE_RECORD_NULL&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Verify that the record contains a valid Cognex image.</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">imageRecord</span><span class="p">.</span><span class="n">Content</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">ICogImage</span><span class="p">))</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">mToolBlock</span><span class="p">.</span><span class="n">Outputs</span><span class="p">[</span><span class="s">&quot;Output_String&quot;</span><span class="p">].</span><span class="n">Value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#Error_Control_RECORD_WITHOUT_IMAGE&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// ====================================================================</span>
+<span class="w">        </span><span class="c1">// 9 - EXPORT IMAGE RECORD TO FLEXIVISION HMI</span>
+<span class="w">        </span><span class="c1">// ====================================================================</span>
+<span class="w">        </span><span class="c1">// Assign the selected CogRecord to Output_Image.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// Output_Image is permanently linked to the FlexiVision HMI.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// Customers can change the selected graphical record directly</span>
+<span class="w">        </span><span class="c1">// in this script without modifying the HMI configuration.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// IMPORTANT:</span>
+<span class="w">        </span><span class="c1">// Output_Image must be configured as a compatible CogRecord output</span>
+<span class="w">        </span><span class="c1">// in the VisionPro ToolBlock.</span>
+
+<span class="w">        </span><span class="n">mToolBlock</span><span class="p">.</span><span class="n">Outputs</span><span class="p">[</span><span class="s">&quot;Output_Image&quot;</span><span class="p">].</span><span class="n">Value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">imageRecord</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// --------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// END OF GROUP RUN</span>
+<span class="w">        </span><span class="c1">// --------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// Returning false prevents the default automatic execution</span>
+<span class="w">        </span><span class="c1">// of the ToolBlock tools, because this script executes them manually.</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// ========================================================================</span>
+<span class="w">    </span><span class="c1">// MODIFY CURRENT RUN RECORD</span>
+<span class="w">    </span><span class="c1">// ========================================================================</span>
+<span class="w">    </span><span class="c1">// Optional method for customizing the current run record.</span>
+<span class="w">    </span><span class="c1">// Not required because Output_Image is assigned in GroupRun().</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ModifyCurrentRunRecord</span><span class="p">(</span><span class="n">ICogRecord</span><span class="w"> </span><span class="n">currentRecord</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// ========================================================================</span>
+<span class="w">    </span><span class="c1">// MODIFY LAST RUN RECORD</span>
+<span class="w">    </span><span class="c1">// ========================================================================</span>
+<span class="w">    </span><span class="c1">// Optional method for modifying the ToolBlock LastRunRecord.</span>
+<span class="w">    </span><span class="c1">// The record exported to the HMI is selected inside GroupRun().</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ModifyLastRunRecord</span><span class="p">(</span><span class="n">ICogRecord</span><span class="w"> </span><span class="n">lastRecord</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// ========================================================================</span>
+<span class="w">    </span><span class="c1">// INITIALIZE SCRIPT</span>
+<span class="w">    </span><span class="c1">// ========================================================================</span>
+<span class="w">    </span><span class="c1">// Called when the VisionPro advanced script is initialized.</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// Stores the reference to the hosting ToolBlock, allowing</span>
+<span class="w">    </span><span class="c1">// access to its inputs, outputs, and inspection tools.</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// IMPORTANT:</span>
+<span class="w">    </span><span class="c1">// Do not remove base.Initialize(host).</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Initialize</span><span class="p">(</span><span class="n">Cognex</span><span class="p">.</span><span class="n">VisionPro</span><span class="p">.</span><span class="n">ToolGroup</span><span class="p">.</span><span class="n">CogToolGroup</span><span class="w"> </span><span class="n">host</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// DO NOT REMOVE</span>
+<span class="w">        </span><span class="k">base</span><span class="p">.</span><span class="n">Initialize</span><span class="p">(</span><span class="n">host</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="n">mToolBlock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">CogToolBlock</span><span class="p">)</span><span class="w"> </span><span class="n">host</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<br>
+<!-- Versions and languages set-up -->
+<style>
+  .fixed-bar {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(240, 240, 240, 0.85);
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    border-radius: 6px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
+    color: #222;
+    display: flex;
+    gap: 12px;
+    padding: 6px 12px;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: saturate(180%) blur(10px);
+  }
+
+  @media print {
+    .fixed-bar {
+      display: none !important;
+    }
+  }
+
+  .fixed-bar .dropdown {
+    position: relative;
+    user-select: none;
+  }
+
+  .fixed-bar .dropdown-toggle {
+    background-color: rgba(200, 200, 200, 0.4);
+    color: #222;
+    padding: 6px 10px;
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+  }
+
+  .fixed-bar .dropdown-toggle::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .fixed-bar .dropdown-toggle:hover {
+    background-color: rgba(100, 150, 220, 0.2);
+    color: #1a3e72;
+    border-color: rgba(26, 62, 114, 0.6);
+  }
+
+  .fixed-bar .dropdown-toggle .fa {
+    font-size: 0.9rem;
+  }
+
+  .fixed-bar .dropdown-menu {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background-color: rgba(250, 250, 250, 0.95);
+    border: 1px solid rgba(150, 150, 150, 0.3);
+    border-radius: 4px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    min-width: 140px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    flex-direction: column;
+    z-index: 10000;
+    backdrop-filter: saturate(180%) blur(8px);
+  }
+
+  .fixed-bar .dropdown-menu.show {
+    display: flex;
+  }
+
+  .fixed-bar .dropdown-menu a {
+    padding: 8px 12px;
+    color: #1a3e72;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+    white-space: nowrap;
+    transition: background-color 0.25s ease;
+  }
+
+  .fixed-bar .dropdown-menu a:last-child {
+    border-bottom: none;
+  }
+
+  .fixed-bar .dropdown-menu a:hover {
+    background-color: rgba(100, 150, 220, 0.15);
+  }
+
+  .dropdown-download-buttons .btn__icon-container svg {
+    width: 1em;
+    height: 1em;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vertical-align: middle;
+  }
+
+  a.headerlink.manual-heading-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.2em;
+    text-decoration: none;
+    color: #7b8493;
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+
+  a.headerlink.manual-heading-action svg {
+    width: 0.8em;
+    height: 0.8em;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vertical-align: middle;
+  }
+
+  a.headerlink.manual-feedback-link:hover,
+  a.headerlink.manual-feedback-link:focus-visible {
+    color: #2563eb;
+  }
+
+  a.headerlink.manual-service-link:hover,
+  a.headerlink.manual-service-link:focus-visible {
+    color: #d97706;
+  }
+</style>
+<div class="fixed-bar" role="region" aria-label="Version and language selector">
+  <div class="dropdown" data-selector="version">
+    <div class="dropdown-toggle" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
+      Version: <span class="current-value">V. 1.02</span>
+      <span class="caret-icon" aria-hidden="true">&#9662;</span>
+    </div>
+    <div class="dropdown-menu" role="listbox">
+      	<a href="#" role="option">V. 1.00</a>
+				<a href="#" role="option">V. 1.01</a>
+				<a href="#" role="option">V. 1.02</a>
+    </div>
+  </div>
+  <div class="dropdown" data-selector="language">
+    <div class="dropdown-toggle" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
+      Language: <span class="current-value">EN</span>
+      <span class="caret-icon" aria-hidden="true">&#9662;</span>
+    </div>
+    <div class="dropdown-menu" role="listbox">
+      	<a href="#" role="option">DE</a>
+				<a href="#" role="option">EN</a>
+				<a href="#" role="option">ES</a>
+				<a href="#" role="option">FR</a>
+				<a href="#" role="option">IT</a>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    const bar = document.querySelector('.fixed-bar');
+    if (!bar) {
+      return;
+    }
+
+    const inlineVersions = ["V. 1.00", "V. 1.01", "V. 1.02"];
+    const inlineLanguages = ["DE", "EN", "ES", "FR", "IT"];
+    const manifest = window.FV_VERSIONING || null;
+    const versions = Array.isArray(manifest && manifest.versions) && manifest.versions.length
+      ? manifest.versions
+      : inlineVersions;
+    const offlineZipEnabled = false;
+    const offlineZipFileName = 'Offline manual.zip';
+    const americanRegions = new Set([
+      'AG', 'AR', 'AW', 'BB', 'BL', 'BM', 'BO', 'BQ', 'BR', 'BS', 'BZ', 'CA', 'CL', 'CO', 'CR',
+      'CU', 'CW', 'DM', 'DO', 'EC', 'FK', 'GD', 'GF', 'GL', 'GP', 'GT', 'GY', 'HN', 'HT', 'JM',
+      'KN', 'KY', 'LC', 'MF', 'MQ', 'MS', 'MX', 'NI', 'PA', 'PE', 'PM', 'PR', 'PY', 'SR', 'SV',
+      'SX', 'TC', 'TT', 'US', 'UY', 'VC', 'VE', 'VG', 'VI', '419'
+    ]);
+    const additionalAmericanTimeZones = new Set([
+      'Atlantic/Bermuda',
+      'Pacific/Easter',
+      'Pacific/Galapagos',
+      'Pacific/Honolulu',
+      'Pacific/Pitcairn'
+    ]);
+
+    function setCaret(toggle, isOpen) {
+      const caret = toggle.querySelector('.caret-icon');
+      if (caret) {
+        caret.innerHTML = isOpen ? '&#9652;' : '&#9662;';
+      }
+    }
+
+    function closeAllMenus() {
+      bar.querySelectorAll('.dropdown').forEach(dropdown => {
+        const menu = dropdown.querySelector('.dropdown-menu');
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        menu.classList.remove('show');
+        toggle.setAttribute('aria-expanded', 'false');
+        setCaret(toggle, false);
+      });
+    }
+
+    function getLanguagesForVersion(version) {
+      const manifestLanguages = manifest &&
+        manifest.languagesByVersion &&
+        Array.isArray(manifest.languagesByVersion[version]) &&
+        manifest.languagesByVersion[version].length
+          ? manifest.languagesByVersion[version]
+          : null;
+
+      if (manifestLanguages) {
+        return manifestLanguages;
+      }
+
+      return inlineLanguages;
+    }
+
+    function getDefaultLanguageForVersion(version) {
+      const manifestDefault = manifest &&
+        manifest.defaultLanguageByVersion &&
+        typeof manifest.defaultLanguageByVersion[version] === 'string'
+          ? manifest.defaultLanguageByVersion[version]
+          : '';
+
+      if (manifestDefault) {
+        return manifestDefault;
+      }
+
+      const availableLanguages = getLanguagesForVersion(version);
+      return availableLanguages.length ? availableLanguages[0] : (inlineLanguages[0] || '');
+    }
+
+    function populateSelectorMenu(selector, values) {
+      const menu = bar.querySelector(`[data-selector="${selector}"] .dropdown-menu`);
+      if (!menu) {
+        return;
+      }
+
+      menu.innerHTML = '';
+      values.forEach(value => {
+        const link = document.createElement('a');
+        link.href = '#';
+        link.setAttribute('role', 'option');
+        link.textContent = value;
+        menu.appendChild(link);
+      });
+    }
+
+    function getNavigationContext() {
+      const currentUrl = new URL(window.location.href);
+      const rawSegments = currentUrl.pathname.split('/').filter(Boolean);
+      const decodedSegments = rawSegments.map(segment => decodeURIComponent(segment));
+      const currentVersionLabel = bar.querySelector('[data-selector="version"] .current-value');
+      const currentLanguageLabel = bar.querySelector('[data-selector="language"] .current-value');
+      const fallbackVersion = currentVersionLabel ? currentVersionLabel.textContent.trim() : '';
+      const versionIndex = decodedSegments.findIndex(segment => versions.includes(segment));
+      const currentVersion = versionIndex !== -1 ? decodedSegments[versionIndex] : fallbackVersion;
+      const availableLanguages = getLanguagesForVersion(currentVersion);
+      const fallbackLanguage = currentLanguageLabel ? currentLanguageLabel.textContent.trim() : '';
+      const languageIndex = decodedSegments.findIndex(
+        (segment, index) => index > versionIndex && availableLanguages.includes(segment)
+      );
+
+      return {
+        currentUrl: currentUrl,
+        rawSegments: rawSegments,
+        versionIndex: versionIndex,
+        currentVersion: currentVersion,
+        currentLanguage: languageIndex !== -1 ? decodedSegments[languageIndex] : fallbackLanguage
+      };
+    }
+
+    function refreshNavigationMenus() {
+      const context = getNavigationContext();
+      const resolvedVersion = versions.includes(context.currentVersion) ? context.currentVersion : (versions[0] || context.currentVersion);
+      const availableLanguages = getLanguagesForVersion(resolvedVersion);
+      const resolvedLanguage = availableLanguages.includes(context.currentLanguage)
+        ? context.currentLanguage
+        : (getDefaultLanguageForVersion(resolvedVersion) || context.currentLanguage);
+
+      populateSelectorMenu('version', versions);
+      populateSelectorMenu('language', availableLanguages);
+
+      const versionLabel = bar.querySelector('[data-selector="version"] .current-value');
+      const languageLabel = bar.querySelector('[data-selector="language"] .current-value');
+      if (versionLabel) {
+        versionLabel.textContent = resolvedVersion;
+      }
+      if (languageLabel) {
+        languageLabel.textContent = resolvedLanguage;
+      }
+    }
+
+    function buildScopedUrl(targetVersion, targetLanguage, pageName) {
+      const context = getNavigationContext();
+      const rootSegments = context.versionIndex !== -1 ? context.rawSegments.slice(0, context.versionIndex) : [];
+      const targetPath = '/' + rootSegments.concat([
+        encodeURIComponent(targetVersion),
+        encodeURIComponent(targetLanguage),
+        encodeURIComponent(pageName)
+      ]).join('/');
+
+      if (context.currentUrl.protocol === 'file:') {
+        return 'file://' + targetPath;
+      }
+
+      return context.currentUrl.origin + targetPath;
+    }
+
+    function buildTargetUrl(targetVersion, targetLanguage) {
+      return buildScopedUrl(targetVersion, targetLanguage, 'index.html');
+    }
+
+    function buildSiteRootAssetUrl(fileName) {
+      const context = getNavigationContext();
+      const rootSegments = context.versionIndex !== -1 ? context.rawSegments.slice(0, context.versionIndex) : [];
+      const targetPath = '/' + rootSegments.concat([encodeURIComponent(fileName)]).join('/');
+
+      if (context.currentUrl.protocol === 'file:') {
+        return 'file://' + targetPath;
+      }
+
+      return context.currentUrl.origin + targetPath;
+    }
+
+    function buildClientSiteZipUrl() {
+      return buildSiteRootAssetUrl(offlineZipFileName);
+    }
+
+    function getHeadingText(heading) {
+      const clone = heading.cloneNode(true);
+      clone.querySelectorAll('a.headerlink').forEach(link => link.remove());
+      return clone.textContent.replace(/\s+/g, ' ').trim();
+    }
+
+    function normalizeMailText(text) {
+      return String(text || '').replace(/\u00AE/g, '');
+    }
+
+    function getTimeZoneAmericaDecision() {
+      try {
+        const timeZone = String(Intl.DateTimeFormat().resolvedOptions().timeZone || '').trim();
+        if (!timeZone) {
+          return null;
+        }
+        return timeZone.startsWith('America/') || additionalAmericanTimeZones.has(timeZone);
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function isCoordinateInAmericas(latitude, longitude) {
+      if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) {
+        return null;
+      }
+
+      return latitude >= -60 && latitude <= 85 && longitude >= -170 && longitude <= -25;
+    }
+
+    function getCurrentPosition(options) {
+      return new Promise((resolve, reject) => {
+        if (!navigator.geolocation || typeof navigator.geolocation.getCurrentPosition !== 'function') {
+          reject(new Error('Geolocation unavailable'));
+          return;
+        }
+
+        navigator.geolocation.getCurrentPosition(resolve, reject, options);
+      });
+    }
+
+    async function resolveServiceAddress() {
+      const timeZoneDecision = getTimeZoneAmericaDecision();
+      if (timeZoneDecision === false) {
+        return 'service@arsautomation.com';
+      }
+
+      const canTryGeolocation = Boolean(
+        navigator.onLine &&
+        window.isSecureContext &&
+        navigator.geolocation &&
+        typeof navigator.geolocation.getCurrentPosition === 'function'
+      );
+
+      if (canTryGeolocation) {
+        try {
+          const position = await getCurrentPosition({
+            enableHighAccuracy: false,
+            timeout: 4000,
+            maximumAge: 300000
+          });
+          const inAmericas = isCoordinateInAmericas(position.coords.latitude, position.coords.longitude);
+          if (inAmericas !== null) {
+            return inAmericas ? 'us.service@arsautomation.com' : 'service@arsautomation.com';
+          }
+        } catch (error) {
+        }
+      }
+
+      if (timeZoneDecision === true) {
+        return 'us.service@arsautomation.com';
+      }
+
+      return 'service@arsautomation.com';
+    }
+
+    function buildMailtoUrl(address, subject, body) {
+      return 'mailto:' + address +
+        '?subject=' + encodeURIComponent(normalizeMailText(subject)) +
+        '&body=' + encodeURIComponent(normalizeMailText(body));
+    }
+
+    function createHeadingActionLink(className, title, mailtoUrl, svgMarkup) {
+      const link = document.createElement('a');
+      link.className = 'headerlink manual-heading-action ' + className;
+      link.href = mailtoUrl;
+      link.title = title;
+      link.setAttribute('aria-label', title);
+      link.innerHTML = svgMarkup;
+      return link;
+    }
+
+    function addHeadingActions() {
+      const feedbackIcon = [
+        '<svg viewBox="0 0 16 16" aria-hidden="true">',
+        '<path d="M3 3.5h10v6.5H7.5L4.5 13v-3H3z"></path>',
+        '<path d="M6 6.2h4"></path>',
+        '<path d="M6 8.2h3"></path>',
+        '</svg>'
+      ].join('');
+
+        const serviceIcon = [
+          '<svg viewBox="0 0 16 16" aria-hidden="true">',
+          '<circle cx="8" cy="8" r="5.2"></circle>',
+          '<path d="M6.4 6.1A1.9 1.9 0 0 1 8 5.2c1.1 0 1.9.7 1.9 1.7 0 .8-.4 1.3-1.2 1.8-.6.4-.9.8-.9 1.5"></path>',
+          '<circle cx="8" cy="11.7" r="0.45" style="fill:currentColor;stroke:none"></circle>',
+          '</svg>'
+        ].join('');
+
+      document.querySelectorAll('h1 > a.headerlink, h2 > a.headerlink, h3 > a.headerlink, h4 > a.headerlink, h5 > a.headerlink, h6 > a.headerlink').forEach(link => {
+        const heading = link.parentElement;
+        if (!heading || heading.querySelector('.manual-feedback-link') || heading.querySelector('.manual-service-link')) {
+          return;
+        }
+
+        const sectionTitle = getHeadingText(heading);
+        const sectionUrl = new URL(link.getAttribute('href'), window.location.href).href;
+        const pageUrl = window.location.href.split('#')[0];
+        const feedbackBody = [
+          'Hello Documentation Team,',
+          '',
+          'I would like to suggest an improvement for this section of the manual.',
+          '',
+          'Section: ' + sectionTitle,
+          'Page: ' + pageUrl,
+          'Section link: ' + sectionUrl,
+          '',
+          'Suggestion:',
+          ''
+        ].join('\n');
+          const serviceBody = [
+            'Hello Service Team,',
+            '',
+            'I need support related to this section of the manual.',
+            '',
+            'Section: ' + sectionTitle,
+            'Page: ' + pageUrl,
+            'Section link: ' + sectionUrl,
+            '',
+            'FlexiBowl serial number:',
+            '',
+            'Photos or videos of the issue attached:',
+            '',
+            'Issue description:',
+            ''
+          ].join('\n');
+
+        const feedbackLink = createHeadingActionLink(
+          'manual-feedback-link',
+          'Suggest an improvement for this section',
+          buildMailtoUrl('documentation@arsautomation.com', 'Documentation suggestion: ' + sectionTitle, feedbackBody),
+          feedbackIcon
+        );
+          const serviceLink = createHeadingActionLink(
+            'manual-service-link',
+            'Contact service about this section',
+            '#',
+            serviceIcon
+          );
+          serviceLink.addEventListener('click', async event => {
+            event.preventDefault();
+            const serviceAddress = await resolveServiceAddress();
+            window.location.href = buildMailtoUrl(serviceAddress, 'Service request: ' + sectionTitle, serviceBody);
+          });
+
+          heading.appendChild(feedbackLink);
+          heading.appendChild(serviceLink);
+        });
+    }
+
+    function enhancePrintMenu() {
+      const dropdown = document.querySelector('.dropdown-download-buttons');
+      if (!dropdown || dropdown.dataset.printMenuEnhanced === 'true') {
+        return;
+      }
+
+      dropdown.dataset.printMenuEnhanced = 'true';
+
+      const toggleButton = dropdown.querySelector('.dropdown-toggle');
+      const hasReleaseDownloads = offlineZipEnabled;
+
+      if (toggleButton) {
+        const toggleLabel = hasReleaseDownloads ? 'Export options' : 'Print options';
+        toggleButton.setAttribute('aria-label', toggleLabel);
+        toggleButton.setAttribute('title', toggleLabel);
+        toggleButton.setAttribute('data-bs-original-title', toggleLabel);
+        const toggleIcon = toggleButton.querySelector('i');
+        if (toggleIcon) {
+          toggleIcon.className = hasReleaseDownloads ? 'fas fa-download' : 'fas fa-print';
+        }
+      }
+
+      dropdown.querySelectorAll('.btn-download-source-button').forEach(sourceButton => {
+        const sourceItem = sourceButton.closest('li');
+        if (sourceItem) {
+          sourceItem.remove();
+        }
+      });
+
+      const pagePrintButton = dropdown.querySelector('.btn-download-pdf-button');
+      if (pagePrintButton) {
+        pagePrintButton.setAttribute('title', 'Print this page');
+        pagePrintButton.setAttribute('aria-label', 'Print this page');
+        pagePrintButton.setAttribute('data-bs-original-title', 'Print this page');
+        const textContainer = pagePrintButton.querySelector('.btn__text-container');
+        if (textContainer) {
+          textContainer.textContent = 'Print this page';
+        }
+      }
+
+      const menu = dropdown.querySelector('.dropdown-menu');
+      if (!menu) {
+        return;
+      }
+
+      menu.querySelectorAll('.btn-download-client-site-zip-button').forEach(button => {
+        const item = button.closest('li');
+        if (item) {
+          item.remove();
+        }
+      });
+
+      if (offlineZipEnabled) {
+        const siteZipItem = document.createElement('li');
+        const siteZipLink = document.createElement('a');
+        siteZipLink.className = 'btn btn-sm dropdown-item btn-download-client-site-zip-button';
+        siteZipLink.title = 'Download offline manual';
+        siteZipLink.setAttribute('aria-label', 'Download offline manual');
+        siteZipLink.setAttribute('download', offlineZipFileName);
+        siteZipLink.href = buildClientSiteZipUrl();
+        siteZipLink.innerHTML = [
+          '<span class="btn__icon-container">',
+          '<svg viewBox="0 0 16 16" aria-hidden="true">',
+          '<path d="M4 3.5h8v2.5H4z"></path>',
+          '<path d="M4 6h8v6.5H4z"></path>',
+          '<path d="M8 3.5v9"></path>',
+          '<path d="M6.3 9.2L8 10.9l1.7-1.7"></path>',
+          '</svg>',
+          '</span>',
+          '<span class="btn__text-container">Download offline manual</span>'
+        ].join('');
+        siteZipItem.appendChild(siteZipLink);
+        menu.appendChild(siteZipItem);
+      }
+    }
+
+    refreshNavigationMenus();
+
+    bar.querySelectorAll('.dropdown').forEach(dropdown => {
+      const toggle = dropdown.querySelector('.dropdown-toggle');
+      const menu = dropdown.querySelector('.dropdown-menu');
+      const selector = dropdown.getAttribute('data-selector');
+
+      toggle.addEventListener('click', event => {
+        event.stopPropagation();
+        const willOpen = toggle.getAttribute('aria-expanded') !== 'true';
+        closeAllMenus();
+
+        if (willOpen) {
+          menu.classList.add('show');
+          toggle.setAttribute('aria-expanded', 'true');
+          setCaret(toggle, true);
+        }
+      });
+
+      menu.addEventListener('click', event => {
+        const link = event.target.closest('a');
+        if (!link) {
+          return;
+        }
+
+        event.preventDefault();
+        const selectedValue = link.textContent.trim();
+        const context = getNavigationContext();
+        if (!selectedValue) {
+          return;
+        }
+
+        if (selector === 'version') {
+          const targetVersion = selectedValue;
+          const availableLanguages = getLanguagesForVersion(targetVersion);
+          const targetLanguage = availableLanguages.includes(context.currentLanguage)
+            ? context.currentLanguage
+            : getDefaultLanguageForVersion(targetVersion);
+          if (targetLanguage) {
+            window.location.href = buildTargetUrl(targetVersion, targetLanguage);
+          }
+          return;
+        }
+
+        window.location.href = buildTargetUrl(context.currentVersion, selectedValue);
+      });
+    });
+
+    window.addEventListener('click', closeAllMenus);
+    window.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        closeAllMenus();
+      }
+    });
+
+    addHeadingActions();
+    enhancePrintMenu();
+  })();
+</script>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="34_Comando_start_control.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong><code class="docutils literal notranslate"><span class="pre">start_control_</span></code> command</strong></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../CONFIGURAZIONI_MULTI-DISPOSITIVO/30_2FB2CAM.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>2 FlexiBowl® and 2 Cameras</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-flow">Data flow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toolblock-inputs-and-outputs">ToolBlock inputs and outputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-script-interprets-the-command">How the script interprets the command</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#output-string-text-response">Output_String: text response</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#output-image-image-with-graphic-results">Output_Image: image with graphic results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#execution-sequence-grouprun">Execution sequence (GroupRun)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customizing-the-script">Customizing the script</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-can-be-customized-and-what-must-be-preserved">What can be customized and what must be preserved</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-a-complete-visionpro-script">Appendix A – Complete VisionPro script</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By ARS Automation
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, ARS Automation.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../_shared/static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../_shared/static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

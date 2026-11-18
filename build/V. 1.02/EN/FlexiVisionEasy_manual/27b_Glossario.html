@@ -250,6 +250,16 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="APPLICAZIONI_MIX/29_Comandi_Mix.html"><strong>Mix Application Commands</strong></a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CONTROL CAMERAS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="TELECAMERE_CONTROLLO/33_Telecamere_Controllo.html"><strong>Control Cameras</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="TELECAMERE_CONTROLLO/34_Comando_start_control.html"><strong><code class="docutils literal notranslate"><span class="pre">start_control_</span></code> command</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="TELECAMERE_CONTROLLO/35_Script_VisionPro.html"><strong>VisionPro Script</strong></a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">MULTI-DEVICE CONFIGURATIONS</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="CONFIGURAZIONI_MULTI-DISPOSITIVO/30_2FB2CAM.html"><strong>2 FlexiBowl® and 2 Cameras</strong></a></li>
@@ -270,6 +280,7 @@
 <li class="toctree-l2"><a class="reference internal" href="TROUBLESHOOTING/26g_Creazione_Ricette_Modelli.html"><strong>Creating Recipes and models</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="TROUBLESHOOTING/26h_FlexiBowl_Wizard.html"><strong>FlexiBowl Wizard</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="TROUBLESHOOTING/26i_Conf_Tramoggia.html"><strong>Hopper Configuration</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="TROUBLESHOOTING/26j_Telecamere_Controllo.html"><strong>Control Cameras</strong></a></li>
 </ul>
 </details></li>
 </ul>
@@ -468,53 +479,59 @@
 <tr class="row-even"><td><p><strong>CAPTURE</strong></p></td>
 <td><p>Software command to acquire reference images of the empty and full disk, necessary for automatic calculation of hopper thresholds.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>COMPLEX / FLAT / CYLINDRICAL</strong></p></td>
+<tr class="row-odd"><td><p><strong>CogRecord</strong></p></td>
+<td><p>VisionPro graphic object (record) containing an image and the related result graphics. In the control cameras it is the type of the <code class="docutils literal notranslate"><span class="pre">Output_Image</span></code> output, displayed in the HMI.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>COMPLEX / FLAT / CYLINDRICAL</strong></p></td>
 <td><p>Geometrical categories of components in the FlexiBowl® Wizard. <em>FLAT</em>: flat shapes (washers, gaskets). <em>CYLINDRICAL</em>: cylindrical shapes (pins, screws). <em>COMPLEX</em>: irregular or asymmetrical geometries.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Working Distance</strong></p></td>
+<tr class="row-odd"><td><p><strong>Working Distance</strong></p></td>
 <td><p>Ideal distance between lens and disk surface. Typically 950-1000mm in standard configurations.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Optical Distortion</strong></p></td>
+<tr class="row-even"><td><p><strong>Optical Distortion</strong></p></td>
 <td><p>Geometrical distortion of the image due to the lens. Automatically compensated during camera calibration.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Exposure</strong></p></td>
+<tr class="row-odd"><td><p><strong>Exposure</strong></p></td>
 <td><p>Light-gathering time of the camera sensor. Measured in μs or ms; directly affects image quality in production.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Feature Threshold</strong></p></td>
+<tr class="row-even"><td><p><strong>Feature Threshold</strong></p></td>
 <td><p>Feature extraction threshold (borders, lines) during model training. Typical values: 0.3–0.8.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>FlexiBowl®</strong></p></td>
+<tr class="row-odd"><td><p><strong>FlexiBowl®</strong></p></td>
 <td><p>Vibrating rotating disc feeding system for random positioning and orientation of components for robotic picking.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>FlexiBowl® Wizard</strong></p></td>
+<tr class="row-even"><td><p><strong>FlexiBowl® Wizard</strong></p></td>
 <td><p>Wizard for automatic calculation of optimal FlexiBowl® parameters based on component geometry and behaviour.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Flip</strong></p></td>
+<tr class="row-odd"><td><p><strong>Flip</strong></p></td>
 <td><p>Pneumatic impulse under the disc to reposition the components. Configurable via <em>Flip Count</em> (number of pulses) and <em>Flip Delay</em> (interval in ms between pulses).</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Grab Train Image</strong></p></td>
+<tr class="row-even"><td><p><strong>Grab Train Image</strong></p></td>
 <td><p>Software command to acquire the image to be used in the training of a new model.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Gripper Offset</strong></p></td>
+<tr class="row-odd"><td><p><strong>Gripper Offset</strong></p></td>
 <td><p>Correction vector (ΔX, ΔY, ΔRZ) that compensates for the offset between the optical centre of the vision system and the gripper TCP.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Hotspot</strong></p></td>
+<tr class="row-even"><td><p><strong>Hotspot</strong></p></td>
 <td><p>Zone of direct light reflection in the image. It appears as an overexposed area and may impair identification.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Lens</strong></p></td>
+<tr class="row-odd"><td><p><strong>Lens</strong></p></td>
 <td><p>Optical component of the camera. It must be screwed until metal-to-metal contact; the focal length (e.g. 16mm, 25mm) determines the field of view at the working distance.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Model</strong></p></td>
+<tr class="row-even"><td><p><strong>Model</strong></p></td>
 <td><p>Geometric template of the component created during the training phase. Each recipe supports up to 8 models per FlexiBowl®.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Model Origin</strong></p></td>
+<tr class="row-odd"><td><p><strong>Model Origin</strong></p></td>
 <td><p>Reference point on the component used as the centre of the coordinate system to calculate positions. It typically corresponds to the pick TCP.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Orthogonality</strong></p></td>
+<tr class="row-even"><td><p><strong>Orthogonality</strong></p></td>
 <td><p>Perpendicularity of the camera with respect to the disc (tolerance ±1°). Verifiable with precision level.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Pattern Matching</strong></p></td>
+<tr class="row-odd"><td><p><strong>Pattern Matching</strong></p></td>
 <td><p>Algorithm that locates the components in the image by comparing them with the reference model recorded during training.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>PMRedLine</strong></p></td>
+<td><p>Cognex localization tool (<code class="docutils literal notranslate"><span class="pre">CogPMRedLineTool</span></code>) used by the sample VisionPro script of the control cameras to recognize the object and return its position and rotation.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Protocol</strong></p></td>
 <td><p>Communication format between VisionController and robot. It defines message structure, coordinate order and units of measurement.</p></td>
@@ -546,11 +563,17 @@
 <tr class="row-even"><td><p><strong>Synchronize Parameters</strong></p></td>
 <td><p>Software command that transfers parameters to the FlexiBowl®. Mandatory after each change to make the settings effective.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Timeout</strong></p></td>
+<tr class="row-odd"><td><p><strong>Control Camera</strong></p></td>
+<td><p>Additional camera, associated with FLB1, FLB2 or FLB3 (up to 3), used to perform visual inspections at the robot’s request through the <code class="docutils literal notranslate"><span class="pre">start_control_</span></code> command. Available from v0.24.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Timeout</strong></p></td>
 <td><p>Maximum time to wait for a communication reply. An error is triggered when it is exceeded.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Tilt</strong></p></td>
+<tr class="row-odd"><td><p><strong>Tilt</strong></p></td>
 <td><p>Inclination of the camera with respect to the horizontal plane. Allowed value: 0° ± 1°.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>ToolBlock</strong></p></td>
+<td><p>VisionPro container that groups the vision tools and exposes their inputs and outputs (<code class="docutils literal notranslate"><span class="pre">Image</span></code>, <code class="docutils literal notranslate"><span class="pre">Input_Control</span></code>, <code class="docutils literal notranslate"><span class="pre">Output_String</span></code>, <code class="docutils literal notranslate"><span class="pre">Output_Image</span></code>). Hosts the C# script of the control cameras.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Toplight</strong></p></td>
 <td><p>LED illuminator positioned above the disc for even illumination from above. Power supply: 24V DC.</p></td>
@@ -564,7 +587,10 @@
 <tr class="row-even"><td><p><strong>Vision Result</strong></p></td>
 <td><p>Output of the vision system: coordinates (X, Y, RZ) and score of the detected component, transmitted to the robot for picking.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>VisionController</strong></p></td>
+<tr class="row-odd"><td><p><strong>VisionPro</strong></p></td>
+<td><p>Cognex software for developing vision applications, used by FlexiVision One for the control camera scripts.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>VisionController</strong></p></td>
 <td><p>Industrial computer that runs FlexiVision One, manages cameras, processes images and communicates with FlexiBowl® and robots.</p></td>
 </tr>
 </tbody>

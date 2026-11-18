@@ -250,6 +250,16 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="APPLICAZIONI_MIX/29_Comandi_Mix.html"><strong>Steuerungen Mix-Anwendung</strong></a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">KONTROLLKAMERAS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="TELECAMERE_CONTROLLO/33_Telecamere_Controllo.html"><strong>Kontrollkameras</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="TELECAMERE_CONTROLLO/34_Comando_start_control.html"><strong>Befehl <code class="docutils literal notranslate"><span class="pre">start_control_</span></code></strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="TELECAMERE_CONTROLLO/35_Script_VisionPro.html"><strong>VisionPro-Skript</strong></a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">MULTI-GERÄTE-KONFIGURATIONEN</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="CONFIGURAZIONI_MULTI-DISPOSITIVO/30_2FB2CAM.html"><strong>2 FlexiBowl® und 2 Kameras</strong></a></li>
@@ -266,6 +276,7 @@
 <li class="toctree-l2"><a class="reference internal" href="TROUBLESHOOTING/26g_Creazione_Ricette_Modelli.html"><strong>Erstellen von Rezepten und Vorlagen</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="TROUBLESHOOTING/26h_FlexiBowl_Wizard.html"><strong>FlexiBowl Wizard</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="TROUBLESHOOTING/26i_Conf_Tramoggia.html"><strong>Trichter-Konfiguration</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="TROUBLESHOOTING/26j_Telecamere_Controllo.html"><strong>Kontrollkameras</strong></a></li>
 </ul>
 </details></li>
 </ul>
@@ -464,53 +475,59 @@
 <tr class="row-even"><td><p><strong>CAPTURE</strong></p></td>
 <td><p>Softwarebefehl zur Erfassung von Referenzbildern der leeren und vollen Scheibe, die für die automatische Berechnung der Schwellenwerte des Trichters erforderlich sind.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>COMPLEX / FLAT / CYLINDRICAL</strong></p></td>
+<tr class="row-odd"><td><p><strong>CogRecord</strong></p></td>
+<td><p>VisionPro-Grafikobjekt (Record), das ein Bild und die zugehörigen Ergebnisgrafiken enthält. Bei den Kontrollkameras ist es der Typ des Ausgangs <code class="docutils literal notranslate"><span class="pre">Output_Image</span></code>, der in der HMI angezeigt wird.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>COMPLEX / FLAT / CYLINDRICAL</strong></p></td>
 <td><p>Geometrische Kategorien von Komponenten im FlexiBowl® Wizard. <em>FLAT</em>: flache Formen (Unterlegscheiben, Dichtungen). <em>CYLINDRICAL</em>: zylindrische Formen (Stifte, Schrauben). <em>COMPLEX</em>: unregelmäßige oder asymmetrische Geometrien.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Arbeitsabstand</strong></p></td>
+<tr class="row-odd"><td><p><strong>Arbeitsabstand</strong></p></td>
 <td><p>Optimaler Abstand zwischen Linse und Scheibenoberfläche. In der Regel 950-1000 mm in Standardkonfigurationen.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Optische Verzerrung</strong></p></td>
+<tr class="row-even"><td><p><strong>Optische Verzerrung</strong></p></td>
 <td><p>Geometrische Verzerrung des Bildes durch das Objektiv. Wird bei der Kamerakalibrierung automatisch kompensiert.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Belichtungszeit</strong></p></td>
+<tr class="row-odd"><td><p><strong>Belichtungszeit</strong></p></td>
 <td><p>Lichtempfangszeit des Kamerasensors. Gemessen in μs oder ms; wirkt sich direkt auf die Bildqualität in der Produktion aus.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Feature Threshold</strong></p></td>
+<tr class="row-even"><td><p><strong>Feature Threshold</strong></p></td>
 <td><p>Schwellenwert für die Erkennung von Merkmalen (Kanten, Linien) während des Modelltrainings. Typische Werte: 0.3–0.8.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>FlexiBowl®</strong></p></td>
+<tr class="row-odd"><td><p><strong>FlexiBowl®</strong></p></td>
 <td><p>Zuführsystem mit vibrierender Drehscheibe zur zufälligen Positionierung und Ausrichtung von Bauteilen für die Aufnahme durch einen Roboter.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>FlexiBowl® Wizard</strong></p></td>
+<tr class="row-even"><td><p><strong>FlexiBowl® Wizard</strong></p></td>
 <td><p>Assistent zur automatischen Berechnung der optimalen FlexiBowl®-Parameter basierend auf der Geometrie und dem Verhalten der Bauteile.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Flip</strong></p></td>
+<tr class="row-odd"><td><p><strong>Flip</strong></p></td>
 <td><p>Pneumatischer Impuls unter der Scheibe zur Neupositionierung der Bauteile. Konfigurierbar über <em>Flip Count</em> (Anzahl der Impulse) und <em>Flip Delay</em> (Intervall in ms zwischen den Impulsen).</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Grab Train Image</strong></p></td>
+<tr class="row-even"><td><p><strong>Grab Train Image</strong></p></td>
 <td><p>Software-Befehl zur Erfassung des Bildes, das für das Training eines neuen Modells verwendet werden soll.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Gripper Offset</strong></p></td>
+<tr class="row-odd"><td><p><strong>Gripper Offset</strong></p></td>
 <td><p>Korrekturvektor (ΔX, ΔY, ΔRZ), der den Versatz zwischen dem optischen Zentrum des Bildverarbeitungssystems und dem Greifer TCP ausgleicht.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Hotspot</strong></p></td>
+<tr class="row-even"><td><p><strong>Hotspot</strong></p></td>
 <td><p>Bereich der direkten Lichtreflexion im Bild. Er erscheint als überbelichteter Bereich und kann die Erkennung beeinträchtigen.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Linse</strong></p></td>
+<tr class="row-odd"><td><p><strong>Linse</strong></p></td>
 <td><p>Optische Komponente der Kamera. Sie muss mit Metall-auf-Metall-Kontakt verschraubt werden; die Brennweite (z. B. 16 mm, 25 mm) bestimmt das Sichtfeld bei der Arbeitsdistanz.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Modell</strong></p></td>
+<tr class="row-even"><td><p><strong>Modell</strong></p></td>
 <td><p>Geometrische Vorlage des in der Trainingsphase erstellten Bauteils. Jedes Rezept unterstützt bis zu 8 Modelle pro FlexiBowl®.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Modellursprung</strong></p></td>
+<tr class="row-odd"><td><p><strong>Modellursprung</strong></p></td>
 <td><p>Referenzpunkt auf dem Bauteil, der als Mittelpunkt des Koordinatensystems für die Positionsberechnung dient. Entspricht in der Regel dem Greif-TCP.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Orthogonalität</strong></p></td>
+<tr class="row-even"><td><p><strong>Orthogonalität</strong></p></td>
 <td><p>Rechtwinkligkeit der Kamera zur Scheibe (Toleranz ±1°). Überprüfbar mit Präzisionswasserwaage.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Pattern Matching</strong></p></td>
+<tr class="row-odd"><td><p><strong>Pattern Matching</strong></p></td>
 <td><p>Algorithmus, der die Bauteile im Bild lokalisiert, indem er sie mit dem während der Trainingsphase gespeicherten Referenzmodell vergleicht.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>PMRedLine</strong></p></td>
+<td><p>Cognex-Lokalisierungstool (<code class="docutils literal notranslate"><span class="pre">CogPMRedLineTool</span></code>), das vom VisionPro-Beispielskript der Kontrollkameras verwendet wird, um das Objekt zu erkennen und seine Position und Drehung zurückzugeben.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Protokoll</strong></p></td>
 <td><p>Kommunikationsformat zwischen VisionController und Roboter. Legt die Struktur der Nachrichten, die Reihenfolge der Koordinaten und die Maßeinheiten fest.</p></td>
@@ -542,11 +559,17 @@
 <tr class="row-even"><td><p><strong>Synchronize Parameters</strong></p></td>
 <td><p>Softwarebefehl, der die Parameter an den FlexiBowl® überträgt. Nach jeder Änderung erforderlich, um die Einstellungen wirksam zu machen.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Timeout</strong></p></td>
+<tr class="row-odd"><td><p><strong>Kontrollkamera</strong></p></td>
+<td><p>Zusätzliche Kamera, die FLB1, FLB2 oder FLB3 zugeordnet ist (bis zu 3) und dazu dient, auf Anforderung des Roboters über den Befehl <code class="docutils literal notranslate"><span class="pre">start_control_</span></code> Sichtprüfungen durchzuführen. Verfügbar ab v0.24.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Timeout</strong></p></td>
 <td><p>Maximale Zeit, die auf eine Antwort der Kommunikation gewartet wird. Bei Überschreitung wird ein Fehler generiert.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Tilt</strong></p></td>
+<tr class="row-odd"><td><p><strong>Tilt</strong></p></td>
 <td><p>Neigung der Kamera gegenüber der horizontalen Ebene. Zulässiger Wert: 0° ± 1°.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>ToolBlock</strong></p></td>
+<td><p>VisionPro-Container, der die Vision-Tools zusammenfasst und deren Ein- und Ausgänge bereitstellt (<code class="docutils literal notranslate"><span class="pre">Image</span></code>, <code class="docutils literal notranslate"><span class="pre">Input_Control</span></code>, <code class="docutils literal notranslate"><span class="pre">Output_String</span></code>, <code class="docutils literal notranslate"><span class="pre">Output_Image</span></code>). Enthält das C#-Skript der Kontrollkameras.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Toplight</strong></p></td>
 <td><p>Über der Scheibe angebrachte LED-Beleuchtung, die für eine gleichmäßige Ausleuchtung von oben sorgt. Stromversorgung: 24V DC.</p></td>
@@ -560,7 +583,10 @@
 <tr class="row-even"><td><p><strong>Vision Result</strong></p></td>
 <td><p>Ausgabe des Bildverarbeitungssystems: Koordinaten (X, Y, RZ) und Bewertung des erkannten Bauteils, die zur Aufnahme an den Roboter übertragen werden.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>VisionController</strong></p></td>
+<tr class="row-odd"><td><p><strong>VisionPro</strong></p></td>
+<td><p>Cognex-Software zur Entwicklung von Vision-Anwendungen, die FlexiVision One für die Skripte der Kontrollkameras verwendet.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>VisionController</strong></p></td>
 <td><p>Industriecomputer, auf dem FlexiVision One läuft, der die Kameras steuert, die Bilder verarbeitet und mit FlexiBowl® und dem Roboter kommuniziert.</p></td>
 </tr>
 </tbody>

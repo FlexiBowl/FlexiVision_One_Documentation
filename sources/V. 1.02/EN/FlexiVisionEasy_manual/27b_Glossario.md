@@ -20,6 +20,8 @@
   - Industrial camera powered and connected via a single Ethernet cable. Standard: IEEE 802.3af (15.4W) or 802.3at (30W).
 * - **CAPTURE**
   - Software command to acquire reference images of the empty and full disk, necessary for automatic calculation of hopper thresholds.
+* - **CogRecord**
+  - VisionPro graphic object (record) containing an image and the related result graphics. In the control cameras it is the type of the `Output_Image` output, displayed in the HMI.
 * - **COMPLEX / FLAT / CYLINDRICAL**
   - Geometrical categories of components in the FlexiBowl® Wizard. *FLAT*: flat shapes (washers, gaskets). *CYLINDRICAL*: cylindrical shapes (pins, screws). *COMPLEX*: irregular or asymmetrical geometries.
 * - **Working Distance**
@@ -52,6 +54,8 @@
   - Perpendicularity of the camera with respect to the disc (tolerance ±1°). Verifiable with precision level.
 * - **Pattern Matching**
   - Algorithm that locates the components in the image by comparing them with the reference model recorded during training.
+* - **PMRedLine**
+  - Cognex localization tool (`CogPMRedLineTool`) used by the sample VisionPro script of the control cameras to recognize the object and return its position and rotation.
 * - **Protocol**
   - Communication format between VisionController and robot. It defines message structure, coordinate order and units of measurement.
 * - **Recipe**
@@ -72,10 +76,14 @@
   - Subnet that FlexiBowl® and VisionController must share (e.g. 192.168.1.x) for TCP/IP communication.
 * - **Synchronize Parameters**
   - Software command that transfers parameters to the FlexiBowl®. Mandatory after each change to make the settings effective.
+* - **Control Camera**
+  - Additional camera, associated with FLB1, FLB2 or FLB3 (up to 3), used to perform visual inspections at the robot's request through the `start_control_` command. Available from v0.24.
 * - **Timeout**
   - Maximum time to wait for a communication reply. An error is triggered when it is exceeded.
 * - **Tilt**
   - Inclination of the camera with respect to the horizontal plane. Allowed value: 0° ± 1°.
+* - **ToolBlock**
+  - VisionPro container that groups the vision tools and exposes their inputs and outputs (`Image`, `Input_Control`, `Output_String`, `Output_Image`). Hosts the C# script of the control cameras.
 * - **Toplight**
   - LED illuminator positioned above the disc for even illumination from above. Power supply: 24V DC.
 * - **Training**
@@ -84,6 +92,8 @@
   - Image capture start signal. It can be software-related (timed) or hardware-related (external electrical signal).
 * - **Vision Result**
   - Output of the vision system: coordinates (X, Y, RZ) and score of the detected component, transmitted to the robot for picking.
+* - **VisionPro**
+  - Cognex software for developing vision applications, used by FlexiVision One for the control camera scripts.
 * - **VisionController**
   - Industrial computer that runs FlexiVision One, manages cameras, processes images and communicates with FlexiBowl® and robots.
 ```

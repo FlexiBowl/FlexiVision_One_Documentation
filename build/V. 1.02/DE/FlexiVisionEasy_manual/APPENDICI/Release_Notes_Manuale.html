@@ -249,6 +249,16 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../APPLICAZIONI_MIX/29_Comandi_Mix.html"><strong>Steuerungen Mix-Anwendung</strong></a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">KONTROLLKAMERAS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../TELECAMERE_CONTROLLO/33_Telecamere_Controllo.html"><strong>Kontrollkameras</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../TELECAMERE_CONTROLLO/34_Comando_start_control.html"><strong>Befehl <code class="docutils literal notranslate"><span class="pre">start_control_</span></code></strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../TELECAMERE_CONTROLLO/35_Script_VisionPro.html"><strong>VisionPro-Skript</strong></a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">MULTI-GERÄTE-KONFIGURATIONEN</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../CONFIGURAZIONI_MULTI-DISPOSITIVO/30_2FB2CAM.html"><strong>2 FlexiBowl® und 2 Kameras</strong></a></li>
@@ -265,6 +275,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26g_Creazione_Ricette_Modelli.html"><strong>Erstellen von Rezepten und Vorlagen</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26h_FlexiBowl_Wizard.html"><strong>FlexiBowl Wizard</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26i_Conf_Tramoggia.html"><strong>Trichter-Konfiguration</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26j_Telecamere_Controllo.html"><strong>Kontrollkameras</strong></a></li>
 </ul>
 </details></li>
 </ul>
@@ -429,6 +440,7 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kompatibilitat">Kompatibilität</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#revisionshistorie">Revisionshistorie</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-02">Version 1.02</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-01">Version 1.01</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-00">Version 1.00</a></li>
 </ul>
@@ -460,10 +472,13 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>1.01</strong> (aktuell)</p></td>
+<tr class="row-even"><td><p><strong>1.02</strong> (aktuell)</p></td>
+<td><p>v0.23, v0.24</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>1.01</strong></p></td>
 <td><p>v0.21, v0.22</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>1.00</strong></p></td>
+<tr class="row-even"><td><p><strong>1.00</strong></p></td>
 <td><p>v0.20, v0.21, v0.22</p></td>
 </tr>
 </tbody>
@@ -472,6 +487,30 @@
 </section>
 <section id="revisionshistorie">
 <h2>Revisionshistorie<a class="headerlink" href="#revisionshistorie" title="Link to this heading">#</a></h2>
+<section id="version-1-02">
+<h3>Version 1.02<a class="headerlink" href="#version-1-02" title="Link to this heading">#</a></h3>
+<p>Veröffentlichungsdatum: 17.11.2026</p>
+<p><strong>Hinzugefügte Seiten</strong></p>
+<ul class="simple">
+<li><p>Neuer Abschnitt <strong>Kontrollkameras</strong> mit den Seiten:</p>
+<ul>
+<li><p><a class="reference internal" href="../TELECAMERE_CONTROLLO/33_Telecamere_Controllo.html"><span class="std std-doc">Kontrollkameras</span></a>: Überblick, Funktionsablauf, Verwendung über die HMI (Setup Camera Ctrl, Setup Tool Ctrl, View Runtime, Test Tool) und schneller Abnahmetest.</p></li>
+<li><p><a class="reference internal" href="../TELECAMERE_CONTROLLO/34_Comando_start_control.html"><span class="std std-doc">Befehl <code class="docutils literal notranslate"><span class="pre">start_control_</span></code></span></a>: Befehlsformat, Parameter, Antworten an den Roboter und Beispiele für den Datenaustausch.</p></li>
+<li><p><a class="reference internal" href="../TELECAMERE_CONTROLLO/35_Script_VisionPro.html"><span class="std std-doc">VisionPro-Skript</span></a>: ToolBlock-Schnittstelle, Anpassung des Skripts und Anhang A mit dem vollständigen C#-Skript.</p></li>
+</ul>
+</li>
+<li><p>Die Seite <a class="reference internal" href="../TROUBLESHOOTING/26j_Telecamere_Controllo.html"><span class="std std-doc">Fehlerbehebung – Kontrollkameras</span></a> mit den Meldungen <code class="docutils literal notranslate"><span class="pre">#Error_Control_…</span></code> und <code class="docutils literal notranslate"><span class="pre">#Error_Camera…</span></code> und den empfohlenen Maßnahmen wurde hinzugefügt.</p></li>
+<li><p>Alle Seiten des Abschnitts Kontrollkameras zeigen oben einen Hinweis, dass die <strong>Control Camera</strong> eine <strong>Expert</strong>-Funktion ist.</p></li>
+</ul>
+<p><strong>Aktualisierte Seiten</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../rif_tecnico_specifiche/04b_Protocolli_Comunicazione.html"><span class="std std-doc">Kommunikationsprotokoll Roboter–Vision</span></a>: Der Unterabschnitt „Befehle für Kontrollkameras“ mit dem Befehl <code class="docutils literal notranslate"><span class="pre">start_control_&lt;Parameter&gt;</span></code> wurde hinzugefügt.</p></li>
+<li><p><a class="reference internal" href="../TROUBLESHOOTING/26_trb_shooting_guide.html"><span class="std std-doc">Fehlerbehebung</span></a>: Die Karte „Kontrollkameras“ wurde hinzugefügt.</p></li>
+<li><p><a class="reference internal" href="../27b_Glossario.html"><span class="std std-doc">Glossar</span></a>: Die Begriffe CogRecord, PMRedLine, Kontrollkamera, ToolBlock und VisionPro wurden hinzugefügt.</p></li>
+<li><p>Versionshinweise – Software: Die Versionen <a class="reference internal" href="V.0.23.html"><span class="std std-doc">V. 0.23</span></a> und <a class="reference internal" href="V.0.24.html"><span class="std std-doc">V. 0.24</span></a> wurden hinzugefügt und die Seite <a class="reference internal" href="Release_Notes_Software.html"><span class="std std-doc">Software FlexiVision One</span></a> wurde aktualisiert.</p></li>
+<li><p>Die Kompatibilitätstabelle wurde um die Softwareversionen v0.23 und v0.24 ergänzt.</p></li>
+</ul>
+</section>
 <section id="version-1-01">
 <h3>Version 1.01<a class="headerlink" href="#version-1-01" title="Link to this heading">#</a></h3>
 <p>Veröffentlichungsdatum: 04.09.2026</p>
@@ -1184,6 +1223,7 @@
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kompatibilitat">Kompatibilität</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#revisionshistorie">Revisionshistorie</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-02">Version 1.02</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-01">Version 1.01</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-00">Version 1.00</a></li>
 </ul>

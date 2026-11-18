@@ -249,6 +249,16 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../APPLICAZIONI_MIX/29_Comandi_Mix.html"><strong>Comandos Aplicación Mix</strong></a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CÁMARAS DE CONTROL</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../TELECAMERE_CONTROLLO/33_Telecamere_Controllo.html"><strong>Cámaras de control</strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../TELECAMERE_CONTROLLO/34_Comando_start_control.html"><strong>Comando <code class="docutils literal notranslate"><span class="pre">start_control_</span></code></strong></a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../TELECAMERE_CONTROLLO/35_Script_VisionPro.html"><strong>Script de VisionPro</strong></a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CONFIGURACIONES MULTIDISPOSITIVO</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../CONFIGURAZIONI_MULTI-DISPOSITIVO/30_2FB2CAM.html"><strong>2 FlexiBowl® y 2 Cámaras</strong></a></li>
@@ -268,6 +278,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26d_Conf_Iniziale.html"><strong>Configuración inicial</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26g_Creazione_Ricette_Modelli.html"><strong>Creación de recetas y modelos</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26h_FlexiBowl_Wizard.html"><strong>Asistente FlexiBowl</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26i_Conf_Tramoggia.html"><strong>Configuración de la tolva</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TROUBLESHOOTING/26j_Telecamere_Controllo.html"><strong>Cámaras de control</strong></a></li>
 </ul>
 </details></li>
 </ul>
@@ -432,6 +444,7 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compatibilidad">Compatibilidad</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historial-de-revisiones">Historial de revisiones</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-02">Versión 1.02</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-01">Versión 1.01</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-00">Versión 1.00</a></li>
 </ul>
@@ -463,10 +476,13 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>1.01</strong> (actual)</p></td>
+<tr class="row-even"><td><p><strong>1.02</strong> (actual)</p></td>
+<td><p>v0.23, v0.24</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>1.01</strong></p></td>
 <td><p>v0.21, v0.22</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>1.00</strong></p></td>
+<tr class="row-even"><td><p><strong>1.00</strong></p></td>
 <td><p>v0.20, v0.21, v0.22</p></td>
 </tr>
 </tbody>
@@ -475,6 +491,30 @@
 </section>
 <section id="historial-de-revisiones">
 <h2>Historial de revisiones<a class="headerlink" href="#historial-de-revisiones" title="Link to this heading">#</a></h2>
+<section id="version-1-02">
+<h3>Versión 1.02<a class="headerlink" href="#version-1-02" title="Link to this heading">#</a></h3>
+<p>Fecha de publicación: 17/11/2026</p>
+<p><strong>Páginas añadidas</strong></p>
+<ul class="simple">
+<li><p>Nueva sección <strong>Cámaras de control</strong>, con las páginas:</p>
+<ul>
+<li><p><a class="reference internal" href="../TELECAMERE_CONTROLLO/33_Telecamere_Controllo.html"><span class="std std-doc">Cámaras de control</span></a>: descripción general, secuencia de funcionamiento, uso desde la HMI (Setup Camera Ctrl, Setup Tool Ctrl, View Runtime, Test Tool) y prueba rápida de aceptación.</p></li>
+<li><p><a class="reference internal" href="../TELECAMERE_CONTROLLO/34_Comando_start_control.html"><span class="std std-doc">Comando <code class="docutils literal notranslate"><span class="pre">start_control_</span></code></span></a>: formato del comando, parámetros, respuestas al robot y ejemplos de intercambio.</p></li>
+<li><p><a class="reference internal" href="../TELECAMERE_CONTROLLO/35_Script_VisionPro.html"><span class="std std-doc">Script de VisionPro</span></a>: interfaz del ToolBlock, personalización del script y Apéndice A con el script C# completo.</p></li>
+</ul>
+</li>
+<li><p>Añadida la página <a class="reference internal" href="../TROUBLESHOOTING/26j_Telecamere_Controllo.html"><span class="std std-doc">Solución de problemas – Cámaras de control</span></a> con los mensajes <code class="docutils literal notranslate"><span class="pre">#Error_Control_…</span></code> y <code class="docutils literal notranslate"><span class="pre">#Error_Camera…</span></code> y las acciones recomendadas.</p></li>
+<li><p>Todas las páginas de la sección Cámaras de control muestran en la parte superior un banner que indica que la <strong>Control Camera</strong> es una función <strong>Expert</strong>.</p></li>
+</ul>
+<p><strong>Páginas actualizadas</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../rif_tecnico_specifiche/04b_Protocolli_Comunicazione.html"><span class="std std-doc">Protocolo de comunicación Robot-Visión</span></a>: añadida la subsección «Comandos de las cámaras de control» con el comando <code class="docutils literal notranslate"><span class="pre">start_control_&lt;parámetro&gt;</span></code>.</p></li>
+<li><p><a class="reference internal" href="../TROUBLESHOOTING/26_trb_shooting_guide.html"><span class="std std-doc">Solución de problemas</span></a>: añadida la ficha «Cámaras de control».</p></li>
+<li><p><a class="reference internal" href="../27b_Glossario.html"><span class="std std-doc">Glosario</span></a>: añadidos los términos CogRecord, PMRedLine, Cámara de control, ToolBlock y VisionPro.</p></li>
+<li><p>Notas de la versión – Software: añadidas las versiones <a class="reference internal" href="V.0.23.html"><span class="std std-doc">V. 0.23</span></a> y <a class="reference internal" href="V.0.24.html"><span class="std std-doc">V. 0.24</span></a> y actualizada la página <a class="reference internal" href="Release_Notes_Software.html"><span class="std std-doc">Software FlexiVision One</span></a>.</p></li>
+<li><p>Actualizada la tabla de compatibilidad con las versiones de software v0.23 y v0.24.</p></li>
+</ul>
+</section>
 <section id="version-1-01">
 <h3>Versión 1.01<a class="headerlink" href="#version-1-01" title="Link to this heading">#</a></h3>
 <p>Fecha de publicación: 04/09/2026</p>
@@ -1187,6 +1227,7 @@
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compatibilidad">Compatibilidad</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historial-de-revisiones">Historial de revisiones</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-02">Versión 1.02</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-01">Versión 1.01</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-00">Versión 1.00</a></li>
 </ul>

@@ -130,6 +130,11 @@ Sélectionnez le composant pour lequel vous avez besoin d'aide.
 :link-type: ref
 :::
 
+:::{card} Caméras de contrôle
+:link: troubleshooting_telecamere_controllo
+:link-type: ref
+:::
+
 
 
 ```{toctree}  
@@ -140,6 +145,7 @@ Sélectionnez le composant pour lequel vous avez besoin d'aide.
 26g_Creazione_Ricette_Modelli.md
 26h_FlexiBowl_Wizard.md
 26i_Conf_Tramoggia.md
+26j_Telecamere_Controllo.md
 ```
 
 ### *Licence non activable*

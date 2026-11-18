@@ -10,10 +10,32 @@ Consulte siempre la versión del manual compatible con la versión del software 
 
 | Versión del manual | Versiones compatibles del software FlexiVision One |
 |---|---|
-| **1.01** (actual) | v0.21, v0.22 |
+| **1.02** (actual) | v0.23, v0.24 |
+| **1.01** | v0.21, v0.22 |
 | **1.00** | v0.20, v0.21, v0.22 |
 
 ## Historial de revisiones
+
+### Versión 1.02
+
+Fecha de publicación: 17/11/2026
+
+**Páginas añadidas**
+
+- Nueva sección **Cámaras de control**, con las páginas:
+  - [Cámaras de control](../TELECAMERE_CONTROLLO/33_Telecamere_Controllo.md): descripción general, secuencia de funcionamiento, uso desde la HMI (Setup Camera Ctrl, Setup Tool Ctrl, View Runtime, Test Tool) y prueba rápida de aceptación.
+  - [Comando `start_control_`](../TELECAMERE_CONTROLLO/34_Comando_start_control.md): formato del comando, parámetros, respuestas al robot y ejemplos de intercambio.
+  - [Script de VisionPro](../TELECAMERE_CONTROLLO/35_Script_VisionPro.md): interfaz del ToolBlock, personalización del script y Apéndice A con el script C# completo.
+- Añadida la página [Solución de problemas – Cámaras de control](../TROUBLESHOOTING/26j_Telecamere_Controllo.md) con los mensajes `#Error_Control_…` y `#Error_Camera…` y las acciones recomendadas.
+- Todas las páginas de la sección Cámaras de control muestran en la parte superior un banner que indica que la **Control Camera** es una función **Expert**.
+
+**Páginas actualizadas**
+
+- [Protocolo de comunicación Robot-Visión](../rif_tecnico_specifiche/04b_Protocolli_Comunicazione.md): añadida la subsección «Comandos de las cámaras de control» con el comando `start_control_<parámetro>`.
+- [Solución de problemas](../TROUBLESHOOTING/26_trb_shooting_guide.md): añadida la ficha «Cámaras de control».
+- [Glosario](../27b_Glossario.md): añadidos los términos CogRecord, PMRedLine, Cámara de control, ToolBlock y VisionPro.
+- Notas de la versión – Software: añadidas las versiones [V. 0.23](V.0.23.md) y [V. 0.24](V.0.24.md) y actualizada la página [Software FlexiVision One](Release_Notes_Software.md).
+- Actualizada la tabla de compatibilidad con las versiones de software v0.23 y v0.24.
 
 ### Versión 1.01
 

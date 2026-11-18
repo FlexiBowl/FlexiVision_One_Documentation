@@ -255,6 +255,23 @@ FlexiVisionEasy_manual/APPLICAZIONI_MIX/29_Comandi_Mix.md
 
 ```{toctree}
 :hidden:
+:caption: KONTROLLKAMERAS
+
+FlexiVisionEasy_manual/TELECAMERE_CONTROLLO/33_Telecamere_Controllo.md
+```
+
+```{toctree}
+:hidden:
+FlexiVisionEasy_manual/TELECAMERE_CONTROLLO/34_Comando_start_control.md
+```
+
+```{toctree}
+:hidden:
+FlexiVisionEasy_manual/TELECAMERE_CONTROLLO/35_Script_VisionPro.md
+```
+
+```{toctree}
+:hidden:
 :caption: MULTI-GERÄTE-KONFIGURATIONEN
 
 FlexiVisionEasy_manual/CONFIGURAZIONI_MULTI-DISPOSITIVO/30_2FB2CAM.md

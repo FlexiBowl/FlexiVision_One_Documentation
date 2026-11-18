@@ -10,10 +10,32 @@ Consultez toujours la version du manuel compatible avec la version du logiciel i
 
 | Version du manuel | Versions compatibles du logiciel FlexiVision One |
 |---|---|
-| **1.01** (actuelle) | v0.21, v0.22 |
+| **1.02** (actuelle) | v0.23, v0.24 |
+| **1.01** | v0.21, v0.22 |
 | **1.00** | v0.20, v0.21, v0.22 |
 
 ## Historique des révisions
+
+### Version 1.02
+
+Date de publication: 17/11/2026
+
+**Pages ajoutées**
+
+- Nouvelle section **Caméras de contrôle**, avec les pages :
+  - [Caméras de contrôle](../TELECAMERE_CONTROLLO/33_Telecamere_Controllo.md) : présentation, séquence de fonctionnement, utilisation depuis la HMI (Setup Camera Ctrl, Setup Tool Ctrl, View Runtime, Test Tool) et test d'acceptation rapide.
+  - [Commande `start_control_`](../TELECAMERE_CONTROLLO/34_Comando_start_control.md) : format de la commande, paramètres, réponses au robot et exemples d'échange.
+  - [Script VisionPro](../TELECAMERE_CONTROLLO/35_Script_VisionPro.md) : interface du ToolBlock, personnalisation du script et Annexe A avec le script C# complet.
+- Ajout de la page [Dépannage – Caméras de contrôle](../TROUBLESHOOTING/26j_Telecamere_Controllo.md) avec les messages `#Error_Control_…` et `#Error_Camera…` et les actions recommandées.
+- Toutes les pages de la section Caméras de contrôle affichent en haut un bandeau indiquant que la **Control Camera** est une fonction **Expert**.
+
+**Pages mises à jour**
+
+- [Protocole de communication Robot-Vision](../rif_tecnico_specifiche/04b_Protocolli_Comunicazione.md) : ajout de la sous-section « Commandes des caméras de contrôle » avec la commande `start_control_<paramètre>`.
+- [Dépannage](../TROUBLESHOOTING/26_trb_shooting_guide.md) : ajout de la fiche « Caméras de contrôle ».
+- [Glossaire](../27b_Glossario.md) : ajout des termes CogRecord, PMRedLine, Caméra de contrôle, ToolBlock et VisionPro.
+- Notes de version – Logiciel : ajout des versions [V. 0.23](V.0.23.md) et [V. 0.24](V.0.24.md) et mise à jour de la page [Logiciel FlexiVision One](Release_Notes_Software.md).
+- Mise à jour du tableau de compatibilité avec les versions logicielles v0.23 et v0.24.
 
 ### Version 1.01
 

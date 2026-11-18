@@ -179,6 +179,27 @@ Die beiden Befehle sind nicht austauschbar: `mix_Locator_12` verhält sich **nic
   - `Emptying Running` / `Emptying Stopped` / `#Error_flexibowl_not_connect` / `#Error_invalid_emptying_state`
 ```
 
+### *Befehle für Kontrollkameras*
+
+```{list-table}
+:header-rows: 1
+:widths: 30 40 30
+
+* - Befehl
+  - Aktion
+  - Rückgabewert
+* - `start_control_<Parameter>`
+  - Fordert eine Prüfung mit der zugeordneten Kontrollkamera an. Der `<Parameter>` (Text, optional) wird an das VisionPro-Skript weitergeleitet, das entscheidet, welche Tools ausgeführt und welche Ergebnisse zurückgegeben werden. Der abschließende Unterstrich des Präfixes ist zwingend erforderlich.
+    :::{tip}
+    Befehlsformat, Parameter und Beispiele für den Datenaustausch finden Sie unter [Befehl `start_control_`](../TELECAMERE_CONTROLLO/34_Comando_start_control.md).
+    :::
+  - Vom VisionPro-Skript definierte Zeichenfolge (z. B. `X=125.450;Y=78.320;Rz=45.000` / `Not_Found` / `#Error_Control_…`)
+```
+
+:::{note}
+Der Befehl `start_control_` ist ab Softwareversion v0.24 verfügbar. Das Ergebnis wird nur dann an den Roboter gesendet, wenn dieser verbunden ist. Zu den Fehlern `#Error_Control_…` und `#Error_Camera…` siehe [Fehlerbehebung – Kontrollkameras](../TROUBLESHOOTING/26j_Telecamere_Controllo.md).
+:::
+
 ### *Optionale Hopper-Signale*
 
 ```{note}

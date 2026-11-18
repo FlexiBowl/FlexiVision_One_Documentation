@@ -179,7 +179,7 @@ FlexiVisionEasy_manual/rif_tecnico_specifiche/08_Opzioni.md
 ```   
 ```{toctree}
 :hidden:
-:caption: INSTALLAZIONE DEL SISTEMA
+:caption: INSTALLATION DU SYSTÈME
 
 FlexiVisionEasy_manual/INSTALLAZIONE_SISTEMA/09_Installazione_Meccanica.md
 ```     
@@ -190,7 +190,7 @@ FlexiVisionEasy_manual/INSTALLAZIONE_SISTEMA/10_Cablaggio_Connessioni.md
   
 ```{toctree}
 :hidden:
-:caption: PANORAMICA DELL'INTERFACCIA
+:caption: APERÇU DE L'INTERFACE
 
 FlexiVisionEasy_manual/PANORAMICA_INTERFACCIA/12a_Home.md
 ```  
@@ -252,6 +252,23 @@ FlexiVisionEasy_manual/APPLICAZIONI_MIX/28_Panoramica_Mix.md
 :hidden:
 FlexiVisionEasy_manual/APPLICAZIONI_MIX/29_Comandi_Mix.md
 ```  
+
+```{toctree}
+:hidden:
+:caption: CAMÉRAS DE CONTRÔLE
+
+FlexiVisionEasy_manual/TELECAMERE_CONTROLLO/33_Telecamere_Controllo.md
+```
+
+```{toctree}
+:hidden:
+FlexiVisionEasy_manual/TELECAMERE_CONTROLLO/34_Comando_start_control.md
+```
+
+```{toctree}
+:hidden:
+FlexiVisionEasy_manual/TELECAMERE_CONTROLLO/35_Script_VisionPro.md
+```
 
 ```{toctree}
 :hidden:
