@@ -98,6 +98,10 @@ Effectuer les étapes 1 à 5 de la section [Accès à la configuration des compt
   - Appuyer sur **Delete Account**. Le compte est retiré de la liste et du menu déroulant de la page **Setup**.
 :::
 
+```{important}
+Les comptes prédéfinis **Operator**, **Technician** et **Engineer** ne peuvent pas être supprimés.
+```
+
 ```{warning}
 La suppression est immédiate et aucune confirmation n'est demandée. Vérifier le compte sélectionné avant d'appuyer sur **Delete Account**.
 ```

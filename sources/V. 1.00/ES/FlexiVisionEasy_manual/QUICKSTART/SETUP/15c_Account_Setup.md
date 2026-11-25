@@ -98,6 +98,10 @@ Realice los pasos 1 a 5 de [Acceso a la configuración de cuentas](#accesso-alla
   - Pulse **Delete Account**. La cuenta se elimina de la lista y del menú desplegable de la página **Setup**.
 :::
 
+```{important}
+Las cuentas predefinidas **Operator**, **Technician** y **Engineer** no se pueden eliminar.
+```
+
 ```{warning}
 La eliminación es inmediata y no se pide ninguna confirmación. Compruebe la cuenta seleccionada antes de pulsar **Delete Account**.
 ```

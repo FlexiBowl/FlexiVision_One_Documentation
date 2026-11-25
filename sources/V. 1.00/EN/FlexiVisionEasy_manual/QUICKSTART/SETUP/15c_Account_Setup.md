@@ -98,6 +98,10 @@ Carry out steps 1 to 5 of [Access to Account Configuration](#accesso-alla-config
   - Press **Delete Account**. The account is removed from the list and from the drop-down menu on the **Setup** page.
 :::
 
+```{important}
+The default **Operator**, **Technician** and **Engineer** accounts cannot be deleted.
+```
+
 ```{warning}
 Deletion is immediate and no confirmation is requested. Check the selected account before pressing **Delete Account**.
 ```

@@ -97,6 +97,10 @@ Eseguire i passi da 1 a 5 di [Accesso alla configurazione Account](#accesso-alla
   - Premere **Delete Account**. L'account viene rimosso dall'elenco e dal menu a tendina della pagina **Setup**.
 :::
 
+```{important}
+Gli account predefiniti **Operator**, **Technician** ed **Engineer** non possono essere eliminati.
+```
+
 ```{warning}
 L'eliminazione è immediata e non viene richiesta alcuna conferma. Verificare l'account selezionato prima di premere **Delete Account**.
 ```

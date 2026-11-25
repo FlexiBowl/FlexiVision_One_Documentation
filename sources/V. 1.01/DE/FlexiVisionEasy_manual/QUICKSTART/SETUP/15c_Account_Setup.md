@@ -98,6 +98,10 @@ Die Schritte 1 bis 5 unter [Zugriff auf die Kontokonfiguration](#accesso-alla-co
   - Auf **Delete Account** klicken. Das Konto wird aus der Liste und aus dem Dropdown-Menü der Seite **Setup** entfernt.
 :::
 
+```{important}
+Die vordefinierten Konten **Operator**, **Technician** und **Engineer** können nicht gelöscht werden.
+```
+
 ```{warning}
 Das Löschen erfolgt sofort und ohne Sicherheitsabfrage. Vor dem Klicken auf **Delete Account** das ausgewählte Konto überprüfen.
 ```
