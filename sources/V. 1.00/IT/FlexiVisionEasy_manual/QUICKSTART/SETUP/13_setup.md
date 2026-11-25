@@ -132,5 +132,6 @@ Tutti i setup hardware sono accessibili dalla pagina centrale **SETUP** del soft
 13c_Robot_Setup.md
 15_Protocol_Setup.md
 15b_SaveRecipe.md
+15c_Account_Setup.md
 ```
 

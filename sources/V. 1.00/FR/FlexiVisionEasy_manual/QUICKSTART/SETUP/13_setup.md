@@ -133,5 +133,6 @@ Toutes les configurations matérielles sont accessibles à partir de la page cen
 13c_Robot_Setup.md
 15_Protocol_Setup.md
 15b_SaveRecipe.md
+15c_Account_Setup.md
 ```
 

@@ -134,5 +134,6 @@ Alle Hardware-Einstellungen sind über die zentrale **SETUP-Seite** der Software
 13c_Robot_Setup.md
 15_Protocol_Setup.md
 15b_SaveRecipe.md
+15c_Account_Setup.md
 ```
 
